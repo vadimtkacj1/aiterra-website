@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import DocumentEndSentinel from '@/components/layout/DocumentEndSentinel'
 
 const navLinks = [
   { label: 'ראשי', href: '/' },
@@ -71,6 +72,7 @@ export default function Footer() {
           />
         </div>
       </div>
+      <DocumentEndSentinel />
     </footer>
   )
 }

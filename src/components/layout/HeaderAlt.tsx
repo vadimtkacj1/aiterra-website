@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { isAtPageBottom } from '@/lib/scroll'
 
 const gradientStyle = 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)'
 
@@ -27,12 +28,22 @@ interface HeaderAltProps {
 export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [atBottom, setAtBottom] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24)
+      const bottom = isAtPageBottom()
+      setAtBottom(bottom)
+      if (bottom) setOpen(false)
+    }
     window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
     onScroll()
-    return () => window.removeEventListener('scroll', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+    }
   }, [])
 
   const onDarkHero = transparent && !scrolled
@@ -46,10 +57,14 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
     : 'bg-white border-b border-gray-100 shadow-sm'
 
   return (
-    <header className={`sticky top-0 z-[80] w-full transition-all duration-300 ${shellClass}`}>
+    <header
+      className={`sticky top-0 z-[80] w-full transition-all duration-300 ${
+        atBottom ? '-translate-y-full pointer-events-none' : 'translate-y-0'
+      } ${shellClass}`}
+    >
 
       {/* ===== DESKTOP ===== */}
-      <div className="hidden md:block max-w-7xl mx-auto px-4 py-6">
+      <div className="hidden md:block max-w-7xl mx-auto px-4 py-2">
         <div className="flex items-center justify-center">
 
           <div className="flex items-center gap-10">
@@ -58,13 +73,13 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
             <Link href="/contact" className={linkClass}>צור קשר</Link>
           </div>
 
-          <div className="mx-12 flex flex-col items-center gap-2">
+          <div className="mx-12 flex flex-col items-center">
             <Link href="/">
               <img
                 src={onDarkHero ? '/icons/white-logo.svg' : '/icons/logo.svg'}
                 onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/icons/logo.svg' }}
                 alt="AITERRA"
-                className="w-[112px] h-[112px] object-contain"
+                className="w-[100px] h-[100px] object-contain"
               />
             </Link>
             <div className="flex items-center gap-1">

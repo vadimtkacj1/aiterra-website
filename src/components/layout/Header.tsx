@@ -1,15 +1,25 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { isAtPageBottom } from '@/lib/scroll'
 import Navigation from './Navigation'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
+  const [atBottom, setAtBottom] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40)
+      setAtBottom(isAtPageBottom())
+    }
+    onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    window.addEventListener('resize', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+    }
   }, [])
 
   const gradientTextStyle: React.CSSProperties = {
@@ -22,6 +32,8 @@ export default function Header() {
   return (
     <header
       className={`w-full h-28 sticky top-0 z-80 transition-all duration-300 ${
+        atBottom ? '-translate-y-full pointer-events-none' : 'translate-y-0'
+      } ${
         scrolled
           ? 'bg-white/90 backdrop-blur-md shadow-sm'
           : 'bg-transparent'

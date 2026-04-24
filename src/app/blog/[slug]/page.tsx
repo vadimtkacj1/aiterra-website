@@ -1,4 +1,5 @@
 // Blog post — /blog/:slug
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  await params
   return <main />
 }

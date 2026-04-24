@@ -1,6 +1,7 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { isAtPageBottom } from '@/lib/scroll';
 
 const navLinks = [
   { href: '/', label: 'ראשי' },
@@ -13,6 +14,14 @@ const navLinks = [
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (open && isAtPageBottom()) setOpen(false);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [open]);
 
   return (
     <>
