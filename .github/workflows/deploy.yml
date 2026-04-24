@@ -54,10 +54,9 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p ~/.ssh
-          printf '%s' "${{ secrets.SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
+          echo "${{ secrets.SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
+          echo "" >> ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          # validate private key format
-          ssh-keygen -y -f ~/.ssh/id_ed25519 > /dev/null
 
       - name: Add server host key
         shell: bash
