@@ -35,7 +35,7 @@ export default function PortfolioProjectHeroSection({ project }: Props) {
 
         <h1
           className="text-white font-bold mb-6 whitespace-pre-line tracking-tight"
-          style={{ fontSize: 'clamp(40px, 7vw, 72px)', lineHeight: '1.15' }}
+          style={{ fontSize: 'clamp(20px, 7vw, 72px)', lineHeight: '1.15' }}
         >
           {project.heroTitle}
         </h1>

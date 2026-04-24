@@ -15,7 +15,7 @@ export default function AboutSection() {
             <span className="text-blue-600 font-semibold text-sm uppercase tracking-widest">
               אודותינו
             </span>
-            <h2 className="text-4xl font-black text-gray-900 leading-tight">
+            <h2 className="text-[20px] md:text-[48px] font-black text-gray-900 leading-tight">
               טכנולוגיה שמתחברת
               <br />
               לתוצאות אמיתיות

@@ -23,8 +23,8 @@ export default function AboutHeroSection() {
 
           {/* Main Title */}
           <h1
-            style={{ fontWeight: 700, fontSize: '64px', lineHeight: '1.1', letterSpacing: '-0.02em' }}
-            className="text-gray-900 font-sans"
+            style={{ fontWeight: 700, lineHeight: '1.1', letterSpacing: '-0.02em' }}
+            className="text-gray-900 font-sans text-[20px] md:text-[64px]"
           >
             {'"'}AITERRA: טכנולוגיה שבונה אתרים.
             <br />

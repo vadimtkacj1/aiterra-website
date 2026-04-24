@@ -23,15 +23,18 @@ export default function Header() {
   }
 
   return (
-    <header
-      className={`w-full h-28 sticky top-0 z-80 transition-all duration-300 ${
-        atDocumentEnd ? '-translate-y-full pointer-events-none' : 'translate-y-0'
-      } ${
-        scrolled
-          ? 'bg-white/90 backdrop-blur-md shadow-sm'
-          : 'bg-transparent'
+    <div
+      className={`sticky top-0 z-80 w-full overflow-hidden transition-[max-height] duration-300 ease-out ${
+        atDocumentEnd ? 'max-h-0 pointer-events-none' : 'max-h-28'
       }`}
     >
+      <header
+        className={`w-full h-28 transition-colors duration-300 ${
+          scrolled
+            ? 'bg-white/90 backdrop-blur-md shadow-sm'
+            : 'bg-transparent'
+        }`}
+      >
       <div className="flex h-full max-w-[1000px] flex-row-reverse items-center justify-between px-8 md:flex-row">
 
         {/* Logo */}
@@ -69,6 +72,7 @@ export default function Header() {
         </div>
 
       </div>
-    </header>
+      </header>
+    </div>
   )
 }

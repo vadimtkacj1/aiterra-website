@@ -85,7 +85,7 @@ export default function TechSliderSection(): ReactElement {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8">
         {/* Text on the right (RTL = first in DOM) */}
         <div className="shrink-0 text-right">
-          <p className=" font-bold text-[32px] leading-snug">
+          <p className=" font-bold text-[20px] md:text-[32px] leading-snug">
             לקוחות ושותפים טכנולוגיים
             <br />
             שכבר בחרו להמריא איתנו

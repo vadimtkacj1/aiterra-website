@@ -7,7 +7,7 @@ export default function ContactMapSection() {
           <h2
             className="font-bold"
             style={{
-              fontSize: 'clamp(28px, 3vw, 40px)',
+              fontSize: 'clamp(20px, 3vw, 40px)',
               background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',

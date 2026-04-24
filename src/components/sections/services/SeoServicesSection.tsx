@@ -50,7 +50,7 @@ export default function SeoServicesSection() {
           </p>
           <h2
             className="text-gray-900 font-bold leading-tight"
-            style={{ fontSize: 'clamp(32px, 5vw, 52px)', lineHeight: '1.1' }}
+            style={{ fontSize: 'clamp(20px, 5vw, 52px)', lineHeight: '1.1' }}
           >
             שירותי קידום אורגני
             <br />

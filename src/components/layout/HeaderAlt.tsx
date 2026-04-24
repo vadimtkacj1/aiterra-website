@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { useDocumentEnd } from '@/context/DocumentEndContext'
 
@@ -29,6 +30,11 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
   const { atDocumentEnd } = useDocumentEnd()
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -55,12 +61,62 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
       : 'bg-transparent'
     : 'bg-white border-b border-gray-100 shadow-sm'
 
+  const mobileMenuLayer =
+    mounted &&
+    createPortal(
+      <>
+        <div
+          className={`fixed top-0 right-0 z-[100] h-screen w-70 bg-white shadow-2xl transition-transform duration-300 ease-in-out md:hidden ${
+            open ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          <div className="flex flex-col h-full">
+            <div className="flex h-16 items-center justify-between border-b border-gray-50 px-6">
+              <button
+                onClick={() => setOpen(false)}
+                className="p-2 outline-none"
+                aria-label="Close menu"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+            <nav className="flex flex-col p-8 gap-6 text-right" dir="rtl">
+              {navLinks.map((link, i) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-xl font-bold text-black border-b border-gray-50 pb-4 transition-all duration-500 ${
+                    open ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
+                  }`}
+                  style={{ transitionDelay: `${i * 70}ms` }}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </div>
+        {open && (
+          <div
+            className="fixed inset-0 z-[90] bg-black/40 backdrop-blur-sm md:hidden"
+            onClick={() => setOpen(false)}
+          />
+        )}
+      </>,
+      document.body,
+    )
+
   return (
-    <header
-      className={`sticky top-0 z-[80] w-full transition-all duration-300 ${
-        atDocumentEnd ? '-translate-y-full pointer-events-none' : 'translate-y-0'
-      } ${shellClass}`}
+    <div
+      className={`sticky top-0 z-[80] w-full overflow-hidden transition-[max-height] duration-300 ease-out ${
+        atDocumentEnd ? 'max-h-0 pointer-events-none' : 'max-h-16 md:max-h-[240px]'
+      }`}
     >
+      <header className={`w-full transition-colors duration-300 ${shellClass}`}>
 
       {/* ===== DESKTOP ===== */}
       <div className="hidden md:block max-w-7xl mx-auto px-4 py-2">
@@ -128,52 +184,8 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
         </button>
       </div>
 
-      {/* Side Drawer */}
-      <div
-        className={`fixed top-0 right-0 z-[100] h-screen w-70 bg-white shadow-2xl transition-transform duration-300 ease-in-out md:hidden ${
-          open ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
-        <div className="flex flex-col h-full">
-          <div className="flex h-16 items-center justify-between border-b border-gray-50 px-6">
-            {/* X всередині дровера */}
-            <button
-              onClick={() => setOpen(false)}
-              className="p-2 outline-none"
-              aria-label="Close menu"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round">
-                <line x1="18" y1="6" x2="6" y2="18"/>
-                <line x1="6" y1="6" x2="18" y2="18"/>
-              </svg>
-            </button>
-          </div>
-          <nav className="flex flex-col p-8 gap-6 text-right" dir="rtl">
-            {navLinks.map((link, i) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-xl font-bold text-black border-b border-gray-50 pb-4 transition-all duration-500 ${
-                  open ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
-                }`}
-                style={{ transitionDelay: `${i * 70}ms` }}
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      </div>
-
-      {/* Overlay */}
-      {open && (
-        <div
-          className="fixed inset-0 z-[90] bg-black/40 backdrop-blur-sm md:hidden"
-          onClick={() => setOpen(false)}
-        />
-      )}
-
-    </header>
+      </header>
+      {mobileMenuLayer}
+    </div>
   )
 }

@@ -33,7 +33,7 @@ export default function FaqSection() {
       <div className="w-full px-4 md:px-10 lg:px-20">
         <div className="text-right mb-16">
           <h2
-            className="text-[32px] md:text-[48px] font-bold mb-4 leading-tight bg-clip-text text-transparent inline-block"
+            className="text-[20px] md:text-[48px] font-bold mb-4 leading-tight bg-clip-text text-transparent inline-block"
             style={{
               backgroundImage: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
               WebkitBackgroundClip: 'text'

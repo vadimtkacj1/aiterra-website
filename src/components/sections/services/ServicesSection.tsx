@@ -43,18 +43,18 @@ const services = [
 ]
 export default function ServicesSection() {
   return (
-    <section className="bg-gray-50 pb-32" dir="rtl">
+    <section className="md:pb-32" dir="rtl">
       <div className="max-w-full mx-auto relative">
         <div className="flex flex-col">
           {services.map((service, index) => (
             <div
               key={index}
-              // Убрали класс shadow-xl
-              className="sticky flex flex-col md:flex-row-reverse w-full bg-white overflow-hidden border-t border-gray-100"
-              style={{ top: `${index * 20}px` }}
+              // ה-sticky חוזר כאן עם חישוב ה-top
+              className="sticky flex flex-col md:flex-row-reverse w-full bg-white overflow-hidden "
+              style={{ top: `${index * 40}px` }} 
             >
-              {/* Image side */}
-              <div className="relative w-full md:w-[710px] h-[765px] shrink-0">
+              {/* Image side - גובה מוקטן במובייל כדי שהטקסט לא ייחתך */}
+              <div className="relative w-full md:w-[710px] h-[230px] md:h-[765px] shrink-0">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -64,29 +64,30 @@ export default function ServicesSection() {
               </div>
 
               {/* Text side */}
-              <div className="relative flex flex-col flex-1 bg-white px-10 md:px-24 py-16">
+              <div className="relative flex flex-col flex-1 bg-white px-6 py-8 md:px-24 md:py-16 text-right">
+                
                 {/* Upper Text */}
-                <div className="w-full text-right">
-                  <span className="text-[14px] font-medium text-gray-900 block mb-20">
+                <div className="w-full mb-4 md:mb-20">
+                  <span className="text-[14px] font-medium text-gray-500 block">
                     {service.upperTitle}
                   </span>
                 </div>
 
-                <div className="my-auto text-right">
-                  {/* Title 48px */}
-                  <h3 className="text-[48px] leading-[1.1] font-black text-[#3b28cc] mb-8 max-w-[500px]">
+                <div className="my-auto">
+                  {/* Title: 20px Mobile / 48px Desktop */}
+                  <h3 className="text-[20px] md:text-[48px] leading-[1.2] font-black text-[#3b28cc] mb-4 md:mb-8 max-w-[500px]">
                     {service.title}
                   </h3>
 
-                  {/* Description 14px */}
-                  <p className="text-gray-600 text-[14px] leading-relaxed mb-12 max-w-[480px]">
+                  {/* Description: 14px */}
+                  <p className="text-gray-600 text-[14px] leading-relaxed mb-8 md:mb-12 max-w-[480px]">
                     {service.description}
                   </p>
 
-                  {/* Button */}
+                  {/* Button: 14px */}
                   <Link
                     href={service.href}
-                    className="inline-block border border-[#3b28cc] text-[#3b28cc] text-[14px] px-12 py-3 hover:bg-[#3b28cc] hover:text-white transition-all duration-300"
+                    className="inline-block border border-[#3b28cc] text-[#3b28cc] text-[14px] px-10 py-3 hover:bg-[#3b28cc] hover:text-white transition-all duration-300 font-bold"
                   >
                     {service.cta}
                   </Link>

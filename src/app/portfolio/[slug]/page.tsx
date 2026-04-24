@@ -1,5 +1,6 @@
 import HeaderAlt from "@/components/layout/HeaderAlt";
 import Footer from "@/components/layout/Footer";
+import StickyPageFooter from "@/components/layout/StickyPageFooter";
 import { PortfolioProjectHeroSection, CtaSection, FaqSection } from "@/components/sections";
 import { getProjectBySlug, portfolioProjects } from "@/data/portfolio";
 import { notFound } from "next/navigation";
@@ -55,9 +56,9 @@ export default async function PortfolioProjectPage({ params }: Props) {
                     <FaqSection />
                 </main>
 
-                <div className="sticky bottom-0 z-10 mt-auto w-full">
+                <StickyPageFooter className="z-10">
                     <Footer />
-                </div>
+                </StickyPageFooter>
             </div>
         </div>
     );

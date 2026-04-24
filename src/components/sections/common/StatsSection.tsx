@@ -45,7 +45,7 @@ export default function StatsSection(): ReactElement {
       <div className="px-0 md:px-6">
         
         <div className="mb-12 md:mb-16 text-right px-6 md:px-0">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-[#0A0A0A]">
+          <h2 className="text-[20px] md:text-5xl font-bold leading-tight mb-6 text-[#0A0A0A]">
             אודות AITERRA – חברת בניית
             <br />
             אתרים וסוכנות שיווק מובילה

@@ -1,5 +1,6 @@
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
+import StickyPageFooter from '@/components/layout/StickyPageFooter'
 import {
   AboutHeroSection,
   TeamSection,
@@ -22,9 +23,9 @@ export default function AboutPage() {
           <CtaSection />
           <FaqSection />
         </main>
-        <div className="sticky bottom-0 z-10 mt-auto w-full">
+        <StickyPageFooter className="z-10">
           <Footer />
-        </div>
+        </StickyPageFooter>
       </div>
     </div>
   )

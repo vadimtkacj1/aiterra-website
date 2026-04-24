@@ -47,7 +47,7 @@ export default function BlogCard({ post }: Props) {
         </p>
         <h3
           className="text-white font-black leading-tight"
-          style={{ fontSize: 'clamp(22px, 3vw, 30px)' }}
+          style={{ fontSize: 'clamp(20px, 3vw, 30px)' }}
         >
           {post.title}
         </h3>

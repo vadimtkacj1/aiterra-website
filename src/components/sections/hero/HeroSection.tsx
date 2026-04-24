@@ -16,7 +16,7 @@ export default function HeroSection() {
         <div className="w-full lg:w-1/2 flex flex-col gap-8 text-right lg:mr-0 lg:ml-auto lg:pt-40">
           <h1
             style={{ fontWeight: 700, lineHeight: '110%' }}
-            className="text-[32px] md:text-[48px] text-gray-900"
+            className="text-[20px] md:text-[48px] text-gray-900"
           >
             שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם לעסקים
           </h1>

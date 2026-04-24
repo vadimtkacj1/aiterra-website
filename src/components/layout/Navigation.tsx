@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { useDocumentEnd } from '@/context/DocumentEndContext';
 
@@ -14,11 +15,65 @@ const navLinks = [
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { atDocumentEnd } = useDocumentEnd();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (atDocumentEnd) setOpen(false);
   }, [atDocumentEnd]);
+
+  const mobileLayer =
+    mounted &&
+    createPortal(
+      <>
+        <div
+          className={`fixed top-0 right-0 z-[100] h-screen w-[280px] bg-white shadow-2xl transition-transform duration-300 ease-in-out md:hidden ${
+            open ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          <div className="flex flex-col h-full">
+            <div className="flex h-16 items-center justify-between border-b border-gray-50 px-6">
+              <button
+                onClick={() => setOpen(false)}
+                className="p-2 outline-none"
+                aria-label="Close menu"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+            <nav className="flex flex-col p-8 gap-6 text-right" dir="rtl">
+              {navLinks.map((link, i) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-xl font-bold text-black border-b border-gray-50 pb-4 transition-all duration-500 ${
+                    open ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
+                  }`}
+                  style={{ transitionDelay: `${i * 70}ms` }}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </div>
+        {open && (
+          <div
+            className="fixed inset-0 z-[90] bg-black/40 backdrop-blur-sm md:hidden"
+            onClick={() => setOpen(false)}
+          />
+        )}
+      </>,
+      document.body,
+    );
 
   return (
     <>
@@ -57,50 +112,7 @@ const Navigation = () => {
         </button>
       </div>
 
-      {/* Side Drawer Menu (Mobile) */}
-      <div
-        className={`fixed top-0 right-0 z-[100] h-screen w-[280px] bg-white shadow-2xl transition-transform duration-300 ease-in-out md:hidden ${
-          open ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
-        <div className="flex flex-col h-full">
-          <div className="flex h-16 items-center justify-between border-b border-gray-50 px-6">
-            <button
-              onClick={() => setOpen(false)}
-              className="p-2 outline-none"
-              aria-label="Close menu"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round">
-                <line x1="18" y1="6" x2="6" y2="18"/>
-                <line x1="6" y1="6" x2="18" y2="18"/>
-              </svg>
-            </button>
-          </div>
-          <nav className="flex flex-col p-8 gap-6 text-right" dir="rtl">
-            {navLinks.map((link, i) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-xl font-bold text-black border-b border-gray-50 pb-4 transition-all duration-500 ${
-                  open ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
-                }`}
-                style={{ transitionDelay: `${i * 70}ms` }}
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      </div>
-
-      {/* Overlay */}
-      {open && (
-        <div
-          className="fixed inset-0 z-[90] bg-black/40 backdrop-blur-sm md:hidden"
-          onClick={() => setOpen(false)}
-        />
-      )}
+      {mobileLayer}
     </>
   );
 };

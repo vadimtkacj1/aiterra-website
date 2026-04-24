@@ -3,7 +3,10 @@
 import { useEffect, useRef } from 'react'
 import { useDocumentEnd } from '@/context/DocumentEndContext'
 
-/** Marks the physical end of the page; drives header hide via IntersectionObserver. */
+/**
+ * Must sit **after** any `sticky bottom` footer wrapper in the document flow so it only
+ * intersects the viewport when the user has scrolled to the true end of the page.
+ */
 export default function DocumentEndSentinel() {
   const ref = useRef<HTMLDivElement>(null)
   const { setDocumentEnd } = useDocumentEnd()
@@ -16,22 +19,12 @@ export default function DocumentEndSentinel() {
       ([entry]) => {
         setDocumentEnd(entry.isIntersecting)
       },
-      {
-        threshold: 0,
-        // Slightly extend the viewport bottom so the header tucks away before the last pixel.
-        rootMargin: '0px 0px 64px 0px',
-      },
+      { threshold: 0, rootMargin: '0px' },
     )
 
     io.observe(el)
     return () => io.disconnect()
   }, [setDocumentEnd])
 
-  return (
-    <div
-      ref={ref}
-      className="h-px w-full shrink-0"
-      aria-hidden
-    />
-  )
+  return <div ref={ref} className="h-px w-full shrink-0" aria-hidden />
 }

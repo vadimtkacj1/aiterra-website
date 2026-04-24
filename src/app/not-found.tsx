@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
+import DocumentEndSentinel from '@/components/layout/DocumentEndSentinel'
 
 const gradientStyle: React.CSSProperties = {
   background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
@@ -36,8 +37,8 @@ export default function NotFound() {
         />
 
         <h1
-          className="text-gray-900 font-bold mb-4"
-          style={{ fontSize: '32px', fontFamily: 'var(--font-brutalist)' }}
+          className="text-gray-900 font-bold mb-4 text-[20px] md:text-[32px]"
+          style={{ fontFamily: 'var(--font-brutalist)' }}
         >
           הדף לא נמצא
         </h1>
@@ -66,6 +67,7 @@ export default function NotFound() {
         </div>
       </main>
       <Footer />
+      <DocumentEndSentinel />
     </div>
   )
 }

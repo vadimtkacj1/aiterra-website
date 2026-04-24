@@ -1,5 +1,6 @@
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
+import StickyPageFooter from '@/components/layout/StickyPageFooter'
 import { ContactHeroSection, ContactMapSection, CtaSection, FaqSection } from '@/components/sections'
 
 export default function ContactPage() {
@@ -15,9 +16,9 @@ export default function ContactPage() {
           <CtaSection />
           <FaqSection />
         </main>
-        <div className="sticky bottom-0 z-10 mt-auto w-full">
+        <StickyPageFooter className="z-10">
           <Footer />
-        </div>
+        </StickyPageFooter>
       </div>
     </div>
   )

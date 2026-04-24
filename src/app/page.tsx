@@ -1,6 +1,7 @@
 'use client'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import StickyPageFooter from '@/components/layout/StickyPageFooter'
 import {
   HeroSection,
   TechSliderSection,
@@ -28,9 +29,9 @@ export default function HomePage() {
           <CtaSection />
           <FaqSection />
         </main>
-        <div className="sticky bottom-0 z-60 mt-auto w-full mt-[50px]">
+        <StickyPageFooter className="z-60 mt-[50px]">
           <Footer />
-        </div>
+        </StickyPageFooter>
       </div>
     </div>
   )

@@ -25,7 +25,7 @@ export default function BlogHeroSection() {
         <h1
           className="text-white mb-6 font-bold"
           style={{
-            fontSize: 'clamp(40px, 8vw, 85px)',
+            fontSize: 'clamp(20px, 8vw, 85px)',
             lineHeight: '1.1',
           }}
         >
