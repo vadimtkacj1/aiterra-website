@@ -49,52 +49,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare SSH key
-        shell: bash
-        run: |
-          set -euxo pipefail
-          mkdir -p ~/.ssh
-          printf '%s\n' "${{ secrets.SSH_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          echo "Key file size: $(wc -c < ~/.ssh/id_ed25519) bytes"
-          head -1 ~/.ssh/id_ed25519
+      - name: Setup SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
 
       - name: Add server host key
-        shell: bash
         env:
           SSH_PORT: ${{ secrets.SSH_PORT }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
         run: |
-          set -euxo pipefail
           PORT="${SSH_PORT:-22}"
-          echo "Scanning host: $SSH_HOST port $PORT"
           ssh-keyscan -p "$PORT" -H "$SSH_HOST" >> ~/.ssh/known_hosts
-          echo "known_hosts entries: $(wc -l < ~/.ssh/known_hosts)"
-
-      - name: Test SSH connection
-        shell: bash
-        env:
-          SSH_PORT: ${{ secrets.SSH_PORT }}
-          SSH_HOST: ${{ secrets.SSH_HOST }}
-          SSH_USER: ${{ secrets.SSH_USER }}
-        run: |
-          set -euxo pipefail
-          PORT="${SSH_PORT:-22}"
-          echo "Connecting as $SSH_USER@$SSH_HOST:$PORT"
-          ssh -i ~/.ssh/id_ed25519 -p "$PORT" -o StrictHostKeyChecking=yes \
-            "$SSH_USER@$SSH_HOST" \
-            "echo 'SSH OK:' \$(whoami)@\$(hostname)"
 
       - name: Deploy
-        shell: bash
         env:
           SSH_PORT: ${{ secrets.SSH_PORT }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_USER: ${{ secrets.SSH_USER }}
         run: |
-          set -euo pipefail
           PORT="${SSH_PORT:-22}"
-          ssh -i ~/.ssh/id_ed25519 -p "$PORT" "$SSH_USER@$SSH_HOST" << 'EOF'
+          ssh -p "$PORT" "$SSH_USER@$SSH_HOST" << 'EOF'
             set -euo pipefail
 
             mkdir -p ~/aiterra-website
