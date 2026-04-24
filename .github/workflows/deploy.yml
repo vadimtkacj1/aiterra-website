@@ -52,59 +52,63 @@ jobs:
       - name: Prepare SSH key
         shell: bash
         run: |
-          set -euo pipefail
+          set -euxo pipefail
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
-          echo "" >> ~/.ssh/id_ed25519
+          printf '%s\n' "${{ secrets.SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
+          echo "Key file size: $(wc -c < ~/.ssh/id_ed25519) bytes"
+          head -1 ~/.ssh/id_ed25519
 
       - name: Add server host key
         shell: bash
         env:
           SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
         run: |
-          set -euo pipefail
+          set -euxo pipefail
           PORT="${SSH_PORT:-22}"
-          ssh-keyscan -p "$PORT" -H "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
+          echo "Scanning host: $SSH_HOST port $PORT"
+          ssh-keyscan -p "$PORT" -H "$SSH_HOST" >> ~/.ssh/known_hosts
+          echo "known_hosts entries: $(wc -l < ~/.ssh/known_hosts)"
 
       - name: Test SSH connection
         shell: bash
         env:
           SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
         run: |
-          set -euo pipefail
+          set -euxo pipefail
           PORT="${SSH_PORT:-22}"
-          ssh -i ~/.ssh/id_ed25519 -p "$PORT" \
-            "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" \
+          echo "Connecting as $SSH_USER@$SSH_HOST:$PORT"
+          ssh -i ~/.ssh/id_ed25519 -p "$PORT" -o StrictHostKeyChecking=yes \
+            "$SSH_USER@$SSH_HOST" \
             "echo 'SSH OK:' \$(whoami)@\$(hostname)"
 
       - name: Deploy
         shell: bash
         env:
           SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
         run: |
           set -euo pipefail
           PORT="${SSH_PORT:-22}"
-          ssh -i ~/.ssh/id_ed25519 -p "$PORT" \
-            "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" << 'EOF'
+          ssh -i ~/.ssh/id_ed25519 -p "$PORT" "$SSH_USER@$SSH_HOST" << 'EOF'
             set -euo pipefail
 
-            # project dir
             mkdir -p ~/aiterra-website
             cd ~/aiterra-website
 
-            # if repo already cloned
             if [ -d .git ]; then
               git fetch --all --prune
               git checkout main
               git pull --ff-only origin main
             else
-              echo "Repo not initialized on server (~/crm/.git missing)."
-              echo "Clone repo manually once, then re-run workflow."
+              echo "Repo not initialized on server. Clone it manually once, then re-run."
               exit 1
             fi
 
-            # deploy
             docker compose pull || true
             docker compose up -d --build --remove-orphans
             docker image prune -f
