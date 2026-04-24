@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { isAtPageBottom } from '@/lib/scroll';
+import { useDocumentEnd } from '@/context/DocumentEndContext';
 
 const navLinks = [
   { href: '/', label: 'ראשי' },
@@ -14,14 +14,11 @@ const navLinks = [
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
+  const { atDocumentEnd } = useDocumentEnd();
 
   useEffect(() => {
-    const onScroll = () => {
-      if (open && isAtPageBottom()) setOpen(false);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [open]);
+    if (atDocumentEnd) setOpen(false);
+  }, [atDocumentEnd]);
 
   return (
     <>

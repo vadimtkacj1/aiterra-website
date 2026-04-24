@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { isAtPageBottom } from '@/lib/scroll'
+import { useDocumentEnd } from '@/context/DocumentEndContext'
 
 const gradientStyle = 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)'
 
@@ -26,17 +26,12 @@ interface HeaderAltProps {
 }
 
 export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
+  const { atDocumentEnd } = useDocumentEnd()
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [atBottom, setAtBottom] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 24)
-      const bottom = isAtPageBottom()
-      setAtBottom(bottom)
-      if (bottom) setOpen(false)
-    }
+    const onScroll = () => setScrolled(window.scrollY > 24)
     window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('resize', onScroll)
     onScroll()
@@ -45,6 +40,10 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
       window.removeEventListener('resize', onScroll)
     }
   }, [])
+
+  useEffect(() => {
+    if (atDocumentEnd) setOpen(false)
+  }, [atDocumentEnd])
 
   const onDarkHero = transparent && !scrolled
   const linkClass = `text-[14px] font-bold hover:opacity-70 whitespace-nowrap ${onDarkHero ? 'text-white' : 'text-black'}`
@@ -59,7 +58,7 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
   return (
     <header
       className={`sticky top-0 z-[80] w-full transition-all duration-300 ${
-        atBottom ? '-translate-y-full pointer-events-none' : 'translate-y-0'
+        atDocumentEnd ? '-translate-y-full pointer-events-none' : 'translate-y-0'
       } ${shellClass}`}
     >
 
