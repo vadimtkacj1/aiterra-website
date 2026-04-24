@@ -2,8 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRef } from 'react'
-import { motion, useScroll, useTransform, MotionValue } from 'framer-motion'
 
 const services = [
   {

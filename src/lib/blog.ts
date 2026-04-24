@@ -3,6 +3,6 @@ export async function getAllPosts() {
   return []
 }
 
-export async function getPostBySlug(slug: string) {
+export async function getPostBySlug(_slug: string) {
   return null
 }

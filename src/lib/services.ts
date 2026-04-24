@@ -3,6 +3,6 @@ export async function getAllServices() {
   return []
 }
 
-export async function getServiceBySlug(slug: string) {
+export async function getServiceBySlug(_slug: string) {
   return null
 }

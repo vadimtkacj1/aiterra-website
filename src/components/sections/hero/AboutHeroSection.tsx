@@ -1,7 +1,7 @@
 import AiterraWordmark from '@/components/ui/AiterraWordmark'
 import HeroCTAButtons from '@/components/ui/HeroCTAButtons'
 
-export default function HeroSection() {
+export default function AboutHeroSection() {
   return (
     <section className="relative overflow-hidden bg-white min-h-[90vh] flex flex-col" dir="rtl">
       <div className="max-w-7xl mx-auto px-6 w-full flex-1 flex items-center justify-center">
@@ -26,9 +26,9 @@ export default function HeroSection() {
             style={{ fontWeight: 700, fontSize: '64px', lineHeight: '1.1', letterSpacing: '-0.02em' }}
             className="text-gray-900 font-sans"
           >
-"AITERRA: טכנולוגיה שבונה אתרים.
+            {'"'}AITERRA: טכנולוגיה שבונה אתרים.
             <br />
-אסטרטגיה שבונה עסקים."
+            אסטרטגיה שבונה עסקים.{'"'}
           </h1>
 
           {/* Subtext */}
