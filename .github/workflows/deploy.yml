@@ -85,7 +85,6 @@ jobs:
               exit 1
             fi
 
-            docker compose pull || true
             docker compose up -d --build --remove-orphans
             docker image prune -f
 
