@@ -1,0 +1,103 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Heebo';
+  src: url('/fonts/Heebo/Heebo-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arimo';
+  src: url('/fonts/Arimo/Arimo-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arimo';
+  src: url('/fonts/Arimo/Arimo-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TelAviv-Brutalist';
+  src: url('/fonts/TelAviv-BrutalistLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TelAviv-Brutalist';
+  src: url('/fonts/TelAviv-BrutalistRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TelAviv-Brutalist';
+  src: url('/fonts/TelAviv-BrutalistBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TelAviv-Modernist';
+  src: url('/fonts/TelAviv-ModernistRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TelAviv-Modernist';
+  src: url('/fonts/TelAviv-ModernistBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+@layer base {
+  :root {
+    --font-brutalist: 'TelAviv-Brutalist', Arial, sans-serif;
+    --font-modernist: 'TelAviv-Modernist', Arial, sans-serif;
+    --font-heebo: 'Heebo', Arial, sans-serif;
+    --font-arimo: 'Arimo', Arial, sans-serif;
+  }
+
+  html {
+    direction: rtl;
+  }
+
+  body {
+    font-family: var(--font-modernist);
+    background: #ffffff;
+    color: #0a0a0a;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-brutalist);
+  }
+}
