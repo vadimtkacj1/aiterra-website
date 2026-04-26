@@ -1,3 +1,7 @@
+# Production: `edge` publishes :80 and :443; `web` is only reachable inside the compose network (no host :3000).
+# One-time on the server: sudo systemctl stop nginx && sudo systemctl disable nginx
+# (host nginx and container cannot both bind :80). Certs: /etc/letsencrypt mounted into `edge`.
+
 services:
   web:
     build:
@@ -8,8 +12,8 @@ services:
     image: ${DOCKER_IMAGE:-aiterra-website:latest}
     container_name: aiterra-website-web
     restart: unless-stopped
-    ports:
-      - "80:80"
+    expose:
+      - "80"
     env_file:
       - path: .env
         required: false
@@ -35,7 +39,6 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-    # Resource limits for performance
     deploy:
       resources:
         limits:
@@ -44,20 +47,43 @@ services:
         reservations:
           cpus: "0.5"
           memory: 256M
-    # Security options
     security_opt:
       - no-new-privileges:true
     read_only: false
     tmpfs:
       - /tmp
-    # Performance optimizations
     ulimits:
       nofile:
         soft: 65536
         hard: 65536
+
+  edge:
+    image: nginx:1.27-alpine
+    container_name: aiterra-website-edge
+    restart: unless-stopped
+    depends_on:
+      web:
+        condition: service_healthy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.docker.conf:/etc/nginx/nginx.conf:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - nginx-cache:/var/cache/nginx
+    networks:
+      - app-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
 networks:
   app-network:
     driver: bridge
     driver_opts:
       com.docker.network.driver.mtu: 1450
+
+volumes:
+  nginx-cache:

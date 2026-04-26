@@ -157,7 +157,7 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
       </div>
 
       {/* ===== MOBILE ===== */}
-      <div className="flex h-16 items-center justify-between px-6 md:hidden">
+      <div className="flex h-16 items-center justify-between px-6 md:hidden" dir="ltr">
 
         {/* Logo — block image avoids baseline gap under the icon */}
         <Link href="/" className="flex h-16 w-16 shrink-0 items-center justify-center leading-none">

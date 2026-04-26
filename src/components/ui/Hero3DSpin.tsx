@@ -1,14 +1,26 @@
-/** Shared loading ring for 3D hero (chunk + asset load). */
+'use client'
+
+import { useEffect } from 'react'
+
+/** Full-viewport overlay while the 3D hero chunk or assets load. */
 export function Hero3DSpin({ label = 'Loading 3D' }: { label?: string }) {
+  useEffect(() => {
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = prev
+    }
+  }, [])
+
   return (
     <div
-      className="flex h-full min-h-[180px] w-full items-center justify-center"
+      className="fixed inset-0 z-[8000] flex flex-col items-center justify-center gap-4 bg-white"
       role="status"
       aria-busy="true"
       aria-label={label}
     >
       <div
-        className="h-11 w-11 shrink-0 rounded-full border-[3px] border-gray-200/90 border-t-[#530FAD] animate-spin shadow-sm"
+        className="h-14 w-14 shrink-0 rounded-full border-[3px] border-gray-200/90 border-t-[#530FAD] animate-spin shadow-sm"
         aria-hidden
       />
     </div>

@@ -20,7 +20,7 @@ export const services: Service[] = [
     heroDescription: 'תהליך העבודה: קידום אתרים אורגני בגוגל שמוביל לתוצאות',
     description:
       'אסטרטגיית תוכן ו-SEO טכני שמביאים תנועה אורגנית איכותית לאורך זמן. אנחנו בונים נוכחות דיגיטלית חזקה שתניב תוצאות גם עוד שנים קדימה.',
-    icon: '/icons/seo.svg',
+    icon: '/icons/service-icon-seo.svg',
     image: '/images/services/service2.png',
   },
   {
@@ -31,7 +31,7 @@ export const services: Service[] = [
     heroDescription: 'תהליך העבודה: בניית מערכות אוטומציה שעובדות בשבילכם 24/7',
     description:
       'מחברים בין כל הכלים הדיגיטליים שלכם – CRM, דוא"ל, ווטסאפ, טפסים ועוד. מייצרים תהליכים אוטומטיים שמנהלים לידים, שולחים מסרים ומדווחים בלי התערבות ידנית.',
-    icon: '/icons/automation.svg',
+    icon: '/icons/service-icon-auto.svg',
     image: '/images/services/service3.png',
   },
   {
@@ -42,7 +42,7 @@ export const services: Service[] = [
     heroDescription: 'תהליך העבודה: ניהול קמפיינים ממומנים עם ROI מדיד',
     description:
       'מנהלים תקציבי פרסום בגוגל אדס, פייסבוק, אינסטגרם וטיקטוק עם דגש על החזר השקעה. כל קמפיין מחובר ישירות ל-CRM שלכם לעבודה חלקה ולידים איכותיים.',
-    icon: '/icons/adv.svg',
+    icon: '/icons/service-icon-ads.svg',
     image: '/images/services/service4.png',
   },
 ]

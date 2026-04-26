@@ -1,8 +1,9 @@
 'use client'
 
-import { Suspense, useRef } from 'react'
+import { Suspense, useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber'
-import { Html, useProgress } from '@react-three/drei'
+import { useProgress } from '@react-three/drei'
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js'
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js'
 import * as THREE from 'three'
@@ -10,22 +11,36 @@ import * as THREE from 'three'
 function ModelLoadSpinner() {
   const { active, loaded, total } = useProgress()
   const busy = active || (total > 0 && loaded < total)
-  if (!busy) return null
+  const [mounted, setMounted] = useState(false)
 
-  return (
-    <Html center className="pointer-events-none" zIndexRange={[50, 50]}>
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!busy) return
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = prev
+    }
+  }, [busy])
+
+  if (!mounted || !busy) return null
+
+  return createPortal(
+    <div
+      className="fixed inset-0 z-[8000] flex flex-col items-center justify-center gap-4 bg-white"
+      role="status"
+      aria-busy="true"
+      aria-label="Loading 3D model"
+    >
       <div
-        className="flex flex-col items-center gap-2 rounded-2xl bg-white/90 px-5 py-4 shadow-md backdrop-blur-sm"
-        role="status"
-        aria-busy="true"
-        aria-label="Loading 3D model"
-      >
-        <div
-          className="h-11 w-11 shrink-0 rounded-full border-[3px] border-gray-200 border-t-[#530FAD] animate-spin"
-          aria-hidden
-        />
-      </div>
-    </Html>
+        className="h-14 w-14 shrink-0 rounded-full border-[3px] border-gray-200/90 border-t-[#530FAD] animate-spin shadow-sm"
+        aria-hidden
+      />
+    </div>,
+    document.body,
   )
 }
 
@@ -101,13 +116,13 @@ function SpiralModel() {
 export default function Hero3DScene() {
   return (
     <div className="relative h-full w-full min-h-[180px]">
+      <ModelLoadSpinner />
       <Canvas
         camera={{ position: [0, 0, 20], fov: 50 }}
         gl={{ alpha: true, antialias: true }}
         style={{ background: 'transparent' }}
         className="h-full w-full"
       >
-        <ModelLoadSpinner />
         <ambientLight intensity={0.7} />
         <directionalLight position={[5, 8, 5]} intensity={1.4} color="#ffffff" />
         <pointLight position={[-4, 2, 3]} intensity={4} color="#1B1BB3" />
