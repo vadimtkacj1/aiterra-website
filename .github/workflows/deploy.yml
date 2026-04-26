@@ -79,7 +79,7 @@ jobs:
             if [ -d .git ]; then
               git fetch --all --prune
               git checkout main
-              git pull --ff-only origin main
+              git reset --hard origin/main
             else
               echo "Repo not initialized on server. Clone it manually once, then re-run."
               exit 1
