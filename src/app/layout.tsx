@@ -13,6 +13,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="he" dir="rtl">
       <head>
+        <link rel="preload" href="/obj/model.draco.glb" as="fetch" crossOrigin="anonymous" />
       </head>
       <body>
         <PageLoadSpinner />
