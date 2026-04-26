@@ -41,7 +41,7 @@ export default function ContactMapSection() {
         {/* Map — left */}
         <div className="w-full md:w-2/3 h-105">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108517.41099898844!2d34.72948365!3d32.0879502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4ca6173c4cdb%3A0x6b3c5511a9d32957!2sTel%20Aviv-Yafo!5e0!3m2!1siw!2sil!4v1716000000000"
+            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=Tel+Aviv,Israel&language=iw`}
             width="100%"
             height="100%"
             style={{ border: 0 }}

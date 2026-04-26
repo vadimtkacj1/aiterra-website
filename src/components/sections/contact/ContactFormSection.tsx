@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function ContactFormSection() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', message: '' })
@@ -18,7 +19,10 @@ export default function ContactFormSection() {
 
   return (
     <section id="contact-form" className="bg-white py-24 px-6" dir="rtl">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+
+        {/* Form — right (RTL start) */}
+        <div className="w-full md:w-1/2">
 
         <h2
           className="font-bold mb-4"
@@ -108,6 +112,19 @@ export default function ContactFormSection() {
             </button>
           </form>
         )}
+        </div>
+
+        {/* chips.png — left (RTL end = physical left) */}
+        <div className="hidden md:flex w-full md:w-1/2 justify-center items-center">
+          <Image
+            src="/images/chips.png"
+            alt="AI chips"
+            width={480}
+            height={480}
+            className="object-contain"
+          />
+        </div>
+
       </div>
     </section>
   )

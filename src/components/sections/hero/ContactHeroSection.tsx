@@ -39,11 +39,17 @@ export default function ContactHeroSection() {
           תכסיסות טכנולוגיות ועד להבאת לקוחות משלמים. אנו מספקים מעטפת שירותים מלאה שתאפשר למדידות של העסק שלכם, כדי להפוך כל נכס דיגיטלי למנוע של צמיחה.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
 
+          {/* Primary — gradient fill */}
           <button
-            className="border border-white bg-transparent text-white px-8 py-3.5 w-full sm:w-55 transition-colors hover:bg-white/10"
-            style={{ fontWeight: 600, fontSize: '15px' }}
+            style={{
+              background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
+              fontWeight: 700,
+              fontSize: '14px',
+              fontFamily: "'Heebo', sans-serif",
+            }}
+            className="w-full sm:w-45 h-13.75 px-4 text-white flex items-center justify-center text-center leading-tight"
             onClick={() => {
               const section = document.getElementById('contact-form')
               if (section) section.scrollIntoView({ behavior: 'smooth' })
@@ -52,23 +58,19 @@ export default function ContactHeroSection() {
             השאירו פרטים
           </button>
 
-          <Link
-            href="/portfolio"
-            className="bg-white px-8 py-3.5 w-full sm:w-55 transition-transform hover:scale-105 active:scale-95 shadow-lg flex items-center justify-center"
-            style={{ fontWeight: 700, fontSize: '15px' }}
-          >
-            <span
-              style={{
-                background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                color: 'transparent',
-                display: 'inline-block',
-              }}
+          {/* Secondary — gradient border, white fill */}
+          <Link href="/portfolio" className="w-full sm:w-45 h-13.75">
+            <div
+              style={{ background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)' }}
+              className="p-px w-full h-full"
             >
-              צפו בתיק העבודות
-            </span>
+              <div
+                style={{ fontWeight: 700, fontSize: '14px', fontFamily: "'Heebo', sans-serif", color: '#1B1BB3' }}
+                className="w-full h-full bg-white flex items-center justify-center text-center leading-tight"
+              >
+                צפו בתיק העבודות
+              </div>
+            </div>
           </Link>
 
         </div>

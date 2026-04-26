@@ -5,21 +5,25 @@ const team = [
     name: 'אריק (Erik)',
     role: 'מנהל אסטרטגיה, קריאייטיב והפקה',
     bio: 'טקסט: אריק הוא הכוח היצירתי שגורם למותגים לבלוט ברשת. הוא אחראי על בניית אסטרטגיות שיווק מנצחות, כתיבת תסריטים חדים שמדברים לקהל היעד, וניהול הצילום וההפקה המקצועית של התוכן. אריק דואג שהמסר של העסק שלכם יחתוך את הרעש הדיגיטלי, יעורר סקרנות, וייראה הכי אותנטי ומשכנע שיש',
+    image: '/images/Eric.png',
   },
   {
     name: 'מיכאל (Michael)',
     role: 'מנהל מכירות וניהול פרויקטים',
     bio: 'מיכאל הוא הפנים של AITERRA מול הלקוחות שלנו והכוחות שלו. הוא מנהל מכירות ומוודא שהתהליך כולו מהיר – מנקב הצרכים ועד להשקה המוצלחת.',
+    image: '/images/Michael.png',
   },
   {
     name: 'ואדים (Vadim)',
     role: 'מתכנת ראשי (Lead Developer)',
     bio: 'ואדים הוא המוח הטכנולוגי מאחורי הקלעים. כמתכנת הראשי שלנו, הוא אחראי לקוד נקי, מהיר ומאובטח. בין אם פיתוח אתר איקומרס מורכב או יצירת אוטומציות חכמות.',
+    image: '/images/person.jpg',
   },
   {
     name: 'שון (Sean)',
     role: 'מנהל פיתוח וקידום דיגיטלי (SEO & Google Ads)',
     bio: 'שון מחבר בצורה מושלמת בין עולמות הקוד ומניעי החיפוש. הוא מגייל את האסטרטגיה הקדמית לקבל הועד הגנסים ם עסקיים גם על פרסום ממומן בגוגל.',
+    image: '/images/Sean.jpeg',
   },
 ]
 
@@ -62,7 +66,7 @@ export default function TeamSection() {
             <div key={member.name} className="flex-none w-75 md:w-auto flex flex-col items-start text-right gap-4 px-4 md:px-0 first:pl-6 last:pr-6 md:first:pl-0 md:last:pr-0">
               <div className="w-full aspect-square relative overflow-hidden">
                 <Image
-                  src="/images/person.jpg"
+                  src={member.image}
                   alt={member.name}
                   fill
                   className="object-cover object-top"

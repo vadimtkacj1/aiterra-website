@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function ContactForm() {
   const [name, setName] = useState('')
@@ -12,9 +13,9 @@ export default function ContactForm() {
   }
 
   return (
-    <section 
-      dir="rtl" 
-      className="flex py-20 px-4 md:px-20"
+    <section
+      dir="rtl"
+      className="flex items-center py-20 px-4 md:px-20 gap-12"
     >
       <div className="w-full max-w-[480px] flex flex-col items-start">
         <h2 className="text-[20px] md:text-[48px] font-bold leading-[1.1] mb-2 bg-clip-text text-transparent bg-[linear-gradient(92.63deg,#1B1BB3_14.57%,#530FAD_99.27%)]">
@@ -52,6 +53,16 @@ export default function ContactForm() {
             למידע נוסף על שירותי בניית האתרים שלנו
           </button>
         </form>
+      </div>
+
+      <div className="hidden md:flex flex-1 justify-center items-center">
+        <Image
+          src="/images/chips.png"
+          alt="AI chips"
+          width={500}
+          height={500}
+          className="object-contain"
+        />
       </div>
     </section>
   )
