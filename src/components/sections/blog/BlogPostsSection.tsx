@@ -14,7 +14,7 @@ export default function BlogPostsSection() {
     : blogPosts.filter((p) => p.tags.some(t => t.toUpperCase() === active))
 
   return (
-    <section id="blog-posts" className="bg-white py-16" dir="rtl">
+    <section className="bg-white pb-16 pt-2 md:pt-4" dir="rtl">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {ALL_TAGS.map((tag) => (

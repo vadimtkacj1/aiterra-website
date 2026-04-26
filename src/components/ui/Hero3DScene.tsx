@@ -2,7 +2,8 @@
 
 import { Suspense, useRef } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { useGLTF } from '@react-three/drei'
+import { Html, useGLTF } from '@react-three/drei'
+import { SpinnerRing } from '@/components/ui/SpinnerRing'
 import * as THREE from 'three'
 
 function SpiralModel() {
@@ -74,7 +75,15 @@ export default function Hero3DScene() {
         <directionalLight position={[5, 8, 5]} intensity={1.4} color="#ffffff" />
         <pointLight position={[-4, 2, 3]} intensity={4} color="#1B1BB3" />
         <pointLight position={[4, -2, 2]} intensity={3} color="#530FAD" />
-        <Suspense fallback={null}>
+        <Suspense
+          fallback={
+            <Html center prepend zIndexRange={[100, 0]}>
+              <div className="pointer-events-none flex flex-col items-center">
+                <SpinnerRing variant="on-light" className="h-12 w-12" aria-label="טוען מודל" />
+              </div>
+            </Html>
+          }
+        >
           <SpiralModel />
         </Suspense>
       </Canvas>

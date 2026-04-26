@@ -1,8 +1,9 @@
 'use client'
 
 import { useEffect } from 'react'
+import { SpinnerRing } from '@/components/ui/SpinnerRing'
 
-/** Full-viewport overlay while the 3D hero chunk or assets load. */
+/** Full-viewport overlay while something heavy blocks the hero (optional). */
 export function Hero3DSpin({ label = 'Loading 3D' }: { label?: string }) {
   useEffect(() => {
     const prev = document.body.style.overflow
@@ -19,10 +20,7 @@ export function Hero3DSpin({ label = 'Loading 3D' }: { label?: string }) {
       aria-busy="true"
       aria-label={label}
     >
-      <div
-        className="h-14 w-14 shrink-0 rounded-full border-[3px] border-gray-200/90 border-t-[#530FAD] animate-spin shadow-sm"
-        aria-hidden
-      />
+      <SpinnerRing variant="on-light" className="h-14 w-14" />
     </div>
   )
 }

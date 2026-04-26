@@ -1,5 +1,7 @@
 'use client'
 
+import HeroVideoBackdrop from '@/components/ui/HeroVideoBackdrop'
+
 export default function ServicesHeroSection() {
   return (
     <section
@@ -7,15 +9,7 @@ export default function ServicesHeroSection() {
       dir="rtl"
       style={{ backgroundColor: '#080112' }}
     >
-      {/* Looping video background */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        src="/videos/gradient.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      <HeroVideoBackdrop />
 
       {/* Dim overlay so text stays readable */}
       <div className="absolute inset-0 bg-black/30" />

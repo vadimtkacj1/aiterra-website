@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { SpinnerRing } from '@/components/ui/SpinnerRing'
 
 export default function PageLoadSpinner() {
   const [visible, setVisible] = useState(true)
@@ -49,10 +50,7 @@ export default function PageLoadSpinner() {
       aria-busy={visible}
       aria-label="טוען את האתר"
     >
-      <div
-        className="h-14 w-14 animate-spin rounded-full border-2 border-white/15 border-l-[#530FAD] border-t-transparent [animation-duration:0.85s]"
-        role="presentation"
-      />
+      <SpinnerRing variant="on-dark" className="h-14 w-14" />
       <p className="text-sm font-medium text-white/70" dir="rtl">
         טוען…
       </p>

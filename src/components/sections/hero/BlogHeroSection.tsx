@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import HeroVideoBackdrop from '@/components/ui/HeroVideoBackdrop'
 
 export default function BlogHeroSection() {
   return (
@@ -9,19 +10,11 @@ export default function BlogHeroSection() {
       dir="rtl"
       style={{ backgroundColor: '#080112' }}
     >
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        src="/videos/gradient.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      <HeroVideoBackdrop />
 
       <div className="absolute inset-0 bg-black/30" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-28 text-center md:pt-40">
-
         <h1
           className="text-white mb-6 font-bold"
           style={{

@@ -77,6 +77,117 @@
   animation-play-state: paused;
 }
 
+/* Blog article Markdown styles */
+.prose-blog {
+  font-family: var(--font-modernist);
+  font-size: 16px;
+  line-height: 1.8;
+  color: #1f2937;
+  direction: rtl;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.prose-blog h1,
+.prose-blog h2,
+.prose-blog h3,
+.prose-blog h4 {
+  font-family: var(--font-brutalist);
+  color: #111827;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+}
+
+.prose-blog h1 { font-size: 2rem; }
+.prose-blog h2 { font-size: 1.5rem; }
+.prose-blog h3 { font-size: 1.2rem; }
+
+.prose-blog p {
+  margin-bottom: 1.25em;
+}
+
+.prose-blog strong {
+  font-weight: 700;
+  color: #111827;
+}
+
+.prose-blog em {
+  font-style: italic;
+}
+
+.prose-blog ul,
+.prose-blog ol {
+  padding-right: 1.5em;
+  margin-bottom: 1.25em;
+}
+
+.prose-blog li {
+  margin-bottom: 0.4em;
+}
+
+.prose-blog img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 2em auto;
+  display: block;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+.prose-blog a {
+  color: #1B1BB3;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-blog a:hover {
+  opacity: 0.75;
+}
+
+.prose-blog blockquote {
+  border-right: 4px solid #1B1BB3;
+  border-left: none;
+  padding: 0.75em 1.25em;
+  margin: 1.5em 0;
+  background: #eff6ff;
+  border-radius: 0 8px 8px 0;
+  color: #374151;
+  font-style: italic;
+}
+
+.prose-blog code {
+  background: #f3f4f6;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: monospace;
+  direction: ltr;
+  display: inline-block;
+}
+
+.prose-blog pre {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  border-radius: 10px;
+  padding: 1.25em;
+  overflow-x: auto;
+  margin: 1.5em 0;
+  direction: ltr;
+}
+
+.prose-blog pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.875em;
+}
+
+.prose-blog hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 2.5em 0;
+}
+
 @layer base {
   :root {
     --font-brutalist: 'TelAviv-Brutalist', Arial, sans-serif;
