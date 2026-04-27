@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { revalidatePath } from 'next/cache'
 import { getPostBySlug, updatePost, deletePost } from '@/lib/blog-server'
 
 export async function GET(_: Request, { params }: { params: Promise<{ slug: string }> }) {
@@ -13,6 +14,7 @@ export async function PUT(req: Request, { params }: { params: Promise<{ slug: st
   try {
     const body = await req.json()
     const updated = updatePost(slug, body)
+    revalidatePath('/sitemap.xml')
     return NextResponse.json(updated)
   } catch (e: unknown) {
     const msg = e instanceof Error ? e.message : 'error'
@@ -23,5 +25,6 @@ export async function PUT(req: Request, { params }: { params: Promise<{ slug: st
 export async function DELETE(_: Request, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   deletePost(slug)
+  revalidatePath('/sitemap.xml')
   return NextResponse.json({ ok: true })
 }

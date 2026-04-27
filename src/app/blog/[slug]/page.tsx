@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { marked } from 'marked'
+import type { Metadata } from 'next'
 import { Calendar, User } from 'lucide-react'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
@@ -9,10 +10,45 @@ import { getPostBySlug, getAllPosts } from '@/lib/blog-server'
 import HeroVideoBackdrop from '@/components/ui/HeroVideoBackdrop'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import ContactFaqSection from '@/components/sections/contact/ContactFaqSection'
+import ArticleSchema from '@/components/seo/ArticleSchema'
+import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import type { Tokens } from 'marked'
 
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const post = getPostBySlug(slug)
+  if (!post) return {}
+
+  const canonical = `/blog/${post.slug}`
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: { canonical },
+    openGraph: {
+      type: 'article',
+      title: post.title,
+      description: post.excerpt,
+      url: `${SITE_URL}${canonical}`,
+      siteName: SITE_NAME,
+      locale: 'he_IL',
+      publishedTime: post.datePublished,
+      authors: post.author ? [post.author] : undefined,
+      tags: post.tags,
+      images: post.images?.[0]
+        ? [{ url: post.images[0], alt: post.title }]
+        : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: post.images?.[0] ? [post.images[0]] : undefined,
+    },
+  }
 }
 
 export const dynamic = 'force-dynamic'
@@ -36,6 +72,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <ArticleSchema title={post.title} datePublished={post.datePublished} urlPath={`/blog/${post.slug}`} />
       <HeaderAlt transparent />
 
       {/* Hero — identical structure to BlogHeroSection */}
