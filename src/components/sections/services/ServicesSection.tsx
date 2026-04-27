@@ -2,45 +2,8 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { services } from '@/data/services'
 
-const services = [
-  {
-    upperTitle: 'בניית אתר לעסק, חנויות וירטואליות ופיתוח אפליקציות',
-    title: 'בניית אתרים ופיתוח מערכות בהתאמה אישית',
-    description:
-      'האתר הוא כלי המכירות המרכזי שלכם. אנחנו מתמחים בשירותי בניית אתרים איכותיים – החל מהקמת אתר תדמית מרהיב, דרך בניית אתר מכירות (איקומרס), ועד בניית אתר וורדפרס ופיתוח מערכות מורכבות. אנו שמים דגש על ארכיטקטורת קוד נקייה, מהירות טעינה קיצונית (Core Web Vitals) ועיצוב שמניע לפעולה.',
-    image: '/images/services/service1.png',
-    href: '/services/web-development',
-    cta: 'כפתור קישור פנימי',
-  },
-  {
-    upperTitle: 'ניהול קמפיינים, פרסום ממומן ואוטומציה עסקית',
-    title: 'קידום ממומן בגוגל וברשתות החברתיות',
-    description:
-      'כדי להשיג לידים כאן ועכשיו, אתם זקוקים לאסטרטגיית פרסום ממומן מנצחת. אנו מנהלים תקציבי שיווק ממומן בפלטפורמות המובילות (גוגל אדס, פייסבוק, אינסטגרם וטיקטוק) עם דגש קפדני על החזר השקעה (ROI). כל קמפיין מחובר במערכת אוטומציה ישירות ל-CRM שלכם לעבודה חלקה וללא מאמץ ידני.',
-    image: '/images/services/service2.png',
-    href: '/services/automation',
-    cta: 'כפתור קישור פנימי',
-  },
-  {
-    upperTitle: 'קידום seo מבוסס מחקר מילות מפתח עמוק',
-    title: 'קידום אתרים אורגני בגוגל',
-    description:
-      'מה שווה אתר מדהים אם לא מוצאים אותו? שירות קידום אורגני נועד למקם אתכם בראש תוצאות החיפוש של גוגל. התהליך שלנו כולל אופטימיזציה טכנית, בניית קישורים ואסטרטגיית תוכן חכמה שמביאה תנועה אורגנית יציבה שמייצרת לכם הכנסה לטווח הארוך.',
-    image: '/images/services/service3.png',
-    href: '/services/seo',
-    cta: 'כפתור קישור פנימי',
-  },
-  {
-    upperTitle: 'ניהול קמפיין ממומן ב-Google Ads, Facebook, Instagram ו-TikTok',
-    title: 'קידום אתרים אורגני בגוגל',
-    description:
-      'כדי להשיג תוצאות כאן ועכשיו, אתם צריכים אסטרטגיית קידום ממומן חכמה. כחלק מהיותנו חברת שיווק מובילה, אנו מנהלים תקציבי פרסום גדולים תוך דגש על החזר השקעה (ROI) חיובי.',
-    image: '/images/services/service4.png',
-    href: '/services/adv',
-    cta: 'למידע נוסף על ניהול קמפיינים ו-PPC',
-  },
-]
 export default function ServicesSection() {
   return (
     <section className="md:pb-32" dir="rtl">
@@ -86,7 +49,7 @@ export default function ServicesSection() {
 
                   {/* Button: 14px */}
                   <Link
-                    href={service.href}
+                    href={`/services/${service.slug}`}
                     className="inline-block border border-[#3b28cc] text-[#3b28cc] text-[14px] px-10 py-3 hover:bg-[#3b28cc] hover:text-white transition-all duration-300 font-bold"
                   >
                     {service.cta}

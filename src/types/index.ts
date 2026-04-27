@@ -7,6 +7,7 @@ export interface Service {
   description: string
   icon: string
   image: string
+  cta?: string
 }
 
 export interface PortfolioProject {

@@ -29,9 +29,7 @@ export default function TechSliderSection(): ReactElement {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4">
         <div className="shrink-0 text-right z-10 bg-white">
           <p className="font-bold text-[20px] md:text-[32px] leading-snug">
-            לקוחות ושותפים טכנולוגיים
-            <br />
-            שכבר בחרו להמריא איתנו
+טכנולוגיות שאנו משתמשים בהם
           </p>
         </div>
 

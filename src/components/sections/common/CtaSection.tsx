@@ -50,7 +50,7 @@ export default function ContactForm() {
             type="submit"
             className="w-full border border-[#530FAD] text-[#530FAD] py-2.5 rounded-md font-bold text-[16px] hover:bg-purple-50 transition-colors duration-200"
           >
-            למידע נוסף על שירותי בניית האתרים שלנו
+            לקבלת הצעת מחיר מהירה
           </button>
         </form>
       </div>
