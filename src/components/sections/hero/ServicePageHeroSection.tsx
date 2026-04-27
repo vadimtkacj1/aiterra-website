@@ -17,7 +17,7 @@ export default function ServicePageHeroSection({ service }: Props) {
       dir="rtl"
       style={{ backgroundColor: '#080112' }}
     >
-      <HeroVideoBackdrop />
+      <HeroVideoBackdrop src='/videos/gradient2.mp4' />
       
       {/* Main Content Container - Centered Vertically */}
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-grow flex-col items-center justify-center px-6 pt-28 text-center md:pt-40">
