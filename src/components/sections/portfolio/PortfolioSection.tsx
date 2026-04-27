@@ -36,13 +36,14 @@ export default function PortfolioSection({ showButton = true }: { showButton?: b
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {portfolioProjects.map((project) => {
-            const targetHref = project.link?.trim() || `/portfolio/${project.slug}`
-            const isExternal = /^https?:\/\//i.test(targetHref)
+            const external = project.externalUrl?.trim()
+            const href = external || `/portfolio/${project.slug}`
+            const isExternal = Boolean(external)
 
             return (
             <Link
               key={project.slug}
-              href={targetHref}
+              href={href}
               target={isExternal ? '_blank' : undefined}
               rel={isExternal ? 'noopener noreferrer' : undefined}
               className="relative w-full overflow-hidden group cursor-pointer block"
@@ -52,7 +53,7 @@ export default function PortfolioSection({ showButton = true }: { showButton?: b
                 alt={project.title}
                 width={680}
                 height={480}
-                className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-auto object-contain"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-end p-6 opacity-0 group-hover:opacity-100">
                 <span className="text-white font-semibold text-lg">{project.title}</span>

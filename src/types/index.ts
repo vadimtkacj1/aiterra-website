@@ -18,7 +18,15 @@ export interface PortfolioProject {
   heroDescription: string
   image: string
   tags: string[]
-  link?: string
+  /** If set, the project detail image links to this URL (e.g. live client site). */
+  liveSiteUrl?: string
+  /**
+   * When set, the portfolio grid opens this URL (new tab) and `/portfolio/[slug]`
+   * redirects there — no on-site case page.
+   */
+  externalUrl?: string
+  /** Optional long-form case study shown on the project page (RTL paragraphs). */
+  caseStudy?: string[]
 }
 
 export interface BlogPost {
