@@ -2,7 +2,7 @@ import HeaderAlt from "@/components/layout/HeaderAlt";
 import Footer from "@/components/layout/Footer";
 import StickyPageFooter from "@/components/layout/StickyPageFooter";
 import { PortfolioProjectHeroSection, CtaSection, FaqSection } from "@/components/sections";
-import { getProjectBySlug, portfolioProjects } from "@/data/portfolio";
+import { getProjectBySlug } from "@/data/portfolio";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -10,10 +10,6 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 
 interface Props {
     params: Promise<{ slug: string }>;
-}
-
-export async function generateStaticParams() {
-    return portfolioProjects.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

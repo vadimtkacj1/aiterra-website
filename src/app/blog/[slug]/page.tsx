@@ -6,17 +6,13 @@ import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
 import { CtaSection } from '@/components/sections'
-import { getPostBySlug, getAllPosts } from '@/lib/blog-server'
+import { getPostBySlug } from '@/lib/blog-server'
 import HeroVideoBackdrop from '@/components/ui/HeroVideoBackdrop'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import ContactFaqSection from '@/components/sections/contact/ContactFaqSection'
 import ArticleSchema from '@/components/seo/ArticleSchema'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import type { Tokens } from 'marked'
-
-export async function generateStaticParams() {
-  return getAllPosts().map((p) => ({ slug: p.slug }))
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
