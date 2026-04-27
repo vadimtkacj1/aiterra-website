@@ -7,8 +7,9 @@ export const portfolioProjects: PortfolioProject[] = [
     category: 'בניית אתרים',
     heroTitle: 'Olie 6',
     heroDescription: 'פרויקט בניית אתר מלא עם עיצוב מותאם אישית, חוויית משתמש מתקדמת ואינטגרציה מלאה עם מערכות ניהול תוכן.',
-    image: '/images/portfolio/portfolio1.png',
+    image: '/images/portfolio/portfolio2.png',
     tags: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    link: 'https://olie6.com/',
   },
   {
     slug: 'ecommerce-store',
@@ -16,8 +17,9 @@ export const portfolioProjects: PortfolioProject[] = [
     category: 'חנויות וירטואליות',
     heroTitle: 'חנות דיגיטלית מתקדמת',
     heroDescription: 'פיתוח חנות וירטואלית מלאה עם סל קניות, עיבוד תשלומים מאובטח ומערכת ניהול מוצרים מתקדמת.',
-    image: '/images/portfolio/portfolio2.png',
+    image: '/images/portfolio/portfolio1.png',
     tags: ['React', 'Node.js', 'Stripe'],
+    link: 'http://naturallyrefreshing.store/',
   },
   {
     slug: 'brand-identity',
@@ -27,6 +29,7 @@ export const portfolioProjects: PortfolioProject[] = [
     heroDescription: 'בניית זהות מותגית מלאה הכוללת לוגו, פלטת צבעים, טיפוגרפיה ומדריך סגנון לשימוש עקבי בכל הפלטפורמות.',
     image: '/images/portfolio/portfolio3.png',
     tags: ['Figma', 'Adobe Illustrator', 'Branding'],
+    link: 'http://ram-haim.co.il/',
   },
   {
     slug: 'marketing-platform',
@@ -36,6 +39,7 @@ export const portfolioProjects: PortfolioProject[] = [
     heroDescription: 'פיתוח פלטפורמת שיווק אוטומטית עם אינטגרציות CRM, ניהול קמפיינים ודשבורד אנליטיקס בזמן אמת.',
     image: '/images/portfolio/portfolio4.png',
     tags: ['React', 'Python', 'Analytics'],
+    link: 'https://avi-mashkanta.com/',
   },
 ]
 
