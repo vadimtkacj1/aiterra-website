@@ -1,6 +1,7 @@
 'use client'
 
 import HeroVideoBackdrop from '@/components/ui/HeroVideoBackdrop'
+import Breadcrumb from '@/components/ui/Breadcrumb'
 
 export default function ServicesHeroSection() {
   return (
@@ -17,6 +18,9 @@ export default function ServicesHeroSection() {
       {/* Content */}
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-28 text-center md:pt-40">
 
+        <div className="flex justify-center mb-4">
+          <Breadcrumb items={[{ label: 'שירותים', href: '/services' }]} variant="dark" />
+        </div>
         <h1
           className="text-white mb-6 font-bold"
           style={{

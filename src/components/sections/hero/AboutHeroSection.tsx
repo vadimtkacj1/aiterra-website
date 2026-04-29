@@ -1,5 +1,6 @@
 import AiterraWordmark from '@/components/ui/AiterraWordmark'
 import HeroCTAButtons from '@/components/ui/HeroCTAButtons'
+import Breadcrumb from '@/components/ui/Breadcrumb'
 
 export default function AboutHeroSection() {
   return (
@@ -21,6 +22,9 @@ export default function AboutHeroSection() {
             המוטו שלנו:
           </p>
 
+          <div className="flex justify-center">
+            <Breadcrumb items={[{ label: 'אודות', href: '/about' }]} variant="light" />
+          </div>
           {/* Main Title */}
           <h1
             style={{ fontWeight: 700, lineHeight: '1.1', letterSpacing: '-0.02em' }}
