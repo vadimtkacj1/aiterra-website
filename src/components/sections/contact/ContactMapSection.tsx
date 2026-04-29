@@ -1,5 +1,6 @@
 import {
-  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  CONTACT_PHONE_HREF,
   GOOGLE_MAPS_EMBED_URL,
   GOOGLE_MAPS_OPEN_URL,
   OFFICE_ADDRESS_EN,
@@ -27,7 +28,7 @@ export default function ContactMapSection() {
 
           <div className="flex flex-col gap-3 text-[15px] text-[#444] font-medium max-w-sm">
             <a
-              href={`mailto:${CONTACT_EMAIL}`}
+              href={CONTACT_PHONE_HREF}
               className="hover:underline"
               style={{
                 background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
@@ -37,7 +38,7 @@ export default function ContactMapSection() {
               }}
               dir="ltr"
             >
-              {CONTACT_EMAIL}
+              {CONTACT_PHONE}
             </a>
             <p className="leading-relaxed text-[#555]">
               <span className="block">{OFFICE_ADDRESS_HE}</span>

@@ -1,5 +1,5 @@
 import JsonLd from './JsonLd'
-import { CONTACT_EMAIL } from '@/lib/contact'
+import { CONTACT_EMAIL, CONTACT_PHONE_HREF } from '@/lib/contact'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 
 export default function OrganizationSchema() {
@@ -10,6 +10,7 @@ export default function OrganizationSchema() {
     url: SITE_URL,
     name: SITE_NAME,
     email: CONTACT_EMAIL,
+    telephone: CONTACT_PHONE_HREF,
     description: 'סוכנות שיווק דיגיטלי מלא – בניית אתרים, SEO, פרסום ממומן ואוטומציה עסקית',
     address: {
       '@type': 'PostalAddress',

@@ -5,6 +5,9 @@ export const OFFICE_ADDRESS_HE = 'רחוב הרב ניסנבאום 37, בת ים
 
 export const CONTACT_EMAIL = 'info@aiterra.co.il'
 
+export const CONTACT_PHONE = '052-678-0739'
+export const CONTACT_PHONE_HREF = 'tel:+972526780739'
+
 const mapsQuery = encodeURIComponent(`${OFFICE_ADDRESS_EN}, Israel`)
 
 /** Classic embed (no Maps JavaScript API key). */
