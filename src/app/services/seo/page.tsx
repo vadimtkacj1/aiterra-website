@@ -4,6 +4,7 @@ import StickyPageFooter from '@/components/layout/StickyPageFooter'
 import { ServicePageHeroSection, SeoProcessSection, CtaSection, FaqSection } from '@/components/sections'
 import { getServiceBySlug } from '@/data/services'
 import { notFound } from 'next/navigation'
+import Breadcrumb from '@/components/ui/Breadcrumb'
 
 export default function SeoPage() {
   const service = getServiceBySlug('seo')
@@ -17,6 +18,9 @@ export default function SeoPage() {
       </div>
       <div className="flex min-h-0 w-full flex-1 flex-col">
         <main className="relative z-20 flex-1 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-2">
+            <Breadcrumb items={[{ label: 'שירותים', href: '/services' }, { label: service.title }]} />
+          </div>
           <SeoProcessSection />
           <CtaSection />
           <FaqSection />
