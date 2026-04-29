@@ -45,18 +45,12 @@ export default function HeaderDark() {
         <div className="hidden md:flex items-center gap-6">
           <div className="h-10 w-px bg-white/20 mx-6" />
           <div className="flex items-center gap-4">
-            <Link
-              href="/contact"
-              className="text-[14px] font-bold leading-none whitespace-nowrap text-white/80 hover:text-white transition-colors"
-            >
-              צור קשר
-            </Link>
             <a
-              href="mailto:info@aiterra.co.il"
+              href="tel:0526780739"
               className="text-[14px] font-bold leading-none whitespace-nowrap text-white/80 hover:text-white transition-colors"
               dir="ltr"
             >
-              info@aiterra.co.il
+              052-678-0739
             </a>
           </div>
         </div>

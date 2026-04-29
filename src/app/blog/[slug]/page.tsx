@@ -13,11 +13,14 @@ import ContactFaqSection from '@/components/sections/contact/ContactFaqSection'
 import ArticleSchema from '@/components/seo/ArticleSchema'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import type { Tokens } from 'marked'
+import { getAuthorById } from '@/lib/authors-server'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const post = getPostBySlug(slug)
   if (!post) return {}
+  const authorProfile = post.authorId ? getAuthorById(post.authorId) : null
+  const authorName = post.author.trim() || authorProfile?.name || ''
 
   const canonical = `/blog/${post.slug}`
   return {
@@ -32,7 +35,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       siteName: SITE_NAME,
       locale: 'he_IL',
       publishedTime: post.datePublished,
-      authors: post.author ? [post.author] : undefined,
+      authors: authorName ? [authorName] : undefined,
       tags: post.tags,
       images: post.images?.[0]
         ? [{ url: post.images[0], alt: post.title }]
@@ -63,6 +66,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const { slug } = await params
   const post = getPostBySlug(slug)
   if (!post) notFound()
+  const authorProfile = post.authorId ? getAuthorById(post.authorId) : null
+  const authorName = post.author.trim() || authorProfile?.name || 'Aiterra Team'
+  const authorImage = post.authorImage?.trim() || authorProfile?.image || ''
 
   const htmlContent = await marked(post.content || '')
 
@@ -72,7 +78,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         title={post.title}
         datePublished={post.datePublished}
         urlPath={`/blog/${post.slug}`}
-        author={post.author}
+        author={authorName}
         image={post.images?.[0]}
       />
       <HeaderAlt transparent />
@@ -126,14 +132,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             )}
           </div>
 
-          {(post.author.trim() || (post.authorImage ?? '').trim()) && (
+          {(authorName || authorImage || authorProfile) && (
             <div className="max-w-4xl mx-auto px-6 pb-8">
               <div className="rounded-2xl border border-gray-100 bg-[#f9fafb] p-4 md:p-5 flex items-center gap-4">
-                {(post.authorImage ?? '').trim() ? (
+                {authorImage ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={post.authorImage}
-                    alt={post.author ? `author ${post.author}` : 'post author'}
+                    src={authorImage}
+                    alt={authorName ? `author ${authorName}` : 'post author'}
                     className="w-14 h-14 rounded-full object-cover border border-gray-200 shrink-0"
                   />
                 ) : (
@@ -144,8 +150,38 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <div className="min-w-0">
                   <p className="text-[12px] text-[#6b7280] mb-1">נכתב על ידי</p>
                   <p className="text-[16px] font-semibold text-[#111827]">
-                    {post.author.trim() || 'Aiterra Team'}
+                    {authorName}
                   </p>
+                  {authorProfile?.role ? (
+                    <p className="text-[12px] text-[#6b7280] mt-0.5">{authorProfile.role}</p>
+                  ) : null}
+                  {authorProfile?.bio ? (
+                    <p className="text-[13px] text-[#4b5563] mt-2 leading-relaxed">{authorProfile.bio}</p>
+                  ) : null}
+                  {(authorProfile?.socials.linkedin || authorProfile?.socials.instagram || authorProfile?.socials.whatsapp || authorProfile?.socials.facebook) ? (
+                    <div className="flex items-center gap-2 mt-2">
+                      {authorProfile.socials.linkedin ? (
+                        <a href={authorProfile.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3]">
+                          <span className="text-[12px] font-semibold" aria-hidden>in</span>
+                        </a>
+                      ) : null}
+                      {authorProfile.socials.instagram ? (
+                        <a href={authorProfile.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3]">
+                          <span className="text-[12px] font-semibold" aria-hidden>IG</span>
+                        </a>
+                      ) : null}
+                      {authorProfile.socials.whatsapp ? (
+                        <a href={authorProfile.socials.whatsapp} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3] text-[12px] font-semibold">
+                          WA
+                        </a>
+                      ) : null}
+                      {authorProfile.socials.facebook ? (
+                        <a href={authorProfile.socials.facebook} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3] text-[12px] font-semibold">
+                          f
+                        </a>
+                      ) : null}
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>

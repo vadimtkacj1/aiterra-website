@@ -26,7 +26,7 @@ const faqs = [
   },
 ]
 
-const FAQ_SECTION_TITLE = 'שאלות נפוצות על בניית אתרים, שיווק דיגיטלי וקידום אתרים'
+const FAQ_SECTION_TITLE = 'שאלות נפוצות'
 
 export default function FaqSection() {
   const [open, setOpen] = useState<number | null>(null)

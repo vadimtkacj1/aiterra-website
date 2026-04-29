@@ -5,7 +5,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AiterraWordmark from '@/components/ui/AiterraWordmark'
 import HeroVideoBackdrop from '@/components/ui/HeroVideoBackdrop'
-import Breadcrumb from '@/components/ui/Breadcrumb'
 
 interface Props {
   service: Service
@@ -36,9 +35,6 @@ export default function ServicePageHeroSection({ service }: Props) {
             </div>
         </div>
 
-        <div className="flex justify-center mb-4">
-          <Breadcrumb items={[{ label: 'שירותים', href: '/services' }, { label: service.title }]} variant="dark" />
-        </div>
         {/* Title - 48px desktop, 20px mobile */}
         <h1
           className="text-white font-bold mb-6 whitespace-pre-line tracking-tight text-center w-full text-[20px] md:text-[48px]"

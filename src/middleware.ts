@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
+function toBase64(value: string): string {
+  return btoa(value)
+}
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
@@ -8,7 +12,7 @@ export function middleware(request: NextRequest) {
 
   if (pathname.startsWith('/admin')) {
     const session = request.cookies.get('admin_session')?.value
-    const expected = Buffer.from(process.env.ADMIN_PASSWORD ?? 'admin123').toString('base64')
+    const expected = toBase64(process.env.ADMIN_PASSWORD ?? 'admin123')
     if (session !== expected) {
       return NextResponse.redirect(new URL('/admin/login', request.url))
     }

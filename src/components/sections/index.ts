@@ -29,7 +29,6 @@ export { default as FaqSection } from './common/FaqSection'
 export { default as CtaSection } from './common/CtaSection'
 export { default as PartnersSection } from './common/PartnersSection'
 export { default as StatsSection } from './common/StatsSection'
-export { default as TeamSection } from './common/TeamSection'
 
 // blog
 export { default as BlogPostsSection } from './blog/BlogPostsSection'

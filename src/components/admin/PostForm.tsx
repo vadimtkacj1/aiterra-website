@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import {
   Plus, Trash2, ImageIcon, Star, X, Upload,
@@ -9,22 +9,17 @@ import {
 } from 'lucide-react'
 import { marked } from 'marked'
 import type { AdminPost, PostFaq, FaqItem } from '@/lib/blog-server'
+import type { AuthorProfile } from '@/lib/authors-server'
 
 marked.setOptions({ breaks: true, gfm: true })
 
 const PRESET_TAGS = ['ביצועים', 'SEO', 'Core Web Vitals', 'תוכן', 'קידום אורגני', 'Next.js', 'WordPress', 'פיתוח', 'מיתוג', 'עיצוב', 'דיגיטל']
-const AUTHOR_PRESETS = [
-  { label: 'SEO - Sean', name: 'Sean' },
-  { label: 'Web Dev - Vadim', name: 'Vadim' },
-  { label: 'Web Dev - Michael', name: 'Michael' },
-] as const
-
 const emptyFaq: PostFaq = { title: 'שאלות נפוצות', items: [] }
 
 const empty: AdminPost = {
   slug: '', title: '', excerpt: '', content: '',
   datePublished: '',
-  author: '', authorImage: '', tags: [], images: [''],
+  author: '', authorId: '', authorImage: '', tags: [], images: [''],
 }
 
 function slugify(text: string) {
@@ -43,12 +38,20 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
   const [uploading, setUploading] = useState<number | null>(null)
   const [uploadingAuthorImage, setUploadingAuthorImage] = useState(false)
   const [contentTab, setContentTab] = useState<'edit' | 'preview'>('edit')
+  const [authors, setAuthors] = useState<AuthorProfile[]>([])
   const contentRef = useRef<HTMLTextAreaElement>(null)
   const fileRefs = useRef<(HTMLInputElement | null)[]>([])
   const router = useRouter()
 
   const set = <K extends keyof AdminPost>(k: K, v: AdminPost[K]) =>
     setForm((p) => ({ ...p, [k]: v }))
+
+  useEffect(() => {
+    fetch('/api/admin/authors')
+      .then((r) => r.json())
+      .then((list: AuthorProfile[]) => setAuthors(Array.isArray(list) ? list : []))
+      .catch(() => setAuthors([]))
+  }, [])
 
   // ── Markdown toolbar helpers ──────────────────────────────────────────────
   const wrapSel = (before: string, after = before) => {
@@ -185,6 +188,7 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
   const filledImages = form.images.filter(Boolean)
   const customSelectedTags = form.tags.filter((t) => !PRESET_TAGS.includes(t))
   const previewHtml = marked.parse(form.content || '') as string
+  const selectedAuthor = authors.find((a) => a.id === (form.authorId ?? ''))
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-6">
@@ -291,26 +295,38 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
       {/* ── Date + Author ─────────────────────────────────────────────────── */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <Field label="מחבר" hint="אופציונלי">
+          <select
+            value={form.authorId ?? ''}
+            onChange={(e) => {
+              const id = e.target.value
+              set('authorId', id)
+              const author = authors.find((item) => item.id === id)
+              if (author) {
+                set('author', author.name)
+                set('authorImage', author.image)
+              }
+            }}
+            className={inputCls}
+          >
+            <option value="">בחירה ידנית</option>
+            {authors.map((author) => (
+              <option key={author.id} value={author.id}>
+                {author.name} {author.role ? `(${author.role})` : ''}
+              </option>
+            ))}
+          </select>
           <input
             value={form.author}
-            onChange={(e) => set('author', e.target.value)}
+            onChange={(e) => {
+              set('author', e.target.value)
+              if (form.authorId) set('authorId', '')
+            }}
             placeholder="למשל: צוות Aiterra"
-            className={inputCls}
+            className={`${inputCls} mt-2`}
           />
-          <div className="flex flex-wrap gap-2 mt-2">
-            {AUTHOR_PRESETS.map((preset) => (
-              <button
-                key={preset.label}
-                type="button"
-                onClick={() => {
-                  set('author', preset.name)
-                }}
-                className="px-2.5 py-1 rounded-full text-[11px] font-medium border border-[#1B1BB3]/30 text-[#1B1BB3] hover:bg-[#1B1BB3]/5 transition-colors"
-              >
-                {preset.label}
-              </button>
-            ))}
-          </div>
+          <p className="text-[11px] text-[#9ca3af] mt-1.5">
+            {authors.length > 0 ? 'בחר מחבר מהרשימה או הזן שם ידנית' : 'אין מחברים מוגדרים. הוסף ב-Admin → מחברים'}
+          </p>
         </Field>
         <Field label="תמונת מחבר" hint="מוצגת בסוף הפוסט">
           <div className="flex items-center gap-2">
@@ -348,6 +364,11 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
               העלה
             </button>
           </div>
+          {selectedAuthor && (
+            <p className="text-[11px] text-[#9ca3af] mt-1.5">
+              תמונה זו תדרוס זמנית את תמונת הפרופיל של {selectedAuthor.name} עבור הפוסט הנוכחי.
+            </p>
+          )}
         </Field>
         <Field label="תאריך פרסום" hint="ריק = היום (אוטומטי)">
           <input

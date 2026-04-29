@@ -14,16 +14,24 @@ export default function LoginPage() {
     e.preventDefault()
     setLoading(true)
     setError('')
-    const res = await fetch('/api/admin/auth', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ password }),
-    })
-    if (res.ok) {
-      router.push('/admin/blog')
-    } else {
+    try {
+      const res = await fetch('/api/admin/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      })
+
+      if (res.ok) {
+        router.replace('/admin/blog')
+        router.refresh()
+        return
+      }
+
       const data = await res.json()
       setError(data.error || 'שגיאה')
+    } catch {
+      setError('שגיאת רשת. נסו שוב.')
+    } finally {
       setLoading(false)
     }
   }

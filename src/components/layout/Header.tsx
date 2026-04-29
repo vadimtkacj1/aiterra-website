@@ -53,20 +53,13 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-6">
           <div className="h-10 w-px bg-gray-300 mx-6" />
           <div className="flex items-center">
-            <Link
-              href="/contact"
-              className="text-[14px] font-bold leading-none whitespace-nowrap"
-              style={gradientTextStyle}
-            >
-              צור קשר
-            </Link>
             <a
-              href="mailto:info@aiterra.co.il"
-              className="text-[14px] font-bold leading-none whitespace-nowrap ml-4"
+              href="tel:0526780739"
+              className="text-[14px] font-bold leading-none whitespace-nowrap"
               style={gradientTextStyle}
               dir="ltr"
             >
-              info@aiterra.co.il
+              052-678-0739
             </a>
           </div>
         </div>

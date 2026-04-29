@@ -18,13 +18,13 @@ import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
 import {
   AboutHeroSection,
-  TeamSection,
   TechSliderSection,
   StatsSection,
   CtaSection,
   FaqSection,
 } from '@/components/sections'
 import Breadcrumb from '@/components/ui/Breadcrumb'
+import TeamSection from '@/components/sections/common/TeamSection'
 
 export default function AboutPage() {
   return (

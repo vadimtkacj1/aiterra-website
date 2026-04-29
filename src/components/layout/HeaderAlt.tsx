@@ -138,12 +138,9 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
               />
             </Link>
             <div className="flex items-center gap-1">
-              <a href="mailto:info@aiterra.co.il" style={contactStyle} className="text-[14px] font-bold tracking-tight" dir="ltr">
-                info@aiterra.co.il
+              <a href="tel:0526780739" style={contactStyle} className="text-[14px] font-bold" dir="ltr">
+                052-678-0739
               </a>
-              <Link href="/contact" style={contactStyle} className="text-[14px] font-bold">
-                צור קשר
-              </Link>
             </div>
           </div>
 

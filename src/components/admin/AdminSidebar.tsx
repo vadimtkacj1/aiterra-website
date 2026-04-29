@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { LayoutList, LogOut, X } from 'lucide-react'
+import { LayoutList, LogOut, Users, X } from 'lucide-react'
 
 const SIDEBAR_BG = '#0f172a'
 const BORDER_SUBTLE = 'rgba(255,255,255,0.06)'
@@ -11,6 +11,7 @@ const BORDER_MID = 'rgba(255,255,255,0.08)'
 
 const links = [
   { href: '/admin/blog', label: 'פוסטים', icon: LayoutList, exact: false },
+  { href: '/admin/authors', label: 'מחברים', icon: Users, exact: true },
 ]
 
 function SideMenu({ pathname }: { pathname: string }) {
