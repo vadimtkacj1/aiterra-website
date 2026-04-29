@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: 'AITERRA | שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם',
     template: `%s | ${SITE_NAME}`,
   },
-  description: 'מערכת 360° לצמיחה עסקית. פיתוח מתקרים, עיצוב UI/UX, קידום אורגני SEO.',
+  description: 'מערכת 360° לצמיחה עסקית. פיתוח מתקדם, עיצוב UI/UX, קידום אורגני SEO.',
   applicationName: SITE_NAME,
   alternates: {
     canonical: '/',
@@ -29,12 +29,12 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: SITE_NAME,
     title: 'AITERRA | שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם',
-    description: 'מערכת 360° לצמיחה עסקית. פיתוח מתקרים, עיצוב UI/UX, קידום אורגני SEO.',
+    description: 'מערכת 360° לצמיחה עסקית. פיתוח מתקדם, עיצוב UI/UX, קידום אורגני SEO.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AITERRA | שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם',
-    description: 'מערכת 360° לצמיחה עסקית. פיתוח מתקרים, עיצוב UI/UX, קידום אורגני SEO.',
+    description: 'מערכת 360° לצמיחה עסקית. פיתוח מתקדם, עיצוב UI/UX, קידום אורגני SEO.',
   },
   robots: {
     index: true,
