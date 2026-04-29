@@ -56,7 +56,6 @@ export default function AuthorEditorForm({ initial, initialId }: { initial: Auth
         socials: {
           linkedin: form.socials.linkedin?.trim() ?? '',
           instagram: form.socials.instagram?.trim() ?? '',
-          whatsapp: form.socials.whatsapp?.trim() ?? '',
           facebook: form.socials.facebook?.trim() ?? '',
         },
       }
@@ -145,9 +144,6 @@ export default function AuthorEditorForm({ initial, initialId }: { initial: Auth
         </SocialField>
         <SocialField label="Instagram">
           <input value={form.socials.instagram ?? ''} onChange={(e) => setSocial('instagram', e.target.value.toLowerCase())} placeholder="https://instagram.com/..." className={`${inputCls} lowercase`} dir="ltr" />
-        </SocialField>
-        <SocialField label="WhatsApp">
-          <input value={form.socials.whatsapp ?? ''} onChange={(e) => setSocial('whatsapp', e.target.value.toLowerCase())} placeholder="https://wa.me/..." className={`${inputCls} lowercase`} dir="ltr" />
         </SocialField>
         <SocialField label="Facebook">
           <input value={form.socials.facebook ?? ''} onChange={(e) => setSocial('facebook', e.target.value.toLowerCase())} placeholder="https://facebook.com/..." className={`${inputCls} lowercase`} dir="ltr" />

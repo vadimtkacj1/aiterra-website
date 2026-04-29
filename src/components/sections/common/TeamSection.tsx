@@ -68,7 +68,7 @@ export default function TeamSection() {
                   {member.bio}
                 </p>
               ) : null}
-              {(member.socials.linkedin || member.socials.instagram || member.socials.whatsapp || member.socials.facebook) ? (
+              {(member.socials.linkedin || member.socials.instagram || member.socials.facebook) ? (
                 <div className="flex items-center gap-2 pt-1">
                   {member.socials.linkedin ? (
                     <a
@@ -90,17 +90,6 @@ export default function TeamSection() {
                       aria-label={`${member.name} Instagram`}
                     >
                       <InstagramIcon />
-                    </a>
-                  ) : null}
-                  {member.socials.whatsapp ? (
-                    <a
-                      href={member.socials.whatsapp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-8 h-8 rounded-full border border-[#d1d5db] bg-white flex items-center justify-center text-[#6b7280] hover:text-[#1B1BB3] hover:border-[#1B1BB3]/40 transition-colors"
-                      aria-label={`${member.name} WhatsApp`}
-                    >
-                      <WhatsAppIcon />
                     </a>
                   ) : null}
                   {member.socials.facebook ? (
@@ -148,14 +137,6 @@ function InstagramIcon() {
       <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-    </svg>
-  )
-}
-
-function WhatsAppIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden>
-      <path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.92.55 3.71 1.5 5.23L2 22l5.08-1.65a9.79 9.79 0 0 0 4.96 1.35h.01c5.43 0 9.83-4.4 9.83-9.84A9.84 9.84 0 0 0 12.04 2Zm0 17.97a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.01.98.98-2.93-.2-.3a8.1 8.1 0 0 1-1.26-4.35c0-4.45 3.62-8.08 8.08-8.08 4.46 0 8.08 3.63 8.08 8.08 0 4.46-3.62 8.08-8.08 8.08Zm4.43-6.06c-.24-.12-1.4-.69-1.62-.77-.22-.08-.38-.12-.54.12-.16.24-.62.77-.76.93-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.17-.71-.63-1.2-1.4-1.34-1.64-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.79-.2-.48-.4-.42-.54-.43h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.11.15 1.53.09.47-.07 1.4-.57 1.6-1.12.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28Z" />
     </svg>
   )
 }

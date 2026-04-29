@@ -134,7 +134,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
           {(authorName || authorImage || authorProfile) && (
             <div className="max-w-4xl mx-auto px-6 pb-8">
-              <div className="rounded-2xl border border-gray-100 bg-[#f9fafb] p-4 md:p-5 flex items-center gap-4">
+              <div className="rounded-2xl border border-gray-100 bg-white p-4 md:p-5 flex items-center gap-4">
                 {authorImage ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
@@ -148,35 +148,27 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   </div>
                 )}
                 <div className="min-w-0">
-                  <p className="text-[12px] text-[#6b7280] mb-1">נכתב על ידי</p>
-                  <p className="text-[16px] font-semibold text-[#111827]">
+                  <p className="text-[14px] text-[#6b7280] mb-1">נכתב על ידי</p>
+                  <p className="text-[14px] font-semibold text-[#111827]">
                     {authorName}
                   </p>
                   {authorProfile?.role ? (
-                    <p className="text-[12px] text-[#6b7280] mt-0.5">{authorProfile.role}</p>
+                    <p className="text-[14px] text-[#6b7280] mt-0.5">{authorProfile.role}</p>
                   ) : null}
-                  {authorProfile?.bio ? (
-                    <p className="text-[13px] text-[#4b5563] mt-2 leading-relaxed">{authorProfile.bio}</p>
-                  ) : null}
-                  {(authorProfile?.socials.linkedin || authorProfile?.socials.instagram || authorProfile?.socials.whatsapp || authorProfile?.socials.facebook) ? (
+                  {(authorProfile?.socials.linkedin || authorProfile?.socials.instagram || authorProfile?.socials.facebook) ? (
                     <div className="flex items-center gap-2 mt-2">
                       {authorProfile.socials.linkedin ? (
                         <a href={authorProfile.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3]">
-                          <span className="text-[12px] font-semibold" aria-hidden>in</span>
+                          <span className="text-[14px] font-semibold" aria-hidden>in</span>
                         </a>
                       ) : null}
                       {authorProfile.socials.instagram ? (
                         <a href={authorProfile.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3]">
-                          <span className="text-[12px] font-semibold" aria-hidden>IG</span>
-                        </a>
-                      ) : null}
-                      {authorProfile.socials.whatsapp ? (
-                        <a href={authorProfile.socials.whatsapp} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3] text-[12px] font-semibold">
-                          WA
+                          <span className="text-[14px] font-semibold" aria-hidden>IG</span>
                         </a>
                       ) : null}
                       {authorProfile.socials.facebook ? (
-                        <a href={authorProfile.socials.facebook} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3] text-[12px] font-semibold">
+                        <a href={authorProfile.socials.facebook} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3] text-[14px] font-semibold">
                           f
                         </a>
                       ) : null}
@@ -187,7 +179,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           )}
 
-          {(post.tags.length > 0 || post.author.trim() || post.datePublished) && (
+          {(post.tags.length > 0 || post.datePublished) && (
             <div
               className="max-w-4xl mx-auto px-6 pb-12 pt-4 border-t border-gray-100"
               dir="rtl"
@@ -208,14 +200,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   ))}
                 </div>
               )}
-              {(post.author.trim() || post.datePublished) && (
+              {post.datePublished && (
                 <div className="flex flex-wrap items-center justify-center gap-6 text-[14px] text-[#6b7280]">
-                  {post.author.trim() ? (
-                    <span className="flex items-center gap-1.5">
-                      <User size={15} aria-hidden />
-                      {post.author.trim()}
-                    </span>
-                  ) : null}
                   {post.datePublished ? (
                     <span className="flex items-center gap-1.5">
                       <Calendar size={15} aria-hidden />

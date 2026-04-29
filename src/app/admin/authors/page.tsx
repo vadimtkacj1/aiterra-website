@@ -77,7 +77,7 @@ export default function AdminAuthorsPage() {
                     {author.bio ? `${author.bio.slice(0, 110)}${author.bio.length > 110 ? '...' : ''}` : '-'}
                   </td>
                   <td className="px-3 py-3 min-w-[200px] text-[13px] text-[#6b7280]">
-                    {[author.socials.linkedin, author.socials.instagram, author.socials.whatsapp, author.socials.facebook].filter(Boolean).length}
+                    {[author.socials.linkedin, author.socials.instagram, author.socials.facebook].filter(Boolean).length}
                   </td>
                   <td className="px-3 py-3 min-w-[180px]">
                     <div className="flex gap-2">

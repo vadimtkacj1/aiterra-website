@@ -5,7 +5,6 @@ import { teamMembers } from '@/data/team-members'
 export interface AuthorSocials {
   linkedin?: string
   instagram?: string
-  whatsapp?: string
   facebook?: string
 }
 
@@ -59,7 +58,6 @@ function normalizeAuthor(author: AuthorProfile): AuthorProfile {
     socials: {
       linkedin: (author.socials?.linkedin ?? '').trim().toLowerCase(),
       instagram: (author.socials?.instagram ?? '').trim().toLowerCase(),
-      whatsapp: (author.socials?.whatsapp ?? '').trim().toLowerCase(),
       facebook: (author.socials?.facebook ?? '').trim().toLowerCase(),
     },
   }
