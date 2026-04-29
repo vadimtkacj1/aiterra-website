@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+import { SITE_URL } from '@/lib/seo'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
@@ -5,6 +7,19 @@ import { ServicePageHeroSection, AutomationProcessSection, CtaSection, FaqSectio
 import { getServiceBySlug } from '@/data/services'
 import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
+import ServiceSchema from '@/components/seo/ServiceSchema'
+
+export const metadata: Metadata = {
+  title: 'אוטומציה עסקית וחיבור מערכות',
+  description: 'בניית מערכות אוטומציה, CRM ואינטגרציות שחוסכות זמן ומייעלות את תהליכי העסק שלכם 24/7.',
+  alternates: { canonical: `${SITE_URL}/services/automation` },
+  openGraph: {
+    title: 'אוטומציה עסקית וחיבור מערכות | AITERRA',
+    description: 'בניית מערכות אוטומציה, CRM ואינטגרציות שחוסכות זמן ומייעלות את תהליכי העסק שלכם 24/7.',
+    url: `${SITE_URL}/services/automation`,
+    locale: 'he_IL',
+  },
+}
 
 export default function AutomationPage() {
   const service = getServiceBySlug('automation')
@@ -12,6 +27,11 @@ export default function AutomationPage() {
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <ServiceSchema
+        name="אוטומציה עסקית וחיבור מערכות"
+        description="בניית מערכות אוטומציה, CRM ואינטגרציות שחוסכות זמן ומייעלות את תהליכי העסק שלכם 24/7."
+        urlPath="/services/automation"
+      />
       <HeaderAlt transparent />
       <div className="relative z-[15] -mt-28 md:-mt-48" style={{ background: '#080112' }}>
         <ServicePageHeroSection service={service} />

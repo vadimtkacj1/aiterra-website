@@ -7,8 +7,22 @@ import type { FaqData } from '@/lib/faq-server'
 export default function ContactFaqSection({ data }: { data: FaqData }) {
   const [open, setOpen] = useState<number | null>(null)
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: data.items.map(faq => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  }
+
   return (
     <section className="w-full bg-white flex flex-col justify-center py-20" dir="rtl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <div className="w-full px-4 md:px-10 lg:px-20 max-w-5xl mx-auto">
         <div className="text-right mb-12">
           <h2

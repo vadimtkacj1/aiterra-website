@@ -40,6 +40,16 @@ export default function FaqSection() {
   const scale = useTransform(scrollYProgress, [0, 0.2], [0.95, 1])
   const opacity = useTransform(scrollYProgress, [0, 0.2], [0.6, 1])
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  }
+
   return (
     <motion.section
       ref={sectionRef}
@@ -48,6 +58,10 @@ export default function FaqSection() {
       style={{ scale, opacity }}
       aria-labelledby="faq-section-heading"
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <div className="w-full px-4 md:px-10 lg:px-20">
         <div className="text-right mb-16">
           <h2

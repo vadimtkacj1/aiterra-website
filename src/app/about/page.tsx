@@ -1,3 +1,18 @@
+import type { Metadata } from 'next'
+import { SITE_URL } from '@/lib/seo'
+
+export const metadata: Metadata = {
+  title: 'אודותינו',
+  description: 'הכירו את AITERRA – סוכנות שיווק דיגיטלי ופיתוח אתרים. הצוות, הערכים והחזון שמניעים אותנו לתוצאות.',
+  alternates: { canonical: `${SITE_URL}/about` },
+  openGraph: {
+    title: 'אודותינו | AITERRA',
+    description: 'הכירו את AITERRA – סוכנות שיווק דיגיטלי ופיתוח אתרים. הצוות, הערכים והחזון שמניעים אותנו לתוצאות.',
+    url: `${SITE_URL}/about`,
+    locale: 'he_IL',
+  },
+}
+
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'

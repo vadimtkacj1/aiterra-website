@@ -1,3 +1,18 @@
+import type { Metadata } from 'next'
+import { SITE_URL } from '@/lib/seo'
+
+export const metadata: Metadata = {
+  title: 'שירותים',
+  description: 'מעטפת שירותים דיגיטלית מלאה: בניית אתרים, קידום SEO, פרסום ממומן ואוטומציה עסקית לעסקים בישראל.',
+  alternates: { canonical: `${SITE_URL}/services` },
+  openGraph: {
+    title: 'שירותים | AITERRA',
+    description: 'מעטפת שירותים דיגיטלית מלאה: בניית אתרים, קידום SEO, פרסום ממומן ואוטומציה עסקית לעסקים בישראל.',
+    url: `${SITE_URL}/services`,
+    locale: 'he_IL',
+  },
+}
+
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'

@@ -1,3 +1,18 @@
+import type { Metadata } from 'next'
+import { SITE_URL } from '@/lib/seo'
+
+export const metadata: Metadata = {
+  title: 'צור קשר',
+  description: 'צרו איתנו קשר לשיחת ייעוץ חינם. בניית אתרים, קידום SEO, פרסום ממומן ואוטומציה עסקית. משרד: רחוב הרב ניסנבאום 37, בת ים.',
+  alternates: { canonical: `${SITE_URL}/contact` },
+  openGraph: {
+    title: 'צור קשר | AITERRA',
+    description: 'צרו איתנו קשר לשיחת ייעוץ חינם. בניית אתרים, קידום SEO, פרסום ממומן ואוטומציה עסקית.',
+    url: `${SITE_URL}/contact`,
+    locale: 'he_IL',
+  },
+}
+
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'

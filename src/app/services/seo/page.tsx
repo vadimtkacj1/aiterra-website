@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+import { SITE_URL } from '@/lib/seo'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
@@ -5,6 +7,19 @@ import { ServicePageHeroSection, SeoProcessSection, CtaSection, FaqSection } fro
 import { getServiceBySlug } from '@/data/services'
 import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
+import ServiceSchema from '@/components/seo/ServiceSchema'
+
+export const metadata: Metadata = {
+  title: 'קידום אתרים בגוגל (SEO)',
+  description: 'שירות SEO מקיף: אופטימיזציה טכנית, תוכן חכם, בניית קישורים חיצוניים ומעקב חודשי אחר מיקומים. תנועה אורגנית שמייצרת הכנסה.',
+  alternates: { canonical: `${SITE_URL}/services/seo` },
+  openGraph: {
+    title: 'קידום אתרים בגוגל (SEO) | AITERRA',
+    description: 'שירות SEO מקיף: אופטימיזציה טכנית, תוכן חכם, בניית קישורים חיצוניים ומעקב חודשי אחר מיקומים.',
+    url: `${SITE_URL}/services/seo`,
+    locale: 'he_IL',
+  },
+}
 
 export default function SeoPage() {
   const service = getServiceBySlug('seo')
@@ -12,6 +27,11 @@ export default function SeoPage() {
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <ServiceSchema
+        name="קידום אתרים בגוגל (SEO)"
+        description="שירות SEO מקיף: אופטימיזציה טכנית, תוכן חכם, בניית קישורים חיצוניים ומעקב חודשי אחר מיקומים."
+        urlPath="/services/seo"
+      />
       <HeaderAlt transparent />
       <div className="relative z-[15] -mt-28 md:-mt-48" style={{ background: '#080112' }}>
         <ServicePageHeroSection service={service} />

@@ -68,7 +68,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
-      <ArticleSchema title={post.title} datePublished={post.datePublished} urlPath={`/blog/${post.slug}`} />
+      <ArticleSchema
+        title={post.title}
+        datePublished={post.datePublished}
+        urlPath={`/blog/${post.slug}`}
+        author={post.author}
+        image={post.images?.[0]}
+      />
       <HeaderAlt transparent />
 
       {/* Hero — identical structure to BlogHeroSection */}

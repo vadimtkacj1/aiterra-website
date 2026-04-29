@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+import { SITE_URL } from '@/lib/seo'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
@@ -5,6 +7,19 @@ import { ServicePageHeroSection, AdvProcessSection, CtaSection, FaqSection } fro
 import { getServiceBySlug } from '@/data/services'
 import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
+import ServiceSchema from '@/components/seo/ServiceSchema'
+
+export const metadata: Metadata = {
+  title: 'פרסום ממומן (PPC) בגוגל ורשתות חברתיות',
+  description: 'ניהול קמפיינים ממומנים בגוגל, פייסבוק ואינסטגרם עם ROI מדיד. לידים איכותיים כאן ועכשיו עם אסטרטגיית פרסום חכמה.',
+  alternates: { canonical: `${SITE_URL}/services/adv` },
+  openGraph: {
+    title: 'פרסום ממומן (PPC) | AITERRA',
+    description: 'ניהול קמפיינים ממומנים בגוגל, פייסבוק ואינסטגרם עם ROI מדיד. לידים איכותיים כאן ועכשיו.',
+    url: `${SITE_URL}/services/adv`,
+    locale: 'he_IL',
+  },
+}
 
 export default function AdvPage() {
   const service = getServiceBySlug('adv')
@@ -12,6 +27,11 @@ export default function AdvPage() {
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <ServiceSchema
+        name="פרסום ממומן (PPC)"
+        description="ניהול קמפיינים ממומנים בגוגל, פייסבוק ואינסטגרם עם ROI מדיד. לידים איכותיים כאן ועכשיו עם אסטרטגיית פרסום חכמה."
+        urlPath="/services/adv"
+      />
       <HeaderAlt transparent />
       <div className="relative z-[15] -mt-28 md:-mt-48" style={{ background: '#080112' }}>
         <ServicePageHeroSection service={service} />

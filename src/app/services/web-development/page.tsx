@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+import { SITE_URL } from '@/lib/seo'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
@@ -5,6 +7,19 @@ import { ServicePageHeroSection, WebDevProcessSection, CtaSection, FaqSection, P
 import { getServiceBySlug } from '@/data/services'
 import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
+import ServiceSchema from '@/components/seo/ServiceSchema'
+
+export const metadata: Metadata = {
+  title: 'עיצוב ובניית אתרים',
+  description: 'בניית אתרי איקומרס, תדמית ומערכות מורכבות בסטנדרט הגבוה ביותר. קוד נקי, מהירות טעינה קיצונית ועיצוב ממוקד המרות.',
+  alternates: { canonical: `${SITE_URL}/services/web-development` },
+  openGraph: {
+    title: 'עיצוב ובניית אתרים | AITERRA',
+    description: 'בניית אתרי איקומרס, תדמית ומערכות מורכבות בסטנדרט הגבוה ביותר. קוד נקי, מהירות טעינה קיצונית ועיצוב ממוקד המרות.',
+    url: `${SITE_URL}/services/web-development`,
+    locale: 'he_IL',
+  },
+}
 
 export default function WebDevelopmentPage() {
   const service = getServiceBySlug('web-development')
@@ -12,6 +27,11 @@ export default function WebDevelopmentPage() {
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <ServiceSchema
+        name={service.title}
+        description={service.description}
+        urlPath="/services/web-development"
+      />
       <HeaderAlt transparent />
       <div className="relative z-[15] -mt-28 md:-mt-48" style={{ background: '#080112' }}>
         <ServicePageHeroSection service={service} />
@@ -22,9 +42,9 @@ export default function WebDevelopmentPage() {
             <Breadcrumb items={[{ label: 'שירותים', href: '/services' }, { label: service.title }]} />
           </div>
           <WebDevProcessSection />
-          <PortfolioSection />
           <CtaSection />
           <FaqSection />
+          <PortfolioSection />
         </main>
         <StickyPageFooter className="z-10">
           <Footer />
