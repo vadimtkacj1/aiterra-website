@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import {
   Plus, Trash2, ImageIcon, Star, X, Upload,
   Bold, Italic, List, ListOrdered, Quote, Minus, Code,
-  Heading2, Heading3, Eye, PenLine,
+  Heading2, Heading3, Eye, PenLine, User,
 } from 'lucide-react'
 import { marked } from 'marked'
 import type { AdminPost, PostFaq, FaqItem } from '@/lib/blog-server'
@@ -13,13 +13,18 @@ import type { AdminPost, PostFaq, FaqItem } from '@/lib/blog-server'
 marked.setOptions({ breaks: true, gfm: true })
 
 const PRESET_TAGS = ['ביצועים', 'SEO', 'Core Web Vitals', 'תוכן', 'קידום אורגני', 'Next.js', 'WordPress', 'פיתוח', 'מיתוג', 'עיצוב', 'דיגיטל']
+const AUTHOR_PRESETS = [
+  { label: 'SEO - Sean', name: 'Sean' },
+  { label: 'Web Dev - Vadim', name: 'Vadim' },
+  { label: 'Web Dev - Michael', name: 'Michael' },
+] as const
 
 const emptyFaq: PostFaq = { title: 'שאלות נפוצות', items: [] }
 
 const empty: AdminPost = {
   slug: '', title: '', excerpt: '', content: '',
   datePublished: '',
-  author: '', tags: [], images: [''],
+  author: '', authorImage: '', tags: [], images: [''],
 }
 
 function slugify(text: string) {
@@ -36,6 +41,7 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
   const [error, setError] = useState('')
   const [tagInput, setTagInput] = useState('')
   const [uploading, setUploading] = useState<number | null>(null)
+  const [uploadingAuthorImage, setUploadingAuthorImage] = useState(false)
   const [contentTab, setContentTab] = useState<'edit' | 'preview'>('edit')
   const contentRef = useRef<HTMLTextAreaElement>(null)
   const fileRefs = useRef<(HTMLInputElement | null)[]>([])
@@ -150,6 +156,17 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
     if (res.ok) setImage(i, data.url)
     else setError(data.error || 'שגיאת העלאה')
     setUploading(null)
+  }
+
+  const uploadAuthorImage = async (file: File) => {
+    setUploadingAuthorImage(true)
+    const fd = new FormData()
+    fd.append('file', file)
+    const res = await fetch('/api/admin/upload', { method: 'POST', body: fd })
+    const data = await res.json()
+    if (res.ok) set('authorImage', data.url)
+    else setError(data.error || 'שגיאת העלאה')
+    setUploadingAuthorImage(false)
   }
 
   // ── Submit ────────────────────────────────────────────────────────────────
@@ -272,7 +289,7 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
       </Field>
 
       {/* ── Date + Author ─────────────────────────────────────────────────── */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <Field label="מחבר" hint="אופציונלי">
           <input
             value={form.author}
@@ -280,6 +297,57 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
             placeholder="למשל: צוות Aiterra"
             className={inputCls}
           />
+          <div className="flex flex-wrap gap-2 mt-2">
+            {AUTHOR_PRESETS.map((preset) => (
+              <button
+                key={preset.label}
+                type="button"
+                onClick={() => {
+                  set('author', preset.name)
+                }}
+                className="px-2.5 py-1 rounded-full text-[11px] font-medium border border-[#1B1BB3]/30 text-[#1B1BB3] hover:bg-[#1B1BB3]/5 transition-colors"
+              >
+                {preset.label}
+              </button>
+            ))}
+          </div>
+        </Field>
+        <Field label="תמונת מחבר" hint="מוצגת בסוף הפוסט">
+          <div className="flex items-center gap-2">
+            {form.authorImage ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={form.authorImage} alt="" className="w-11 h-11 rounded-full object-cover border border-gray-200 shrink-0" />
+            ) : (
+              <div className="w-11 h-11 rounded-full border-2 border-dashed border-gray-200 shrink-0 flex items-center justify-center">
+                <User size={14} className="text-gray-300" />
+              </div>
+            )}
+            <input
+              value={form.authorImage ?? ''}
+              onChange={(e) => set('authorImage', e.target.value)}
+              placeholder="URL לתמונת מחבר"
+              className={`${inputCls} flex-1`}
+              dir="ltr"
+            />
+            <input
+              type="file"
+              accept="image/*"
+              className="hidden"
+              id="author-image-upload"
+              onChange={(e) => { const f = e.target.files?.[0]; if (f) uploadAuthorImage(f) }}
+            />
+            <button
+              type="button"
+              onClick={() => document.getElementById('author-image-upload')?.click()}
+              disabled={uploadingAuthorImage}
+              className="shrink-0 px-3 py-2.5 rounded-lg border border-[#1B1BB3]/30 text-[#1B1BB3] hover:bg-[#1B1BB3]/5 transition-colors disabled:opacity-50 flex items-center gap-1.5 text-[12px] font-medium"
+            >
+              {uploadingAuthorImage
+                ? <span className="w-4 h-4 border-2 border-[#1B1BB3]/30 border-t-[#1B1BB3] rounded-full animate-spin" />
+                : <Upload size={14} />}
+              העלה
+            </button>
+          </div>
         </Field>
         <Field label="תאריך פרסום" hint="ריק = היום (אוטומטי)">
           <input

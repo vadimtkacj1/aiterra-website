@@ -126,6 +126,31 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             )}
           </div>
 
+          {(post.author.trim() || (post.authorImage ?? '').trim()) && (
+            <div className="max-w-4xl mx-auto px-6 pb-8">
+              <div className="rounded-2xl border border-gray-100 bg-[#f9fafb] p-4 md:p-5 flex items-center gap-4">
+                {(post.authorImage ?? '').trim() ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={post.authorImage}
+                    alt={post.author ? `author ${post.author}` : 'post author'}
+                    className="w-14 h-14 rounded-full object-cover border border-gray-200 shrink-0"
+                  />
+                ) : (
+                  <div className="w-14 h-14 rounded-full bg-white border border-gray-200 flex items-center justify-center shrink-0">
+                    <User size={20} className="text-[#9ca3af]" aria-hidden />
+                  </div>
+                )}
+                <div className="min-w-0">
+                  <p className="text-[12px] text-[#6b7280] mb-1">נכתב על ידי</p>
+                  <p className="text-[16px] font-semibold text-[#111827]">
+                    {post.author.trim() || 'Aiterra Team'}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
           {(post.tags.length > 0 || post.author.trim() || post.datePublished) && (
             <div
               className="max-w-4xl mx-auto px-6 pb-12 pt-4 border-t border-gray-100"

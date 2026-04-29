@@ -13,6 +13,8 @@ export interface AdminPost {
   datePublished: string
   /** Optional; empty string if anonymous */
   author: string
+  /** Optional author avatar url shown at post bottom */
+  authorImage?: string
   tags: string[]
   images: string[]
   faq?: PostFaq
@@ -22,9 +24,12 @@ function todayIsoDate(): string {
   return new Date().toISOString().split('T')[0]
 }
 
-export function normalizePostFields(p: Pick<AdminPost, 'author' | 'datePublished'>): Pick<AdminPost, 'author' | 'datePublished'> {
+export function normalizePostFields(
+  p: Pick<AdminPost, 'author' | 'authorImage' | 'datePublished'>,
+): Pick<AdminPost, 'author' | 'authorImage' | 'datePublished'> {
   return {
     author: (p.author ?? '').trim(),
+    authorImage: (p.authorImage ?? '').trim(),
     datePublished: (p.datePublished && p.datePublished.trim()) || todayIsoDate(),
   }
 }
