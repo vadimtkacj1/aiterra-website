@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import PageLoadSpinner from '@/components/layout/PageLoadSpinner'
 import Providers from '@/components/layout/Providers'
 import OrganizationSchema from '@/components/seo/OrganizationSchema'
+import CookieConsent from '@/components/layout/CookieConsent'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import '../styles/globals.css'
 
@@ -58,6 +59,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <OrganizationSchema />
         <PageLoadSpinner />
         <Providers>{children}</Providers>
+        <CookieConsent />
       </body>
     </html>
   )
