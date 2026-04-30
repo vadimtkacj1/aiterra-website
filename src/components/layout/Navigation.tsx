@@ -1,7 +1,8 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
+import { CONTACT_PHONE, CONTACT_PHONE_HREF } from '@/lib/contact';
 import { useDocumentEnd } from '@/context/DocumentEndContext';
 
 const navLinks = [
@@ -48,7 +49,7 @@ const Navigation = () => {
                 </svg>
               </button>
             </div>
-            <nav className="flex flex-col p-8 gap-6 text-right" dir="rtl">
+            <nav className="flex flex-col p-8 gap-6 text-right flex-1" dir="rtl">
               {navLinks.map((link, i) => (
                 <Link
                   key={link.href}
@@ -63,6 +64,21 @@ const Navigation = () => {
                 </Link>
               ))}
             </nav>
+            <div className="px-8 pb-10 text-right" dir="rtl">
+              <a
+                href={CONTACT_PHONE_HREF}
+                className="flex items-center justify-end gap-2 text-[18px] font-bold"
+                style={{
+                  background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                {CONTACT_PHONE}
+              </a>
+              <p className="text-[12px] text-gray-400 mt-1">מיכאל</p>
+            </div>
           </div>
         </div>
         {open && (

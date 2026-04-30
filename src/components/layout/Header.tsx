@@ -29,7 +29,7 @@ export default function Header() {
       }`}
     >
       <header
-        className={`w-full h-28 transition-colors duration-300 ${
+        className={`w-full h-1s8 transition-colors duration-300 ${
           scrolled
             ? 'bg-white/90 backdrop-blur-md shadow-sm'
             : 'bg-transparent'
