@@ -18,7 +18,7 @@ export default function HeroSection() {
             style={{ fontWeight: 700, lineHeight: '110%' }}
             className="text-[20px] md:text-[48px] text-gray-900"
           >
-            שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם לעסקים
+            AITERRA: סוכנות שיווק ופיתוח
           </h1>
 
           <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed max-w-xl md:pr-[40px]">
