@@ -13,10 +13,10 @@ export default function ServicesSection() {
             <div
               key={index}
               className="sticky flex flex-col md:flex-row-reverse w-full bg-white overflow-hidden"
-              style={{ top: `calc(4rem + ${index * 40}px)` }}
+              style={{ top: `4rem` }}
             >
-              {/* Image side */}
-              <div className="relative w-full md:w-[710px] h-[calc(100vh-4rem)] md:h-191.25 shrink-0">
+              {/* Image */}
+              <div className="relative w-full md:w-[710px] h-[40vh] md:h-191.25 shrink-0">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -25,28 +25,24 @@ export default function ServicesSection() {
                 />
               </div>
 
-              {/* Text side */}
-              <div className="relative flex flex-col flex-1 bg-white px-6 py-8 md:px-24 md:py-16 text-right">
-                
-                {/* Upper Text */}
-                <div className="w-full mb-4 md:mb-20">
-                  <span className="text-[14px] font-medium text-gray-500 block">
+              {/* Text */}
+              <div className="relative flex flex-col flex-1 bg-white px-6 py-6 md:px-24 md:py-16 text-right">
+
+                <div className="w-full mb-3 md:mb-20">
+                  <span className="text-[13px] font-medium text-gray-500 block">
                     {service.upperTitle}
                   </span>
                 </div>
 
                 <div className="my-auto">
-                  {/* Title: 20px Mobile / 48px Desktop */}
-                  <h3 className="text-[20px] md:text-[48px] leading-[1.2] font-black text-[#3b28cc] mb-4 md:mb-8 max-w-[500px]">
+                  <h3 className="text-[22px] md:text-[48px] leading-[1.2] font-black text-[#3b28cc] mb-3 md:mb-8 max-w-125">
                     {service.title}
                   </h3>
 
-                  {/* Description: 14px */}
-                  <p className="text-gray-600 text-[14px] leading-relaxed mb-8 md:mb-12 max-w-[480px]">
+                  <p className="text-gray-600 text-[13px] md:text-[14px] leading-relaxed mb-5 md:mb-12 max-w-120">
                     {service.description}
                   </p>
 
-                  {/* Button: 14px */}
                   <Link
                     href={`/services/${service.slug}`}
                     className="inline-block border border-[#3b28cc] text-[#3b28cc] text-[14px] px-10 py-3 hover:bg-[#3b28cc] hover:text-white transition-all duration-300 font-bold"
