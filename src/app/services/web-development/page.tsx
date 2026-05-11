@@ -4,12 +4,14 @@ import RouteJsonLd from '@/components/seo/RouteJsonLd'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
-import { ServicePageHeroSection, WebDevProcessSection, CtaSection, FaqSection } from '@/components/sections'
+import { ServicePageHeroSection, WebDevProcessSection, CtaSection } from '@/components/sections'
+import FaqSection from '@/components/sections/common/FaqSection'
 import PortfolioSection from '@/components/sections/portfolio/PortfolioSection'
 import { getServiceBySlug } from '@/data/services'
 import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import ServiceSchema from '@/components/seo/ServiceSchema'
+import { getFaqData } from '@/lib/faq-server'
 
 export async function generateMetadata(): Promise<Metadata> {
   return metadataForRoute('/services/web-development')
@@ -18,6 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function WebDevelopmentPage() {
   const service = getServiceBySlug('web-development')
   if (!service) notFound()
+  const faqData = getFaqData('/services/web-development')
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
@@ -38,7 +41,7 @@ export default function WebDevelopmentPage() {
           </div>
           <WebDevProcessSection />
           <CtaSection />
-          <FaqSection />
+          <FaqSection data={faqData} />
           <PortfolioSection />
         </main>
         <StickyPageFooter className="z-10">

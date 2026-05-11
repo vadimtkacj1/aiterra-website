@@ -4,7 +4,9 @@ import RouteJsonLd from '@/components/seo/RouteJsonLd'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
-import { ServicePageHeroSection, SeoProcessSection, CtaSection, FaqSection } from '@/components/sections'
+import { ServicePageHeroSection, SeoProcessSection, CtaSection } from '@/components/sections'
+import FaqSection from '@/components/sections/common/FaqSection'
+import { getFaqData } from '@/lib/faq-server'
 import { getServiceBySlug } from '@/data/services'
 import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
@@ -16,6 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function SeoPage() {
   const service = getServiceBySlug('seo')
+  const faqData = getFaqData('/services/seo')
   if (!service) notFound()
 
   return (
@@ -37,7 +40,7 @@ export default function SeoPage() {
           </div>
           <SeoProcessSection />
           <CtaSection />
-          <FaqSection />
+          <FaqSection data={faqData} />
         </main>
         <StickyPageFooter className="z-10">
           <Footer />

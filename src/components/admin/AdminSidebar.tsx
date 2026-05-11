@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { Briefcase, Globe2, LayoutList, LogOut, Users, X } from 'lucide-react'
+import { Briefcase, Globe2, HelpCircle, LayoutList, LogOut, Users, X } from 'lucide-react'
 
 const SIDEBAR_BG = '#0f172a'
 const BORDER_SUBTLE = 'rgba(255,255,255,0.06)'
@@ -14,6 +14,7 @@ const links = [
   { href: '/admin/portfolio', label: 'תיק עבודות', icon: Briefcase, exact: false },
   { href: '/admin/seo', label: 'SEO דפים', icon: Globe2, exact: true },
   { href: '/admin/authors', label: 'מחברים', icon: Users, exact: true },
+  { href: '/admin/faq', label: 'FAQ', icon: HelpCircle, exact: true },
 ]
 
 function SideMenu({ pathname }: { pathname: string }) {

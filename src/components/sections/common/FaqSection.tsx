@@ -2,33 +2,9 @@
 
 import { useState, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import type { FaqData } from '@/lib/faq-server'
 
-const faqs = [
-  {
-    q: 'כמה זמן לוקח לבנות אתר לעסק?',
-    a: 'זמן הפיתוח משתנה בהתאם למורכבות. אתר תדמיתי יכול לקחת בין 3-5 שבועות, בעוד פיתוח מערכות תוכנה מורכבות או חנויות איקומרס גדולות עשוי לארוך חודשיים ומעלה. אנחנו מקפידים על עמידה בלוחות זמנים קשיחים.',
-  },
-  {
-    q: 'מה כולל שירות ה-SEO (קידום אתרים) שלכם?',
-    a: 'השירות שלנו הוא מקיף (End-to-End). הוא כולל אופטימיזציה של קוד האתר, מחקר מתחרים, בניית פרופיל קישורים, כתיבת תוכן שיווקי וטכני, ומעקב חודשי אחר מיקומים ותנועה.',
-  },
-  {
-    q: 'האם האתרים שאתם בונים רספונסיביים?',
-    a: 'חד משמעית כן. כל אתר שאנו מפתחים עובר התאמה מלאה לכל סוגי המסכים – סמארטפונים, טאבלטים ומחשבים נייחים, עם דגש על Mobile-First.',
-  },
-  {
-    q: 'האם אתם מנהלים קמפיין ממומן ופרסום ברשתות חברתיות גם לעסקים קטנים?',
-    a: 'אנו בונים אסטרטגיית פרסום מותאמת אישית לכל לקוח. בין אם מדובר בשיווק לעסקים מקומיים ובין אם בפריסה ארצית או בינלאומית, אנחנו נדע להתאים את התקציב למטרות העסקיות.',
-  },
-  {
-    q: 'מה קורה אחרי השקת האתר?',
-    a: 'אנחנו לא נעלמים. AITERRA מספקת שירותי תחזוקה, אבטחת מידע, אחסון ועדכוני תוכנה שוטפים, לצד ליווי שיווקי צמוד בקידום אורגני וממומן.',
-  },
-]
-
-const FAQ_SECTION_TITLE = 'שאלות נפוצות'
-
-export default function FaqSection() {
+export default function FaqSection({ data }: { data: FaqData }) {
   const [open, setOpen] = useState<number | null>(null)
   const sectionRef = useRef<HTMLElement>(null)
 
@@ -40,10 +16,12 @@ export default function FaqSection() {
   const scale = useTransform(scrollYProgress, [0, 0.2], [0.95, 1])
   const opacity = useTransform(scrollYProgress, [0, 0.2], [0.6, 1])
 
+  if (!data.items.length) return null
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqs.map(faq => ({
+    mainEntity: data.items.map(faq => ({
       '@type': 'Question',
       name: faq.q,
       acceptedAnswer: { '@type': 'Answer', text: faq.a },
@@ -72,12 +50,12 @@ export default function FaqSection() {
               WebkitBackgroundClip: 'text',
             }}
           >
-            {FAQ_SECTION_TITLE}
+            {data.title}
           </h2>
         </div>
 
         <div className="flex flex-col w-full border-t border-gray-200">
-          {faqs.map((faq, i) => (
+          {data.items.map((faq, i) => (
             <div key={i} className="border-b border-gray-200 w-full">
               <h3 className="m-0">
                 <button

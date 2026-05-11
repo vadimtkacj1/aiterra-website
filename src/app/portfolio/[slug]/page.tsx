@@ -1,8 +1,10 @@
 import HeaderAlt from "@/components/layout/HeaderAlt";
 import Footer from "@/components/layout/Footer";
 import StickyPageFooter from "@/components/layout/StickyPageFooter";
-import { PortfolioProjectHeroSection, CtaSection, FaqSection } from "@/components/sections";
+import { PortfolioProjectHeroSection, CtaSection } from "@/components/sections";
+import FaqSection from '@/components/sections/common/FaqSection'
 import { getProjectBySlug } from '@/lib/portfolio-server'
+import { getFaqData } from '@/lib/faq-server'
 import { notFound, redirect } from "next/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -25,6 +27,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
     const { slug } = await params;
     const project = getProjectBySlug(slug);
     if (!project) notFound();
+    const faqData = getFaqData('/portfolio')
 
     const externalOnly = project.externalUrl?.trim();
     if (externalOnly) {
@@ -127,7 +130,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                     ) : null}
 
                     <CtaSection />
-                    <FaqSection />
+                    <FaqSection data={faqData} />
                 </main>
 
                 <StickyPageFooter className="z-10">

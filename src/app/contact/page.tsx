@@ -9,15 +9,15 @@ export async function generateMetadata(): Promise<Metadata> {
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
-import { ContactHeroSection, ContactFormSection, ContactMapSection, CtaSection, FaqSection } from '@/components/sections'
+import { ContactHeroSection, ContactFormSection, ContactMapSection, CtaSection } from '@/components/sections'
+import FaqSection from '@/components/sections/common/FaqSection'
 import Breadcrumb from '@/components/ui/Breadcrumb'
-import ContactFaqSection from '@/components/sections/contact/ContactFaqSection'
 import { getFaqData } from '@/lib/faq-server'
 
 export const dynamic = 'force-dynamic'
 
 export default function ContactPage() {
-  const faqData = getFaqData()
+  const faqData = getFaqData('/contact')
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
@@ -32,9 +32,8 @@ export default function ContactPage() {
             <Breadcrumb items={[{ label: 'צור קשר', href: '/contact' }]} />
           </div>
           <ContactMapSection />
-          <ContactFaqSection data={faqData} />
+          <FaqSection data={faqData} />
           <CtaSection />
-          <FaqSection />
         </main>
         <StickyPageFooter className="z-10">
           <Footer />

@@ -4,15 +4,18 @@ import RouteJsonLd from '@/components/seo/RouteJsonLd'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
-import { PortfolioHeroSection, CtaSection, FaqSection, PartnersSection } from '@/components/sections'
+import { PortfolioHeroSection, CtaSection, PartnersSection } from '@/components/sections'
+import FaqSection from '@/components/sections/common/FaqSection'
 import PortfolioSection from '@/components/sections/portfolio/PortfolioSection'
 import Breadcrumb from '@/components/ui/Breadcrumb'
+import { getFaqData } from '@/lib/faq-server'
 
 export async function generateMetadata(): Promise<Metadata> {
   return metadataForRoute('/portfolio')
 }
 
 export default function PortfolioPage() {
+  const faqData = getFaqData('/portfolio')
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
       <RouteJsonLd path="/portfolio" />
@@ -28,7 +31,7 @@ export default function PortfolioPage() {
           <PortfolioSection showButton={false} />
           <PartnersSection />
           <CtaSection />
-          <FaqSection />
+          <FaqSection data={faqData} />
         </main>
         <StickyPageFooter className="z-10">
           <Footer />

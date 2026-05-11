@@ -13,12 +13,14 @@ import {
   ServicesHeroSection,
   ServicesIntroSection,
   CtaSection,
-  FaqSection,
   ServicesSection,
 } from '@/components/sections'
+import FaqSection from '@/components/sections/common/FaqSection'
 import Breadcrumb from '@/components/ui/Breadcrumb'
+import { getFaqData } from '@/lib/faq-server'
 
 export default function ServicesPage() {
+  const faqData = getFaqData('/services')
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
       <RouteJsonLd path="/services" />
@@ -34,7 +36,7 @@ export default function ServicesPage() {
           <ServicesIntroSection />
           <ServicesSection />
           <CtaSection />
-          <FaqSection />
+          <FaqSection data={faqData} />
         </main>
         <StickyPageFooter className="z-10">
           <Footer />

@@ -9,7 +9,7 @@ import { CtaSection } from '@/components/sections'
 import { getPostBySlug } from '@/lib/blog-server'
 import HeroVideoBackdrop from '@/components/ui/HeroVideoBackdrop'
 import Breadcrumb from '@/components/ui/Breadcrumb'
-import ContactFaqSection from '@/components/sections/contact/ContactFaqSection'
+import FaqSection from '@/components/sections/common/FaqSection'
 import ArticleSchema from '@/components/seo/ArticleSchema'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import type { Tokens } from 'marked'
@@ -215,7 +215,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
           <CtaSection />
           {post.faq && post.faq.items.length > 0 && (
-            <ContactFaqSection data={post.faq} />
+            <FaqSection data={post.faq} />
           )}
         </main>
         <StickyPageFooter className="z-10">

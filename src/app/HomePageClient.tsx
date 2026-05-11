@@ -14,8 +14,9 @@ import {
   PartnersSection,
 } from '@/components/sections'
 import type { PortfolioProject } from '@/types'
+import type { FaqData } from '@/lib/faq-server'
 
-export default function HomePageClient({ portfolioProjects }: { portfolioProjects: PortfolioProject[] }) {
+export default function HomePageClient({ portfolioProjects, faqData }: { portfolioProjects: PortfolioProject[]; faqData: FaqData }) {
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
       <Header />
@@ -29,7 +30,7 @@ export default function HomePageClient({ portfolioProjects }: { portfolioProject
           <PortfolioGrid projects={portfolioProjects} />
           <PartnersSection />
           <CtaSection />
-          <FaqSection />
+          <FaqSection data={faqData} />
         </main>
         <StickyPageFooter className="z-60 mt-[50px]">
           <Footer />

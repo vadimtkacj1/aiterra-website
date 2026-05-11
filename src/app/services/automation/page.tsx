@@ -4,11 +4,13 @@ import RouteJsonLd from '@/components/seo/RouteJsonLd'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
-import { ServicePageHeroSection, AutomationProcessSection, CtaSection, FaqSection } from '@/components/sections'
+import { ServicePageHeroSection, AutomationProcessSection, CtaSection } from '@/components/sections'
+import FaqSection from '@/components/sections/common/FaqSection'
 import { getServiceBySlug } from '@/data/services'
 import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import ServiceSchema from '@/components/seo/ServiceSchema'
+import { getFaqData } from '@/lib/faq-server'
 
 export async function generateMetadata(): Promise<Metadata> {
   return metadataForRoute('/services/automation')
@@ -17,6 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function AutomationPage() {
   const service = getServiceBySlug('automation')
   if (!service) notFound()
+  const faqData = getFaqData('/services/automation')
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
@@ -37,7 +40,7 @@ export default function AutomationPage() {
           </div>
           <AutomationProcessSection />
           <CtaSection />
-          <FaqSection />
+          <FaqSection data={faqData} />
         </main>
         <StickyPageFooter className="z-10">
           <Footer />

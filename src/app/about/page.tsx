@@ -14,12 +14,14 @@ import {
   TechSliderSection,
   StatsSection,
   CtaSection,
-  FaqSection,
 } from '@/components/sections'
+import FaqSection from '@/components/sections/common/FaqSection'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import TeamSection from '@/components/sections/common/TeamSection'
+import { getFaqData } from '@/lib/faq-server'
 
 export default function AboutPage() {
+  const faqData = getFaqData('/about')
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
       <RouteJsonLd path="/about" />
@@ -34,7 +36,7 @@ export default function AboutPage() {
           <StatsSection />
           <TeamSection />
           <CtaSection />
-          <FaqSection />
+          <FaqSection data={faqData} />
         </main>
         <StickyPageFooter className="z-10">
           <Footer />
