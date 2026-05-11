@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { SITE_URL } from '@/lib/seo'
+import { metadataForRoute } from '@/lib/site-seo-server'
+import RouteJsonLd from '@/components/seo/RouteJsonLd'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
@@ -9,16 +10,8 @@ import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import ServiceSchema from '@/components/seo/ServiceSchema'
 
-export const metadata: Metadata = {
-  title: 'קידום אתרים בגוגל (SEO)',
-  description: 'שירות SEO מקיף: אופטימיזציה טכנית, תוכן חכם, בניית קישורים חיצוניים ומעקב חודשי אחר מיקומים. תנועה אורגנית שמייצרת הכנסה.',
-  alternates: { canonical: `${SITE_URL}/services/seo` },
-  openGraph: {
-    title: 'קידום אתרים בגוגל (SEO) | AITERRA',
-    description: 'שירות SEO מקיף: אופטימיזציה טכנית, תוכן חכם, בניית קישורים חיצוניים ומעקב חודשי אחר מיקומים.',
-    url: `${SITE_URL}/services/seo`,
-    locale: 'he_IL',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return metadataForRoute('/services/seo')
 }
 
 export default function SeoPage() {
@@ -27,6 +20,7 @@ export default function SeoPage() {
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <RouteJsonLd path="/services/seo" />
       <ServiceSchema
         name="קידום אתרים בגוגל (SEO)"
         description="שירות SEO מקיף: אופטימיזציה טכנית, תוכן חכם, בניית קישורים חיצוניים ומעקב חודשי אחר מיקומים."

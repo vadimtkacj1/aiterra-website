@@ -1,12 +1,20 @@
+import type { Metadata } from 'next'
+import { metadataForRoute } from '@/lib/site-seo-server'
+import RouteJsonLd from '@/components/seo/RouteJsonLd'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
 import { BlogHeroSection, BlogPostsSection, CtaSection } from '@/components/sections'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 
+export async function generateMetadata(): Promise<Metadata> {
+  return metadataForRoute('/blog')
+}
+
 export default function BlogPage() {
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <RouteJsonLd path="/blog" />
       <HeaderAlt transparent />
       <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#080112' }}>
         <BlogHeroSection />

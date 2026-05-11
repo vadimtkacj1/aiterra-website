@@ -14,11 +14,13 @@ export async function POST(req: NextRequest) {
   }
 
   const safeName = `${Date.now()}-${file.name.replace(/[^a-z0-9.\-_]/gi, '_')}`
-  const dir = path.join(process.cwd(), 'public', 'images', 'blog')
+  const dest = ((formData.get('dest') as string | null) ?? 'blog').trim().toLowerCase()
+  const subdir = dest === 'portfolio' ? 'portfolio' : 'blog'
+  const dir = path.join(process.cwd(), 'public', 'images', subdir)
   await mkdir(dir, { recursive: true })
 
   const buffer = Buffer.from(await file.arrayBuffer())
   await writeFile(path.join(dir, safeName), buffer)
 
-  return NextResponse.json({ url: `/images/blog/${safeName}` })
+  return NextResponse.json({ url: `/images/${subdir}/${safeName}` })
 }

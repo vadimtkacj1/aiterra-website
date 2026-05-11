@@ -1,5 +1,6 @@
 'use client'
 
+import type { CSSProperties } from 'react'
 import type { PortfolioProject } from '@/types'
 import Link from 'next/link'
 import HeroVideoBackdrop from '@/components/ui/HeroVideoBackdrop'
@@ -8,7 +9,40 @@ interface Props {
   project: PortfolioProject
 }
 
+function isExternalHref(href: string) {
+  return /^https?:\/\//i.test(href) || href.startsWith('mailto:') || href.startsWith('tel:')
+}
+
+function HeroCtaLink({
+  href,
+  className,
+  style,
+  children,
+}: {
+  href: string
+  className?: string
+  style?: CSSProperties
+  children: React.ReactNode
+}) {
+  if (isExternalHref(href)) {
+    return (
+      <a href={href} className={className} style={style} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    )
+  }
+  return (
+    <Link href={href} className={className} style={style}>
+      {children}
+    </Link>
+  )
+}
+
 export default function PortfolioProjectHeroSection({ project }: Props) {
+  const primaryHref = project.heroCtaPrimaryHref?.trim() || '/contact'
+  const primaryLabel = project.heroCtaPrimaryLabel?.trim() || 'התחילו פרויקט דומה'
+  const secondaryHref = project.heroCtaSecondaryHref?.trim() || '/portfolio'
+  const secondaryLabel = project.heroCtaSecondaryLabel?.trim() || 'כל הפרויקטים'
   return (
     <section
       className="relative overflow-hidden min-h-[100vh] flex flex-col items-center justify-center font-sans"
@@ -53,16 +87,16 @@ export default function PortfolioProjectHeroSection({ project }: Props) {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            href="/contact"
+          <HeroCtaLink
+            href={primaryHref}
             className="border border-white bg-transparent text-white px-8 py-3.5 transition-colors hover:bg-white/10"
             style={{ fontWeight: 600, fontSize: '15px' }}
           >
-            התחילו פרויקט דומה
-          </Link>
+            {primaryLabel}
+          </HeroCtaLink>
 
-          <Link
-            href="/portfolio"
+          <HeroCtaLink
+            href={secondaryHref}
             className="bg-white px-8 py-3.5 transition-transform hover:scale-105 active:scale-95 shadow-lg flex items-center justify-center"
             style={{ fontWeight: 700, fontSize: '15px' }}
           >
@@ -76,9 +110,9 @@ export default function PortfolioProjectHeroSection({ project }: Props) {
                 display: 'inline-block',
               }}
             >
-              כל הפרויקטים
+              {secondaryLabel}
             </span>
-          </Link>
+          </HeroCtaLink>
         </div>
       </div>
     </section>

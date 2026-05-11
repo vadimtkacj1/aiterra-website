@@ -2,7 +2,7 @@ import HeaderAlt from "@/components/layout/HeaderAlt";
 import Footer from "@/components/layout/Footer";
 import StickyPageFooter from "@/components/layout/StickyPageFooter";
 import { PortfolioProjectHeroSection, CtaSection, FaqSection } from "@/components/sections";
-import { getProjectBySlug } from "@/data/portfolio";
+import { getProjectBySlug } from '@/lib/portfolio-server'
 import { notFound, redirect } from "next/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -16,10 +16,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const project = getProjectBySlug(slug);
     if (!project) return {};
-    return {
-        title: `${project.title} | תיק עבודות | Aiterra`,
-        description: project.heroDescription,
-    };
+    const title = project.metaTitle?.trim() || `${project.title} | תיק עבודות | Aiterra`;
+    const description = project.metaDescription?.trim() || project.heroDescription;
+    return { title, description };
 }
 
 export default async function PortfolioProjectPage({ params }: Props) {
@@ -34,10 +33,11 @@ export default async function PortfolioProjectPage({ params }: Props) {
 
     const hasCaseStudy = Boolean(project.caseStudy && project.caseStudy.length > 0);
 
+    const imageAlt = project.imageAlt?.trim() || project.title;
     const imageEl = (
         <Image
             src={project.image}
-            alt={project.title}
+            alt={imageAlt}
             width={1200}
             height={800}
             className="w-full h-auto object-contain transition-opacity duration-300"
@@ -105,6 +105,26 @@ export default async function PortfolioProjectPage({ params }: Props) {
                             )}
                         </div>
                     </section>
+
+                    {project.galleryImages && project.galleryImages.length > 0 ? (
+                        <section className="bg-white border-t border-gray-100 py-12 md:py-16">
+                            <div className="max-w-7xl mx-auto px-6">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+                                    {project.galleryImages.map((src, i) => (
+                                        <div key={`${src}-${i}`} className="relative w-full overflow-hidden rounded-lg bg-gray-50">
+                                            <Image
+                                                src={src}
+                                                alt={`${imageAlt} — ${i + 1}`}
+                                                width={900}
+                                                height={600}
+                                                className="h-auto w-full object-contain"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </section>
+                    ) : null}
 
                     <CtaSection />
                     <FaqSection />

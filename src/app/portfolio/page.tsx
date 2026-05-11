@@ -1,12 +1,21 @@
+import type { Metadata } from 'next'
+import { metadataForRoute } from '@/lib/site-seo-server'
+import RouteJsonLd from '@/components/seo/RouteJsonLd'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
-import { PortfolioHeroSection, PortfolioSection, CtaSection, FaqSection, PartnersSection } from '@/components/sections'
+import { PortfolioHeroSection, CtaSection, FaqSection, PartnersSection } from '@/components/sections'
+import PortfolioSection from '@/components/sections/portfolio/PortfolioSection'
 import Breadcrumb from '@/components/ui/Breadcrumb'
+
+export async function generateMetadata(): Promise<Metadata> {
+  return metadataForRoute('/portfolio')
+}
 
 export default function PortfolioPage() {
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <RouteJsonLd path="/portfolio" />
       <HeaderAlt transparent />
       <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#080112' }}>
         <PortfolioHeroSection />

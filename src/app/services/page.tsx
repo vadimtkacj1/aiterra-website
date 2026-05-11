@@ -1,16 +1,9 @@
 import type { Metadata } from 'next'
-import { SITE_URL } from '@/lib/seo'
+import { metadataForRoute } from '@/lib/site-seo-server'
+import RouteJsonLd from '@/components/seo/RouteJsonLd'
 
-export const metadata: Metadata = {
-  title: 'שירותים',
-  description: 'מעטפת שירותים דיגיטלית מלאה: בניית אתרים, קידום SEO, פרסום ממומן ואוטומציה עסקית לעסקים בישראל.',
-  alternates: { canonical: `${SITE_URL}/services` },
-  openGraph: {
-    title: 'שירותים | AITERRA',
-    description: 'מעטפת שירותים דיגיטלית מלאה: בניית אתרים, קידום SEO, פרסום ממומן ואוטומציה עסקית לעסקים בישראל.',
-    url: `${SITE_URL}/services`,
-    locale: 'he_IL',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return metadataForRoute('/services')
 }
 
 import HeaderAlt from '@/components/layout/HeaderAlt'
@@ -28,6 +21,7 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 export default function ServicesPage() {
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <RouteJsonLd path="/services" />
       <HeaderAlt transparent />
       <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#080112' }}>
         <ServicesHeroSection />

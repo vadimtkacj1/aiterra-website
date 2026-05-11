@@ -1,16 +1,9 @@
 import type { Metadata } from 'next'
-import { SITE_URL } from '@/lib/seo'
+import { metadataForRoute } from '@/lib/site-seo-server'
+import RouteJsonLd from '@/components/seo/RouteJsonLd'
 
-export const metadata: Metadata = {
-  title: 'צור קשר',
-  description: 'צרו איתנו קשר לשיחת ייעוץ חינם. בניית אתרים, קידום SEO, פרסום ממומן ואוטומציה עסקית. משרד: רחוב הרב ניסנבאום 37, בת ים.',
-  alternates: { canonical: `${SITE_URL}/contact` },
-  openGraph: {
-    title: 'צור קשר | AITERRA',
-    description: 'צרו איתנו קשר לשיחת ייעוץ חינם. בניית אתרים, קידום SEO, פרסום ממומן ואוטומציה עסקית.',
-    url: `${SITE_URL}/contact`,
-    locale: 'he_IL',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return metadataForRoute('/contact')
 }
 
 import HeaderAlt from '@/components/layout/HeaderAlt'
@@ -28,6 +21,7 @@ export default function ContactPage() {
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <RouteJsonLd path="/contact" />
       <HeaderAlt transparent />
       <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#080112' }}>
         <ContactHeroSection />

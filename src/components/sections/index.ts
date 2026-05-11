@@ -37,5 +37,6 @@ export { default as BlogPostsSection } from './blog/BlogPostsSection'
 export { default as ContactFormSection } from './contact/ContactFormSection'
 export { default as ContactMapSection } from './contact/ContactMapSection'
 
-// portfolio
-export { default as PortfolioSection } from './portfolio/PortfolioSection'
+// portfolio — PortfolioSection is server-only (fs); import it from
+// `@/components/sections/portfolio/PortfolioSection` in server pages only.
+export { default as PortfolioGrid } from './portfolio/PortfolioGrid'

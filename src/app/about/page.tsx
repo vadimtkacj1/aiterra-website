@@ -1,16 +1,9 @@
 import type { Metadata } from 'next'
-import { SITE_URL } from '@/lib/seo'
+import { metadataForRoute } from '@/lib/site-seo-server'
+import RouteJsonLd from '@/components/seo/RouteJsonLd'
 
-export const metadata: Metadata = {
-  title: 'אודותינו',
-  description: 'הכירו את AITERRA – סוכנות שיווק דיגיטלי ופיתוח אתרים. הצוות, הערכים והחזון שמניעים אותנו לתוצאות.',
-  alternates: { canonical: `${SITE_URL}/about` },
-  openGraph: {
-    title: 'אודותינו | AITERRA',
-    description: 'הכירו את AITERRA – סוכנות שיווק דיגיטלי ופיתוח אתרים. הצוות, הערכים והחזון שמניעים אותנו לתוצאות.',
-    url: `${SITE_URL}/about`,
-    locale: 'he_IL',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return metadataForRoute('/about')
 }
 
 import HeaderAlt from '@/components/layout/HeaderAlt'
@@ -29,6 +22,7 @@ import TeamSection from '@/components/sections/common/TeamSection'
 export default function AboutPage() {
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <RouteJsonLd path="/about" />
       <HeaderAlt />
       <div className="flex min-h-0 w-full flex-1 flex-col">
         <main className="relative z-20 flex-1 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)]">

@@ -1,6 +1,7 @@
 import type { PortfolioProject } from '@/types'
 
-export const portfolioProjects: PortfolioProject[] = [
+/** Initial data when `data/portfolio-projects.json` is missing (first run / deploy). */
+export const PORTFOLIO_SEED: PortfolioProject[] = [
   {
     slug: 'olie-6',
     title: 'Olie 6',
@@ -67,7 +68,3 @@ export const portfolioProjects: PortfolioProject[] = [
     externalUrl: 'https://alexandra-patsina.com/',
   },
 ]
-
-export function getProjectBySlug(slug: string): PortfolioProject | undefined {
-  return portfolioProjects.find((p) => p.slug === slug)
-}

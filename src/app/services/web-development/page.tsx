@@ -1,24 +1,18 @@
 import type { Metadata } from 'next'
-import { SITE_URL } from '@/lib/seo'
+import { metadataForRoute } from '@/lib/site-seo-server'
+import RouteJsonLd from '@/components/seo/RouteJsonLd'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
-import { ServicePageHeroSection, WebDevProcessSection, CtaSection, FaqSection, PortfolioSection } from '@/components/sections'
+import { ServicePageHeroSection, WebDevProcessSection, CtaSection, FaqSection } from '@/components/sections'
+import PortfolioSection from '@/components/sections/portfolio/PortfolioSection'
 import { getServiceBySlug } from '@/data/services'
 import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import ServiceSchema from '@/components/seo/ServiceSchema'
 
-export const metadata: Metadata = {
-  title: 'עיצוב ובניית אתרים',
-  description: 'בניית אתרי איקומרס, תדמית ומערכות מורכבות בסטנדרט הגבוה ביותר. קוד נקי, מהירות טעינה קיצונית ועיצוב ממוקד המרות.',
-  alternates: { canonical: `${SITE_URL}/services/web-development` },
-  openGraph: {
-    title: 'עיצוב ובניית אתרים | AITERRA',
-    description: 'בניית אתרי איקומרס, תדמית ומערכות מורכבות בסטנדרט הגבוה ביותר. קוד נקי, מהירות טעינה קיצונית ועיצוב ממוקד המרות.',
-    url: `${SITE_URL}/services/web-development`,
-    locale: 'he_IL',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return metadataForRoute('/services/web-development')
 }
 
 export default function WebDevelopmentPage() {
@@ -27,6 +21,7 @@ export default function WebDevelopmentPage() {
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <RouteJsonLd path="/services/web-development" />
       <ServiceSchema
         name={service.title}
         description={service.description}

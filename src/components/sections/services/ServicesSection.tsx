@@ -12,12 +12,11 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              // ה-sticky חוזר כאן עם חישוב ה-top
-              className="sticky flex flex-col md:flex-row-reverse w-full bg-white overflow-hidden "
-              style={{ top: `${index * 40}px` }} 
+              className="sticky flex flex-col md:flex-row-reverse w-full bg-white overflow-hidden"
+              style={{ top: `calc(4rem + ${index * 40}px)` }}
             >
-              {/* Image side - גובה מוקטן במובייל כדי שהטקסט לא ייחתך */}
-              <div className="relative w-full md:w-[710px] h-[230px] md:h-[765px] shrink-0">
+              {/* Image side */}
+              <div className="relative w-full md:w-[710px] h-[calc(100vh-4rem)] md:h-191.25 shrink-0">
                 <Image
                   src={service.image}
                   alt={service.title}

@@ -27,6 +27,22 @@ export interface PortfolioProject {
   externalUrl?: string
   /** Optional long-form case study shown on the project page (RTL paragraphs). */
   caseStudy?: string[]
+  /** Alt text for the main image; defaults to `title` on the site. */
+  imageAlt?: string
+  /** `<title>` override for SEO; defaults to `title | תיק עבודות | Aiterra`. */
+  metaTitle?: string
+  /** Meta description override; defaults to `heroDescription`. */
+  metaDescription?: string
+  /** Primary hero CTA (defaults: label "התחילו פרויקט דומה", `/contact`). */
+  heroCtaPrimaryLabel?: string
+  heroCtaPrimaryHref?: string
+  /** Secondary hero CTA (defaults: label "כל הפרויקטים", `/portfolio`). */
+  heroCtaSecondaryLabel?: string
+  heroCtaSecondaryHref?: string
+  /** Extra images below the case study block on the project page. */
+  galleryImages?: string[]
+  /** Sort order in lists (lower first). Same value keeps JSON order. */
+  sortOrder?: number
 }
 
 export interface BlogPost {

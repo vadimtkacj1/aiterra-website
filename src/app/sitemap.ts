@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { services } from '@/data/services'
-import { portfolioProjects } from '@/data/portfolio'
+import { getAllPortfolioProjects } from '@/lib/portfolio-server'
 import { getAllPosts } from '@/lib/blog-server'
 import { SITE_URL } from '@/lib/seo'
 
@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }))
 
-  const portfolioEntries: MetadataRoute.Sitemap = portfolioProjects.map((project) => ({
+  const portfolioEntries: MetadataRoute.Sitemap = getAllPortfolioProjects().map((project) => ({
     url: `${SITE_URL}/portfolio/${project.slug}`,
     lastModified: now,
     changeFrequency: 'monthly',

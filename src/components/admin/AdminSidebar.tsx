@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { LayoutList, LogOut, Users, X } from 'lucide-react'
+import { Briefcase, Globe2, LayoutList, LogOut, Users, X } from 'lucide-react'
 
 const SIDEBAR_BG = '#0f172a'
 const BORDER_SUBTLE = 'rgba(255,255,255,0.06)'
@@ -11,6 +11,8 @@ const BORDER_MID = 'rgba(255,255,255,0.08)'
 
 const links = [
   { href: '/admin/blog', label: 'פוסטים', icon: LayoutList, exact: false },
+  { href: '/admin/portfolio', label: 'תיק עבודות', icon: Briefcase, exact: false },
+  { href: '/admin/seo', label: 'SEO דפים', icon: Globe2, exact: true },
   { href: '/admin/authors', label: 'מחברים', icon: Users, exact: true },
 ]
 
@@ -20,7 +22,7 @@ function SideMenu({ pathname }: { pathname: string }) {
       {links.map(({ href, label, icon: Icon, exact }) => {
         const active = exact
           ? pathname === href
-          : pathname.startsWith(href) && pathname !== '/admin/blog/new'
+          : pathname.startsWith(href) && pathname !== `${href}/new`
         return (
           <Link
             key={href}

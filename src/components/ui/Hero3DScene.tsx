@@ -6,16 +6,53 @@ import { Html, useGLTF } from '@react-three/drei'
 import { SpinnerRing } from '@/components/ui/SpinnerRing'
 import * as THREE from 'three'
 
+function layoutBucket(width: number) {
+  return `${Math.round(width / 56)}`
+}
+
+function modelScaleForWidth(width: number) {
+  if (width < 400) return 1.65
+  if (width < 480) return 1.9
+  if (width < 640) return 2.2
+  if (width < 768) return 2.45
+  if (width < 1024) return 3.1
+  return 3.5
+}
+
+function distMarginForWidth(width: number) {
+  if (width < 480) return 1.72
+  if (width < 768) return 1.62
+  return 1.22
+}
+
+/** Lift camera on narrow screens so the mesh sits lower in the frame (avoids top clipping under header). */
+function cameraYLiftForWidth(width: number) {
+  if (width < 480) return 0.22
+  if (width < 768) return 0.14
+  return 0
+}
+
 function SpiralModel() {
   const groupRef = useRef<THREE.Group>(null)
-  const { camera } = useThree()
+  const { camera, size } = useThree()
   const fitted = useRef(false)
+  const bucketRef = useRef('')
   const { scene } = useGLTF('/obj/model.draco.glb')
+
+  const scale = modelScaleForWidth(size.width)
+  const distMul = distMarginForWidth(size.width)
 
   useFrame((state) => {
     if (!groupRef.current) return
 
+    const b = layoutBucket(size.width)
+    if (b !== bucketRef.current) {
+      bucketRef.current = b
+      fitted.current = false
+    }
+
     if (!fitted.current) {
+      groupRef.current.scale.setScalar(scale)
       groupRef.current.updateWorldMatrix(true, true)
 
       const box = new THREE.Box3().setFromObject(groupRef.current)
@@ -39,9 +76,10 @@ function SpiralModel() {
       const vFov = (perspCamera.fov * Math.PI) / 180
       const hFov = 2 * Math.atan(Math.tan(vFov / 2) * perspCamera.aspect)
       const minFov = Math.min(vFov, hFov)
-      const dist = (maxRadius / Math.tan(minFov / 2)) * 1.2
+      const dist = (maxRadius / Math.tan(minFov / 2)) * distMul
 
-      camera.position.set(center.x, center.y, center.z + dist)
+      const yLift = cameraYLiftForWidth(size.width) * maxRadius
+      camera.position.set(center.x, center.y + yLift, center.z + dist)
       camera.lookAt(center)
       camera.updateMatrixWorld()
       camera.updateProjectionMatrix()
@@ -53,7 +91,7 @@ function SpiralModel() {
   })
 
   return (
-    <group ref={groupRef} scale={3.5}>
+    <group ref={groupRef}>
       <primitive object={scene} />
     </group>
   )
@@ -63,9 +101,9 @@ useGLTF.preload('/obj/model.draco.glb')
 
 export default function Hero3DScene() {
   return (
-    <div className="relative h-full w-full min-h-[180px]">
+    <div className="relative h-full w-full min-h-[180px] max-w-[100vw] overflow-hidden">
       <Canvas
-        camera={{ position: [0, 0, 20], fov: 50 }}
+        camera={{ position: [0, 0, 20], fov: 54 }}
         gl={{ alpha: true, antialias: true }}
         dpr={[1, 1.5]}
         style={{ background: 'transparent' }}

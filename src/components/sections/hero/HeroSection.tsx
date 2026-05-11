@@ -8,7 +8,7 @@ export default function HeroSection() {
       className="relative bg-white min-h-screen flex flex-col overflow-x-hidden z-10" 
       dir="rtl"
     >
-      <div className="relative lg:absolute lg:inset-y-0 lg:left-0 w-full lg:w-[55%] h-[50vh] lg:h-full z-10 pointer-events-none -translate-y-10 lg:-translate-y-40">
+      <div className="relative lg:absolute lg:inset-y-0 lg:left-0 w-full max-w-full overflow-hidden lg:w-[55%] h-[50vh] lg:h-full z-10 pointer-events-none max-lg:translate-y-0 max-lg:pt-2 lg:-translate-y-40">
         <Hero3DWrapper />
       </div>
 

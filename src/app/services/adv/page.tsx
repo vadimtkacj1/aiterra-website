@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { SITE_URL } from '@/lib/seo'
+import { metadataForRoute } from '@/lib/site-seo-server'
+import RouteJsonLd from '@/components/seo/RouteJsonLd'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
@@ -9,16 +10,8 @@ import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import ServiceSchema from '@/components/seo/ServiceSchema'
 
-export const metadata: Metadata = {
-  title: 'פרסום ממומן (PPC) בגוגל ורשתות חברתיות',
-  description: 'ניהול קמפיינים ממומנים בגוגל, פייסבוק ואינסטגרם עם ROI מדיד. לידים איכותיים כאן ועכשיו עם אסטרטגיית פרסום חכמה.',
-  alternates: { canonical: `${SITE_URL}/services/adv` },
-  openGraph: {
-    title: 'פרסום ממומן (PPC) | AITERRA',
-    description: 'ניהול קמפיינים ממומנים בגוגל, פייסבוק ואינסטגרם עם ROI מדיד. לידים איכותיים כאן ועכשיו.',
-    url: `${SITE_URL}/services/adv`,
-    locale: 'he_IL',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return metadataForRoute('/services/adv')
 }
 
 export default function AdvPage() {
@@ -27,6 +20,7 @@ export default function AdvPage() {
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <RouteJsonLd path="/services/adv" />
       <ServiceSchema
         name="פרסום ממומן (PPC)"
         description="ניהול קמפיינים ממומנים בגוגל, פייסבוק ואינסטגרם עם ROI מדיד. לידים איכותיים כאן ועכשיו עם אסטרטגיית פרסום חכמה."

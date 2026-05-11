@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { SITE_URL } from '@/lib/seo'
+import { metadataForRoute } from '@/lib/site-seo-server'
+import RouteJsonLd from '@/components/seo/RouteJsonLd'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
@@ -9,16 +10,8 @@ import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import ServiceSchema from '@/components/seo/ServiceSchema'
 
-export const metadata: Metadata = {
-  title: 'אוטומציה עסקית וחיבור מערכות',
-  description: 'בניית מערכות אוטומציה, CRM ואינטגרציות שחוסכות זמן ומייעלות את תהליכי העסק שלכם 24/7.',
-  alternates: { canonical: `${SITE_URL}/services/automation` },
-  openGraph: {
-    title: 'אוטומציה עסקית וחיבור מערכות | AITERRA',
-    description: 'בניית מערכות אוטומציה, CRM ואינטגרציות שחוסכות זמן ומייעלות את תהליכי העסק שלכם 24/7.',
-    url: `${SITE_URL}/services/automation`,
-    locale: 'he_IL',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return metadataForRoute('/services/automation')
 }
 
 export default function AutomationPage() {
@@ -27,6 +20,7 @@ export default function AutomationPage() {
 
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
+      <RouteJsonLd path="/services/automation" />
       <ServiceSchema
         name="אוטומציה עסקית וחיבור מערכות"
         description="בניית מערכות אוטומציה, CRM ואינטגרציות שחוסכות זמן ומייעלות את תהליכי העסק שלכם 24/7."
