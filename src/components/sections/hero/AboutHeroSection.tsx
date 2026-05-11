@@ -18,7 +18,7 @@ export default function AboutHeroSection() {
             }}
             className="text-[16px] font-[700]"
           >
-            המוטו שלנו:
+             AITERRA - טכנולוגיה שבונה אתרים. אסטרטגיה שבונה עסקים.
           </p>
 
           {/* Main Title */}
