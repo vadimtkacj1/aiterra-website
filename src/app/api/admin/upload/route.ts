@@ -3,24 +3,31 @@ import { writeFile, mkdir } from 'fs/promises'
 import path from 'path'
 
 export async function POST(req: NextRequest) {
-  const formData = await req.formData()
-  const file = formData.get('file') as File | null
-  if (!file) return NextResponse.json({ error: 'no file' }, { status: 400 })
+  try {
+    const formData = await req.formData()
+    const file = formData.get('file') as File | null
+    if (!file) return NextResponse.json({ error: 'no file' }, { status: 400 })
 
-  const ext = file.name.split('.').pop()?.toLowerCase() ?? 'jpg'
-  const allowed = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'avif']
-  if (!allowed.includes(ext)) {
-    return NextResponse.json({ error: 'סוג קובץ לא מורשה' }, { status: 400 })
+    const ext = file.name.split('.').pop()?.toLowerCase() ?? 'jpg'
+    const allowed = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'avif']
+    if (!allowed.includes(ext)) {
+      return NextResponse.json({ error: 'סוג קובץ לא מורשה' }, { status: 400 })
+    }
+
+    const safeName = `${Date.now()}-${file.name.replace(/[^a-z0-9.\-_]/gi, '_')}`
+    const dest = ((formData.get('dest') as string | null) ?? 'blog').trim().toLowerCase()
+    const subdir = dest === 'portfolio' ? 'portfolio' : 'blog'
+    const dir = path.join(process.cwd(), 'public', 'images', subdir)
+
+    await mkdir(dir, { recursive: true })
+
+    const buffer = Buffer.from(await file.arrayBuffer())
+    await writeFile(path.join(dir, safeName), buffer)
+
+    return NextResponse.json({ url: `/images/${subdir}/${safeName}` })
+  } catch (e: unknown) {
+    const msg = e instanceof Error ? e.message : 'upload error'
+    console.error('[upload]', msg)
+    return NextResponse.json({ error: msg }, { status: 500 })
   }
-
-  const safeName = `${Date.now()}-${file.name.replace(/[^a-z0-9.\-_]/gi, '_')}`
-  const dest = ((formData.get('dest') as string | null) ?? 'blog').trim().toLowerCase()
-  const subdir = dest === 'portfolio' ? 'portfolio' : 'blog'
-  const dir = path.join(process.cwd(), 'public', 'images', subdir)
-  await mkdir(dir, { recursive: true })
-
-  const buffer = Buffer.from(await file.arrayBuffer())
-  await writeFile(path.join(dir, safeName), buffer)
-
-  return NextResponse.json({ url: `/images/${subdir}/${safeName}` })
 }
