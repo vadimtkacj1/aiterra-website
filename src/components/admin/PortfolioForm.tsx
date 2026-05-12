@@ -34,6 +34,7 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
   }))
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
+  const [uploadError, setUploadError] = useState('')
   const [tagInput, setTagInput] = useState('')
   const [uploading, setUploading] = useState(false)
   const [uploadingGallery, setUploadingGallery] = useState<number | null>(null)
@@ -57,14 +58,21 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
 
   const uploadCover = async (file: File) => {
     setUploading(true)
-    const fd = new FormData()
-    fd.append('file', file)
-    fd.append('dest', 'portfolio')
-    const res = await fetch('/api/admin/upload', { method: 'POST', body: fd })
-    const data = await res.json()
-    if (res.ok) set('image', data.url)
-    else setError(data.error || 'Помилка завантаження')
-    setUploading(false)
+    setUploadError('')
+    try {
+      const fd = new FormData()
+      fd.append('file', file)
+      fd.append('dest', 'portfolio')
+      const res = await fetch('/api/admin/upload', { method: 'POST', body: fd })
+      let data: { url?: string; error?: string } = {}
+      try { data = await res.json() } catch { data = { error: 'תגובת שרת לא תקינה' } }
+      if (res.ok && data.url) set('image', data.url)
+      else setUploadError(data.error || 'שגיאת העלאה')
+    } catch (e) {
+      setUploadError(e instanceof Error ? e.message : 'שגיאת העלאה')
+    } finally {
+      setUploading(false)
+    }
   }
 
   const galleryRows = form.galleryImages ?? ['']
@@ -73,14 +81,21 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
   const removeGalleryRow = (i: number) => set('galleryImages', galleryRows.length > 1 ? galleryRows.filter((_, idx) => idx !== i) : [''])
   const uploadGallery = async (i: number, file: File) => {
     setUploadingGallery(i)
-    const fd = new FormData()
-    fd.append('file', file)
-    fd.append('dest', 'portfolio')
-    const res = await fetch('/api/admin/upload', { method: 'POST', body: fd })
-    const data = await res.json()
-    if (res.ok) setGalleryUrl(i, data.url)
-    else setError(data.error || 'Помилка завантаження')
-    setUploadingGallery(null)
+    setUploadError('')
+    try {
+      const fd = new FormData()
+      fd.append('file', file)
+      fd.append('dest', 'portfolio')
+      const res = await fetch('/api/admin/upload', { method: 'POST', body: fd })
+      let data: { url?: string; error?: string } = {}
+      try { data = await res.json() } catch { data = { error: 'תגובת שרת לא תקינה' } }
+      if (res.ok && data.url) setGalleryUrl(i, data.url)
+      else setUploadError(data.error || 'שגיאת העלאה')
+    } catch (e) {
+      setUploadError(e instanceof Error ? e.message : 'שגיאת העלאה')
+    } finally {
+      setUploadingGallery(null)
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -181,15 +196,7 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
 
       {/* ── 2. Налаштування сторінки ── */}
       <Section title="דף פרויקט">
-        <div className="flex items-center justify-between rounded-lg bg-gray-50 px-4 py-3">
-          <div>
-            <p className="text-[14px] font-semibold text-[#111827]">דף נפרד לפרויקט</p>
-            <p className="text-[12px] text-[#6b7280] mt-0.5">
-              {hasPageEnabled
-                ? 'פעיל — ייווצר דף /portfolio/[slug]'
-                : 'כבוי — הפרויקט מוצג בגריד בלבד'}
-            </p>
-          </div>
+        <div className="flex items-center gap-4 rounded-lg bg-gray-50 px-4 py-3" dir="rtl">
           <button
             type="button"
             onClick={() => set('hasPage', hasPageEnabled ? false : undefined)}
@@ -245,6 +252,9 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
               <input type="file" accept="image/*" className="hidden" disabled={uploading} onChange={(e) => { const f = e.target.files?.[0]; e.target.value = ''; if (f) void uploadCover(f) }} />
             </label>
           </div>
+          {uploadError && (
+            <div className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-[12px] text-red-700">{uploadError}</div>
+          )}
           {form.image && (
             <div className="mt-3 flex items-start gap-3">
               <img src={form.image} alt="preview" className="h-20 w-20 rounded-lg object-cover border border-[#e5e7eb] shrink-0 bg-gray-50" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
@@ -330,7 +340,7 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
       {error && <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-[13px] text-red-700">{error}</div>}
 
       <div className="flex gap-3 pt-1">
-        <button type="submit" disabled={saving} className="rounded-lg bg-linear-to-l from-[#530FAD] to-[#1B1BB3] px-8 py-2.5 text-[14px] font-bold text-white hover:opacity-90 disabled:opacity-60">
+        <button type="submit" disabled={saving || uploading || uploadingGallery !== null} className="rounded-lg bg-linear-to-l from-[#530FAD] to-[#1B1BB3] px-8 py-2.5 text-[14px] font-bold text-white hover:opacity-90 disabled:opacity-60">
           {saving ? 'שומר…' : 'שמירה'}
         </button>
         <button type="button" onClick={() => router.push('/admin/portfolio')} className="rounded-lg border border-gray-200 px-6 py-2.5 text-[14px] font-medium text-[#374151] hover:bg-gray-50">
