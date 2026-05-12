@@ -11,24 +11,24 @@ function layoutBucket(width: number) {
 }
 
 function modelScaleForWidth(width: number) {
-  if (width < 400) return 1.65
-  if (width < 480) return 1.9
-  if (width < 640) return 2.2
-  if (width < 768) return 2.45
+  if (width < 400) return 3.5
+  if (width < 480) return 4.0
+  if (width < 640) return 4.5
+  if (width < 768) return 5.0
   if (width < 1024) return 3.1
   return 3.5
 }
 
 function distMarginForWidth(width: number) {
-  if (width < 480) return 1.72
-  if (width < 768) return 1.62
+  if (width < 480) return 1.0
+  if (width < 768) return 1.05
   return 1.22
 }
 
 /** Lift camera on narrow screens so the mesh sits lower in the frame (avoids top clipping under header). */
 function cameraYLiftForWidth(width: number) {
-  if (width < 480) return 0.22
-  if (width < 768) return 0.14
+  if (width < 480) return 0.05
+  if (width < 768) return 0.05
   return 0
 }
 

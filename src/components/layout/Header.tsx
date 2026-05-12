@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useDocumentEnd } from '@/context/DocumentEndContext'
 import Navigation from './Navigation'
+import { CONTACT_PHONE, CONTACT_PHONE_HREF } from '@/lib/contact'
 
 export default function Header() {
   const { atDocumentEnd } = useDocumentEnd()
@@ -45,6 +46,16 @@ export default function Header() {
             className="block h-14 w-14 object-contain md:h-28 md:w-28"
           />
         </Link>
+
+        {/* Phone — mobile only, between logo and burger */}
+        <a
+          href={CONTACT_PHONE_HREF}
+          className="md:hidden text-[13px] font-bold leading-none whitespace-nowrap"
+          style={gradientTextStyle}
+          dir="ltr"
+        >
+          {CONTACT_PHONE}
+        </a>
 
         {/* Navigation & Mobile Burger */}
         <Navigation />
