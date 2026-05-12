@@ -109,27 +109,27 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
       {/* ── 1. Основна інформація ── */}
       <Section title="Основна інформація">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <Field label="Назва проекту" required>
+          <Field label="כותרת" required>
             <input
               value={form.title}
               onChange={(e) => { set('title', e.target.value); if (!isEdit) set('slug', slugify(e.target.value)) }}
               required
-              placeholder="Назва проекту"
+              placeholder="שם הפרויקט"
               className={inputCls}
             />
           </Field>
-          <Field label="Категорія" required>
+          <Field label="קטגוריה" required>
             <input
               value={form.category}
               onChange={(e) => set('category', e.target.value)}
               required
-              placeholder="Бніят ататрім"
+              placeholder="בניית אתרים"
               className={inputCls}
             />
           </Field>
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <Field label="Slug (URL)" hint="Тільки латиниця та дефіси — напр. my-project" required>
+          <Field label="Slug (URL)" hint="אנגלית, מקפים — לדוגמה my-project" required>
             <input
               value={form.slug}
               onChange={(e) => set('slug', e.target.value)}
@@ -140,7 +140,7 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
               dir="ltr"
             />
           </Field>
-          <Field label="Порядок відображення" hint="Менше = вище у списку (за замовч. 0)">
+          <Field label="סדר בתצוגה" hint="מספר נמוך יותר = מופיע קודם (ברירת מחדל 0)">
             <input
               type="number"
               value={form.sortOrder === undefined || form.sortOrder === null ? '' : String(form.sortOrder)}
@@ -155,7 +155,7 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
             />
           </Field>
         </div>
-        <Field label="Теги">
+        <Field label="תגיות">
           <div className="flex flex-wrap gap-1.5 mb-2">
             {form.tags.map((t) => (
               <span key={t} className="inline-flex items-center gap-1 rounded-full bg-[#eff6ff] px-2.5 py-1 text-[12px] font-medium text-[#1B1BB3]">
@@ -169,25 +169,25 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
               value={tagInput}
               onChange={(e) => setTagInput(e.target.value)}
               onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); addTag() } }}
-              placeholder="Тег + Enter"
+              placeholder="תגית + Enter"
               className={`${inputCls} flex-1`}
             />
             <button type="button" onClick={addTag} className="shrink-0 rounded-lg border border-[#1B1BB3]/30 px-4 py-2.5 text-[13px] font-medium text-[#1B1BB3] hover:bg-[#1B1BB3]/5">
-              Додати
+              הוסף
             </button>
           </div>
         </Field>
       </Section>
 
       {/* ── 2. Налаштування сторінки ── */}
-      <Section title="Сторінка проекту">
+      <Section title="דף פרויקט">
         <div className="flex items-center justify-between rounded-lg bg-gray-50 px-4 py-3">
           <div>
-            <p className="text-[14px] font-semibold text-[#111827]">Окрема сторінка</p>
+            <p className="text-[14px] font-semibold text-[#111827]">דף נפרד לפרויקט</p>
             <p className="text-[12px] text-[#6b7280] mt-0.5">
               {hasPageEnabled
-                ? '✅ Буде окрема сторінка /portfolio/[slug]'
-                : '⛔ Тільки в гріді — без внутрішньої сторінки'}
+                ? 'פעיל — ייווצר דף /portfolio/[slug]'
+                : 'כבוי — הפרויקט מוצג בגריד בלבד'}
             </p>
           </div>
           <button
@@ -203,23 +203,23 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
 
         {hasPageEnabled && (
           <div className="flex flex-col gap-4 pt-1">
-            <Field label="Заголовок Hero" required>
+            <Field label="כותרת גיבור (Hero)" required>
               <input value={form.heroTitle} onChange={(e) => set('heroTitle', e.target.value)} required className={inputCls} />
             </Field>
-            <Field label="Опис Hero" required>
+            <Field label="תיאור גיבור" required>
               <textarea value={form.heroDescription} onChange={(e) => set('heroDescription', e.target.value)} rows={3} required className={inputCls} />
             </Field>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-              <Field label="Кнопка 1 — текст">
-                <input value={form.heroCtaPrimaryLabel ?? ''} onChange={(e) => set('heroCtaPrimaryLabel', e.target.value || undefined)} placeholder="Розпочати проект" className={inputCls} />
+              <Field label="כפתור ראשי — טקסט">
+                <input value={form.heroCtaPrimaryLabel ?? ''} onChange={(e) => set('heroCtaPrimaryLabel', e.target.value || undefined)} placeholder="התחילו פרויקט דומה" className={inputCls} />
               </Field>
-              <Field label="Кнопка 1 — посилання">
+              <Field label="כפתור ראשי — קישור">
                 <input value={form.heroCtaPrimaryHref ?? ''} onChange={(e) => set('heroCtaPrimaryHref', e.target.value || undefined)} placeholder="/contact" className={inputCls} dir="ltr" />
               </Field>
-              <Field label="Кнопка 2 — текст">
-                <input value={form.heroCtaSecondaryLabel ?? ''} onChange={(e) => set('heroCtaSecondaryLabel', e.target.value || undefined)} placeholder="Всі проекти" className={inputCls} />
+              <Field label="כפתור משני — טקסט">
+                <input value={form.heroCtaSecondaryLabel ?? ''} onChange={(e) => set('heroCtaSecondaryLabel', e.target.value || undefined)} placeholder="כל הפרויקטים" className={inputCls} />
               </Field>
-              <Field label="Кнопка 2 — посилання">
+              <Field label="כפתור משני — קישור">
                 <input value={form.heroCtaSecondaryHref ?? ''} onChange={(e) => set('heroCtaSecondaryHref', e.target.value || undefined)} placeholder="/portfolio" className={inputCls} dir="ltr" />
               </Field>
             </div>
@@ -228,8 +228,8 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
       </Section>
 
       {/* ── 3. Зображення ── */}
-      <Section title="Зображення">
-        <Field label="Головне зображення" required>
+      <Section title="תמונות">
+        <Field label="תמונה ראשית" required>
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
             <input
               value={form.image}
@@ -241,7 +241,7 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
             />
             <label className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg border border-[#d9d9d9] px-4 py-2.5 text-[13px] font-medium text-[#374151] hover:bg-gray-50 whitespace-nowrap">
               <Upload size={16} />
-              {uploading ? 'Завантаження…' : 'Завантажити'}
+              {uploading ? 'מעלה…' : 'העלאה'}
               <input type="file" accept="image/*" className="hidden" disabled={uploading} onChange={(e) => { const f = e.target.files?.[0]; e.target.value = ''; if (f) void uploadCover(f) }} />
             </label>
           </div>
@@ -249,24 +249,24 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
             <div className="mt-3 flex items-start gap-3">
               <img src={form.image} alt="preview" className="h-20 w-20 rounded-lg object-cover border border-[#e5e7eb] shrink-0 bg-gray-50" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
               <div className="flex flex-col gap-1 min-w-0 pt-1">
-                <span className="flex items-center gap-1 text-[12px] text-green-600 font-medium"><CheckCircle2 size={13} />Зображення завантажено</span>
+                <span className="flex items-center gap-1 text-[12px] text-green-600 font-medium"><CheckCircle2 size={13} />התמונה הועלתה בהצלחה</span>
                 <span className="text-[11px] text-[#9ca3af] truncate" dir="ltr">{form.image}</span>
               </div>
             </div>
           )}
         </Field>
-        <Field label="Alt-текст" hint="Для SEO та доступності. Якщо порожньо — використовується назва проекту">
-          <input value={form.imageAlt ?? ''} onChange={(e) => set('imageAlt', e.target.value || undefined)} placeholder={form.title || 'Опис зображення'} className={inputCls} />
+        <Field label="טקסט חלופי (Alt)" hint="לנגישות ו-SEO; אם ריק — ישתמש בכותרת הפרויקט">
+          <input value={form.imageAlt ?? ''} onChange={(e) => set('imageAlt', e.target.value || undefined)} placeholder={form.title || 'תיאור קצר של התמונה'} className={inputCls} />
         </Field>
 
         <div className="border-t border-[#f0f0f0] pt-4">
           <div className="mb-3 flex items-center justify-between">
             <div>
-              <p className="text-[13px] font-semibold text-[#111827]">Галерея зображень</p>
-              <p className="text-[12px] text-[#9ca3af]">Відображаються під основним контентом (необов'язково)</p>
+              <p className="text-[13px] font-semibold text-[#111827]">גלריית תמונות</p>
+              <p className="text-[12px] text-[#9ca3af]">מוצגות מתחת לתוכן בדף הפרויקט (אופציונלי)</p>
             </div>
             <button type="button" onClick={addGalleryRow} className="inline-flex items-center gap-1 rounded-lg border border-[#1B1BB3]/30 px-3 py-1.5 text-[12px] font-medium text-[#1B1BB3] hover:bg-[#1B1BB3]/5">
-              <Plus size={14} />Додати
+              <Plus size={14} />תמונה
             </button>
           </div>
           <div className="flex flex-col gap-2">
@@ -275,7 +275,7 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
                 <input value={url} onChange={(e) => setGalleryUrl(i, e.target.value)} placeholder="/images/portfolio/..." className={`${inputCls} flex-1`} dir="ltr" />
                 <label className="inline-flex cursor-pointer items-center gap-1 rounded-lg border border-[#d9d9d9] px-3 py-2 text-[12px] font-medium text-[#374151] hover:bg-gray-50 whitespace-nowrap shrink-0">
                   <Upload size={13} />
-                  {uploadingGallery === i ? '…' : 'Завантажити'}
+                  {uploadingGallery === i ? '…' : 'העלאה'}
                   <input type="file" accept="image/*" className="hidden" disabled={uploadingGallery !== null} onChange={(e) => { const f = e.target.files?.[0]; e.target.value = ''; if (f) void uploadGallery(i, f) }} />
                 </label>
                 <button type="button" onClick={() => removeGalleryRow(i)} className="rounded-lg border border-red-200 p-2 text-red-400 hover:bg-red-50 shrink-0"><Trash2 size={15} /></button>
@@ -286,12 +286,12 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
       </Section>
 
       {/* ── 4. Посилання ── */}
-      <Section title="Посилання (необов'язково)">
+      <Section title="קישורים (אופציונלי)">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <Field label="Посилання на живий сайт" hint="З'являється як кнопка на сторінці проекту">
+          <Field label="קישור לאתר חי" hint="מופיע כקישור על התמונה בדף הפרויקט">
             <input value={form.liveSiteUrl ?? ''} onChange={(e) => set('liveSiteUrl', e.target.value || undefined)} placeholder="https://" className={inputCls} dir="ltr" />
           </Field>
-          <Field label="Зовнішнє посилання" hint="Якщо заповнено — грід відкриває цей URL замість внутрішньої сторінки">
+          <Field label="כתובת חיצונית" hint="אם מלא — הגריד מפנה ישירות לכאן במקום דף פנימי">
             <input value={form.externalUrl ?? ''} onChange={(e) => set('externalUrl', e.target.value || undefined)} placeholder="https://" className={inputCls} dir="ltr" />
           </Field>
         </div>
@@ -299,30 +299,29 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
 
       {/* ── 5. Кейс-стаді ── */}
       {hasPageEnabled && (
-        <Section title="Кейс-стаді (необов'язково)">
+        <Section title="מקרה בוחן (אופציונלי)">
           <div className="flex flex-col gap-3">
             {caseParas.length === 0
-              ? <p className="text-[13px] text-[#9ca3af]">Немає абзаців — можна додати або залишити порожнім</p>
+              ? <p className="text-[13px] text-[#9ca3af]">אין פסקאות — אפשר להוסיף או להשאיר ריק</p>
               : caseParas.map((para, i) => (
                 <div key={i} className="flex gap-2">
-                  <textarea value={para} onChange={(e) => setCasePara(i, e.target.value)} rows={3} className={`${inputCls} flex-1`} placeholder={`Абзац ${i + 1}`} />
+                  <textarea value={para} onChange={(e) => setCasePara(i, e.target.value)} rows={3} className={`${inputCls} flex-1`} placeholder={`פסקה ${i + 1}`} />
                   <button type="button" onClick={() => removeCasePara(i)} className="h-10 shrink-0 self-start rounded-lg border border-red-200 p-2 text-red-400 hover:bg-red-50"><Trash2 size={15} /></button>
                 </div>
               ))
             }
             <button type="button" onClick={addCasePara} className="self-start inline-flex items-center gap-1 rounded-lg border border-[#1B1BB3]/30 px-3 py-1.5 text-[12px] font-medium text-[#1B1BB3] hover:bg-[#1B1BB3]/5">
-              <Plus size={14} />Додати абзац
+              <Plus size={14} />פסקה
             </button>
           </div>
         </Section>
       )}
 
-      {/* ── 6. SEO ── */}
-      <Section title="SEO (необов'язково)">
-        <Field label="Meta-заголовок" hint="Якщо порожньо — формується автоматично з назви проекту">
+      <Section title="SEO (אופציונלי)">
+        <Field label="כותרת דף (Meta title)" hint="אם ריק — נבנה אוטומטית מכותרת הפרויקט">
           <input value={form.metaTitle ?? ''} onChange={(e) => set('metaTitle', e.target.value || undefined)} className={inputCls} />
         </Field>
-        <Field label="Meta-опис" hint="Якщо порожньо — використовується опис Hero">
+        <Field label="תיאור מטא (Meta description)" hint="אם ריק — ישתמש בתיאור הגיבור">
           <textarea value={form.metaDescription ?? ''} onChange={(e) => set('metaDescription', e.target.value || undefined)} rows={3} className={inputCls} />
         </Field>
       </Section>
@@ -332,10 +331,10 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
 
       <div className="flex gap-3 pt-1">
         <button type="submit" disabled={saving} className="rounded-lg bg-linear-to-l from-[#530FAD] to-[#1B1BB3] px-8 py-2.5 text-[14px] font-bold text-white hover:opacity-90 disabled:opacity-60">
-          {saving ? 'Збереження…' : 'Зберегти'}
+          {saving ? 'שומר…' : 'שמירה'}
         </button>
         <button type="button" onClick={() => router.push('/admin/portfolio')} className="rounded-lg border border-gray-200 px-6 py-2.5 text-[14px] font-medium text-[#374151] hover:bg-gray-50">
-          Скасувати
+          ביטול
         </button>
       </div>
     </form>
@@ -345,8 +344,8 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="rounded-xl border border-[#e5e7eb] bg-white shadow-sm overflow-hidden">
-      <div className="border-b border-[#f0f0f0] bg-[#fafafa] px-5 py-3">
-        <h3 className="text-[13px] font-bold text-[#374151] uppercase tracking-wide">{title}</h3>
+      <div className="border-b border-[#f0f0f0] bg-[#fafafa] px-5 py-3 text-right">
+        <h3 className="text-[13px] font-bold text-[#374151] tracking-wide">{title}</h3>
       </div>
       <div className="flex flex-col gap-4 p-5">
         {children}
