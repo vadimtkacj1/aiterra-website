@@ -13,6 +13,7 @@ const empty: PortfolioProject = {
   heroDescription: '',
   image: '',
   tags: [],
+  hasPage: undefined,
 }
 
 function slugify(text: string) {
@@ -190,24 +191,50 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
         />
       </Field>
 
-      <Field label="כותרת גיבור (Hero)">
-        <input
-          value={form.heroTitle}
-          onChange={(e) => set('heroTitle', e.target.value)}
-          required
-          className={inputCls}
-        />
-      </Field>
+      <div className="flex items-center justify-between rounded-xl border border-[#e5e7eb] bg-white px-5 py-4 shadow-sm">
+        <div>
+          <p className="text-[14px] font-semibold text-[#111827]">ליצור דף נפרד לפרויקט</p>
+          <p className="text-[12px] text-[#6b7280] mt-0.5">כבה אם הפרויקט מוצג בגריד בלבד (ללא עמוד פנימי)</p>
+        </div>
+        <button
+          type="button"
+          onClick={() => set('hasPage', form.hasPage === false ? undefined : false)}
+          className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 focus:outline-none ${
+            form.hasPage === false ? 'bg-gray-300' : 'bg-[#1B1BB3]'
+          }`}
+          role="switch"
+          aria-checked={form.hasPage !== false}
+        >
+          <span
+            className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ${
+              form.hasPage === false ? 'translate-x-0' : 'translate-x-5'
+            }`}
+          />
+        </button>
+      </div>
 
-      <Field label="תיאור גיבור">
-        <textarea
-          value={form.heroDescription}
-          onChange={(e) => set('heroDescription', e.target.value)}
-          rows={4}
-          required
-          className={inputCls}
-        />
-      </Field>
+      {form.hasPage !== false && (
+        <>
+          <Field label="כותרת גיבור (Hero)">
+            <input
+              value={form.heroTitle}
+              onChange={(e) => set('heroTitle', e.target.value)}
+              required
+              className={inputCls}
+            />
+          </Field>
+
+          <Field label="תיאור גיבור">
+            <textarea
+              value={form.heroDescription}
+              onChange={(e) => set('heroDescription', e.target.value)}
+              rows={4}
+              required
+              className={inputCls}
+            />
+          </Field>
+        </>
+      )}
 
       <Field label="תמונה ראשית" hint="נתיב או העלאה">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
@@ -471,7 +498,7 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
         <button
           type="submit"
           disabled={saving}
-          className="rounded-lg bg-gradient-to-l from-[#530FAD] to-[#1B1BB3] px-6 py-2.5 text-[14px] font-bold text-white hover:opacity-90 disabled:opacity-60"
+          className="rounded-lg bg-linear-to-l from-[#530FAD] to-[#1B1BB3] px-6 py-2.5 text-[14px] font-bold text-white hover:opacity-90 disabled:opacity-60"
         >
           {saving ? 'שומר…' : 'שמירה'}
         </button>

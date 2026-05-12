@@ -18,6 +18,8 @@ export interface PortfolioProject {
   heroDescription: string
   image: string
   tags: string[]
+  /** When false, no individual project page is created (grid-only item). */
+  hasPage?: boolean
   /** If set, the project detail image links to this URL (e.g. live client site). */
   liveSiteUrl?: string
   /**

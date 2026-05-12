@@ -41,8 +41,34 @@ export default function PortfolioGrid({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => {
             const external = project.externalUrl?.trim()
-            const href = external || `/portfolio/${project.slug}`
+            const noPage = project.hasPage === false
+            const href = external || (noPage ? null : `/portfolio/${project.slug}`)
             const isExternal = Boolean(external)
+
+            const inner = (
+              <>
+                <Image
+                  src={project.image}
+                  alt={project.imageAlt?.trim() || project.title}
+                  width={680}
+                  height={480}
+                  className="w-full h-auto object-contain"
+                />
+                {href && (
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-end p-6 opacity-0 group-hover:opacity-100">
+                    <span className="text-white font-semibold text-lg">{project.title}</span>
+                  </div>
+                )}
+              </>
+            )
+
+            if (!href) {
+              return (
+                <div key={project.slug} className="relative w-full overflow-hidden block">
+                  {inner}
+                </div>
+              )
+            }
 
             return (
               <Link
@@ -52,16 +78,7 @@ export default function PortfolioGrid({
                 rel={isExternal ? 'noopener noreferrer' : undefined}
                 className="relative w-full overflow-hidden group cursor-pointer block"
               >
-              <Image
-                src={project.image}
-                alt={project.imageAlt?.trim() || project.title}
-                  width={680}
-                  height={480}
-                  className="w-full h-auto object-contain"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-end p-6 opacity-0 group-hover:opacity-100">
-                  <span className="text-white font-semibold text-lg">{project.title}</span>
-                </div>
+                {inner}
               </Link>
             )
           })}

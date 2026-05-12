@@ -48,6 +48,7 @@ function normalizeSortOrder(n: unknown): number | undefined {
 }
 
 export function normalizePortfolioPayload(raw: Partial<PortfolioProject>): PortfolioProject {
+  const hasPage = raw.hasPage === false ? false : undefined
   return {
     slug: (raw.slug ?? '').trim(),
     title: (raw.title ?? '').trim(),
@@ -56,6 +57,7 @@ export function normalizePortfolioPayload(raw: Partial<PortfolioProject>): Portf
     heroDescription: (raw.heroDescription ?? '').trim(),
     image: (raw.image ?? '').trim(),
     tags: normalizeTags(raw.tags),
+    hasPage,
     liveSiteUrl: optUrl(raw.liveSiteUrl),
     externalUrl: optUrl(raw.externalUrl),
     caseStudy: normalizeCaseStudy(raw.caseStudy),
@@ -105,9 +107,11 @@ function assertRequired(p: PortfolioProject) {
   if (!p.slug) missing.push('slug')
   if (!p.title) missing.push('title')
   if (!p.category) missing.push('category')
-  if (!p.heroTitle) missing.push('heroTitle')
-  if (!p.heroDescription) missing.push('heroDescription')
   if (!p.image) missing.push('image')
+  if (p.hasPage !== false) {
+    if (!p.heroTitle) missing.push('heroTitle')
+    if (!p.heroDescription) missing.push('heroDescription')
+  }
   if (missing.length) throw new Error(`missing: ${missing.join(', ')}`)
 }
 

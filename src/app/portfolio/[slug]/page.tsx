@@ -29,6 +29,8 @@ export default async function PortfolioProjectPage({ params }: Props) {
     if (!project) notFound();
     const faqData = getFaqData('/portfolio')
 
+    if (project.hasPage === false) notFound();
+
     const externalOnly = project.externalUrl?.trim();
     if (externalOnly) {
         redirect(externalOnly);
