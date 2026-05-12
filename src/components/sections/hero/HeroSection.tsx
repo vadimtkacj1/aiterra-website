@@ -8,12 +8,18 @@ export default function HeroSection() {
       className="relative bg-white min-h-screen flex flex-col overflow-x-hidden z-10" 
       dir="rtl"
     >
-      <div className="relative lg:absolute lg:inset-y-0 lg:left-0 w-full max-w-full overflow-hidden lg:w-[55%] h-[50vh] lg:h-full z-10 pointer-events-none max-lg:translate-y-0 max-lg:pt-2 lg:-translate-y-40">
-        <Hero3DWrapper />
+      {/* 
+        Змінив на relative для мобілок і absolute тільки для lg.
+        Додав left-1/2 -translate-x-1/2 для точного центрування.
+      */}
+      <div className="relative lg:absolute lg:inset-y-0 lg:left-0 w-full lg:w-[55%] h-[80vh] md:h-[60vh] lg:h-full z-10 pointer-events-none flex justify-center lg:block lg:-translate-y-40">
+        <div className="w-[150%] sm:w-[120%] lg:w-full h-full flex justify-center items-center transform lg:translate-x-0">
+          <Hero3DWrapper />
+        </div>
       </div>
 
       <div className="relative mx-auto px-6 w-full flex-1 flex items-center justify-start z-20 pb-10 lg:pb-0">
-        <div className="w-full lg:w-1/2 flex flex-col gap-8 text-right lg:mr-0 lg:ml-auto lg:pt-40">
+        <div className="w-full lg:w-1/2 flex flex-col gap-8 text-right lg:mr-0 lg:ml-auto lg:pt-40 max-lg:-mt-10">
           <h1
             style={{ fontWeight: 700, lineHeight: '110%' }}
             className="text-[20px] md:text-[48px] text-gray-900"
@@ -22,7 +28,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed max-w-xl md:pr-[40px]">
-            מערכת 360° לצמיחה עסקית. ב-AITERRA אנחנו מחברים טכנולוגיית קצה לתוצאות בשטח. משלב האסטרטגיה ועד עיצוב אתרים (UI/UX), פיתוח מערכות, קידום אורגני (SEO) וניהול קידום ממומן – אנחנו הופכים את הנכס הדיגיטלי שלכם למנוע רווח עוצמתי.
+            מערכת 360° לצמיחה עסקית. ב-AITERRA אנחנו מחברים טכנולוגיית קצה לתוצאות בשטח. משלב האסטרטגיה ועד עיצוב אתרים (UI/UX), פיתוח מערכות, קיдום אורגני (SEO) וניהול קיдום ממומן – אנחנו הופכים את הנכס הדיגיטлі שלכם למנוע רווח עוצמתי.
           </p>
 
           <HeroCTAButtons className="flex flex-row flex-wrap gap-4 mt-4 justify-start md:pr-[40px]" />
