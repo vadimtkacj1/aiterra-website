@@ -24,7 +24,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-[12px] md:text-[16px] text-gray-600 leading-relaxed max-w-xl md:pr-[40px]">
-            מערכת 360° לצמיחה עסקית. ב-AITERRA אנחנו מחברים טכנולוגיית קצה לתוצאות בשטח. משלב האסטרטגיה ועד עיצוב אתרים (UI/UX), פיתוח מערכות, קיдום אורגני (SEO) וניהול קיдום ממומן – אנחנו הופכים את הנכס הדיגיטлі שלכם למנוע רווח עוצמתי.
+            מערכת 360° לצמיחה עסקית. ב-AITERRA אנחנו מחברים טכנולוגיית קצה לתוצאות בשטח. משלב האסטרטגיה ועד עיצוב אתרים (UI/UX), פיתוח מערכות, קידום אורגני (SEO) וניהול קידום ממומן – אנחנו הופכים את הנכס הדיגיטלי שלכם למנוע רווח עוצמתי.
           </p>
 
           <HeroCTAButtons className="flex flex-row flex-wrap gap-4 mt-4 justify-start md:pr-[40px]" />
