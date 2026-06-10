@@ -16,7 +16,7 @@
       "/images/services/service1.webp"
     ],
     "authorId": "sean",
-    "authorImage": "/images/Sean.jpeg"
+    "authorImage": "/images/Sean.webp"
   },
   {
     "slug": "local-seo-small-business",
@@ -34,7 +34,7 @@
       "/images/services/service4.webp"
     ],
     "authorId": "sean",
-    "authorImage": "/images/Sean.jpeg"
+    "authorImage": "/images/Sean.webp"
   },
   {
     "slug": "seo-services",
@@ -69,7 +69,7 @@
       ]
     },
     "authorId": "sean",
-    "authorImage": "/images/Sean.jpeg"
+    "authorImage": "/images/Sean.webp"
   },
   {
     "slug": "google-ads-campaigns",
@@ -104,7 +104,7 @@
       ]
     },
     "authorId": "sean",
-    "authorImage": "/images/Sean.jpeg"
+    "authorImage": "/images/Sean.webp"
   },
   {
     "slug": "website-building-services",
@@ -140,6 +140,6 @@
       ]
     },
     "authorId": "sean",
-    "authorImage": "/images/Sean.jpeg"
+    "authorImage": "/images/Sean.webp"
   }
 ]
