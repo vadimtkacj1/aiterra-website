@@ -4,13 +4,10 @@ import Script from 'next/script'
 import PageLoadSpinner from '@/components/layout/PageLoadSpinner'
 import Providers from '@/components/layout/Providers'
 import OrganizationSchema from '@/components/seo/OrganizationSchema'
+import WebSiteSchema from '@/components/seo/WebSiteSchema'
 import CookieConsent from '@/components/layout/CookieConsent'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import '../styles/globals.css'
-
-// Force request-time rendering across the app segment (SSR).
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -18,7 +15,7 @@ export const metadata: Metadata = {
     default: 'AITERRA | שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם',
     template: `%s | ${SITE_NAME}`,
   },
-  description: 'מערכת 360° לצמיחה עסקית. פיתוח מתקדם, עיצוב UI/UX, קידום אורגני SEO.',
+  description: 'סוכנות AITERRA מציעה מערכת 360° לצמיחה עסקית: בניית אתרים מתקדמת, קידום אורגני SEO, פרסום ממומן ואוטומציה עסקית. ייעוץ חינם – השאירו פרטים!',
   applicationName: SITE_NAME,
   alternates: {
     canonical: '/',
@@ -29,12 +26,14 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: SITE_NAME,
     title: 'AITERRA | שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם',
-    description: 'מערכת 360° לצמיחה עסקית. פיתוח מתקדם, עיצוב UI/UX, קידום אורגני SEO.',
+    description: 'סוכנות AITERRA מציעה מערכת 360° לצמיחה עסקית: בניית אתרים מתקדמת, קידום אורגני SEO, פרסום ממומן ואוטומציה עסקית. ייעוץ חינם – השאירו פרטים!',
+    images: [{ url: '/images/hero/hero-aiterra.png', width: 1200, height: 630, alt: 'AITERRA' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AITERRA | שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם',
-    description: 'מערכת 360° לצמיחה עסקית. פיתוח מתקדם, עיצוב UI/UX, קידום אורגני SEO.',
+    description: 'סוכנות AITERRA מציעה מערכת 360° לצמיחה עסקית: בניית אתרים מתקדמת, קידום אורגני SEO, פרסום ממומן ואוטומציה עסקית. ייעוץ חינם – השאירו פרטים!',
+    images: ['/images/hero/hero-aiterra.png'],
   },
   robots: {
     index: true,
@@ -56,11 +55,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="he" dir="rtl">
+      <head>
+        <link rel="preload" as="font" type="font/ttf" href="/fonts/TelAviv-BrutalistRegular.ttf" crossOrigin="anonymous" />
+        <link rel="preload" as="font" type="font/ttf" href="/fonts/TelAviv-ModernistRegular.ttf" crossOrigin="anonymous" />
+        <link rel="preload" as="font" type="font/ttf" href="/fonts/Heebo/Heebo-VariableFont_wght.ttf" crossOrigin="anonymous" />
+      </head>
       <body>
         <Script id="microsoft-clarity" strategy="afterInteractive">
           {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "wjb2tel6du");`}
         </Script>
         <OrganizationSchema />
+        <WebSiteSchema />
         <PageLoadSpinner />
         <Providers>{children}</Providers>
         <CookieConsent />

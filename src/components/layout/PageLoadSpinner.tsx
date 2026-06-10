@@ -13,17 +13,14 @@ export default function PageLoadSpinner() {
       if (!cancelled) setVisible(false)
     }
 
-    const timeout = new Promise<void>((resolve) => setTimeout(resolve, 4000))
+    const timeout = new Promise<void>((resolve) => setTimeout(resolve, 800))
 
     const whenLoaded = new Promise<void>((resolve) => {
       if (document.readyState === 'complete') resolve()
       else window.addEventListener('load', () => resolve(), { once: true })
     })
 
-    void Promise.race([
-      Promise.all([whenLoaded, document.fonts.ready]),
-      timeout,
-    ]).then(hide)
+    void Promise.race([whenLoaded, timeout]).then(hide)
 
     return () => {
       cancelled = true

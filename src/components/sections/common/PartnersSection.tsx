@@ -24,6 +24,7 @@ export default function PartnersSection() {
                 src={partner.src}
                 alt={partner.alt}
                 fill
+                sizes="(max-width: 768px) 144px, 176px"
                 className="object-contain"
               />
             </div>

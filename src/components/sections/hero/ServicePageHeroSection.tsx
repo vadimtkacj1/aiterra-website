@@ -29,6 +29,7 @@ export default function ServicePageHeroSection({ service }: Props) {
                 src={service.icon}
                 alt="Service icon"
                 fill
+                sizes="40px"
                 className="object-contain"
                 priority
               />

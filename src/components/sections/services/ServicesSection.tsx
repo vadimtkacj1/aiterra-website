@@ -21,6 +21,7 @@ export default function ServicesSection() {
                   src={service.image}
                   alt={service.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 710px"
                   className="object-cover"
                 />
               </div>

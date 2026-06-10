@@ -36,6 +36,8 @@ export default function HeroVideoBackdrop({ src = '/videos/gradient.mp4' }: { sr
         loop
         muted
         playsInline
+        preload="none"
+        poster="/videos/gradient-poster.webp"
         onLoadedData={markReady}
         onCanPlay={markReady}
         onPlaying={markReady}
