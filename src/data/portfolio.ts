@@ -9,7 +9,7 @@ export const PORTFOLIO_SEED: PortfolioProject[] = [
     heroTitle: 'Olie 6',
     heroDescription:
       'פיתחנו עבור Olie 6, מותג קוסמטיקה המתמחה בסרומים לפנים, תשתית איקומרס מתקדמת מבוססת שופיפיי. האתר עוצב בקו מינימליסטי ויוקרתי, ונבנה טכנולוגית מראש במטרה ברורה למקסם המרות מכירות וליצור חוויית משתמש חלקה',
-    image: '/images/portfolio/portfolio2.jpeg',
+    image: '/images/portfolio/portfolio2.webp',
     tags: ['Shopify', 'eCommerce', 'UI/UX'],
     liveSiteUrl: 'https://olie6.com/',
     caseStudy: [
@@ -23,7 +23,7 @@ export const PORTFOLIO_SEED: PortfolioProject[] = [
     category: 'חנויות וירטואליות',
     heroTitle: 'חנות דיגיטלית מתקדמת',
     heroDescription: 'פיתוח חנות וירטואלית מלאה עם סל קניות, עיבוד תשלומים מאובטח ומערכת ניהול מוצרים מתקדמת.',
-    image: '/images/portfolio/portfolio1.jpeg',
+    image: '/images/portfolio/portfolio1.webp',
     tags: ['React', 'Node.js', 'Stripe'],
     externalUrl: 'https://naturallyrefreshing.store/',
   },
@@ -34,7 +34,7 @@ export const PORTFOLIO_SEED: PortfolioProject[] = [
     heroTitle: 'רם וחיים - שיווק נדל"ן',
     heroDescription:
       'מנו וניהלנו מעטפת נכסים דיגיטליים עבור "רם וחיים - שיווק נדל"ן", תוך התמקדות בבניית נוכחות רשת חזקה וסמכותית. הפרויקט כלל הקמת תשתית דיגיטלית יציבה שמהווה בסיס איתן לצמיחה, וניהול מוניטין חכם שנועד לבסס אמון ולייצר פניות איכותיות בענף הנדל"ן התחרותי.',
-    image: '/images/portfolio/portfolio3.jpeg',
+    image: '/images/portfolio/portfolio3.webp',
     tags: ['SEO', 'ניהול מוניטין', 'נכסים דיגיטליים'],
     liveSiteUrl: 'https://ram-haim.co.il/',
     caseStudy: [
@@ -49,7 +49,7 @@ export const PORTFOLIO_SEED: PortfolioProject[] = [
     heroTitle: 'אבי ייעוץ משכנתאות',
     heroDescription:
       "יצרנו מעטפת דיגיטלית ומיתוגית שלמה עבור 'אבי ייעוץ משכנתאות', החל מעיצוב שפה ויזואלית וכרטיסי ביקור, ועד לפיתוח דפי נחיתה ממירים. בנוסף, בנינו וניהלנו מערך קמפיינים מתקדם במטא המבוסס על משפך שיווקי (Funnel) חכם, שמזרים לידים איכותיים ומחמם אותם עד לסגירת העסקה.",
-    image: '/images/portfolio/portfolio4.jpeg',
+    image: '/images/portfolio/portfolio4.webp',
     tags: ['מיתוג', 'דפי נחיתה', 'Meta', 'Funnel'],
     liveSiteUrl: 'https://avi-mashkanta.com/',
     caseStudy: [
@@ -63,7 +63,7 @@ export const PORTFOLIO_SEED: PortfolioProject[] = [
     category: 'בניית אתרים',
     heroTitle: 'Alexandra Patsina',
     heroDescription: 'אתר תדמית, מיתוג ונוכחות דיגיטלית.',
-    image: '/images/portfolio/portfolio5.jpeg',
+    image: '/images/portfolio/portfolio5.webp',
     tags: ['UI/UX', 'מיתוג', 'אתר'],
     externalUrl: 'https://alexandra-patsina.com/',
   },

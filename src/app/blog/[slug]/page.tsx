@@ -11,6 +11,7 @@ import HeroVideoBackdrop from '@/components/ui/HeroVideoBackdrop'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import FaqSection from '@/components/sections/common/FaqSection'
 import ArticleSchema from '@/components/seo/ArticleSchema'
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import type { Tokens } from 'marked'
 import { getAuthorById } from '@/lib/authors-server'
@@ -79,6 +80,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         author={authorName}
         image={post.images?.[0]}
       />
+      <BreadcrumbSchema items={[{ label: 'בלוג', href: '/blog' }, { label: post.title, href: `/blog/${post.slug}` }]} />
       <HeaderAlt transparent />
 
       {/* Hero — identical structure to BlogHeroSection */}

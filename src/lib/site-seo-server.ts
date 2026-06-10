@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import type { Metadata } from 'next'
+import { SITE_NAME } from '@/lib/seo'
 import {
   EDITABLE_SEO_ROUTES,
   ROUTE_DEFAULTS,
@@ -155,6 +156,8 @@ export function metadataForRoute(routePath: string): Metadata {
     description: r.description,
     alternates: { canonical: canonicalPath(routePath) },
     openGraph: {
+      type: 'website',
+      siteName: SITE_NAME,
       title: r.ogTitle,
       description: r.ogDescription,
       url: canonicalPath(routePath),

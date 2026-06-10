@@ -56,9 +56,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="he" dir="rtl">
       <head>
-        <link rel="preload" as="font" type="font/ttf" href="/fonts/TelAviv-BrutalistRegular.ttf" crossOrigin="anonymous" />
-        <link rel="preload" as="font" type="font/ttf" href="/fonts/TelAviv-ModernistRegular.ttf" crossOrigin="anonymous" />
-        <link rel="preload" as="font" type="font/ttf" href="/fonts/Heebo/Heebo-VariableFont_wght.ttf" crossOrigin="anonymous" />
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-BrutalistRegular.woff2" crossOrigin="anonymous" />
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-ModernistRegular.woff2" crossOrigin="anonymous" />
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/Heebo/Heebo-VariableFont_wght.woff2" crossOrigin="anonymous" />
       </head>
       <body>
         <Script id="microsoft-clarity" strategy="afterInteractive">

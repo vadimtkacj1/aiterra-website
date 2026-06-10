@@ -2,16 +2,17 @@
 
 @font-face {
   font-family: 'Heebo';
-  src: url('/fonts/Heebo/Heebo-VariableFont_wght.ttf') format('truetype');
+  src: url('/fonts/Heebo/Heebo-VariableFont_wght.woff2') format('woff2'),
+       url('/fonts/Heebo/Heebo-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
   font-family: 'TelAviv-Brutalist';
-  src: url('/fonts/TelAviv-BrutalistLight.ttf') format('truetype');
+  src: url('/fonts/TelAviv-BrutalistLight.woff2') format('woff2'),
+       url('/fonts/TelAviv-BrutalistLight.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -19,7 +20,8 @@
 
 @font-face {
   font-family: 'TelAviv-Brutalist';
-  src: url('/fonts/TelAviv-BrutalistRegular.ttf') format('truetype');
+  src: url('/fonts/TelAviv-BrutalistRegular.woff2') format('woff2'),
+       url('/fonts/TelAviv-BrutalistRegular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -27,7 +29,8 @@
 
 @font-face {
   font-family: 'TelAviv-Brutalist';
-  src: url('/fonts/TelAviv-BrutalistBold.ttf') format('truetype');
+  src: url('/fonts/TelAviv-BrutalistBold.woff2') format('woff2'),
+       url('/fonts/TelAviv-BrutalistBold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -35,7 +38,8 @@
 
 @font-face {
   font-family: 'TelAviv-Modernist';
-  src: url('/fonts/TelAviv-ModernistRegular.ttf') format('truetype');
+  src: url('/fonts/TelAviv-ModernistRegular.woff2') format('woff2'),
+       url('/fonts/TelAviv-ModernistRegular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -43,7 +47,8 @@
 
 @font-face {
   font-family: 'TelAviv-Modernist';
-  src: url('/fonts/TelAviv-ModernistBold.ttf') format('truetype');
+  src: url('/fonts/TelAviv-ModernistBold.woff2') format('woff2'),
+       url('/fonts/TelAviv-ModernistBold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { metadataForRoute } from '@/lib/site-seo-server'
 import RouteJsonLd from '@/components/seo/RouteJsonLd'
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 
 export async function generateMetadata(): Promise<Metadata> {
   return metadataForRoute('/about')
@@ -25,6 +26,7 @@ export default function AboutPage() {
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
       <RouteJsonLd path="/about" />
+      <BreadcrumbSchema items={[{ label: 'אודותינו', href: '/about' }]} />
       <HeaderAlt />
       <div className="flex min-h-0 w-full flex-1 flex-col">
         <main className="relative z-20 flex-1 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)]">

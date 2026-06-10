@@ -10,6 +10,7 @@ import { getServiceBySlug } from '@/data/services'
 import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import ServiceSchema from '@/components/seo/ServiceSchema'
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 import { getFaqData } from '@/lib/faq-server'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -24,6 +25,7 @@ export default function AdvPage() {
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
       <RouteJsonLd path="/services/adv" />
+      <BreadcrumbSchema items={[{ label: 'שירותים', href: '/services' }, { label: service.title, href: '/services/adv' }]} />
       <ServiceSchema
         name="פרסום ממומן (PPC)"
         description="ניהול קמפיינים ממומנים בגוגל, פייסבוק ואינסטגרם עם ROI מדיד. לידים איכותיים כאן ועכשיו עם אסטרטגיית פרסום חכמה."

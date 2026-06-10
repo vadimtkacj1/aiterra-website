@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { metadataForRoute } from '@/lib/site-seo-server'
 import RouteJsonLd from '@/components/seo/RouteJsonLd'
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
@@ -15,6 +16,7 @@ export default function BlogPage() {
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
       <RouteJsonLd path="/blog" />
+      <BreadcrumbSchema items={[{ label: 'בלוג', href: '/blog' }]} />
       <HeaderAlt transparent />
       <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#080112' }}>
         <BlogHeroSection />

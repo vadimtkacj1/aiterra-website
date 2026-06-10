@@ -9,6 +9,7 @@ import { notFound, redirect } from "next/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 interface Props {
     params: Promise<{ slug: string }>;
@@ -66,6 +67,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
 
     return (
         <div className="relative flex flex-col min-h-screen bg-white">
+            <BreadcrumbSchema items={[{ label: 'תיק עבודות', href: '/portfolio' }, { label: project.title, href: `/portfolio/${slug}` }]} />
             <HeaderAlt transparent />
             <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: "#080112" }}>
                 <PortfolioProjectHeroSection project={project} />
@@ -122,6 +124,8 @@ export default async function PortfolioProjectPage({ params }: Props) {
                                                 alt={`${imageAlt} — ${i + 1}`}
                                                 width={900}
                                                 height={600}
+                                                sizes="(max-width: 640px) 100vw, 50vw"
+                                                loading="lazy"
                                                 className="h-auto w-full object-contain"
                                             />
                                         </div>

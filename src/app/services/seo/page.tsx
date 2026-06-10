@@ -11,6 +11,7 @@ import { getServiceBySlug } from '@/data/services'
 import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import ServiceSchema from '@/components/seo/ServiceSchema'
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 
 export async function generateMetadata(): Promise<Metadata> {
   return metadataForRoute('/services/seo')
@@ -24,6 +25,7 @@ export default function SeoPage() {
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
       <RouteJsonLd path="/services/seo" />
+      <BreadcrumbSchema items={[{ label: 'שירותים', href: '/services' }, { label: service.title, href: '/services/seo' }]} />
       <ServiceSchema
         name="קידום אתרים בגוגל (SEO)"
         description="שירות SEO מקיף: אופטימיזציה טכנית, תוכן חכם, בניית קישורים חיצוניים ומעקב חודשי אחר מיקומים."

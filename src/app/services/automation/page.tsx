@@ -10,6 +10,7 @@ import { getServiceBySlug } from '@/data/services'
 import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import ServiceSchema from '@/components/seo/ServiceSchema'
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 import { getFaqData } from '@/lib/faq-server'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -24,6 +25,7 @@ export default function AutomationPage() {
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
       <RouteJsonLd path="/services/automation" />
+      <BreadcrumbSchema items={[{ label: 'שירותים', href: '/services' }, { label: service.title, href: '/services/automation' }]} />
       <ServiceSchema
         name="אוטומציה עסקית וחיבור מערכות"
         description="בניית מערכות אוטומציה, CRM ואינטגרציות שחוסכות זמן ומייעלות את תהליכי העסק שלכם 24/7."

@@ -1,7 +1,13 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import DocumentEndSentinel from '@/components/layout/DocumentEndSentinel'
+
+export const metadata: Metadata = {
+  title: 'דף לא נמצא (404)',
+  robots: { index: false, follow: false },
+}
 
 const gradientStyle: React.CSSProperties = {
   background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
