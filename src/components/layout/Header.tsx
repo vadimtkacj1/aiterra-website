@@ -43,6 +43,8 @@ export default function Header() {
           <img
             src="/icons/logo.svg"
             alt="Logo"
+            width={112}
+            height={112}
             className="block h-14 w-14 object-contain md:h-28 md:w-28"
           />
         </Link>

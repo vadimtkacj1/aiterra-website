@@ -59,6 +59,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-BrutalistRegular.woff2" crossOrigin="anonymous" />
         <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-ModernistRegular.woff2" crossOrigin="anonymous" />
         <link rel="preload" as="font" type="font/woff2" href="/fonts/Heebo/Heebo-VariableFont_wght.woff2" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
       </head>
       <body>
         <Script id="microsoft-clarity" strategy="afterInteractive">
