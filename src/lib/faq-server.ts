@@ -7,7 +7,14 @@ export interface FaqItem { q: string; a: string }
 export interface FaqData { title: string; items: FaqItem[] }
 export type FaqAllData = Record<string, FaqData>
 
+function ensureFile() {
+  const dir = path.dirname(FILE)
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
+  if (!fs.existsSync(FILE)) fs.writeFileSync(FILE, '{}', 'utf-8')
+}
+
 export function getAllFaqData(): FaqAllData {
+  ensureFile()
   const raw = fs.readFileSync(FILE, 'utf-8')
   return JSON.parse(raw) as FaqAllData
 }
