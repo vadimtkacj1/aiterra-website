@@ -111,8 +111,8 @@ export default function Footer() {
           <Image
             src="/images/footer/footer-aiterra.webp"
             alt="AITERRA"
-            width={1920}
-            height={400}
+            width={2724}
+            height={604}
             className="w-full h-auto object-contain translate-y-[1px]"
             style={{ mixBlendMode: 'lighten' }}
             unoptimized
