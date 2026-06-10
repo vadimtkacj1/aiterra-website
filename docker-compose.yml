@@ -47,6 +47,8 @@ services:
         reservations:
           cpus: "0.5"
           memory: 256M
+    volumes:
+      - site-data:/app/data
     security_opt:
       - no-new-privileges:true
     read_only: false
@@ -87,3 +89,4 @@ networks:
 
 volumes:
   nginx-cache:
+  site-data:

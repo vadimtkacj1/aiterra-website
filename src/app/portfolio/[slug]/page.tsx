@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!project) return {};
     const title = project.metaTitle?.trim() || `${project.title} | תיק עבודות | Aiterra`;
     const description = project.metaDescription?.trim() || project.heroDescription;
-    return { title, description };
+    return { title, description, alternates: { canonical: `/portfolio/${slug}` } };
 }
 
 export default async function PortfolioProjectPage({ params }: Props) {

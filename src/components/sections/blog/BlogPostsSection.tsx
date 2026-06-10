@@ -4,14 +4,23 @@ import { useState } from 'react'
 import { blogPosts } from '@/data/blog'
 import BlogCard from '@/components/ui/BlogCard'
 
-const ALL_TAGS = ['הכל', 'NEED TO KNOW', 'SEO', 'WEBSITES']
+const ALL_TAGS = ['הכל', 'SEO', 'WEBSITES', 'NEED TO KNOW'] as const
+
+const TAG_MAP: Record<string, string[]> = {
+  'SEO': ['SEO', 'קידום אורגני'],
+  'WEBSITES': ['פיתוח', 'עיצוב', 'ביצועים', 'Core Web Vitals', 'Next.js', 'WordPress'],
+  'NEED TO KNOW': ['מיתוג', 'דיגיטל'],
+}
 
 export default function BlogPostsSection() {
   const [active, setActive] = useState('הכל')
 
   const filtered = active === 'הכל'
     ? blogPosts
-    : blogPosts.filter((p) => p.tags.some(t => t.toUpperCase() === active))
+    : blogPosts.filter((p) => {
+        const mapped = TAG_MAP[active] ?? []
+        return p.tags.some((t) => mapped.includes(t))
+      })
 
   return (
     <section className="bg-white pb-16 pt-2 md:pt-4" dir="rtl">

@@ -159,11 +159,20 @@ export function metadataForRoute(routePath: string): Metadata {
       description: r.ogDescription,
       url: canonicalPath(routePath),
       locale: 'he_IL',
+      images: [
+        {
+          url: '/images/hero/hero-aiterra.png',
+          width: 1200,
+          height: 630,
+          alt: r.ogTitle,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: r.twitterTitle,
       description: r.twitterDescription,
+      images: ['/images/hero/hero-aiterra.png'],
     },
   }
   if (r.keywords.length) meta.keywords = r.keywords

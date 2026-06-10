@@ -4,12 +4,14 @@ import { SITE_NAME, SITE_URL } from '@/lib/seo'
 export default function ArticleSchema({
   title,
   datePublished,
+  dateModified,
   urlPath,
   author,
   image,
 }: {
   title: string
   datePublished: string
+  dateModified?: string
   urlPath?: string
   author?: string
   image?: string
@@ -19,6 +21,7 @@ export default function ArticleSchema({
     '@type': 'BlogPosting',
     headline: title,
     datePublished,
+    dateModified: dateModified ?? datePublished,
     mainEntityOfPage: urlPath ? { '@type': 'WebPage', '@id': `${SITE_URL}${urlPath}` } : undefined,
     author: author
       ? { '@type': 'Person', name: author }

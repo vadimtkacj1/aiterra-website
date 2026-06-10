@@ -5,10 +5,10 @@ import { CONTACT_EMAIL, OFFICE_ADDRESS_EN } from '@/lib/contact'
 const navLinks = [
   { label: 'ראשי', href: '/' },
   { label: 'שירותים', href: '/services' },
-  { label: 'חבילות', href: '/packages' },
+  { label: 'בלוג', href: '/blog' },
   { label: 'תיק עבודות', href: '/portfolio' },
   { label: 'אודותינו', href: '/about' },
-  { label: 'תפריט', href: '#' },
+  { label: 'צור קשר', href: '/contact' },
 ]
 
 export default function Footer() {

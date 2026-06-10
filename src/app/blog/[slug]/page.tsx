@@ -37,15 +37,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       publishedTime: post.datePublished,
       authors: authorName ? [authorName] : undefined,
       tags: post.tags,
-      images: post.images?.[0]
-        ? [{ url: post.images[0], alt: post.title }]
-        : undefined,
+      images: [{ url: post.images?.[0] ?? '/images/hero/hero-aiterra.png', alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.excerpt,
-      images: post.images?.[0] ? [post.images[0]] : undefined,
+      images: [post.images?.[0] ?? '/images/hero/hero-aiterra.png'],
     },
   }
 }
