@@ -115,6 +115,7 @@ export default function Footer() {
             height={400}
             className="w-full h-auto object-contain translate-y-[1px]"
             style={{ mixBlendMode: 'lighten' }}
+            unoptimized
           />
         </div>
       </div>
