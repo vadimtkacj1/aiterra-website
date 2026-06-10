@@ -8,7 +8,7 @@ export const blogPosts: BlogPost[] = [
     datePublished: '2026-04-26',
     author: 'צוות Aiterra',
     tags: ['ביצועים', 'SEO', 'פיתוח', 'Core Web Vitals'],
-    image: '/images/services/service1.png',
+    image: '/images/services/service1.webp',
   },
   {
     slug: 'local-seo-small-business',
@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     datePublished: '2026-04-26',
     author: 'צוות Aiterra',
     tags: ['SEO', 'קידום אורגני', 'דיגיטל'],
-    image: '/images/services/service4.png',
+    image: '/images/services/service4.webp',
   },
   {
     slug: 'seo-services',
@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
     datePublished: '2026-04-26',
     author: 'צוות Aiterra',
     tags: ['SEO', 'קידום אורגני', 'פיתוח'],
-    image: '/images/services/service3.png',
+    image: '/images/services/service3.webp',
   },
   {
     slug: 'google-ads-campaigns',
@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [
     datePublished: '2026-04-26',
     author: 'צוות Aiterra',
     tags: ['SEO', 'דיגיטל', 'פיתוח'],
-    image: '/images/services/service2.png',
+    image: '/images/services/service2.webp',
   },
   {
     slug: 'website-building-services',
@@ -44,7 +44,7 @@ export const blogPosts: BlogPost[] = [
     datePublished: '2026-04-26',
     author: 'צוות Aiterra',
     tags: ['פיתוח', 'עיצוב', 'SEO', 'WordPress'],
-    image: '/images/services/service1.png',
+    image: '/images/services/service1.webp',
   },
 ]
 

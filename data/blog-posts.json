@@ -13,7 +13,7 @@
       "Core Web Vitals"
     ],
     "images": [
-      "/images/services/service1.png"
+      "/images/services/service1.webp"
     ],
     "authorId": "sean",
     "authorImage": "/images/Sean.jpeg"
@@ -31,7 +31,7 @@
       "דיגיטל"
     ],
     "images": [
-      "/images/services/service4.png"
+      "/images/services/service4.webp"
     ],
     "authorId": "sean",
     "authorImage": "/images/Sean.jpeg"
@@ -49,7 +49,7 @@
       "פיתוח"
     ],
     "images": [
-      "/images/services/service3.png"
+      "/images/services/service3.webp"
     ],
     "faq": {
       "title": "שאלות נפוצות לפני שיוצאים לדרך",
@@ -84,7 +84,7 @@
       "פיתוח"
     ],
     "images": [
-      "/images/services/service2.png"
+      "/images/services/service2.webp"
     ],
     "faq": {
       "title": "שאלות נפוצות לפני שמתחילים",
@@ -120,7 +120,7 @@
       "WordPress"
     ],
     "images": [
-      "/images/services/service1.png"
+      "/images/services/service1.webp"
     ],
     "faq": {
       "title": "שאלות נפוצות על תהליך הקמת אתרים",

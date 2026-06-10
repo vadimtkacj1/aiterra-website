@@ -16,11 +16,11 @@ export default function Footer() {
     <footer dir="rtl" className="relative z-60 overflow-hidden bg-[#0F0F2D]">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/footer/footer-bg.png"
+          src="/images/footer/footer-bg.webp"
           alt=""
           fill
+          loading="lazy"
           className="object-cover"
-          priority
         />
       </div>
 
@@ -109,7 +109,7 @@ export default function Footer() {
 
         <div className="mt-10 w-full leading-[0]">
           <Image
-            src="/images/footer/footer-aiterra.png"
+            src="/images/footer/footer-aiterra.webp"
             alt="AITERRA"
             width={1920}
             height={400}

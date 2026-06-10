@@ -1,6 +1,6 @@
 'use client'
 
-import { Suspense, useRef } from 'react'
+import { Suspense, useEffect, useRef } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Html, useGLTF } from '@react-three/drei'
 import { SpinnerRing } from '@/components/ui/SpinnerRing'
@@ -97,9 +97,10 @@ function SpiralModel() {
   )
 }
 
-useGLTF.preload('/obj/model.draco.glb')
-
 export default function Hero3DScene() {
+  useEffect(() => {
+    useGLTF.preload('/obj/model.draco.glb')
+  }, [])
   return (
     <div className="relative h-full w-full min-h-[180px] max-w-[100vw] overflow-hidden">
       <Canvas

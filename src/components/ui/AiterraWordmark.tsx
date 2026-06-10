@@ -14,7 +14,7 @@ export default function AiterraWordmark({
   height = 300,
   priority,
   className = '',
-  src = '/images/hero/hero-aiterra.png',
+  src = '/images/hero/hero-aiterra.webp',
 }: AiterraWordmarkProps) {
   const containerRef = useRef<HTMLDivElement>(null)
 
