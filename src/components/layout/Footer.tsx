@@ -14,7 +14,15 @@ const navLinks = [
 export default function Footer() {
   return (
     <footer dir="rtl" className="relative z-60 overflow-hidden bg-[#0F0F2D]">
-      <div className="absolute inset-0 z-0" style={{ background: 'radial-gradient(ellipse 120% 60% at 50% 0%, rgba(108,40,200,0.45) 0%, rgba(60,20,120,0.15) 50%, transparent 100%)' }} />
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/footer/footer-bg.webp"
+          alt=""
+          fill
+          loading="lazy"
+          className="object-cover"
+        />
+      </div>
 
       <div className="relative z-10 flex flex-col items-center pt-16">
         <p className="text-white text-center max-w-2xl px-6 text-[15px] md:text-[20px]">
