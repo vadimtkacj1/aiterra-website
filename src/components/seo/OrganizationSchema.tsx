@@ -1,5 +1,5 @@
 import JsonLd from './JsonLd'
-import { CONTACT_EMAIL, CONTACT_PHONE_HREF } from '@/lib/contact'
+import { CONTACT_EMAIL, CONTACT_PHONE_HREF, SOCIAL_PROFILES } from '@/lib/contact'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 
 export default function OrganizationSchema() {
@@ -31,6 +31,7 @@ export default function OrganizationSchema() {
       { '@type': 'City', name: 'גוש דן' },
     ],
     priceRange: '₪₪',
+    sameAs: Object.values(SOCIAL_PROFILES).filter(Boolean),
   }
 
   const website = {

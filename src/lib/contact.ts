@@ -8,6 +8,13 @@ export const CONTACT_EMAIL = 'info@aiterra.co.il'
 export const CONTACT_PHONE = '052-678-0739'
 export const CONTACT_PHONE_HREF = 'tel:+972526780739'
 
+/** Official social profiles — used in OrganizationSchema sameAs + footer links. Fill in real URLs. */
+export const SOCIAL_PROFILES = {
+  linkedin: '',
+  instagram: '',
+  facebook: '',
+}
+
 const mapsQuery = encodeURIComponent(`${OFFICE_ADDRESS_EN}, Israel`)
 
 /** Classic embed (no Maps JavaScript API key). */

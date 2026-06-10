@@ -75,9 +75,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <div className="relative flex flex-col min-h-screen bg-white">
       <ArticleSchema
         title={post.title}
+        description={post.excerpt}
         datePublished={post.datePublished}
         urlPath={`/blog/${post.slug}`}
         author={authorName}
+        authorUrl={authorProfile?.socials?.linkedin || undefined}
         image={post.images?.[0]}
       />
       <BreadcrumbSchema items={[{ label: 'בלוג', href: '/blog' }, { label: post.title, href: `/blog/${post.slug}` }]} />
