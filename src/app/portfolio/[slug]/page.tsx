@@ -5,7 +5,7 @@ import { PortfolioProjectHeroSection, CtaSection } from "@/components/sections";
 import FaqSection from '@/components/sections/common/FaqSection'
 import { getProjectBySlug } from '@/lib/portfolio-server'
 import { getFaqData } from '@/lib/faq-server'
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -32,11 +32,6 @@ export default async function PortfolioProjectPage({ params }: Props) {
 
     if (project.hasPage === false) notFound();
 
-    const externalOnly = project.externalUrl?.trim();
-    if (externalOnly) {
-        redirect(externalOnly);
-    }
-
     const hasCaseStudy = Boolean(project.caseStudy && project.caseStudy.length > 0);
 
     const imageAlt = project.imageAlt?.trim() || project.title;
@@ -51,9 +46,9 @@ export default async function PortfolioProjectPage({ params }: Props) {
         />
     );
 
-    const imageCol = project.liveSiteUrl ? (
+    const imageCol = (project.liveSiteUrl || project.externalUrl) ? (
         <a
-            href={project.liveSiteUrl}
+            href={project.liveSiteUrl || project.externalUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="group block rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#530FAD] focus-visible:ring-offset-2"

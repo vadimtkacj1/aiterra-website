@@ -11,7 +11,7 @@ import '../styles/globals.css'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'AITERRA | שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם',
+    default: 'AITERRA – שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם',
     template: `%s | ${SITE_NAME}`,
   },
   description: 'סוכנות AITERRA מציעה מערכת 360° לצמיחה עסקית: בניית אתרים מתקדמת, קידום אורגני SEO, פרסום ממומן ואוטומציה עסקית. ייעוץ חינם – השאירו פרטים!',

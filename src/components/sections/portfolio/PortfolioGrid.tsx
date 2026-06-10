@@ -40,10 +40,9 @@ export default function PortfolioGrid({
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => {
-            const external = project.externalUrl?.trim()
             const noPage = project.hasPage === false
-            const href = external || (noPage ? null : `/portfolio/${project.slug}`)
-            const isExternal = Boolean(external)
+            const href = noPage ? null : `/portfolio/${project.slug}`
+            const isExternal = false
 
             const isFirst = projects.indexOf(project) === 0
             const inner = (
