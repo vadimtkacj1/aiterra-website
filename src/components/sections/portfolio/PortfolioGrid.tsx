@@ -79,6 +79,7 @@ export default function PortfolioGrid({
                 href={href}
                 target={isExternal ? '_blank' : undefined}
                 rel={isExternal ? 'noopener noreferrer' : undefined}
+                aria-label={isExternal ? `${project.title} (נפתח בחלון חדש)` : project.title}
                 className="relative w-full overflow-hidden group cursor-pointer block"
               >
                 {inner}

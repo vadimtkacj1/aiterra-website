@@ -30,6 +30,7 @@ export default function BlogPostsSection() {
             <button
               key={tag}
               onClick={() => setActive(tag)}
+              aria-pressed={active === tag}
               style={{
                 fontWeight: 700,
                 fontSize: '14px',

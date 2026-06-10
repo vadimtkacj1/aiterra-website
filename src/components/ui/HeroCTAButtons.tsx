@@ -9,25 +9,23 @@ interface HeroCTAButtonsProps {
 export default function HeroCTAButtons({ className = 'flex gap-4 justify-center' }: HeroCTAButtonsProps) {
   return (
     <div className={className}>
-      <Link href="/contact">
-        <button
-          style={{ background: gradientStyle, fontFamily: "'Heebo', sans-serif" }}
-          className="w-[180px] h-[55px] px-[15px] text-white font-[700] text-[14px] leading-[1.1] cursor-pointer border-none flex items-center justify-center text-center break-words whitespace-normal"
-        >
-          התחילו פרויקט חדש
-        </button>
+      <Link
+        href="/contact"
+        style={{ background: gradientStyle, fontFamily: "'Heebo', sans-serif" }}
+        className="w-[180px] h-[55px] px-[15px] text-white font-[700] text-[14px] leading-[1.1] flex items-center justify-center text-center break-words whitespace-normal"
+      >
+        התחילו פרויקט חדש
       </Link>
 
-      <Link href="/portfolio">
-        <div style={{ background: gradientStyle }} className="p-[1px] w-[180px] h-[55px] inline-block">
-          <button
-            style={{ fontFamily: "'Heebo', sans-serif" }}
-            className="w-full h-full bg-white text-[#1B1BB3] font-[700] text-[14px] leading-[1.1] cursor-pointer border-none flex items-center justify-center text-center whitespace-normal"
-          >
-            צפו בתיק העבודות
-          </button>
-        </div>
-      </Link>
+      <div style={{ background: gradientStyle }} className="p-[1px] w-[180px] h-[55px] inline-block">
+        <Link
+          href="/portfolio"
+          style={{ fontFamily: "'Heebo', sans-serif" }}
+          className="w-full h-full bg-white text-[#1B1BB3] font-[700] text-[14px] leading-[1.1] flex items-center justify-center text-center whitespace-normal"
+        >
+          צפו בתיק העבודות
+        </Link>
+      </div>
     </div>
   )
 }

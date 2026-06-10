@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import Script from 'next/script'
-import PageLoadSpinner from '@/components/layout/PageLoadSpinner'
 import Providers from '@/components/layout/Providers'
 import OrganizationSchema from '@/components/seo/OrganizationSchema'
 import WebSiteSchema from '@/components/seo/WebSiteSchema'
@@ -62,12 +61,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
       </head>
       <body>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:right-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-white focus:text-[#1B1BB3] focus:font-bold focus:rounded focus:shadow-lg"
+        >
+          דלגו לתוכן הראשי
+        </a>
         <Script id="microsoft-clarity" strategy="afterInteractive">
           {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "wjb2tel6du");`}
         </Script>
         <OrganizationSchema />
         <WebSiteSchema />
-        <PageLoadSpinner />
         <Providers>{children}</Providers>
         <CookieConsent />
       </body>

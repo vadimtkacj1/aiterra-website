@@ -64,8 +64,10 @@ export default function ContactFormSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="text"
+                id="contact-name"
                 name="name"
                 placeholder="שם מלא"
+                aria-label="שם מלא"
                 value={form.name}
                 onChange={handleChange}
                 required
@@ -73,8 +75,10 @@ export default function ContactFormSection() {
               />
               <input
                 type="tel"
+                id="contact-phone"
                 name="phone"
                 placeholder="טלפון"
+                aria-label="טלפון"
                 value={form.phone}
                 onChange={handleChange}
                 required
@@ -84,8 +88,10 @@ export default function ContactFormSection() {
 
             <input
               type="email"
+              id="contact-email"
               name="email"
               placeholder="אימייל"
+              aria-label="אימייל"
               value={form.email}
               onChange={handleChange}
               required
@@ -93,8 +99,10 @@ export default function ContactFormSection() {
             />
 
             <textarea
+              id="contact-message"
               name="message"
               placeholder="ספרו לנו על הפרויקט שלכם..."
+              aria-label="הודעה"
               value={form.message}
               onChange={handleChange}
               rows={5}

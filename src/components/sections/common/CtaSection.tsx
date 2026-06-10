@@ -31,6 +31,7 @@ export default function ContactForm() {
             <input
               type="text"
               placeholder="שם"
+              aria-label="שם"
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="w-full px-4 py-2.5 border border-[#D1D5DB] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1B1BB3] text-right placeholder:text-[#9CA3AF]"
@@ -39,6 +40,7 @@ export default function ContactForm() {
             <input
               type="tel"
               placeholder="טלפון"
+              aria-label="טלפון"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               className="w-full px-4 py-2.5 border border-[#D1D5DB] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1B1BB3] text-right placeholder:text-[#9CA3AF]"

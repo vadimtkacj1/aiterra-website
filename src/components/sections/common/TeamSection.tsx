@@ -77,7 +77,7 @@ export default function TeamSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-8 h-8 rounded-full border border-[#d1d5db] bg-white flex items-center justify-center text-[#6b7280] hover:text-[#1B1BB3] hover:border-[#1B1BB3]/40 transition-colors"
-                      aria-label={`${member.name} LinkedIn`}
+                      aria-label={`${member.name} LinkedIn (נפתח בחלון חדש)`}
                     >
                       <LinkedInIcon />
                     </a>
@@ -88,7 +88,7 @@ export default function TeamSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-8 h-8 rounded-full border border-[#d1d5db] bg-white flex items-center justify-center text-[#6b7280] hover:text-[#1B1BB3] hover:border-[#1B1BB3]/40 transition-colors"
-                      aria-label={`${member.name} Instagram`}
+                      aria-label={`${member.name} Instagram (נפתח בחלון חדש)`}
                     >
                       <InstagramIcon />
                     </a>
@@ -99,7 +99,7 @@ export default function TeamSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-8 h-8 rounded-full border border-[#d1d5db] bg-white flex items-center justify-center text-[#6b7280] hover:text-[#1B1BB3] hover:border-[#1B1BB3]/40 transition-colors"
-                      aria-label={`${member.name} Facebook`}
+                      aria-label={`${member.name} Facebook (נפתח בחלון חדש)`}
                     >
                       <FacebookIcon />
                     </a>
@@ -111,15 +111,6 @@ export default function TeamSection() {
         </div>
       </div>
 
-      <style>{`
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
     </section>
   )
 }
