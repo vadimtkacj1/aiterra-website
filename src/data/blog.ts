@@ -2,6 +2,33 @@ import type { BlogPost } from '@/types'
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'geo-ai-search-optimization',
+    title: 'GEO: המדריך לקידום אתרים בעידן הבינה המלאכותית – כך תופיעו ב-ChatGPT ובגוגל AI',
+    excerpt: 'הלקוחות שלכם כבר לא רק מגגלים – הם שואלים את ChatGPT ואת Gemini. מה זה GEO, ומה צריך לעשות כבר היום כדי שה-AI ימליץ דווקא עליכם.',
+    datePublished: '2026-06-10',
+    author: 'צוות Aiterra',
+    tags: ['GEO', 'SEO', 'בינה מלאכותית', 'קידום אורגני'],
+    image: '/images/services/service3.webp',
+  },
+  {
+    slug: 'business-automation-crm-whatsapp',
+    title: 'אוטומציה עסקית: כך תפסיקו לאבד לידים ותחזירו לעצמכם עשרות שעות עבודה בחודש',
+    excerpt: 'ליד שמחכה לתשובה יותר מכמה דקות – עובר למתחרה. איך וואטסאפ בוט, חיבור חכם ל-CRM ואוטומציות בהתאמה אישית הופכים את העסק שלכם למכונה שעובדת לבד, 24/7.',
+    datePublished: '2026-05-28',
+    author: 'צוות Aiterra',
+    tags: ['אוטומציה', 'CRM', 'וואטסאפ', 'דיגיטל'],
+    image: '/images/services/service2.webp',
+  },
+  {
+    slug: 'website-accessibility-israel',
+    title: 'נגישות אתרים בישראל: מה החוק דורש מכם, ואיך נמנעים מתביעה של 50,000 ₪',
+    excerpt: 'הנגשת אתרים היא חובה חוקית בישראל, ותביעה יכולה להגיע עד 50,000 ₪ גם בלי הוכחת נזק. מה אומר תקן 5568, ולמה תוסף נגישות לבדו לא מספיק.',
+    datePublished: '2026-05-14',
+    author: 'צוות Aiterra',
+    tags: ['נגישות', 'פיתוח', 'SEO'],
+    image: '/images/services/service1.webp',
+  },
+  {
     slug: 'website-performance-2026',
     title: 'למה האתר שלכם איטי? המדריך המלא לשנת 2026 על פיתוח אתרים מתקדם',
     excerpt: 'אתר איטי שורף לכם תקציבים ומרחיק לקוחות. המדריך המלא לפיתוח אתרים מתקדם — קוד נקי, Next.js, Core Web Vitals, ומתי כדאי לשדרג ומתי לבנות מחדש.',
