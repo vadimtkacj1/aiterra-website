@@ -52,7 +52,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="he" dir="rtl">
       <head>
         <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-BrutalistRegular.woff2" crossOrigin="anonymous" />
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-BrutalistBold.woff2" crossOrigin="anonymous" />
         <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-ModernistRegular.woff2" crossOrigin="anonymous" />
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-ModernistBold.woff2" crossOrigin="anonymous" />
         <link rel="preload" as="font" type="font/woff2" href="/fonts/Heebo/Heebo-VariableFont_wght.woff2" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
       </head>
