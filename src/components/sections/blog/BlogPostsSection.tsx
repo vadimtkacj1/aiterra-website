@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { blogPosts } from '@/data/blog'
+import type { BlogPost } from '@/types'
 import BlogCard from '@/components/ui/BlogCard'
 
 const ALL_TAGS = ['הכל', 'SEO', 'WEBSITES', 'NEED TO KNOW'] as const
@@ -12,12 +12,12 @@ const TAG_MAP: Record<string, string[]> = {
   'NEED TO KNOW': ['מיתוג', 'דיגיטל'],
 }
 
-export default function BlogPostsSection() {
+export default function BlogPostsSection({ posts }: { posts: BlogPost[] }) {
   const [active, setActive] = useState('הכל')
 
   const filtered = active === 'הכל'
-    ? blogPosts
-    : blogPosts.filter((p) => {
+    ? posts
+    : posts.filter((p) => {
         const mapped = TAG_MAP[active] ?? []
         return p.tags.some((t) => mapped.includes(t))
       })

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import type { BlogPost } from '@/types'
 import { metadataForRoute } from '@/lib/site-seo-server'
 import RouteJsonLd from '@/components/seo/RouteJsonLd'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
@@ -7,12 +8,36 @@ import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
 import { BlogHeroSection, BlogPostsSection, CtaSection } from '@/components/sections'
 import Breadcrumb from '@/components/ui/Breadcrumb'
+import { getAllPosts } from '@/lib/blog-server'
+import { blogPosts as staticBlogPosts } from '@/data/blog'
 
 export async function generateMetadata(): Promise<Metadata> {
   return metadataForRoute('/blog')
 }
 
+export const dynamic = 'force-dynamic'
+
+// Admin-created posts (data/blog-posts.json) merged with the hardcoded list —
+// admin wins on slug conflicts, same dedup rule as sitemap.ts
+function getMergedPosts(): BlogPost[] {
+  const adminPosts: BlogPost[] = getAllPosts().map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    excerpt: p.excerpt,
+    datePublished: p.datePublished,
+    author: p.author || 'צוות Aiterra',
+    tags: p.tags,
+    image: p.images?.[0],
+  }))
+  const adminSlugs = new Set(adminPosts.map((p) => p.slug))
+  const staticOnly = staticBlogPosts.filter((p) => !adminSlugs.has(p.slug))
+  return [...adminPosts, ...staticOnly].sort((a, b) =>
+    (b.datePublished || '').localeCompare(a.datePublished || ''),
+  )
+}
+
 export default function BlogPage() {
+  const posts = getMergedPosts()
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
       <RouteJsonLd path="/blog" />
@@ -26,7 +51,7 @@ export default function BlogPage() {
           <div className="max-w-7xl mx-auto px-6 pt-8 pb-1" dir="rtl">
             <Breadcrumb items={[{ label: 'בלוג' }]} />
           </div>
-          <BlogPostsSection />
+          <BlogPostsSection posts={posts} />
           <CtaSection />
         </main>
         <StickyPageFooter className="z-10">
