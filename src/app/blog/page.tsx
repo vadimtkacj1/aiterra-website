@@ -9,7 +9,6 @@ import StickyPageFooter from '@/components/layout/StickyPageFooter'
 import { BlogHeroSection, BlogPostsSection, CtaSection } from '@/components/sections'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import { getAllPosts } from '@/lib/blog-server'
-import { blogPosts as staticBlogPosts } from '@/data/blog'
 
 export async function generateMetadata(): Promise<Metadata> {
   return metadataForRoute('/blog')
@@ -17,23 +16,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export const dynamic = 'force-dynamic'
 
-// Admin-created posts (data/blog-posts.json) merged with the hardcoded list —
-// admin wins on slug conflicts, same dedup rule as sitemap.ts
+// getAllPosts() merges admin-created posts (data/blog-posts.json) with the
+// bundled seed — the runtime file wins on slug conflicts
 function getMergedPosts(): BlogPost[] {
-  const adminPosts: BlogPost[] = getAllPosts().map((p) => ({
-    slug: p.slug,
-    title: p.title,
-    excerpt: p.excerpt,
-    datePublished: p.datePublished,
-    author: p.author || 'צוות Aiterra',
-    tags: p.tags,
-    image: p.images?.[0],
-  }))
-  const adminSlugs = new Set(adminPosts.map((p) => p.slug))
-  const staticOnly = staticBlogPosts.filter((p) => !adminSlugs.has(p.slug))
-  return [...adminPosts, ...staticOnly].sort((a, b) =>
-    (b.datePublished || '').localeCompare(a.datePublished || ''),
-  )
+  return getAllPosts()
+    .map((p) => ({
+      slug: p.slug,
+      title: p.title,
+      excerpt: p.excerpt,
+      datePublished: p.datePublished,
+      author: p.author || 'צוות Aiterra',
+      tags: p.tags,
+      image: p.images?.[0],
+    }))
+    .sort((a, b) => (b.datePublished || '').localeCompare(a.datePublished || ''))
 }
 
 export default function BlogPage() {

@@ -152,7 +152,9 @@ export function metadataForRoute(routePath: string): Metadata {
   const r = resolveRouteSeo(routePath)
   if (!r) return {}
   const meta: Metadata = {
-    title: r.title,
+    // The root layout's title.template doesn't apply to a page in its own
+    // segment (Next.js behavior) — append the brand to the homepage here
+    title: routePath === '/' ? ogTitleFromPageTitle(r.title) : r.title,
     description: r.description,
     alternates: { canonical: canonicalPath(routePath) },
     openGraph: {

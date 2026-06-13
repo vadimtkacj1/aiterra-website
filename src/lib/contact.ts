@@ -7,6 +7,8 @@ export const CONTACT_EMAIL = 'info@aiterra.co.il'
 
 export const CONTACT_PHONE = '052-678-0739'
 export const CONTACT_PHONE_HREF = 'tel:+972526780739'
+/** International format for structured data (schema.org telephone) */
+export const CONTACT_PHONE_INTL = '+972-52-678-0739'
 
 /** Official social profiles — used in OrganizationSchema sameAs + footer links. Fill in real URLs. */
 export const SOCIAL_PROFILES = {

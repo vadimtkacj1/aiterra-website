@@ -36,7 +36,9 @@ export default function ArticleSchema({
       '@id': `${SITE_URL}#organization`,
       name: SITE_NAME,
     },
-    image: image ? { '@type': 'ImageObject', url: image } : undefined,
+    image: image
+      ? { '@type': 'ImageObject', url: image.startsWith('http') ? image : `${SITE_URL}${image}` }
+      : undefined,
     inLanguage: 'he',
   }
   return <JsonLd data={data} />

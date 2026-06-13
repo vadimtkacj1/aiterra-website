@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import seedPostsJson from '@/data/blog-seed.json'
 
 export interface FaqItem { q: string; a: string }
 export interface PostFaq { title: string; items: FaqItem[] }
@@ -38,6 +39,13 @@ export function normalizePostFields(
 }
 
 const DATA_FILE = path.join(process.cwd(), 'data', 'blog-posts.json')
+const DELETED_FILE = path.join(process.cwd(), 'data', 'blog-deleted-slugs.json')
+
+// Snapshot of data/blog-posts.json copied into src/ by scripts/sync-blog-seed.mjs
+// (runs on every build via `prebuild`). It ships inside the server build, so a
+// stale persistent volume mounted over data/ can never hide posts committed to
+// the repo — every committed post resolves after a deploy.
+const SEED_POSTS = seedPostsJson as AdminPost[]
 
 function ensureFile() {
   const dir = path.dirname(DATA_FILE)
@@ -45,9 +53,42 @@ function ensureFile() {
   if (!fs.existsSync(DATA_FILE)) fs.writeFileSync(DATA_FILE, '[]', 'utf-8')
 }
 
-export function getAllPosts(): AdminPost[] {
+function readPostsFile(): AdminPost[] {
   ensureFile()
   return JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8')) as AdminPost[]
+}
+
+function writePostsFile(posts: AdminPost[]) {
+  fs.writeFileSync(DATA_FILE, JSON.stringify(posts, null, 2), 'utf-8')
+}
+
+// Tombstones let the admin delete a seed post — otherwise the seed would
+// resurrect it on the next read.
+function readDeletedSlugs(): Set<string> {
+  if (!fs.existsSync(DELETED_FILE)) return new Set()
+  try {
+    return new Set(JSON.parse(fs.readFileSync(DELETED_FILE, 'utf-8')) as string[])
+  } catch {
+    return new Set()
+  }
+}
+
+function writeDeletedSlugs(slugs: Set<string>) {
+  fs.writeFileSync(DELETED_FILE, JSON.stringify([...slugs], null, 2), 'utf-8')
+}
+
+function clearTombstone(slug: string) {
+  const deleted = readDeletedSlugs()
+  if (deleted.delete(slug)) writeDeletedSlugs(deleted)
+}
+
+/** Runtime store merged with the build-time seed — the file wins on slug conflicts. */
+export function getAllPosts(): AdminPost[] {
+  const filePosts = readPostsFile()
+  const fileSlugs = new Set(filePosts.map((p) => p.slug))
+  const deleted = readDeletedSlugs()
+  const seedOnly = SEED_POSTS.filter((p) => !fileSlugs.has(p.slug) && !deleted.has(p.slug))
+  return [...filePosts, ...seedOnly]
 }
 
 export function getPostBySlug(slug: string): AdminPost | null {
@@ -55,27 +96,42 @@ export function getPostBySlug(slug: string): AdminPost | null {
 }
 
 export function createPost(post: AdminPost): AdminPost {
-  const posts = getAllPosts()
-  if (posts.find((p) => p.slug === post.slug)) {
+  if (getAllPosts().find((p) => p.slug === post.slug)) {
     throw new Error('slug already exists')
   }
+  const posts = readPostsFile()
   const normalized = { ...post, ...normalizePostFields(post) }
   posts.unshift(normalized)
-  fs.writeFileSync(DATA_FILE, JSON.stringify(posts, null, 2), 'utf-8')
+  writePostsFile(posts)
+  clearTombstone(post.slug)
   return normalized
 }
 
 export function updatePost(slug: string, data: Partial<AdminPost>): AdminPost {
-  const posts = getAllPosts()
+  const posts = readPostsFile()
   const idx = posts.findIndex((p) => p.slug === slug)
-  if (idx === -1) throw new Error('not found')
+  if (idx === -1) {
+    // Seed-only post — materialize it into the runtime store with the update applied
+    const seed = SEED_POSTS.find((p) => p.slug === slug)
+    if (!seed) throw new Error('not found')
+    const merged = { ...seed, ...data }
+    const normalized = { ...merged, ...normalizePostFields(merged) }
+    posts.unshift(normalized)
+    writePostsFile(posts)
+    clearTombstone(slug)
+    return normalized
+  }
   const merged = { ...posts[idx], ...data }
   posts[idx] = { ...merged, ...normalizePostFields(merged) }
-  fs.writeFileSync(DATA_FILE, JSON.stringify(posts, null, 2), 'utf-8')
+  writePostsFile(posts)
   return posts[idx]
 }
 
 export function deletePost(slug: string): void {
-  const posts = getAllPosts().filter((p) => p.slug !== slug)
-  fs.writeFileSync(DATA_FILE, JSON.stringify(posts, null, 2), 'utf-8')
+  writePostsFile(readPostsFile().filter((p) => p.slug !== slug))
+  if (SEED_POSTS.some((p) => p.slug === slug)) {
+    const deleted = readDeletedSlugs()
+    deleted.add(slug)
+    writeDeletedSlugs(deleted)
+  }
 }

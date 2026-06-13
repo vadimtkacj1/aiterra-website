@@ -5,6 +5,13 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import type { FaqData } from '@/lib/faq-server'
 
 export default function FaqSection({ data }: { data: FaqData }) {
+  // useScroll requires its target ref to be mounted on first render,
+  // so the empty-data bailout must happen before the inner component's hooks run
+  if (!data.items.length) return null
+  return <FaqSectionContent data={data} />
+}
+
+function FaqSectionContent({ data }: { data: FaqData }) {
   const [open, setOpen] = useState<number | null>(null)
   const sectionRef = useRef<HTMLElement>(null)
 
@@ -15,8 +22,6 @@ export default function FaqSection({ data }: { data: FaqData }) {
 
   const scale = useTransform(scrollYProgress, [0, 0.2], [0.95, 1])
   const opacity = useTransform(scrollYProgress, [0, 0.2], [0.6, 1])
-
-  if (!data.items.length) return null
 
   const schema = {
     '@context': 'https://schema.org',
