@@ -2,6 +2,15 @@ import type { BlogPost } from '@/types'
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'landing-pages-that-convert',
+    title: 'דף נחיתה שממיר: למה רוב הגולשים עוזבים בלי להשאיר פרטים – ואיך משנים את זה',
+    excerpt: 'אתם מזרימים תנועה יקרה לדף שלא עושה את העבודה? כך בונים דף נחיתה ממוקד-המרות שהופך קליקים ללקוחות – באותו תקציב בדיוק.',
+    datePublished: '2026-06-12',
+    author: 'צוות Aiterra',
+    tags: ['המרות', 'עיצוב', 'דיגיטל'],
+    image: '/images/services/service2.webp',
+  },
+  {
     slug: 'geo-ai-search-optimization',
     title: 'GEO: המדריך לקידום אתרים בעידן הבינה המלאכותית – כך תופיעו ב-ChatGPT ובגוגל AI',
     excerpt: 'הלקוחות שלכם כבר לא רק מגגלים – הם שואלים את ChatGPT ואת Gemini. מה זה GEO, ומה צריך לעשות כבר היום כדי שה-AI ימליץ דווקא עליכם.',
@@ -9,6 +18,15 @@ export const blogPosts: BlogPost[] = [
     author: 'צוות Aiterra',
     tags: ['GEO', 'SEO', 'בינה מלאכותית', 'קידום אורגני'],
     image: '/images/services/service3.webp',
+  },
+  {
+    slug: 'wordpress-vs-custom-code',
+    title: 'וורדפרס או אתר בקוד? המדריך שיעזור לכם לבחור נכון את התשתית לעסק',
+    excerpt: 'זו השאלה ששומעים בכל שיחת אפיון: וורדפרס או פיתוח בקוד מותאם אישית? כך מחליטים נכון, בלי לשלם פעמיים על אותו אתר.',
+    datePublished: '2026-06-03',
+    author: 'צוות Aiterra',
+    tags: ['פיתוח', 'WordPress', 'Next.js'],
+    image: '/images/services/service1.webp',
   },
   {
     slug: 'business-automation-crm-whatsapp',
@@ -20,6 +38,15 @@ export const blogPosts: BlogPost[] = [
     image: '/images/services/service2.webp',
   },
   {
+    slug: 'ecommerce-store-that-sells',
+    title: 'הקמת חנות אינטרנטית שמוכרת: המדריך המלא לאיקומרס רווחי ב-2026',
+    excerpt: 'רוב החנויות האינטרנטיות בישראל הן ויטרינה יפה עם קופה שקטה. נטישת עגלה, תשלום מסורבל ותנועה לא איכותית – כך מתקנים את שלוש הבעיות.',
+    datePublished: '2026-05-21',
+    author: 'צוות Aiterra',
+    tags: ['איקומרס', 'פיתוח', 'דיגיטל'],
+    image: '/images/services/service4.webp',
+  },
+  {
     slug: 'website-accessibility-israel',
     title: 'נגישות אתרים בישראל: מה החוק דורש מכם, ואיך נמנעים מתביעה של 50,000 ₪',
     excerpt: 'הנגשת אתרים היא חובה חוקית בישראל, ותביעה יכולה להגיע עד 50,000 ₪ גם בלי הוכחת נזק. מה אומר תקן 5568, ולמה תוסף נגישות לבדו לא מספיק.',
@@ -27,6 +54,15 @@ export const blogPosts: BlogPost[] = [
     author: 'צוות Aiterra',
     tags: ['נגישות', 'פיתוח', 'SEO'],
     image: '/images/services/service1.webp',
+  },
+  {
+    slug: 'facebook-instagram-ads',
+    title: 'פרסום בפייסבוק ובאינסטגרם ב-2026: כך הופכים גלילה אקראית ללקוחות משלמים',
+    excerpt: 'הלקוחות שלכם מבלים שעות בפיד – השאלה אם הם פוגשים שם אתכם או את המתחרים. חוקי המשחק של פרסום במטא השתנו: ה-AI מטרגט, והקריאייטיב הוא שמוכר.',
+    datePublished: '2026-05-07',
+    author: 'צוות Aiterra',
+    tags: ['פרסום ממומן', 'דיגיטל', 'מיתוג'],
+    image: '/images/services/service3.webp',
   },
   {
     slug: 'website-performance-2026',
