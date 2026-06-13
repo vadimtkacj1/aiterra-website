@@ -86,6 +86,12 @@ jobs:
             fi
 
             docker compose up -d --build --remove-orphans
+
+            # nginx.docker.conf is bind-mounted — a running edge container never
+            # reloads it on its own. Validate then reload (graceful, no downtime).
+            docker compose exec -T edge nginx -t
+            docker compose exec -T edge nginx -s reload
+
             docker image prune -f
 
             echo "Deploy done"
