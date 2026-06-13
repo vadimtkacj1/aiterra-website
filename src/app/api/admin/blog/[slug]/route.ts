@@ -15,6 +15,9 @@ export async function PUT(req: Request, { params }: { params: Promise<{ slug: st
     const body = await req.json()
     const updated = updatePost(slug, body)
     revalidatePath('/sitemap.xml')
+    revalidatePath('/blog')
+    revalidatePath(`/blog/${slug}`)
+    if (updated.slug !== slug) revalidatePath(`/blog/${updated.slug}`)
     return NextResponse.json(updated)
   } catch (e: unknown) {
     const msg = e instanceof Error ? e.message : 'error'
@@ -26,5 +29,7 @@ export async function DELETE(_: Request, { params }: { params: Promise<{ slug: s
   const { slug } = await params
   deletePost(slug)
   revalidatePath('/sitemap.xml')
+  revalidatePath('/blog')
+  revalidatePath(`/blog/${slug}`)
   return NextResponse.json({ ok: true })
 }

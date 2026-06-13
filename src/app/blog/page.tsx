@@ -14,7 +14,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return metadataForRoute('/blog')
 }
 
-export const dynamic = 'force-dynamic'
+// ISR: cached HTML, refreshed in the background; admin saves revalidate
+// /blog explicitly (see api/admin/blog routes)
+export const revalidate = 300
 
 // getAllPosts() merges admin-created posts (data/blog-posts.json) with the
 // bundled seed — the runtime file wins on slug conflicts

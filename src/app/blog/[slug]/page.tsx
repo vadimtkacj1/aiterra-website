@@ -49,7 +49,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
-export const dynamic = 'force-dynamic'
+// ISR: cached HTML, refreshed in the background; admin saves revalidate
+// the post path explicitly (see api/admin/blog routes)
+export const revalidate = 300
 
 marked.setOptions({ breaks: true, gfm: true })
 marked.use({

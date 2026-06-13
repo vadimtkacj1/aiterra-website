@@ -57,8 +57,8 @@ export default function BlogPostsSection({ posts }: { posts: BlogPost[] }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {filtered.map((post) => (
-            <BlogCard key={post.slug} post={post} />
+          {filtered.map((post, i) => (
+            <BlogCard key={post.slug} post={post} eager={i < 4} />
           ))}
         </div>
       </div>

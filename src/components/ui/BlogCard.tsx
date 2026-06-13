@@ -6,24 +6,26 @@ import Link from 'next/link'
 
 interface Props {
   post: BlogPost
+  /** Eager-load the image for above-the-fold cards */
+  eager?: boolean
 }
 
-export default function BlogCard({ post }: Props) {
+export default function BlogCard({ post, eager = false }: Props) {
   return (
     <Link href={`/blog/${post.slug}`} className="group block relative overflow-hidden" style={{ height: '480px' }}>
-      {/* Background image */}
-      {post.image ? (
+      {/* Branded gradient paints instantly; the photo covers it once loaded */}
+      <div
+        className="absolute inset-0"
+        style={{ background: 'linear-gradient(135deg, #1B1BB3 0%, #530FAD 100%)' }}
+      />
+      {post.image && (
         <Image
           src={post.image}
           alt={post.title}
           fill
-          sizes="(max-width: 768px) 100vw, 50vw"
+          loading={eager ? 'eager' : 'lazy'}
+          sizes="(max-width: 768px) 100vw, (max-width: 1328px) 50vw, 616px"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-      ) : (
-        <div
-          className="absolute inset-0"
-          style={{ background: 'linear-gradient(135deg, #1B1BB3 0%, #530FAD 100%)' }}
         />
       )}
 

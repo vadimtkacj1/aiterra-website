@@ -11,6 +11,8 @@ export async function POST(req: Request) {
     const body = await req.json()
     const post = createPost(body)
     revalidatePath('/sitemap.xml')
+    revalidatePath('/blog')
+    revalidatePath(`/blog/${post.slug}`)
     return NextResponse.json(post, { status: 201 })
   } catch (e: unknown) {
     const msg = e instanceof Error ? e.message : 'error'
