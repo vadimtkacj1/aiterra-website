@@ -21,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/packages',
     '/portfolio',
     '/blog',
+    '/privacy-policy',
+    '/accessibility-statement',
   ]
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({

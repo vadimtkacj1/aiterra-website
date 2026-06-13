@@ -5,10 +5,16 @@ import { CONTACT_EMAIL, OFFICE_ADDRESS_EN } from '@/lib/contact'
 const navLinks = [
   { label: 'ראשי', href: '/' },
   { label: 'שירותים', href: '/services' },
+  { label: 'חבילות', href: '/packages' },
   { label: 'בלוג', href: '/blog' },
   { label: 'תיק עבודות', href: '/portfolio' },
   { label: 'אודותינו', href: '/about' },
   { label: 'צור קשר', href: '/contact' },
+]
+
+const legalLinks = [
+  { label: 'מדיניות פרטיות', href: '/privacy-policy' },
+  { label: 'הצהרת נגישות', href: '/accessibility-statement' },
 ]
 
 export default function Footer() {
@@ -106,6 +112,14 @@ export default function Footer() {
             ))}
           </div>
         </nav>
+
+        <div className="mt-8 flex justify-center gap-8">
+          {legalLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="text-white/70 text-[13px] hover:text-white transition-colors">
+              {link.label}
+            </Link>
+          ))}
+        </div>
 
         <div className="mt-10 w-full leading-[0]">
           <Image

@@ -21,6 +21,11 @@ export interface AdminPost {
   tags: string[]
   images: string[]
   faq?: PostFaq
+  /**
+   * Bump when editing a post in the repo so the reseeded version overrides the
+   * stale copy in production's persistent data volume (see getAllPosts merge).
+   */
+  rev?: number
 }
 
 function todayIsoDate(): string {
@@ -82,13 +87,23 @@ function clearTombstone(slug: string) {
   if (deleted.delete(slug)) writeDeletedSlugs(deleted)
 }
 
-/** Runtime store merged with the build-time seed — the file wins on slug conflicts. */
+const SEED_BY_SLUG = new Map(SEED_POSTS.map((p) => [p.slug, p]))
+
+/**
+ * Runtime store merged with the build-time seed. The file wins on slug
+ * conflicts, unless the seed carries a higher `rev` — that means the post was
+ * edited in the repo after the runtime copy was written, so the seed wins.
+ */
 export function getAllPosts(): AdminPost[] {
   const filePosts = readPostsFile()
   const fileSlugs = new Set(filePosts.map((p) => p.slug))
   const deleted = readDeletedSlugs()
+  const merged = filePosts.map((p) => {
+    const seed = SEED_BY_SLUG.get(p.slug)
+    return seed && (seed.rev ?? 0) > (p.rev ?? 0) ? seed : p
+  })
   const seedOnly = SEED_POSTS.filter((p) => !fileSlugs.has(p.slug) && !deleted.has(p.slug))
-  return [...filePosts, ...seedOnly]
+  return [...merged, ...seedOnly]
 }
 
 export function getPostBySlug(slug: string): AdminPost | null {

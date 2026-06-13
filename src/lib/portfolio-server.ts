@@ -2,8 +2,17 @@ import fs from 'fs'
 import path from 'path'
 import type { PortfolioProject } from '@/types'
 import { PORTFOLIO_SEED } from '@/data/portfolio'
+import bundledSeedJson from '@/data/portfolio-seed.json'
 
 const DATA_FILE = path.join(process.cwd(), 'data', 'portfolio-projects.json')
+const DELETED_FILE = path.join(process.cwd(), 'data', 'portfolio-deleted-slugs.json')
+
+// Snapshot of data/portfolio-projects.json copied into src/ by
+// scripts/sync-data-seeds.mjs (runs on every build via `prebuild`). It ships
+// inside the server build, so a stale persistent volume mounted over data/
+// can never hide projects committed to the repo.
+const BUNDLED_SEED = bundledSeedJson as PortfolioProject[]
+const BUNDLED_BY_SLUG = new Map(BUNDLED_SEED.map((p) => [p.slug, p]))
 
 function ensureFile() {
   const dir = path.dirname(DATA_FILE)
@@ -47,6 +56,24 @@ function normalizeSortOrder(n: unknown): number | undefined {
   return v
 }
 
+function readDeletedSlugs(): Set<string> {
+  if (!fs.existsSync(DELETED_FILE)) return new Set()
+  try {
+    return new Set(JSON.parse(fs.readFileSync(DELETED_FILE, 'utf-8')) as string[])
+  } catch {
+    return new Set()
+  }
+}
+
+function writeDeletedSlugs(slugs: Set<string>) {
+  fs.writeFileSync(DELETED_FILE, JSON.stringify([...slugs], null, 2), 'utf-8')
+}
+
+function clearTombstone(slug: string) {
+  const deleted = readDeletedSlugs()
+  if (deleted.delete(slug)) writeDeletedSlugs(deleted)
+}
+
 export function normalizePortfolioPayload(raw: Partial<PortfolioProject>): PortfolioProject {
   const hasPage = raw.hasPage === false ? false : undefined
   return {
@@ -70,6 +97,7 @@ export function normalizePortfolioPayload(raw: Partial<PortfolioProject>): Portf
     heroCtaSecondaryHref: optStr(raw.heroCtaSecondaryHref),
     galleryImages: normalizeGalleryImages(raw.galleryImages),
     sortOrder: normalizeSortOrder(raw.sortOrder),
+    rev: typeof raw.rev === 'number' && Number.isFinite(raw.rev) ? raw.rev : undefined,
   }
 }
 
@@ -94,8 +122,21 @@ function writeProjectsSorted(list: PortfolioProject[]) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(sortProjects(list), null, 2), 'utf-8')
 }
 
+/**
+ * Runtime store merged with the bundled seed. The file wins on slug conflicts,
+ * unless the seed carries a higher `rev` — that means the project was edited
+ * in the repo after the runtime copy was written, so the seed wins.
+ */
 export function getAllPortfolioProjects(): PortfolioProject[] {
-  return sortProjects(readProjectsFromDisk())
+  const fileProjects = readProjectsFromDisk()
+  const fileSlugs = new Set(fileProjects.map((p) => p.slug))
+  const deleted = readDeletedSlugs()
+  const merged = fileProjects.map((p) => {
+    const seed = BUNDLED_BY_SLUG.get(p.slug)
+    return seed && (seed.rev ?? 0) > (p.rev ?? 0) ? seed : p
+  })
+  const seedOnly = BUNDLED_SEED.filter((p) => !fileSlugs.has(p.slug) && !deleted.has(p.slug))
+  return sortProjects([...merged, ...seedOnly])
 }
 
 export function getProjectBySlug(slug: string): PortfolioProject | null {
@@ -119,16 +160,27 @@ export function createPortfolioProject(raw: Partial<PortfolioProject>): Portfoli
   const list = readProjectsFromDisk()
   const p = normalizePortfolioPayload(raw)
   assertRequired(p)
-  if (list.find((x) => x.slug === p.slug)) throw new Error('slug already exists')
+  if (getAllPortfolioProjects().find((x) => x.slug === p.slug)) throw new Error('slug already exists')
   list.unshift(p)
   writeProjectsSorted(list)
+  clearTombstone(p.slug)
   return p
 }
 
 export function updatePortfolioProject(slug: string, raw: Partial<PortfolioProject>): PortfolioProject {
   const list = readProjectsFromDisk()
   const idx = list.findIndex((x) => x.slug === slug)
-  if (idx === -1) throw new Error('not found')
+  if (idx === -1) {
+    // Seed-only project — materialize it into the runtime store with the update applied
+    const seed = BUNDLED_BY_SLUG.get(slug)
+    if (!seed) throw new Error('not found')
+    const merged = normalizePortfolioPayload({ ...seed, ...raw, slug })
+    assertRequired(merged)
+    list.unshift(merged)
+    writeProjectsSorted(list)
+    clearTombstone(slug)
+    return merged
+  }
   const merged = normalizePortfolioPayload({ ...list[idx], ...raw, slug: list[idx].slug })
   assertRequired(merged)
   list[idx] = merged
@@ -139,4 +191,9 @@ export function updatePortfolioProject(slug: string, raw: Partial<PortfolioProje
 export function deletePortfolioProject(slug: string): void {
   const next = readProjectsFromDisk().filter((p) => p.slug !== slug)
   writeProjectsSorted(next)
+  if (BUNDLED_BY_SLUG.has(slug)) {
+    const deleted = readDeletedSlugs()
+    deleted.add(slug)
+    writeDeletedSlugs(deleted)
+  }
 }

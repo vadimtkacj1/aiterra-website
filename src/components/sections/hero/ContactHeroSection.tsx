@@ -23,14 +23,14 @@ export default function ContactHeroSection() {
             lineHeight: '1.1',
           }}
         >
-          Contacts
+          צרו קשר – ייעוץ דיגיטלי חינם לעסק שלכם
         </h1>
 
         <p
           className="text-white/90 max-w-2xl mb-12 text-base md:text-lg font-medium"
           style={{ lineHeight: '1.5' }}
         >
-          תכסיסות טכנולוגיות ועד להבאת לקוחות משלמים. אנו מספקים מעטפת שירותים מלאה שתאפשר למדידות של העסק שלכם, כדי להפוך כל נכס דיגיטלי למנוע של צמיחה.
+          מביסוס תשתיות טכנולוגיות ועד להבאת לקוחות משלמים – נשמח להכיר את העסק שלכם. השאירו פרטים ונחזור אליכם עם תוכנית פעולה מותאמת.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">

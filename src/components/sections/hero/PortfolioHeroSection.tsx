@@ -25,14 +25,14 @@ export default function PortfolioHeroSection() {
             lineHeight: '1.1',
           }}
         >
-          Portfolio overview
+          תיק עבודות – פרויקטים נבחרים
         </h1>
 
         <p
           className="text-white/90 max-w-175 mb-12 text-base md:text-lg font-medium"
           style={{ lineHeight: '1.5' }}
         >
-          מבסוס תשתיות טכנולוגיות ועד להבאת לקוחות משלמים. אנו מספקים מעטפת שירותים
+          מביסוס תשתיות טכנולוגיות ועד להבאת לקוחות משלמים. אנו מספקים מעטפת שירותים
           מלאה שתפורה למידות של העסק שלכם, כדי להפוך כל נכס דיגיטלי למנוע של צמיחה.
         </p>
 
