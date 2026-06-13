@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/sync-blog-seed.mjs",
+    "prebuild": "node scripts/sync-data-seeds.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint ."
