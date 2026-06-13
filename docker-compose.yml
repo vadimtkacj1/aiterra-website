@@ -63,6 +63,10 @@ services:
     image: nginx:1.27-alpine
     container_name: aiterra-website-edge
     restart: unless-stopped
+    # Bump to force-recreate the container when nginx.docker.conf changes —
+    # the bind mount updates the file but nginx never reloads it otherwise
+    labels:
+      nginx-config-version: "2026-06-13.1"
     depends_on:
       web:
         condition: service_healthy
