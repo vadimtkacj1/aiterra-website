@@ -138,7 +138,7 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
               />
             </Link>
             <div className="flex items-center gap-1">
-              <a href="tel:0526780739" style={contactStyle} className="text-[14px] font-bold" dir="ltr">
+              <a href="tel:0526780739" style={contactStyle} className="text-[14px] font-bold inline-flex items-center min-h-6" dir="ltr">
                 052-678-0739
               </a>
             </div>

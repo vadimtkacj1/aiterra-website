@@ -12,6 +12,9 @@ export interface AdminPost {
   content: string
   /** YYYY-MM-DD; empty in API payload → saved as today */
   datePublished: string
+  /** YYYY-MM-DD; optional. Set when a post is updated so Article schema
+   * reports real freshness instead of falling back to datePublished. */
+  dateModified?: string
   /** Optional; empty string if anonymous */
   author: string
   /** Optional relation to managed author entity */

@@ -26,8 +26,8 @@ export default function PortfolioPage() {
         <PortfolioHeroSection />
       </div>
       <div className="flex min-h-0 w-full flex-1 flex-col">
-        <main id="portfolio-grid" className="relative z-20 flex-1 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
-          <div className="max-w-7xl mx-auto px-6 pt-6 pb-2">
+        <main id="main-content" className="relative z-20 flex-1 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
+          <div id="portfolio-grid" className="max-w-7xl mx-auto px-6 pt-6 pb-2">
             <Breadcrumb items={[{ label: 'תיק עבודות', href: '/portfolio' }]} />
           </div>
           <PortfolioSection showButton={false} />

@@ -1,0 +1,26 @@
+# AITERRA — סוכנות שיווק דיגיטלי ובניית אתרים | Digital Marketing & Web Development Agency
+
+> AITERRA is a full-stack digital agency based in Bat Yam, Israel (serving Bat Yam, Tel Aviv and the Gush Dan / central region). It builds high-performance websites and online stores, runs organic SEO and GEO/AEO, manages paid advertising (Google, Facebook, Instagram), and develops business automation, CRM integrations and WhatsApp bots for small and medium Israeli businesses. The team works in Hebrew, English and Russian. Primary language of the site: Hebrew (he, RTL).
+
+## Services / שירותים
+- [בניית אתרים / Web Development](https://www.aiterra.co.il/services/web-development): Business sites, eCommerce stores and custom web systems in clean, fast, conversion-focused code (React/Next.js).
+- [קידום אתרים אורגני / SEO](https://www.aiterra.co.il/services/seo): Technical SEO, content strategy, local SEO and link building for stable organic traffic. Includes GEO/AEO (visibility in ChatGPT, Perplexity, Gemini and Google AI Overviews).
+- [אוטומציה עסקית / Business Automation](https://www.aiterra.co.il/services/automation): CRM integration, WhatsApp bots, system integrations and custom tools. Works with the Israeli accounting/CRM stack: Morning (חשבונית ירוקה), Greeninvoice, חשבשבת, iCount, Rivhit, Priority, Fireberry / Powerlink.
+- [פרסום ממומן / Paid Advertising (PPC)](https://www.aiterra.co.il/services/adv): Google Ads, Facebook and Instagram campaign management with measurable ROI.
+
+## Key guides / מדריכים מרכזיים
+- [GEO — קידום אתרים בעידן הבינה המלאכותית (ChatGPT, Gemini, Google AI)](https://www.aiterra.co.il/blog/geo-ai-search-optimization)
+- [מחקר מילות מפתח: מה הלקוחות שלכם מחפשים בגוגל](https://www.aiterra.co.il/blog/keyword-research-guide)
+- [וורדפרס או אתר בקוד? בחירת תשתית לעסק](https://www.aiterra.co.il/blog/wordpress-vs-custom-code)
+- [אוטומציה עסקית: להפסיק לאבד לידים ולחסוך שעות עבודה](https://www.aiterra.co.il/blog/business-automation-crm-whatsapp)
+- [הקמת חנות אינטרנטית שמוכרת — המדריך המלא לאיקומרס](https://www.aiterra.co.il/blog/ecommerce-store-that-sells)
+- [נגישות אתרים בישראל: מה החוק (תקן 5568) דורש מכם](https://www.aiterra.co.il/blog/website-accessibility-israel)
+- [קידום עסקים קטנים מקומית (Local SEO)](https://www.aiterra.co.il/blog/local-seo-small-business)
+
+## Contact / יצירת קשר
+- Website: https://www.aiterra.co.il
+- Phone: +972-52-678-0739
+- Email: info@aiterra.co.il
+- Address: רחוב הרב ניסנבאום 37, בת ים 5962030, ישראל (Ha-Rav Nisanbaum St 37, Bat Yam, Israel)
+- Blog index: https://www.aiterra.co.il/blog
+- Sitemap: https://www.aiterra.co.il/sitemap.xml

@@ -36,7 +36,7 @@ export default function AutomationPage() {
         <ServicePageHeroSection service={service} />
       </div>
       <div className="flex min-h-0 w-full flex-1 flex-col">
-        <main className="relative z-20 flex-1 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
+        <main id="main-content" className="relative z-20 flex-1 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-2">
             <Breadcrumb items={[{ label: 'שירותים', href: '/services' }, { label: service.title }]} />
           </div>

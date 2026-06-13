@@ -45,8 +45,8 @@ export default function BlogPage() {
         <BlogHeroSection />
       </div>
       <div className="flex min-h-0 w-full flex-1 flex-col">
-        <main id="blog-posts" className="relative z-20 flex-1 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
-          <div className="max-w-7xl mx-auto px-6 pt-8 pb-1" dir="rtl">
+        <main id="main-content" className="relative z-20 flex-1 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
+          <div id="blog-posts" className="max-w-7xl mx-auto px-6 pt-8 pb-1" dir="rtl">
             <Breadcrumb items={[{ label: 'בלוג' }]} />
           </div>
           <BlogPostsSection posts={posts} />

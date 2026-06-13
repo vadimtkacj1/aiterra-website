@@ -21,6 +21,7 @@ export default function NotFound() {
     <div className="flex min-h-screen flex-col bg-white">
       <HeaderAlt />
       <main
+        id="main-content"
         dir="rtl"
         className="flex min-h-[70vh] flex-1 flex-col items-center justify-center px-6 py-20 text-center"
       >

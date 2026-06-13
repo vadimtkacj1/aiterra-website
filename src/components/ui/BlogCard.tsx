@@ -48,12 +48,12 @@ export default function BlogCard({ post, eager = false }: Props) {
         <p className="text-white/70 text-[12px] font-medium mb-2 tracking-wide">
           {post.tags[0]}
         </p>
-        <h3
+        <h2
           className="text-white font-black leading-tight"
           style={{ fontSize: 'clamp(20px, 3vw, 30px)' }}
         >
           {post.title}
-        </h3>
+        </h2>
       </div>
     </Link>
   )

@@ -80,7 +80,7 @@ export default function StatsSection(): ReactElement {
               </p>
               
               {/* Description */}
-              <p className="text-[#929292] text-xs md:text-sm leading-relaxed">
+              <p className="text-[#717171] text-xs md:text-sm leading-relaxed">
                 {stat.description}
               </p>
             </div>

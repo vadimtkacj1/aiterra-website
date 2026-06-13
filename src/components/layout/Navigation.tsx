@@ -77,7 +77,7 @@ const Navigation = () => {
               >
                 {CONTACT_PHONE}
               </a>
-              <p className="text-[12px] text-gray-400 mt-1">מיכאל</p>
+              <p className="text-[12px] text-gray-500 mt-1">מיכאל</p>
             </div>
           </div>
         </div>

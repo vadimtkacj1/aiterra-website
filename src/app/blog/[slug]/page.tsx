@@ -79,9 +79,22 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         title={post.title}
         description={post.excerpt}
         datePublished={post.datePublished}
+        dateModified={post.dateModified || undefined}
         urlPath={`/blog/${post.slug}`}
         author={authorName}
         authorUrl={authorProfile?.socials?.linkedin || undefined}
+        authorJobTitle={authorProfile?.role || undefined}
+        authorBio={authorProfile?.bio || undefined}
+        authorImage={authorImage || undefined}
+        authorSameAs={
+          authorProfile
+            ? [
+                authorProfile.socials?.linkedin,
+                authorProfile.socials?.instagram,
+                authorProfile.socials?.facebook,
+              ].filter((u): u is string => Boolean(u))
+            : undefined
+        }
         image={post.images?.[0]}
       />
       <BreadcrumbSchema items={[{ label: 'בלוג', href: '/blog' }, { label: post.title, href: `/blog/${post.slug}` }]} />
@@ -119,7 +132,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       {/* Article content */}
       <div className="flex min-h-0 w-full flex-1 flex-col">
-        <main className="relative z-20 flex-1 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
+        <main id="main-content" className="relative z-20 flex-1 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
           <div className="max-w-4xl mx-auto px-6 pt-8 pb-2" dir="rtl">
             <Breadcrumb
               items={[

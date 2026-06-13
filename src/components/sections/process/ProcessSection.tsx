@@ -34,11 +34,11 @@ export default function ProcessSection({ steps }: Props) {
             </div>
 
             <div className="flex flex-col gap-3 md:gap-4 text-center md:text-right max-w-[650px]" dir="rtl">
-              <h3
+              <h2
                 className="font-bold text-[20px] md:text-[48px] leading-tight md:leading-none text-[#1B1BB3] md:text-[#1D1D1D]"
               >
                 {s.title}
-              </h3>
+              </h2>
               <p
                 className="font-normal text-[15px] md:text-[14px] leading-relaxed text-[#1D1D1D]"
               >

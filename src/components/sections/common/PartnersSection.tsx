@@ -12,13 +12,13 @@ export default function PartnersSection() {
     <section className="py-12">
       <div className="mx-auto max-w-7xl px-6">
         <div
-          className="-mx-6 flex snap-x flex-row items-center gap-10 overflow-x-auto scroll-smooth px-6 pb-1 [scrollbar-width:none] [-ms-overflow-style:none] md:snap-none md:mx-0 md:flex-wrap md:justify-between md:gap-8 md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden"
+          className="flex flex-row flex-wrap items-center justify-center gap-x-10 gap-y-8 pb-1 md:justify-between md:gap-8"
           dir="ltr"
         >
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="relative flex h-[55px] w-36 shrink-0 snap-start items-center justify-center md:w-44"
+              className="relative flex h-[55px] w-36 items-center justify-center md:w-44"
             >
               <Image
                 src={partner.src}

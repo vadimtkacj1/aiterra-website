@@ -36,7 +36,7 @@ export default function PackagesPage() {
       <BreadcrumbSchema items={[{ label: 'חבילות שירות', href: '/packages' }]} />
       <HeaderAlt />
       <div className="flex min-h-0 w-full flex-1 flex-col">
-        <main className="relative z-20 flex-1 bg-white">
+        <main id="main-content" className="relative z-20 flex-1 bg-white">
           {/* Hero */}
           <section
             className="pt-32 pb-16 px-6 text-center"
