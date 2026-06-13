@@ -4,7 +4,6 @@ import Script from 'next/script'
 import Providers from '@/components/layout/Providers'
 import OrganizationSchema from '@/components/seo/OrganizationSchema'
 import CookieConsent from '@/components/layout/CookieConsent'
-import PageLoadSpinner from '@/components/layout/PageLoadSpinner'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import '../styles/globals.css'
 
@@ -59,7 +58,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="preload" as="font" type="font/woff2" href="/fonts/Heebo/Heebo-VariableFont_wght.woff2" crossOrigin="anonymous" />
       </head>
       <body>
-        <PageLoadSpinner />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:right-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-white focus:text-[#1B1BB3] focus:font-bold focus:rounded focus:shadow-lg"

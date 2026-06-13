@@ -4,8 +4,10 @@ import { getAllPortfolioProjects } from '@/lib/portfolio-server'
 import { getAllPosts } from '@/lib/blog-server'
 import { SITE_URL } from '@/lib/seo'
 
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+// ISR: serve a cached sitemap to crawlers (no per-request disk reads) and let
+// the admin write handlers refresh it on demand — they already call
+// revalidatePath('/sitemap.xml') on every blog/portfolio create/update/delete.
+export const revalidate = 3600
 
 const STATIC_DATE = new Date('2026-05-01')
 
@@ -26,7 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
-    url: `${SITE_URL}${route}`,
+    // Homepage emits the trailing-slash form to stay in sync with its canonical
+    url: `${SITE_URL}${route || '/'}`,
     lastModified: STATIC_DATE,
     changeFrequency: route === '' ? 'weekly' : 'monthly',
     priority: route === '' ? 1 : 0.8,

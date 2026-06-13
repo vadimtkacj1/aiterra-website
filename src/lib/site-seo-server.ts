@@ -150,7 +150,9 @@ export function writeSiteSeoPayloads(data: Record<string, RouteSeoPayload>) {
 
 export function metadataForRoute(routePath: string): Metadata {
   const r = resolveRouteSeo(routePath)
-  if (!r) return {}
+  // Never ship a page with no canonical: even when SEO copy is missing, emit a
+  // self-referencing canonical so the route can't end up canonical-less.
+  if (!r) return { alternates: { canonical: canonicalPath(routePath) } }
   const meta: Metadata = {
     // The root layout's title.template doesn't apply to a page in its own
     // segment (Next.js behavior) — append the brand to the homepage here

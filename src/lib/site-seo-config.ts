@@ -90,7 +90,9 @@ export const ROUTE_DEFAULTS: Record<string, RouteSeoPayload> = {
 }
 
 export function canonicalPath(routePath: string) {
-  if (routePath === '/') return SITE_URL
+  // Homepage canonical keeps the trailing slash so it matches the URL the site
+  // actually serves (https://www.aiterra.co.il/) and the sitemap <loc>.
+  if (routePath === '/') return `${SITE_URL}/`
   return `${SITE_URL}${routePath}`
 }
 
