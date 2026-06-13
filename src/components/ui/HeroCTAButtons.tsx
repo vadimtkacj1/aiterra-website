@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ReactDOM from 'react-dom'
 
 const gradientStyle = 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)'
 
@@ -7,6 +8,14 @@ interface HeroCTAButtonsProps {
 }
 
 export default function HeroCTAButtons({ className = 'flex gap-4 justify-center' }: HeroCTAButtonsProps) {
+  // These buttons render Heebo above the fold (home + about heroes). Heebo is
+  // no longer preloaded globally, so preload it here where it's actually used.
+  ReactDOM.preload('/fonts/Heebo/Heebo-VariableFont_wght.woff2', {
+    as: 'font',
+    type: 'font/woff2',
+    crossOrigin: 'anonymous',
+  })
+
   return (
     <div className={className}>
       <Link

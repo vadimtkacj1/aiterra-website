@@ -38,7 +38,7 @@ export default function TeamSection() {
 
         <div className="flex flex-row overflow-x-auto pb-8 md:pb-0 scroll-smooth hide-scrollbar md:overflow-visible md:grid md:grid-cols-4 md:gap-8">
           {members.map((member) => (
-            <div key={member.name} className="flex-none w-75 md:w-auto flex flex-col items-start text-right gap-4 px-4 md:px-0 first:pl-6 last:pr-6 md:first:pl-0 md:last:pr-0">
+            <div key={member.name} className="flex-none w-75 md:w-auto flex flex-col items-start text-right gap-4 px-4 md:px-0 first:ps-6 last:pe-6 md:first:ps-0 md:last:pe-0">
               <div className="w-full aspect-square relative overflow-hidden">
                 <Image
                   src={member.image}

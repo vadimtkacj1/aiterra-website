@@ -1,16 +1,23 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import type { PortfolioProject } from '@/types'
+import PortfolioImage from './PortfolioImage'
+import PortfolioPrefetch from './PortfolioPrefetch'
 
 export default function PortfolioGrid({
   projects,
   showButton = true,
+  priorityCount = 0,
 }: {
   projects: PortfolioProject[]
   showButton?: boolean
+  /** How many leading images to eager-load. Use only when the grid sits near
+   *  the top of the page (e.g. the /portfolio page) — keep 0 for below-the-fold
+   *  placements (homepage) so it doesn't compete with that page's LCP. */
+  priorityCount?: number
 }) {
   return (
     <section className="py-20" dir="rtl">
+      <PortfolioPrefetch srcs={projects.map((p) => p.image)} />
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col gap-4 mb-12">
           <h2 className="text-[20px] md:text-[48px] font-black text-gray-900 text-right leading-tight">
@@ -39,20 +46,17 @@ export default function PortfolioGrid({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => {
+          {projects.map((project, index) => {
             const noPage = project.hasPage === false
             const href = noPage ? null : `/portfolio/${project.slug}`
             const isExternal = false
 
             const inner = (
               <>
-                <Image
+                <PortfolioImage
                   src={project.image}
                   alt={project.imageAlt?.trim() || project.title}
-                  width={680}
-                  height={480}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="w-full h-auto object-contain"
+                  priority={index < priorityCount}
                 />
                 {href && (
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-end p-6 opacity-0 group-hover:opacity-100">

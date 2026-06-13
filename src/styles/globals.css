@@ -235,3 +235,23 @@
     animation: none;
   }
 }
+
+/* Portfolio image loader — animated skeleton shown until the mockup paints */
+.portfolio-skeleton {
+  border-radius: 12px;
+  background:
+    linear-gradient(100deg, #f3f3f6 28%, #e7e7ee 42%, #e7e7ee 58%, #f3f3f6 72%);
+  background-size: 200% 100%;
+  animation: portfolio-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes portfolio-shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-skeleton {
+    animation: none;
+  }
+}

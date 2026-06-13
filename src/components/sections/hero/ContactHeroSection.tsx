@@ -1,9 +1,17 @@
 'use client'
 
 import Link from 'next/link'
+import ReactDOM from 'react-dom'
 import HeroVideoBackdrop from '@/components/ui/HeroVideoBackdrop'
 
 export default function ContactHeroSection() {
+  // Heebo paints above the fold here; preload it per-route (no longer global).
+  ReactDOM.preload('/fonts/Heebo/Heebo-VariableFont_wght.woff2', {
+    as: 'font',
+    type: 'font/woff2',
+    crossOrigin: 'anonymous',
+  })
+
   return (
     <section
       className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center font-sans"
