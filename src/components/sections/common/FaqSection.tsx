@@ -1,27 +1,38 @@
 'use client'
 
-import { useState, useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 import type { FaqData } from '@/lib/faq-server'
 
 export default function FaqSection({ data }: { data: FaqData }) {
-  // useScroll requires its target ref to be mounted on first render,
-  // so the empty-data bailout must happen before the inner component's hooks run
   if (!data.items.length) return null
   return <FaqSectionContent data={data} />
 }
 
 function FaqSectionContent({ data }: { data: FaqData }) {
   const [open, setOpen] = useState<number | null>(null)
+  const [revealed, setRevealed] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start end', 'end start'],
-  })
-
-  const scale = useTransform(scrollYProgress, [0, 0.2], [0.95, 1])
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [0.6, 1])
+  // Scroll-reveal without an animation library: one-shot IntersectionObserver
+  // flips a class and CSS transitions handle the scale/opacity.
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el || typeof IntersectionObserver === 'undefined') {
+      setRevealed(true)
+      return
+    }
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true)
+          io.disconnect()
+        }
+      },
+      { threshold: 0.15 }
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
 
   const schema = {
     '@context': 'https://schema.org',
@@ -34,11 +45,12 @@ function FaqSectionContent({ data }: { data: FaqData }) {
   }
 
   return (
-    <motion.section
+    <section
       ref={sectionRef}
-      className="w-full bg-white flex flex-col justify-center py-24"
+      className={`w-full bg-white flex flex-col justify-center py-24 transition-[transform,opacity] duration-700 ease-out ${
+        revealed ? 'scale-100 opacity-100' : 'scale-95 opacity-60'
+      }`}
       dir="rtl"
-      style={{ scale, opacity }}
       aria-labelledby="faq-section-heading"
     >
       <script
@@ -78,37 +90,40 @@ function FaqSectionContent({ data }: { data: FaqData }) {
                   >
                     {faq.q}
                   </span>
-                  <motion.svg
+                  <svg
                     aria-hidden
-                    animate={{ rotate: open === i ? 180 : 0 }}
-                    className={`w-6 h-6 shrink-0 ${open === i ? 'text-[#1B1BB3]' : 'text-gray-400'}`}
+                    className={`w-6 h-6 shrink-0 transition-transform duration-300 ${
+                      open === i ? 'rotate-180 text-[#1B1BB3]' : 'text-gray-400'
+                    }`}
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
                   >
                     <path d="m6 9 6 6 6-6" />
-                  </motion.svg>
+                  </svg>
                 </button>
               </h3>
 
-              <motion.div
+              {/* grid-rows 0fr→1fr animates height without measuring content */}
+              <div
                 id={`faq-a-${i}`}
                 role="region"
                 aria-labelledby={`faq-q-${i}`}
-                initial={false}
-                animate={{ height: open === i ? 'auto' : 0, opacity: open === i ? 1 : 0 }}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="overflow-hidden"
+                className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
+                  open === i ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                }`}
               >
-                <div className="text-[18px] text-[#4A4A4A] leading-relaxed pb-6 pr-0 pl-0">
-                  {faq.a}
+                <div className="overflow-hidden">
+                  <div className="text-[18px] text-[#4A4A4A] leading-relaxed pb-6 pr-0 pl-0">
+                    {faq.a}
+                  </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           ))}
         </div>
       </div>
-    </motion.section>
+    </section>
   )
 }

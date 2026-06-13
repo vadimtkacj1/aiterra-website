@@ -8,22 +8,32 @@ export default function PageLoadSpinner() {
 
   useEffect(() => {
     let cancelled = false
+    const start = performance.now()
+
+    // Spin until the page has fully loaded (window 'load' = all critical
+    // assets in). MIN avoids a jarring flicker on instant loads; MAX is a
+    // safety cap so the overlay can never get stuck covering the content.
+    const MIN_MS = 500
+    const MAX_MS = 5000
 
     const hide = () => {
       if (!cancelled) setVisible(false)
     }
 
-    const timeout = new Promise<void>((resolve) => setTimeout(resolve, 800))
+    const onLoaded = () => {
+      const elapsed = performance.now() - start
+      window.setTimeout(hide, Math.max(0, MIN_MS - elapsed))
+    }
 
-    const whenLoaded = new Promise<void>((resolve) => {
-      if (document.readyState === 'complete') resolve()
-      else window.addEventListener('load', () => resolve(), { once: true })
-    })
+    if (document.readyState === 'complete') onLoaded()
+    else window.addEventListener('load', onLoaded, { once: true })
 
-    void Promise.race([whenLoaded, timeout]).then(hide)
+    const maxTimer = window.setTimeout(hide, MAX_MS)
 
     return () => {
       cancelled = true
+      window.clearTimeout(maxTimer)
+      window.removeEventListener('load', onLoaded)
     }
   }, [])
 
@@ -46,6 +56,16 @@ export default function PageLoadSpinner() {
 
   return (
     <>
+      {/* No-JS clients & crawlers without a JS renderer never run the hide
+          effect, so make sure the overlay is hidden for them — the content
+          underneath is fully server-rendered and stays in the DOM either way.
+          dangerouslySetInnerHTML keeps the noscript body a single raw node so
+          React doesn't hit a hydration mismatch. */}
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: '<style>.page-load-overlay{display:none!important}</style>',
+        }}
+      />
       <style>{`
         .abstergo-wrap {
           --primary: #fff;
@@ -128,10 +148,12 @@ export default function PageLoadSpinner() {
       `}</style>
 
       <div
-        className={`fixed inset-0 z-9999 flex items-center justify-center bg-[#080112] transition-opacity duration-500 ease-out ${
+        className={`page-load-overlay fixed inset-0 z-9999 flex items-center justify-center bg-[#080112] transition-opacity duration-500 ease-out ${
           visible ? 'opacity-100' : 'pointer-events-none opacity-0'
         }`}
+        role="status"
         aria-busy={visible}
+        aria-live="polite"
         aria-label="טוען את האתר"
       >
         <div className="abstergo-wrap">

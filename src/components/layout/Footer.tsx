@@ -61,7 +61,7 @@ export default function Footer() {
             {/* Desktop: 3 links right side */}
             <div className="hidden md:flex gap-10">
               {navLinks.slice(0, 3).map((link) => (
-                <Link key={link.label} href={link.href} className="text-white text-[14px] font-bold hover:opacity-70 transition-opacity whitespace-nowrap">
+                <Link key={link.label} href={link.href} prefetch={false} className="text-white text-[14px] font-bold hover:opacity-70 transition-opacity whitespace-nowrap">
                   {link.label}
                 </Link>
               ))}
@@ -69,7 +69,7 @@ export default function Footer() {
             {/* Mobile: 2 links right side */}
             <div className="flex md:hidden gap-6">
               {navLinks.slice(0, 2).map((link) => (
-                <Link key={link.label} href={link.href} className="text-white text-[14px] font-bold hover:opacity-70 transition-opacity whitespace-nowrap">
+                <Link key={link.label} href={link.href} prefetch={false} className="text-white text-[14px] font-bold hover:opacity-70 transition-opacity whitespace-nowrap">
                   {link.label}
                 </Link>
               ))}
@@ -88,7 +88,7 @@ export default function Footer() {
             {/* Desktop: 3 links left side */}
             <div className="hidden md:flex gap-10">
               {navLinks.slice(3).map((link) => (
-                <Link key={link.label} href={link.href} className="text-white text-[14px] font-bold hover:opacity-70 transition-opacity whitespace-nowrap">
+                <Link key={link.label} href={link.href} prefetch={false} className="text-white text-[14px] font-bold hover:opacity-70 transition-opacity whitespace-nowrap">
                   {link.label}
                 </Link>
               ))}
@@ -96,7 +96,7 @@ export default function Footer() {
             {/* Mobile: 2 links left side */}
             <div className="flex md:hidden gap-6">
               {navLinks.slice(2, 4).map((link) => (
-                <Link key={link.label} href={link.href} className="text-white text-[14px] font-bold hover:opacity-70 transition-opacity whitespace-nowrap">
+                <Link key={link.label} href={link.href} prefetch={false} className="text-white text-[14px] font-bold hover:opacity-70 transition-opacity whitespace-nowrap">
                   {link.label}
                 </Link>
               ))}
@@ -115,7 +115,7 @@ export default function Footer() {
 
         <div className="mt-8 flex justify-center gap-8">
           {legalLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="text-white/70 text-[13px] hover:text-white transition-colors">
+            <Link key={link.href} href={link.href} prefetch={false} className="text-white/70 text-[13px] hover:text-white transition-colors">
               {link.label}
             </Link>
           ))}

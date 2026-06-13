@@ -1,15 +1,17 @@
 import type { ReactElement } from 'react'
 
+// Self-hosted (was cdn.jsdelivr.net/devicon@latest) — drops an external origin,
+// the preconnect, 9 third-party requests, and the unpinned @latest version.
 const techs = [
-  { name: 'Next.js', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg' },
-  { name: 'TypeScript', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
-  { name: 'Node.js', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg' },
-  { name: 'Tailwind CSS', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
-  { name: 'PostgreSQL', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg' },
-  { name: 'MongoDB', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg' },
-  { name: 'AWS', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
-  { name: 'React', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
-  { name: 'Python', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
+  { name: 'Next.js', src: '/icons/tech/nextjs.svg' },
+  { name: 'TypeScript', src: '/icons/tech/typescript.svg' },
+  { name: 'Node.js', src: '/icons/tech/nodejs.svg' },
+  { name: 'Tailwind CSS', src: '/icons/tech/tailwindcss.svg' },
+  { name: 'PostgreSQL', src: '/icons/tech/postgresql.svg' },
+  { name: 'MongoDB', src: '/icons/tech/mongodb.svg' },
+  { name: 'AWS', src: '/icons/tech/aws.svg' },
+  { name: 'React', src: '/icons/tech/react.svg' },
+  { name: 'Python', src: '/icons/tech/python.svg' },
 ]
 
 export default function TechSliderSection(): ReactElement {

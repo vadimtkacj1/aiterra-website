@@ -196,6 +196,9 @@
 
   html {
     direction: rtl;
+    /* Reserve the scrollbar gutter so locking body scroll under the page-load
+       overlay doesn't reflow content and register a layout shift (CLS). */
+    scrollbar-gutter: stable;
   }
 
   body {
@@ -208,5 +211,27 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-brutalist);
+  }
+}
+
+/* Hero wordmark entrance — CSS so it starts on first paint, before hydration */
+@keyframes wordmark-enter {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wordmark-enter {
+  animation: wordmark-enter 1s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wordmark-enter {
+    animation: none;
   }
 }

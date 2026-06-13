@@ -44,7 +44,6 @@ export default function PortfolioGrid({
             const href = noPage ? null : `/portfolio/${project.slug}`
             const isExternal = false
 
-            const isFirst = projects.indexOf(project) === 0
             const inner = (
               <>
                 <Image
@@ -53,7 +52,6 @@ export default function PortfolioGrid({
                   width={680}
                   height={480}
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  priority={isFirst}
                   className="w-full h-auto object-contain"
                 />
                 {href && (
