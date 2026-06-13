@@ -1,0 +1,385 @@
+{
+  "report": {
+    "whatsapp-business-api-crm-integration": {
+      "before": 4,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 5,
+      "extLinks": 1,
+      "rev": 2,
+      "words": 656
+    },
+    "business-site-vs-online-store": {
+      "before": 4,
+      "after": 8,
+      "faqN": 4,
+      "tldr": true,
+      "tableRows": 11,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 676
+    },
+    "ppc-minimum-budget-israel": {
+      "before": 4,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 4,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 618
+    },
+    "ga4-pixel-conversion-tracking-guide": {
+      "before": 4,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 5,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 667
+    },
+    "website-maintenance-cost-yearly": {
+      "before": 4,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 7,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 681
+    },
+    "business-automation-12-processes": {
+      "before": 2,
+      "after": 8,
+      "faqN": 4,
+      "tldr": true,
+      "tableRows": 7,
+      "extLinks": 1,
+      "rev": 2,
+      "words": 674
+    },
+    "crm-israeli-invoicing-integration": {
+      "before": 4,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 6,
+      "extLinks": 1,
+      "rev": 2,
+      "words": 700
+    },
+    "website-accessibility-cost-5568": {
+      "before": 4,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 5,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 636
+    },
+    "website-migration-wix-redesign": {
+      "before": 4,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 5,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 677
+    },
+    "web-development-gush-dan": {
+      "before": 4,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 11,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 871
+    },
+    "seo-cost-monthly-israel": {
+      "before": 4,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 6,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 718
+    },
+    "freelancer-vs-web-agency": {
+      "before": 4,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 8,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 673
+    },
+    "how-to-choose-digital-agency": {
+      "before": 4,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 11,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 699
+    },
+    "cheap-website-hidden-costs": {
+      "before": 4,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 9,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 707
+    },
+    "best-crm-small-business-israel": {
+      "before": 6,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 6,
+      "extLinks": 1,
+      "rev": 2,
+      "words": 615
+    },
+    "business-automation-cost-roi": {
+      "before": 6,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 5,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 491
+    },
+    "web-development-bat-yam": {
+      "before": 6,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 5,
+      "extLinks": 3,
+      "rev": 2,
+      "words": 637
+    },
+    "website-cost-israel-2026": {
+      "before": 6,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 6,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 672
+    },
+    "landing-pages-that-convert": {
+      "before": 2,
+      "after": 8,
+      "faqN": 4,
+      "tldr": true,
+      "tableRows": 7,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 721
+    },
+    "keyword-research-guide": {
+      "before": 4,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 6,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 728
+    },
+    "ux-ui-design-conversions": {
+      "before": 2,
+      "after": 8,
+      "faqN": 4,
+      "tldr": true,
+      "tableRows": 6,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 644
+    },
+    "business-automation-crm-whatsapp": {
+      "before": 2,
+      "after": 8,
+      "faqN": 4,
+      "tldr": true,
+      "tableRows": 7,
+      "extLinks": 1,
+      "rev": 2,
+      "words": 682
+    },
+    "ecommerce-store-that-sells": {
+      "before": 2,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 7,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 657
+    },
+    "marketing-analytics-roi": {
+      "before": 2,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 6,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 641
+    },
+    "website-accessibility-israel": {
+      "before": 4,
+      "after": 8,
+      "faqN": 4,
+      "tldr": true,
+      "tableRows": 8,
+      "extLinks": 3,
+      "rev": 2,
+      "words": 792
+    },
+    "facebook-instagram-ads": {
+      "before": 2,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 6,
+      "extLinks": 1,
+      "rev": 2,
+      "words": 668
+    },
+    "email-marketing-guide": {
+      "before": 2,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 7,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 675
+    },
+    "website-performance-2026": {
+      "before": 0,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 7,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 693
+    },
+    "website-security-guide": {
+      "before": 2,
+      "after": 8,
+      "faqN": 4,
+      "tldr": true,
+      "tableRows": 7,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 709
+    },
+    "local-seo-small-business": {
+      "before": 0,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 7,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 747
+    },
+    "google-business-profile-guide": {
+      "before": 2,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 9,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 698
+    },
+    "content-marketing-blog": {
+      "before": 2,
+      "after": 8,
+      "faqN": 4,
+      "tldr": true,
+      "tableRows": 8,
+      "extLinks": 1,
+      "rev": 2,
+      "words": 637
+    },
+    "seo-services": {
+      "before": 2,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 5,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 753
+    },
+    "custom-web-systems": {
+      "before": 2,
+      "after": 8,
+      "faqN": 4,
+      "tldr": true,
+      "tableRows": 8,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 610
+    },
+    "google-ads-campaigns": {
+      "before": 2,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 6,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 665
+    },
+    "short-video-marketing": {
+      "before": 2,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 7,
+      "extLinks": 2,
+      "rev": 2,
+      "words": 689
+    },
+    "website-building-services": {
+      "before": 2,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 6,
+      "extLinks": 1,
+      "rev": 2,
+      "words": 682
+    },
+    "digital-branding-guide": {
+      "before": 2,
+      "after": 8,
+      "faqN": 5,
+      "tldr": true,
+      "tableRows": 7,
+      "extLinks": 1,
+      "rev": 2,
+      "words": 531
+    }
+  },
+  "failures": []
+}
