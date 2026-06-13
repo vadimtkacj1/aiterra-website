@@ -12,9 +12,15 @@ import ReactDOM from 'react-dom'
  * The video itself (~120KB, purely decorative gradient) is deferred until the
  * browser is idle so its bytes don't compete with the poster + fonts during
  * the critical LCP / Speed-Index window. It swaps in seamlessly a moment later.
+ *
+ * The default src MUST be the lightweight `gradient2.mp4` (~124KB), NOT the
+ * 1.1MB `gradient.mp4`: on Slow 4G the big file's full-screen first frame paints
+ * ~5s in and overtakes the 17KB poster as the LCP element (blog mobile LCP was
+ * 5.2s with the heavy default; the flagship service pages always passed
+ * gradient2 explicitly and scored 100). Don't point this back at gradient.mp4.
  */
 export default function HeroVideoBackdrop({
-  src = '/videos/gradient.mp4',
+  src = '/videos/gradient2.mp4',
   poster = '/videos/gradient-poster.webp',
 }: {
   src?: string
