@@ -1,8 +1,18 @@
 import JsonLd from './JsonLd'
 import { CONTACT_EMAIL, CONTACT_PHONE_INTL, SOCIAL_PROFILES } from '@/lib/contact'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
+import { teamMembers } from '@/data/team-members'
 
 export default function OrganizationSchema() {
+  // Link the Organization to each named expert's Person node (rendered on their
+  // /blog/author/[id] ProfilePage) — a real org↔person entity-graph signal.
+  const employees = teamMembers.map((m) => ({
+    '@type': 'Person',
+    '@id': `${SITE_URL}/blog/author/${m.id}#person`,
+    name: m.name,
+    jobTitle: m.role,
+    url: `${SITE_URL}/blog/author/${m.id}`,
+  }))
   const org = {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'ProfessionalService', 'Organization'],
@@ -13,11 +23,13 @@ export default function OrganizationSchema() {
     email: CONTACT_EMAIL,
     telephone: CONTACT_PHONE_INTL,
     description: 'סוכנות שיווק דיגיטלי מלא – בניית אתרים, SEO, פרסום ממומן ואוטומציה עסקית',
-    // Google prefers a raster logo with known dimensions for rich results; SVG
-    // can be ignored. TODO: ship a PNG logo and point `url` at it.
+    // Raster logo with known dimensions — Google prefers this over SVG for rich
+    // results (generated from icons/logo.svg by scripts, see public/icons/logo.png).
     logo: {
       '@type': 'ImageObject',
-      url: `${SITE_URL}/icons/logo.svg`,
+      url: `${SITE_URL}/icons/logo.png`,
+      width: 512,
+      height: 512,
     },
     image: `${SITE_URL}/images/hero/hero-aiterra.png`,
     address: {
@@ -59,8 +71,10 @@ export default function OrganizationSchema() {
     currenciesAccepted: 'ILS',
     paymentAccepted: 'מזומן, כרטיס אשראי, העברה בנקאית',
     priceRange: '₪₪',
-    // TODO (needs real data): founder (link to /blog/author Person nodes),
-    // foundingDate, numberOfEmployees, geo (geocode Ha-Rav Nisanbaum St 37),
+    employee: employees,
+    numberOfEmployees: { '@type': 'QuantitativeValue', value: teamMembers.length },
+    // TODO (needs real data): founder (which team members founded AITERRA),
+    // foundingDate (real year), geo (geocode Ha-Rav Nisanbaum St 37),
     // openingHoursSpecification, and a real Review[]/AggregateRating once
     // genuine on-page reviews exist.
     sameAs: Object.values(SOCIAL_PROFILES).filter(Boolean),

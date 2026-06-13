@@ -47,8 +47,9 @@ export default function ArticleSchema({
           ...(authorJobTitle ? { jobTitle: authorJobTitle } : {}),
           ...(authorBio ? { description: authorBio } : {}),
           ...(absolute(authorImage) ? { image: absolute(authorImage) } : {}),
-          ...(authorUrl ? { url: authorUrl } : {}),
-          ...(sameAs.length ? { sameAs } : authorUrl ? { sameAs: [authorUrl] } : {}),
+          ...(absolute(authorUrl) ? { url: absolute(authorUrl) } : {}),
+          // sameAs = external identity anchors only (the on-site author page is `url`).
+          ...(sameAs.length ? { sameAs } : {}),
           worksFor: { '@type': 'Organization', '@id': `${SITE_URL}#organization`, name: SITE_NAME },
         }
       : { '@type': 'Organization', '@id': `${SITE_URL}#organization`, name: SITE_NAME },

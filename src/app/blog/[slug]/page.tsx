@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 import { marked } from 'marked'
 import type { Metadata } from 'next'
 import { Calendar, User } from 'lucide-react'
@@ -82,7 +83,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         dateModified={post.dateModified || undefined}
         urlPath={`/blog/${post.slug}`}
         author={authorName}
-        authorUrl={authorProfile?.socials?.linkedin || undefined}
+        authorUrl={authorProfile ? `/blog/author/${authorProfile.id}` : undefined}
         authorJobTitle={authorProfile?.role || undefined}
         authorBio={authorProfile?.bio || undefined}
         authorImage={authorImage || undefined}
@@ -166,9 +167,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 )}
                 <div className="min-w-0">
                   <p className="text-[14px] text-[#6b7280] mb-1">נכתב על ידי</p>
-                  <p className="text-[14px] font-semibold text-[#111827]">
-                    {authorName}
-                  </p>
+                  {authorProfile ? (
+                    <Link
+                      href={`/blog/author/${authorProfile.id}`}
+                      className="text-[14px] font-semibold text-[#111827] hover:text-[#1B1BB3]"
+                    >
+                      {authorName}
+                    </Link>
+                  ) : (
+                    <p className="text-[14px] font-semibold text-[#111827]">{authorName}</p>
+                  )}
                   {authorProfile?.role ? (
                     <p className="text-[14px] text-[#6b7280] mt-0.5">{authorProfile.role}</p>
                   ) : null}

@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { services } from '@/data/services'
 import { getAllPortfolioProjects } from '@/lib/portfolio-server'
 import { getAllPosts } from '@/lib/blog-server'
+import { getAllAuthors } from '@/lib/authors-server'
 import { SITE_URL } from '@/lib/seo'
 
 // ISR: serve a cached sitemap to crawlers (no per-request disk reads) and let
@@ -60,5 +61,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticEntries, ...serviceEntries, ...portfolioEntries, ...postEntries]
+  // Author profile pages — E-E-A-T entity surface for each named expert
+  const authorEntries: MetadataRoute.Sitemap = getAllAuthors().map((author) => ({
+    url: `${SITE_URL}/blog/author/${author.id}`,
+    lastModified: STATIC_DATE,
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }))
+
+  return [...staticEntries, ...serviceEntries, ...portfolioEntries, ...postEntries, ...authorEntries]
 }

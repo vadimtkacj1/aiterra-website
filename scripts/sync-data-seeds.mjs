@@ -6,6 +6,8 @@ import { copyFileSync } from 'node:fs'
 const seeds = [
   ['../data/blog-posts.json', '../src/data/blog-seed.json'],
   ['../data/portfolio-projects.json', '../src/data/portfolio-seed.json'],
+  ['../data/authors.json', '../src/data/authors-seed.json'],
+  ['../data/faq.json', '../src/data/faq-seed.json'],
 ]
 
 for (const [src, dest] of seeds) {
