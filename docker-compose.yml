@@ -8,7 +8,10 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
+        # Compose auto-loads ./.env for ${...} interpolation, so NEXT_PUBLIC_GA_ID
+        # (e.g. G-6SXKQPB2B8) reaches the build even though .env is .dockerignored.
         NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-}
+        NEXT_PUBLIC_GA_ID: ${NEXT_PUBLIC_GA_ID:-}
     image: ${DOCKER_IMAGE:-aiterra-website:latest}
     container_name: aiterra-website-web
     restart: unless-stopped
