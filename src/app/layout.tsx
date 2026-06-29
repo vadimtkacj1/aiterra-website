@@ -7,6 +7,8 @@ import CookieConsent from '@/components/layout/CookieConsent'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import '../styles/globals.css'
 
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -71,6 +73,39 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Script id="microsoft-clarity" strategy="lazyOnload">
           {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "wjb2tel6du");`}
         </Script>
+        {GA_ID && (
+          <>
+            {/* Google Analytics 4 — Consent Mode v2. The tag loads on every page
+                (so GA is always present and collecting), but analytics_storage is
+                'denied' by default until the visitor accepts the cookie banner
+                (CookieConsent calls gtag('consent','update')). Returning visitors
+                who already accepted are granted immediately via the localStorage
+                check below. This replaces the old accept-gated loader that left
+                GA absent for the ~80% who never clicked the banner. */}
+            <Script id="ga-consent-default" strategy="beforeInteractive">{`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              var granted = false;
+              try { granted = localStorage.getItem('cookie-consent') === 'accepted'; } catch (e) {}
+              gtag('consent', 'default', {
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                analytics_storage: granted ? 'granted' : 'denied',
+                wait_for_update: 500,
+              });
+            `}</Script>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga-init" strategy="afterInteractive">{`
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}', { anonymize_ip: true });
+            `}</Script>
+          </>
+        )}
         <OrganizationSchema />
         <Providers>{children}</Providers>
         <CookieConsent />

@@ -1,49 +1,37 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Script from 'next/script'
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void
+  }
+}
 
 export default function CookieConsent() {
-  const [consent, setConsent] = useState<'accepted' | 'declined' | null>(null)
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const stored = localStorage.getItem('cookie-consent') as 'accepted' | 'declined' | null
-    setConsent(stored)
+    // The GA tag itself is loaded in the root layout (Consent Mode v2) with
+    // analytics_storage denied by default; this banner only flips consent.
+    const stored = localStorage.getItem('cookie-consent')
     if (!stored) setVisible(true)
   }, [])
 
   function accept() {
     localStorage.setItem('cookie-consent', 'accepted')
-    setConsent('accepted')
     setVisible(false)
+    window.gtag?.('consent', 'update', { analytics_storage: 'granted' })
   }
 
   function decline() {
     localStorage.setItem('cookie-consent', 'declined')
-    setConsent('declined')
     setVisible(false)
+    window.gtag?.('consent', 'update', { analytics_storage: 'denied' })
   }
 
   return (
     <>
-      {consent === 'accepted' && GA_ID && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="ga-init" strategy="afterInteractive">{`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_ID}', { anonymize_ip: true });
-          `}</Script>
-        </>
-      )}
-
       {visible && (
         <div
           className="fixed bottom-0 left-0 right-0 z-[9999] px-4 py-4 md:px-8 md:py-5"
