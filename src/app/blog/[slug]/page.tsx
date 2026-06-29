@@ -6,7 +6,7 @@ import { Calendar, User } from 'lucide-react'
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
-import { CtaSection } from '@/components/sections'
+import { CtaSection, RelatedServicesSection } from '@/components/sections'
 import { getPostBySlug } from '@/lib/blog-server'
 import HeroVideoBackdrop from '@/components/ui/HeroVideoBackdrop'
 import Breadcrumb from '@/components/ui/Breadcrumb'
@@ -238,6 +238,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           )}
 
+          <RelatedServicesSection tags={post.tags} />
           <CtaSection />
           {post.faq && post.faq.items.length > 0 && (
             <FaqSection data={post.faq} />

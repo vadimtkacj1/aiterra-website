@@ -2,14 +2,33 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { SITE_LEADS_TOKEN } from '@/lib/contact'
 
 export default function ContactForm() {
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
+  const [sending, setSending] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log({ name, phone })
+    if (sending) return
+    setSending(true)
+    setError('')
+    try {
+      const res = await fetch('/api/site-leads/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ publicToken: SITE_LEADS_TOKEN, name, phone, source: 'cta-section' }),
+      })
+      if (!res.ok) throw new Error('request failed')
+      setSubmitted(true)
+    } catch {
+      setError('אירעה שגיאה בשליחה. אנא נסו שוב או התקשרו אלינו.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -26,35 +45,46 @@ export default function ContactForm() {
           בואו נדבר על הפרויקט הבא שלכם ונמצא את הפתרון המושלם לצמיחה עסקית
         </p>
 
-        <form onSubmit={handleSubmit} className="w-full space-y-4">
-          <div className="flex flex-col md:flex-row gap-3">
-            <input
-              type="text"
-              placeholder="שם"
-              aria-label="שם"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2.5 border border-[#D1D5DB] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1B1BB3] text-right placeholder:text-[#9CA3AF]"
-              required
-            />
-            <input
-              type="tel"
-              placeholder="טלפון"
-              aria-label="טלפון"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className="w-full px-4 py-2.5 border border-[#D1D5DB] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1B1BB3] text-right placeholder:text-[#9CA3AF]"
-              required
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="w-full border border-[#530FAD] text-[#530FAD] py-2.5 rounded-md font-bold text-[16px] hover:bg-purple-50 transition-colors duration-200"
+        {submitted ? (
+          <div
+            className="w-full rounded-md p-6 text-center"
+            style={{ background: 'linear-gradient(135deg, #f0f0ff 0%, #f5eeff 100%)' }}
           >
-            לקבלת הצעת מחיר מהירה
-          </button>
-        </form>
+            <p className="text-[18px] font-bold text-[#530FAD]">תודה! נחזור אליכם בהקדם.</p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="w-full space-y-4">
+            <div className="flex flex-col md:flex-row gap-3">
+              <input
+                type="text"
+                placeholder="שם"
+                aria-label="שם"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full px-4 py-2.5 border border-[#D1D5DB] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1B1BB3] text-right placeholder:text-[#9CA3AF]"
+                required
+              />
+              <input
+                type="tel"
+                placeholder="טלפון"
+                aria-label="טלפון"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="w-full px-4 py-2.5 border border-[#D1D5DB] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1B1BB3] text-right placeholder:text-[#9CA3AF]"
+                required
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={sending}
+              className="w-full border border-[#530FAD] text-[#530FAD] py-2.5 rounded-md font-bold text-[16px] hover:bg-purple-50 transition-colors duration-200 disabled:opacity-60"
+            >
+              {sending ? 'שולח…' : 'לקבלת הצעת מחיר מהירה'}
+            </button>
+            {error && <p className="text-red-600 text-[14px] text-center" role="alert">{error}</p>}
+          </form>
+        )}
       </div>
 
       <div className="hidden md:flex flex-1 justify-center items-center">

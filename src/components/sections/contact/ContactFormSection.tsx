@@ -2,19 +2,36 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { SITE_LEADS_TOKEN } from '@/lib/contact'
 
 export default function ContactFormSection() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log(form)
-    setSubmitted(true)
+    if (sending) return
+    setSending(true)
+    setError('')
+    try {
+      const res = await fetch('/api/site-leads/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ publicToken: SITE_LEADS_TOKEN, ...form, source: 'contact-page' }),
+      })
+      if (!res.ok) throw new Error('request failed')
+      setSubmitted(true)
+    } catch {
+      setError('אירעה שגיאה בשליחה. אנא נסו שוב או התקשרו אלינו.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -111,13 +128,15 @@ export default function ContactFormSection() {
 
             <button
               type="submit"
-              className="w-full py-3.5 rounded-md font-bold text-[16px] text-white transition-opacity hover:opacity-90"
+              disabled={sending}
+              className="w-full py-3.5 rounded-md font-bold text-[16px] text-white transition-opacity hover:opacity-90 disabled:opacity-60"
               style={{
                 background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
               }}
             >
-              שלחו הודעה
+              {sending ? 'שולח…' : 'שלחו הודעה'}
             </button>
+            {error && <p className="text-red-600 text-[14px] text-center" role="alert">{error}</p>}
           </form>
         )}
         </div>

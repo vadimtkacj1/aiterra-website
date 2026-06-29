@@ -17,6 +17,14 @@ export const SOCIAL_PROFILES = {
   facebook: '',
 }
 
+/**
+ * Token sent with public lead-form submissions to /api/site-leads/submit so the
+ * lead is attributable to this site. Overridable via env; the endpoint only
+ * requires it to be present. NOTE: leads currently persist to data/site-leads.json
+ * — wire delivery (email/CRM/admin view) before relying on this for sales.
+ */
+export const SITE_LEADS_TOKEN = process.env.NEXT_PUBLIC_SITE_LEADS_TOKEN || 'aiterra-website'
+
 const mapsQuery = encodeURIComponent(`${OFFICE_ADDRESS_EN}, Israel`)
 
 /** Classic embed (no Maps JavaScript API key). */

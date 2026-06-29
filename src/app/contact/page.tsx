@@ -9,12 +9,14 @@ export async function generateMetadata(): Promise<Metadata> {
 import HeaderAlt from '@/components/layout/HeaderAlt'
 import Footer from '@/components/layout/Footer'
 import StickyPageFooter from '@/components/layout/StickyPageFooter'
-import { ContactHeroSection, ContactFormSection, ContactMapSection, CtaSection } from '@/components/sections'
+import { ContactHeroSection, ContactFormSection, ContactMapSection } from '@/components/sections'
 import FaqSection from '@/components/sections/common/FaqSection'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import { getFaqData } from '@/lib/faq-server'
 
-export const dynamic = 'force-dynamic'
+// Static-data page (FAQ + SEO copy) — prerender like the other pages and let
+// ISR pick up admin edits. (Was needlessly force-dynamic, which disabled cache.)
+export const revalidate = 300
 
 export default function ContactPage() {
   const faqData = getFaqData('/contact')
@@ -31,9 +33,9 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-2">
             <Breadcrumb items={[{ label: 'צור קשר', href: '/contact' }]} />
           </div>
+          <ContactFormSection />
           <ContactMapSection />
           <FaqSection data={faqData} />
-          <CtaSection />
         </main>
         <StickyPageFooter className="z-10">
           <Footer />

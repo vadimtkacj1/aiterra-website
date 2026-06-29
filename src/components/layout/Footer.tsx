@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { CONTACT_EMAIL, OFFICE_ADDRESS_EN } from '@/lib/contact'
+import { services } from '@/data/services'
 
 const navLinks = [
   { label: 'ראשי', href: '/' },
@@ -111,6 +112,22 @@ export default function Footer() {
               </Link>
             ))}
           </div>
+        </nav>
+
+        {/* Service sub-pages — sitewide crawlable links so each /services/* page
+            earns internal equity beyond the single homepage link (they had no
+            sitewide link before, which kept them "Discovered – not indexed"). */}
+        <nav className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 px-6" aria-label="שירותים" dir="rtl">
+          {services.map((s) => (
+            <Link
+              key={s.slug}
+              href={`/services/${s.slug}`}
+              prefetch={false}
+              className="text-white/70 text-[13px] md:text-[14px] font-medium hover:text-white transition-colors whitespace-nowrap"
+            >
+              {s.title}
+            </Link>
+          ))}
         </nav>
 
         <div className="mt-8 flex justify-center gap-8">

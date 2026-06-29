@@ -16,6 +16,7 @@ const gradientTextStyle: React.CSSProperties = {
 const navLinks = [
   { href: '/', label: 'ראשי' },
   { href: '/services', label: 'שירותים' },
+  { href: '/packages', label: 'חבילות' },
   { href: '/blog', label: 'בלוג' },
   { href: '/portfolio', label: 'תיק עבודות' },
   { href: '/about', label: 'אודותינו' },
@@ -125,6 +126,7 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
           <div className="flex items-center gap-10">
             <Link href="/" className={linkClass}>ראשי</Link>
             <Link href="/services" className={linkClass}>שירותים</Link>
+            <Link href="/packages" className={linkClass}>חבילות</Link>
             <Link href="/contact" className={linkClass}>צור קשר</Link>
           </div>
 
