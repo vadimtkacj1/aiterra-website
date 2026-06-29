@@ -64,7 +64,7 @@ export default function RelatedServicesSection({ tags = [] }: { tags?: string[] 
 
       <p className="mt-6 text-[14px] text-[#4b5563]">
         לא בטוחים מה מתאים לעסק שלכם?{' '}
-        <Link href="/packages" className="font-bold text-[#530FAD] hover:underline">השוו חבילות</Link>
+        <Link href="/services" className="font-bold text-[#530FAD] hover:underline">ראו את כל השירותים</Link>
         {' '}או{' '}
         <Link href="/contact" className="font-bold text-[#530FAD] hover:underline">קבלו ייעוץ חינם</Link>.
       </p>

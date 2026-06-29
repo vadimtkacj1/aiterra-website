@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
   const posts = getAllPosts()
 
-  // Freshness anchor for content hubs (home, /services, /packages, /blog, …):
+  // Freshness anchor for content hubs (home, /services, /blog, …):
   // the most recent real content change. This replaces the old hardcoded
   // 2026-05-01 lastmod, which gave Google no reason to (re)crawl those pages —
   // the never-crawled commercial pages all carried that stale date.
@@ -33,7 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const commercialRoutes: { path: string; changeFrequency: 'weekly' | 'monthly'; priority: number }[] = [
     { path: '', changeFrequency: 'weekly', priority: 1.0 },
     { path: '/services', changeFrequency: 'monthly', priority: 0.9 },
-    { path: '/packages', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/portfolio', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/blog', changeFrequency: 'weekly', priority: 0.8 },
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },

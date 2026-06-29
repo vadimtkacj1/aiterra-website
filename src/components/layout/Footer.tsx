@@ -6,7 +6,6 @@ import { services } from '@/data/services'
 const navLinks = [
   { label: 'ראשי', href: '/' },
   { label: 'שירותים', href: '/services' },
-  { label: 'חבילות', href: '/packages' },
   { label: 'בלוג', href: '/blog' },
   { label: 'תיק עבודות', href: '/portfolio' },
   { label: 'אודותינו', href: '/about' },

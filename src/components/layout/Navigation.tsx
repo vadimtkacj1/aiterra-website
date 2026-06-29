@@ -8,7 +8,6 @@ import { useDocumentEnd } from '@/context/DocumentEndContext';
 const navLinks = [
   { href: '/', label: 'ראשי' },
   { href: '/services', label: 'שירותים' },
-  { href: '/packages', label: 'חבילות' },
   { href: '/blog', label: 'בלוג' },
   { href: '/portfolio', label: 'תיק עבודות' },
   { href: '/about', label: 'אודותינו' },
