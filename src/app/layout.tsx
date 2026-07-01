@@ -96,11 +96,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 wait_for_update: 500,
               });
             `}</Script>
+            {/* gtag.js (~176KB) is decorative-invisible analytics — defer it to
+                lazyOnload (browser idle, after window.load) so its bytes don't
+                compete with the LCP poster + fonts on slow mobile. Consent still
+                works: the beforeInteractive stub above defines window.gtag and
+                queues consent/config into dataLayer, which gtag.js drains when it
+                finally loads (incl. a CookieConsent accept fired before then). */}
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
+              strategy="lazyOnload"
             />
-            <Script id="ga-init" strategy="afterInteractive">{`
+            <Script id="ga-init" strategy="lazyOnload">{`
               gtag('js', new Date());
               gtag('config', '${GA_ID}', { anonymize_ip: true });
             `}</Script>
