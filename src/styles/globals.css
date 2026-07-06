@@ -54,6 +54,15 @@
   font-display: swap;
 }
 
+/* Sienna a11y widget: these three features do nothing on this site
+   (verified live 2026-07-06 — no DOM/style effect when toggled), so hide
+   their buttons rather than show dead controls. */
+.asw-btn[data-key='hide-images'],
+.asw-btn[data-key='page-structure'],
+.asw-btn[data-key='image-tooltips'] {
+  display: none !important;
+}
+
 @keyframes ticker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
