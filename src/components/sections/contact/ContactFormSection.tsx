@@ -126,6 +126,26 @@ export default function ContactFormSection() {
               className="w-full px-4 py-3 border border-[#D1D5DB] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1B1BB3] text-right placeholder:text-[#9CA3AF] text-[15px] resize-none"
             />
 
+            <label className="flex items-start gap-2 text-[13px] text-[#666] cursor-pointer">
+              <input
+                type="checkbox"
+                name="consent"
+                required
+                className="mt-0.5 h-4 w-4 shrink-0 accent-[#1B1BB3] cursor-pointer"
+              />
+              <span>
+                אני מאשר/ת שקראתי והבנתי את{' '}
+                <a href="/terms-of-use" target="_blank" rel="noopener noreferrer" className="text-[#1B1BB3] underline hover:opacity-80">
+                  התקנון
+                </a>{' '}
+                ואת{' '}
+                <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#1B1BB3] underline hover:opacity-80">
+                  מדיניות הפרטיות
+                </a>{' '}
+                של האתר
+              </span>
+            </label>
+
             <button
               type="submit"
               disabled={sending}
