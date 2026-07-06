@@ -48,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const legalEntries: MetadataRoute.Sitemap = [
     '/privacy-policy',
+    '/terms-of-use',
     '/accessibility-statement',
   ].map((route) => ({
     url: `${SITE_URL}${route}`,

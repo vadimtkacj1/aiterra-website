@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/accessibility-statement' },
 }
 
-const LAST_UPDATED = '13.06.2026'
+const LAST_UPDATED = '06.07.2026'
 
 export default function AccessibilityStatementPage() {
   return (
@@ -37,6 +37,10 @@ export default function AccessibilityStatementPage() {
 
             <h2>התאמות הנגישות באתר</h2>
             <ul>
+              <li>
+                רכיב נגישות (ווידג&apos;ט) הזמין בכל עמודי האתר ומאפשר, בין היתר: הגדלת טקסט,
+                שינוי ניגודיות, גופן קריא, הדגשת קישורים וכותרות, עצירת אנימציות וסמן מוגדל
+              </li>
               <li>מבנה עמודים סמנטי עם כותרות מדורגות וניווט עקבי</li>
               <li>קישור &quot;דלגו לתוכן הראשי&quot; בראש כל עמוד</li>
               <li>תמיכה בניווט מלא באמצעות מקלדת, כולל סימון מוקד (Focus) נראה</li>

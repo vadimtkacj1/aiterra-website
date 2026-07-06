@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { CONTACT_EMAIL, OFFICE_ADDRESS_EN } from '@/lib/contact'
+import { CONTACT_EMAIL } from '@/lib/contact'
 import { services } from '@/data/services'
 
 const navLinks = [
@@ -14,6 +14,7 @@ const navLinks = [
 
 const legalLinks = [
   { label: 'מדיניות פרטיות', href: '/privacy-policy' },
+  { label: 'תקנון ותנאי שימוש', href: '/terms-of-use' },
   { label: 'הצהרת נגישות', href: '/accessibility-statement' },
 ]
 
@@ -35,13 +36,7 @@ export default function Footer() {
           סוכנות שיווק דיגיטלי, בניית אתרים ופיתוח תוכנה. מגשרים על הפער בין טכנולוגיה מורכבת לצמיחה עסקית מדידה – AITERRA.
         </p>
 
-        <div className="mt-6 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-white text-[14px] md:text-[17px] px-6 text-center">
-          <span className="max-w-xl leading-snug" dir="ltr">
-            {OFFICE_ADDRESS_EN}
-          </span>
-          <span className="hidden md:inline opacity-40 select-none" aria-hidden>
-            |
-          </span>
+        <div className="mt-6 flex items-center justify-center text-white text-[14px] md:text-[17px] px-6 text-center">
           <a
             href={`mailto:${CONTACT_EMAIL}`}
             className="hover:text-blue-400 transition-colors shrink-0"
