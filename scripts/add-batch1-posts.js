@@ -8,7 +8,7 @@ const path = require('path')
 
 const DATE = '2026-06-13'
 const A = {
-  vadim: { author: 'ואדים (VADIM)', authorId: 'vadim', authorImage: '/images/Vadim.png' },
+  vadim: { author: 'ואדים (VADIM)', authorId: 'vadim', authorImage: '/images/Vadim.jpeg' },
   sean: { author: 'שון (SEAN)', authorId: 'sean', authorImage: '/images/Sean.webp' },
   eric: { author: 'אריק (ERIK)', authorId: 'eric', authorImage: '/images/Eric.webp' },
   michael: { author: 'מיכאל (MICHAEL)', authorId: 'michael', authorImage: '/images/Michael.webp' },

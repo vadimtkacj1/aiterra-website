@@ -26,7 +26,7 @@ export const teamMembers: TeamMember[] = [
     name: 'ואדים (Vadim)',
     role: 'מתכנת ראשי (Lead Developer)',
     bio: 'ואדים הוא המוח הטכנולוגי מאחורי הקלעים. כמתכנת הראשי שלנו, הוא אחראי לקוד נקי, מהיר ומאובטח. בין אם פיתוח אתר איקומרס מורכב או יצירת אוטומציות חכמות.',
-    image: '/images/Vadim.png',
+    image: '/images/Vadim.jpeg',
   },
   {
     id: 'sean',
