@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+/* Aiterra E-commerce landing design system, scoped to the .ecom subtree.
+   Served at /landings/ecomerce. Merged into this one Tailwind entry so its
+   @theme tokens and @utility rules are part of the same build. */
+@import './ecomerce.css';
+
 @font-face {
   font-family: 'Heebo';
   src: url('/fonts/Heebo/Heebo-VariableFont_wght.woff2') format('woff2'),

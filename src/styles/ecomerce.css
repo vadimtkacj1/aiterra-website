@@ -1,0 +1,825 @@
+/* ============================================================
+   Aiterra E-commerce landing — design system (scoped)
+   Ported from the standalone aiterra-landing-page-ecomerce project.
+   Imported once from src/styles/globals.css. The @font-face and the
+   Tailwind import were dropped (the host declares them); the base element
+   rules were scoped to .ecom so the rest of the site is unaffected.
+   ============================================================ */
+
+/* ============================================================
+   AITERRA · Premium E-commerce Landing — Design System
+   ------------------------------------------------------------
+   Direction (Refero reference lock):
+     · Elementor      → binary band inversion. Depth is CONTRAST,
+                        never shadow. A card always inverts its band.
+     · mono (frm.fm)  → hairline architecture. 1px rules, 0px radius,
+                        tracked uppercase labels, a visible column grid.
+     · Control        → framed product windows; the accent is a
+                        FUNCTIONAL MARKER only, never decoration.
+
+   Band contract — every section declares `band-paper` or `band-ink`
+   and strictly alternates. Each band exports the same six variables,
+   so components never hard-code a colour:
+
+     --bg      band surface            --fg      primary text
+     --muted   supporting text         --dim     meta / labels
+     --rule    hairline                --accent  accent AS TEXT (AA)
+
+   Accent role rule: #2b5cf0 fills the primary action and marks the
+   section index. It is never a background wash, a heading gradient,
+   or a glow.
+   ============================================================ */
+
+@theme {
+  --font-brutalist: 'TelAviv-Brutalist', 'Heebo', Arial, sans-serif;
+  --font-modernist: 'TelAviv-Modernist', 'Heebo', Arial, sans-serif;
+  --font-heebo: 'Heebo', Arial, sans-serif;
+  /* Technical marker face — indices, domains, metrics. Code-native, no
+     new asset. Carries the Control "instrument reading" role. */
+  --font-mark: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
+
+  /* --- Surfaces: the binary. There is no third background. --- */
+  --color-paper: #f3f0e9;
+  --color-paper-sunken: #e8e4da;
+  --color-ink: #0d0d0c;
+  --color-ink-raised: #171715;
+
+  /* --- Ink scale on paper --- */
+  --color-fg: #0d0d0c;
+  --color-fg-muted: #56514a;
+  --color-fg-dim: #837c71;
+
+  /* --- Hairlines --- */
+  --color-rule: #dad3c6;
+  --color-rule-strong: #b9b0a0;
+  --color-rule-ink: #2b2a27;
+  --color-rule-ink-strong: #3f3d38;
+
+  /* --- Accent: one blue, three jobs.
+         `accent`      fills the primary action (white text, 5.4:1)
+         `accent-ink`  writes on paper (AA)
+         `accent-lift` writes on ink    (AA) --- */
+  --color-accent: #2b5cf0;
+  --color-accent-hover: #1e46c8;
+  --color-accent-ink: #1b3fb8;
+  --color-accent-lift: #6e93ff;
+}
+
+@layer base {
+  /* Scoped to the landing subtree — the landing renders inside <div class="ecom">
+     so the host site global html/body/heading rules are left untouched. Fonts,
+     RTL and antialiasing already match the host; only the landing-specific
+     heading weight, selection and focus colours are re-applied here. */
+  .ecom {
+    direction: rtl;
+    color: var(--color-fg);
+    -webkit-font-smoothing: antialiased;
+    /* Contain horizontal overflow on the landing subtree.
+       `overflow-x: hidden` on <body> (the host site's rule) is unreliable on
+       iOS Safari — it does not clip the page's own initial containing block, so
+       any element that reaches past the viewport (the perspective/translateZ
+       wire objects, the marquee track) lets the whole page pan sideways on a
+       real phone even though desktop Chrome clips it cleanly. The same clip on
+       an ordinary wrapper element IS honoured, so it lives here instead.
+       `clip` (not `hidden`) so no scroll container is created: vertical page
+       scroll and the fixed nav/scroll-progress are untouched. */
+    overflow-x: clip;
+  }
+
+  .ecom :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--font-brutalist);
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  .ecom ::selection {
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  .ecom :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  /* Nav is fixed and 64px tall on a phone; keep hash jumps clear of it. */
+  @media (max-width: 767px) {
+    .ecom section[id],
+    .ecom #main-content {
+      scroll-margin-top: 4rem;
+    }
+  }
+}
+
+/* Smooth in-page anchor scrolling while the landing is mounted, scoped via :has
+   so the host site keeps its own scroll behaviour on every other route. */
+html:has(.ecom) {
+  scroll-behavior: smooth;
+}
+
+/* ============================================================
+   Bands, type roles and actions — the inversion system
+   ------------------------------------------------------------
+   All of this lives in `@layer components` on purpose. Tailwind v4 emits its
+   utilities into `@layer utilities`, and UNLAYERED css outranks every layer —
+   so an unlayered `.btn { display: inline-flex }` beats `hidden`, and the nav
+   CTA could never be hidden on mobile (it overflowed the bar and dragged the
+   whole RTL page sideways). Inside the components layer normal precedence is
+   restored: a utility always wins over a component class, and overriding one
+   no longer needs `!important`.
+   ============================================================ */
+@layer components {
+
+/* Contrast contract — every text role clears WCAG AA (4.5:1) against its own
+   band. `--dim` carries the tracked 11px labels, the stat captions and the
+   input placeholders: all small text, so none of it may sit at the 3:1 large-
+   text threshold. Measured against the band background:
+     paper  fg 17.1  ·  muted 6.9  ·  dim 4.8  ·  accent 7.5
+     ink    fg 19.4  ·  muted 7.1  ·  dim 5.3  ·  accent 6.7
+   White on the filled accent button measures 5.4. */
+.band-paper {
+  --bg: #f3f0e9;
+  --fg: #0d0d0c;
+  --muted: #56514a;
+  --dim: #6f6862;
+  --rule: #dad3c6;
+  --rule-strong: #b9b0a0;
+  --accent: #1b3fb8;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.band-ink {
+  --bg: #0d0d0c;
+  --fg: #ffffff;
+  --muted: #a29c93;
+  --dim: #8b857c;
+  --rule: #2b2a27;
+  --rule-strong: #3f3d38;
+  --accent: #6e93ff;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+} /* /@layer components — @utility must be declared at the top level */
+
+/* Band-aware text roles. Components use these instead of literal colours,
+   so the same markup reads correctly on either surface.
+   Declared as @utility (not plain classes) so they accept Tailwind variants
+   — `sm:rule-s`, `lg:rule-s` — which the ledger grids depend on. */
+@utility t-fg { color: var(--fg); }
+@utility t-muted { color: var(--muted); }
+@utility t-dim { color: var(--dim); }
+@utility t-accent { color: var(--accent); }
+
+@utility rule-t { border-top: 1px solid var(--rule); }
+@utility rule-b { border-bottom: 1px solid var(--rule); }
+@utility rule-s { border-inline-start: 1px solid var(--rule); }
+@utility rule-e { border-inline-end: 1px solid var(--rule); }
+@utility rule-all { border: 1px solid var(--rule); }
+
+@layer components {
+
+/* ---- The column grid (mono) ----
+   Quarter-width hairlines drawn behind the content well, so every block
+   visibly snaps to an architectural grid instead of floating. Desktop
+   only — on a phone the lines would just be noise. */
+.col-rules {
+  position: relative;
+}
+.col-rules::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: linear-gradient(to right, var(--rule) 1px, transparent 1px);
+  background-size: 25% 100%;
+  opacity: 0;
+}
+@media (min-width: 1024px) {
+  .col-rules::before { opacity: 1; }
+}
+
+/* ============================================================
+   Type roles
+   ============================================================ */
+
+/* Tracked uppercase micro-label — nav meta, section kickers, field
+   labels. mono's role: functional text only, never content. */
+.label {
+  font-family: var(--font-heebo);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* The role is an English-cap idiom, and most of what wears it here is Hebrew.
+   Hebrew does not uppercase, so `text-transform` is a no-op on it — while the
+   0.2em that buys a Latin cap-label its legibility just pulls a Hebrew word
+   apart into loose glyphs. At 11px on a phone 'מדד' stops being a word and
+   becomes three letters. Below md the label is therefore set one step larger
+   and one step tighter; the Latin kickers still read as tracked caps, and the
+   wireframe chips pin their own size with a utility — which outranks this
+   layered rule — so the drawings keep theirs. */
+@media (max-width: 767px) {
+  .label {
+    font-size: 12.5px;
+    letter-spacing: 0.1em;
+    line-height: 1.25;
+  }
+}
+
+/* Technical marker — section indices, domains, metrics. */
+.mark {
+  font-family: var(--font-mark);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.display {
+  font-family: var(--font-brutalist);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+}
+
+/* Latin display type buys its leading from the x-height drop: at 0.92 the caps
+   still sit apart. Hebrew is single-height — every glyph fills the body — so the
+   same 0.92 closes the lines onto each other, and -0.035em starts welding square
+   letterforms together. On a phone, where the clamps bottom out at 32–34px and
+   the line wraps four ways, that is the difference between tight and packed.
+   The hero's line and the footer's phone number are Latin and declare `dir=ltr`
+   on the display element itself, so they keep the setting they were cut for. */
+@media (max-width: 767px) {
+  .display {
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  [dir='ltr'].display {
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+  }
+}
+
+/* Hollow display line. The hero's one typographic gesture — a second line
+   that reads as pure contour. Guarded, because the transparent fill would
+   erase the text outright on a browser without text-stroke. */
+/* Two non-obvious constraints hold this rule together:
+   1. The stroke colour is stated outright. `currentColor` would resolve
+      against this element's own colour — which is hollowed out below — and
+      paint the outline with nothing.
+   2. No @supports guard. Lightning CSS does not accept -webkit-text-stroke as
+      a condition and prunes the whole block if you wrap it in one. The guard
+      is instead the hollowing property itself: -webkit-text-fill-color is only
+      honoured by engines that also implement the stroke, so a browser that
+      cannot draw the outline simply renders the line solid. */
+.display-outline {
+  -webkit-text-stroke: 1.5px var(--fg);
+  -webkit-text-fill-color: transparent;
+}
+@media (min-width: 768px) {
+  .display-outline { -webkit-text-stroke-width: 2px; }
+}
+
+/* ============================================================
+   Actions — sharp, flat, no shadow, no radius
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 0;
+  padding: 1.05rem 2rem;
+  font-family: var(--font-brutalist);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+/* nowrap does more than keep a label on one line: it makes the label the button's
+   MIN-content width, and a flex/grid item cannot shrink below its min-content. The
+   lead form's submit reads 270px that way, so on a viewport narrower than ~310px it
+   was the form column — and through it the whole document — that had to widen, and
+   the page picked up a sideways scroll no content of its own asked for. Below md the
+   label may wrap; it only ever does when the alternative is a page that slides. */
+@media (max-width: 767px) {
+  .btn { white-space: normal; }
+}
+
+/* The single filled action on the page. Accent lives here. */
+.btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+  border: 1px solid var(--color-accent);
+}
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+/* Secondary. Hover inverts the button against its band — the same
+   surface-inversion logic as the sections, applied at component scale. */
+.btn-outline {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--fg);
+}
+.btn-outline:hover {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.btn-arrow {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn:hover .btn-arrow {
+  transform: translateX(-0.28rem); /* RTL: forward is leftward */
+}
+
+/* Scroll-progress hairline — the one element allowed to sit above the bands,
+   so it uses the literal accent rather than a band variable. */
+.scroll-progress {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  height: 2px;
+  transform-origin: 0 50%;
+  z-index: 60;
+  background: var(--color-accent);
+}
+
+/* ============================================================
+   Wireframe objects — the hero storefront and the "one roof" box
+   ------------------------------------------------------------
+   Exploded technical drawings, built from CSS 3D transforms on real DOM rather
+   than WebGL: the hairlines stay exactly 1px at any zoom, the objects inherit
+   the band tokens, and the whole thing costs nothing.
+
+   Depth is spelled with CONTRAST: `wire-near` is drawn in ink, `wire-far`
+   fades to the hairline colour. No shadow, no fog, no glow — the page's own
+   elevation rule, extended into Z.
+
+   `--p` is scroll progress (0 → 1), written by <WireScene/>. Each object turns
+   it into `--explode`, and every part's Z is scaled by it, so the drawing
+   assembles as the reader scrolls. Default 1: before JS runs the object is
+   already composed rather than collapsed flat.
+   ============================================================ */
+.wire-scene {
+  position: relative;
+  width: 100%;
+  /* Long perspective, modest yaw. The parts still have to separate in depth —
+     too little and the object collapses into a stack of near-identical
+     rectangles that reads as a misalignment — but too much keystone and they
+     slide apart horizontally until they stop looking like one machine. */
+  perspective: 1500px;
+  --p: 0;
+  --explode: 1;
+}
+
+.wire-stack {
+  position: absolute;
+  inset: 8% 4%;
+  transform-style: preserve-3d;
+  /* The resting pose. The idle turn only breathes around it, so a browser that
+     refuses the animation still gets a composed object rather than a flat
+     rectangle seen head-on. */
+  transform: rotateX(10deg) rotateY(-19deg);
+  animation: wire-turn 26s ease-in-out infinite alternate;
+}
+
+/* Each plane spans the whole screen; only its own part is drawn on it. Pushing
+   the planes apart in Z therefore explodes the object without moving any part
+   away from where it actually belongs in the layout. */
+.wire-plane {
+  position: absolute;
+  inset: 0;
+  transform: translateZ(calc(var(--z) * var(--explode)));
+  transform-style: preserve-3d;
+}
+
+/* The contrast ramp IS the depth cue. */
+.wire-near { color: var(--fg); }
+.wire-mid  { color: var(--rule-strong); }
+.wire-far  { color: var(--rule); }
+/* A fourth rung, between the hairline tones and the ink. The ramp above has
+   only two usable steps on the ink band — `--rule` all but vanishes against
+   #0d0d0c — which is enough for an object whose parts sit at two depths, and
+   one short for anything that needs three. `--dim` is the band's own meta-text
+   tone, so this borrows a colour the system already ships. */
+.wire-step { color: var(--dim); }
+
+@keyframes wire-turn {
+  from { transform: rotateX(11deg) rotateY(-23deg); }
+  to   { transform: rotateX(7deg)  rotateY(-11deg); }
+}
+
+/* ---- The "one roof" box ----
+   A wireframe volume the modules gather into. Sized in px because a box needs
+   three real edge lengths, not percentages of a parent. */
+.wire-box {
+  --bw: 300px;
+  --bh: 190px;
+  --bd: 190px;
+  /* How far a module is thrown out of the box at --explode: 1. */
+  --spread: 0.85;
+  --spread-z: 1.6;
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+@media (max-width: 640px) {
+  /* A narrow scene needs more than a smaller box. The yaw and the perspective
+     divergence both push a module further from the centre than its own offset
+     suggests, so on a phone the plate is shrunk AND the throw is cut — measured
+     against the viewport, not guessed. */
+  .wire-box { --bw: 200px; --bh: 130px; --bd: 130px; --spread: 0.5; --spread-z: 1; }
+  /* The plate has to shrink by the same factor as the box, or it does not.
+     A module's offset is a FRACTION of the box, so cutting the box to 0.67 and
+     the plate to only 0.87 lands the plates closer together while making them
+     relatively bigger — and since a module is opaque (it occludes the wires
+     behind it) they then paint over each other and five things read as one
+     smudge. These hold the desktop plate-to-box ratio, so the phone drawing is
+     the desktop drawing, smaller. */
+  .wire-module { width: 58px; height: 22px; margin: -11px 0 0 -29px; }
+}
+
+.wire-face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid currentColor;
+  margin-top: calc(var(--fh) / -2);
+  margin-left: calc(var(--fw) / -2);
+  width: var(--fw);
+  height: var(--fh);
+}
+.wire-f-front  { --fw: var(--bw); --fh: var(--bh); transform: translateZ(calc(var(--bd) / 2)); }
+.wire-f-back   { --fw: var(--bw); --fh: var(--bh); transform: translateZ(calc(var(--bd) / -2)); }
+.wire-f-right  { --fw: var(--bd); --fh: var(--bh); transform: rotateY(90deg) translateZ(calc(var(--bw) / 2)); }
+.wire-f-left   { --fw: var(--bd); --fh: var(--bh); transform: rotateY(-90deg) translateZ(calc(var(--bw) / 2)); }
+.wire-f-top    { --fw: var(--bw); --fh: var(--bd); transform: rotateX(90deg) translateZ(calc(var(--bh) / 2)); }
+.wire-f-bottom { --fw: var(--bw); --fh: var(--bd); transform: rotateX(-90deg) translateZ(calc(var(--bh) / 2)); }
+
+/* A module gathering into the box. `--mx/--my/--mz` is where it lands — all of
+   them inside the volume — and `--explode` throws it back out along that same
+   vector, so scrolling pulls it home.
+
+   The multipliers are bounded on purpose: the scene has no overflow clip (a
+   clip would cut the box at rest too), so a module thrown too far simply
+   escapes its column and gets sliced off by the section padding. At
+   --explode: 1 the widest module must still land inside the scene. */
+.wire-module {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 30px;
+  margin: -15px 0 0 -42px;
+  border: 1px solid currentColor;
+  background: var(--bg);
+  transform:
+    translate3d(
+      calc(var(--mx) * (1 + var(--explode) * var(--spread))),
+      calc(var(--my) * (1 + var(--explode) * var(--spread))),
+      calc(var(--mz) * (1 + var(--explode) * var(--spread-z)))
+    );
+}
+
+/* ---- The sales panel (the manifesto's object) ----
+   A plane at a FIXED depth. `.wire-plane` scales its Z by `--explode`, which is
+   what makes the hero and the box assemble as you scroll; this object must not
+   do that a third time, so it gets its own layer class and keeps its shape. */
+.wire-layer {
+  position: absolute;
+  inset: 0;
+  transform: translateZ(var(--z));
+  transform-style: preserve-3d;
+}
+
+/* The panel spends `--p` on GROWTH instead: the bars rise out of the baseline
+   as the drawing travels up the viewport. Geared up and clamped because `--p`
+   only reaches ~0.62 by the time the object sits in the middle of the screen —
+   ungeared, the chart would still be climbing as it left the top.
+
+   It is also the one figure that survives any `--p`: WireScene parks reduced
+   motion at 0.35, and a chart at 56% is a shorter chart, where a half-assembled
+   machine would read as broken. */
+.wire-chart {
+  --grow: min(1, calc(var(--p) * 1.6));
+  display: flex;
+  align-items: flex-end;
+  gap: 4%;
+}
+
+/* Outlined, not filled: a solid bar would be the only mass on a page drawn
+   entirely in 1px line. The last one is filled precisely because it is the
+   exception — it is the sale the whole section is arguing about. */
+.wire-bar {
+  flex: 1;
+  height: calc(var(--bar-h) * var(--grow));
+  border: 1px solid currentColor;
+  /* the rise has to be watchable, not just scroll-linked: transitions on a
+     scroll-driven custom property would fight the listener, so the height is
+     driven straight off --p and the smoothing comes from rAF. */
+}
+.wire-bar-lead {
+  background: currentColor;
+}
+
+/* Gridlines — what makes a chart legible as a chart rather than as a row of
+   rectangles. Drawn at the faintest rung, behind the bars. Positioned by the
+   caller, so it carries no `inset` of its own. */
+.wire-grid {
+  background-image: repeating-linear-gradient(
+    to top,
+    currentColor 0 1px,
+    transparent 1px 25%
+  );
+}
+
+/* ============================================================
+   Marquee (integration ticker strip)
+   ============================================================ */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - var(--gap, 1rem))); }
+}
+
+/* The RTL loop runs the other way, and it is not a stylistic choice. A flex row
+   in RTL is laid out from the right edge leftwards, so the copies that have not
+   been seen yet sit off-screen to the LEFT. Translating negatively drags the
+   row further left, away from its own overflow: the right edge of the strip
+   pulls inward and opens a widening void — the "scroll that stops being
+   infinite". Moving the row positively slides copy N+1 into the place copy N
+   just left, which is what makes the seam invisible.
+
+   `[dir='rtl'] &` and not `:dir(rtl)`: the pseudo-class is still too young to
+   carry the whole ticker, and every RTL surface here already declares the
+   attribute outright. */
+@keyframes marquee-rtl {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(100% + var(--gap, 1rem))); }
+}
+@keyframes marquee-vertical {
+  from { transform: translateY(0); }
+  to { transform: translateY(calc(-100% - var(--gap, 1rem))); }
+}
+.animate-marquee { animation: marquee var(--duration, 40s) linear infinite; }
+[dir='rtl'] .animate-marquee { animation-name: marquee-rtl; }
+.animate-marquee-vertical { animation: marquee-vertical var(--duration, 40s) linear infinite; }
+
+/* ============================================================
+   Reveal-on-scroll — a short, quiet rise. Driven by <Reveal/>.
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============================================================
+   The motion layer
+   ------------------------------------------------------------
+   The page is a technical drawing, so it comes alive the way a drawing does:
+   lines get DRAWN, type is uncovered by a straightedge, a product window wakes
+   when you look at it. Everything here is spelled in the system's own
+   vocabulary — hairline, inversion, the accent as a functional marker. Nothing
+   glows, nothing blurs, nothing casts a shadow, nothing rounds a corner.
+
+   All of it is switched off under prefers-reduced-motion at the foot of the
+   file. Every effect is therefore a decoration on a page that is already
+   complete without it — never the thing that makes content legible.
+   ============================================================ */
+
+/* ---- Rules that draw themselves ----
+   A ruled row inside a <Reveal/> pulls its hairline out from the RTL start edge
+   as the row arrives, instead of the whole rule fading up as one block.
+
+   The line is a pseudo-element rather than the element's own border, because a
+   `transform` on the row itself would drag the row's text along with the line.
+   A transparent border of its own holds the 1px the row would otherwise lose.
+
+   This class REPLACES `rule-t`; it does not decorate it. `rule-t` is an
+   @utility, and Tailwind's utilities layer outranks this one — pairing them
+   would leave the real border painted underneath, and the "drawn" line would
+   simply appear on top of a rule that was there all along. */
+.rule-draw,
+.rule-draw-b {
+  position: relative;
+}
+.rule-draw { border-top: 1px solid transparent; }
+.rule-draw-b { border-bottom: 1px solid transparent; }
+
+.rule-draw::before,
+.rule-draw-b::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  height: 1px;
+  background: var(--rule);
+  /* RTL: the drawing hand starts at the right edge */
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.05s;
+}
+.rule-draw::before { inset-block-start: -1px; }
+.rule-draw-b::before { inset-block-end: -1px; }
+
+[dir='ltr'] .rule-draw::before,
+[dir='ltr'] .rule-draw-b::before { transform-origin: 0 50%; }
+
+.reveal.is-visible .rule-draw::before,
+.reveal.is-visible .rule-draw-b::before { transform: scaleX(1); }
+
+/* The hero's rail is the one ledger row that is NOT inside a <Reveal/> — it is
+   already on screen at load, so it has no arrival to wait for. It draws on a
+   timer instead, in step with the display lines rising beside it. */
+.rule-draw-load::before {
+  animation: rule-draw-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+@keyframes rule-draw-in {
+  to { transform: scaleX(1); }
+}
+
+/* ---- Display type, uncovered ----
+   The hero's two display lines rise into a clipped box, the way a sheet is
+   pulled off a drawing. It runs on load rather than on scroll: the hero is
+   already on screen, and a line that waits for an IntersectionObserver would
+   simply never move.
+
+   The padding/margin pair is not cosmetic — `overflow: hidden` would otherwise
+   crop the outlined line's 2px text-stroke against the box it rises into. */
+.line-mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.line-mask > span {
+  display: block;
+  transform: translateY(110%);
+  animation: line-rise 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes line-rise {
+  to { transform: none; }
+}
+
+/* ---- A hairline that sweeps under a link on hover ----
+   `currentColor`, so the same class works on a nav label, a card title and a
+   tag chip, on either band, without ever naming a colour. */
+.sweep {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 0 1px;
+  transition: background-size 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[dir='ltr'] .sweep { background-position: 0 100%; }
+.sweep:hover,
+.group:hover .sweep,
+a:hover > .sweep {
+  background-size: 100% 1px;
+}
+
+/* ---- The product window wakes ----
+   The screen pushes gently toward the reader inside its own frame; the frame
+   itself never moves, because the frame is the drawing and the screen is the
+   thing being drawn. Clipping lives on the frame, so the zoom cannot leak past
+   the hairline. */
+.window-frame {
+  overflow: hidden;
+}
+.window-screen {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.group:hover .window-screen {
+  transform: scale(1.035);
+}
+
+/* ---- Icons lean into the direction of travel on hover ---- */
+.icon-nudge {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.group:hover .icon-nudge {
+  transform: translateY(-2px);
+}
+
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+
+/* ============================================================
+   Legal documents — privacy policy, terms, accessibility statement
+   ------------------------------------------------------------
+   One measure of running text on the paper band. These pages are read, not
+   scanned, so the type is set for continuous reading (16px / 1.8) while the
+   section heads keep the landing's brutalist voice. Band variables only —
+   drop the same markup on ink and it still reads correctly.
+   ============================================================ */
+.legal {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+.legal h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-size: 22px;
+}
+.legal h2:first-child { margin-top: 2.5rem; }
+.legal p { margin-bottom: 1.15rem; }
+.legal ul {
+  margin-bottom: 1.15rem;
+  padding-inline-start: 0;
+  list-style: none;
+}
+/* A ruled marker instead of a bullet: the same hairline vocabulary the rest of
+   the page is built from. */
+.legal li {
+  position: relative;
+  margin-bottom: 0.7rem;
+  padding-inline-start: 1.5rem;
+}
+.legal li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.85em;
+  width: 10px;
+  height: 1px;
+  background: var(--rule-strong);
+}
+.legal strong { color: var(--fg); font-weight: 700; }
+.legal a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---- Sienna a11y widget ----
+   The launcher is fixed at bottom-LEFT (left: 30px; bottom: 30px) — which in
+   RTL is exactly where the consent bar puts its two buttons. While the bar is
+   on screen, lift the launcher clear of it; otherwise they overlap and neither
+   is reliably clickable. `!important` is required, not defensive: Sienna's own
+   rule is unlayered, and an unlayered declaration outranks a layered one unless
+   the layered one is important.
+
+   The lift has to clear a bar whose height is not a constant: the title wraps at
+   360 and the strip measures ~218px there against ~195px at 390, so the flat
+   200px this used to carry parked the launcher 20px INSIDE the bar, across its
+   own top rule. If the bar publishes its measured height the launcher tracks it;
+   the fallback is the worst-case bar, so the rule is correct on its own. */
+body:has(#cookie-bar) .asw-menu-btn {
+  bottom: calc(var(--cookie-bar-h, 224px) + 16px) !important;
+}
+@media (min-width: 768px) {
+  body:has(#cookie-bar) .asw-menu-btn {
+    bottom: 130px !important;
+  }
+}
+
+} /* /@layer components */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-marquee,
+  .animate-marquee-vertical { animation: none !important; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .btn-arrow { transition: none; }
+
+  /* The motion layer switches off, but nothing it touched may be left in the
+     "before" pose: an undrawn rule, a display line parked below its mask and a
+     collapsed underline would each remove content from the page rather than
+     merely stop moving. So every effect is pinned to its FINISHED state. */
+  .rule-draw::before,
+  .rule-draw-b::before,
+  .rule-draw-load::before { transform: none; transition: none; animation: none; }
+  .line-mask > span { transform: none; animation: none; }
+  .sweep { transition: none; }
+  .window-screen,
+  .icon-nudge { transition: none; }
+  .group:hover .window-screen,
+  .group:hover .icon-nudge { transform: none; }
+  /* The objects hold their resting pose instead of turning. They stay
+     composed — stopping the animation must not flatten them into a plain
+     rectangle. <WireScene/> also skips the scroll listener and pins --explode,
+     so nothing moves as the page scrolls either. */
+  .wire-stack { animation: none; }
+}
