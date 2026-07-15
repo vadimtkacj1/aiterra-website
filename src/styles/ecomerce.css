@@ -74,6 +74,14 @@
     direction: rtl;
     color: var(--color-fg);
     -webkit-font-smoothing: antialiased;
+    /* Long words wrap instead of running off the side. At normal sizes every
+       heading already fits, but a reader who has turned up the browser/OS text
+       scaling (common on Android) or the a11y widget's "bigger text" blows a
+       single display word (e.g. "השותפים") wider than the phone — without this
+       it would push past the edge and get clipped. `overflow-wrap` is inherited,
+       so one declaration covers every heading and paragraph in the subtree;
+       words only break when they genuinely cannot fit. */
+    overflow-wrap: break-word;
     /* Contain horizontal overflow on the landing subtree.
        `overflow-x: hidden` on <body> (the host site's rule) is unreliable on
        iOS Safari — it does not clip the page's own initial containing block, so
