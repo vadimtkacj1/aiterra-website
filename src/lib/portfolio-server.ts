@@ -83,6 +83,7 @@ export function normalizePortfolioPayload(raw: Partial<PortfolioProject>): Portf
     heroTitle: (raw.heroTitle ?? '').trim(),
     heroDescription: (raw.heroDescription ?? '').trim(),
     image: (raw.image ?? '').trim(),
+    screenshot: optStr(raw.screenshot),
     tags: normalizeTags(raw.tags),
     hasPage,
     liveSiteUrl: optUrl(raw.liveSiteUrl),

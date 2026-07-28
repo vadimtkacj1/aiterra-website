@@ -268,6 +268,12 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
         <Field label="טקסט חלופי (Alt)" hint="לנגישות ו-SEO; אם ריק — ישתמש בכותרת הפרויקט">
           <input value={form.imageAlt ?? ''} onChange={(e) => set('imageAlt', e.target.value || undefined)} placeholder={form.title || 'תיאור קצר של התמונה'} className={inputCls} />
         </Field>
+        <Field
+          label="צילום מסך מלא של האתר (רשימת הפרויקטים)"
+          hint="לכידת עמוד מלא ברוחב 900px וגובה 1800px — נגללת בתוך חלון הדפדפן בכרטיס. אם ריק — תוצג התמונה הראשית ללא גלילה"
+        >
+          <input value={form.screenshot ?? ''} onChange={(e) => set('screenshot', e.target.value || undefined)} placeholder="/images/portfolio/shots/..." className={inputCls} dir="ltr" />
+        </Field>
 
         <div className="border-t border-[#f0f0f0] pt-4">
           <div className="mb-3 flex items-center justify-between">

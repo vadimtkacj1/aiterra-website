@@ -269,3 +269,66 @@
     animation: none;
   }
 }
+
+/* ── Portfolio live-site frames ──────────────────────────────────────────────
+   Each card holds a real 900×1800 full-page capture inside a 16/10 window, so
+   the travel is always (1800 − 1800/3.2) / 1800 = 68.75% of the image height —
+   one constant drives every frame. Hover scrolls the whole site on a mouse;
+   PortfolioShot toggles .is-live on touch, where there is no hover.           */
+.shot-skeleton {
+  border-radius: 10px;
+  background:
+    linear-gradient(100deg, #f3f3f6 28%, #e7e7ee 42%, #e7e7ee 58%, #f3f3f6 72%);
+  background-size: 200% 100%;
+  animation: portfolio-shimmer 1.4s ease-in-out infinite;
+}
+
+.shot-frame {
+  --shot-travel: -68.75%;
+  --shot-duration: 3.4s;
+}
+
+.shot-img,
+.shot-rail {
+  transition: transform var(--shot-duration) cubic-bezier(0.33, 0, 0.2, 1);
+}
+
+.shot-rail {
+  transform: scaleX(0);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .shot-card:hover .shot-img {
+    transform: translate3d(0, var(--shot-travel), 0);
+    will-change: transform;
+  }
+
+  .shot-card:hover .shot-rail {
+    transform: scaleX(1);
+  }
+}
+
+/* Touch fallback — plays while the card is centred in the viewport. */
+.shot-img.is-live {
+  transform: translate3d(0, var(--shot-travel), 0);
+}
+
+.shot-img.is-live ~ .shot-rail-track .shot-rail {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shot-skeleton {
+    animation: none;
+  }
+
+  .shot-img,
+  .shot-rail {
+    transition: none;
+  }
+
+  .shot-card:hover .shot-img,
+  .shot-img.is-live {
+    transform: none;
+  }
+}

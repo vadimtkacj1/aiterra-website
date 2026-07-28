@@ -3,13 +3,116 @@ import type { PortfolioProject } from '@/types'
 /** Initial data when `data/portfolio-projects.json` is missing (first run / deploy). */
 export const PORTFOLIO_SEED: PortfolioProject[] = [
   {
+    slug: 'neot-sade',
+    title: 'נאות שדה',
+    category: 'חנויות וירטואליות',
+    heroTitle: 'נאות שדה — חנות פירות וירקות אונליין',
+    heroDescription:
+      'בנינו לנאות שדה חנות אונליין מלאה למשלוח פירות, ירקות ומוצרי מזווה עד הבית ברעננה ובאזור השרון. האתר כולל קטלוג מוצרים המנוהל דרך ממשק ניהול, עגלת קניות וסליקת אשראי מאובטחת באתר, מועדון לקוחות עם צבירת נקודות וקאשבק, וחישוב דמי משלוח לפי כתובת הלקוח בקופה.',
+    image: '/images/portfolio/hero/neot-sade.webp',
+    screenshot: '/images/portfolio/shots/neot-sade.webp',
+    tags: ['Next.js', 'eCommerce', 'סליקה', 'מועדון לקוחות'],
+    liveSiteUrl: 'https://neotsade.co.il/',
+    imageAlt: 'צילום מסך של דף הבית באתר נאות שדה — חנות פירות וירקות אונליין',
+    metaDescription:
+      'הקמת חנות אונליין לנאות שדה: משלוח פירות וירקות טריים עד הבית ברעננה, קטלוג מנוהל, סליקה מאובטחת ומועדון לקוחות. צפו בפרויקט המלא.',
+    sortOrder: -50,
+    rev: 1,
+  },
+  {
+    slug: 'sous-chef',
+    title: 'Sous Chef',
+    category: 'בניית אתרים',
+    heroTitle: 'Sous Chef — אתר מוצר לפלטפורמת ניהול מסעדות',
+    heroDescription:
+      'אתר מוצר באנגלית ל-Sous Chef, פלטפורמה מבוססת AI לניהול מסעדות. האתר מציג את יכולות המערכת — ניהול תפריטים בכל אפליקציות המשלוחים ממקום אחד, תובנות שבועיות והמלצות לפעולה להגדלת ההכנסות — בעיצוב כהה ומודרני, עם מסלול המרה ברור להזמנת דמו.',
+    image: '/images/portfolio/hero/sous-chef.webp',
+    screenshot: '/images/portfolio/shots/sous-chef.webp',
+    tags: ['SaaS', 'אתר מוצר', 'UI/UX', 'English'],
+    liveSiteUrl: 'https://onetablet.com/',
+    imageAlt: 'צילום מסך של דף הבית באתר Sous Chef — פלטפורמת ניהול מסעדות',
+    metaDescription:
+      'אתר מוצר ל-Sous Chef, פלטפורמת AI לניהול מסעדות וניהול תפריטים באפליקציות המשלוחים. עיצוב כהה, מסרים ברורים ומסלול המרה לדמו.',
+    sortOrder: 10,
+    rev: 1,
+  },
+  {
+    slug: 'karin-cohen',
+    title: 'קארין כהן — אקדמיה לריסים',
+    category: 'בניית אתרים',
+    heroTitle: 'קארין כהן — אקדמיה לריסים ואיפור קבוע',
+    heroDescription:
+      'אתר תדמית ומכירה לאקדמיית קארין כהן בחולון. בנינו דף אחד ארוך שמוביל מהסיפור האישי אל ההרשמה: שני מסלולי קורס עם תמחור ומבצע, מערך טיפולי קוסמטיקה ואיפור קבוע, גלריית לפני/אחרי, המלצות לקוחות, שאלות נפוצות, טופס תיאום תור וחיבור ישיר לוואטסאפ.',
+    image: '/images/portfolio/hero/karin-cohen.webp',
+    screenshot: '/images/portfolio/shots/karin-cohen.webp',
+    tags: ['דף נחיתה', 'UI/UX', 'לידים', 'WhatsApp'],
+    liveSiteUrl: 'https://karin-cohen.com/',
+    imageAlt: 'צילום מסך של דף הבית באתר אקדמיית קארין כהן',
+    metaDescription:
+      'אתר לאקדמיית קארין כהן בחולון: מסלולי קורס, טיפולי קוסמטיקה ואיפור קבוע, גלריית לפני/אחרי וטופס תיאום תור. צפו בפרויקט המלא.',
+    sortOrder: -30,
+    rev: 1,
+  },
+  {
+    slug: 'hofit-cosmetics',
+    title: 'קוסמטיקס חופית',
+    category: 'בניית אתרים',
+    heroTitle: 'קוסמטיקס חופית — קליניקת יופי בחולון',
+    heroDescription:
+      'אתר לקליניקת קוסמטיקס חופית בחולון. האתר מציג את שירותי הסרת השיער בלייזר קר, מיצוק עור RF ומיקרובליידינג, וכולל טבלת השוואה מול קליניקות אחרות, גלריות לפני/אחרי, ביקורות לקוחות וטופס פנייה — כשכל קריאה לפעולה מובילה ישירות לוואטסאפ לקביעת תור.',
+    image: '/images/portfolio/hero/hofit-cosmetics.webp',
+    screenshot: '/images/portfolio/shots/hofit-cosmetics.webp',
+    tags: ['דף נחיתה', 'UI/UX', 'WhatsApp', 'לידים'],
+    liveSiteUrl: 'https://hofit-cosmetics.com/',
+    imageAlt: 'צילום מסך של דף הבית באתר קוסמטיקס חופית',
+    metaDescription:
+      'אתר לקליניקת קוסמטיקס חופית בחולון: הסרת שיער בלייזר קר, מיצוק עור RF ומיקרובליידינג, גלריות לפני/אחרי וקביעת תור בוואטסאפ.',
+    sortOrder: -20,
+    rev: 1,
+  },
+  {
+    slug: 'maayan-cosmetics',
+    title: 'מעיין ועקנין — קוסמטיקה קלינית',
+    category: 'בניית אתרים',
+    heroTitle: 'מעיין ועקנין — קוסמטיקאית קלינית',
+    heroDescription:
+      'אתר לקוסמטיקאית הקלינית מעיין ועקנין בחולון. בנינו אתר טיפוגרפי ונקי הכולל תפריט טיפולים מלא עם מחירון נפרד, גלריית עבודות המחולקת לתחומי איפור וקוסמטיקה, קטלוג מוצרי הקליניקה, טופס קביעת תור וחיבור לוואטסאפ — לצד עמודי תקנון, מדיניות פרטיות והצהרת נגישות.',
+    image: '/images/portfolio/hero/maayan-cosmetics.webp',
+    screenshot: '/images/portfolio/shots/maayan-cosmetics.webp',
+    tags: ['דף נחיתה', 'UI/UX', 'נגישות', 'לידים'],
+    liveSiteUrl: 'https://maayan-cosmetics.com/',
+    imageAlt: 'צילום מסך של דף הבית באתר מעיין ועקנין — קוסמטיקה קלינית',
+    metaDescription:
+      'אתר לקוסמטיקאית הקלינית מעיין ועקנין בחולון: תפריט טיפולים ומחירון, גלריית עבודות, קטלוג מוצרים וקביעת תור. צפו בפרויקט המלא.',
+    sortOrder: -10,
+    rev: 1,
+  },
+  {
+    slug: 'eli-ben-yitzhak',
+    title: 'אלי בן יצחק',
+    category: 'בניית אתרים',
+    heroTitle: 'אלי בן יצחק — סטודיו לעיצוב שיער בבת ים',
+    heroDescription:
+      'אתר תדמית לסטודיו אלי בן יצחק, סטודיו בוטיק לעיצוב שיער בבת ים המתמחה בהחלקות אורגניות, אומברה ובלייאז׳. האתר מציג את השירותים לגברים, נשים וילדים, גלריית עבודות מהסטודיו, המלצות לקוחות וטופס פנייה — כשכל קריאה לפעולה מובילה לקביעת תור בטלפון או בוואטסאפ.',
+    image: '/images/portfolio/hero/eli-ben-yitzhak.webp',
+    screenshot: '/images/portfolio/shots/eli-ben-yitzhak.webp',
+    tags: ['דף נחיתה', 'UI/UX', 'גלריית עבודות', 'WhatsApp'],
+    liveSiteUrl: 'https://elibenyizhak.com/',
+    imageAlt: 'צילום מסך של דף הבית באתר אלי בן יצחק — סטודיו לעיצוב שיער',
+    metaDescription:
+      'אתר תדמית לסטודיו אלי בן יצחק בבת ים: החלקות שיער אורגניות, אומברה ובלייאז׳, גלריית עבודות, המלצות לקוחות וקביעת תור בוואטסאפ.',
+    sortOrder: -5,
+    rev: 1,
+  },
+  {
     slug: 'olie-6',
     title: 'Olie 6',
     category: 'בניית אתרים',
     heroTitle: 'Olie 6',
     heroDescription:
       'פיתחנו עבור Olie 6, מותג קוסמטיקה המתמחה בסרומים לפנים, תשתית איקומרס מתקדמת מבוססת שופיפיי. האתר עוצב בקו מינימליסטי ויוקרתי, ונבנה טכנולוגית מראש במטרה ברורה למקסם המרות מכירות וליצור חוויית משתמש חלקה',
-    image: '/images/portfolio/portfolio2.webp',
+    image: '/images/portfolio/hero/olie-6.webp',
+    screenshot: '/images/portfolio/shots/olie-6.webp',
     tags: ['Shopify', 'eCommerce', 'UI/UX'],
     liveSiteUrl: 'https://olie6.com/',
     caseStudy: [
@@ -23,7 +126,8 @@ export const PORTFOLIO_SEED: PortfolioProject[] = [
     category: 'חנויות וירטואליות',
     heroTitle: 'חנות דיגיטלית מתקדמת',
     heroDescription: 'פיתוח חנות וירטואלית מלאה עם סל קניות, עיבוד תשלומים מאובטח ומערכת ניהול מוצרים מתקדמת.',
-    image: '/images/portfolio/portfolio1.webp',
+    image: '/images/portfolio/hero/ecommerce-store.webp',
+    screenshot: '/images/portfolio/shots/ecommerce-store.webp',
     tags: ['React', 'Node.js', 'Stripe'],
     externalUrl: 'https://naturallyrefreshing.store/',
   },
@@ -34,7 +138,8 @@ export const PORTFOLIO_SEED: PortfolioProject[] = [
     heroTitle: 'רם וחיים - שיווק נדל"ן',
     heroDescription:
       'מנו וניהלנו מעטפת נכסים דיגיטליים עבור "רם וחיים - שיווק נדל"ן", תוך התמקדות בבניית נוכחות רשת חזקה וסמכותית. הפרויקט כלל הקמת תשתית דיגיטלית יציבה שמהווה בסיס איתן לצמיחה, וניהול מוניטין חכם שנועד לבסס אמון ולייצר פניות איכותיות בענף הנדל"ן התחרותי.',
-    image: '/images/portfolio/portfolio3.webp',
+    image: '/images/portfolio/hero/brand-identity.webp',
+    screenshot: '/images/portfolio/shots/brand-identity.webp',
     tags: ['SEO', 'ניהול מוניטין', 'נכסים דיגיטליים'],
     liveSiteUrl: 'https://ram-haim.co.il/',
     caseStudy: [
@@ -49,7 +154,8 @@ export const PORTFOLIO_SEED: PortfolioProject[] = [
     heroTitle: 'אבי ייעוץ משכנתאות',
     heroDescription:
       "יצרנו מעטפת דיגיטלית ומיתוגית שלמה עבור 'אבי ייעוץ משכנתאות', החל מעיצוב שפה ויזואלית וכרטיסי ביקור, ועד לפיתוח דפי נחיתה ממירים. בנוסף, בנינו וניהלנו מערך קמפיינים מתקדם במטא המבוסס על משפך שיווקי (Funnel) חכם, שמזרים לידים איכותיים ומחמם אותם עד לסגירת העסקה.",
-    image: '/images/portfolio/portfolio4.webp',
+    image: '/images/portfolio/hero/marketing-platform.webp',
+    screenshot: '/images/portfolio/shots/marketing-platform.webp',
     tags: ['מיתוג', 'דפי נחיתה', 'Meta', 'Funnel'],
     liveSiteUrl: 'https://avi-mashkanta.com/',
     caseStudy: [
@@ -63,7 +169,8 @@ export const PORTFOLIO_SEED: PortfolioProject[] = [
     category: 'בניית אתרים',
     heroTitle: 'Alexandra Patsina',
     heroDescription: 'אתר תדמית, מיתוג ונוכחות דיגיטלית.',
-    image: '/images/portfolio/portfolio5.webp',
+    image: '/images/portfolio/hero/alexandra-patsina.webp',
+    screenshot: '/images/portfolio/shots/alexandra-patsina.webp',
     tags: ['UI/UX', 'מיתוג', 'אתר'],
     externalUrl: 'https://alexandra-patsina.com/',
   },

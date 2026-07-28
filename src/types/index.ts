@@ -17,6 +17,12 @@ export interface PortfolioProject {
   heroTitle: string
   heroDescription: string
   image: string
+  /**
+   * Tall full-page capture of the live client site (900×1800 webp) shown in the
+   * portfolio grid's browser frame — it scrolls through the window on hover.
+   * Falls back to `image` (static, no scroll) when absent.
+   */
+  screenshot?: string
   tags: string[]
   /** When false, no individual project page is created (grid-only item). */
   hasPage?: boolean
