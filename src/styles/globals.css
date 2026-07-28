@@ -68,6 +68,13 @@
   display: none !important;
 }
 
+/* While the cookie banner is up it owns the bottom strip. The Sienna launcher
+   is fixed in the same corner at z-index 500000 and would punch through it, so
+   drop it just below the banner's 9999 until the banner is dismissed. */
+body.cookie-banner-open .asw-menu-btn {
+  z-index: 9998 !important;
+}
+
 @keyframes ticker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }

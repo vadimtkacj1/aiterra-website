@@ -18,6 +18,14 @@ export default function CookieConsent() {
     if (!stored) setVisible(true)
   }, [])
 
+  // The Sienna launcher sits in the same bottom-left corner with an inline
+  // z-index of 500000; this class lets globals.css tuck it under the banner
+  // for as long as the banner is up.
+  useEffect(() => {
+    document.body.classList.toggle('cookie-banner-open', visible)
+    return () => document.body.classList.remove('cookie-banner-open')
+  }, [visible])
+
   function accept() {
     localStorage.setItem('cookie-consent', 'accepted')
     setVisible(false)
