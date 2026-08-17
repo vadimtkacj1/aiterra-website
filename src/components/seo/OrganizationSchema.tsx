@@ -31,7 +31,7 @@ export default function OrganizationSchema() {
       width: 512,
       height: 512,
     },
-    image: `${SITE_URL}/images/hero/hero-aiterra.png`,
+    image: `${SITE_URL}/images/og/og-aiterra.png`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'רחוב הרב ניסנבאום 37',

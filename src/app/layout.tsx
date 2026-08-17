@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: 'AITERRA | שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם',
     description: 'סוכנות AITERRA מציעה מערכת 360° לצמיחה עסקית: בניית אתרים מתקדמת, קידום אורגני SEO, פרסום ממומן ואוטומציה עסקית. ייעוץ חינם – השאירו פרטים!',
-    images: [{ url: '/images/hero/hero-aiterra.png', width: 1200, height: 630, alt: 'AITERRA' }],
+    images: [{ url: '/images/og/og-aiterra.png', width: 1200, height: 630, alt: 'AITERRA' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AITERRA | שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם',
     description: 'סוכנות AITERRA מציעה מערכת 360° לצמיחה עסקית: בניית אתרים מתקדמת, קידום אורגני SEO, פרסום ממומן ואוטומציה עסקית. ייעוץ חינם – השאירו פרטים!',
-    images: ['/images/hero/hero-aiterra.png'],
+    images: ['/images/og/og-aiterra.png'],
   },
   robots: {
     index: true,

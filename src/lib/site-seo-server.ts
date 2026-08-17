@@ -168,7 +168,7 @@ export function metadataForRoute(routePath: string): Metadata {
       locale: 'he_IL',
       images: [
         {
-          url: '/images/hero/hero-aiterra.png',
+          url: '/images/og/og-aiterra.png',
           width: 1200,
           height: 630,
           alt: r.ogTitle,
@@ -179,7 +179,7 @@ export function metadataForRoute(routePath: string): Metadata {
       card: 'summary_large_image',
       title: r.twitterTitle,
       description: r.twitterDescription,
-      images: ['/images/hero/hero-aiterra.png'],
+      images: ['/images/og/og-aiterra.png'],
     },
   }
   if (r.keywords.length) meta.keywords = r.keywords
