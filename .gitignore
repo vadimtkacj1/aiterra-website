@@ -22,6 +22,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# customer leads — written at runtime, holds phone numbers and emails.
+# The rest of data/ is seed content and stays tracked.
+data/site-leads.json
+
 # misc
 .DS_Store
 *.pem

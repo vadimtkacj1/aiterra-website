@@ -27,14 +27,27 @@ async function notifyByEmail(lead: Lead): Promise<void> {
   const host = process.env.SMTP_HOST
   const user = process.env.SMTP_USER
   const pass = process.env.SMTP_PASS
-  if (!host || !user || !pass) return // not configured yet — skip silently
+  if (!host) {
+    // Loud on purpose: a silently skipped notification looks identical to a
+    // delivered one, and leads went unnoticed for weeks that way.
+    console.warn('lead saved but NOT emailed — SMTP_HOST missing in .env')
+    return
+  }
 
   const to = process.env.LEAD_NOTIFY_TO || 'info@aiterra.co.il'
-  const from = process.env.LEAD_NOTIFY_FROM || user
+  const from = process.env.LEAD_NOTIFY_FROM || user || to
   const port = Number(process.env.SMTP_PORT || 587)
   const secure = process.env.SMTP_SECURE === 'true' || port === 465
 
-  const transporter = nodemailer.createTransport({ host, port, secure, auth: { user, pass } })
+  // Google Workspace SMTP relay authenticates this server by IP allowlist, so
+  // credentials are optional — pass auth only when a mailbox login is set.
+  const transporter = nodemailer.createTransport({
+    host,
+    port,
+    secure,
+    requireTLS: !secure,
+    ...(user && pass ? { auth: { user, pass } } : {}),
+  })
 
   const rows: [string, string | null][] = [
     ['שם', lead.name],
