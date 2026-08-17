@@ -1,6 +1,5 @@
 import type { MetadataRoute } from 'next'
 import { services } from '@/data/services'
-import { getAllPortfolioProjects } from '@/lib/portfolio-server'
 import { getAllPosts } from '@/lib/blog-server'
 import { getAllAuthors } from '@/lib/authors-server'
 import { SITE_URL } from '@/lib/seo'
@@ -65,20 +64,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  // hasPage: false projects render 404 — keep them out of the sitemap
-  const portfolioEntries: MetadataRoute.Sitemap = getAllPortfolioProjects()
-    .filter((project) => project.hasPage !== false)
-    .map((project) => {
-      const imgs = [project.image, ...(project.galleryImages ?? [])].filter(Boolean).map(absUrl)
-      return {
-        url: `${SITE_URL}/portfolio/${project.slug}`,
-        lastModified: latestContent,
-        changeFrequency: 'monthly' as const,
-        priority: 0.7,
-        ...(imgs.length ? { images: imgs } : {}),
-      }
-    })
-
   // getAllPosts() already merges admin-created posts with the bundled seed
   const postEntries: MetadataRoute.Sitemap = posts.map((post) => {
     const imgs = (post.images ?? []).filter(Boolean).map(absUrl)
@@ -103,7 +88,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...commercialEntries,
     ...legalEntries,
     ...serviceEntries,
-    ...portfolioEntries,
     ...postEntries,
     ...authorEntries,
   ]

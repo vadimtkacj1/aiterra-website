@@ -4,7 +4,6 @@ export { default as AboutHeroSection } from './hero/AboutHeroSection'
 export { default as ServicesHeroSection } from './hero/ServicesHeroSection'
 export { default as ServicePageHeroSection } from './hero/ServicePageHeroSection'
 export { default as PortfolioHeroSection } from './hero/PortfolioHeroSection'
-export { default as PortfolioProjectHeroSection } from './hero/PortfolioProjectHeroSection'
 export { default as BlogHeroSection } from './hero/BlogHeroSection'
 export { default as ContactHeroSection } from './hero/ContactHeroSection'
 

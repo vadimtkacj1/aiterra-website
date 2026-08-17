@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
       // /packages was a thin duplicate of /services (no real package tiers) —
       // consolidate so Google indexes one strong commercial page, not two.
       { source: '/packages', destination: '/services', permanent: true },
+      // Per-project case pages were dropped — the grid card now opens the live
+      // client site directly. Fold the indexed /portfolio/<slug> URLs back into
+      // the hub instead of letting them 404.
+      { source: '/portfolio/:slug', destination: '/portfolio', permanent: true },
     ]
   },
 }

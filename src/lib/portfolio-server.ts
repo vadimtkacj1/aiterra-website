@@ -75,17 +75,15 @@ function clearTombstone(slug: string) {
 }
 
 export function normalizePortfolioPayload(raw: Partial<PortfolioProject>): PortfolioProject {
-  const hasPage = raw.hasPage === false ? false : undefined
   return {
     slug: (raw.slug ?? '').trim(),
     title: (raw.title ?? '').trim(),
     category: (raw.category ?? '').trim(),
-    heroTitle: (raw.heroTitle ?? '').trim(),
-    heroDescription: (raw.heroDescription ?? '').trim(),
+    heroTitle: optStr(raw.heroTitle),
+    heroDescription: optStr(raw.heroDescription),
     image: (raw.image ?? '').trim(),
     screenshot: optStr(raw.screenshot),
     tags: normalizeTags(raw.tags),
-    hasPage,
     liveSiteUrl: optUrl(raw.liveSiteUrl),
     externalUrl: optUrl(raw.externalUrl),
     caseStudy: normalizeCaseStudy(raw.caseStudy),
@@ -144,16 +142,14 @@ export function getProjectBySlug(slug: string): PortfolioProject | null {
   return getAllPortfolioProjects().find((p) => p.slug === slug) ?? null
 }
 
+// Projects have no on-site page any more — the grid card links straight to the
+// live client site — so only the fields the card itself renders are required.
 function assertRequired(p: PortfolioProject) {
   const missing: string[] = []
   if (!p.slug) missing.push('slug')
   if (!p.title) missing.push('title')
   if (!p.category) missing.push('category')
   if (!p.image) missing.push('image')
-  if (p.hasPage !== false) {
-    if (!p.heroTitle) missing.push('heroTitle')
-    if (!p.heroDescription) missing.push('heroDescription')
-  }
   if (missing.length) throw new Error(`missing: ${missing.join(', ')}`)
 }
 
@@ -187,6 +183,36 @@ export function updatePortfolioProject(slug: string, raw: Partial<PortfolioProje
   list[idx] = merged
   writeProjectsSorted(list)
   return merged
+}
+
+/**
+ * Rewrites `sortOrder` for every project so the list matches `slugs` exactly
+ * (drag-and-drop in the admin). Works off the *merged* view, so seed-only
+ * projects get materialized into the runtime store carrying their seed `rev` —
+ * without that, the seed would keep winning the rev comparison in
+ * `getAllPortfolioProjects()` and silently undo the new order.
+ * Slugs the caller omitted keep their relative position at the end.
+ */
+export function reorderPortfolioProjects(slugs: string[]): PortfolioProject[] {
+  const current = getAllPortfolioProjects()
+  const bySlug = new Map(current.map((p) => [p.slug, p]))
+  const seen = new Set<string>()
+  const ordered: PortfolioProject[] = []
+
+  for (const slug of slugs) {
+    const project = bySlug.get(slug)
+    if (!project || seen.has(slug)) continue
+    seen.add(slug)
+    ordered.push(project)
+  }
+  for (const project of current) {
+    if (!seen.has(project.slug)) ordered.push(project)
+  }
+
+  // Gaps of 10 leave room for the manual "סדר בתצוגה" field to slot between.
+  const next = ordered.map((project, index) => ({ ...project, sortOrder: index * 10 }))
+  writeProjectsSorted(next)
+  return next
 }
 
 export function deletePortfolioProject(slug: string): void {

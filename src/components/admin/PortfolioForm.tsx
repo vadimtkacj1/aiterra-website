@@ -2,18 +2,15 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { CheckCircle2, Plus, Trash2, Upload } from 'lucide-react'
+import { CheckCircle2, Trash2, Upload } from 'lucide-react'
 import type { PortfolioProject } from '@/types'
 
 const empty: PortfolioProject = {
   slug: '',
   title: '',
   category: '',
-  heroTitle: '',
-  heroDescription: '',
   image: '',
   tags: [],
-  hasPage: undefined,
 }
 
 function slugify(text: string) {
@@ -26,18 +23,17 @@ function slugify(text: string) {
 
 export default function PortfolioForm({ initial }: { initial?: PortfolioProject }) {
   const isEdit = !!initial
+  // Legacy case-page fields (caseStudy, meta*, hero*) ride along in state
+  // untouched so saving a project never wipes copy the form no longer edits.
   const [form, setForm] = useState<PortfolioProject>(() => ({
     ...(initial ?? empty),
     tags: initial?.tags?.length ? [...initial.tags] : [],
-    caseStudy: initial?.caseStudy?.length ? [...initial.caseStudy] : undefined,
-    galleryImages: initial?.galleryImages?.length ? [...initial.galleryImages] : [''],
   }))
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
   const [uploadError, setUploadError] = useState('')
   const [tagInput, setTagInput] = useState('')
   const [uploading, setUploading] = useState(false)
-  const [uploadingGallery, setUploadingGallery] = useState<number | null>(null)
   const router = useRouter()
 
   const set = <K extends keyof PortfolioProject>(k: K, v: PortfolioProject[K]) =>
@@ -50,11 +46,6 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
     setTagInput('')
   }
   const removeTag = (t: string) => set('tags', form.tags.filter((x) => x !== t))
-
-  const caseParas = form.caseStudy ?? []
-  const setCasePara = (i: number, val: string) => { const n = [...caseParas]; n[i] = val; set('caseStudy', n) }
-  const addCasePara = () => set('caseStudy', [...caseParas, ''])
-  const removeCasePara = (i: number) => { const n = caseParas.filter((_, idx) => idx !== i); set('caseStudy', n.length ? n : undefined) }
 
   const uploadCover = async (file: File) => {
     setUploading(true)
@@ -75,48 +66,16 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
     }
   }
 
-  const galleryRows = form.galleryImages ?? ['']
-  const setGalleryUrl = (i: number, val: string) => { const n = galleryRows.map((u, idx) => idx === i ? val : u); set('galleryImages', n) }
-  const addGalleryRow = () => set('galleryImages', [...galleryRows, ''])
-  const removeGalleryRow = (i: number) => set('galleryImages', galleryRows.length > 1 ? galleryRows.filter((_, idx) => idx !== i) : [''])
-  const uploadGallery = async (i: number, file: File) => {
-    setUploadingGallery(i)
-    setUploadError('')
-    try {
-      const fd = new FormData()
-      fd.append('file', file)
-      fd.append('dest', 'portfolio')
-      const res = await fetch('/api/admin/upload', { method: 'POST', body: fd })
-      let data: { url?: string; error?: string } = {}
-      try { data = await res.json() } catch { data = { error: 'תגובת שרת לא תקינה' } }
-      if (res.ok && data.url) setGalleryUrl(i, data.url)
-      else setUploadError(data.error || 'שגיאת העלאה')
-    } catch (e) {
-      setUploadError(e instanceof Error ? e.message : 'שגיאת העלאה')
-    } finally {
-      setUploadingGallery(null)
-    }
-  }
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setSaving(true)
     setError('')
-    const trimmedCase = form.caseStudy?.map((s) => s.trim()).filter(Boolean)
-    const galleryUrls = galleryRows.map((s) => s.trim()).filter(Boolean)
-    const payload: PortfolioProject = {
-      ...form,
-      ...(trimmedCase?.length ? { caseStudy: trimmedCase } : { caseStudy: undefined }),
-      galleryImages: galleryUrls,
-    }
     const url = isEdit ? `/api/admin/portfolio/${initial!.slug}` : '/api/admin/portfolio'
     const method = isEdit ? 'PUT' : 'POST'
-    const res = await fetch(url, { method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+    const res = await fetch(url, { method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) })
     if (res.ok) { router.push('/admin/portfolio'); router.refresh() }
     else { const data = await res.json(); setError(data.error || 'Помилка збереження'); setSaving(false) }
   }
-
-  const hasPageEnabled = form.hasPage !== false
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -194,47 +153,7 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
         </Field>
       </Section>
 
-      {/* ── 2. Налаштування сторінки ── */}
-      <Section title="דף פרויקט">
-        <div className="flex items-center gap-4 rounded-lg bg-gray-50 px-4 py-3" dir="rtl">
-          <button
-            type="button"
-            onClick={() => set('hasPage', hasPageEnabled ? false : undefined)}
-            className={`relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 focus:outline-none ${hasPageEnabled ? 'bg-[#1B1BB3]' : 'bg-gray-300'}`}
-            role="switch"
-            aria-checked={hasPageEnabled}
-          >
-            <span className={`pointer-events-none inline-block h-6 w-6 transform rounded-full bg-white shadow ring-0 transition duration-200 ${hasPageEnabled ? 'translate-x-5' : 'translate-x-0'}`} />
-          </button>
-        </div>
-
-        {hasPageEnabled && (
-          <div className="flex flex-col gap-4 pt-1">
-            <Field label="כותרת גיבור (Hero)" required>
-              <input value={form.heroTitle} onChange={(e) => set('heroTitle', e.target.value)} required className={inputCls} />
-            </Field>
-            <Field label="תיאור גיבור" required>
-              <textarea value={form.heroDescription} onChange={(e) => set('heroDescription', e.target.value)} rows={3} required className={inputCls} />
-            </Field>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-              <Field label="כפתור ראשי — טקסט">
-                <input value={form.heroCtaPrimaryLabel ?? ''} onChange={(e) => set('heroCtaPrimaryLabel', e.target.value || undefined)} placeholder="התחילו פרויקט דומה" className={inputCls} />
-              </Field>
-              <Field label="כפתור ראשי — קישור">
-                <input value={form.heroCtaPrimaryHref ?? ''} onChange={(e) => set('heroCtaPrimaryHref', e.target.value || undefined)} placeholder="/contact" className={inputCls} dir="ltr" />
-              </Field>
-              <Field label="כפתור משני — טקסט">
-                <input value={form.heroCtaSecondaryLabel ?? ''} onChange={(e) => set('heroCtaSecondaryLabel', e.target.value || undefined)} placeholder="כל הפרויקטים" className={inputCls} />
-              </Field>
-              <Field label="כפתור משני — קישור">
-                <input value={form.heroCtaSecondaryHref ?? ''} onChange={(e) => set('heroCtaSecondaryHref', e.target.value || undefined)} placeholder="/portfolio" className={inputCls} dir="ltr" />
-              </Field>
-            </div>
-          </div>
-        )}
-      </Section>
-
-      {/* ── 3. Зображення ── */}
+      {/* ── 2. Зображення ── */}
       <Section title="תמונות">
         <Field label="תמונה ראשית" required>
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
@@ -274,79 +193,25 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
         >
           <input value={form.screenshot ?? ''} onChange={(e) => set('screenshot', e.target.value || undefined)} placeholder="/images/portfolio/shots/..." className={inputCls} dir="ltr" />
         </Field>
-
-        <div className="border-t border-[#f0f0f0] pt-4">
-          <div className="mb-3 flex items-center justify-between">
-            <div>
-              <p className="text-[13px] font-semibold text-[#111827]">גלריית תמונות</p>
-              <p className="text-[12px] text-[#9ca3af]">מוצגות מתחת לתוכן בדף הפרויקט (אופציונלי)</p>
-            </div>
-            <button type="button" onClick={addGalleryRow} className="inline-flex items-center gap-1 rounded-lg border border-[#1B1BB3]/30 px-3 py-1.5 text-[12px] font-medium text-[#1B1BB3] hover:bg-[#1B1BB3]/5">
-              <Plus size={14} />תמונה
-            </button>
-          </div>
-          <div className="flex flex-col gap-2">
-            {galleryRows.map((url, i) => (
-              <div key={i} className="flex gap-2 items-center">
-                <input value={url} onChange={(e) => setGalleryUrl(i, e.target.value)} placeholder="/images/portfolio/..." className={`${inputCls} flex-1`} dir="ltr" />
-                <label className="inline-flex cursor-pointer items-center gap-1 rounded-lg border border-[#d9d9d9] px-3 py-2 text-[12px] font-medium text-[#374151] hover:bg-gray-50 whitespace-nowrap shrink-0">
-                  <Upload size={13} />
-                  {uploadingGallery === i ? '…' : 'העלאה'}
-                  <input type="file" accept="image/*" className="hidden" disabled={uploadingGallery !== null} onChange={(e) => { const f = e.target.files?.[0]; e.target.value = ''; if (f) void uploadGallery(i, f) }} />
-                </label>
-                <button type="button" onClick={() => removeGalleryRow(i)} className="rounded-lg border border-red-200 p-2 text-red-400 hover:bg-red-50 shrink-0"><Trash2 size={15} /></button>
-              </div>
-            ))}
-          </div>
-        </div>
       </Section>
 
-      {/* ── 4. Посилання ── */}
-      <Section title="קישורים (אופציונלי)">
+      {/* ── 3. Посилання ── */}
+      <Section title="קישור לאתר הפרויקט">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <Field label="קישור לאתר חי" hint="מופיע כקישור על התמונה בדף הפרויקט">
+          <Field label="קישור לאתר חי" hint="לחיצה על הכרטיס בתיק העבודות פותחת את הכתובת הזו בלשונית חדשה">
             <input value={form.liveSiteUrl ?? ''} onChange={(e) => set('liveSiteUrl', e.target.value || undefined)} placeholder="https://" className={inputCls} dir="ltr" />
           </Field>
-          <Field label="כתובת חיצונית" hint="אם מלא — הגריד מפנה ישירות לכאן במקום דף פנימי">
+          <Field label="כתובת חיצונית" hint="גיבוי — משמש רק כשהשדה מימין ריק">
             <input value={form.externalUrl ?? ''} onChange={(e) => set('externalUrl', e.target.value || undefined)} placeholder="https://" className={inputCls} dir="ltr" />
           </Field>
         </div>
-      </Section>
-
-      {/* ── 5. Кейс-стаді ── */}
-      {hasPageEnabled && (
-        <Section title="מקרה בוחן (אופציונלי)">
-          <div className="flex flex-col gap-3">
-            {caseParas.length === 0
-              ? <p className="text-[13px] text-[#9ca3af]">אין פסקאות — אפשר להוסיף או להשאיר ריק</p>
-              : caseParas.map((para, i) => (
-                <div key={i} className="flex gap-2">
-                  <textarea value={para} onChange={(e) => setCasePara(i, e.target.value)} rows={3} className={`${inputCls} flex-1`} placeholder={`פסקה ${i + 1}`} />
-                  <button type="button" onClick={() => removeCasePara(i)} className="h-10 shrink-0 self-start rounded-lg border border-red-200 p-2 text-red-400 hover:bg-red-50"><Trash2 size={15} /></button>
-                </div>
-              ))
-            }
-            <button type="button" onClick={addCasePara} className="self-start inline-flex items-center gap-1 rounded-lg border border-[#1B1BB3]/30 px-3 py-1.5 text-[12px] font-medium text-[#1B1BB3] hover:bg-[#1B1BB3]/5">
-              <Plus size={14} />פסקה
-            </button>
-          </div>
-        </Section>
-      )}
-
-      <Section title="SEO (אופציונלי)">
-        <Field label="כותרת דף (Meta title)" hint="אם ריק — נבנה אוטומטית מכותרת הפרויקט">
-          <input value={form.metaTitle ?? ''} onChange={(e) => set('metaTitle', e.target.value || undefined)} className={inputCls} />
-        </Field>
-        <Field label="תיאור מטא (Meta description)" hint="אם ריק — ישתמש בתיאור הגיבור">
-          <textarea value={form.metaDescription ?? ''} onChange={(e) => set('metaDescription', e.target.value || undefined)} rows={3} className={inputCls} />
-        </Field>
       </Section>
 
       {/* ── Помилка + кнопки ── */}
       {error && <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-[13px] text-red-700">{error}</div>}
 
       <div className="flex gap-3 pt-1">
-        <button type="submit" disabled={saving || uploading || uploadingGallery !== null} className="rounded-lg bg-linear-to-l from-[#530FAD] to-[#1B1BB3] px-8 py-2.5 text-[14px] font-bold text-white hover:opacity-90 disabled:opacity-60">
+        <button type="submit" disabled={saving || uploading} className="rounded-lg bg-linear-to-l from-[#530FAD] to-[#1B1BB3] px-8 py-2.5 text-[14px] font-bold text-white hover:opacity-90 disabled:opacity-60">
           {saving ? 'שומר…' : 'שמירה'}
         </button>
         <button type="button" onClick={() => router.push('/admin/portfolio')} className="rounded-lg border border-gray-200 px-6 py-2.5 text-[14px] font-medium text-[#374151] hover:bg-gray-50">
