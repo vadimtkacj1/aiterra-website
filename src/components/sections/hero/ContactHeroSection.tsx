@@ -18,7 +18,7 @@ export default function ContactHeroSection() {
       dir="rtl"
       style={{ backgroundColor: '#060B22' }}
     >
-      <HeroVideoBackdrop src='/videos/gradient2.mp4' />
+      <HeroVideoBackdrop src='/videos/gradient2-v2.mp4' />
 
       <div className="absolute inset-0 bg-black/30" />
 

@@ -40,7 +40,7 @@ export default function LoginPage() {
     <div className="w-full max-w-[380px] mx-4">
       <div className="bg-white rounded-2xl shadow-2xl p-8">
         <div className="flex flex-col items-center mb-8">
-          <Image src="/icons/logo.svg" alt="AITERRA" width={48} height={48} unoptimized
+          <Image src="/icons/logo-v2.svg" alt="AITERRA" width={48} height={48} unoptimized
             className="mb-3" />
           <h1 className="text-[20px] font-bold text-[#111827]">AITERRA Admin</h1>
           <p className="text-[13px] text-[#6b7280] mt-1">כניסה לממשק ניהול</p>

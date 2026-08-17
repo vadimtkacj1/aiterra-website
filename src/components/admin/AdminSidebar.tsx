@@ -70,7 +70,7 @@ function SidebarInner({ onClose, pathname, onLogout }: { onClose?: () => void; p
 
       {/* Logo */}
       <div style={{ display: 'flex', justifyContent: 'center', padding: onClose ? '8px 12px 20px' : '20px 12px 16px' }}>
-        <Image src="/icons/white-logo.svg" alt="AITERRA" width={120} height={40} unoptimized style={{ objectFit: 'contain' }} />
+        <Image src="/icons/white-logo-v2.svg" alt="AITERRA" width={120} height={40} unoptimized style={{ objectFit: 'contain' }} />
       </div>
 
       {/* Menu */}

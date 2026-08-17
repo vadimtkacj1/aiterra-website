@@ -39,13 +39,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       publishedTime: post.datePublished,
       authors: authorName ? [authorName] : undefined,
       tags: post.tags,
-      images: [{ url: post.images?.[0] ?? '/images/og/og-aiterra.png', alt: post.title }],
+      images: [{ url: post.images?.[0] ?? '/images/og/og-aiterra-v2.png', alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.excerpt,
-      images: [post.images?.[0] ?? '/images/og/og-aiterra.png'],
+      images: [post.images?.[0] ?? '/images/og/og-aiterra-v2.png'],
     },
   }
 }

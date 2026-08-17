@@ -3,7 +3,7 @@
  * stays legible on both band surfaces — ink on paper, white on the dark bands.
  * The viewBox is cropped to the glyph's own bounds (the source artboard is a
  * padded 112 square) so the mark sits on the wordmark's cap height instead of
- * floating above its own baseline. Source: /public/icons/logo.svg.
+ * floating above its own baseline. Source: /public/icons/logo-v2.svg.
  */
 export default function Logo({ className }: { className?: string }) {
   return (

@@ -35,7 +35,7 @@ export default function BlogCard({ post, eager = false }: Props) {
       {/* Aiterra logo — top right */}
       <div className="absolute top-6 right-6 z-10">
         <Image
-          src="/icons/aiterra-blog.svg"
+          src="/icons/aiterra-blog-v2.svg"
           alt="Aiterra"
           width={80}
           height={48}

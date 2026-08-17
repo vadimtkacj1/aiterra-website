@@ -10,7 +10,7 @@ export default function PortfolioHeroSection() {
       dir="rtl"
       style={{ backgroundColor: '#060B22' }}
     >
-      <HeroVideoBackdrop  src='/videos/gradient2.mp4' />
+      <HeroVideoBackdrop  src='/videos/gradient2-v2.mp4' />
 
       {/* Dim overlay so text stays readable */}
       <div className="absolute inset-0 bg-black/30" />

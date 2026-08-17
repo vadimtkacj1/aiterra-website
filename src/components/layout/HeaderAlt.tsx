@@ -131,8 +131,8 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
           <div className="mx-12 flex flex-col items-center">
             <Link href="/">
               <img
-                src={onDarkHero ? '/icons/white-logo.svg' : '/icons/logo.svg'}
-                onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/icons/logo.svg' }}
+                src={onDarkHero ? '/icons/white-logo-v2.svg' : '/icons/logo-v2.svg'}
+                onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/icons/logo-v2.svg' }}
                 alt="AITERRA"
                 className="w-16 h-16 object-contain"
               />
@@ -159,8 +159,8 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
         {/* Logo — block image avoids baseline gap under the icon */}
         <Link href="/" className="flex h-16 w-16 shrink-0 items-center justify-center leading-none">
           <img
-            src={onDarkHero ? '/icons/white-logo.svg' : '/icons/logo.svg'}
-            onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/icons/logo.svg' }}
+            src={onDarkHero ? '/icons/white-logo-v2.svg' : '/icons/logo-v2.svg'}
+            onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/icons/logo-v2.svg' }}
             alt="AITERRA"
             className="block h-12 w-12 max-h-12 max-w-12 object-contain"
           />

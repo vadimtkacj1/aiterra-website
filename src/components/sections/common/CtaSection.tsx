@@ -109,7 +109,7 @@ export default function ContactForm() {
 
       <div className="hidden md:flex flex-1 justify-center items-center">
         <Image
-          src="/images/chips.webp"
+          src="/images/chips-v2.webp"
           alt="AI chips"
           width={500}
           height={500}

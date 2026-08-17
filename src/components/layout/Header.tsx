@@ -41,7 +41,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex shrink-0 items-center leading-none md:block">
           <img
-            src="/icons/logo.svg"
+            src="/icons/logo-v2.svg"
             alt="Logo"
             width={112}
             height={112}

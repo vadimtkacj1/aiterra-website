@@ -24,14 +24,14 @@ export default function OrganizationSchema() {
     telephone: CONTACT_PHONE_INTL,
     description: 'סוכנות שיווק דיגיטלי מלא – בניית אתרים, SEO, פרסום ממומן ואוטומציה עסקית',
     // Raster logo with known dimensions — Google prefers this over SVG for rich
-    // results (generated from icons/logo.svg by scripts, see public/icons/logo.png).
+    // results (generated from icons/logo.svg by scripts, see public/icons/logo-512-v2.png).
     logo: {
       '@type': 'ImageObject',
-      url: `${SITE_URL}/icons/logo.png`,
+      url: `${SITE_URL}/icons/logo-512-v2.png`,
       width: 512,
       height: 512,
     },
-    image: `${SITE_URL}/images/og/og-aiterra.png`,
+    image: `${SITE_URL}/images/og/og-aiterra-v2.png`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'רחוב הרב ניסנבאום 37',

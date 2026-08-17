@@ -21,9 +21,9 @@ export default function HeaderDark() {
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <img
-            src="/icons/white-logo.svg"
+            src="/icons/white-logo-v2.svg"
             alt="Logo"
-            onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/icons/logo.svg' }}
+            onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/icons/logo-v2.svg' }}
             className="object-contain w-12 h-12 md:w-20 md:h-20"
           />
         </Link>

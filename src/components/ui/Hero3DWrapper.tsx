@@ -16,7 +16,7 @@ const Hero3DScene = dynamic(() => import('@/components/ui/Hero3DScene'), {
 function HeroPoster() {
   return (
     <img
-      src="/images/hero/model-poster.webp"
+      src="/images/hero/model-poster-v2.webp"
       alt=""
       width={600}
       height={600}

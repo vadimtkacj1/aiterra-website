@@ -20,8 +20,8 @@ import ReactDOM from 'react-dom'
  * gradient2 explicitly and scored 100). Don't point this back at gradient.mp4.
  */
 export default function HeroVideoBackdrop({
-  src = '/videos/gradient2.mp4',
-  poster = '/videos/gradient-poster.webp',
+  src = '/videos/gradient2-v2.mp4',
+  poster = '/videos/gradient-poster-v2.webp',
 }: {
   src?: string
   poster?: string

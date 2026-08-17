@@ -23,7 +23,7 @@ export default function Footer() {
     <footer dir="rtl" className="relative z-60 overflow-hidden bg-[#0F0F2D]">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/footer/footer-bg.webp"
+          src="/images/footer/footer-bg-v2.webp"
           alt=""
           fill
           loading="lazy"
@@ -72,7 +72,7 @@ export default function Footer() {
 
 <Link href="/" className="md:mx-4 shrink-0">
   <Image 
-    src="/icons/white-logo.svg" 
+    src="/icons/white-logo-v2.svg" 
     alt="AITERRA" 
     width={80} 
     height={80} 

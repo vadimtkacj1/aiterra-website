@@ -164,7 +164,7 @@ export default function ContactFormSection() {
         {/* chips.png — left (RTL end = physical left) */}
         <div className="hidden md:flex w-full md:w-1/2 justify-center items-center">
           <Image
-            src="/images/chips.webp"
+            src="/images/chips-v2.webp"
             alt="AI chips"
             width={480}
             height={480}
