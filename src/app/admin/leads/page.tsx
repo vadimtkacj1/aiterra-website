@@ -83,7 +83,7 @@ export default function AdminLeadsPage() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="חיפוש לפי שם, טלפון, מייל או תוכן..."
-            className="flex-1 min-w-[220px] px-3 py-2 text-[13px] rounded-lg border border-gray-200 outline-none focus:border-[#1B1BB3]/40"
+            className="flex-1 min-w-[220px] px-3 py-2 text-[13px] rounded-lg border border-gray-200 outline-none focus:border-[#2447D6]/40"
           />
           <button
             onClick={loadLeads}
@@ -95,7 +95,7 @@ export default function AdminLeadsPage() {
           <a
             href="/api/admin/leads?format=csv"
             className="flex items-center gap-2 px-4 py-2 text-[13px] font-semibold text-white rounded-lg hover:opacity-90 transition-opacity"
-            style={{ background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)' }}
+            style={{ background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)' }}
           >
             <Download size={14} />
             ייצוא CSV
@@ -132,7 +132,7 @@ export default function AdminLeadsPage() {
                         <div className="flex items-center gap-2">
                           <span dir="ltr">{formatDate(lead.createdAt)}</span>
                           {isFresh && (
-                            <span className="px-1.5 py-0.5 text-[10px] font-semibold rounded text-[#1B1BB3] bg-[#1B1BB3]/10">
+                            <span className="px-1.5 py-0.5 text-[10px] font-semibold rounded text-[#2447D6] bg-[#2447D6]/10">
                               חדש
                             </span>
                           )}
@@ -144,7 +144,7 @@ export default function AdminLeadsPage() {
                           <a
                             href={`tel:${lead.phone.replace(/[^\d+]/g, '')}`}
                             dir="ltr"
-                            className="inline-flex items-center gap-1.5 text-[#1B1BB3] hover:underline"
+                            className="inline-flex items-center gap-1.5 text-[#2447D6] hover:underline"
                           >
                             <Phone size={13} />
                             {lead.phone}
@@ -158,7 +158,7 @@ export default function AdminLeadsPage() {
                           <a
                             href={`mailto:${lead.email}`}
                             dir="ltr"
-                            className="inline-flex items-center gap-1.5 text-[#1B1BB3] hover:underline"
+                            className="inline-flex items-center gap-1.5 text-[#2447D6] hover:underline"
                           >
                             <Mail size={13} />
                             {lead.email}
@@ -179,7 +179,7 @@ export default function AdminLeadsPage() {
                             {isLong && (
                               <button
                                 onClick={() => setExpanded(isOpen ? null : lead.id)}
-                                className="mt-1 text-[12px] text-[#1B1BB3] hover:underline"
+                                className="mt-1 text-[12px] text-[#2447D6] hover:underline"
                               >
                                 {isOpen ? 'הסתר' : 'הצג הכל'}
                               </button>

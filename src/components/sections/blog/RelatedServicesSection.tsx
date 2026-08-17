@@ -47,16 +47,16 @@ export default function RelatedServicesSection({ tags = [] }: { tags?: string[] 
 
   return (
     <section className="max-w-4xl mx-auto px-6 pb-12 pt-4 border-t border-gray-100" dir="rtl" aria-label="שירותים קשורים">
-      <h2 className="text-[20px] md:text-[26px] font-bold text-[#1B1BB3] mb-6">שירותים שיכולים לעזור</h2>
+      <h2 className="text-[20px] md:text-[26px] font-bold text-[#2447D6] mb-6">שירותים שיכולים לעזור</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {picks.map((s) => (
           <Link
             key={s.slug}
             href={`/services/${s.slug}`}
-            className="group block rounded-xl border border-gray-100 p-5 transition-colors hover:border-[#530FAD] hover:bg-purple-50/40"
+            className="group block rounded-xl border border-gray-100 p-5 transition-colors hover:border-[#3E96F9] hover:bg-blue-50/40"
           >
-            <span className="block text-[16px] font-bold text-[#111827] group-hover:text-[#530FAD]">{s.title}</span>
+            <span className="block text-[16px] font-bold text-[#111827] group-hover:text-[#3E96F9]">{s.title}</span>
             <span className="mt-1 block text-[13px] text-[#6b7280] line-clamp-2">{s.upperTitle}</span>
           </Link>
         ))}
@@ -64,9 +64,9 @@ export default function RelatedServicesSection({ tags = [] }: { tags?: string[] 
 
       <p className="mt-6 text-[14px] text-[#4b5563]">
         לא בטוחים מה מתאים לעסק שלכם?{' '}
-        <Link href="/services" className="font-bold text-[#530FAD] hover:underline">ראו את כל השירותים</Link>
+        <Link href="/services" className="font-bold text-[#3E96F9] hover:underline">ראו את כל השירותים</Link>
         {' '}או{' '}
-        <Link href="/contact" className="font-bold text-[#530FAD] hover:underline">קבלו ייעוץ חינם</Link>.
+        <Link href="/contact" className="font-bold text-[#3E96F9] hover:underline">קבלו ייעוץ חינם</Link>.
       </p>
     </section>
   )

@@ -40,10 +40,10 @@ export default function BlogPostsSection({ posts }: { posts: BlogPost[] }) {
                 textTransform: 'uppercase',
                 padding: '12px 24px',
                 transition: 'all 0.3s ease',
-                border: '1px solid #1B1BB3',
-                color: active === tag ? '#FFFFFF' : '#1B1BB3',
+                border: '1px solid #2447D6',
+                color: active === tag ? '#FFFFFF' : '#2447D6',
                 background: active === tag
-                  ? 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)'
+                  ? 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)'
                   : 'transparent',
                 display: 'flex',
                 alignItems: 'center',

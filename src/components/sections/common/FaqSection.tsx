@@ -63,7 +63,7 @@ function FaqSectionContent({ data }: { data: FaqData }) {
             id="faq-section-heading"
             className="text-[20px] md:text-[48px] font-bold mb-4 leading-tight bg-clip-text text-transparent inline-block"
             style={{
-              backgroundImage: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
+              backgroundImage: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
               WebkitBackgroundClip: 'text',
             }}
           >
@@ -85,15 +85,15 @@ function FaqSectionContent({ data }: { data: FaqData }) {
                 >
                   <span
                     className={`text-[20px] font-medium transition-colors duration-300 text-right ${
-                      open === i ? 'text-[#1B1BB3]' : 'text-[#0E1A27]'
-                    } group-hover:text-[#1B1BB3]`}
+                      open === i ? 'text-[#2447D6]' : 'text-[#0E1A27]'
+                    } group-hover:text-[#2447D6]`}
                   >
                     {faq.q}
                   </span>
                   <svg
                     aria-hidden
                     className={`w-6 h-6 shrink-0 transition-transform duration-300 ${
-                      open === i ? 'rotate-180 text-[#1B1BB3]' : 'text-gray-400'
+                      open === i ? 'rotate-180 text-[#2447D6]' : 'text-gray-400'
                     }`}
                     viewBox="0 0 24 24"
                     fill="none"

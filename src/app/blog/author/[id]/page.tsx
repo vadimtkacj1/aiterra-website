@@ -99,11 +99,11 @@ export default async function AuthorPage({ params }: { params: Promise<{ id: str
       <HeaderAlt transparent />
 
       {/* Hero */}
-      <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#080112' }}>
+      <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#060B22' }}>
         <section
           className="relative overflow-hidden min-h-[60vh] flex flex-col items-center justify-center font-sans"
           dir="rtl"
-          style={{ backgroundColor: '#080112' }}
+          style={{ backgroundColor: '#060B22' }}
         >
           <HeroVideoBackdrop />
           <div className="absolute inset-0 bg-black/40" />
@@ -137,17 +137,17 @@ export default async function AuthorPage({ params }: { params: Promise<{ id: str
               {sameAs.length > 0 && (
                 <div className="flex items-center gap-4 mt-5">
                   {author.socials?.linkedin && (
-                    <a href={author.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3] text-[14px] font-semibold">
+                    <a href={author.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#2447D6] text-[14px] font-semibold">
                       LinkedIn
                     </a>
                   )}
                   {author.socials?.instagram && (
-                    <a href={author.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3] text-[14px] font-semibold">
+                    <a href={author.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#2447D6] text-[14px] font-semibold">
                       Instagram
                     </a>
                   )}
                   {author.socials?.facebook && (
-                    <a href={author.socials.facebook} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3] text-[14px] font-semibold">
+                    <a href={author.socials.facebook} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#2447D6] text-[14px] font-semibold">
                       Facebook
                     </a>
                   )}

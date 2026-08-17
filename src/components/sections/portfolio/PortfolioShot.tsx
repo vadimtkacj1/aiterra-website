@@ -84,7 +84,7 @@ export default function PortfolioShot({ src, alt, scrollable = true, priority }:
       {/* Scroll-progress bar — fills in step with the travel, like a playhead. */}
       {scrollable && (
         <span aria-hidden className="shot-rail-track absolute inset-x-0 bottom-0 h-0.75 bg-black/5">
-          <span className="shot-rail block h-full w-full origin-right bg-[linear-gradient(90deg,#530FAD_0%,#1B1BB3_100%)]" />
+          <span className="shot-rail block h-full w-full origin-right bg-[linear-gradient(90deg,#3E96F9_0%,#2447D6_100%)]" />
         </span>
       )}
     </div>

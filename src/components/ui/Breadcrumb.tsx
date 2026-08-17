@@ -29,7 +29,7 @@ export default function Breadcrumb({ items, variant = 'light' }: Props) {
 
   const isLight = variant === 'light'
   const textColor = isLight ? '#6b7280' : 'rgba(255,255,255,0.55)'
-  const activeColor = isLight ? '#1B1BB3' : '#fff'
+  const activeColor = isLight ? '#2447D6' : '#fff'
   const sepColor = isLight ? '#d1d5db' : 'rgba(255,255,255,0.3)'
 
   return (

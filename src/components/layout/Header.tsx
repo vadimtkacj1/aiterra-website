@@ -17,7 +17,7 @@ export default function Header() {
   }, [])
 
   const gradientTextStyle: React.CSSProperties = {
-    background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
+    background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     backgroundClip: 'text',
@@ -45,7 +45,7 @@ export default function Header() {
             alt="Logo"
             width={112}
             height={112}
-            className="block h-14 w-14 object-contain md:h-28 md:w-28"
+            className="block h-12 w-12 object-contain md:h-20 md:w-20"
           />
         </Link>
 

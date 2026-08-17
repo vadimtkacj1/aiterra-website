@@ -16,7 +16,7 @@ export default function ContactHeroSection() {
     <section
       className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center font-sans"
       dir="rtl"
-      style={{ backgroundColor: '#080112' }}
+      style={{ backgroundColor: '#060B22' }}
     >
       <HeroVideoBackdrop src='/videos/gradient2.mp4' />
 
@@ -46,7 +46,7 @@ export default function ContactHeroSection() {
           {/* Primary — gradient fill */}
           <button
             style={{
-              background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
+              background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
               fontWeight: 700,
               fontSize: '14px',
               fontFamily: "'Heebo', sans-serif",
@@ -63,11 +63,11 @@ export default function ContactHeroSection() {
           {/* Secondary — gradient border, white fill */}
           <Link href="/portfolio" className="w-full sm:w-45 h-13.75">
             <div
-              style={{ background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)' }}
+              style={{ background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)' }}
               className="p-px w-full h-full"
             >
               <div
-                style={{ fontWeight: 700, fontSize: '14px', fontFamily: "'Heebo', sans-serif", color: '#1B1BB3' }}
+                style={{ fontWeight: 700, fontSize: '14px', fontFamily: "'Heebo', sans-serif", color: '#2447D6' }}
                 className="w-full h-full bg-white flex items-center justify-center text-center leading-tight"
               >
                 צפו בתיק העבודות

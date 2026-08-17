@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { canonicalPath } from '@/lib/site-seo-config'
 
 const inputCls =
-  'w-full px-3 py-2 border border-[#d9d9d9] rounded-lg text-[13px] focus:outline-none focus:ring-2 focus:ring-[#1B1BB3]/20 focus:border-[#1B1BB3] bg-white text-right'
+  'w-full px-3 py-2 border border-[#d9d9d9] rounded-lg text-[13px] focus:outline-none focus:ring-2 focus:ring-[#2447D6]/20 focus:border-[#2447D6] bg-white text-right'
 
 type SchemaMode = 'none' | 'webpage' | 'service' | 'raw'
 
@@ -173,7 +173,7 @@ export default function SchemaLdBuilder({ routePath, pageTitle, pageDescription,
     <div className="rounded-lg border border-[#e5e7eb] bg-white p-4">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <span className="text-[13px] font-bold text-[#111827]">JSON-LD (מבנה)</span>
-        <button type="button" onClick={fillFromPage} className="text-[12px] font-medium text-[#1B1BB3] hover:underline">
+        <button type="button" onClick={fillFromPage} className="text-[12px] font-medium text-[#2447D6] hover:underline">
           מילוי שם ותיאור מהדף
         </button>
       </div>

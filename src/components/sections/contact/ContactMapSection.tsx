@@ -17,7 +17,7 @@ export default function ContactMapSection() {
             className="font-bold"
             style={{
               fontSize: 'clamp(20px, 3vw, 40px)',
-              background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
+              background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
@@ -31,7 +31,7 @@ export default function ContactMapSection() {
               href={CONTACT_PHONE_HREF}
               className="hover:underline"
               style={{
-                background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
+                background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -50,7 +50,7 @@ export default function ContactMapSection() {
               href={GOOGLE_MAPS_OPEN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] text-[#1B1BB3] hover:underline font-semibold"
+              className="text-[14px] text-[#2447D6] hover:underline font-semibold"
             >
               פתיחה ב-Google Maps
             </a>

@@ -5,8 +5,8 @@ import { useRouter } from 'next/navigation'
 import { Upload, User } from 'lucide-react'
 import type { AuthorProfile } from '@/lib/authors-server'
 
-const gradient = 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)'
-const inputCls = 'w-full border border-gray-200 rounded-lg px-3 py-2 text-[14px] focus:outline-none focus:border-[#1B1BB3]'
+const gradient = 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)'
+const inputCls = 'w-full border border-gray-200 rounded-lg px-3 py-2 text-[14px] focus:outline-none focus:border-[#2447D6]'
 const textAreaCls = `${inputCls} resize-y`
 
 export default function AuthorEditorForm({ initial, initialId }: { initial: AuthorProfile; initialId: string }) {
@@ -130,9 +130,9 @@ export default function AuthorEditorForm({ initial, initialId }: { initial: Auth
             type="button"
             onClick={() => fileRef.current?.click()}
             disabled={uploading}
-            className="shrink-0 px-3 py-2 rounded-lg border border-[#1B1BB3]/30 text-[#1B1BB3] hover:bg-[#1B1BB3]/5 transition-colors disabled:opacity-50 flex items-center gap-1.5 text-[12px] font-medium"
+            className="shrink-0 px-3 py-2 rounded-lg border border-[#2447D6]/30 text-[#2447D6] hover:bg-[#2447D6]/5 transition-colors disabled:opacity-50 flex items-center gap-1.5 text-[12px] font-medium"
           >
-            {uploading ? <span className="w-4 h-4 border-2 border-[#1B1BB3]/30 border-t-[#1B1BB3] rounded-full animate-spin" /> : <Upload size={14} />}
+            {uploading ? <span className="w-4 h-4 border-2 border-[#2447D6]/30 border-t-[#2447D6] rounded-full animate-spin" /> : <Upload size={14} />}
             Upload image
           </button>
         </div>
@@ -156,7 +156,7 @@ export default function AuthorEditorForm({ initial, initialId }: { initial: Auth
         <button type="submit" disabled={saving} className="px-5 py-2 text-[13px] font-bold text-white rounded-lg hover:opacity-90 transition-opacity disabled:opacity-60" style={{ background: gradient }}>
           {saving ? 'Saving...' : 'Save author'}
         </button>
-        <button type="button" onClick={() => router.push('/admin/authors')} className="px-5 py-2 text-[13px] font-semibold text-[#1B1BB3] border border-[#1B1BB3]/40 rounded-lg hover:bg-[#1B1BB3]/5 transition-colors">
+        <button type="button" onClick={() => router.push('/admin/authors')} className="px-5 py-2 text-[13px] font-semibold text-[#2447D6] border border-[#2447D6]/40 rounded-lg hover:bg-[#2447D6]/5 transition-colors">
           Back
         </button>
       </div>

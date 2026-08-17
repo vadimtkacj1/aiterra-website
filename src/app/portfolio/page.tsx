@@ -22,7 +22,7 @@ export default function PortfolioPage() {
       <RouteJsonLd path="/portfolio" />
       <BreadcrumbSchema items={[{ label: 'תיק עבודות', href: '/portfolio' }]} />
       <HeaderAlt transparent />
-      <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#080112' }}>
+      <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#060B22' }}>
         <PortfolioHeroSection />
       </div>
       <div className="flex min-h-0 w-full flex-1 flex-col">

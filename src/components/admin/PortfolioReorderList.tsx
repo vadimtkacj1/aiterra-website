@@ -92,8 +92,8 @@ export default function PortfolioReorderList({ projects }: { projects: Portfolio
         <GripVertical size={14} />
         גררו את הידית כדי לשנות את סדר הפרויקטים באתר — השינוי נשמר אוטומטית
         {saveState === 'saving' && (
-          <span className="flex items-center gap-1.5 text-[#1B1BB3]">
-            <span className="w-3 h-3 border-2 border-[#1B1BB3]/30 border-t-[#1B1BB3] rounded-full animate-spin" />
+          <span className="flex items-center gap-1.5 text-[#2447D6]">
+            <span className="w-3 h-3 border-2 border-[#2447D6]/30 border-t-[#2447D6] rounded-full animate-spin" />
             שומר…
           </span>
         )}
@@ -133,7 +133,7 @@ export default function PortfolioReorderList({ projects }: { projects: Portfolio
               void save(itemsRef.current)
             }}
             className={`flex items-center gap-3 rounded-xl border bg-white p-3 shadow-sm transition-[opacity,box-shadow] ${
-              dragIndex === index ? 'opacity-50 border-[#1B1BB3]' : 'border-gray-100'
+              dragIndex === index ? 'opacity-50 border-[#2447D6]' : 'border-gray-100'
             }`}
           >
             <button
@@ -143,7 +143,7 @@ export default function PortfolioReorderList({ projects }: { projects: Portfolio
               onMouseUp={() => setArmed(null)}
               onTouchStart={() => setArmed(index)}
               onTouchEnd={() => setArmed(null)}
-              className="shrink-0 cursor-grab rounded-lg p-1.5 text-[#c4c4cf] hover:bg-gray-50 hover:text-[#1B1BB3] active:cursor-grabbing"
+              className="shrink-0 cursor-grab rounded-lg p-1.5 text-[#c4c4cf] hover:bg-gray-50 hover:text-[#2447D6] active:cursor-grabbing"
             >
               <GripVertical size={18} />
             </button>
@@ -174,7 +174,7 @@ export default function PortfolioReorderList({ projects }: { projects: Portfolio
                 onClick={() => shift(index, index - 1)}
                 disabled={index === 0}
                 aria-label="העברה למעלה"
-                className="rounded p-0.5 text-[#9ca3af] hover:bg-gray-50 hover:text-[#1B1BB3] disabled:opacity-30 disabled:hover:bg-transparent"
+                className="rounded p-0.5 text-[#9ca3af] hover:bg-gray-50 hover:text-[#2447D6] disabled:opacity-30 disabled:hover:bg-transparent"
               >
                 <ChevronUp size={16} />
               </button>
@@ -183,7 +183,7 @@ export default function PortfolioReorderList({ projects }: { projects: Portfolio
                 onClick={() => shift(index, index + 1)}
                 disabled={index === items.length - 1}
                 aria-label="העברה למטה"
-                className="rounded p-0.5 text-[#9ca3af] hover:bg-gray-50 hover:text-[#1B1BB3] disabled:opacity-30 disabled:hover:bg-transparent"
+                className="rounded p-0.5 text-[#9ca3af] hover:bg-gray-50 hover:text-[#2447D6] disabled:opacity-30 disabled:hover:bg-transparent"
               >
                 <ChevronDown size={16} />
               </button>
@@ -192,7 +192,7 @@ export default function PortfolioReorderList({ projects }: { projects: Portfolio
             <div className="flex shrink-0 items-center gap-2">
               <Link
                 href={`/admin/portfolio/${project.slug}`}
-                className="rounded-lg border border-[#1B1BB3]/30 px-3 py-1.5 text-[12px] font-medium text-[#1B1BB3] transition-colors hover:bg-[#1B1BB3]/5"
+                className="rounded-lg border border-[#2447D6]/30 px-3 py-1.5 text-[12px] font-medium text-[#2447D6] transition-colors hover:bg-[#2447D6]/5"
               >
                 עריכה
               </Link>

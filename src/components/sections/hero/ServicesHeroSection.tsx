@@ -7,7 +7,7 @@ export default function ServicesHeroSection() {
     <section
       className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center font-sans"
       dir="rtl"
-      style={{ backgroundColor: '#080112' }}
+      style={{ backgroundColor: '#060B22' }}
     >
       <HeroVideoBackdrop />
 
@@ -50,7 +50,7 @@ export default function ServicesHeroSection() {
           >
             <span
               style={{
-                background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
+                background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',

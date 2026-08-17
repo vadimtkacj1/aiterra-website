@@ -25,7 +25,7 @@ export default function ContactPage() {
     <div className="relative flex flex-col min-h-screen bg-white">
       <RouteJsonLd path="/contact" />
       <HeaderAlt transparent />
-      <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#080112' }}>
+      <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#060B22' }}>
         <ContactHeroSection />
       </div>
       <div className="flex min-h-0 w-full flex-1 flex-col">

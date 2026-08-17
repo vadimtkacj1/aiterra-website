@@ -54,7 +54,7 @@ export default function TeamSection() {
                 </h3>
                 <p
                   style={{
-                    background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
+                    background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     fontSize: '14px',
@@ -76,7 +76,7 @@ export default function TeamSection() {
                       href={member.socials.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 rounded-full border border-[#d1d5db] bg-white flex items-center justify-center text-[#6b7280] hover:text-[#1B1BB3] hover:border-[#1B1BB3]/40 transition-colors"
+                      className="w-8 h-8 rounded-full border border-[#d1d5db] bg-white flex items-center justify-center text-[#6b7280] hover:text-[#2447D6] hover:border-[#2447D6]/40 transition-colors"
                       aria-label={`${member.name} LinkedIn (נפתח בחלון חדש)`}
                     >
                       <LinkedInIcon />
@@ -87,7 +87,7 @@ export default function TeamSection() {
                       href={member.socials.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 rounded-full border border-[#d1d5db] bg-white flex items-center justify-center text-[#6b7280] hover:text-[#1B1BB3] hover:border-[#1B1BB3]/40 transition-colors"
+                      className="w-8 h-8 rounded-full border border-[#d1d5db] bg-white flex items-center justify-center text-[#6b7280] hover:text-[#2447D6] hover:border-[#2447D6]/40 transition-colors"
                       aria-label={`${member.name} Instagram (נפתח בחלון חדש)`}
                     >
                       <InstagramIcon />
@@ -98,7 +98,7 @@ export default function TeamSection() {
                       href={member.socials.facebook}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 rounded-full border border-[#d1d5db] bg-white flex items-center justify-center text-[#6b7280] hover:text-[#1B1BB3] hover:border-[#1B1BB3]/40 transition-colors"
+                      className="w-8 h-8 rounded-full border border-[#d1d5db] bg-white flex items-center justify-center text-[#6b7280] hover:text-[#2447D6] hover:border-[#2447D6]/40 transition-colors"
                       aria-label={`${member.name} Facebook (נפתח בחלון חדש)`}
                     >
                       <FacebookIcon />

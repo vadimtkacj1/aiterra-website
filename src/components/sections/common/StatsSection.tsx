@@ -32,7 +32,7 @@ const gradientNumberStyle: React.CSSProperties = {
   fontWeight: 400,
   fontSize: '84px',
   lineHeight: '1',
-  background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
+  background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   backgroundClip: 'text',
@@ -75,7 +75,7 @@ export default function StatsSection(): ReactElement {
               </div>
               
               {/* Label */}
-              <p className="text-[#4F10B1] font-bold text-sm mb-4">
+              <p className="text-[#2447D6] font-bold text-sm mb-4">
                 {stat.label}
               </p>
               

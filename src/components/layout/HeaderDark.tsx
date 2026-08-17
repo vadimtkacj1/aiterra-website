@@ -24,7 +24,7 @@ export default function HeaderDark() {
             src="/icons/white-logo.svg"
             alt="Logo"
             onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/icons/logo.svg' }}
-            className="object-contain w-16 h-16 md:w-28 md:h-28"
+            className="object-contain w-12 h-12 md:w-20 md:h-20"
           />
         </Link>
 
@@ -74,7 +74,7 @@ export default function HeaderDark() {
         className={`fixed top-0 right-0 h-screen w-[280px] shadow-2xl z-[60] transition-transform duration-300 ease-in-out md:hidden ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
-        style={{ background: '#080112' }}
+        style={{ background: '#060B22' }}
       >
         <div className="flex flex-col h-full">
           <div className="h-28 flex items-center px-6 border-b border-white/10" />

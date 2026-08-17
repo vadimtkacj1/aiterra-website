@@ -32,7 +32,7 @@ export default function AdvPage() {
         urlPath="/services/adv"
       />
       <HeaderAlt transparent />
-      <div className="relative z-[15] -mt-28 md:-mt-48" style={{ background: '#080112' }}>
+      <div className="relative z-[15] -mt-28 md:-mt-48" style={{ background: '#060B22' }}>
         <ServicePageHeroSection service={service} />
       </div>
       <div className="flex min-h-0 w-full flex-1 flex-col">

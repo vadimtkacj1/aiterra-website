@@ -37,7 +37,7 @@ export default function ContactForm() {
       className="flex items-center py-20 px-4 md:px-20 gap-12"
     >
       <div className="w-full max-w-[480px] flex flex-col items-start">
-        <h2 className="text-[20px] md:text-[48px] font-bold leading-[1.1] mb-2 bg-clip-text text-transparent bg-[linear-gradient(92.63deg,#1B1BB3_14.57%,#530FAD_99.27%)]">
+        <h2 className="text-[20px] md:text-[48px] font-bold leading-[1.1] mb-2 bg-clip-text text-transparent bg-[linear-gradient(92.63deg,#2447D6_14.57%,#3E96F9_99.27%)]">
           מוכנים להתחיל את המסע הדיגיטלי שלכם?
         </h2>
 
@@ -48,9 +48,9 @@ export default function ContactForm() {
         {submitted ? (
           <div
             className="w-full rounded-md p-6 text-center"
-            style={{ background: 'linear-gradient(135deg, #f0f0ff 0%, #f5eeff 100%)' }}
+            style={{ background: 'linear-gradient(135deg, #eef3ff 0%, #e9f4ff 100%)' }}
           >
-            <p className="text-[18px] font-bold text-[#530FAD]">תודה! נחזור אליכם בהקדם.</p>
+            <p className="text-[18px] font-bold text-[#3E96F9]">תודה! נחזור אליכם בהקדם.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="w-full space-y-4">
@@ -61,7 +61,7 @@ export default function ContactForm() {
                 aria-label="שם"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-4 py-2.5 border border-[#D1D5DB] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1B1BB3] text-right placeholder:text-[#9CA3AF]"
+                className="w-full px-4 py-2.5 border border-[#D1D5DB] rounded-md focus:outline-none focus:ring-1 focus:ring-[#2447D6] text-right placeholder:text-[#9CA3AF]"
                 required
               />
               <input
@@ -70,7 +70,7 @@ export default function ContactForm() {
                 aria-label="טלפון"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full px-4 py-2.5 border border-[#D1D5DB] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1B1BB3] text-right placeholder:text-[#9CA3AF]"
+                className="w-full px-4 py-2.5 border border-[#D1D5DB] rounded-md focus:outline-none focus:ring-1 focus:ring-[#2447D6] text-right placeholder:text-[#9CA3AF]"
                 required
               />
             </div>
@@ -80,15 +80,15 @@ export default function ContactForm() {
                 type="checkbox"
                 name="consent"
                 required
-                className="mt-0.5 h-4 w-4 shrink-0 accent-[#1B1BB3] cursor-pointer"
+                className="mt-0.5 h-4 w-4 shrink-0 accent-[#2447D6] cursor-pointer"
               />
               <span>
                 אני מאשר/ת שקראתי והבנתי את{' '}
-                <a href="/terms-of-use" target="_blank" rel="noopener noreferrer" className="text-[#1B1BB3] underline hover:opacity-80">
+                <a href="/terms-of-use" target="_blank" rel="noopener noreferrer" className="text-[#2447D6] underline hover:opacity-80">
                   התקנון
                 </a>{' '}
                 ואת{' '}
-                <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#1B1BB3] underline hover:opacity-80">
+                <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#2447D6] underline hover:opacity-80">
                   מדיניות הפרטיות
                 </a>{' '}
                 של האתר
@@ -98,7 +98,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={sending}
-              className="w-full border border-[#530FAD] text-[#530FAD] py-2.5 rounded-md font-bold text-[16px] hover:bg-purple-50 transition-colors duration-200 disabled:opacity-60"
+              className="w-full border border-[#3E96F9] text-[#3E96F9] py-2.5 rounded-md font-bold text-[16px] hover:bg-blue-50 transition-colors duration-200 disabled:opacity-60"
             >
               {sending ? 'שולח…' : 'לקבלת הצעת מחיר מהירה'}
             </button>

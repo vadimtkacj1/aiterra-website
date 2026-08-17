@@ -15,7 +15,7 @@ export default function ServicePageHeroSection({ service }: Props) {
     <section
       className="relative overflow-hidden min-h-[100vh] flex flex-col items-center justify-center font-sans"
       dir="rtl"
-      style={{ backgroundColor: '#080112' }}
+      style={{ backgroundColor: '#060B22' }}
     >
       <HeroVideoBackdrop src='/videos/gradient2.mp4' />
       
@@ -57,7 +57,7 @@ export default function ServicePageHeroSection({ service }: Props) {
         {/* Action Button */}
         <Link
           href="/contact"
-          className="border border-white text-white px-12 py-3 transition-all hover:bg-white hover:text-purple-900 active:scale-95 inline-block"
+          className="border border-white text-white px-12 py-3 transition-all hover:bg-white hover:text-[#2447D6] active:scale-95 inline-block"
           style={{ 
             fontWeight: 500, 
             fontSize: '14px',

@@ -40,8 +40,8 @@ export default function LoginPage() {
     <div className="w-full max-w-[380px] mx-4">
       <div className="bg-white rounded-2xl shadow-2xl p-8">
         <div className="flex flex-col items-center mb-8">
-          <Image src="/icons/white-logo.svg" alt="AITERRA" width={48} height={48} unoptimized
-            className="invert mb-3" />
+          <Image src="/icons/logo.svg" alt="AITERRA" width={48} height={48} unoptimized
+            className="mb-3" />
           <h1 className="text-[20px] font-bold text-[#111827]">AITERRA Admin</h1>
           <p className="text-[13px] text-[#6b7280] mt-1">כניסה לממשק ניהול</p>
         </div>
@@ -57,7 +57,7 @@ export default function LoginPage() {
               onChange={(e) => setPassword(e.target.value)}
               placeholder="הכנס סיסמה"
               required
-              className="w-full px-4 py-2.5 border border-[#d9d9d9] rounded-lg text-[14px] focus:outline-none focus:ring-2 focus:ring-[#1B1BB3]/30 focus:border-[#1B1BB3] text-right"
+              className="w-full px-4 py-2.5 border border-[#d9d9d9] rounded-lg text-[14px] focus:outline-none focus:ring-2 focus:ring-[#2447D6]/30 focus:border-[#2447D6] text-right"
             />
           </div>
 
@@ -69,7 +69,7 @@ export default function LoginPage() {
             type="submit"
             disabled={loading}
             className="w-full py-2.5 rounded-lg text-white text-[14px] font-bold disabled:opacity-60 transition-opacity hover:opacity-90"
-            style={{ background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)' }}
+            style={{ background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)' }}
           >
             {loading ? 'כניסה...' : 'כניסה'}
           </button>

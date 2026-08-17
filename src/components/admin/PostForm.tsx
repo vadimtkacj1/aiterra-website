@@ -212,7 +212,7 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
 
       {/* ── Content editor ─────────────────────────────────────────────────── */}
       <Field label="תוכן">
-        <div className="border border-[#d9d9d9] rounded-xl overflow-hidden transition-all focus-within:border-[#1B1BB3] focus-within:ring-2 focus-within:ring-[#1B1BB3]/15">
+        <div className="border border-[#d9d9d9] rounded-xl overflow-hidden transition-all focus-within:border-[#2447D6] focus-within:ring-2 focus-within:ring-[#2447D6]/15">
 
           {/* Tab bar + image inserts */}
           <div className="flex items-center justify-between gap-2 px-3 py-2 bg-[#f9fafb] border-b border-[#e5e7eb]">
@@ -237,10 +237,10 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
                 <span className="text-[10px] text-[#9ca3af] shrink-0">הכנס תמונה:</span>
                 {filledImages.map((src, i) => (
                   <button key={i} type="button" title={src} onClick={() => insertImageIntoContent(src)}
-                    className="shrink-0 w-8 h-8 rounded overflow-hidden border-2 border-transparent hover:border-[#1B1BB3] transition-all relative group">
+                    className="shrink-0 w-8 h-8 rounded overflow-hidden border-2 border-transparent hover:border-[#2447D6] transition-all relative group">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={src} alt="" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-[#1B1BB3]/0 group-hover:bg-[#1B1BB3]/30 flex items-center justify-center transition-all">
+                    <div className="absolute inset-0 bg-[#2447D6]/0 group-hover:bg-[#2447D6]/30 flex items-center justify-center transition-all">
                       <Plus size={12} className="text-white opacity-0 group-hover:opacity-100" />
                     </div>
                   </button>
@@ -356,10 +356,10 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
               type="button"
               onClick={() => document.getElementById('author-image-upload')?.click()}
               disabled={uploadingAuthorImage}
-              className="shrink-0 px-3 py-2.5 rounded-lg border border-[#1B1BB3]/30 text-[#1B1BB3] hover:bg-[#1B1BB3]/5 transition-colors disabled:opacity-50 flex items-center gap-1.5 text-[12px] font-medium"
+              className="shrink-0 px-3 py-2.5 rounded-lg border border-[#2447D6]/30 text-[#2447D6] hover:bg-[#2447D6]/5 transition-colors disabled:opacity-50 flex items-center gap-1.5 text-[12px] font-medium"
             >
               {uploadingAuthorImage
-                ? <span className="w-4 h-4 border-2 border-[#1B1BB3]/30 border-t-[#1B1BB3] rounded-full animate-spin" />
+                ? <span className="w-4 h-4 border-2 border-[#2447D6]/30 border-t-[#2447D6] rounded-full animate-spin" />
                 : <Upload size={14} />}
               העלה
             </button>
@@ -414,9 +414,9 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
               <input ref={(el) => { fileRefs.current[i] = el }} type="file" accept="image/*" className="hidden"
                 onChange={(e) => { const f = e.target.files?.[0]; if (f) uploadFile(i, f) }} />
               <button type="button" onClick={() => fileRefs.current[i]?.click()} disabled={uploading === i}
-                className="shrink-0 px-3 py-2.5 rounded-lg border border-[#1B1BB3]/30 text-[#1B1BB3] hover:bg-[#1B1BB3]/5 transition-colors disabled:opacity-50 flex items-center gap-1.5 text-[12px] font-medium">
+                className="shrink-0 px-3 py-2.5 rounded-lg border border-[#2447D6]/30 text-[#2447D6] hover:bg-[#2447D6]/5 transition-colors disabled:opacity-50 flex items-center gap-1.5 text-[12px] font-medium">
                 {uploading === i
-                  ? <span className="w-4 h-4 border-2 border-[#1B1BB3]/30 border-t-[#1B1BB3] rounded-full animate-spin" />
+                  ? <span className="w-4 h-4 border-2 border-[#2447D6]/30 border-t-[#2447D6] rounded-full animate-spin" />
                   : <Upload size={14} />}
                 העלה
               </button>
@@ -428,7 +428,7 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
             </div>
           ))}
           <button type="button" onClick={addImage}
-            className="flex items-center gap-2 text-[13px] text-[#1B1BB3] font-medium hover:opacity-70 transition-opacity w-fit mt-1">
+            className="flex items-center gap-2 text-[13px] text-[#2447D6] font-medium hover:opacity-70 transition-opacity w-fit mt-1">
             <Plus size={15} /> הוסף תמונה
           </button>
         </div>
@@ -439,14 +439,14 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
         <div className="flex flex-wrap gap-2 mt-1">
           {PRESET_TAGS.map((tag) => (
             <button key={tag} type="button" onClick={() => toggleTag(tag)}
-              className={`px-3 py-1 rounded-full text-[13px] font-medium border transition-all ${form.tags.includes(tag) ? 'text-white border-transparent' : 'text-[#1B1BB3] border-[#1B1BB3]/30 hover:border-[#1B1BB3]'}`}
-              style={form.tags.includes(tag) ? { background: 'linear-gradient(92.63deg,#1B1BB3 14.57%,#530FAD 99.27%)' } : {}}>
+              className={`px-3 py-1 rounded-full text-[13px] font-medium border transition-all ${form.tags.includes(tag) ? 'text-white border-transparent' : 'text-[#2447D6] border-[#2447D6]/30 hover:border-[#2447D6]'}`}
+              style={form.tags.includes(tag) ? { background: 'linear-gradient(92.63deg,#2447D6 14.57%,#3E96F9 99.27%)' } : {}}>
               {tag}
             </button>
           ))}
           {customSelectedTags.map((tag) => (
             <span key={tag} className="flex items-center gap-1 pl-1 pr-3 py-1 rounded-full text-[13px] font-medium text-white"
-              style={{ background: 'linear-gradient(92.63deg,#1B1BB3 14.57%,#530FAD 99.27%)' }}>
+              style={{ background: 'linear-gradient(92.63deg,#2447D6 14.57%,#3E96F9 99.27%)' }}>
               {tag}
               <button type="button" onClick={() => toggleTag(tag)}
                 className="w-4 h-4 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center transition-colors">
@@ -461,7 +461,7 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
             placeholder="תגית חדשה..." className={`${inputCls} flex-1`} />
           <button type="button" onClick={addCustomTag} disabled={!tagInput.trim()}
             className="px-4 py-2.5 rounded-lg text-[13px] font-medium text-white disabled:opacity-40 hover:opacity-90 transition-opacity shrink-0"
-            style={{ background: 'linear-gradient(92.63deg,#1B1BB3 14.57%,#530FAD 99.27%)' }}>
+            style={{ background: 'linear-gradient(92.63deg,#2447D6 14.57%,#3E96F9 99.27%)' }}>
             + הוסף
           </button>
         </div>
@@ -471,7 +471,7 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
       <Field label="FAQ – שאלות נפוצות" hint="מוצג מתחת לתוכן הפוסט">
         {!faq ? (
           <button type="button" onClick={enableFaq}
-            className="flex items-center gap-2 text-[13px] text-[#1B1BB3] font-medium border border-[#1B1BB3]/30 px-4 py-2.5 rounded-lg hover:bg-[#1B1BB3]/5 transition-colors">
+            className="flex items-center gap-2 text-[13px] text-[#2447D6] font-medium border border-[#2447D6]/30 px-4 py-2.5 rounded-lg hover:bg-[#2447D6]/5 transition-colors">
             <Plus size={15} /> הוספת סקשן FAQ
           </button>
         ) : (
@@ -516,7 +516,7 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
             ))}
 
             <button type="button" onClick={addFaqItem}
-              className="flex items-center gap-2 text-[13px] text-[#1B1BB3] font-medium hover:opacity-70 transition-opacity w-fit">
+              className="flex items-center gap-2 text-[13px] text-[#2447D6] font-medium hover:opacity-70 transition-opacity w-fit">
               <Plus size={15} /> הוסף שאלה
             </button>
           </div>
@@ -528,7 +528,7 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
       <div className="flex gap-3 pt-2">
         <button type="submit" disabled={saving}
           className="px-6 py-2.5 rounded-lg text-white text-[14px] font-bold disabled:opacity-60 hover:opacity-90 transition-opacity"
-          style={{ background: 'linear-gradient(92.63deg,#1B1BB3 14.57%,#530FAD 99.27%)' }}>
+          style={{ background: 'linear-gradient(92.63deg,#2447D6 14.57%,#3E96F9 99.27%)' }}>
           {saving ? 'שומר...' : isEdit ? 'שמירת שינויים' : 'פרסום פוסט'}
         </button>
         <button type="button" onClick={() => router.back()}
@@ -546,7 +546,7 @@ function ToolBtn({ onClick, title, children }: { onClick: () => void; title: str
       type="button"
       title={title}
       onClick={onClick}
-      className="p-1.5 rounded text-[#6b7280] hover:text-[#1B1BB3] hover:bg-[#1B1BB3]/8 transition-all"
+      className="p-1.5 rounded text-[#6b7280] hover:text-[#2447D6] hover:bg-[#2447D6]/8 transition-all"
     >
       {children}
     </button>
@@ -569,4 +569,4 @@ function Field({ label, hint, children }: { label: string; hint?: string; childr
   )
 }
 
-const inputCls = 'w-full px-4 py-2.5 border border-[#d9d9d9] rounded-lg text-[14px] focus:outline-none focus:ring-2 focus:ring-[#1B1BB3]/20 focus:border-[#1B1BB3] bg-white transition-all text-right'
+const inputCls = 'w-full px-4 py-2.5 border border-[#d9d9d9] rounded-lg text-[14px] focus:outline-none focus:ring-2 focus:ring-[#2447D6]/20 focus:border-[#2447D6] bg-white transition-all text-right'

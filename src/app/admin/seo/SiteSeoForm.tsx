@@ -6,10 +6,10 @@ import type { RouteSeoPayload } from '@/lib/site-seo-config'
 import { EDITABLE_SEO_ROUTES } from '@/lib/site-seo-config'
 import SchemaLdBuilder from './SchemaLdBuilder'
 
-const gradient = 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)'
+const gradient = 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)'
 
 const inputCls =
-  'w-full px-3 py-2 border border-[#d9d9d9] rounded-lg text-[13px] focus:outline-none focus:ring-2 focus:ring-[#1B1BB3]/20 focus:border-[#1B1BB3] bg-white transition-all text-right'
+  'w-full px-3 py-2 border border-[#d9d9d9] rounded-lg text-[13px] focus:outline-none focus:ring-2 focus:ring-[#2447D6]/20 focus:border-[#2447D6] bg-white transition-all text-right'
 
 const tableWrap = 'overflow-x-auto rounded-lg border border-[#e5e7eb] bg-white'
 const tableCls = 'w-full min-w-[520px] border-collapse text-[13px]'
@@ -99,7 +99,7 @@ export default function SiteSeoForm() {
                     <td className="px-4 py-3 min-w-[100px]">
                       <button
                         onClick={() => setSelectedPath(path)}
-                        className="px-3 py-1.5 text-[12px] rounded-lg border border-[#1B1BB3]/30 text-[#1B1BB3] hover:bg-[#1B1BB3]/5 transition-colors"
+                        className="px-3 py-1.5 text-[12px] rounded-lg border border-[#2447D6]/30 text-[#2447D6] hover:bg-[#2447D6]/5 transition-colors"
                       >
                         Edit
                       </button>
@@ -115,7 +115,7 @@ export default function SiteSeoForm() {
         <div className="max-w-3xl">
           <button
             onClick={() => setSelectedPath(null)}
-            className="flex items-center gap-1.5 text-[13px] text-[#6b7280] hover:text-[#1B1BB3] mb-6 transition-colors"
+            className="flex items-center gap-1.5 text-[13px] text-[#6b7280] hover:text-[#2447D6] mb-6 transition-colors"
           >
             ← חזרה לרשימת הדפים
           </button>

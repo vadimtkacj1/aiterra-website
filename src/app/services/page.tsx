@@ -27,7 +27,7 @@ export default function ServicesPage() {
       <RouteJsonLd path="/services" />
       <BreadcrumbSchema items={[{ label: 'שירותים', href: '/services' }]} />
       <HeaderAlt transparent />
-      <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#080112' }}>
+      <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#060B22' }}>
         <ServicesHeroSection />
       </div>
       <div className="flex min-h-0 w-full flex-1 flex-col">

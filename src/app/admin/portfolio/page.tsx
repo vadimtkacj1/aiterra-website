@@ -5,7 +5,7 @@ import { getAllPortfolioProjects } from '@/lib/portfolio-server'
 
 export const dynamic = 'force-dynamic'
 
-const gradient = 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)'
+const gradient = 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)'
 
 export default function AdminPortfolioPage() {
   const projects = getAllPortfolioProjects()

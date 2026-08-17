@@ -41,7 +41,7 @@ export default function AdminAuthorsPage() {
           <Link
             href="/admin/authors/new"
             className="px-4 py-2 text-[13px] font-semibold text-white rounded-lg hover:opacity-90 transition-opacity"
-            style={{ background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)' }}
+            style={{ background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)' }}
           >
             + Add user
           </Link>
@@ -83,7 +83,7 @@ export default function AdminAuthorsPage() {
                     <div className="flex gap-2">
                       <Link
                         href={`/admin/authors/${encodeURIComponent(author.id)}`}
-                        className="px-3 py-2 text-[12px] rounded-lg border border-[#1B1BB3]/30 text-[#1B1BB3] hover:bg-[#1B1BB3]/5 transition-colors"
+                        className="px-3 py-2 text-[12px] rounded-lg border border-[#2447D6]/30 text-[#2447D6] hover:bg-[#2447D6]/5 transition-colors"
                       >
                         Edit
                       </Link>

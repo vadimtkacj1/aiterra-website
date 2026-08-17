@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 const gradientStyle: React.CSSProperties = {
-  background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
+  background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   backgroundClip: 'text',
@@ -40,7 +40,7 @@ export default function NotFound() {
         {/* Divider line */}
         <div
           className="mt-2 mb-8 h-px w-24"
-          style={{ background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)' }}
+          style={{ background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)' }}
         />
 
         <h1
@@ -57,8 +57,8 @@ export default function NotFound() {
         <div className="flex flex-row gap-4 justify-center flex-wrap">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-md font-bold text-sm transition-colors duration-200 border hover:bg-purple-50"
-            style={{ borderColor: '#530FAD', color: '#530FAD' }}
+            className="inline-flex items-center justify-center px-8 py-3 rounded-md font-bold text-sm transition-colors duration-200 border hover:bg-blue-50"
+            style={{ borderColor: '#3E96F9', color: '#3E96F9' }}
           >
             צור קשר
           </Link>
@@ -66,7 +66,7 @@ export default function NotFound() {
           <Link
             href="/"
             className="inline-flex items-center justify-center px-8 py-3 rounded-md font-bold text-sm text-white transition-opacity duration-200 hover:opacity-85"
-            style={{ background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)' }}
+            style={{ background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)' }}
           >
             חזרה לעמוד הראשי
           </Link>

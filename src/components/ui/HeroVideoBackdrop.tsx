@@ -50,7 +50,7 @@ export default function HeroVideoBackdrop({
   }, [videoSrc])
 
   return (
-    <div className="absolute inset-0 z-0 bg-[#080112]">
+    <div className="absolute inset-0 z-0 bg-[#060B22]">
       <video
         ref={videoRef}
         className="absolute inset-0 z-0 h-full w-full object-cover"

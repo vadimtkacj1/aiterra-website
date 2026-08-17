@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { useDocumentEnd } from '@/context/DocumentEndContext'
 
-const gradientStyle = 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)'
+const gradientStyle = 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)'
 
 const gradientTextStyle: React.CSSProperties = {
   background: gradientStyle,
@@ -134,7 +134,7 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
                 src={onDarkHero ? '/icons/white-logo.svg' : '/icons/logo.svg'}
                 onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/icons/logo.svg' }}
                 alt="AITERRA"
-                className="w-[100px] h-[100px] object-contain"
+                className="w-16 h-16 object-contain"
               />
             </Link>
             <div className="flex items-center gap-1">
@@ -162,7 +162,7 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
             src={onDarkHero ? '/icons/white-logo.svg' : '/icons/logo.svg'}
             onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/icons/logo.svg' }}
             alt="AITERRA"
-            className="block h-14 w-14 max-h-14 max-w-14 object-contain"
+            className="block h-12 w-12 max-h-12 max-w-12 object-contain"
           />
         </Link>
 

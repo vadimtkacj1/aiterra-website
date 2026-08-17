@@ -5,7 +5,7 @@ import AdminBlogActions from './AdminBlogActions'
 
 export const dynamic = 'force-dynamic'
 
-const gradient = 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)'
+const gradient = 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)'
 
 export default function AdminBlogPage() {
   const posts = getAllPosts()
@@ -47,7 +47,7 @@ export default function AdminBlogPage() {
               <div className="text-[11px] text-[#9ca3af] mb-2">{post.slug}</div>
               <div className="flex gap-1.5 flex-wrap mb-3">
                 {post.tags.slice(0, 3).map((tag) => (
-                  <span key={tag} className="px-2 py-0.5 bg-[#eff6ff] text-[#1B1BB3] text-[11px] font-medium rounded-full">
+                  <span key={tag} className="px-2 py-0.5 bg-[#eff6ff] text-[#2447D6] text-[11px] font-medium rounded-full">
                     {tag}
                   </span>
                 ))}
@@ -57,7 +57,7 @@ export default function AdminBlogPage() {
                 <div className="flex gap-2">
                   <Link
                     href={`/admin/blog/${post.slug}`}
-                    className="px-3 py-1.5 text-[12px] font-medium text-[#1B1BB3] border border-[#1B1BB3]/30 rounded-lg hover:bg-[#1B1BB3]/5 transition-colors"
+                    className="px-3 py-1.5 text-[12px] font-medium text-[#2447D6] border border-[#2447D6]/30 rounded-lg hover:bg-[#2447D6]/5 transition-colors"
                   >
                     עריכה
                   </Link>
@@ -99,7 +99,7 @@ export default function AdminBlogPage() {
                   <td className="px-4 py-4">
                     <div className="flex gap-1.5 flex-wrap">
                       {post.tags.slice(0, 3).map((tag) => (
-                        <span key={tag} className="px-2 py-0.5 bg-[#eff6ff] text-[#1B1BB3] text-[11px] font-medium rounded-full">
+                        <span key={tag} className="px-2 py-0.5 bg-[#eff6ff] text-[#2447D6] text-[11px] font-medium rounded-full">
                           {tag}
                         </span>
                       ))}
@@ -110,7 +110,7 @@ export default function AdminBlogPage() {
                     <div className="flex items-center gap-2">
                       <Link
                         href={`/admin/blog/${post.slug}`}
-                        className="px-3 py-1.5 text-[12px] font-medium text-[#1B1BB3] border border-[#1B1BB3]/30 rounded-lg hover:bg-[#1B1BB3]/5 transition-colors"
+                        className="px-3 py-1.5 text-[12px] font-medium text-[#2447D6] border border-[#2447D6]/30 rounded-lg hover:bg-[#2447D6]/5 transition-colors"
                       >
                         עריכה
                       </Link>

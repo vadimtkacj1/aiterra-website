@@ -132,9 +132,9 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
         <Field label="תגיות">
           <div className="flex flex-wrap gap-1.5 mb-2">
             {form.tags.map((t) => (
-              <span key={t} className="inline-flex items-center gap-1 rounded-full bg-[#eff6ff] px-2.5 py-1 text-[12px] font-medium text-[#1B1BB3]">
+              <span key={t} className="inline-flex items-center gap-1 rounded-full bg-[#eff6ff] px-2.5 py-1 text-[12px] font-medium text-[#2447D6]">
                 {t}
-                <button type="button" onClick={() => removeTag(t)} className="text-[#1B1BB3]/70 hover:text-[#1B1BB3]"><Trash2 size={12} /></button>
+                <button type="button" onClick={() => removeTag(t)} className="text-[#2447D6]/70 hover:text-[#2447D6]"><Trash2 size={12} /></button>
               </span>
             ))}
           </div>
@@ -146,7 +146,7 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
               placeholder="תגית + Enter"
               className={`${inputCls} flex-1`}
             />
-            <button type="button" onClick={addTag} className="shrink-0 rounded-lg border border-[#1B1BB3]/30 px-4 py-2.5 text-[13px] font-medium text-[#1B1BB3] hover:bg-[#1B1BB3]/5">
+            <button type="button" onClick={addTag} className="shrink-0 rounded-lg border border-[#2447D6]/30 px-4 py-2.5 text-[13px] font-medium text-[#2447D6] hover:bg-[#2447D6]/5">
               הוסף
             </button>
           </div>
@@ -211,7 +211,7 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
       {error && <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-[13px] text-red-700">{error}</div>}
 
       <div className="flex gap-3 pt-1">
-        <button type="submit" disabled={saving || uploading} className="rounded-lg bg-linear-to-l from-[#530FAD] to-[#1B1BB3] px-8 py-2.5 text-[14px] font-bold text-white hover:opacity-90 disabled:opacity-60">
+        <button type="submit" disabled={saving || uploading} className="rounded-lg bg-linear-to-l from-[#3E96F9] to-[#2447D6] px-8 py-2.5 text-[14px] font-bold text-white hover:opacity-90 disabled:opacity-60">
           {saving ? 'שומר…' : 'שמירה'}
         </button>
         <button type="button" onClick={() => router.push('/admin/portfolio')} className="rounded-lg border border-gray-200 px-6 py-2.5 text-[14px] font-medium text-[#374151] hover:bg-gray-50">
@@ -249,4 +249,4 @@ function Field({ label, hint, required, children }: { label: string; hint?: stri
 }
 
 const inputCls =
-  'w-full px-4 py-2.5 border border-[#e5e7eb] rounded-lg text-[14px] focus:outline-none focus:ring-2 focus:ring-[#1B1BB3]/20 focus:border-[#1B1BB3] bg-white transition-all text-right placeholder:text-[#d1d5db]'
+  'w-full px-4 py-2.5 border border-[#e5e7eb] rounded-lg text-[14px] focus:outline-none focus:ring-2 focus:ring-[#2447D6]/20 focus:border-[#2447D6] bg-white transition-all text-right placeholder:text-[#d1d5db]'

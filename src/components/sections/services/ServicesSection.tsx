@@ -36,7 +36,7 @@ export default function ServicesSection() {
                 </div>
 
                 <div className="my-auto">
-                  <h3 className="text-[22px] md:text-[48px] leading-[1.2] font-black text-[#3b28cc] mb-3 md:mb-8 max-w-125">
+                  <h3 className="text-[22px] md:text-[48px] leading-[1.2] font-black text-[#2447D6] mb-3 md:mb-8 max-w-125">
                     {service.title}
                   </h3>
 
@@ -46,7 +46,7 @@ export default function ServicesSection() {
 
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-block border border-[#3b28cc] text-[#3b28cc] text-[14px] px-10 py-3 hover:bg-[#3b28cc] hover:text-white transition-all duration-300 font-bold"
+                    className="inline-block border border-[#2447D6] text-[#2447D6] text-[14px] px-10 py-3 hover:bg-[#2447D6] hover:text-white transition-all duration-300 font-bold"
                   >
                     {service.cta}
                   </Link>

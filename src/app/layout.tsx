@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:right-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-white focus:text-[#1B1BB3] focus:font-bold focus:rounded focus:shadow-lg"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:right-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-white focus:text-[#2447D6] focus:font-bold focus:rounded focus:shadow-lg"
         >
           דלגו לתוכן הראשי
         </a>

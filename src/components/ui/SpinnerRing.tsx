@@ -2,9 +2,9 @@ import type { ReactElement } from 'react'
 
 const variants = {
   'on-light':
-    'border-[3px] border-gray-200/90 border-t-[#530FAD] shadow-sm [animation-duration:0.85s]',
+    'border-[3px] border-gray-200/90 border-t-[#3E96F9] shadow-sm [animation-duration:0.85s]',
   'on-dark':
-    'border-2 border-white/15 border-l-[#530FAD] border-t-transparent [animation-duration:0.85s]',
+    'border-2 border-white/15 border-l-[#3E96F9] border-t-transparent [animation-duration:0.85s]',
 } as const
 
 export type SpinnerRingVariant = keyof typeof variants

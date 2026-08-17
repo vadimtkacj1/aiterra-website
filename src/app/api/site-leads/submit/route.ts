@@ -59,7 +59,7 @@ async function notifyByEmail(lead: Lead): Promise<void> {
   ]
   const text = rows.filter(([, v]) => v).map(([k, v]) => `${k}: ${v}`).join('\n')
   const html = `<div dir="rtl" style="font-family:Arial,sans-serif;font-size:15px">
-    <h2 style="color:#1B1BB3">ליד חדש מהאתר</h2>
+    <h2 style="color:#2447D6">ליד חדש מהאתר</h2>
     <table cellpadding="6" style="border-collapse:collapse">
       ${rows.filter(([, v]) => v).map(([k, v]) => `<tr><td style="font-weight:bold">${k}</td><td>${v}</td></tr>`).join('')}
     </table>

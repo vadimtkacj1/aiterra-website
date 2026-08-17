@@ -23,7 +23,7 @@ export default function ProcessSection({ steps }: Props) {
                 className="block font-semibold leading-none text-[160px] md:text-[240.89px]"
                 style={{
                   fontFamily: '"Arimo", sans-serif',
-                  background: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
+                  background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
@@ -35,7 +35,7 @@ export default function ProcessSection({ steps }: Props) {
 
             <div className="flex flex-col gap-3 md:gap-4 text-center md:text-right max-w-[650px]" dir="rtl">
               <h2
-                className="font-bold text-[20px] md:text-[48px] leading-tight md:leading-none text-[#1B1BB3] md:text-[#1D1D1D]"
+                className="font-bold text-[20px] md:text-[48px] leading-tight md:leading-none text-[#2447D6] md:text-[#1D1D1D]"
               >
                 {s.title}
               </h2>

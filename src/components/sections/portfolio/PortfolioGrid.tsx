@@ -39,7 +39,7 @@ export default function PortfolioGrid({
         <div className="mb-10 md:mb-14 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <span className="mb-4 flex items-center gap-3 text-[12px] font-semibold tracking-[0.14em] text-[#8b8b94]">
-              <span className="h-px w-8 bg-[linear-gradient(92.63deg,#1B1BB3_14.57%,#530FAD_99.27%)]" />
+              <span className="h-px w-8 bg-[linear-gradient(92.63deg,#2447D6_14.57%,#3E96F9_99.27%)]" />
               PORTFOLIO
             </span>
 
@@ -58,12 +58,12 @@ export default function PortfolioGrid({
               href="/portfolio"
               style={{
                 border: '1px solid',
-                borderImageSource: 'linear-gradient(92.63deg, #1B1BB3 14.57%, #530FAD 99.27%)',
+                borderImageSource: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
                 borderImageSlice: 1,
                 width: '265px',
                 height: '45px',
               }}
-              className="group inline-flex shrink-0 items-center justify-center gap-2.5 text-[13px] text-[#1B1BB3] transition-opacity duration-300 hover:opacity-80"
+              className="group inline-flex shrink-0 items-center justify-center gap-2.5 text-[13px] text-[#2447D6] transition-opacity duration-300 hover:opacity-80"
             >
               צפו בכל הפרויקטים
               <span aria-hidden className="transition-transform duration-300 group-hover:-translate-x-1">
@@ -111,7 +111,7 @@ export default function PortfolioGrid({
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${project.title} — פתיחת האתר החי בחלון חדש`}
-                      className="relative z-20 ms-auto shrink-0 rounded-md p-1 text-[#b4b4c0] transition-colors duration-200 hover:bg-[#f4f4f7] hover:text-[#1B1BB3]"
+                      className="relative z-20 ms-auto shrink-0 rounded-md p-1 text-[#b4b4c0] transition-colors duration-200 hover:bg-[#f4f4f7] hover:text-[#2447D6]"
                     >
                       <svg aria-hidden viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M7 17 17 7" />
@@ -134,7 +134,7 @@ export default function PortfolioGrid({
                     <div className="flex min-w-0 items-baseline gap-2.5">
                       <span
                         aria-hidden
-                        className="shrink-0 text-[12px] font-bold tabular-nums text-transparent bg-clip-text bg-[linear-gradient(92.63deg,#1B1BB3_14.57%,#530FAD_99.27%)]"
+                        className="shrink-0 text-[12px] font-bold tabular-nums text-transparent bg-clip-text bg-[linear-gradient(92.63deg,#2447D6_14.57%,#3E96F9_99.27%)]"
                       >
                         {String(index + 1).padStart(2, '0')}
                       </span>
@@ -152,7 +152,7 @@ export default function PortfolioGrid({
                             <svg
                               aria-hidden
                               viewBox="0 0 24 24"
-                              className="mr-1.5 inline-block h-3.5 w-3.5 align-[-0.1em] text-[#c9c9d6] transition-[color,transform] duration-300 group-hover:-translate-y-0.5 group-hover:text-[#1B1BB3]"
+                              className="mr-1.5 inline-block h-3.5 w-3.5 align-[-0.1em] text-[#c9c9d6] transition-[color,transform] duration-300 group-hover:-translate-y-0.5 group-hover:text-[#2447D6]"
                               fill="none"
                               stroke="currentColor"
                               strokeWidth="2.5"

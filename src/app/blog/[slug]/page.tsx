@@ -102,11 +102,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <HeaderAlt transparent />
 
       {/* Hero — identical structure to BlogHeroSection */}
-      <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#080112' }}>
+      <div className="relative z-15 -mt-28 md:-mt-48" style={{ background: '#060B22' }}>
         <section
           className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center font-sans"
           dir="rtl"
-          style={{ backgroundColor: '#080112' }}
+          style={{ backgroundColor: '#060B22' }}
         >
           <HeroVideoBackdrop />
           <div className="absolute inset-0 bg-black/40" />
@@ -170,7 +170,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   {authorProfile ? (
                     <Link
                       href={`/blog/author/${authorProfile.id}`}
-                      className="text-[14px] font-semibold text-[#111827] hover:text-[#1B1BB3]"
+                      className="text-[14px] font-semibold text-[#111827] hover:text-[#2447D6]"
                     >
                       {authorName}
                     </Link>
@@ -183,17 +183,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   {(authorProfile?.socials.linkedin || authorProfile?.socials.instagram || authorProfile?.socials.facebook) ? (
                     <div className="flex items-center gap-2 mt-2">
                       {authorProfile.socials.linkedin ? (
-                        <a href={authorProfile.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3]">
+                        <a href={authorProfile.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#2447D6]">
                           <span className="text-[14px] font-semibold" aria-hidden>in</span>
                         </a>
                       ) : null}
                       {authorProfile.socials.instagram ? (
-                        <a href={authorProfile.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3]">
+                        <a href={authorProfile.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#2447D6]">
                           <span className="text-[14px] font-semibold" aria-hidden>IG</span>
                         </a>
                       ) : null}
                       {authorProfile.socials.facebook ? (
-                        <a href={authorProfile.socials.facebook} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#1B1BB3] text-[14px] font-semibold">
+                        <a href={authorProfile.socials.facebook} target="_blank" rel="noopener noreferrer" className="text-[#6b7280] hover:text-[#2447D6] text-[14px] font-semibold">
                           f
                         </a>
                       ) : null}
@@ -214,7 +214,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 rounded-full text-[12px] font-medium text-[#1B1BB3]"
+                      className="px-3 py-1 rounded-full text-[12px] font-medium text-[#2447D6]"
                       style={{
                         background: 'rgba(27,27,179,0.08)',
                         border: '1px solid rgba(27,27,179,0.25)',

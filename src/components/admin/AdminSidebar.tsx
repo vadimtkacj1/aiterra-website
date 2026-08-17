@@ -38,7 +38,7 @@ function SideMenu({ pathname }: { pathname: string }) {
               fontSize: 14,
               fontWeight: 500,
               transition: 'all 0.15s',
-              background: active ? 'linear-gradient(92.63deg,#1B1BB3 14.57%,#530FAD 99.27%)' : 'transparent',
+              background: active ? 'linear-gradient(92.63deg,#2447D6 14.57%,#3E96F9 99.27%)' : 'transparent',
               color: active ? '#fff' : 'rgba(255,255,255,0.55)',
             }}
             onMouseEnter={(e) => { if (!active) (e.currentTarget as HTMLElement).style.color = '#fff'; if (!active) (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.06)' }}

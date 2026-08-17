@@ -5,40 +5,38 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
 
-const BLUE = new THREE.Color('#1B1BB3')
-const PURPLE = new THREE.Color('#530FAD')
+const BLUE = new THREE.Color('#2447D6')
+const AZURE = new THREE.Color('#3E96F9')
 
 /**
- * AITERRA logomark outline, traced from the brand logo raster (public/icons/logo.svg).
- * Image space: 1063x1063, y-down. Two pieces: the "A" body and the detached slash.
+ * AITERRA ribbon logomark: a Möbius band built as a solid sweep. A rounded-rectangle
+ * cross-section travels an elliptical path with a half twist while the path itself
+ * folds vertically (potato-chip saddle). The cross-section's 180° symmetry lets the
+ * seam weld exactly, so the mesh is closed and shades seamlessly.
  */
-const MARK_BODY: [number, number][] = [
-  [527, 56.5],
-  [843.5, 650],
-  [702.5, 649],
-  [525, 323.5],
-  [313.5, 720],
-  [453, 720.5],
-  [535.5, 846],
-  [109.5, 847],
-]
-const MARK_SLASH: [number, number][] = [
-  [550.5, 721],
-  [882, 720.5],
-  [949.5, 847],
-  [640, 847.5],
-]
+const RIBBON = {
+  Rx: 1.0,          // path ellipse radius X
+  Rz: 0.8,          // path ellipse radius Z
+  width: 0.66,      // band width
+  thick: 0.04,      // band thickness
+  corner: 0.016,    // cross-section corner radius
+  phi0: -0.45,      // twist phase at u=0
+  wave: 0.3,        // vertical saddle amplitude
+  wavePhase: -0.35, // saddle orientation
+  M: 360,           // sweep segments
+  A: 5,             // segments per cross-section corner arc
+}
 
-/** Logomark bbox in image space — used to center and scale into world units. */
-const BBOX = { minX: 109.5, maxX: 949.5, minY: 56.5, maxY: 847.5 }
-const MARK_WIDTH = 2.4
-const EXTRUDE_DEPTH = 0.34
+/** Ribbon gradient, sampled from the brand artwork (deep -> mid -> light). */
+const COL_DEEP = new THREE.Color('#2B49CB')
+const COL_MID = new THREE.Color('#2F5FE9')
+const COL_LIGHT = new THREE.Color('#49B9F4')
 
 const PARTICLE_COUNT = 90
 
 /** Camera framing: margin around the mark and how far below frame-center it sits (keeps it clear of the header). */
-const FIT_MARGIN = 1.18
-const CAMERA_Y_LIFT = 0.13
+const FIT_MARGIN = 1.12
+const CAMERA_Y_LIFT = 0.5
 
 /** Deterministic PRNG — the scene must look identical on every load. */
 function mulberry32(seed: number) {
@@ -69,50 +67,107 @@ function makeDotTexture() {
   return tex
 }
 
-function toShape(points: [number, number][]) {
-  const scale = MARK_WIDTH / (BBOX.maxX - BBOX.minX)
-  const cx = (BBOX.minX + BBOX.maxX) / 2
-  const cy = (BBOX.minY + BBOX.maxY) / 2
-  const shape = new THREE.Shape()
-  points.forEach(([x, y], i) => {
-    const px = (x - cx) * scale
-    const py = (cy - y) * scale // flip y: image space is y-down
-    if (i === 0) shape.moveTo(px, py)
-    else shape.lineTo(px, py)
-  })
-  shape.closePath()
-  return shape
+function buildRibbonGeometry() {
+  const { Rx, Rz, width, thick, corner, phi0, wave, wavePhase, M, A } = RIBBON
+  const P = 4 * (A + 1) // cross-section vertex count (even, 180°-symmetric)
+
+  // rounded-rectangle cross-section, CCW
+  const a = width / 2
+  const b = thick / 2
+  const rc = Math.min(corner, b * 0.95)
+  const prof: [number, number][] = []
+  const cornerCenters: [number, number, number][] = [
+    [a - rc, b - rc, 0],
+    [-a + rc, b - rc, Math.PI / 2],
+    [-a + rc, -b + rc, Math.PI],
+    [a - rc, -b + rc, (3 * Math.PI) / 2],
+  ]
+  for (const [ccx, ccy, th0] of cornerCenters) {
+    for (let i = 0; i <= A; i++) {
+      const th = th0 + (Math.PI / 2) * (i / A)
+      prof.push([ccx + rc * Math.cos(th), ccy + rc * Math.sin(th)])
+    }
+  }
+
+  const V = M * P
+  const positions = new Float32Array(V * 3)
+  // seam weld: ring M maps to ring 0 with the profile shifted by P/2 (half-turn symmetry)
+  const vid = (ring: number, k: number) =>
+    ring === M ? (k + P / 2) % P : ring * P + (k % P)
+
+  for (let i = 0; i < M; i++) {
+    const u = (2 * Math.PI * i) / M
+    const cx = Rx * Math.cos(u)
+    const cz = Rz * Math.sin(u)
+    const cy = wave * Math.sin(2 * u + wavePhase)
+    const psi = u / 2 + phi0
+    const c = Math.cos(psi)
+    const s = Math.sin(psi)
+    // width dir d and thickness dir n in the (radial, up) frame
+    const d = [c * Math.cos(u), s, c * Math.sin(u)]
+    const n = [-s * Math.cos(u), c, -s * Math.sin(u)]
+    for (let k = 0; k < P; k++) {
+      const [x, y] = prof[k]
+      const id = i * P + k
+      positions[id * 3] = cx + x * d[0] + y * n[0]
+      positions[id * 3 + 1] = cy + x * d[1] + y * n[1]
+      positions[id * 3 + 2] = cz + x * d[2] + y * n[2]
+    }
+  }
+
+  const indices = new Uint32Array(M * P * 6)
+  let ptr = 0
+  for (let i = 0; i < M; i++) {
+    for (let k = 0; k < P; k++) {
+      const a0 = vid(i, k)
+      const a1 = vid(i, k + 1)
+      const b0 = vid(i + 1, k)
+      const b1 = vid(i + 1, k + 1)
+      indices[ptr++] = a0
+      indices[ptr++] = b0
+      indices[ptr++] = b1
+      indices[ptr++] = a0
+      indices[ptr++] = b1
+      indices[ptr++] = a1
+    }
+  }
+
+  const geometry = new THREE.BufferGeometry()
+  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
+  geometry.setIndex(new THREE.BufferAttribute(indices, 1))
+  geometry.computeVertexNormals()
+  return geometry
 }
 
 type SceneAssets = {
-  markGeometry: THREE.ExtrudeGeometry
+  markGeometry: THREE.BufferGeometry
   particlesGeometry: THREE.BufferGeometry
   dotTexture: THREE.CanvasTexture
   markRadius: number
 }
 
 function buildScene(): SceneAssets {
-  const markGeometry = new THREE.ExtrudeGeometry([toShape(MARK_BODY), toShape(MARK_SLASH)], {
-    depth: EXTRUDE_DEPTH,
-    bevelEnabled: true,
-    bevelThickness: 0.035,
-    bevelSize: 0.028,
-    bevelSegments: 2,
-    curveSegments: 1,
-  })
+  const markGeometry = buildRibbonGeometry()
   markGeometry.center()
   markGeometry.computeBoundingSphere()
 
-  // brand gradient: blue at the apex -> purple at the base
+  // ribbon gradient: height + facing direction + a lit crest along the sweep,
+  // matching the brand artwork's deep-to-light flow
   {
     const pos = markGeometry.attributes.position
+    const nrm = markGeometry.attributes.normal
     const colors = new Float32Array(pos.count * 3)
     const box = new THREE.Box3().setFromBufferAttribute(pos as THREE.BufferAttribute)
     const span = box.max.y - box.min.y || 1
     const color = new THREE.Color()
     for (let i = 0; i < pos.count; i++) {
-      const t = THREE.MathUtils.clamp((box.max.y - pos.getY(i)) / span, 0, 1)
-      color.copy(BLUE).lerp(PURPLE, t)
+      const h = THREE.MathUtils.clamp((pos.getY(i) - box.min.y) / span, 0, 1)
+      const u = Math.atan2(pos.getZ(i) / RIBBON.Rz, pos.getX(i) / RIBBON.Rx)
+      const crest = 0.5 + 0.5 * Math.cos(u - 1.1)
+      const s = 0.5 + 0.5 * nrm.getY(i) // 0 facing down -> 1 facing up
+      const t = THREE.MathUtils.clamp(0.12 + 0.38 * h + 0.18 * crest * h + 0.36 * s, 0, 1)
+      if (t < 0.5) color.copy(COL_DEEP).lerp(COL_MID, t * 2)
+      else color.copy(COL_MID).lerp(COL_LIGHT, (t - 0.5) * 2)
       colors[i * 3] = color.r
       colors[i * 3 + 1] = color.g
       colors[i * 3 + 2] = color.b
@@ -134,7 +189,7 @@ function buildScene(): SceneAssets {
       positions[i * 3] = Math.cos(theta) * radius
       positions[i * 3 + 1] = y
       positions[i * 3 + 2] = Math.sin(theta) * radius
-      color.copy(BLUE).lerp(PURPLE, rng())
+      color.copy(BLUE).lerp(AZURE, rng())
       colors[i * 3] = color.r
       colors[i * 3 + 1] = color.g
       colors[i * 3 + 2] = color.b
@@ -230,9 +285,9 @@ function LogoMark() {
     const t = timeRef.current
 
     if (markRef.current) {
-      // pendulum swing (±31°) instead of full rotation: the mark stays readable
-      // at all times, never turns edge-on or shows its mirrored back
-      markRef.current.rotation.y = Math.sin(t * 0.35) * 0.55
+      // slow continuous spin: the ribbon has no front/back, so it reads well
+      // from every angle (unlike the old letterform, which needed a pendulum)
+      markRef.current.rotation.y = t * 0.28
       markRef.current.position.y = Math.sin(t * 0.7) * 0.06
     }
     if (swayRef.current) {
@@ -253,11 +308,13 @@ function LogoMark() {
     <group ref={swayRef}>
       <group ref={markRef}>
         <mesh geometry={assets.markGeometry}>
-          <meshStandardMaterial
+          <meshPhysicalMaterial
             vertexColors
-            metalness={0.35}
-            roughness={0.28}
-            envMapIntensity={1.1}
+            metalness={0}
+            roughness={0.36}
+            clearcoat={0.4}
+            clearcoatRoughness={0.3}
+            envMapIntensity={0.5}
           />
         </mesh>
       </group>
@@ -303,11 +360,15 @@ export default function Hero3DScene() {
         dpr={[1, 1.5]}
         style={{ background: 'transparent' }}
         className="h-full w-full"
+        onCreated={({ gl }) => {
+          // Neutral keeps the ribbon's blues saturated; the default ACES greys them out
+          gl.toneMapping = THREE.NeutralToneMapping
+        }}
       >
         <StudioEnvironment />
-        <directionalLight position={[4, 6, 5]} intensity={1.1} color="#ffffff" />
-        <pointLight position={[-4, 1, 3]} intensity={6} color="#1B1BB3" />
-        <pointLight position={[4, -2, 2]} intensity={5} color="#530FAD" />
+        <directionalLight position={[4, 6, 5]} intensity={0.85} color="#ffffff" />
+        <pointLight position={[-4, 1, 3]} intensity={4} color="#2447D6" />
+        <pointLight position={[4, -2, 2]} intensity={3.5} color="#3E96F9" />
         <LogoMark />
       </Canvas>
     </div>

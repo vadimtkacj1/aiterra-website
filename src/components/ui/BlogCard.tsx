@@ -16,7 +16,7 @@ export default function BlogCard({ post, eager = false }: Props) {
       {/* Branded gradient paints instantly; the photo covers it once loaded */}
       <div
         className="absolute inset-0"
-        style={{ background: 'linear-gradient(135deg, #1B1BB3 0%, #530FAD 100%)' }}
+        style={{ background: 'linear-gradient(135deg, #2447D6 0%, #3E96F9 100%)' }}
       />
       {post.image && (
         <Image
