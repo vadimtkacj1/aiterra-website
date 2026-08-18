@@ -64,6 +64,35 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-ModernistBold.woff2" crossOrigin="anonymous" />
       </head>
       <body>
+        {/* Full-page splash while the page loads. Server-rendered inside
+            dangerouslySetInnerHTML so React never reconciles it — the inline
+            script below can hide it without fighting hydration. Hides on
+            window load, hard-capped at 2.5s so it can never trap the user;
+            bfcache restores (pageshow) hide it instantly. */}
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+<div id="page-loader" aria-hidden="true">
+  <img src="/icons/logo-v2.svg" alt="" width="120" height="120" />
+  <span class="page-loader-ring"></span>
+</div>
+<noscript><style>#page-loader{display:none}</style></noscript>
+<script>(function(){
+  var el = document.getElementById('page-loader');
+  if (!el) return;
+  var hidden = false;
+  function hide() {
+    if (hidden) return;
+    hidden = true;
+    el.classList.add('page-loader--done');
+  }
+  if (document.readyState === 'complete') hide();
+  else window.addEventListener('load', hide, { once: true });
+  setTimeout(hide, 2500);
+  window.addEventListener('pageshow', function (e) { if (e.persisted) hide(); });
+})();</script>`,
+          }}
+        />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:right-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-white focus:text-[#2447D6] focus:font-bold focus:rounded focus:shadow-lg"
