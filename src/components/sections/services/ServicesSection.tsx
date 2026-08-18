@@ -15,8 +15,10 @@ export default function ServicesSection() {
               className="sticky flex flex-col md:flex-row-reverse w-full bg-white overflow-hidden"
               style={{ top: `4rem` }}
             >
-              {/* Image */}
-              <div className="relative w-full md:w-[710px] h-[40vh] md:h-191.25 shrink-0">
+              {/* Image — percentage width on tablets, fixed 710px only from xl
+                  (a hard md:w-[710px] left the text column ~120px on iPad and
+                  pushed it past the viewport edge) */}
+              <div className="relative w-full md:w-[45%] xl:w-177.5 h-[40vh] md:h-191.25 shrink-0">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -27,7 +29,7 @@ export default function ServicesSection() {
               </div>
 
               {/* Text */}
-              <div className="relative flex flex-col flex-1 bg-white px-6 py-6 md:px-24 md:py-16 text-right">
+              <div className="relative flex flex-col flex-1 min-w-0 bg-white px-6 py-6 md:px-10 md:py-16 xl:px-24 text-right">
 
                 <div className="w-full mb-3 md:mb-20">
                   <span className="text-[13px] font-medium text-gray-500 block">
@@ -36,7 +38,7 @@ export default function ServicesSection() {
                 </div>
 
                 <div className="my-auto">
-                  <h3 className="text-[22px] md:text-[48px] leading-[1.2] font-black text-[#2447D6] mb-3 md:mb-8 max-w-125">
+                  <h3 className="text-[22px] md:text-[34px] xl:text-[48px] leading-[1.2] font-black text-[#2447D6] mb-3 md:mb-8 max-w-125">
                     {service.title}
                   </h3>
 
