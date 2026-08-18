@@ -30,8 +30,12 @@ const stats = [
 const gradientNumberStyle: React.CSSProperties = {
   fontFamily: "'Arimo', sans-serif",
   fontWeight: 400,
-  fontSize: '84px',
+  // scales with the viewport so '99.9%' never wraps inside a narrow column
+  fontSize: 'clamp(48px, 5.5vw, 84px)',
   lineHeight: '1',
+  whiteSpace: 'nowrap',
+  // keep '95+' / '99.9%' in LTR digit order inside the RTL section
+  direction: 'ltr',
   background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
@@ -59,12 +63,14 @@ export default function StatsSection(): ReactElement {
         </div>
 
         {/* Stats Row - тепер йде від краю до краю на мобільних */}
-        <div className="flex flex-row  overflow-x-auto pb-8 md:pb-0 scroll-smooth hide-scrollbar md:overflow-visible">
+        {/* 4-up columns only from lg: on tablet widths 25% columns are too
+            narrow for the big numbers, so md keeps the swipeable mobile row */}
+        <div className="flex flex-row  overflow-x-auto pb-8 lg:pb-0 scroll-smooth hide-scrollbar lg:overflow-visible">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
               className={`
-                flex-none w-[350px] md:w-[25%] px-8 py-4 text-right border-gray-400
+                flex-none w-[350px] lg:w-[25%] px-8 lg:px-6 xl:px-8 py-4 text-right border-gray-400
                 border-r
                 ${index === stats.length - 1 ? 'border-l' : ''}
               `}
