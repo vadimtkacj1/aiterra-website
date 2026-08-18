@@ -29,12 +29,12 @@ export default function HeaderDark() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-10" dir="rtl">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-10" dir="rtl">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-[14px] font-bold text-white/80 hover:text-white transition-colors"
+              className="text-[14px] font-bold text-white/80 hover:text-white transition-colors whitespace-nowrap"
             >
               {link.label}
             </Link>
@@ -43,7 +43,7 @@ export default function HeaderDark() {
 
         {/* Desktop Contacts */}
         <div className="hidden md:flex items-center gap-6">
-          <div className="h-10 w-px bg-white/20 mx-6" />
+          <div className="h-10 w-px bg-white/20 mx-1 lg:mx-6" />
           <div className="flex items-center gap-4">
             <a
               href="tel:0526780739"

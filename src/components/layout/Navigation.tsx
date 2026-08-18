@@ -94,12 +94,12 @@ const Navigation = () => {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center gap-10" dir="rtl">
+      <nav className="hidden md:flex items-center gap-4 lg:gap-10" dir="rtl">
         {navLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="text-[14px] font-bold text-black hover:opacity-70 transition-opacity"
+            className="text-[14px] font-bold text-black hover:opacity-70 transition-opacity whitespace-nowrap"
           >
             {link.label}
           </Link>

@@ -122,13 +122,13 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
       <div className="hidden md:block max-w-7xl mx-auto px-4 py-2">
         <div className="flex items-center justify-center">
 
-          <div className="flex items-center gap-10">
+          <div className="flex items-center gap-6 lg:gap-10">
             <Link href="/" className={linkClass}>ראשי</Link>
             <Link href="/services" className={linkClass}>שירותים</Link>
             <Link href="/contact" className={linkClass}>צור קשר</Link>
           </div>
 
-          <div className="mx-12 flex flex-col items-center">
+          <div className="mx-6 lg:mx-12 flex flex-col items-center">
             <Link href="/">
               <img
                 src={onDarkHero ? '/icons/white-logo-v2.svg' : '/icons/logo-v2.svg'}
@@ -144,7 +144,7 @@ export default function HeaderAlt({ transparent = false }: HeaderAltProps) {
             </div>
           </div>
 
-          <div className="flex items-center gap-10" dir="rtl">
+          <div className="flex items-center gap-6 lg:gap-10" dir="rtl">
             <Link href="/blog" className={linkClass}>בלוג</Link>
             <Link href="/portfolio" className={linkClass}>תיק עבודות</Link>
             <Link href="/about" className={linkClass}>אודותינו</Link>

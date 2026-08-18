@@ -64,7 +64,7 @@ export default function Header() {
 
         {/* Desktop Contacts */}
         <div className="hidden md:flex items-center gap-6">
-          <div className="h-10 w-px bg-gray-300 mx-6" />
+          <div className="h-10 w-px bg-gray-300 mx-1 lg:mx-6" />
           <div className="flex items-center">
             <a
               href="tel:0526780739"
