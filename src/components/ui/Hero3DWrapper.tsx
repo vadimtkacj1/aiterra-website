@@ -62,7 +62,9 @@ export default function Hero3DWrapper() {
 
     const decide = () => {
       if (cancelled) return
-      if (window.innerWidth >= 1024 && hasHardwareWebGL()) setShow3D(true)
+      // phones included: the ribbon mesh is light (~17k tris, dpr-capped,
+      // low-power GL) — only software-rasterizer environments keep the poster
+      if (hasHardwareWebGL()) setShow3D(true)
     }
 
     // Wait for full page load, then an idle slot, so the three.js chunk
