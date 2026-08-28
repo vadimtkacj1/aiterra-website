@@ -44,6 +44,29 @@ export default function AllIn() {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    const card = cardRef.current
+    if (!card) return
+
+    if (!('IntersectionObserver' in window)) {
+      card.setAttribute('data-inview', '')
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) card.setAttribute('data-inview', '')
+          else card.removeAttribute('data-inview')
+        }
+      },
+      { rootMargin: '200px 0px' },
+    )
+
+    observer.observe(card)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section className={styles.allIn} aria-labelledby="v2-allin-heading">
       <div className={styles.topRule}>
@@ -104,7 +127,9 @@ export default function AllIn() {
               <span className={styles.connector} aria-hidden="true">
                 <span className={styles.beam} />
               </span>
-              <span className={styles.marker} aria-hidden="true" />
+              <span className={styles.marker} aria-hidden="true">
+                <span className={styles.markerGlow} />
+              </span>
             </li>
           ))}
         </ul>

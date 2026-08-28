@@ -84,6 +84,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     if (hidden) return;
     hidden = true;
     el.classList.add('page-loader--done');
+    setTimeout(function () { el.style.display = 'none'; }, 500);
   }
   if (document.readyState === 'complete') hide();
   else window.addEventListener('load', hide, { once: true });

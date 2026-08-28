@@ -359,6 +359,9 @@ body.cookie-banner-open .asw-menu-btn {
   visibility: hidden;
   pointer-events: none;
 }
+#page-loader.page-loader--done img {
+  animation: none;
+}
 #page-loader img {
   width: 120px;
   height: auto;
