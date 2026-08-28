@@ -1,0 +1,26 @@
+.tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  line-height: 1;
+}
+
+.center {
+  justify-content: center;
+}
+
+.group {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.mark {
+  flex: none;
+  width: 5px;
+  height: 5px;
+  border-radius: 0.71px;
+  background: #3678e9;
+  transform: rotate(45deg);
+}

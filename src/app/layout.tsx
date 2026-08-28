@@ -74,7 +74,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             __html: `
 <div id="page-loader" aria-hidden="true">
   <img src="/icons/logo-v2.svg" alt="" width="120" height="120" />
-  <span class="page-loader-ring"></span>
 </div>
 <noscript><style>#page-loader{display:none}</style></noscript>
 <script>(function(){

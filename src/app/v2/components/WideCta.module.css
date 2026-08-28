@@ -1,0 +1,47 @@
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  height: 94px;
+  padding: 8px 24px;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.accent {
+  background: #3678e9;
+  color: #fff;
+  box-shadow: 0 2px 16px 0 #3678e966;
+}
+
+.accent:hover {
+  background: #2c67d2;
+}
+
+.soft {
+  background: #f4efe9;
+  color: var(--v2-paper-ink);
+}
+
+.soft:hover {
+  background: #ece5dc;
+}
+
+@media (max-width: 1439px) {
+  .cta {
+    height: 80px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cta {
+    height: 68px;
+    padding: 8px 16px;
+    font-size: 15px;
+  }
+}

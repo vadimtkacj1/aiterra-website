@@ -1,0 +1,9 @@
+.rows {
+  display: grid;
+  gap: 9px;
+  padding-block: 4px;
+}
+
+.rows .chip {
+  border: 0;
+}

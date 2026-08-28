@@ -349,7 +349,6 @@ body.cookie-banner-open .asw-menu-btn {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 26px;
   background: #ffffff;
   opacity: 1;
   visibility: visible;
@@ -364,23 +363,10 @@ body.cookie-banner-open .asw-menu-btn {
   width: 120px;
   height: auto;
 }
-#page-loader .page-loader-ring {
-  width: 34px;
-  height: 34px;
-  border-radius: 9999px;
-  border: 3px solid #dbe7fd;
-  border-top-color: #2447d6;
-}
 @media (prefers-reduced-motion: no-preference) {
   #page-loader img {
     animation: page-loader-pulse 1.6s ease-in-out infinite;
   }
-  #page-loader .page-loader-ring {
-    animation: page-loader-spin 0.9s linear infinite;
-  }
-}
-@keyframes page-loader-spin {
-  to { transform: rotate(360deg); }
 }
 @keyframes page-loader-pulse {
   50% { transform: scale(1.06); opacity: 0.85; }

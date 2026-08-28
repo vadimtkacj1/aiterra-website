@@ -31,3 +31,5 @@ const mapsQuery = encodeURIComponent(`${OFFICE_ADDRESS_EN}, Israel`)
 export const GOOGLE_MAPS_EMBED_URL = `https://maps.google.com/maps?q=${mapsQuery}&hl=he&z=16&output=embed`
 
 export const GOOGLE_MAPS_OPEN_URL = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`
+
+export const WAZE_OPEN_URL = `https://waze.com/ul?q=${mapsQuery}&navigate=yes`

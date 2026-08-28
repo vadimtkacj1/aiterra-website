@@ -1,0 +1,27 @@
+.rail {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-inline: var(--v2-rail-pad);
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--v2-on-dark-soft);
+}
+
+@media (max-width: 1023px) {
+  .rail {
+    gap: 14px;
+  }
+}

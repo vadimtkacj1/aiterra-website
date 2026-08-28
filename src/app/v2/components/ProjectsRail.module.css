@@ -1,0 +1,29 @@
+.track {
+  padding-block: 6px;
+}
+
+.card {
+  flex: none;
+  width: 120px;
+  height: 81px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(4, 9, 26, 0.34);
+  transition: box-shadow 0.35s ease;
+}
+
+.card[data-center] {
+  box-shadow: 0 14px 30px rgba(4, 9, 26, 0.5);
+}
+
+.surface {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

@@ -1,0 +1,222 @@
+.value {
+  position: relative;
+  isolation: isolate;
+  line-height: 1;
+}
+
+.value::before,
+.value::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.value::before {
+  width: 3.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.75), rgba(160, 200, 255, 0.25) 55%, transparent 100%);
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.value::after {
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  transform: translate(-50%, -50%) scale(0.35);
+}
+
+.figure {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.15;
+  transform: scale(0.7);
+  will-change: transform, opacity;
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.value[data-phase='run'] .figure,
+.value[data-phase='done'] .figure {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.value[data-phase='done'] .figure {
+  animation: pulse 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.value[data-phase='done']::before {
+  animation: glow 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.value[data-phase='done']::after {
+  animation: ring 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.column {
+  display: block;
+  width: 0.6em;
+  height: 1em;
+  overflow: hidden;
+  contain: paint;
+  text-align: center;
+  mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 86%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 86%, transparent 100%);
+}
+
+.strip {
+  display: block;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.glyph {
+  display: block;
+  height: 1em;
+  line-height: 1;
+}
+
+.affix {
+  display: block;
+  opacity: 0;
+  transform: translateY(0.18em) scale(0.6);
+  transition: opacity 0.4s ease, transform 0.65s cubic-bezier(0.34, 1.8, 0.64, 1);
+}
+
+.value[data-phase='done'] .affix {
+  opacity: 1;
+  transform: none;
+}
+
+.sparks {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.spark {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transform: rotate(var(--angle)) translateY(0) scale(0.4);
+  will-change: transform, opacity;
+}
+
+.value[data-phase='done'] .spark {
+  animation: spark 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--spark-delay);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@keyframes spark {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--angle)) translateY(-0.5em) scale(0.4);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(var(--angle)) translateY(-2.4em) scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  25% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+@keyframes ring {
+  0% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(0.35);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.9);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .figure,
+  .value[data-phase='done'] .figure {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    animation: none;
+  }
+
+  .affix {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .value[data-phase='done']::before,
+  .value[data-phase='done']::after,
+  .value[data-phase='done'] .spark {
+    animation: none;
+  }
+}

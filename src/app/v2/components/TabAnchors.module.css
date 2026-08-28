@@ -1,0 +1,10 @@
+.anchors {
+  height: 0;
+  overflow: visible;
+}
+
+.anchor {
+  display: block;
+  height: 0;
+  scroll-margin-top: calc(var(--v2-bar-height) + 46px);
+}

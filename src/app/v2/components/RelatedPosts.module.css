@@ -1,0 +1,265 @@
+.related {
+  background: #faf7f3;
+  color: var(--v2-paper-ink);
+}
+
+.inner {
+  width: 100%;
+  max-width: 1920px;
+  margin-inline: auto;
+  padding: 96px 5.5% 40px;
+}
+
+.heading {
+  font-family: var(--v2-font-display);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(100%, 1215px);
+  margin: 40px auto 0;
+}
+
+.cell {
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--v2-hairline-ink);
+  border-inline-end: 0;
+}
+
+.cell:first-child {
+  border-inline-end: 1px solid var(--v2-hairline-ink);
+}
+
+.cell::before,
+.cell::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  inset-inline-start: -4px;
+  width: 7px;
+  height: 7px;
+  background:
+    linear-gradient(var(--v2-cross), var(--v2-cross)) center / 1px 7px no-repeat,
+    linear-gradient(var(--v2-cross), var(--v2-cross)) center / 7px 1px no-repeat;
+  pointer-events: none;
+}
+
+.cell::after {
+  top: auto;
+  bottom: -4px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 22px 24px 26px;
+}
+
+.cover {
+  display: block;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #dfe6f5;
+}
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .coverImage {
+  transform: scale(1.04);
+}
+
+.coverBlank {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #dfe6f5, #c9d6f0);
+}
+
+.parked {
+  display: none;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--v2-paper-ink-muted);
+}
+
+.metaText {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.open {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background: #3678e9;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.25s ease;
+}
+
+.openIcon {
+  width: 11px;
+  height: 11px;
+  transform: rotate(45deg);
+}
+
+.card:hover .open,
+.card:focus-visible .open {
+  opacity: 1;
+  transform: none;
+}
+
+.category {
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #3678e9;
+}
+
+.metaDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 1px;
+  background: #3678e9;
+}
+
+.title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin-top: 10px;
+  font-family: var(--v2-font-display);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  transition: color 0.2s ease;
+}
+
+.card:hover .title {
+  color: #3678e9;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.related .nav > * {
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border-radius: 10px;
+  background: #f1ece5;
+}
+
+.related .nav > * svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 1023px) {
+  .inner {
+    padding: 64px 20px 24px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cell:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .inner {
+    padding: 56px 16px 16px;
+  }
+
+  .heading {
+    font-size: clamp(26px, 7.7vw, 30px);
+    line-height: 1.1;
+  }
+
+  .grid {
+    display: flex;
+    gap: 12px;
+    width: auto;
+    margin: 28px -16px 0;
+    padding-inline: 12%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .parked {
+    display: block;
+  }
+
+  .cell {
+    flex: none;
+    width: 76%;
+    border-inline-end: 1px solid var(--v2-hairline-ink);
+    scroll-snap-align: center;
+  }
+
+  .cell:nth-child(3) {
+    display: block;
+  }
+
+  .card {
+    padding: 14px 14px 18px;
+  }
+
+  .open {
+    opacity: 1;
+    transform: none;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .nav {
+    margin-top: 24px;
+  }
+}

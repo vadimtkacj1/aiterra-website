@@ -6,6 +6,13 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 2592000,
   },
+  async rewrites() {
+    return {
+      beforeFiles: [{ source: '/', destination: '/v2' }],
+      afterFiles: [],
+      fallback: [],
+    }
+  },
   async redirects() {
     return [
       // /packages was a thin duplicate of /services (no real package tiers) —

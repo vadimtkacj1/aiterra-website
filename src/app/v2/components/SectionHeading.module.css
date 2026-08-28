@@ -1,0 +1,48 @@
+.heading {
+  font-family: var(--v2-font-display);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.alignStart {
+  text-align: start;
+}
+
+.line {
+  display: block;
+}
+
+.section .line {
+  white-space: nowrap;
+}
+
+.hero {
+  font-size: 100px;
+  line-height: 0.92;
+}
+
+.section {
+  font-size: var(--v2-heading-size, 64px);
+  line-height: 1.2;
+}
+
+@media (max-width: 1279px) {
+  .hero {
+    font-size: clamp(56px, 7.6vw, 100px);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    font-size: clamp(38px, 11vw, 56px);
+  }
+
+  .section {
+    font-size: clamp(30px, 8vw, 40px);
+  }
+
+  .section .line {
+    white-space: normal;
+  }
+}

@@ -1,0 +1,136 @@
+.intro {
+  background: #faf7f3;
+  color: var(--v2-paper-ink);
+}
+
+.inner {
+  width: 100%;
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+.block {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.copy {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 5.8% 60px 3.4%;
+  border-inline-end: 1px solid var(--v2-hairline-ink);
+  text-align: start;
+  container-type: inline-size;
+}
+
+.visual {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 28px;
+}
+
+.block[data-flip] .copy {
+  grid-column: 2;
+  padding: 60px 3.4% 60px 5.8%;
+  border-inline-end: 0;
+}
+
+.block[data-flip] .visual {
+  grid-column: 1;
+  border-inline-end: 1px solid var(--v2-hairline-ink);
+}
+
+.heading {
+  --v2-heading-size: min(52px, 7.4cqw);
+
+  margin-top: 18px;
+}
+
+.text {
+  max-width: 540px;
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--v2-paper-ink-muted);
+}
+
+.visualImage {
+  width: 100%;
+  aspect-ratio: 795 / 543;
+  border-radius: 20px;
+  object-fit: cover;
+  background: #dfe8f7;
+}
+
+@media (max-width: 1439px) {
+  .copy,
+  .block[data-flip] .copy {
+    padding: 44px 5% 44px 3.4%;
+  }
+
+  .visual {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .block {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .copy,
+  .block[data-flip] .copy {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 8px 24px 44px;
+    border-inline-end: 0;
+  }
+
+  .visual,
+  .block[data-flip] .visual {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 24px 24px 20px;
+    border-inline-end: 0;
+  }
+
+  .heading {
+    --v2-heading-size: min(44px, 8cqw);
+  }
+}
+
+@media (max-width: 640px) {
+  .copy,
+  .block[data-flip] .copy {
+    align-items: center;
+    padding: 4px 16px 40px;
+    text-align: center;
+  }
+
+  .visual,
+  .block[data-flip] .visual {
+    padding: 16px 16px 14px;
+  }
+
+  .visualImage {
+    aspect-ratio: 16 / 11;
+    border-radius: 12px;
+  }
+
+  .intro .heading {
+    margin-top: 12px;
+    font-size: clamp(26px, 7.7vw, 30px);
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .text {
+    margin-top: 14px;
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+}

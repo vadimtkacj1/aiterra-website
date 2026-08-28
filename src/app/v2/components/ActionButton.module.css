@@ -1,0 +1,65 @@
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 238px;
+  height: 56px;
+  padding: 8px 24px 8px 12px;
+  border-radius: 6px;
+  background: #3678e9;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+  box-shadow: 0 2px 16px 0 #3678e966;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.action:hover {
+  background: #2c67d2;
+  box-shadow: 0 2px 22px 0 #3678e988;
+}
+
+.outline {
+  width: 234.5px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(6, 11, 34, 0.35);
+  box-shadow: none;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.outline:hover {
+  background: rgba(6, 11, 34, 0.55);
+  box-shadow: none;
+}
+
+.outline .icon {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #000000;
+}
+
+.iconGlyph {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 640px) {
+  .action {
+    width: 100%;
+  }
+}

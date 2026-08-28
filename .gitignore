@@ -38,3 +38,10 @@ Thumbs.db
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Heavy source clips from the /v2 shoot. Only the compressed v2-* files ship —
+# footer.mp4 is byte-identical to v2-hero.mp4's source at 36MB.
+public/images/*.mp4
+public/videos/*.mp4
+!public/videos/v2-hero.mp4
+!public/videos/v2-stats.mp4

@@ -1,0 +1,315 @@
+.reels {
+  --reel-w: clamp(120px, 13.6vw, 262px);
+  --reel-h: calc(var(--reel-w) * 16 / 9);
+  --reel-active-w: clamp(190px, 20.8vw, 400px);
+  --reel-active-h: calc(var(--reel-active-w) * 16 / 9);
+  --reel-overhang: calc((var(--reel-active-h) - var(--reel-h)) / 2);
+
+  position: relative;
+  background: #faf7f3;
+  color: var(--v2-paper-ink);
+  overflow: hidden;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+.topRule {
+  display: none;
+}
+
+.head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 74px 24px 0;
+  container-type: inline-size;
+}
+
+.heading {
+  --v2-heading-size: min(64px, 4.4cqw);
+  margin-top: 24px;
+}
+
+.lede {
+  max-width: 720px;
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--v2-paper-ink-muted);
+}
+
+.ledeLine {
+  display: block;
+}
+
+.grid {
+  position: relative;
+  margin-top: 48px;
+}
+
+.rails {
+  position: absolute;
+  inset: calc(var(--reel-overhang) - 5px) 0 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  pointer-events: none;
+}
+
+.rails > span + span {
+  border-inline-start: 1px solid var(--v2-hairline-ink);
+}
+
+.band {
+  position: relative;
+  z-index: 1;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-block: var(--reel-overhang);
+  padding-inline: calc(50% - var(--reel-w) / 2);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.track[data-animating] {
+  scroll-snap-type: none;
+}
+
+.reel {
+  position: relative;
+  flex: none;
+  width: var(--reel-w);
+  height: var(--reel-h);
+  border-radius: 10px;
+  overflow: visible;
+  scroll-snap-align: center;
+  transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1), height 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.edgeH {
+  position: absolute;
+  inset-inline: -5px;
+  height: 1px;
+  background: var(--v2-hairline-ink);
+  pointer-events: none;
+}
+
+.edgeHTop {
+  top: -5px;
+}
+
+.edgeHBottom {
+  bottom: -5px;
+}
+
+.edgeCross {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  pointer-events: none;
+}
+
+.edgeCrossStart {
+  inset-inline-start: -8.5px;
+}
+
+.edgeCrossEnd {
+  inset-inline-end: -8.5px;
+}
+
+.edgeCrossTop {
+  top: -8.5px;
+}
+
+.edgeCrossBottom {
+  bottom: -8.5px;
+}
+
+.reelActive {
+  width: var(--reel-active-w);
+  height: var(--reel-active-h);
+}
+
+.surface {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.reelActive .surface {
+  box-shadow: 0 18px 44px rgba(14, 23, 48, 0.18);
+}
+
+.play {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  display: none;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #3678e9;
+  color: #ffffff;
+  box-shadow: 0 2px 16px 0 #3678e966;
+}
+
+.reelActive .play {
+  display: grid;
+}
+
+.nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: calc(5px - var(--reel-overhang));
+  padding-block: 30px 74px;
+}
+
+@media (max-width: 1023px) {
+  .rails {
+    display: none;
+  }
+
+  .reels {
+    --reel-w: clamp(110px, 26vw, 180px);
+    --reel-active-w: clamp(170px, 40vw, 280px);
+  }
+
+  .grid {
+    margin-top: 32px;
+  }
+
+  .head {
+    padding: 56px 20px 0;
+  }
+
+  .play {
+    width: 42px;
+    height: 42px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .nav {
+    padding-block: 24px 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  .reels {
+    --reel-w: 94px;
+    --reel-active-w: 150px;
+  }
+
+  .inner::before,
+  .inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    inset-inline-start: var(--v2-mobile-rail);
+    width: 1px;
+    background: var(--v2-hairline-ink);
+    pointer-events: none;
+  }
+
+  .inner::after {
+    inset-inline-start: auto;
+    inset-inline-end: calc(var(--v2-mobile-rail) - 1px);
+  }
+
+  .topRule {
+    display: block;
+  }
+
+  .head {
+    padding: 80px 16px 0;
+  }
+
+  .reels .heading {
+    margin-top: 16px;
+    font-size: clamp(26px, 7.7vw, 30px);
+    line-height: 1.1;
+  }
+
+  .lede {
+    max-width: 346px;
+    margin-top: 20px;
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  .ledeLine + .ledeLine {
+    margin-top: 6px;
+  }
+
+  .grid {
+    margin-top: calc(35px - var(--reel-overhang));
+  }
+
+  .rails,
+  .edgeH,
+  .edgeCross {
+    display: none;
+  }
+
+  .track {
+    gap: 6px;
+  }
+
+  .reel,
+  .surface {
+    border-radius: 8px;
+  }
+
+  .play {
+    top: 50%;
+    left: 50%;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+  }
+
+  .nav {
+    gap: 10px;
+    margin-top: calc(35px - var(--reel-overhang));
+    padding-block: 0 70px;
+  }
+
+  .reels .nav > * {
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    border-radius: 10px;
+    background: #f1ece5;
+  }
+
+  .reels .nav > * svg {
+    width: 18px;
+    height: 18px;
+  }
+}
