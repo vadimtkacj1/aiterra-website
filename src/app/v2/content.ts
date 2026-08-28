@@ -783,7 +783,7 @@ export const servicesStack = {
       image: '/images/service1.webp',
       tags: ['קטלוג מוצרים', 'מערכת Aiterra', 'הקמת חנות', 'סליקה', 'ניהול הזמנות', 'משלוחים'],
       text: 'חנות אונליין שמותאמת למכירה, לניהול ולצמיחה. עם תהליך רכישה ברור וחוויה שעובדת נכון בכל מכשיר.',
-      action: { label: 'לפרטים נוספים', href: '/v2/contact' },
+      action: { label: 'לפרטים נוספים', href: '/v2/services/ecommerce' },
     },
     {
       id: 'custom',
@@ -810,6 +810,74 @@ export const servicesStack = {
       action: { label: 'לפרטים נוספים', href: '/v2/contact' },
     },
   ] satisfies ServiceStackItem[],
+}
+
+export type ServicePage = {
+  id: string
+  crumb: string
+  eyebrow: string
+  heading: string[]
+  subhead: string
+  lede: string
+  image: string
+  action: { label: string; href: string }
+  metaTitle: string
+  metaDescription: string
+  advantages: {
+    eyebrow: string
+    heading: string[]
+    lede: string
+    roles: AboutRole[]
+  }
+  faqHeading: string[]
+}
+
+export const servicePages: Record<string, ServicePage> = {
+  ecommerce: {
+    id: 'ecommerce',
+    crumb: 'אתרי E-Commerce',
+    eyebrow: 'אתרי E-Commerce',
+    heading: ['חנות אינטרנטית שנבנית', 'בדיוק למידות של העסק שלך'],
+    subhead: 'המומחיות שלנו ב-E-Commerce',
+    lede: 'פיתוח בקוד מלא מבוסס מערכת Aiterra - מהיר, מותאם אישית, עם ליווי ועדכונים שוטפים גם לאחר ההשקה.',
+    image: '/images/service1.webp',
+    action: { label: 'לשיחת ייעוץ ואפיון', href: '/v2/contact' },
+    metaTitle: 'אתרי E-Commerce',
+    metaDescription:
+      'בניית חנות אונליין בקוד מלא על מערכת Aiterra: קטלוג מוצרים, סליקה, ניהול הזמנות ומשלוחים, עם ליווי ועדכונים שוטפים גם אחרי ההשקה.',
+    advantages: {
+      eyebrow: 'OUR ADVANTAGES',
+      heading: ['היתרונות הייחודיים שלנו'],
+      lede: 'מה מיוחד בשירות שלנו באתרי מסחר וחנויות דיגיטליות?',
+      roles: [
+        {
+          id: 'spec',
+          title: 'איפיון מדויק ומותאם אישית',
+          art: '/images/service-page2.webp',
+          text: 'מתחילים באפיון של המוצרים, קהל היעד ומסלול הקנייה, כך שכל מסך בחנות נבנה סביב החלטה אמיתית של הלקוח.',
+        },
+        {
+          id: 'code',
+          title: 'פיתוח בקוד ייעודי',
+          art: '/images/service-page1.webp',
+          text: 'פיתוח מותאם אישית, ללא תבניות חונקות, ביצועים מהירים במיוחד, גמישות עיצובית ו-SEO מעולה.',
+        },
+        {
+          id: 'scale',
+          title: 'מערכת שגדלה עם העסק',
+          art: '/images/service-page3.webp',
+          text: 'הוספת מוצרים, קטגוריות ואינטגרציות בלי לבנות הכל מחדש. החנות מתרחבת יחד עם הקצב שלכם.',
+        },
+        {
+          id: 'support',
+          title: 'שירות ותמיכה 24/7',
+          art: '/images/service-page4.webp',
+          text: 'ליווי שוטף גם אחרי ההשקה: עדכונים, מעקב אחרי ביצועים ומענה מהיר כשצריך לשנות משהו בחנות.',
+        },
+      ] satisfies AboutRole[],
+    },
+    faqHeading: ['שאלות נפוצות', 'על אתרי מסחר'],
+  },
 }
 
 export const servicesPage = {
