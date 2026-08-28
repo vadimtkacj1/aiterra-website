@@ -5,6 +5,7 @@ import type { ReactNode } from 'react'
 import Link from 'next/link'
 import ActionButton from './ActionButton'
 import { BurgerIcon, ChevronDownIcon } from './icons'
+import { portfolioFilters, servicesStack } from '../content'
 import styles from './Header.module.css'
 
 type NavLink = { label: string; href: string }
@@ -14,22 +15,18 @@ const navItems: NavItem[] = [
   {
     label: 'שירותים',
     href: '/v2/services',
-    children: [
-      { label: 'אתרי תדמית', href: '/v2/services#v2-service-brochure' },
-      { label: 'שיווק', href: '/v2/services#v2-service-marketing' },
-      { label: 'מיתוג', href: '/v2/services#v2-service-branding' },
-      { label: 'פיתוח אישי', href: '/v2/services#v2-service-custom' },
-    ],
+    children: servicesStack.items.map((item) => ({
+      label: item.title,
+      href: `/v2/services#v2-service-${item.id}`,
+    })),
   },
   { label: 'בלוג', href: '/v2/blog' },
   {
     label: 'תיק עבודות',
     href: '/v2#v2-portfolio',
-    children: [
-      { label: 'אתרי מכירות', href: '/v2#v2-portfolio-sales' },
-      { label: 'תדמיות ולידים', href: '/v2#v2-portfolio-brand' },
-      { label: 'מערכות', href: '/v2#v2-portfolio-systems' },
-    ],
+    children: portfolioFilters
+      .filter((filter) => filter.id !== 'all')
+      .map((filter) => ({ label: filter.label, href: `/v2#v2-portfolio-${filter.id}` })),
   },
   { label: 'אודות הסוכנות', href: '/v2/about' },
 ]
@@ -65,6 +62,7 @@ function NavAnchor({
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [openMenu, setOpenMenu] = useState<string | null>(null)
   const [expanded, setExpanded] = useState<string | null>(navItems[0].href)
 
   useEffect(() => {
@@ -94,12 +92,51 @@ export default function Header() {
         </Link>
 
         <nav className={styles.nav} aria-label="ניווט ראשי">
-          {navItems.map((item) => (
-            <NavAnchor key={item.href} href={item.href} className={styles.navLink}>
-              <span>{item.label}</span>
-              {item.children ? <ChevronDownIcon className={styles.navChevron} /> : null}
-            </NavAnchor>
-          ))}
+          {navItems.map((item) =>
+            item.children ? (
+              <div
+                key={item.href}
+                className={styles.navItem}
+                data-open={openMenu === item.href || undefined}
+                onMouseEnter={() => setOpenMenu(item.href)}
+                onMouseLeave={() => setOpenMenu((current) => (current === item.href ? null : current))}
+                onFocus={() => setOpenMenu(item.href)}
+                onBlur={(event) => {
+                  if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                    setOpenMenu((current) => (current === item.href ? null : current))
+                  }
+                }}
+                onKeyDown={(event) => {
+                  if (event.key === 'Escape') setOpenMenu(null)
+                }}
+              >
+                <NavAnchor href={item.href} className={styles.navLink}>
+                  <span>{item.label}</span>
+                  <ChevronDownIcon className={styles.navChevron} />
+                </NavAnchor>
+
+                <div className={styles.menu}>
+                  <ul className={styles.menuList}>
+                    {item.children.map((child) => (
+                      <li key={child.href}>
+                        <NavAnchor
+                          href={child.href}
+                          className={styles.menuLink}
+                          onClick={() => setOpenMenu(null)}
+                        >
+                          {child.label}
+                        </NavAnchor>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <NavAnchor key={item.href} href={item.href} className={styles.navLink}>
+                <span>{item.label}</span>
+              </NavAnchor>
+            ),
+          )}
         </nav>
 
         <div className={styles.actions}>
@@ -129,17 +166,23 @@ export default function Header() {
             {navItems.map((item) =>
               item.children ? (
                 <div key={item.href} className={styles.sheetGroup} data-expanded={expanded === item.href || undefined}>
-                  <button
-                    type="button"
-                    className={styles.sheetToggle}
-                    aria-expanded={expanded === item.href}
-                    onClick={() => setExpanded((current) => (current === item.href ? null : item.href))}
-                  >
-                    <span>{item.label}</span>
-                    <ChevronDownIcon className={styles.sheetChevron} />
-                  </button>
+                  <div className={styles.sheetRow}>
+                    <NavAnchor href={item.href} className={styles.sheetRowLink} onClick={close}>
+                      {item.label}
+                    </NavAnchor>
+                    <button
+                      type="button"
+                      className={styles.sheetToggle}
+                      aria-label={`${item.label} — ${expanded === item.href ? 'סגירה' : 'פתיחה'}`}
+                      aria-expanded={expanded === item.href}
+                      aria-controls={`v2-sheet-${item.href.replace(/\W+/g, '-')}`}
+                      onClick={() => setExpanded((current) => (current === item.href ? null : item.href))}
+                    >
+                      <ChevronDownIcon className={styles.sheetChevron} />
+                    </button>
+                  </div>
                   {expanded === item.href ? (
-                    <ul className={styles.sheetSub}>
+                    <ul id={`v2-sheet-${item.href.replace(/\W+/g, '-')}`} className={styles.sheetSub}>
                       {item.children.map((child) => (
                         <li key={child.label}>
                           <NavAnchor href={child.href} className={styles.sheetSubLink} onClick={close}>
