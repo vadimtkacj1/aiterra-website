@@ -208,3 +208,22 @@
     font-size: 16px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .inner {
+    padding-inline: 20px;
+    padding-bottom: 72px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .head {
+    margin-top: 36px;
+  }
+
+  .prose {
+    margin-top: 48px;
+  }
+}

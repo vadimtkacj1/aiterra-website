@@ -390,3 +390,20 @@
     height: 12px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .rules {
+    display: none;
+  }
+
+  .outroCta {
+    width: 100%;
+    max-width: 846px;
+  }
+
+  .card {
+    width: calc(88cqw - 12px);
+    padding: 24px;
+    scroll-snap-align: center;
+  }
+}

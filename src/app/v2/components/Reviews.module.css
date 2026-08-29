@@ -179,3 +179,13 @@
     height: 18px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .rules {
+    display: none;
+  }
+
+  .card {
+    width: calc(74cqw - 12px);
+  }
+}

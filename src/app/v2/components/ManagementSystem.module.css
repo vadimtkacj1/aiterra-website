@@ -200,3 +200,30 @@
     margin-top: 22px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding: 40px 24px 56px;
+  }
+
+  .centerLine {
+    display: none;
+  }
+
+  .art {
+    justify-self: stretch;
+    order: 2;
+    max-width: none;
+    aspect-ratio: 16 / 10;
+  }
+
+  .content {
+    order: 1;
+  }
+
+  .heading {
+    --v2-heading-size: min(48px, 8cqw);
+  }
+}

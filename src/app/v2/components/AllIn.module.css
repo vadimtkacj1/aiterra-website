@@ -855,3 +855,36 @@
     transform: translateY(0);
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .allIn {
+    padding: 8px 12px 12px;
+  }
+
+  .card {
+    --marker: 14px;
+    border-radius: 0 0 28px 28px;
+  }
+
+  .head {
+    inset-inline: 12px;
+    top: 52px;
+  }
+
+  .node {
+    gap: 10px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .marker {
+    border-radius: 4px;
+  }
+
+  .marker::before {
+    width: 5px;
+    height: 5px;
+  }
+}

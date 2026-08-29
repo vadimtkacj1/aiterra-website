@@ -710,3 +710,50 @@
     padding-bottom: 6px;
   }
 }
+
+@media (min-width: 1921px) {
+  .contact.onVideo .headBleed {
+    margin-inline: calc(50% - 960px);
+    padding-inline: calc(960px - 50%);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contact {
+    padding: 0 16px 64px;
+  }
+
+  .headBleed {
+    padding-block: 48px 40px;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .art {
+    order: -1;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .artCaption {
+    font-size: min(72px, 11cqw);
+  }
+
+  .success {
+    min-height: 360px;
+  }
+
+  .contact.onVideo {
+    background: var(--v2-page);
+    padding-bottom: 64px;
+  }
+
+  .contact.onVideo .headBleed {
+    margin-inline: 0;
+    padding-inline: 0;
+    background: transparent;
+  }
+}

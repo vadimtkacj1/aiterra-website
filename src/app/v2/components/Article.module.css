@@ -635,3 +635,43 @@
     font-size: 30px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .inner {
+    padding-inline: 20px;
+  }
+
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    width: min(100%, 760px);
+    margin-top: 40px;
+  }
+
+  .asideStart {
+    display: none;
+  }
+
+  .tocMobile {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .promo {
+    position: static;
+    max-width: 360px;
+    margin-top: 40px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .cover {
+    aspect-ratio: 16 / 9;
+    margin-top: 32px;
+  }
+
+  .prose h2 {
+    font-size: 30px;
+  }
+}

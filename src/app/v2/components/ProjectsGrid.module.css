@@ -167,3 +167,24 @@
     font-size: 13px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card:nth-child(even)::before {
+    display: block;
+  }
+
+  .card:nth-child(2)::after {
+    display: none;
+  }
+
+  .meta {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 16px;
+    margin-top: 18px;
+  }
+}

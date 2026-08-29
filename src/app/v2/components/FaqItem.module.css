@@ -216,3 +216,26 @@
     transition: none;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .trigger {
+    padding: 28px 20px;
+    font-size: 20px;
+  }
+
+  .open .trigger {
+    padding-bottom: 16px;
+  }
+
+  .label {
+    max-width: none;
+  }
+
+  .answer {
+    padding: 0 20px 28px;
+  }
+
+  .cross {
+    display: none;
+  }
+}

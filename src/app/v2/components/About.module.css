@@ -422,3 +422,48 @@
     transition: none;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .heading {
+    --v2-heading-size: min(48px, 8cqw);
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+  }
+
+  .introRail {
+    display: none;
+  }
+
+  .introMain::before {
+    display: none;
+  }
+
+  .introMain {
+    border-inline-start: 0;
+    padding: 56px 20px 48px;
+  }
+
+  .roles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card:nth-child(odd)::before {
+    display: none;
+  }
+
+  .card:nth-child(n + 3) {
+    border-top: 1px solid var(--v2-hairline-ink);
+  }
+
+  .cardArrow {
+    opacity: 1;
+  }
+
+  .cardReveal {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+  }
+}

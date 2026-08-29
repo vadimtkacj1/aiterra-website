@@ -245,3 +245,45 @@
     height: 12px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .columnDivider {
+    border-inline-start: 0;
+  }
+
+  .copy {
+    order: 1;
+    padding: 72px 24px 64px;
+  }
+
+  .hero .copy > h1 {
+    font-size: clamp(56px, 7.6vw, 100px);
+  }
+
+  .topics {
+    order: 2;
+    border-top: 1px solid var(--v2-hairline);
+  }
+
+  .projects {
+    order: 3;
+    border-top: 1px solid var(--v2-hairline);
+  }
+
+  .side {
+    padding-block: 28px;
+  }
+
+  .lede {
+    max-width: 560px;
+  }
+}

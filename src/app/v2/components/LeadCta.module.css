@@ -51,3 +51,9 @@
     grid-template-columns: var(--v2-mobile-rail) 1fr var(--v2-mobile-rail);
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .rules {
+    display: none;
+  }
+}

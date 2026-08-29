@@ -94,3 +94,16 @@
     margin-top: 26px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .partners {
+    padding: 40px 20px 48px;
+  }
+
+  .logos {
+    --partner-logo-h: 34px;
+
+    gap: 36px;
+    margin-top: 28px;
+  }
+}

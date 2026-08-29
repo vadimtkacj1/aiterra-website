@@ -51,3 +51,9 @@
     inset-inline-end: calc(var(--v2-mobile-rail) - 4px);
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cross {
+    display: none;
+  }
+}

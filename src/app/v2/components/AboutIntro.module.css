@@ -134,3 +134,29 @@
     line-height: 1.55;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .block {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .copy,
+  .block[data-flip] .copy {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 8px 24px 44px;
+    border-inline-end: 0;
+  }
+
+  .visual,
+  .block[data-flip] .visual {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 24px 24px 20px;
+    border-inline-end: 0;
+  }
+
+  .heading {
+    --v2-heading-size: min(44px, 8cqw);
+  }
+}

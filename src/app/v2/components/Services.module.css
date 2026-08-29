@@ -441,3 +441,30 @@
     text-align: start;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .rules,
+  .centerLine {
+    display: none;
+  }
+
+  .body {
+    grid-template-columns: 1fr;
+    padding: 40px 24px 56px;
+  }
+
+  .visual {
+    justify-self: stretch;
+    max-width: none;
+    order: 2;
+  }
+
+  .content {
+    max-width: none;
+    order: 1;
+  }
+
+  .heading {
+    --v2-heading-size: min(48px, 8cqw);
+  }
+}

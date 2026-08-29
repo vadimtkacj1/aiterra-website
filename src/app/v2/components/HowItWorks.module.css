@@ -310,3 +310,51 @@
     line-height: 1.6;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .heading {
+    --v2-heading-size: min(48px, 8cqw);
+  }
+
+  .steps {
+    gap: 40px;
+    margin-top: 44px;
+    padding-inline: 0;
+  }
+
+  .steps::before,
+  .steps::after {
+    display: none;
+  }
+
+  .step,
+  .step:nth-child(even) {
+    grid-template-columns: 56px minmax(0, 1fr);
+    align-items: start;
+    row-gap: 20px;
+  }
+
+  .stepArt,
+  .step:nth-child(even) .stepArt {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    aspect-ratio: 16 / 10;
+  }
+
+  .badgeCell {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  .badge {
+    position: static;
+    margin: 0;
+  }
+
+  .stepText,
+  .step:nth-child(even) .stepText {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}

@@ -140,3 +140,18 @@
     color: var(--v2-on-dark-muted);
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .column:not(.copy) {
+    display: none;
+  }
+
+  .copy {
+    border-inline: 0;
+    padding: 24px 24px 40px;
+  }
+}

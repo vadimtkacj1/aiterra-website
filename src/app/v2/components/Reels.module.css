@@ -349,3 +349,33 @@
     height: 18px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .reels {
+    --reel-w: clamp(110px, 26vw, 180px);
+    --reel-active-w: clamp(170px, 40vw, 280px);
+  }
+
+  .rails {
+    display: none;
+  }
+
+  .grid {
+    margin-top: 32px;
+  }
+
+  .head {
+    padding: 56px 20px 0;
+  }
+
+  .play {
+    width: 42px;
+    height: 42px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .nav {
+    padding-block: 24px 56px;
+  }
+}

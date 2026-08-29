@@ -310,3 +310,41 @@
     white-space: normal;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section {
+    --band-pad: 16px;
+
+    padding-block: 56px 72px;
+  }
+
+  .rails {
+    display: none;
+  }
+
+  .midRule {
+    margin-top: 20px;
+  }
+
+  .stack {
+    --runway: 460px;
+    --peek: 16px;
+
+    margin-top: 20px;
+  }
+
+  .card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .body {
+    order: 2;
+    padding-inline-start: 0;
+  }
+
+  .art {
+    order: 1;
+    aspect-ratio: 16 / 10;
+  }
+}
