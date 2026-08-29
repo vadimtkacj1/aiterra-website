@@ -17,7 +17,7 @@ type FaqProps = {
 export default function Faq({
   heading = faq.heading,
   entries = faqEntries,
-  initialOpenId = entries[0]?.id ?? null,
+  initialOpenId = null,
 }: FaqProps) {
   const headingId = useId()
   const [openId, setOpenId] = useState<string | null>(initialOpenId)
