@@ -44,8 +44,8 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
-  width: min(100%, max(980px, 89%));
-  max-width: 1670px;
+  width: min(100%, max(980px, 82%));
+  max-width: 1560px;
   margin: 64px auto 0;
   padding: var(--board-pad);
   border-block: 1px solid var(--v2-hairline-ink);
@@ -136,7 +136,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  min-height: 68px;
+  min-height: 76px;
   margin-top: 12px;
 }
 
@@ -260,7 +260,7 @@
   }
 
   .priceRow {
-    min-height: 56px;
+    min-height: 60px;
   }
 
   .price {
