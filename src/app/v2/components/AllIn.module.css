@@ -1,7 +1,7 @@
 .allIn {
   position: relative;
   background: #faf7f3;
-  padding: 8px 16px 16px;
+  padding: 8px var(--v2-card-inset) var(--v2-card-inset);
 }
 
 .topRule {
@@ -16,7 +16,7 @@
   isolation: isolate;
   overflow: hidden;
   width: 100%;
-  max-width: 1872px;
+  max-width: calc(var(--v2-band) - var(--v2-card-inset) * 2);
   aspect-ratio: 1146 / 565;
   margin-inline: auto;
   border-radius: 48px;
@@ -126,6 +126,11 @@
   opacity: 0.4;
 }
 
+.card[data-inview][data-active] .ring,
+.card[data-inview][data-active] .orbit {
+  will-change: transform;
+}
+
 .card:not([data-inview]) *,
 .card:not([data-inview]) *::before,
 .card:not([data-inview]) *::after {
@@ -135,7 +140,6 @@
 .card[data-active] .ring {
   opacity: 1;
   transform: translate(-50%, -50%);
-  will-change: transform;
   animation: drift var(--drift) ease-in-out infinite var(--drift-direction);
   animation-delay: calc(var(--ring-delay) + 1400ms);
 }
@@ -158,7 +162,6 @@
 
 .card[data-active] .orbit {
   opacity: 1;
-  will-change: transform;
   animation: spin var(--orbit) linear infinite var(--orbit-direction);
 }
 
@@ -198,6 +201,7 @@
   align-items: center;
   text-align: center;
   padding: 0 24px;
+  contain: paint;
   container-type: inline-size;
 }
 
