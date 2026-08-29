@@ -10,6 +10,7 @@ import ActionButton from './ActionButton'
 import WideCta from './WideCta'
 import GridRule from './GridRule'
 import CircleButton from './CircleButton'
+import useAutoplay from './useAutoplay'
 import { portfolio, portfolioFilters, portfolioItems } from '../content'
 import styles from './Portfolio.module.css'
 
@@ -35,8 +36,70 @@ const centerOffset = (track: HTMLElement) => {
   return (track.clientWidth - width) / 2 - margin
 }
 
+const GLIDE_DURATION = 900
+
+const noop = () => {}
+
+const easeInOutCubic = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
+
+const glide = (track: HTMLElement, distance: number) => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    track.scrollLeft += distance
+    return noop
+  }
+
+  const snap = track.style.scrollSnapType
+  track.style.scrollSnapType = 'none'
+
+  let raf = 0
+  let started = 0
+  let base = track.scrollLeft
+  let expected = base
+
+  const finish = () => {
+    if (raf) cancelAnimationFrame(raf)
+    raf = 0
+    track.style.scrollSnapType = snap
+    track.removeEventListener('pointerdown', finish)
+    track.removeEventListener('touchstart', finish)
+    track.removeEventListener('wheel', finish)
+  }
+
+  const frame = (now: number) => {
+    if (!started) started = now
+    const drift = track.scrollLeft - expected
+    if (Math.abs(drift) > 2) base += drift
+    const progress = Math.min((now - started) / GLIDE_DURATION, 1)
+    expected = base + distance * easeInOutCubic(progress)
+    track.scrollLeft = expected
+    if (progress < 1) {
+      raf = requestAnimationFrame(frame)
+      return
+    }
+    finish()
+  }
+
+  track.addEventListener('pointerdown', finish)
+  track.addEventListener('touchstart', finish, { passive: true })
+  track.addEventListener('wheel', finish, { passive: true })
+  raf = requestAnimationFrame(frame)
+  return finish
+}
+
+const advance = (track: HTMLElement, direction: 'prev' | 'next') => {
+  if (!track.firstElementChild) return noop
+  const sign = getComputedStyle(track).direction === 'rtl' ? -1 : 1
+  return glide(track, sign * cardStride(track) * (direction === 'next' ? 1 : -1))
+}
+
+const slideLeft = (track: HTMLElement) => {
+  if (!track.firstElementChild) return noop
+  return glide(track, cardStride(track))
+}
+
 export default function Portfolio() {
   const trackRef = useRef<HTMLDivElement>(null)
+  const glideRef = useRef<() => void>(noop)
   const [activeFilter, setActiveFilter] = useState(portfolioFilters[0].id)
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -51,6 +114,17 @@ export default function Portfolio() {
   const loop = useMemo(
     () => [0, 1, 2].flatMap((copy) => items.map((item) => ({ item, copy }))),
     [items],
+  )
+
+  const restartAutoplay = useAutoplay(
+    trackRef,
+    () => {
+      const track = trackRef.current
+      if (!track) return
+      glideRef.current()
+      glideRef.current = slideLeft(track)
+    },
+    { enabled: items.length > 1 },
   )
 
   useEffect(() => {
@@ -86,6 +160,8 @@ export default function Portfolio() {
 
     track.addEventListener('scroll', onScroll, { passive: true })
     return () => {
+      glideRef.current()
+      glideRef.current = noop
       track.removeEventListener('scroll', onScroll)
       if (frame) cancelAnimationFrame(frame)
     }
@@ -93,10 +169,10 @@ export default function Portfolio() {
 
   const step = (direction: 'prev' | 'next') => {
     const track = trackRef.current
-    if (!track || !track.firstElementChild) return
-    const sign = getComputedStyle(track).direction === 'rtl' ? -1 : 1
-    const distance = cardStride(track)
-    track.scrollBy({ left: sign * distance * (direction === 'next' ? 1 : -1), behavior: 'smooth' })
+    if (!track) return
+    glideRef.current()
+    glideRef.current = advance(track, direction)
+    restartAutoplay.current()
   }
 
   const activeItem = items[activeIndex] ?? items[0]

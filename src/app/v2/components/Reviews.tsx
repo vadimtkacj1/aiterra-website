@@ -6,6 +6,7 @@ import Eyebrow from './Eyebrow'
 import CircleButton from './CircleButton'
 import GridRule from './GridRule'
 import ReviewCard from './ReviewCard'
+import useAutoplay from './useAutoplay'
 import { reviewItems, reviews } from '../content'
 import type { ReviewItem } from '../content'
 import styles from './Reviews.module.css'
@@ -69,6 +70,13 @@ export default function Reviews({
   const step = (delta: number) => {
     const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     centre(activeIndex + delta, calm ? 'auto' : 'smooth')
+  }
+
+  const restartAutoplay = useAutoplay(trackRef, () => step(-1), { enabled: count > 1 })
+
+  const nudge = (delta: number) => {
+    step(delta)
+    restartAutoplay.current()
   }
 
   useEffect(() => {
@@ -176,8 +184,8 @@ export default function Reviews({
         <div className={styles.below}>
           <Rules />
           <div className={styles.nav}>
-            <CircleButton label={prevLabel} tone="onPaper" glyph="next" onClick={() => step(-1)} />
-            <CircleButton label={nextLabel} tone="onPaper" glyph="prev" onClick={() => step(1)} />
+            <CircleButton label={prevLabel} tone="onPaper" glyph="next" onClick={() => nudge(-1)} />
+            <CircleButton label={nextLabel} tone="onPaper" glyph="prev" onClick={() => nudge(1)} />
           </div>
         </div>
       </div>
