@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowRight, Check, CornerDownLeft, ExternalLink, RotateCcw, Save, Search } from 'lucide-react'
+import Link from 'next/link'
+import { ArrowRight, Check, CornerDownLeft, ExternalLink, MousePointerClick, RotateCcw, Save, Search } from 'lucide-react'
 import AdminHeader from '@/components/admin/AdminHeader'
 import type { V2Content, V2ContentKey } from '@/app/v2/content'
 import { deepEqual, mergeV2, type V2Overrides } from '@/app/v2/contentMerge'
@@ -357,6 +358,24 @@ export default function AdminV2ContentPage() {
       />
 
       <div className="p-4 md:p-8" dir="rtl">
+        <Link
+          href="/admin/v2/live"
+          className="mb-5 flex items-center gap-3 rounded-xl border border-[#2447D6]/25 bg-[#eef2ff] p-4 transition-colors hover:border-[#2447D6]"
+        >
+          <span
+            style={{ background: gradient }}
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-white"
+          >
+            <MousePointerClick size={17} />
+          </span>
+          <span className="min-w-0">
+            <span className="block text-[14px] font-semibold text-[#111827]">עריכה חזותית על האתר</span>
+            <span className="block text-[12px] text-[#6b7280]">
+              פתחו את האתר ולחצו ישירות על כל טקסט כדי לערוך אותו במקום — בלי לחפש סקשן
+            </span>
+          </span>
+        </Link>
+
         <div className="relative mb-6 max-w-md">
           <Search size={15} className="absolute top-1/2 right-3 -translate-y-1/2 text-[#9ca3af]" />
           <input
