@@ -2,8 +2,8 @@
   --stack-top: calc(var(--v2-bar-height) + 46px);
   --card-radius: 22px;
   --band-pad: 24px;
-  --stack-band: #ffffff;
-  --stack-card: var(--v2-page);
+  --stack-band: var(--v2-page);
+  --stack-card: #ffffff;
   --v2-hairline-ink: #d2cfcc;
 
   position: relative;
@@ -275,7 +275,6 @@
 @media (max-width: 640px) {
   .section {
     --band-pad: var(--v2-mobile-rail);
-    --stack-band: var(--v2-page);
 
     padding-block: 44px 56px;
   }
