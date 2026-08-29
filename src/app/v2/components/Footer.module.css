@@ -112,17 +112,10 @@
 }
 
 .logoMark {
-  width: 86px;
-  height: 62px;
+  width: auto;
+  height: 56px;
+  max-width: 100%;
   object-fit: contain;
-}
-
-.logoWordmark {
-  font-family: var(--v2-font-display);
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.01em;
 }
 
 .title {
@@ -262,12 +255,7 @@
   }
 
   .logoMark {
-    width: 55px;
-    height: 40px;
-  }
-
-  .logoWordmark {
-    font-size: 34px;
+    height: 44px;
   }
 
   .title {
@@ -395,12 +383,7 @@
   }
 
   .logoMark {
-    width: 60px;
-    height: 43px;
-  }
-
-  .logoWordmark {
-    font-size: 30px;
+    height: 38px;
   }
 
   .title {
@@ -485,5 +468,42 @@
   .copyright {
     white-space: normal;
     text-align: center;
+  }
+}
+
+@media (min-width: 1921px) {
+  .inner::before {
+    inset-inline: calc(50% - 960px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .column {
+    padding-block: 32px 40px;
+  }
+
+  .column:nth-child(odd) {
+    padding-inline-start: 0;
+  }
+
+  .column:nth-child(odd)::before,
+  .column:nth-child(odd) .cross {
+    display: none;
+  }
+
+  .column:nth-child(n + 3) {
+    border-top: 1px solid var(--footer-hairline);
+  }
+
+  .inner {
+    padding-bottom: 48px;
+  }
+
+  .meta {
+    padding-top: 28px;
   }
 }

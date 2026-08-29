@@ -5,20 +5,30 @@
   gap: 12px;
   width: 238px;
   height: 56px;
-  padding: 8px 24px 8px 12px;
-  border-radius: 6px;
-  background: #3678e9;
-  color: #fff;
+  padding: 15px;
+  border: 1px solid #3678e9;
+  border-radius: 9px;
+  background: transparent;
+  color: #3678e9;
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0;
   white-space: nowrap;
-  box-shadow: 0 2px 16px 0 #3678e966;
-  transition: background 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .action:hover {
+  background: #e8f0fd;
+}
+
+.filled {
+  background: #3678e9;
+  color: #fff;
+  box-shadow: 0 2px 16px 0 #3678e966;
+}
+
+.filled:hover {
   background: #2c67d2;
   box-shadow: 0 2px 22px 0 #3678e988;
 }

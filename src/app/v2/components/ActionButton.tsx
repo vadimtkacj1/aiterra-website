@@ -6,7 +6,7 @@ import styles from './ActionButton.module.css'
 type ActionButtonProps = {
   href: string
   label: string
-  variant?: 'primary' | 'outline' | 'paper'
+  variant?: 'primary' | 'filled' | 'outline' | 'paper'
   glyph?: 'plus' | 'prev' | 'swap'
   className?: string
   labelClassName?: string

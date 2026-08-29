@@ -42,7 +42,11 @@ export default function Hero() {
           </p>
 
           <div className={styles.actions}>
-            <ActionButton href={hero.primaryAction.href} label={hero.primaryAction.label} />
+            <ActionButton
+              href={hero.primaryAction.href}
+              label={hero.primaryAction.label}
+              variant="filled"
+            />
             <ActionButton
               href={hero.secondaryAction.href}
               label={hero.secondaryAction.label}

@@ -54,13 +54,12 @@ export default function Footer({ children }: { children?: ReactNode }) {
             <Link href="/v2" className={styles.brand} aria-label={footer.brand}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/icons/aiterra-blog-v2.svg"
+                src="/images/aiterra-logo-light.png"
                 alt=""
-                width={86}
-                height={62}
+                width={283}
+                height={64}
                 className={styles.logoMark}
               />
-              <span className={styles.logoWordmark}>{footer.brand}</span>
             </Link>
           </div>
 

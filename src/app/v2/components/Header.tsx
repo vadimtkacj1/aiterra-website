@@ -86,13 +86,12 @@ export default function Header() {
         <Link href="/v2" className={styles.brand} aria-label={header.brand} onClick={close}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/icons/aiterra-blog-v2.svg"
+            src="/images/aiterra-logo-dark.png"
             alt=""
-            width={55}
-            height={40}
+            width={211}
+            height={50}
             className={styles.logoMark}
           />
-          <span className={styles.logoWordmark}>{header.brand}</span>
         </Link>
 
         <nav className={styles.nav} aria-label={header.navLabel}>
