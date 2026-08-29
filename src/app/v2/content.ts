@@ -17,7 +17,7 @@ export const header = {
   nav: [
     { id: 'services', label: 'שירותים', href: '/v2/services', submenu: 'services' },
     { id: 'blog', label: 'בלוג', href: '/v2/blog' },
-    { id: 'portfolio', label: 'תיק עבודות', href: '/v2#v2-portfolio', submenu: 'portfolio' },
+    { id: 'portfolio', label: 'תיק עבודות', href: '/v2/projects', submenu: 'portfolio' },
     { id: 'about', label: 'אודות הסוכנות', href: '/v2/about' },
   ] satisfies HeaderNavItem[],
 }
@@ -271,7 +271,18 @@ export const portfolio = {
   prev: 'לפרויקט הקודם',
   next: 'לפרויקט הבא',
   outro: 'התרשמתם? בואו להציץ בשאר הפרויקטים שעבדנו עליהם',
-  action: { label: 'לכל הפרויקטים שלנו', href: '/v2#v2-portfolio' },
+  action: { label: 'לכל הפרויקטים שלנו', href: '/v2/projects' },
+}
+
+export const projectsPage = {
+  title: ['תיק עבודות', 'פרויקטים נבחרים'],
+  crumb: 'תיק עבודות',
+  lede: 'מביסוס תשתיות טכנולוגיות ועד להבאת לקוחות משלמים. אנו מספקים מעטפת שירותים מלאה שתפורה לצרכים של העסק שלכם, כדי להפוך כל נכס דיגיטלי למנוע של צמיחה.',
+  action: { label: 'התחילו פרויקט חדש', href: '/v2/contact' },
+  faqHeading: ['לפני שמתחילים', 'כמה דברים שכדאי לדעת.'],
+  metaTitle: 'תיק עבודות',
+  metaDescription:
+    'הפרויקטים שבנינו ב-AITERRA: אתרי מכירות, אתרי תדמית ומערכות ניהול – עם הכלים, הקידום והליווי שהביאו אותם לתוצאות.',
 }
 
 export const portfolioFilters = [
@@ -556,7 +567,7 @@ export const footer = {
       id: 'general',
       title: 'כללי',
       links: [
-        { label: 'תיק עבודות', href: '/v2#v2-portfolio' },
+        { label: 'תיק עבודות', href: '/v2/projects' },
         { label: 'אודותינו', href: '/v2/about' },
         { label: 'בלוג', href: '/v2/blog' },
         { label: 'יצירת קשר', href: '/v2/contact' },
