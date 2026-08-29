@@ -192,6 +192,22 @@
   transform: rotate(-45deg);
 }
 
+.scrim {
+  position: absolute;
+  inset-inline: 0;
+  top: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background: rgba(6, 11, 34, 0.45);
+  animation: scrimIn 0.2s ease;
+}
+
+@keyframes scrimIn {
+  from {
+    opacity: 0;
+  }
+}
+
 .sheet {
   position: absolute;
   inset-inline: 0;

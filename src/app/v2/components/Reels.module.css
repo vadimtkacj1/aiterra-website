@@ -66,7 +66,7 @@
 
 .rails {
   position: absolute;
-  inset: calc(var(--reel-overhang) - 5px) 0 0;
+  inset: calc(var(--reel-overhang) * 2 - 5px) 0 0;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   pointer-events: none;
@@ -74,6 +74,10 @@
 
 .rails > span + span {
   border-inline-start: 1px solid var(--v2-hairline-ink);
+}
+
+.connected .rails {
+  inset: 0;
 }
 
 .band {
@@ -128,6 +132,26 @@
 
 .edgeHBottom {
   bottom: -5px;
+}
+
+.edgeV {
+  position: absolute;
+  inset-block: -5px;
+  width: 1px;
+  background: var(--v2-hairline-ink);
+  pointer-events: none;
+}
+
+.edgeVStart {
+  inset-inline-start: -5px;
+}
+
+.edgeVEnd {
+  inset-inline-end: -5px;
+}
+
+.reelActive .edgeV {
+  display: none;
 }
 
 .edgeCross {
@@ -283,6 +307,7 @@
 
   .rails,
   .edgeH,
+  .edgeV,
   .edgeCross {
     display: none;
   }

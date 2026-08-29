@@ -63,7 +63,7 @@ function NavAnchor({
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [openMenu, setOpenMenu] = useState<string | null>(null)
-  const [expanded, setExpanded] = useState<string | null>(navItems[0].href)
+  const [expanded, setExpanded] = useState<string | null>(null)
 
   useEffect(() => {
     if (!menuOpen) return
@@ -159,6 +159,10 @@ export default function Header() {
           </button>
         </div>
       </div>
+
+      {menuOpen ? (
+        <button type="button" className={styles.scrim} aria-label="סגירת תפריט" onClick={close} />
+      ) : null}
 
       {menuOpen ? (
         <div id="v2-mobile-nav" className={styles.sheet}>

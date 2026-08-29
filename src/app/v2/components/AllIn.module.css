@@ -19,7 +19,7 @@
   max-width: calc(var(--v2-band) - var(--v2-card-inset) * 2);
   aspect-ratio: 1146 / 565;
   margin-inline: auto;
-  border-radius: 48px;
+  border-radius: 0 0 48px 48px;
   background: #dbe4f8;
 }
 
@@ -567,7 +567,7 @@
 @media (max-width: 1439px) {
   .card {
     --marker: 16px;
-    border-radius: 36px;
+    border-radius: 0 0 36px 36px;
   }
 
   .head {
@@ -599,7 +599,7 @@
 
   .card {
     --marker: 14px;
-    border-radius: 28px;
+    border-radius: 0 0 28px 28px;
   }
 
   .head {

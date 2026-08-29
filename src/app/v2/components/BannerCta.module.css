@@ -15,18 +15,39 @@
   aspect-ratio: 1890 / 584;
   margin-inline: auto;
   padding: 40px 24px;
-  border-radius: 48px;
-  background: #c9d6ea;
+  border-radius: 0 0 48px 48px;
+  background: #dfe8f5;
   text-align: center;
 }
 
-.art {
+.media {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
+}
+
+.mediaVideo {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 62%;
+}
+
+.wash {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    #faf7f3 0%,
+    rgba(250, 247, 243, 0.86) 14%,
+    rgba(226, 235, 248, 0.5) 34%,
+    rgba(126, 163, 221, 0.5) 62%,
+    rgba(63, 108, 191, 0.82) 86%,
+    rgba(52, 97, 182, 0.92) 100%
+  );
 }
 
 .content {
@@ -41,7 +62,7 @@
   font-size: 48px;
   font-weight: 500;
   line-height: 1.2;
-  color: #ffffff;
+  color: var(--v2-paper-ink);
 }
 
 .banner .action {
@@ -65,7 +86,7 @@
   }
 
   .card {
-    border-radius: 36px;
+    border-radius: 0 0 36px 36px;
   }
 
   .heading {
@@ -106,7 +127,7 @@
 
   .card {
     aspect-ratio: 340 / 300;
-    border-radius: 24px;
+    border-radius: 0 0 24px 24px;
   }
 
   .heading {

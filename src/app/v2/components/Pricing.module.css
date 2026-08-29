@@ -44,8 +44,8 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
-  width: min(100%, max(980px, 78%));
-  max-width: 1510px;
+  width: min(100%, max(980px, 89%));
+  max-width: 1670px;
   margin: 64px auto 0;
   padding: var(--board-pad);
   border-block: 1px solid var(--v2-hairline-ink);
@@ -96,7 +96,7 @@
   margin: calc(-1 * (var(--badge-height) + 2px + var(--plan-pad))) -12px calc(-1 * var(--board-pad));
   overflow: hidden;
   border: 2px solid var(--plan-accent);
-  border-radius: 14px;
+  border-radius: 14px 14px 0 0;
   background: #ffffff;
 }
 
@@ -124,7 +124,7 @@
 }
 
 .audience {
-  min-height: 2.8em;
+  min-height: 1.5em;
   margin-top: 10px;
   font-size: 20px;
   line-height: 1.4;
@@ -136,8 +136,8 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  min-height: 76px;
-  margin-top: 18px;
+  min-height: 68px;
+  margin-top: 12px;
 }
 
 .price {
@@ -175,7 +175,7 @@
 }
 
 .featuresTitle {
-  margin-top: 34px;
+  margin-top: 30px;
   font-size: 22px;
   font-weight: 600;
   line-height: 1.4;
@@ -226,7 +226,7 @@
   color: #2c67d2;
 }
 
-@media (max-width: 1519px) {
+@media (max-width: 1759px) {
   .inner {
     padding: 64px 20px 76px;
   }
@@ -260,7 +260,7 @@
   }
 
   .priceRow {
-    min-height: 62px;
+    min-height: 56px;
   }
 
   .price {
@@ -290,6 +290,12 @@
 
   .feature {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .audience {
+    min-height: 2.8em;
   }
 }
 

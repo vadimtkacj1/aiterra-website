@@ -72,7 +72,10 @@ export default function Reviews({
     centre(activeIndex + delta, calm ? 'auto' : 'smooth')
   }
 
-  const restartAutoplay = useAutoplay(trackRef, () => step(-1), { enabled: count > 1 })
+  const restartAutoplay = useAutoplay(trackRef, () => step(-1), {
+    enabled: count > 1,
+    holdOnHover: false,
+  })
 
   const nudge = (delta: number) => {
     step(delta)

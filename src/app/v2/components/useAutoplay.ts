@@ -8,12 +8,13 @@ const noop = () => {}
 type AutoplayOptions = {
   delay?: number
   enabled?: boolean
+  holdOnHover?: boolean
 }
 
 export default function useAutoplay(
   ref: RefObject<HTMLElement | null>,
   step: () => void,
-  { delay = 5000, enabled = true }: AutoplayOptions = {},
+  { delay = 5000, enabled = true, holdOnHover = true }: AutoplayOptions = {},
 ) {
   const stepRef = useRef(step)
   const restartRef = useRef<() => void>(noop)
@@ -66,8 +67,10 @@ export default function useAutoplay(
     observer.observe(host)
     restartRef.current = start
 
-    host.addEventListener('pointerenter', hold)
-    host.addEventListener('pointerleave', release)
+    if (holdOnHover) {
+      host.addEventListener('pointerenter', hold)
+      host.addEventListener('pointerleave', release)
+    }
     host.addEventListener('focusin', hold)
     host.addEventListener('focusout', release)
     host.addEventListener('touchstart', hold, { passive: true })
@@ -88,7 +91,7 @@ export default function useAutoplay(
       host.removeEventListener('wheel', start)
       document.removeEventListener('visibilitychange', start)
     }
-  }, [ref, enabled, delay])
+  }, [ref, enabled, delay, holdOnHover])
 
   return restartRef
 }

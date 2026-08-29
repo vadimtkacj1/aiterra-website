@@ -431,6 +431,24 @@ export const reelItems: ReelItem[] = [
   { id: 'reel-7', label: 'ריל לקוחות', surface: '#e9e3da' },
 ]
 
+export const clientStories = {
+  eyebrow: 'CLIENT STORIES',
+  heading: ['ומה הלקוחות משתפים?'],
+  lede: [] as string[],
+  prev: 'לסיפור הקודם',
+  next: 'לסיפור הבא',
+}
+
+export const clientStoryItems: ReelItem[] = [
+  { id: 'story-1', label: 'סיפור לקוח – חנות אונליין', surface: '#e2e7f1' },
+  { id: 'story-2', label: 'סיפור לקוח – עסק מקומי', surface: '#efe3e8' },
+  { id: 'story-3', label: 'סיפור לקוח – מותג אופנה', surface: '#e7e3d9' },
+  { id: 'story-4', label: 'סיפור לקוח – קליניקה', surface: '#222c46' },
+  { id: 'story-5', label: 'סיפור לקוח – חברת שירות', surface: '#dee7e3' },
+  { id: 'story-6', label: 'סיפור לקוח – סטארטאפ', surface: '#e5e1eb' },
+  { id: 'story-7', label: 'סיפור לקוח – רשת סניפים', surface: '#eae4db' },
+]
+
 export const faq = {
   heading: ['לפני שמתחילים', 'כמה דברים שכדאי לדעת.'],
 }
@@ -895,7 +913,6 @@ export type ServicePage = {
   }
   banner?: {
     heading: string
-    art: string
     action: { label: string; href: string }
   }
   faqHeading: string[]
@@ -1073,7 +1090,6 @@ export const servicePages: Record<string, ServicePage> = {
     },
     banner: {
       heading: 'רוצים לראות איך החנות שלכם תיראה?',
-      art: '/images/hero.jpg',
       action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
     },
     faqHeading: ['לפני שמתחילים', 'כמה דברים שכדאי לדעת.'],

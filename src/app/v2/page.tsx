@@ -12,6 +12,7 @@ import Faq from './components/Faq'
 import ContactForm from './components/ContactForm'
 import Reviews from './components/Reviews'
 import Footer from './components/Footer'
+import { clientStories, clientStoryItems } from './content'
 
 export const metadata: Metadata = {
   title: { absolute: 'AITERRA — סוכנות פיתוח ושיווק דיגיטלי' },
@@ -34,6 +35,15 @@ export default function V2Page() {
         <Partners />
         <Reels />
         <Reviews />
+        <Reels
+          eyebrow={clientStories.eyebrow}
+          heading={clientStories.heading}
+          lede={clientStories.lede}
+          items={clientStoryItems}
+          prevLabel={clientStories.prev}
+          nextLabel={clientStories.next}
+          connected
+        />
         <Faq />
       </main>
       <Footer>

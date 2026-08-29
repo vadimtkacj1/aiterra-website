@@ -17,6 +17,7 @@ type ReelsProps = {
   items?: ReelItem[]
   prevLabel?: string
   nextLabel?: string
+  connected?: boolean
 }
 
 const SETTLE_DELAY = 140
@@ -48,6 +49,7 @@ export default function Reels({
   items = reelItems,
   prevLabel = reels.prev,
   nextLabel = reels.next,
+  connected = false,
 }: ReelsProps) {
   const headingId = useId()
   const trackRef = useRef<HTMLDivElement>(null)
@@ -235,9 +237,22 @@ export default function Reels({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count])
 
+  const rails = (
+    <div className={styles.rails} aria-hidden="true">
+      <span />
+      <span />
+      <span />
+    </div>
+  )
+
   return (
-    <section className={styles.reels} aria-labelledby={headingId}>
+    <section
+      className={[styles.reels, connected ? styles.connected : ''].filter(Boolean).join(' ')}
+      aria-labelledby={headingId}
+    >
       <div className={styles.inner}>
+        {connected ? rails : null}
+
         <div className={styles.topRule}>
           <GridRule />
         </div>
@@ -245,22 +260,20 @@ export default function Reels({
         <div className={styles.head} data-reveal-item>
           <Eyebrow label={eyebrow} />
           <SectionHeading id={headingId} lines={heading} className={styles.heading} />
-          <p className={styles.lede}>
-            {lede.map((line, index) => (
-              <span key={line} className={styles.ledeLine}>
-                {index > 0 ? ' ' : null}
-                {line}
-              </span>
-            ))}
-          </p>
+          {lede.length > 0 ? (
+            <p className={styles.lede}>
+              {lede.map((line, index) => (
+                <span key={line} className={styles.ledeLine}>
+                  {index > 0 ? ' ' : null}
+                  {line}
+                </span>
+              ))}
+            </p>
+          ) : null}
         </div>
 
         <div className={styles.grid} data-reveal-item>
-          <div className={styles.rails} aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </div>
+          {connected ? null : rails}
 
           <div className={styles.band}>
             <div ref={trackRef} className={styles.track}>
@@ -276,6 +289,8 @@ export default function Reels({
                 >
                   <span className={[styles.edgeH, styles.edgeHTop].join(' ')} aria-hidden="true" />
                   <span className={[styles.edgeH, styles.edgeHBottom].join(' ')} aria-hidden="true" />
+                  <span className={[styles.edgeV, styles.edgeVStart].join(' ')} aria-hidden="true" />
+                  <span className={[styles.edgeV, styles.edgeVEnd].join(' ')} aria-hidden="true" />
                   <CrossMark className={[styles.edgeCross, styles.edgeCrossTop, styles.edgeCrossStart].join(' ')} />
                   <CrossMark className={[styles.edgeCross, styles.edgeCrossTop, styles.edgeCrossEnd].join(' ')} />
                   <CrossMark className={[styles.edgeCross, styles.edgeCrossBottom, styles.edgeCrossStart].join(' ')} />
@@ -305,7 +320,7 @@ export default function Reels({
           </div>
         </div>
 
-        <GridRule columns={[1, 2, 1]} />
+        {connected ? null : <GridRule columns={[1, 2, 1]} />}
       </div>
     </section>
   )

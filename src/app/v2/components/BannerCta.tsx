@@ -14,8 +14,20 @@ export default function BannerCta({
   return (
     <section className={styles.banner} aria-labelledby={headingId}>
       <div className={styles.card} data-reveal-item>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={banner.art} alt="" className={styles.art} />
+        <div className={styles.media}>
+          <video
+            className={styles.mediaVideo}
+            src="/videos/v2-stats.mp4"
+            poster="/videos/v2-stats-poster.webp"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+          />
+        </div>
+        <div className={styles.wash} />
 
         <div className={styles.content}>
           <h2 id={headingId} className={styles.heading}>
