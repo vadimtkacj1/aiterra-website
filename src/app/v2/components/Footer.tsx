@@ -62,13 +62,12 @@ export default function Footer({ children }: { children?: ReactNode }) {
             </Link>
           </div>
 
-          {footer.columns.map((column, index) => (
+          {footer.columns.map((column) => (
             <FooterSection
               key={column.id}
               id={column.id}
               title={column.title}
               as="nav"
-              defaultOpen={index === 0}
             >
               <ul className={styles.list}>
                 {column.links.map((link) => (
