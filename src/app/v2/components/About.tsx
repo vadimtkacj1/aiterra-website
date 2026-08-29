@@ -1,3 +1,4 @@
+import AboutRoles from './AboutRoles'
 import ActionButton from './ActionButton'
 import SectionHeading from './SectionHeading'
 import Eyebrow from './Eyebrow'
@@ -44,33 +45,7 @@ export default function About({
 
         <GridRule />
 
-        <div className={styles.roles} data-reveal-stagger>
-          {roles.map((role) => (
-            <article key={role.id} className={styles.card} tabIndex={0} data-reveal-item>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/arrow-up-right.svg"
-                alt=""
-                width={54}
-                height={54}
-                className={styles.cardArrow}
-              />
-
-              <div className={styles.cardArt}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={role.art} alt="" className={styles.cardArtImage} />
-              </div>
-
-              <h3 className={styles.cardTitle}>{role.title}</h3>
-
-              <div className={styles.cardReveal}>
-                <div className={styles.cardRevealInner}>
-                  <p className={styles.cardText}>{role.text}</p>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+        <AboutRoles roles={roles} />
 
         <GridRule />
 

@@ -2,13 +2,13 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  border-radius: 0 0 100px 100px;
   color: var(--v2-paper-ink);
 }
 
 .rounded {
   max-width: 1920px;
   margin-inline: auto;
-  border-radius: 0 0 var(--v2-card-radius) var(--v2-card-radius);
 }
 
 .media {
@@ -53,7 +53,7 @@
   position: absolute;
   container-type: inline-size;
   inset-inline: 0;
-  top: 86px;
+  top: 209px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,7 +74,7 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   width: 100%;
   max-width: 1920px;
-  min-height: 740px;
+  min-height: 819px;
   margin-inline: auto;
 }
 
@@ -147,7 +147,7 @@
 
 @media (max-width: 1439px) {
   .grid {
-    min-height: 620px;
+    min-height: 686px;
   }
 
   .stat {
@@ -194,6 +194,7 @@
 @media (max-width: 640px) {
   .stats {
     overflow: visible;
+    border-radius: 0;
     background: #faf7f3;
   }
 

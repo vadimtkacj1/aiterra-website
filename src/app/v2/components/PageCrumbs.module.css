@@ -8,6 +8,8 @@
 .rules {
   position: absolute;
   inset: 0;
+  max-width: 1920px;
+  margin-inline: auto;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   pointer-events: none;

@@ -38,7 +38,6 @@
 .list {
   position: relative;
   grid-column: 2;
-  padding-bottom: 44px;
 }
 
 .head::before,

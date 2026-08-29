@@ -84,7 +84,7 @@ export default function AllIn() {
 
       <div ref={cardRef} className={styles.card}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/all-in-bg.png" alt="" className={styles.bg} />
+        <img src="/images/all-in-bg.webp" alt="" className={styles.bg} />
 
         <div className={styles.rings} aria-hidden="true">
           {RINGS.map((ring) => (

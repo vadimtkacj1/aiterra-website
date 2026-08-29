@@ -3,6 +3,14 @@
   border-bottom: 1px solid var(--v2-hairline-ink);
 }
 
+.item:last-child {
+  border-bottom: 0;
+}
+
+.item:last-child .cross {
+  display: none;
+}
+
 .question {
   font-size: inherit;
   font-weight: inherit;
@@ -163,6 +171,11 @@
   .item::after {
     inset-inline-start: auto;
     inset-inline-end: calc(var(--v2-mobile-rail) - 4px);
+  }
+
+  .item:last-child::before,
+  .item:last-child::after {
+    display: none;
   }
 
   .trigger {

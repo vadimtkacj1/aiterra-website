@@ -119,7 +119,8 @@
   display: grid;
   grid-template-rows: 0fr;
   opacity: 0;
-  transition: grid-template-rows 0.35s ease, opacity 0.35s ease;
+  visibility: hidden;
+  transition: grid-template-rows 0.35s ease, opacity 0.35s ease, visibility 0s 0.35s;
 }
 
 .cardRevealInner {
@@ -134,15 +135,43 @@
   color: var(--v2-paper-ink-muted);
 }
 
-.card:hover .cardArrow,
-.card:focus-within .cardArrow {
+.cardTrigger {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-align: inherit;
+}
+
+.card[data-open] .cardArrow {
   opacity: 1;
 }
 
-.card:hover .cardReveal,
-.card:focus-within .cardReveal {
+.card[data-open] .cardReveal {
   grid-template-rows: 1fr;
   opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .cardArrow {
+    opacity: 1;
+  }
+
+  .card:hover .cardReveal {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+}
+
+@media (scripting: none) {
+  .cardReveal {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .outro {
@@ -215,6 +244,7 @@
   .cardReveal {
     grid-template-rows: 1fr;
     opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -342,14 +372,22 @@
 
   .cardReveal {
     grid-area: text;
-    grid-template-rows: 0fr;
-    opacity: 0;
   }
 
-  .card:hover .cardReveal,
-  .card:focus-within .cardReveal {
-    grid-template-rows: 1fr;
-    opacity: 1;
+  .roles .card:not([data-open]) .cardReveal {
+    grid-template-rows: 0fr;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .cardTrigger::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -7px;
+    right: -16px;
+    bottom: -7px;
+    left: -11px;
   }
 
   .cardText {

@@ -135,12 +135,51 @@
 }
 
 
-.panel {
+.panelStack {
+  display: grid;
+  overflow: clip;
   width: 100%;
   margin-top: 18px;
+}
+
+.panel {
+  grid-area: 1 / 1;
+  width: 100%;
   padding: 32px;
   border-radius: 10px;
   background: #f1ece5;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(3%, 0, 0);
+  transition:
+    opacity 0.3s ease,
+    transform 0s linear 0.3s,
+    visibility 0s linear 0.3s;
+}
+
+.panel[data-active] {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition:
+    opacity 0.44s ease 0.08s,
+    transform 0.66s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel {
+    transform: none;
+    transition:
+      opacity 0.2s ease,
+      visibility 0s linear 0.2s;
+  }
+
+  .panel[data-active] {
+    transition:
+      opacity 0.2s ease,
+      visibility 0s;
+  }
 }
 
 .panelHead {
