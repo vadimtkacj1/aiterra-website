@@ -6,10 +6,9 @@
 @import './ecomerce.css';
 
 @font-face {
-  font-family: 'Heebo';
-  src: url('/fonts/Heebo/Heebo-VariableFont_wght.woff2') format('woff2'),
-       url('/fonts/Heebo/Heebo-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
+  font-family: 'Google Sans';
+  src: url('/fonts/GoogleSans/GoogleSans-VariableFont_wght.woff2') format('woff2');
+  font-weight: 400 700;
   font-style: normal;
   font-display: swap;
 }
@@ -219,7 +218,7 @@ body.cookie-banner-open .asw-menu-btn {
   :root {
     --font-brutalist: 'TelAviv-Brutalist', Arial, sans-serif;
     --font-modernist: 'TelAviv-Modernist', Arial, sans-serif;
-    --font-heebo: 'Heebo', Arial, sans-serif;
+    --font-google-sans: 'Google Sans', Arial, sans-serif;
   }
 
   html {

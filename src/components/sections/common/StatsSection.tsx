@@ -28,7 +28,7 @@ const stats = [
 ]
 
 const gradientNumberStyle: React.CSSProperties = {
-  fontFamily: "'Arimo', sans-serif",
+  fontFamily: "'Google Sans', sans-serif",
   fontWeight: 400,
   // scales with the viewport so '99.9%' never wraps inside a narrow column
   fontSize: 'clamp(48px, 5.5vw, 84px)',

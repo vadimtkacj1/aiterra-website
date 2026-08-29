@@ -5,8 +5,7 @@ import ReactDOM from 'react-dom'
 import HeroVideoBackdrop from '@/components/ui/HeroVideoBackdrop'
 
 export default function ContactHeroSection() {
-  // Heebo paints above the fold here; preload it per-route (no longer global).
-  ReactDOM.preload('/fonts/Heebo/Heebo-VariableFont_wght.woff2', {
+  ReactDOM.preload('/fonts/GoogleSans/GoogleSans-VariableFont_wght.woff2', {
     as: 'font',
     type: 'font/woff2',
     crossOrigin: 'anonymous',
@@ -49,7 +48,7 @@ export default function ContactHeroSection() {
               background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
               fontWeight: 700,
               fontSize: '14px',
-              fontFamily: "'Heebo', sans-serif",
+              fontFamily: "'Google Sans', sans-serif",
             }}
             className="w-full sm:w-45 h-13.75 px-4 text-white flex items-center justify-center text-center leading-tight"
             onClick={() => {
@@ -67,7 +66,7 @@ export default function ContactHeroSection() {
               className="p-px w-full h-full"
             >
               <div
-                style={{ fontWeight: 700, fontSize: '14px', fontFamily: "'Heebo', sans-serif", color: '#2447D6' }}
+                style={{ fontWeight: 700, fontSize: '14px', fontFamily: "'Google Sans', sans-serif", color: '#2447D6' }}
                 className="w-full h-full bg-white flex items-center justify-center text-center leading-tight"
               >
                 צפו בתיק העבודות

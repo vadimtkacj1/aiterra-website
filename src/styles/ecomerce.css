@@ -31,9 +31,9 @@
    ============================================================ */
 
 @theme {
-  --font-brutalist: 'TelAviv-Brutalist', 'Heebo', Arial, sans-serif;
-  --font-modernist: 'TelAviv-Modernist', 'Heebo', Arial, sans-serif;
-  --font-heebo: 'Heebo', Arial, sans-serif;
+  --font-brutalist: 'TelAviv-Brutalist', 'Google Sans', Arial, sans-serif;
+  --font-modernist: 'TelAviv-Modernist', 'Google Sans', Arial, sans-serif;
+  --font-google-sans: 'Google Sans', Arial, sans-serif;
   /* Technical marker face — indices, domains, metrics. Code-native, no
      new asset. Carries the Control "instrument reading" role. */
   --font-mark: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
@@ -219,7 +219,7 @@ html:has(.ecom) {
 /* Tracked uppercase micro-label — nav meta, section kickers, field
    labels. mono's role: functional text only, never content. */
 .label {
-  font-family: var(--font-heebo);
+  font-family: var(--font-google-sans);
   font-size: 11px;
   font-weight: 600;
   line-height: 1;

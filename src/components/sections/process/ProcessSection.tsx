@@ -22,7 +22,7 @@ export default function ProcessSection({ steps }: Props) {
               <span
                 className="block font-semibold leading-none text-[160px] md:text-[240.89px]"
                 style={{
-                  fontFamily: '"Arimo", sans-serif',
+                  fontFamily: '"Google Sans", sans-serif',
                   background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',

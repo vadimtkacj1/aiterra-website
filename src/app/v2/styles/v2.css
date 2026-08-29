@@ -1,29 +1,14 @@
 @font-face {
   font-family: 'Google Sans';
   font-style: normal;
-  font-weight: 100 900;
+  font-weight: 400 700;
   font-display: swap;
-  src:
-    local('Google Sans'),
-    local('Product Sans'),
-    url('/fonts/Heebo/Heebo-VariableFont_wght.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Google Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src:
-    local('Google Sans Medium'),
-    local('Google Sans'),
-    local('Product Sans'),
-    url('/fonts/Heebo/Heebo-VariableFont_wght.woff2') format('woff2');
+  src: url('/fonts/GoogleSans/GoogleSans-VariableFont_wght.woff2') format('woff2');
 }
 
 .v2Root {
   --v2-font-display: 'Google Sans', sans-serif;
-  --v2-font-ui: 'Google Sans', 'Heebo', Arial, sans-serif;
+  --v2-font-ui: 'Google Sans', Arial, sans-serif;
 
   --v2-page: #faf7f3;
   --v2-ink: #0b1230;
@@ -159,5 +144,23 @@
     --v2-card-radius: 28px;
     --v2-bar-height: 60px;
     --v2-mobile-rail: 12px;
+  }
+}
+
+@media (min-width: 1921px) {
+  body:has(.v2Root) {
+    background: #faf7f3;
+  }
+
+  .v2Root {
+    max-width: 1920px;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .v2Root {
+    --v2-card-radius: 44px;
+    --v2-rail-pad: 20px;
   }
 }

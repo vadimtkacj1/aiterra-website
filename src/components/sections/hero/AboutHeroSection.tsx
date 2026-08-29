@@ -14,7 +14,7 @@ export default function AboutHeroSection() {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              fontFamily: "'Heebo', sans-serif",
+              fontFamily: "'Google Sans', sans-serif",
             }}
             className="text-[16px] font-[700]"
           >

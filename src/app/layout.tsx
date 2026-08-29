@@ -53,12 +53,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="he" dir="rtl">
       <head>
-        {/* Preload only the fonts that paint above the fold on (almost) every
-            route: headings (Brutalist Bold), body (Modernist Regular) and nav
-            (Modernist Bold). Brutalist Regular + Heebo load via font-display:
-            swap; Heebo is preloaded per-route where it's actually used (home/
-            about/contact heroes). Fewer preloads = less bandwidth contention
-            with the LCP image on slow connections. */}
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/GoogleSans/GoogleSans-VariableFont_wght.woff2" crossOrigin="anonymous" />
         <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-BrutalistBold.woff2" crossOrigin="anonymous" />
         <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-ModernistRegular.woff2" crossOrigin="anonymous" />
         <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-ModernistBold.woff2" crossOrigin="anonymous" />
