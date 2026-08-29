@@ -71,6 +71,7 @@ export default function HowItWorks({
         }
       })
 
+      steps.style.setProperty('--rail-progress', `${(nearest + 1) / steps.children.length}`)
       mark(nearest)
     }
 
@@ -85,6 +86,7 @@ export default function HowItWorks({
       if (frame) cancelAnimationFrame(frame)
       frame = 0
       steps.style.removeProperty('--progress')
+      steps.style.removeProperty('--rail-progress')
       window.removeEventListener('scroll', onScroll)
       steps.removeEventListener('scroll', onScroll)
 
