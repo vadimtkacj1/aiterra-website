@@ -20,7 +20,26 @@ type ReelsProps = {
 }
 
 const SETTLE_DELAY = 140
-const GLIDE_DURATION = 560
+const GLIDE_DURATION = 450
+const SNAP_RELEASE = 120
+const GLIDE_EASE = [0.22, 1, 0.36, 1] as const
+
+const glideProgress = (elapsed: number) => {
+  const [x1, y1, x2, y2] = GLIDE_EASE
+  const time = Math.min(Math.max(elapsed, 0), 1)
+  const axis = (u: number, a: number, b: number) =>
+    3 * (1 - u) * (1 - u) * u * a + 3 * (1 - u) * u * u * b + u * u * u
+
+  let u = time
+  for (let pass = 0; pass < 5; pass += 1) {
+    const slope =
+      3 * (1 - u) * (1 - u) * x1 + 6 * (1 - u) * u * (x2 - x1) + 3 * u * u * (1 - x2)
+    if (Math.abs(slope) < 1e-6) break
+    u -= (axis(u, x1, x2) - time) / slope
+  }
+
+  return axis(Math.min(Math.max(u, 0), 1), y1, y2)
+}
 
 export default function Reels({
   eyebrow = reels.eyebrow,
@@ -34,8 +53,12 @@ export default function Reels({
   const trackRef = useRef<HTMLDivElement>(null)
   const glideRef = useRef(0)
   const glideTarget = useRef<number | null>(null)
+  const normalizeRef = useRef<() => void>(() => {})
+  const releaseRef = useRef(0)
   const count = items.length
   const [activeIndex, setActiveIndex] = useState(count + Math.floor(count / 2))
+  const activeRef = useRef(activeIndex)
+  activeRef.current = activeIndex
 
   const loop = useMemo(
     () => [0, 1, 2].flatMap((copy) => items.map((item) => ({ item, copy }))),
@@ -51,26 +74,65 @@ export default function Reels({
     return cardBox.left + cardBox.width / 2 - (trackBox.left + trackBox.width / 2)
   }
 
+  const resizeShift = (track: HTMLDivElement, index: number) => {
+    const target = track.children[index]
+    const wide = track.children[activeRef.current]
+    if (!target || !wide || target === wide) return 0
+
+    const grow = wide.getBoundingClientRect().width - target.getBoundingClientRect().width
+    const towardsEnd = index > activeRef.current ? 1 : -1
+    const rtl = getComputedStyle(track).direction === 'rtl' ? 1 : -1
+    return (grow / 2) * towardsEnd * rtl
+  }
+
   const glideTo = (index: number) => {
     const track = trackRef.current
     if (!track) return
     cancelAnimationFrame(glideRef.current)
-    const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    track.dataset.animating = ''
+    window.clearTimeout(releaseRef.current)
+
+    const distance = offsetOf(track, index) + resizeShift(track, index)
     glideTarget.current = index
-    const start = performance.now()
-    const step = (now: number) => {
-      const target = glideTarget.current ?? index
-      track.scrollLeft += offsetOf(track, target)
-      if (!calm && now - start < GLIDE_DURATION) {
-        glideRef.current = requestAnimationFrame(step)
-      } else {
-        track.scrollLeft += offsetOf(track, target)
+    track.dataset.animating = ''
+
+    const release = () => {
+      releaseRef.current = window.setTimeout(() => {
+        track.scrollLeft += offsetOf(track, glideTarget.current ?? index)
         delete track.dataset.animating
         glideRef.current = 0
         glideTarget.current = null
-      }
+        releaseRef.current = 0
+        normalizeRef.current()
+      }, SNAP_RELEASE)
     }
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      track.scrollLeft += distance
+      release()
+      return
+    }
+
+    const start = performance.now()
+    let base = track.scrollLeft
+    let expected = base
+
+    const step = (now: number) => {
+      const drift = track.scrollLeft - expected
+      if (Math.abs(drift) > 2) base += drift
+
+      const progress = Math.min((now - start) / GLIDE_DURATION, 1)
+      expected = base + distance * glideProgress(progress)
+      track.scrollLeft = expected
+
+      if (progress < 1) {
+        glideRef.current = requestAnimationFrame(step)
+        return
+      }
+
+      glideRef.current = 0
+      release()
+    }
+
     glideRef.current = requestAnimationFrame(step)
   }
 
@@ -102,26 +164,32 @@ export default function Reels({
     let frame = 0
     let timer: ReturnType<typeof setTimeout>
 
+    const normalize = () => {
+      const width = copyWidth()
+      if (!width) return
+      const offset = Math.abs(track.scrollLeft)
+      if (offset < width * 0.5) {
+        track.scrollLeft = sign * (offset + width)
+        setActiveIndex((current) => current + count)
+        if (glideTarget.current !== null) glideTarget.current += count
+      } else if (offset > width * 1.5) {
+        track.scrollLeft = sign * (offset - width)
+        setActiveIndex((current) => current - count)
+        if (glideTarget.current !== null) glideTarget.current -= count
+      }
+    }
+
+    normalizeRef.current = normalize
+
     const onScroll = () => {
+      if (glideRef.current || glideTarget.current !== null) return
+
       if (!frame) {
         frame = requestAnimationFrame(() => {
           frame = 0
-          const width = copyWidth()
-          if (!width) return
-          const offset = Math.abs(track.scrollLeft)
-          if (offset < width * 0.5) {
-            track.scrollLeft = sign * (offset + width)
-            setActiveIndex((current) => current + count)
-            if (glideTarget.current !== null) glideTarget.current += count
-          } else if (offset > width * 1.5) {
-            track.scrollLeft = sign * (offset - width)
-            setActiveIndex((current) => current - count)
-            if (glideTarget.current !== null) glideTarget.current -= count
-          }
+          normalize()
         })
       }
-
-      if (glideRef.current) return
 
       // Promote only once the gesture settles: resizing a card while it is
       // still moving re-runs snapping underneath the finger.
@@ -153,6 +221,7 @@ export default function Reels({
       if (frame) cancelAnimationFrame(frame)
       cancelAnimationFrame(glideRef.current)
       clearTimeout(timer)
+      window.clearTimeout(releaseRef.current)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count])
