@@ -630,6 +630,18 @@
     padding: 0 6px 16px;
   }
 
+  .orbit {
+    display: none;
+  }
+
+  .wordmark,
+  .card[data-active] .wordmark {
+    filter: brightness(0) invert(1);
+    transition:
+      opacity 1.1s ease,
+      transform 1.4s var(--ease-out);
+  }
+
   .allIn::before,
   .allIn::after {
     content: '';
