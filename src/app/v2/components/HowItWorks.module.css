@@ -34,6 +34,8 @@
 }
 
 .steps {
+  --progress: 0px;
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -49,6 +51,17 @@
   inset-inline-start: 50%;
   width: 1px;
   background: var(--v2-hairline-ink);
+}
+
+.steps::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  inset-inline-start: 50%;
+  width: 2px;
+  height: var(--progress);
+  margin-inline-start: -1px;
+  background: #3678e9;
 }
 
 .step {
@@ -91,17 +104,6 @@
   grid-row: 1;
 }
 
-.step:first-child::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 50%;
-  inset-inline-start: 50%;
-  width: 2px;
-  margin-inline-start: -1px;
-  background: #3678e9;
-}
-
 .badge {
   position: absolute;
   top: 50%;
@@ -118,9 +120,13 @@
   font-size: 15px;
   font-weight: 500;
   line-height: 1;
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
-.step:first-child .badge {
+.step[data-reached] .badge {
   background: #3678e9;
   color: #ffffff;
   box-shadow: 0 2px 14px 0 #3678e94d;
@@ -174,8 +180,15 @@
     padding-inline: 0;
   }
 
-  .steps::before {
+  .steps::before,
+  .steps::after {
     display: none;
+  }
+
+  .step:first-child .badge {
+    background: #3678e9;
+    color: #ffffff;
+    box-shadow: 0 2px 14px 0 #3678e94d;
   }
 
   .step,
@@ -190,10 +203,6 @@
     grid-column: 1 / -1;
     grid-row: 1;
     aspect-ratio: 16 / 10;
-  }
-
-  .step:first-child::before {
-    display: none;
   }
 
   .badgeCell {
