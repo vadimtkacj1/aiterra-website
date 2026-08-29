@@ -1,10 +1,12 @@
 import Eyebrow from './Eyebrow'
 import SectionHeading from './SectionHeading'
 import GridRule from './GridRule'
-import { aboutPage } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 import styles from './AboutIntro.module.css'
 
 export default function AboutIntro() {
+  const { aboutPage } = getV2Content()
+
   return (
     <section className={styles.intro} aria-label={aboutPage.title}>
       <div className={styles.inner}>

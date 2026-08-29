@@ -9,16 +9,21 @@ import Faq from '../components/Faq'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import { getFaqData } from '@/lib/faq-server'
-import { servicesPage } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 
-export const metadata: Metadata = {
-  title: servicesPage.metaTitle,
-  description: servicesPage.lede,
+export function generateMetadata(): Metadata {
+  const { servicesPage } = getV2Content()
+  return {
+    title: servicesPage.metaTitle,
+    description: servicesPage.lede,
+  }
 }
 
 export const revalidate = 300
 
 export default function V2ServicesPage() {
+  const { servicesPage } = getV2Content()
+
   const faq = getFaqData('/services')
   const entries = faq.items.map((item, index) => ({
     id: `services-faq-${index + 1}`,

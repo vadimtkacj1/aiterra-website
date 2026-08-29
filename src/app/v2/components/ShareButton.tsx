@@ -2,10 +2,12 @@
 
 import { useState } from 'react'
 import { ShareIcon } from './icons'
-import { article } from '../content'
+import { article as articleDefaults } from '../content'
+import { useV2 } from '../V2ContentProvider'
 import styles from './Article.module.css'
 
 export default function ShareButton({ title }: { title: string }) {
+  const article = useV2('article', articleDefaults)
   const [copied, setCopied] = useState(false)
 
   const share = async () => {

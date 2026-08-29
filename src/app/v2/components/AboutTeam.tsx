@@ -5,7 +5,8 @@ import Eyebrow from './Eyebrow'
 import SectionHeading from './SectionHeading'
 import GridRule from './GridRule'
 import { ChevronPrevIcon } from './icons'
-import { aboutPage } from '../content'
+import { aboutPage as aboutPageDefaults } from '../content'
+import { useV2 } from '../V2ContentProvider'
 import styles from './AboutTeam.module.css'
 
 export type TeamCard = {
@@ -20,6 +21,7 @@ export type TeamCard = {
 const stripParens = (value: string) => value.replace(/\s*\([^)]*\)\s*/g, ' ').trim() || value
 
 export default function AboutTeam({ members }: { members: TeamCard[] }) {
+  const aboutPage = useV2('aboutPage', aboutPageDefaults)
   const [openId, setOpenId] = useState<string | null>(null)
   const closeRef = useRef<HTMLButtonElement>(null)
   const active = members.find((member) => member.id === openId) ?? null

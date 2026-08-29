@@ -3,10 +3,12 @@ import SectionHeading from './SectionHeading'
 import TagList from './TagList'
 import ProjectsRail from './ProjectsRail'
 import TopicsRail from './TopicsRail'
-import { hero } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 import styles from './Hero.module.css'
 
 export default function Hero() {
+  const { hero } = getV2Content()
+
   return (
     <section className={styles.hero}>
       <div className={styles.media}>

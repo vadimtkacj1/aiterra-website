@@ -13,16 +13,21 @@ import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import { getAllAuthors } from '@/lib/authors-server'
 import { getFaqData } from '@/lib/faq-server'
-import { about, aboutPage, aboutValues } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 
-export const metadata: Metadata = {
-  title: aboutPage.title,
-  description: aboutPage.lede,
+export function generateMetadata(): Metadata {
+  const { aboutPage } = getV2Content()
+  return {
+    title: aboutPage.title,
+    description: aboutPage.lede,
+  }
 }
 
 export const revalidate = 300
 
 export default function V2AboutPage() {
+  const { about, aboutPage, aboutValues } = getV2Content()
+
   const members: TeamCard[] = getAllAuthors().map((author) => ({
     id: author.id,
     name: author.name,

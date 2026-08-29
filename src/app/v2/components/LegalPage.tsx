@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Header from './Header'
 import Footer from './Footer'
 import { ChevronPrevIcon } from './icons'
-import { blog, legal } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 import styles from './LegalPage.module.css'
 
 type LegalPageProps = {
@@ -13,6 +13,8 @@ type LegalPageProps = {
 }
 
 export default function LegalPage({ title, lastUpdated, children }: LegalPageProps) {
+  const { blog, legal } = getV2Content()
+
   return (
     <>
       <Header />

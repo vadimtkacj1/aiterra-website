@@ -26,6 +26,10 @@ yarn-error.log*
 # The rest of data/ is seed content and stays tracked.
 data/site-leads.json
 
+# /v2 text overrides — written at runtime by the admin panel.
+# The defaults live in src/app/v2/content.ts, so this file only holds edits.
+data/v2-content.json
+
 # misc
 .DS_Store
 *.pem

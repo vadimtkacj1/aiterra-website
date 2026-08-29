@@ -11,10 +11,13 @@ import WideCta from './WideCta'
 import GridRule from './GridRule'
 import useAutoplay from './useAutoplay'
 import { SparkIcon } from './icons'
-import { serviceTabs, services } from '../content'
+import { serviceTabs as serviceTabsDefaults, services as servicesDefaults } from '../content'
+import { useV2 } from '../V2ContentProvider'
 import styles from './Services.module.css'
 
 export default function Services() {
+  const serviceTabs = useV2('serviceTabs', serviceTabsDefaults)
+  const services = useV2('services', servicesDefaults)
   const contentRef = useRef<HTMLDivElement>(null)
   const [activeId, setActiveId] = useState(serviceTabs[0].id)
   const active = serviceTabs.find((tab) => tab.id === activeId) ?? serviceTabs[0]

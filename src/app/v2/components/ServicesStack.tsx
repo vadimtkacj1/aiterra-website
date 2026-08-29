@@ -6,10 +6,12 @@ import ActionButton from './ActionButton'
 import Eyebrow from './Eyebrow'
 import GridRule from './GridRule'
 import SectionHeading from './SectionHeading'
-import { servicesStack } from '../content'
+import { servicesStack as servicesStackDefaults } from '../content'
+import { useV2 } from '../V2ContentProvider'
 import styles from './ServicesStack.module.css'
 
 export default function ServicesStack() {
+  const servicesStack = useV2('servicesStack', servicesStackDefaults)
   const stackRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {

@@ -6,12 +6,15 @@ import CircleButton from './CircleButton'
 import { ChevronPrevIcon } from './icons'
 import type { BlogCard } from './BlogIndex'
 import { categoryTag } from '../blogCategory'
-import { article, blog } from '../content'
+import { article as articleDefaults, blog as blogDefaults } from '../content'
+import { useV2 } from '../V2ContentProvider'
 import styles from './RelatedPosts.module.css'
 
 const PAGE = 3
 
 export default function RelatedPosts({ posts }: { posts: BlogCard[] }) {
+  const article = useV2('article', articleDefaults)
+  const blog = useV2('blog', blogDefaults)
   const trackRef = useRef<HTMLUListElement>(null)
   const [offset, setOffset] = useState(0)
   if (posts.length === 0) return null
@@ -58,7 +61,7 @@ export default function RelatedPosts({ posts }: { posts: BlogCard[] }) {
                 </span>
                 <span className={styles.meta}>
                   <span className={styles.metaText}>
-                    <span className={styles.category}>{categoryTag(post)}</span>
+                    <span className={styles.category}>{categoryTag(post, blog)}</span>
                     <span className={styles.metaDot} aria-hidden="true" />
                     <span>
                       {post.minutes} {blog.readTime}

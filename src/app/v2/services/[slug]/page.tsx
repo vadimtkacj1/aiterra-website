@@ -11,17 +11,17 @@ import Faq from '../../components/Faq'
 import ContactForm from '../../components/ContactForm'
 import Footer from '../../components/Footer'
 import { getFaqData } from '@/lib/faq-server'
-import { servicePages } from '../../content'
+import { getV2Content } from '@/lib/v2-content-server'
 
 type Params = { params: Promise<{ slug: string }> }
 
 export function generateStaticParams() {
-  return Object.keys(servicePages).map((slug) => ({ slug }))
+  return Object.keys(getV2Content().servicePages).map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params
-  const service = servicePages[slug]
+  const service = getV2Content().servicePages[slug]
   if (!service) return {}
 
   return {
@@ -34,7 +34,7 @@ export const revalidate = 300
 
 export default async function V2ServiceDetailPage({ params }: Params) {
   const { slug } = await params
-  const service = servicePages[slug]
+  const service = getV2Content().servicePages[slug]
   if (!service) notFound()
 
   const shared = getFaqData('/services')

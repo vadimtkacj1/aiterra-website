@@ -1,10 +1,12 @@
 import SectionHeading from './SectionHeading'
 import GridRule from './GridRule'
 import StatValue from './StatValue'
-import { statItems, stats } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 import styles from './Stats.module.css'
 
 export default function Stats({ rounded = false }: { rounded?: boolean }) {
+  const { statItems, stats } = getV2Content()
+
   return (
     <section className={[styles.stats, rounded ? styles.rounded : ''].filter(Boolean).join(' ')} aria-labelledby="v2-stats-heading">
       <div className={styles.inner} data-reveal-stagger>

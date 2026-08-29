@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import { ChevronPrevIcon } from './icons'
-import { blog } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 import styles from './PageCrumbs.module.css'
 
 export default function PageCrumbs({ current }: { current: string }) {
+  const { blog } = getV2Content()
+
   return (
     <div className={styles.head}>
       <div className={styles.rules} aria-hidden="true">

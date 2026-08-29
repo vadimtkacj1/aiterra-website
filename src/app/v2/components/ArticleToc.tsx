@@ -2,7 +2,8 @@
 
 import { useEffect, useState, type MouseEvent } from 'react'
 import { ChevronDownIcon } from './icons'
-import { article } from '../content'
+import { article as articleDefaults } from '../content'
+import { useV2 } from '../V2ContentProvider'
 import styles from './Article.module.css'
 
 export type TocEntry = { id: string; label: string }
@@ -10,6 +11,7 @@ export type TocEntry = { id: string; label: string }
 const HEADER_OFFSET = 140
 
 export default function ArticleToc({ entries, collapsible = false }: { entries: TocEntry[]; collapsible?: boolean }) {
+  const article = useV2('article', articleDefaults)
   const [activeId, setActiveId] = useState(entries[0]?.id ?? '')
   const [open, setOpen] = useState(false)
 

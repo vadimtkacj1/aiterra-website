@@ -1,6 +1,6 @@
 import ActionButton from './ActionButton'
 import GridRule from './GridRule'
-import { services } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 import styles from './LeadCta.module.css'
 
 type LeadCtaProps = {
@@ -8,7 +8,10 @@ type LeadCtaProps = {
   action?: { label: string; href: string }
 }
 
-export default function LeadCta({ text = services.lead.text, action = services.lead.action }: LeadCtaProps) {
+export default function LeadCta(props: LeadCtaProps) {
+  const { services } = getV2Content()
+  const { text = services.lead.text, action = services.lead.action } = props
+
   return (
     <section className={styles.section} aria-label={text}>
       <div className={styles.lead} data-reveal-item>

@@ -7,7 +7,8 @@ import ActionButton from './ActionButton'
 import GridRule from './GridRule'
 import { ChevronPrevIcon } from './icons'
 import { categoryTag, matchesKeywords } from '../blogCategory'
-import { blog } from '../content'
+import { blog as blogDefaults } from '../content'
+import { useV2 } from '../V2ContentProvider'
 import styles from './BlogIndex.module.css'
 
 export type BlogCard = {
@@ -34,13 +35,14 @@ const columnOf = (index: number) => {
 }
 
 export default function BlogIndex({ posts }: { posts: BlogCard[] }) {
+  const blog = useV2('blog', blogDefaults)
   const [filterId, setFilterId] = useState(blog.filters[0].id)
   const [limit, setLimit] = useState(FIRST_PAGE)
 
   const visible = useMemo(() => {
     const filter = blog.filters.find((entry) => entry.id === filterId) ?? blog.filters[0]
     return posts.filter((post) => matchesKeywords(post, filter.match))
-  }, [posts, filterId])
+  }, [posts, filterId, blog.filters])
 
   const select = (id: string) => {
     setFilterId(id)
@@ -103,7 +105,7 @@ export default function BlogIndex({ posts }: { posts: BlogCard[] }) {
 
                   <span className={styles.meta}>
                     <span className={styles.metaText}>
-                      <span className={styles.category}>{categoryTag(post)}</span>
+                      <span className={styles.category}>{categoryTag(post, blog)}</span>
                       <span className={styles.metaDot} aria-hidden="true" />
                       <span>
                         {post.minutes} {blog.readTime}

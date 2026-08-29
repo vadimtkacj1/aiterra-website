@@ -1,3 +1,27 @@
+export type HeaderNavItem = {
+  id: string
+  label: string
+  href: string
+  submenu?: 'services' | 'portfolio'
+}
+
+export const header = {
+  brand: 'AITERRA',
+  navLabel: 'ניווט ראשי',
+  mobileNavLabel: 'ניווט נייד',
+  menuOpen: 'תפריט',
+  menuClose: 'סגירת תפריט',
+  expand: 'פתיחה',
+  collapse: 'סגירה',
+  cta: { label: 'לקבלת הצעת מחיר', href: '/v2/contact' },
+  nav: [
+    { id: 'services', label: 'שירותים', href: '/v2/services', submenu: 'services' },
+    { id: 'blog', label: 'בלוג', href: '/v2/blog' },
+    { id: 'portfolio', label: 'תיק עבודות', href: '/v2#v2-portfolio', submenu: 'portfolio' },
+    { id: 'about', label: 'אודות הסוכנות', href: '/v2/about' },
+  ] satisfies HeaderNavItem[],
+}
+
 export const hero = {
   headline: ['סוכנות פיתוח', 'ושיווק דיגיטלי'],
   tags: ['שיווק', 'פרסום', 'קריאייטיב', 'קידום'],
@@ -1161,3 +1185,45 @@ export const contactPage = {
 export const legal = {
   updatedPrefix: 'עודכן לאחרונה:',
 }
+
+export const v2ContentDefaults = {
+  header,
+  hero,
+  heroProjects,
+  heroRails,
+  heroTopics,
+  about,
+  aboutRoles,
+  stats,
+  statItems,
+  services,
+  serviceTabs,
+  portfolio,
+  portfolioFilters,
+  portfolioItems,
+  allIn,
+  allInNodes,
+  partners,
+  reels,
+  reelItems,
+  clientStories,
+  clientStoryItems,
+  faq,
+  faqEntries,
+  footer,
+  reviews,
+  reviewItems,
+  contact,
+  blog,
+  article,
+  aboutPage,
+  aboutValues,
+  servicesStack,
+  servicePages,
+  servicesPage,
+  contactPage,
+  legal,
+}
+
+export type V2Content = typeof v2ContentDefaults
+export type V2ContentKey = keyof V2Content

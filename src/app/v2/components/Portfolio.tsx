@@ -11,7 +11,12 @@ import WideCta from './WideCta'
 import GridRule from './GridRule'
 import CircleButton from './CircleButton'
 import useAutoplay from './useAutoplay'
-import { portfolio, portfolioFilters, portfolioItems } from '../content'
+import {
+  portfolio as portfolioDefaults,
+  portfolioFilters as portfolioFiltersDefaults,
+  portfolioItems as portfolioItemsDefaults,
+} from '../content'
+import { useV2 } from '../V2ContentProvider'
 import styles from './Portfolio.module.css'
 
 const cardMetrics = (track: HTMLElement) => {
@@ -98,6 +103,9 @@ const slideLeft = (track: HTMLElement) => {
 }
 
 export default function Portfolio() {
+  const portfolio = useV2('portfolio', portfolioDefaults)
+  const portfolioFilters = useV2('portfolioFilters', portfolioFiltersDefaults)
+  const portfolioItems = useV2('portfolioItems', portfolioItemsDefaults)
   const trackRef = useRef<HTMLDivElement>(null)
   const glideRef = useRef<() => void>(noop)
   const [activeFilter, setActiveFilter] = useState(portfolioFilters[0].id)
@@ -108,7 +116,7 @@ export default function Portfolio() {
       activeFilter === 'all'
         ? portfolioItems
         : portfolioItems.filter((item) => item.category === activeFilter),
-    [activeFilter],
+    [activeFilter, portfolioItems],
   )
 
   const loop = useMemo(

@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { Briefcase, Globe2, HelpCircle, Inbox, LayoutList, LogOut, Users, X } from 'lucide-react'
+import { Briefcase, FileText, Globe2, HelpCircle, Inbox, LayoutList, LogOut, Users, X } from 'lucide-react'
 
 const SIDEBAR_BG = '#0f172a'
 const BORDER_SUBTLE = 'rgba(255,255,255,0.06)'
@@ -11,6 +11,7 @@ const BORDER_MID = 'rgba(255,255,255,0.08)'
 
 const links = [
   { href: '/admin/leads', label: 'לידים', icon: Inbox, exact: true },
+  { href: '/admin/v2', label: 'תוכן האתר', icon: FileText, exact: false },
   { href: '/admin/blog', label: 'פוסטים', icon: LayoutList, exact: false },
   { href: '/admin/portfolio', label: 'תיק עבודות', icon: Briefcase, exact: false },
   { href: '/admin/seo', label: 'SEO דפים', icon: Globe2, exact: true },

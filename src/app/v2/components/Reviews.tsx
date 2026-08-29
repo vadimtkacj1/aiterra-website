@@ -7,7 +7,8 @@ import CircleButton from './CircleButton'
 import GridRule from './GridRule'
 import ReviewCard from './ReviewCard'
 import useAutoplay from './useAutoplay'
-import { reviewItems, reviews } from '../content'
+import { reviewItems as reviewItemsDefaults, reviews as reviewsDefaults } from '../content'
+import { useV2 } from '../V2ContentProvider'
 import type { ReviewItem } from '../content'
 import styles from './Reviews.module.css'
 
@@ -33,15 +34,18 @@ function Rules() {
   )
 }
 
-export default function Reviews({
-  eyebrow = reviews.eyebrow,
-  heading = reviews.heading,
-  items = reviewItems,
-  railLabel = reviews.rail,
-  ratingLabel = reviews.rating,
-  prevLabel = reviews.prev,
-  nextLabel = reviews.next,
-}: ReviewsProps) {
+export default function Reviews(props: ReviewsProps) {
+  const reviews = useV2('reviews', reviewsDefaults)
+  const reviewItems = useV2('reviewItems', reviewItemsDefaults)
+  const {
+    eyebrow = reviews.eyebrow,
+    heading = reviews.heading,
+    items = reviewItems,
+    railLabel = reviews.rail,
+    ratingLabel = reviews.rating,
+    prevLabel = reviews.prev,
+    nextLabel = reviews.next,
+  } = props
   const headingId = useId()
   const trackRef = useRef<HTMLDivElement>(null)
   const count = items.length

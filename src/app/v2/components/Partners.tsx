@@ -1,7 +1,9 @@
-import { partners } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 import styles from './Partners.module.css'
 
 export default function Partners() {
+  const { partners } = getV2Content()
+
   return (
     <section className={styles.partners} aria-label={partners.caption}>
       <div className={styles.inner}>

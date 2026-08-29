@@ -5,14 +5,19 @@ import PageCrumbs from '../components/PageCrumbs'
 import ContactForm from '../components/ContactForm'
 import ContactDetails from '../components/ContactDetails'
 import Footer from '../components/Footer'
-import { contactPage } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 
-export const metadata: Metadata = {
-  title: contactPage.metaTitle,
-  description: contactPage.lede,
+export function generateMetadata(): Metadata {
+  const { contactPage } = getV2Content()
+  return {
+    title: contactPage.metaTitle,
+    description: contactPage.lede,
+  }
 }
 
 export default function V2ContactPage() {
+  const { contactPage } = getV2Content()
+
   return (
     <>
       <Header />

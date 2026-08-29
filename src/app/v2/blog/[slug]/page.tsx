@@ -14,7 +14,7 @@ import { ChevronPrevIcon } from '../../components/icons'
 import { getAllPosts, getPostBySlug } from '@/lib/blog-server'
 import { getAuthorById } from '@/lib/authors-server'
 import { categoryTag, formatPostDate, matchesKeywords, readingMinutes } from '../../blogCategory'
-import { article, blog, contact } from '../../content'
+import { getV2Content } from '@/lib/v2-content-server'
 import styles from '../../components/Article.module.css'
 
 export const revalidate = 300
@@ -59,12 +59,12 @@ const renderArticle = (markdown: string, cover: string) => {
   return { html, toc }
 }
 
-const toCard = (post: ReturnType<typeof getAllPosts>[number]): BlogCard => ({
+const toCard = (post: ReturnType<typeof getAllPosts>[number], defaultAuthor: string): BlogCard => ({
   slug: post.slug,
   title: post.title,
   excerpt: post.excerpt,
   date: formatPostDate(post.datePublished),
-  author: post.author || blog.defaultAuthor,
+  author: post.author || defaultAuthor,
   authorImage: post.authorImage || '',
   image: post.images?.[0] || '',
   tags: post.tags,
@@ -76,12 +76,13 @@ export default async function V2ArticlePage({ params }: Params) {
   const post = getPostBySlug(slug)
   if (!post) notFound()
 
+  const { article, blog, contact } = getV2Content()
   const profile = post.authorId ? getAuthorById(post.authorId) : null
   const authorName = post.author.trim() || profile?.name || blog.defaultAuthor
   const authorImage = post.authorImage?.trim() || profile?.image || ''
   const authorBio = profile?.bio || (profile?.role ? `${authorName} — ${profile.role}` : authorName)
   const { html, toc } = renderArticle(post.content || '', post.images?.[0] || '')
-  const category = categoryTag(post)
+  const category = categoryTag(post, blog)
   const minutes = readingMinutes(post.content || '')
 
   const filter = blog.filters.find((entry) => entry.tag === category)
@@ -93,7 +94,7 @@ export default async function V2ArticlePage({ params }: Params) {
     ...others.filter((entry) => !(filter && filter.match.length > 0 && matchesKeywords(entry, filter.match))),
   ]
     .slice(0, 9)
-    .map(toCard)
+    .map((entry) => toCard(entry, blog.defaultAuthor))
 
   return (
     <>

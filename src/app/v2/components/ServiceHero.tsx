@@ -3,7 +3,8 @@ import ActionButton from './ActionButton'
 import Eyebrow from './Eyebrow'
 import SectionHeading from './SectionHeading'
 import { ChevronPrevIcon } from './icons'
-import { blog, servicesPage, type ServicePage } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
+import { type ServicePage } from '../content'
 import styles from './ServiceHero.module.css'
 
 export default function ServiceHero({
@@ -13,6 +14,8 @@ export default function ServiceHero({
   service: ServicePage
   headingId: string
 }) {
+  const { blog, servicesPage } = getV2Content()
+
   return (
     <section className={styles.hero} aria-labelledby={headingId}>
       <div className={styles.inner}>

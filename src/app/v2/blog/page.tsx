@@ -7,16 +7,19 @@ import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import { getAllPosts } from '@/lib/blog-server'
 import { formatPostDate, readingMinutes } from '../blogCategory'
-import { blog } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 
-export const metadata: Metadata = {
-  title: 'בלוג',
-  description: blog.lede,
+export function generateMetadata(): Metadata {
+  const { blog } = getV2Content()
+  return {
+    title: blog.title,
+    description: blog.lede,
+  }
 }
 
 export const revalidate = 300
 
-function loadCards(): BlogCard[] {
+function loadCards(defaultAuthor: string): BlogCard[] {
   return getAllPosts()
     .sort((a, b) => (b.datePublished || '').localeCompare(a.datePublished || ''))
     .map((post) => ({
@@ -24,7 +27,7 @@ function loadCards(): BlogCard[] {
       title: post.title,
       excerpt: post.excerpt,
       date: formatPostDate(post.datePublished),
-      author: post.author || blog.defaultAuthor,
+      author: post.author || defaultAuthor,
       authorImage: post.authorImage || '',
       image: post.images?.[0] || '',
       tags: post.tags,
@@ -33,7 +36,8 @@ function loadCards(): BlogCard[] {
 }
 
 export default function V2BlogPage() {
-  const posts = loadCards()
+  const { blog } = getV2Content()
+  const posts = loadCards(blog.defaultAuthor)
 
   return (
     <>

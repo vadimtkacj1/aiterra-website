@@ -4,12 +4,15 @@ import { useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import Rail from './Rail'
 import Marquee, { type MarqueeHandle } from './Marquee'
-import { heroProjects, heroRails } from '../content'
+import { heroProjects as heroProjectsDefaults, heroRails as heroRailsDefaults } from '../content'
+import { useV2 } from '../V2ContentProvider'
 import styles from './ProjectsRail.module.css'
 
 const CARD_STRIDE = 128
 
 export default function ProjectsRail() {
+  const heroProjects = useV2('heroProjects', heroProjectsDefaults)
+  const heroRails = useV2('heroRails', heroRailsDefaults)
   const router = useRouter()
   const marqueeRef = useRef<MarqueeHandle>(null)
 

@@ -9,25 +9,27 @@ import {
 } from '@/lib/contact'
 import { FacebookIcon, InstagramIcon } from './icons'
 import FooterSection from './FooterSection'
-import { footer } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 import styles from './Footer.module.css'
 
-const socialLinks = [
-  {
-    id: 'instagram',
-    label: footer.socialLabels.instagram,
-    href: SOCIAL_PROFILES.instagram || 'https://www.instagram.com/',
-    Icon: InstagramIcon,
-  },
-  {
-    id: 'facebook',
-    label: footer.socialLabels.facebook,
-    href: SOCIAL_PROFILES.facebook || 'https://www.facebook.com/',
-    Icon: FacebookIcon,
-  },
-]
-
 export default function Footer({ children }: { children?: ReactNode }) {
+  const { footer } = getV2Content()
+
+  const socialLinks = [
+    {
+      id: 'instagram',
+      label: footer.socialLabels.instagram,
+      href: SOCIAL_PROFILES.instagram || 'https://www.instagram.com/',
+      Icon: InstagramIcon,
+    },
+    {
+      id: 'facebook',
+      label: footer.socialLabels.facebook,
+      href: SOCIAL_PROFILES.facebook || 'https://www.facebook.com/',
+      Icon: FacebookIcon,
+    },
+  ]
+
   return (
     <footer className={styles.footer}>
       <div className={styles.media}>

@@ -12,7 +12,7 @@ import Faq from './components/Faq'
 import ContactForm from './components/ContactForm'
 import Reviews from './components/Reviews'
 import Footer from './components/Footer'
-import { clientStories, clientStoryItems } from './content'
+import { getV2Content } from '@/lib/v2-content-server'
 
 export const metadata: Metadata = {
   title: { absolute: 'AITERRA — סוכנות פיתוח ושיווק דיגיטלי' },
@@ -22,6 +22,8 @@ export const metadata: Metadata = {
 }
 
 export default function V2Page() {
+  const { clientStories, clientStoryItems } = getV2Content()
+
   return (
     <>
       <Header />

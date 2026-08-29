@@ -1,14 +1,17 @@
-import { blog } from './content'
-
 type Tagged = { title: string; tags: string[] }
 
-export const matchesKeywords = (post: Tagged, keywords: string[]) => {
+type BlogFilters = {
+  filters: readonly { tag: string; match: readonly string[] }[]
+  defaultTag: string
+}
+
+export const matchesKeywords = (post: Tagged, keywords: readonly string[]) => {
   if (keywords.length === 0) return true
   const haystack = [post.title, ...post.tags].join(' ').toLowerCase()
   return keywords.some((keyword) => haystack.includes(keyword.toLowerCase()))
 }
 
-export const categoryTag = (post: Tagged) => {
+export const categoryTag = (post: Tagged, blog: BlogFilters) => {
   const filter = blog.filters.find((entry) => entry.match.length > 0 && matchesKeywords(post, entry.match))
   return filter?.tag ?? blog.defaultTag
 }

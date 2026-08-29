@@ -8,12 +8,12 @@ import {
   OFFICE_ADDRESS_HE,
   WAZE_OPEN_URL,
 } from '@/lib/contact'
-import { contactPage } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 import styles from './ContactDetails.module.css'
 
-const { details } = contactPage
-
 export default function ContactDetails() {
+  const { details } = getV2Content().contactPage
+
   return (
     <section className={styles.card} aria-labelledby="v2-contact-details-heading">
       <div className={styles.body}>

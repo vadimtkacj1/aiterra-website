@@ -4,7 +4,8 @@ import { useEffect, useRef, type CSSProperties } from 'react'
 import SectionHeading from './SectionHeading'
 import Eyebrow from './Eyebrow'
 import GridRule from './GridRule'
-import { allIn, allInNodes } from '../content'
+import { allIn as allInDefaults, allInNodes as allInNodesDefaults } from '../content'
+import { useV2 } from '../V2ContentProvider'
 import styles from './AllIn.module.css'
 
 const RINGS = ['ringOuter', 'ringMid', 'ringInner'] as const
@@ -20,6 +21,8 @@ type NodeVars = CSSProperties & {
 }
 
 export default function AllIn() {
+  const allIn = useV2('allIn', allInDefaults)
+  const allInNodes = useV2('allInNodes', allInNodesDefaults)
   const cardRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {

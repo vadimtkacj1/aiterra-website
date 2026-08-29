@@ -4,8 +4,9 @@ import { useId, useState } from 'react'
 import SectionHeading from './SectionHeading'
 import GridRule from './GridRule'
 import FaqItem from './FaqItem'
-import { faq, faqEntries } from '../content'
+import { faq as faqDefaults, faqEntries as faqEntriesDefaults } from '../content'
 import type { FaqEntry } from '../content'
+import { useV2 } from '../V2ContentProvider'
 import styles from './Faq.module.css'
 
 type FaqProps = {
@@ -14,11 +15,10 @@ type FaqProps = {
   initialOpenId?: string | null
 }
 
-export default function Faq({
-  heading = faq.heading,
-  entries = faqEntries,
-  initialOpenId = null,
-}: FaqProps) {
+export default function Faq(props: FaqProps) {
+  const faq = useV2('faq', faqDefaults)
+  const faqEntries = useV2('faqEntries', faqEntriesDefaults)
+  const { heading = faq.heading, entries = faqEntries, initialOpenId = null } = props
   const headingId = useId()
   const [openId, setOpenId] = useState<string | null>(initialOpenId)
 

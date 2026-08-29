@@ -3,7 +3,7 @@ import ActionButton from './ActionButton'
 import SectionHeading from './SectionHeading'
 import Eyebrow from './Eyebrow'
 import GridRule from './GridRule'
-import { about, aboutRoles } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 import type { AboutRole } from '../content'
 import styles from './About.module.css'
 
@@ -17,15 +17,18 @@ type AboutProps = {
   headingId?: string
 }
 
-export default function About({
-  eyebrow = about.eyebrow,
-  heading = about.heading,
-  lede = about.lede,
-  roles = aboutRoles,
-  outro = about.outro,
-  action = about.action,
-  headingId = 'v2-about-heading',
-}: AboutProps) {
+export default function About(props: AboutProps) {
+  const { about, aboutRoles } = getV2Content()
+  const {
+    eyebrow = about.eyebrow,
+    heading = about.heading,
+    lede = about.lede,
+    roles = aboutRoles,
+    outro = about.outro,
+    action = about.action,
+    headingId = 'v2-about-heading',
+  } = props
+
   return (
     <section className={styles.about} aria-labelledby={headingId}>
       <div className={styles.inner}>

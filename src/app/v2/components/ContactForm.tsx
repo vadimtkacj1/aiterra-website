@@ -5,17 +5,16 @@ import type { FormEvent, ReactNode } from 'react'
 import Link from 'next/link'
 import SectionHeading from './SectionHeading'
 import { ChevronDownIcon, ChevronPrevIcon } from './icons'
-import { contact, serviceTabs } from '../content'
+import { contact as contactDefaults, serviceTabs as serviceTabsDefaults } from '../content'
+import { useV2 } from '../V2ContentProvider'
 import { SITE_LEADS_TOKEN } from '@/lib/contact'
 import styles from './ContactForm.module.css'
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'
 
-const serviceOptions = [...serviceTabs.map((tab) => tab.label), contact.serviceOther]
-
-function buildMessage(service: string, message: string) {
+function buildMessage(serviceLabel: string, service: string, message: string) {
   const lines = []
-  if (service) lines.push(`${contact.fields.service}: ${service}`)
+  if (service) lines.push(`${serviceLabel}: ${service}`)
   if (message.trim()) lines.push(message.trim())
   return lines.join('\n\n')
 }
@@ -27,6 +26,9 @@ type ContactFormProps = {
 }
 
 export default function ContactForm({ children, source = 'v2-home', variant = 'page' }: ContactFormProps) {
+  const contact = useV2('contact', contactDefaults)
+  const serviceTabs = useV2('serviceTabs', serviceTabsDefaults)
+  const serviceOptions = [...serviceTabs.map((tab) => tab.label), contact.serviceOther]
   const headingId = useId()
   const fieldId = useId()
   const [status, setStatus] = useState<Status>('idle')
@@ -48,7 +50,7 @@ export default function ContactForm({ children, source = 'v2-home', variant = 'p
           name: read('name'),
           phone: read('phone'),
           email: read('email'),
-          message: buildMessage(read('service'), read('message')),
+          message: buildMessage(contact.fields.service, read('service'), read('message')),
           source,
         }),
       })

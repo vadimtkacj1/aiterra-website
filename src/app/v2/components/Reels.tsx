@@ -6,7 +6,8 @@ import Eyebrow from './Eyebrow'
 import CircleButton from './CircleButton'
 import GridRule from './GridRule'
 import { CrossMark, PlayIcon } from './icons'
-import { reelItems, reels } from '../content'
+import { reelItems as reelItemsDefaults, reels as reelsDefaults } from '../content'
+import { useV2 } from '../V2ContentProvider'
 import type { ReelItem } from '../content'
 import styles from './Reels.module.css'
 
@@ -42,15 +43,18 @@ const glideProgress = (elapsed: number) => {
   return axis(Math.min(Math.max(u, 0), 1), y1, y2)
 }
 
-export default function Reels({
-  eyebrow = reels.eyebrow,
-  heading = reels.heading,
-  lede = reels.lede,
-  items = reelItems,
-  prevLabel = reels.prev,
-  nextLabel = reels.next,
-  connected = false,
-}: ReelsProps) {
+export default function Reels(props: ReelsProps) {
+  const reels = useV2('reels', reelsDefaults)
+  const reelItems = useV2('reelItems', reelItemsDefaults)
+  const {
+    eyebrow = reels.eyebrow,
+    heading = reels.heading,
+    lede = reels.lede,
+    items = reelItems,
+    prevLabel = reels.prev,
+    nextLabel = reels.next,
+    connected = false,
+  } = props
   const headingId = useId()
   const trackRef = useRef<HTMLDivElement>(null)
   const glideRef = useRef(0)

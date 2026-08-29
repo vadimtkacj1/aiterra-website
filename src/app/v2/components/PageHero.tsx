@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ChevronPrevIcon } from './icons'
 import ActionButton from './ActionButton'
 import SectionHeading from './SectionHeading'
-import { blog } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 import styles from './PageHero.module.css'
 
 type PageHeroProps = {
@@ -14,6 +14,7 @@ type PageHeroProps = {
 }
 
 export default function PageHero({ title, lede, headingId, crumb, action }: PageHeroProps) {
+  const { blog } = getV2Content()
   const lines = Array.isArray(title) ? title : [title]
   return (
     <section className={styles.hero} aria-labelledby={headingId}>
