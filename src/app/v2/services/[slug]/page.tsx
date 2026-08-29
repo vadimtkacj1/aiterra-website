@@ -5,6 +5,7 @@ import ServiceHero from '../../components/ServiceHero'
 import About from '../../components/About'
 import ManagementSystem from '../../components/ManagementSystem'
 import HowItWorks from '../../components/HowItWorks'
+import Pricing from '../../components/Pricing'
 import BannerCta from '../../components/BannerCta'
 import Faq from '../../components/Faq'
 import ContactForm from '../../components/ContactForm'
@@ -36,12 +37,11 @@ export default async function V2ServiceDetailPage({ params }: Params) {
   const service = servicePages[slug]
   if (!service) notFound()
 
-  const faq = getFaqData('/services')
-  const entries = faq.items.map((item, index) => ({
-    id: `${slug}-faq-${index + 1}`,
-    question: item.q,
-    answer: item.a,
-  }))
+  const shared = getFaqData('/services')
+  const entries = (
+    service.faqEntries ??
+    shared.items.map((item) => ({ question: item.q, answer: item.a }))
+  ).map((entry, index) => ({ id: `${slug}-faq-${index + 1}`, ...entry }))
 
   return (
     <>
@@ -70,6 +70,10 @@ export default async function V2ServiceDetailPage({ params }: Params) {
         {service.banner ? (
           <BannerCta banner={service.banner} headingId={`v2-service-${slug}-banner`} />
         ) : null}
+        {service.pricing ? (
+          <Pricing pricing={service.pricing} headingId={`v2-service-${slug}-pricing`} />
+        ) : null}
+
         <Faq heading={service.faqHeading} entries={entries} />
       </main>
       <Footer>

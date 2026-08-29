@@ -7,7 +7,7 @@ type ActionButtonProps = {
   href: string
   label: string
   variant?: 'primary' | 'outline' | 'paper'
-  glyph?: 'plus' | 'prev'
+  glyph?: 'plus' | 'prev' | 'swap'
   className?: string
   labelClassName?: string
 }
@@ -28,12 +28,21 @@ export default function ActionButton({
     <>
       <span className={labelClassName}>{label}</span>
       <span className={styles.icon}>
-        {glyph === 'prev' ? (
-          <ChevronPrevIcon className={styles.iconGlyph} />
-        ) : (
+        {glyph === 'prev' || glyph === 'swap' ? (
+          <ChevronPrevIcon
+            className={[styles.iconGlyph, glyph === 'swap' ? styles.glyphWide : ''].filter(Boolean).join(' ')}
+          />
+        ) : null}
+        {glyph === 'plus' || glyph === 'swap' ? (
           /* eslint-disable-next-line @next/next/no-img-element */
-          <img src="/images/plus.svg" alt="" width={14} height={14} className={styles.iconGlyph} />
-        )}
+          <img
+            src="/images/plus.svg"
+            alt=""
+            width={14}
+            height={14}
+            className={[styles.iconGlyph, glyph === 'swap' ? styles.glyphNarrow : ''].filter(Boolean).join(' ')}
+          />
+        ) : null}
       </span>
     </>
   )

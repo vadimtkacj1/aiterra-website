@@ -271,3 +271,184 @@ export function AnalyticsIcon({ className }: IconProps) {
     </svg>
   )
 }
+
+export function StorefrontIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path d="M4.2 3.2h11.6l1.4 4.4H2.8l1.4-4.4Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+      <path d="M3.8 7.6v8.2c0 .6.5 1 1 1h10.4c.6 0 1-.4 1-1V7.6" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+      <path d="M8.2 16.8v-4.4h3.6v4.4" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+export function ProductsIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path
+        d="M5.4 6.6h9.2l.8 9.2c.06.7-.5 1.3-1.2 1.3H5.8c-.7 0-1.26-.6-1.2-1.3l.8-9.2Z"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinejoin="round"
+      />
+      <path d="M7.6 8.4V5.8a2.4 2.4 0 0 1 4.8 0v2.6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function InventoryIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path d="M10 2.8 16.8 6v8L10 17.2 3.2 14V6L10 2.8Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+      <path d="m3.2 6 6.8 3.2L16.8 6M10 9.2v8" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+export function AutomationIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <circle cx="5.2" cy="5" r="2.2" stroke="currentColor" strokeWidth="1.3" />
+      <circle cx="14.8" cy="5" r="2.2" stroke="currentColor" strokeWidth="1.3" />
+      <circle cx="10" cy="15" r="2.2" stroke="currentColor" strokeWidth="1.3" />
+      <path
+        d="M7.4 5h5.2M5.2 7.2v3.2c0 1.3 1 2.4 2.4 2.4h.6M14.8 7.2v3.2c0 1.3-1 2.4-2.4 2.4h-.6"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
+export function ReportIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path d="M5 2.8h6.4L15.6 7v10.2H5V2.8Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+      <path d="M11.2 2.8V7h4.4" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+      <path d="M7.8 14.4v-2.6M10.4 14.4v-4.2M13 14.4v-1.6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function ShippingIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path
+        d="M2.6 3.4h1.9l1.7 8.4c.12.6.64 1 1.25 1h6.8c.6 0 1.13-.4 1.24-1l.91-4.9H5.3"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="8.4" cy="16" r="1.3" stroke="currentColor" strokeWidth="1.3" />
+      <circle cx="13.8" cy="16" r="1.3" stroke="currentColor" strokeWidth="1.3" />
+    </svg>
+  )
+}
+
+export function AlertsIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path
+        d="M10 3a4.6 4.6 0 0 1 4.6 4.6v3.1l1.3 2.5H4.1l1.3-2.5V7.6A4.6 4.6 0 0 1 10 3Z"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinejoin="round"
+      />
+      <path d="M8.3 15.4a1.8 1.8 0 0 0 3.4 0" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function SupportIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path d="M4.2 11.4V9.8a5.8 5.8 0 0 1 11.6 0v1.6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+      <rect x="2.6" y="10.4" width="3.2" height="4.6" rx="1.4" stroke="currentColor" strokeWidth="1.3" />
+      <rect x="14.2" y="10.4" width="3.2" height="4.6" rx="1.4" stroke="currentColor" strokeWidth="1.3" />
+      <path d="M15.6 15v.6a2 2 0 0 1-2 2h-2.2" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function StoresIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <rect x="2.6" y="3.4" width="9.4" height="7.2" rx="1.4" stroke="currentColor" strokeWidth="1.3" />
+      <path d="M8 13.4h9.4v3.2H8z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+      <path d="M14.4 10.6V6.4c0-.6-.4-1-1-1h-1.4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function TailorIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path
+        d="M3.2 5.4h2.4M9.8 5.4h7M3.2 10h5.6M13 10h3.8M3.2 14.6h1.6M9 14.6h7.8"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <circle cx="7.7" cy="5.4" r="1.9" stroke="currentColor" strokeWidth="1.3" />
+      <circle cx="10.9" cy="10" r="1.9" stroke="currentColor" strokeWidth="1.3" />
+      <circle cx="6.9" cy="14.6" r="1.9" stroke="currentColor" strokeWidth="1.3" />
+    </svg>
+  )
+}
+
+export function ApiIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path
+        d="M7.6 3.6c-1.7 0-2.5.8-2.5 2.3v2c0 1.1-.6 1.7-1.7 1.7v.8c1.1 0 1.7.6 1.7 1.7v2c0 1.5.8 2.3 2.5 2.3"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12.4 3.6c1.7 0 2.5.8 2.5 2.3v2c0 1.1.6 1.7 1.7 1.7v.8c-1.1 0-1.7.6-1.7 1.7v2c0 1.5-.8 2.3-2.5 2.3"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+export function ManagerIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <circle cx="7.8" cy="7" r="2.8" stroke="currentColor" strokeWidth="1.3" />
+      <path d="M2.8 16.4c0-2.6 2.2-4.4 5-4.4s5 1.8 5 4.4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+      <path
+        d="M13.6 4.6a2.7 2.7 0 0 1 0 5.2M14.6 12.4c1.7.5 2.6 1.9 2.6 4"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
+export function TrainingIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path
+        d="M3.4 4h4c1.4 0 2.6 1 2.6 2.3v9.4c0-.9-1-1.5-2.2-1.5H3.4V4Z"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M16.6 4h-4C11.2 4 10 5 10 6.3v9.4c0-.9 1-1.5 2.2-1.5h4.4V4Z"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}

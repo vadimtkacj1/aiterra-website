@@ -40,8 +40,6 @@
   grid-column: 2;
 }
 
-.head::before,
-.head::after,
 .list::before,
 .list::after {
   content: '';
@@ -53,12 +51,10 @@
   pointer-events: none;
 }
 
-.head::before,
 .list::before {
   inset-inline-start: 0;
 }
 
-.head::after,
 .list::after {
   inset-inline-end: -1px;
 }

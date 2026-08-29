@@ -826,6 +826,36 @@ export type ServiceStep = {
   art: string
 }
 
+export type ServicePlanIcon =
+  | 'storefront'
+  | 'products'
+  | 'inventory'
+  | 'dashboard'
+  | 'automation'
+  | 'report'
+  | 'shipping'
+  | 'alerts'
+  | 'support'
+  | 'stores'
+  | 'tailor'
+  | 'api'
+  | 'manager'
+  | 'training'
+
+export type ServicePlan = {
+  id: string
+  name: string
+  audience: string
+  price: string
+  priceNote?: string
+  term: string
+  action: { label: string; href: string }
+  badge?: string
+  featured?: boolean
+  featuresTitle: string
+  features: { icon: ServicePlanIcon; label: string }[]
+}
+
 export type ServicePage = {
   id: string
   crumb: string
@@ -856,12 +886,20 @@ export type ServicePage = {
     lede: string
     steps: ServiceStep[]
   }
+  pricing?: {
+    eyebrow: string
+    heading: string[]
+    lede: string
+    plans: ServicePlan[]
+    footnote: { text: string; link: { label: string; href: string } }
+  }
   banner?: {
     heading: string
     art: string
     action: { label: string; href: string }
   }
   faqHeading: string[]
+  faqEntries?: { question: string; answer: string }[]
 }
 
 export const servicePages: Record<string, ServicePage> = {
@@ -971,12 +1009,111 @@ export const servicePages: Record<string, ServicePage> = {
         },
       ] satisfies ServiceStep[],
     },
+    pricing: {
+      eyebrow: 'PRICING',
+      heading: ['חבילות ומסלולים'],
+      lede: 'בחרו את המסלול המתאים ביותר עבור החנות שלכם',
+      plans: [
+        {
+          id: 'basic',
+          name: 'Basic',
+          audience: 'לבעלי עסקים קטנים',
+          price: '500',
+          priceNote: '₪ לחודש',
+          term: 'בהתחייבות ל-12 חודשים',
+          action: { label: 'הקימו את החנות שלכם', href: '/v2/contact' },
+          featuresTitle: 'מה תקבלו?',
+          features: [
+            { icon: 'storefront', label: 'חיבור לחנות דיגיטלית אחת' },
+            { icon: 'products', label: 'ניהול מוצרים, הזמנות ולקוחות' },
+            { icon: 'inventory', label: 'ניהול מלאי ועדכון כמויות' },
+            { icon: 'dashboard', label: 'דשבורד עם נתוני החנות בזמן אמת' },
+          ],
+        },
+        {
+          id: 'pro',
+          name: 'Pro',
+          audience: 'לבעלי חנויות גדולות',
+          price: '800',
+          priceNote: '₪ לחודש',
+          term: 'בהתחייבות ל-12 חודשים',
+          action: { label: 'הקימו את החנות שלכם', href: '/v2/contact' },
+          badge: 'הכי משתלם',
+          featured: true,
+          featuresTitle: 'כל מה שקיים ב-Basic וגם:',
+          features: [
+            { icon: 'automation', label: 'אוטומציות לתהליכי עבודה' },
+            { icon: 'report', label: 'דוחות מתקדמים ותובנות עסקיות' },
+            { icon: 'shipping', label: 'חיבור למערכות משלוחים ותשלומים' },
+            { icon: 'alerts', label: 'התראות חכמות ועדכונים בזמן אמת' },
+            { icon: 'support', label: 'תמיכה בעדיפות גבוהה' },
+          ],
+        },
+        {
+          id: 'enterprise',
+          name: 'Enterprise',
+          audience: 'לארגונים ועסקים שצריכים פתרון מותאם',
+          price: 'בהתאמה אישית',
+          term: 'בהתחייבות ל-12 חודשים',
+          action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
+          featuresTitle: 'כל מה שקיים ב-Pro וגם:',
+          features: [
+            { icon: 'stores', label: 'ניהול מספר חנויות ממערכת אחת' },
+            { icon: 'tailor', label: 'התאמת המערכת לתהליכי העסק' },
+            { icon: 'api', label: 'חיבור באמצעות API' },
+            { icon: 'manager', label: 'מנהל לקוח וליווי מקצועי צמוד' },
+            { icon: 'training', label: 'הטמעה, הדרכה ותמיכה מורחבת' },
+          ],
+        },
+      ] satisfies ServicePlan[],
+      footnote: {
+        text: 'יש לכם שאלות?',
+        link: { label: 'פנו אלינו ונדבר', href: '/v2/contact' },
+      },
+    },
     banner: {
       heading: 'רוצים לראות איך החנות שלכם תיראה?',
       art: '/images/hero.jpg',
       action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
     },
-    faqHeading: ['שאלות נפוצות', 'על אתרי מסחר'],
+    faqHeading: ['לפני שמתחילים', 'כמה דברים שכדאי לדעת.'],
+    faqEntries: [
+      {
+        question: 'מהי מערכת Aiterra?',
+        answer:
+          'Aiterra היא מערכת לניהול חנות דיגיטלית, שמרכזת את הפעילות העסקית במקום אחד. באמצעות המערכת אפשר לנהל מוצרים, הזמנות, מלאי ולקוחות, לעקוב אחרי הנתונים בזמן אמת ולצמצם עבודה ידנית ומעבר בין מערכות שונות.',
+      },
+      {
+        question: 'למי המערכת מתאימה?',
+        answer:
+          'לעסקים שמוכרים אונליין ורוצים שליטה מלאה בחנות – מעסקים קטנים שמקימים חנות ראשונה, דרך חנויות גדולות עם קטלוג רחב, ועד ארגונים שמנהלים כמה חנויות ותהליכי עבודה מורכבים.',
+      },
+      {
+        question: 'אילו תהליכים אפשר לנהל באמצעות המערכת?',
+        answer:
+          'ניהול קטלוג ומלאי, הזמנות, משלוחים ותשלומים, מועדון לקוחות וצבירת נקודות, קופונים ומבצעים, שחזור עגלות נטושות ודיוור אוטומטי – ולצידם דוחות ודשבורד עם נתוני החנות בזמן אמת. היקף היכולות משתנה בין המסלולים, ובטבלת החבילות מפורט מה כלול בכל אחד.',
+      },
+      {
+        question: 'האם Aiterra מחליפה את החנות הקיימת שלי?',
+        answer:
+          'ברוב המקרים אנחנו בונים את החנות מחדש בקוד מלא על גבי המערכת, כך שהעיצוב, הקטלוג והתוכן עוברים אליה. אם כבר יש לכם חנות פעילה, נבחן יחד באפיון מה נכון להעביר ומה לבנות מחדש, ונתכנן מעבר מסודר בלי להשבית את הפעילות.',
+      },
+      {
+        question: 'איך מתחילים לעבוד עם Aiterra?',
+        answer:
+          'מתחילים בשיחת אפיון שבה מבינים את המוצרים, קהל היעד ותהליכי העבודה. אחר כך בונים את החנות, מטמיעים את המערכת, מגדירים את סביבת העבודה ומלווים אתכם עד שהכול עובד בצורה שוטפת.',
+      },
+      {
+        question: 'האם אפשר להתאים את המערכת לצרכים של העסק שלי?',
+        answer:
+          'כן. הפיתוח נעשה בקוד ייעודי ולא בתבנית, כך שאפשר להתאים את החנות לאופן שבו העסק שלכם עובד – ולהוסיף יכולות בהמשך, ככל שהחנות גדלה. התאמה מלאה של המערכת לתהליכי העסק היא חלק ממסלול Enterprise.',
+      },
+      {
+        question: 'האם ניתן לחבר את Aiterra למערכות חיצוניות?',
+        answer:
+          'כן. חיבור למערכות משלוחים ותשלומים ודיוור אוטומטי נכללים ממסלול Pro ומעלה, וחיבור למערכות פנימיות דרך API נכלל במסלול Enterprise – כך שהנתונים זורמים בין המערכות בלי הזנה כפולה.',
+      },
+    ],
   },
 }
 
