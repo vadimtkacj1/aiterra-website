@@ -812,6 +812,20 @@ export const servicesStack = {
   ] satisfies ServiceStackItem[],
 }
 
+export type ServiceSystemFeature = {
+  id: string
+  icon: 'orders' | 'club' | 'sales' | 'catalog' | 'analytics'
+  title: string
+  text: string
+}
+
+export type ServiceStep = {
+  id: string
+  title: string
+  text: string
+  art: string
+}
+
 export type ServicePage = {
   id: string
   crumb: string
@@ -828,6 +842,24 @@ export type ServicePage = {
     heading: string[]
     lede: string
     roles: AboutRole[]
+  }
+  system?: {
+    eyebrow: string
+    heading: string[]
+    art: string
+    features: ServiceSystemFeature[]
+    action: { label: string; href: string }
+  }
+  howItWorks?: {
+    eyebrow: string
+    heading: string[]
+    lede: string
+    steps: ServiceStep[]
+  }
+  banner?: {
+    heading: string
+    art: string
+    action: { label: string; href: string }
   }
   faqHeading: string[]
 }
@@ -875,6 +907,74 @@ export const servicePages: Record<string, ServicePage> = {
           text: 'ליווי שוטף גם אחרי ההשקה: עדכונים, מעקב אחרי ביצועים ומענה מהיר כשצריך לשנות משהו בחנות.',
         },
       ] satisfies AboutRole[],
+    },
+    system: {
+      eyebrow: 'MANAGEMENT SYSTEM',
+      heading: ['מערכת הניהול של Aiterra'],
+      art: '/images/about-page1.webp',
+      features: [
+        {
+          id: 'orders',
+          icon: 'orders',
+          title: 'ניהול הזמנות חכם',
+          text: 'שינוי סטטוסים, חלוקה לקבוצות, ניהול אזורי ועלויות משלוח, התראות מיידיות ב-SMS / Whatsapp על הזמנה חדשה ויצירת הזמנות ידניות.',
+        },
+        {
+          id: 'club',
+          icon: 'club',
+          title: 'מועדון לקוחות וצבירת נקודות',
+          text: 'ניהול חברי מועדון, צבירת נקודות ומימושן בקופה, הטבות ייעודיות לקהלים שונים ומעקב אחרי הרכישות החוזרות של כל לקוח.',
+        },
+        {
+          id: 'sales',
+          icon: 'sales',
+          title: 'אופטימיזציות מכירות ודיוור מובנה',
+          text: 'קופונים ומבצעים, הצעות משלימות בעגלה, שחזור עגלות נטושות ודיוור אוטומטי ללקוחות – הכל מתוך המערכת ובלי כלים חיצוניים.',
+        },
+        {
+          id: 'catalog',
+          icon: 'catalog',
+          title: 'קטלוג ותוכן בשליטה מלאה',
+          text: 'הוספת מוצרים, קטגוריות, מלאי ותוכן שיווקי בממשק אחד, כולל עדכון מחירים והעלאת תמונות בלי להיעזר במפתח.',
+        },
+        {
+          id: 'analytics',
+          icon: 'analytics',
+          title: 'אנליטיקה ו-SEO מתקדם',
+          text: 'דוחות מכירות והתנהגות גולשים, חיבור ל-Google Analytics ולפיקסלים, ניהול מטא-דאטה, כתובות ידידותיות ומהירות טעינה גבוהה.',
+        },
+      ] satisfies ServiceSystemFeature[],
+      action: { label: 'בואו נתאים את החנות שלכם', href: '/v2/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'HOW IT WORKS',
+      heading: ['איך זה עובד? פשוט מאוד.'],
+      lede: 'Aiterra מרכזת את כל הפעילות של החנות הדיגיטלית במקום אחד, כדי שתוכלו לנהל בקלות, לקבל תמונת מצב ברורה ולצמוח בלי לעבור בין אינספור מערכות.',
+      steps: [
+        {
+          id: 'discovery',
+          title: 'נבין את הצרכים שלך בשיחת איפיון',
+          text: 'נכיר את העסק, תהליכי העבודה, האתגרים והמטרות שלך. יחד נמפה את הצרכים ונגדיר כיצד המערכת יכולה לייעל את הניהול ולתמוך בצמיחה של החנות.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'fit',
+          title: 'נתאים את המערכת לצורך העסקי',
+          text: 'נגדיר את הכלים, ההרשאות, האוטומציות והחיבורים הרלוונטיים לעסק שלך. כך תקבל מערכת שמתאימה לתהליכי העבודה הקיימים ולא מערכת שצריך להתאים את העסק אליה.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'launch',
+          title: 'נטמיע את המערכת בחנות שלך',
+          text: 'נחבר את המערכת לחנות, נגדיר את סביבת העבודה ונבדוק שכל התהליכים פועלים בצורה תקינה. נלווה אותך עד שהמערכת תהיה מוכנה לעבודה שוטפת, חלקה ויעילה.',
+          art: '/images/howitwork3.webp',
+        },
+      ] satisfies ServiceStep[],
+    },
+    banner: {
+      heading: 'רוצים לראות איך החנות שלכם תיראה?',
+      art: '/images/hero.jpg',
+      action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
     },
     faqHeading: ['שאלות נפוצות', 'על אתרי מסחר'],
   },

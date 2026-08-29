@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
+import { ChevronPrevIcon } from './icons'
 import styles from './ActionButton.module.css'
 
 type ActionButtonProps = {
   href: string
   label: string
-  variant?: 'primary' | 'outline'
+  variant?: 'primary' | 'outline' | 'paper'
+  glyph?: 'plus' | 'prev'
   className?: string
   labelClassName?: string
 }
@@ -14,10 +16,11 @@ export default function ActionButton({
   href,
   label,
   variant = 'primary',
+  glyph = 'plus',
   className,
   labelClassName,
 }: ActionButtonProps) {
-  const classNames = [styles.action, variant === 'outline' ? styles.outline : '', className]
+  const classNames = [styles.action, variant === 'primary' ? '' : styles[variant], className]
     .filter(Boolean)
     .join(' ')
 
@@ -25,8 +28,12 @@ export default function ActionButton({
     <>
       <span className={labelClassName}>{label}</span>
       <span className={styles.icon}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/plus.svg" alt="" width={14} height={14} className={styles.iconGlyph} />
+        {glyph === 'prev' ? (
+          <ChevronPrevIcon className={styles.iconGlyph} />
+        ) : (
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img src="/images/plus.svg" alt="" width={14} height={14} className={styles.iconGlyph} />
+        )}
       </span>
     </>
   )

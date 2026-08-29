@@ -3,6 +3,9 @@ import { notFound } from 'next/navigation'
 import Header from '../../components/Header'
 import ServiceHero from '../../components/ServiceHero'
 import About from '../../components/About'
+import ManagementSystem from '../../components/ManagementSystem'
+import HowItWorks from '../../components/HowItWorks'
+import BannerCta from '../../components/BannerCta'
 import Faq from '../../components/Faq'
 import ContactForm from '../../components/ContactForm'
 import Footer from '../../components/Footer'
@@ -52,6 +55,21 @@ export default async function V2ServiceDetailPage({ params }: Params) {
           roles={service.advantages.roles}
           headingId={`v2-service-${slug}-advantages`}
         />
+        {service.system ? (
+          <ManagementSystem
+            system={service.system}
+            headingId={`v2-service-${slug}-system`}
+          />
+        ) : null}
+        {service.howItWorks ? (
+          <HowItWorks
+            howItWorks={service.howItWorks}
+            headingId={`v2-service-${slug}-how`}
+          />
+        ) : null}
+        {service.banner ? (
+          <BannerCta banner={service.banner} headingId={`v2-service-${slug}-banner`} />
+        ) : null}
         <Faq heading={service.faqHeading} entries={entries} />
       </main>
       <Footer>

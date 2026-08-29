@@ -41,6 +41,17 @@
   background: rgba(255, 255, 255, 0.16);
 }
 
+.paper {
+  background: #ffffff;
+  color: var(--v2-paper-ink);
+  box-shadow: 0 8px 30px 0 rgba(6, 11, 34, 0.22);
+}
+
+.paper:hover {
+  background: #f4efe9;
+  box-shadow: 0 10px 34px 0 rgba(6, 11, 34, 0.28);
+}
+
 .icon {
   display: flex;
   align-items: center;
@@ -51,6 +62,7 @@
   height: 32px;
   border-radius: 6px;
   background: #000000;
+  color: #ffffff;
 }
 
 .iconGlyph {

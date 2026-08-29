@@ -212,3 +212,62 @@ export function WazeMark({ className }: IconProps) {
     </svg>
   )
 }
+
+export function OrdersIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path
+        d="M6.4 3.6h7.2c.8 0 1.4.6 1.4 1.4v10.4c0 .8-.6 1.4-1.4 1.4H6.4c-.8 0-1.4-.6-1.4-1.4V5c0-.8.6-1.4 1.4-1.4Z"
+        stroke="currentColor"
+        strokeWidth="1.3"
+      />
+      <path d="M8 2.6h4v2.2H8z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+      <path d="m7.8 11 1.4 1.4 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+export function ClubIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <circle cx="10" cy="8" r="6.2" stroke="currentColor" strokeWidth="1.3" />
+      <path
+        d="M10 5.2l1 2.1 2.3.3-1.7 1.6.4 2.3-2-1.1-2 1.1.4-2.3-1.7-1.6 2.3-.3 1-2.1Z"
+        stroke="currentColor"
+        strokeWidth="1.1"
+        strokeLinejoin="round"
+      />
+      <path d="M7.4 14.2 6.6 18l3.4-1.7L13.4 18l-.8-3.8" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+export function SalesIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <circle cx="10" cy="10" r="7.2" stroke="currentColor" strokeWidth="1.3" />
+      <circle cx="10" cy="10" r="3.4" stroke="currentColor" strokeWidth="1.3" />
+      <path d="M10 10 15.6 4.4M13.2 4.4h2.4v2.4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+export function CatalogIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <rect x="2.8" y="2.8" width="6" height="6" rx="1.4" stroke="currentColor" strokeWidth="1.3" />
+      <rect x="11.2" y="2.8" width="6" height="6" rx="1.4" stroke="currentColor" strokeWidth="1.3" />
+      <rect x="2.8" y="11.2" width="6" height="6" rx="1.4" stroke="currentColor" strokeWidth="1.3" />
+      <rect x="11.2" y="11.2" width="6" height="6" rx="1.4" stroke="currentColor" strokeWidth="1.3" />
+    </svg>
+  )
+}
+
+export function AnalyticsIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path d="M3 16.6h14" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+      <path d="M5.6 13.4v-3M9.4 13.4V7.6M13.2 13.4V9.8M17 13.4V4.8" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+    </svg>
+  )
+}
