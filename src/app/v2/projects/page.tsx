@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import Header from '../components/Header'
 import PageHero from '../components/PageHero'
 import PageCrumbs from '../components/PageCrumbs'
@@ -36,7 +37,9 @@ export default function V2ProjectsPage() {
           headingId="v2-projects-heading"
         />
         <PageCrumbs current={projectsPage.crumb} />
-        <ProjectsGrid />
+        <Suspense fallback={null}>
+          <ProjectsGrid />
+        </Suspense>
         <Faq heading={projectsPage.faqHeading} entries={entries} />
       </main>
       <Footer>

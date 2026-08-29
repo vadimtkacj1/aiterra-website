@@ -68,6 +68,13 @@
   display: none !important;
 }
 
+/* The Sienna launcher ships at 58px, which reads oversized next to this
+   site's own floating controls. */
+.asw-menu-btn.asw-menu-btn {
+  transform: scale(0.8);
+  transform-origin: bottom left;
+}
+
 /* While the cookie banner is up it owns the bottom strip. The Sienna launcher
    is fixed in the same corner at z-index 500000 and would punch through it, so
    drop it just below the banner's 9999 until the banner is dismissed. */

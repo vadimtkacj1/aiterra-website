@@ -50,11 +50,13 @@ export default function Header() {
   const submenus: Record<string, NavLink[]> = {
     services: servicesStack.items.map((item) => ({
       label: item.title,
-      href: `/v2/services#v2-service-${item.id}`,
+      href: item.action.href.startsWith('/v2/services/')
+        ? item.action.href
+        : `/v2/services#v2-service-${item.id}`,
     })),
     portfolio: portfolioFilters
       .filter((filter) => filter.id !== 'all')
-      .map((filter) => ({ label: filter.label, href: `/v2#v2-portfolio-${filter.id}` })),
+      .map((filter) => ({ label: filter.label, href: `/v2/projects?filter=${filter.id}` })),
   }
 
   const navItems: NavItem[] = header.nav.map((item) => ({

@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import ActionButton from './ActionButton'
 import TabList from './TabList'
 import TagList from './TagList'
@@ -8,7 +9,12 @@ import { portfolio, portfolioFilters, portfolioItems } from '../content'
 import styles from './ProjectsGrid.module.css'
 
 export default function ProjectsGrid() {
-  const [activeFilter, setActiveFilter] = useState(portfolioFilters[0].id)
+  const searchParams = useSearchParams()
+  const requested = searchParams.get('filter')
+  const initial = portfolioFilters.some((filter) => filter.id === requested)
+    ? (requested as string)
+    : portfolioFilters[0].id
+  const [activeFilter, setActiveFilter] = useState(initial)
 
   const items = useMemo(
     () =>
