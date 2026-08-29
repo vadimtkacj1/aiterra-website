@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { ChevronDown, ImageUp, Plus, RotateCcw, Trash2 } from 'lucide-react'
 import { deepEqual } from '@/app/v2/contentMerge'
 import { ADVANCED_KEYS, FIELD_LABELS, IMAGE_KEYS, LONG_TEXT_KEYS } from './sections'
@@ -32,6 +32,9 @@ const summarize = (value: Json, index: number): string => {
   }
   return `פריט ${index + 1}`
 }
+
+const onHighlightPath = (highlight: string | undefined, path: string) =>
+  highlight !== undefined && (highlight === path || highlight.startsWith(`${path}.`))
 
 const blankLike = (sample: Json): Json => {
   if (typeof sample === 'string') return ''
@@ -158,6 +161,7 @@ function ArrayEditor({
   fieldKey,
   path,
   showAdvanced,
+  highlight,
   onChange,
 }: {
   value: Json[]
@@ -165,6 +169,7 @@ function ArrayEditor({
   fieldKey: string
   path: string
   showAdvanced: boolean
+  highlight?: string
   onChange: (next: Json) => void
 }) {
   const defaults = useMemo(
@@ -173,9 +178,28 @@ function ArrayEditor({
   )
   const sample = value[0] ?? defaults[0] ?? ''
   const objectItems = isPlainObject(sample)
-  const [open, setOpen] = useState<Record<number, boolean>>(() =>
-    value.length <= 2 ? Object.fromEntries(value.map((_, i) => [i, true])) : {},
-  )
+  const [open, setOpen] = useState<Record<number, boolean>>(() => {
+    const initial: Record<number, boolean> = {}
+    value.forEach((_, i) => {
+      if (value.length <= 2 || onHighlightPath(highlight, `${path}.${i}`)) initial[i] = true
+    })
+    return initial
+  })
+
+  useEffect(() => {
+    if (!highlight) return
+    setOpen((prev) => {
+      const next = { ...prev }
+      let touched = false
+      value.forEach((_, i) => {
+        if (!next[i] && onHighlightPath(highlight, `${path}.${i}`)) {
+          next[i] = true
+          touched = true
+        }
+      })
+      return touched ? next : prev
+    })
+  }, [highlight, path, value])
 
   const unionKeys = useMemo(() => {
     if (!objectItems) return []
@@ -299,6 +323,7 @@ function ArrayEditor({
                     value={record[key] ?? blankLike(sampleFor(key))}
                     defaultValue={defaultRecord[key]}
                     showAdvanced={showAdvanced}
+                    highlight={highlight}
                     onChange={(next) => replace(index, { ...record, [key]: next })}
                   />
                 ))}
@@ -324,6 +349,7 @@ export default function Field({
   value,
   defaultValue,
   showAdvanced,
+  highlight,
   onChange,
 }: {
   fieldKey: string
@@ -331,12 +357,29 @@ export default function Field({
   value: Json
   defaultValue: Json
   showAdvanced: boolean
+  highlight?: string
   onChange: (next: Json) => void
 }) {
+  const anchorRef = useRef<HTMLDivElement>(null)
+  const isTarget = highlight === path
+
+  useEffect(() => {
+    if (!isTarget) return
+    const node = anchorRef.current
+    if (!node) return
+    const timer = setTimeout(() => {
+      node.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }, 120)
+    return () => clearTimeout(timer)
+  }, [isTarget])
+
   const advanced = ADVANCED_KEYS.has(fieldKey)
   if (advanced && !showAdvanced) return null
 
   const changed = defaultValue !== undefined && !deepEqual(value, defaultValue)
+  const targetClass = isTarget
+    ? 'rounded-lg ring-2 ring-[#2447D6] ring-offset-4 ring-offset-white'
+    : ''
 
   const head = (
     <div className="mb-1.5 flex items-center gap-2">
@@ -353,7 +396,7 @@ export default function Field({
 
   if (typeof value === 'boolean') {
     return (
-      <div>
+      <div ref={anchorRef} className={targetClass}>
         {head}
         <label className="flex items-center gap-2 text-[13px] text-[#374151]">
           <input
@@ -370,7 +413,7 @@ export default function Field({
 
   if (typeof value === 'number') {
     return (
-      <div>
+      <div ref={anchorRef} className={targetClass}>
         {head}
         <div className="flex items-center gap-2">
           <input
@@ -389,7 +432,7 @@ export default function Field({
 
   if (Array.isArray(value)) {
     return (
-      <div>
+      <div ref={anchorRef} className={targetClass}>
         {head}
         <ArrayEditor
           value={value}
@@ -397,6 +440,7 @@ export default function Field({
           fieldKey={fieldKey}
           path={path}
           showAdvanced={showAdvanced}
+          highlight={highlight}
           onChange={onChange}
         />
       </div>
@@ -406,7 +450,10 @@ export default function Field({
   if (isPlainObject(value)) {
     const defaults = isPlainObject(defaultValue) ? defaultValue : {}
     return (
-      <div className="rounded-xl border border-gray-200 bg-gray-50/50 p-3">
+      <div
+        ref={anchorRef}
+        className={`rounded-xl border border-gray-200 bg-gray-50/50 p-3 ${targetClass}`}
+      >
         {head}
         <div className="flex flex-col gap-3">
           {Object.keys(value).map((key) => (
@@ -417,6 +464,7 @@ export default function Field({
               value={value[key]}
               defaultValue={defaults[key]}
               showAdvanced={showAdvanced}
+              highlight={highlight}
               onChange={(next) => onChange({ ...value, [key]: next })}
             />
           ))}
@@ -426,7 +474,7 @@ export default function Field({
   }
 
   return (
-    <div>
+    <div ref={anchorRef} className={targetClass}>
       {head}
       <TextValue
         value={typeof value === 'string' ? value : ''}

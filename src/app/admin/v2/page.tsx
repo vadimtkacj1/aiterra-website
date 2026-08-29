@@ -1,12 +1,39 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowRight, Check, ExternalLink, RotateCcw, Save, Search } from 'lucide-react'
+import { ArrowRight, Check, CornerDownLeft, ExternalLink, RotateCcw, Save, Search } from 'lucide-react'
 import AdminHeader from '@/components/admin/AdminHeader'
 import type { V2Content, V2ContentKey } from '@/app/v2/content'
 import { deepEqual, mergeV2, type V2Overrides } from '@/app/v2/contentMerge'
 import Field from './FieldEditor'
-import { SECTION_GROUPS, SECTION_INDEX } from './sections'
+import { FIELD_LABELS, SECTION_GROUPS, SECTION_INDEX } from './sections'
+
+type Hit = { key: V2ContentKey; path: string; field: string; value: string }
+
+const isPlainObject = (value: unknown): value is Record<string, unknown> =>
+  typeof value === 'object' && value !== null && !Array.isArray(value)
+
+function collectText(value: unknown, path: string, field: string, out: Omit<Hit, 'key'>[]) {
+  if (typeof value === 'string') {
+    if (value.trim()) out.push({ path, field, value })
+    return
+  }
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => {
+      if (isPlainObject(item)) {
+        for (const key of Object.keys(item)) {
+          collectText(item[key], `${path}.${index}.${key}`, key, out)
+        }
+      } else {
+        collectText(item, path, field, out)
+      }
+    })
+    return
+  }
+  if (isPlainObject(value)) {
+    for (const key of Object.keys(value)) collectText(value[key], `${path}.${key}`, key, out)
+  }
+}
 
 const gradient = 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)'
 
@@ -22,6 +49,7 @@ export default function AdminV2ContentPage() {
   const [active, setActive] = useState<V2ContentKey | null>(null)
   const [draft, setDraft] = useState<unknown>(null)
   const [query, setQuery] = useState('')
+  const [highlight, setHighlight] = useState<string | undefined>(undefined)
   const [showAdvanced, setShowAdvanced] = useState(false)
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
@@ -68,16 +96,19 @@ export default function AdminV2ContentPage() {
     return mergeV2(payload.defaults[active], payload.overrides[active])
   }, [payload, active])
 
-  const open = (key: V2ContentKey) => {
+  const open = (key: V2ContentKey, path?: string) => {
     if (!payload) return
     setActive(key)
     setDraft(mergeV2(payload.defaults[key], payload.overrides[key]))
+    setHighlight(path)
     setSaved(false)
   }
 
   const back = () => {
+    if (dirty && !confirm('יש שינויים שלא נשמרו. לצאת בלי לשמור?')) return
     setActive(null)
     setDraft(null)
+    setHighlight(undefined)
   }
 
   const dirty = active !== null && !deepEqual(draft, resolved)
@@ -139,6 +170,27 @@ export default function AdminV2ContentPage() {
       setSaving(false)
     }
   }
+
+  useEffect(() => {
+    if (!dirty) return
+    const warn = (event: BeforeUnloadEvent) => {
+      event.preventDefault()
+      event.returnValue = ''
+    }
+    window.addEventListener('beforeunload', warn)
+    return () => window.removeEventListener('beforeunload', warn)
+  }, [dirty])
+
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 's') {
+        event.preventDefault()
+        if (dirty && !saving) void save()
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  })
 
   if (loadError) {
     return (
@@ -225,6 +277,7 @@ export default function AdminV2ContentPage() {
                 value={draft}
                 defaultValue={payload.defaults[active]}
                 showAdvanced={showAdvanced}
+                highlight={highlight}
                 onChange={setDraft}
               />
             </div>
@@ -263,6 +316,22 @@ export default function AdminV2ContentPage() {
   }
 
   const needle = query.trim().toLowerCase()
+  const hits: Hit[] = []
+  if (needle.length >= 2) {
+    for (const section of SECTION_GROUPS.flatMap((group) => group.sections)) {
+      const merged = mergeV2(payload.defaults[section.key], payload.overrides[section.key])
+      const found: Omit<Hit, 'key'>[] = []
+      collectText(merged, section.key, section.key, found)
+      for (const entry of found) {
+        if (entry.value.toLowerCase().includes(needle)) {
+          hits.push({ ...entry, key: section.key })
+          if (hits.length >= 60) break
+        }
+      }
+      if (hits.length >= 60) break
+    }
+  }
+
   const groups = SECTION_GROUPS.map((group) => ({
     ...group,
     sections: group.sections.filter(
@@ -293,10 +362,41 @@ export default function AdminV2ContentPage() {
           <input
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="חיפוש סקשן..."
+            placeholder="חיפוש לפי שם סקשן או לפי טקסט שמופיע באתר..."
             className="w-full rounded-xl border border-gray-200 bg-white py-2.5 pr-9 pl-3 text-[13px] outline-none focus:border-[#2447D6] focus:ring-2 focus:ring-[#2447D6]/10"
           />
         </div>
+
+        {hits.length > 0 ? (
+          <div className="mb-8">
+            <h2 className="mb-3 text-[13px] font-bold tracking-wide text-[#6b7280]">
+              טקסטים תואמים ({hits.length}
+              {hits.length >= 60 ? '+' : ''})
+            </h2>
+            <div className="flex flex-col gap-1.5">
+              {hits.map((hit, index) => (
+                <button
+                  key={`${hit.path}|${index}`}
+                  onClick={() => open(hit.key, hit.path)}
+                  className="group flex items-start gap-3 rounded-xl border border-gray-100 bg-white p-3 text-right shadow-sm transition-all hover:border-[#2447D6]/40 hover:shadow-md"
+                >
+                  <CornerDownLeft
+                    size={14}
+                    className="mt-0.5 shrink-0 text-[#c3c8d1] group-hover:text-[#2447D6]"
+                  />
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate text-[13px] text-[#111827]">{hit.value}</span>
+                    <span className="mt-0.5 block text-[11px] text-[#9ca3af]">
+                      {SECTION_INDEX[hit.key]?.label ?? hit.key}
+                      {' · '}
+                      {FIELD_LABELS[hit.field] ?? hit.field}
+                    </span>
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         <div className="flex flex-col gap-8">
           {groups.map((group) => (
