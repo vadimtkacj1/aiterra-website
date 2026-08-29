@@ -185,12 +185,6 @@
     display: none;
   }
 
-  .step:first-child .badge {
-    background: #3678e9;
-    color: #ffffff;
-    box-shadow: 0 2px 14px 0 #3678e94d;
-  }
-
   .step,
   .step:nth-child(even) {
     grid-template-columns: 56px minmax(0, 1fr);
@@ -283,7 +277,11 @@
     background: var(--v2-hairline-ink);
   }
 
-  .step:first-child .badgeCell::after {
+  .badgeCell::after {
+    transition: background 0.35s ease;
+  }
+
+  .step[data-reached] .badgeCell::after {
     background: #3678e9;
   }
 
