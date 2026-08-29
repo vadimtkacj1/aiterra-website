@@ -74,24 +74,32 @@ export default function Reels({
     return cardBox.left + cardBox.width / 2 - (trackBox.left + trackBox.width / 2)
   }
 
-  const resizeShift = (track: HTMLDivElement, index: number) => {
+  const resizeShift = (track: HTMLDivElement, index: number, from: number) => {
     const target = track.children[index]
-    const wide = track.children[activeRef.current]
+    const wide = track.children[from]
     if (!target || !wide || target === wide) return 0
 
     const grow = wide.getBoundingClientRect().width - target.getBoundingClientRect().width
-    const towardsEnd = index > activeRef.current ? 1 : -1
+    const towardsEnd = index > from ? 1 : -1
     const rtl = getComputedStyle(track).direction === 'rtl' ? 1 : -1
     return (grow / 2) * towardsEnd * rtl
   }
 
-  const glideTo = (index: number) => {
+  const resizeDuration = (track: HTMLDivElement) => {
+    const card = track.children[0]
+    if (!card) return GLIDE_DURATION
+    const seconds = Number.parseFloat(getComputedStyle(card).transitionDuration)
+    return Number.isFinite(seconds) ? seconds * 1000 : GLIDE_DURATION
+  }
+
+  const glideTo = (index: number, from: number = activeRef.current) => {
     const track = trackRef.current
     if (!track) return
     cancelAnimationFrame(glideRef.current)
     window.clearTimeout(releaseRef.current)
 
-    const distance = offsetOf(track, index) + resizeShift(track, index)
+    const distance = offsetOf(track, index) + resizeShift(track, index, from)
+    const duration = resizeDuration(track)
     glideTarget.current = index
     track.dataset.animating = ''
 
@@ -106,7 +114,7 @@ export default function Reels({
       }, SNAP_RELEASE)
     }
 
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (!duration || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       track.scrollLeft += distance
       release()
       return
@@ -120,7 +128,7 @@ export default function Reels({
       const drift = track.scrollLeft - expected
       if (Math.abs(drift) > 2) base += drift
 
-      const progress = Math.min((now - start) / GLIDE_DURATION, 1)
+      const progress = Math.min((now - start) / duration, 1)
       expected = base + distance * glideProgress(progress)
       track.scrollLeft = expected
 
@@ -137,8 +145,9 @@ export default function Reels({
   }
 
   const focus = (index: number) => {
+    const from = activeRef.current
     setActiveIndex(index)
-    glideTo(index)
+    glideTo(index, from)
   }
 
   useEffect(() => {
@@ -209,7 +218,7 @@ export default function Reels({
         }
         setActiveIndex((current) => {
           if (current === nearest) return current
-          requestAnimationFrame(() => glideTo(nearest))
+          requestAnimationFrame(() => glideTo(nearest, current))
           return nearest
         })
       }, SETTLE_DELAY)

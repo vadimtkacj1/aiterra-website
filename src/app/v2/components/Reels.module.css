@@ -4,11 +4,20 @@
   --reel-active-w: clamp(190px, 20.8vw, 400px);
   --reel-active-h: calc(var(--reel-active-w) * 16 / 9);
   --reel-overhang: calc((var(--reel-active-h) - var(--reel-h)) / 2);
+  --reel-ms: 450ms;
+  --reel-ease: cubic-bezier(0.22, 1, 0.36, 1);
 
   position: relative;
   background: #faf7f3;
   color: var(--v2-paper-ink);
   overflow: hidden;
+  overflow: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reels {
+    --reel-ms: 0s;
+  }
 }
 
 .inner {
@@ -76,9 +85,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  height: calc(var(--reel-active-h) + var(--reel-overhang) * 2);
   padding-block: var(--reel-overhang);
   padding-inline: calc(50% - var(--reel-w) / 2);
   overflow-x: auto;
+  overscroll-behavior-inline: contain;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -100,7 +111,7 @@
   border-radius: 10px;
   overflow: visible;
   scroll-snap-align: center;
-  transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1), height 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: width var(--reel-ms) var(--reel-ease), height var(--reel-ms) var(--reel-ease);
 }
 
 .edgeH {
