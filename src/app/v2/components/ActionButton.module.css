@@ -3,38 +3,31 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  width: 238px;
+  width: fit-content;
+  min-width: min(238px, 100%);
+  max-width: 100%;
   height: 56px;
   padding: 15px;
-  border: 1px solid #3678e9;
-  border-radius: 9px;
-  background: transparent;
-  color: #3678e9;
+  border-radius: 6px;
+  background: #3678e9;
+  color: #fff;
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0;
   white-space: nowrap;
-  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  box-shadow: 0 2px 16px 0 #3678e966;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .action:hover {
-  background: #e8f0fd;
-}
-
-.filled {
-  background: #3678e9;
-  color: #fff;
-  box-shadow: 0 2px 16px 0 #3678e966;
-}
-
-.filled:hover {
   background: #2c67d2;
   box-shadow: 0 2px 22px 0 #3678e988;
 }
 
 .outline {
-  width: 234.5px;
+  width: fit-content;
+  min-width: min(234.5px, 100%);
   border: 1px solid rgba(255, 255, 255, 0.6);
   background: rgba(6, 11, 34, 0.35);
   box-shadow: none;
@@ -87,6 +80,7 @@
 @media (max-width: 640px) {
   .action {
     width: 100%;
+    min-width: 0;
   }
 
   .glyphWide {

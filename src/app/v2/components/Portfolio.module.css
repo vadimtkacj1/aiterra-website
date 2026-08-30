@@ -116,6 +116,14 @@
   margin-top: 22px;
 }
 
+.meta > a {
+  flex: none;
+  min-width: 0;
+  height: 48px;
+  padding: 8px;
+  gap: 10px;
+}
+
 .metaText {
   display: flex;
   flex-direction: column;
