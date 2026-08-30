@@ -9,10 +9,18 @@ const SIDEBAR_BG = '#0f172a'
 const BORDER_SUBTLE = 'rgba(255,255,255,0.06)'
 const BORDER_MID = 'rgba(255,255,255,0.08)'
 
-const links = [
+type SideLink = {
+  href: string
+  label: string
+  icon: typeof Inbox
+  exact: boolean
+  skip?: string
+}
+
+const links: SideLink[] = [
   { href: '/admin/leads', label: 'לידים', icon: Inbox, exact: true },
   { href: '/admin/v2/live', label: 'עריכה חזותית', icon: MousePointerClick, exact: true },
-  { href: '/admin/v2', label: 'תוכן האתר', icon: FileText, exact: true },
+  { href: '/admin/v2', label: 'תוכן האתר', icon: FileText, exact: false, skip: '/admin/v2/live' },
   { href: '/admin/blog', label: 'פוסטים', icon: LayoutList, exact: false },
   { href: '/admin/portfolio', label: 'תיק עבודות', icon: Briefcase, exact: false },
   { href: '/admin/seo', label: 'SEO דפים', icon: Globe2, exact: true },
@@ -23,10 +31,10 @@ const links = [
 function SideMenu({ pathname }: { pathname: string }) {
   return (
     <nav style={{ padding: '8px 8px' }} className="flex flex-col gap-0.5">
-      {links.map(({ href, label, icon: Icon, exact }) => {
+      {links.map(({ href, label, icon: Icon, exact, skip }) => {
         const active = exact
           ? pathname === href
-          : pathname.startsWith(href) && pathname !== `${href}/new`
+          : pathname.startsWith(href) && pathname !== `${href}/new` && !(skip && pathname.startsWith(skip))
         return (
           <Link
             key={href}

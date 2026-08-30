@@ -350,6 +350,7 @@ export default function Field({
   defaultValue,
   showAdvanced,
   highlight,
+  bare = false,
   onChange,
 }: {
   fieldKey: string
@@ -358,6 +359,7 @@ export default function Field({
   defaultValue: Json
   showAdvanced: boolean
   highlight?: string
+  bare?: boolean
   onChange: (next: Json) => void
 }) {
   const anchorRef = useRef<HTMLDivElement>(null)
@@ -381,7 +383,7 @@ export default function Field({
     ? 'rounded-lg ring-2 ring-[#2447D6] ring-offset-4 ring-offset-white'
     : ''
 
-  const head = (
+  const head = bare ? null : (
     <div className="mb-1.5 flex items-center gap-2">
       <span className="text-[12px] font-semibold text-[#374151]">{labelFor(fieldKey)}</span>
       <span className="font-mono text-[10px] text-[#c3c8d1]" dir="ltr">{fieldKey}</span>
@@ -452,23 +454,34 @@ export default function Field({
     return (
       <div
         ref={anchorRef}
-        className={`rounded-xl border border-gray-200 bg-gray-50/50 p-3 ${targetClass}`}
+        className={bare ? targetClass : `rounded-xl border border-gray-200 bg-gray-50/50 p-3 ${targetClass}`}
       >
         {head}
-        <div className="flex flex-col gap-3">
-          {Object.keys(value).map((key) => (
-            <Field
-              key={key}
-              fieldKey={key}
-              path={`${path}.${key}`}
-              value={value[key]}
-              defaultValue={defaults[key]}
-              showAdvanced={showAdvanced}
-              highlight={highlight}
-              onChange={(next) => onChange({ ...value, [key]: next })}
-            />
-          ))}
-        </div>
+        {splitsIntoPanels(value, showAdvanced) ? (
+          <ObjectPanels
+            path={path}
+            value={value}
+            defaultValue={defaultValue}
+            showAdvanced={showAdvanced}
+            highlight={highlight}
+            onChange={onChange}
+          />
+        ) : (
+          <div className="flex flex-col gap-3">
+            {Object.keys(value).map((key) => (
+              <Field
+                key={key}
+                fieldKey={key}
+                path={`${path}.${key}`}
+                value={value[key]}
+                defaultValue={defaults[key]}
+                showAdvanced={showAdvanced}
+                highlight={highlight}
+                onChange={(next) => onChange({ ...value, [key]: next })}
+              />
+            ))}
+          </div>
+        )}
       </div>
     )
   }
@@ -481,6 +494,208 @@ export default function Field({
         defaultValue={defaultValue}
         fieldKey={fieldKey}
         onChange={onChange}
+      />
+    </div>
+  )
+}
+
+const PANEL_WEIGHT = 5
+const SPLIT_WEIGHT = 20
+
+const weigh = (value: Json): number => {
+  if (value === null || value === undefined) return 0
+  if (Array.isArray(value)) return value.reduce<number>((sum, item) => sum + weigh(item), 0)
+  if (isPlainObject(value)) return Object.values(value).reduce<number>((sum, item) => sum + weigh(item), 0)
+  return 1
+}
+
+const isPanel = (value: Json) =>
+  (isPlainObject(value) || Array.isArray(value)) && weigh(value) >= PANEL_WEIGHT
+
+const visible = (key: string, showAdvanced: boolean) => showAdvanced || !ADVANCED_KEYS.has(key)
+
+const panelKeysOf = (value: Record<string, Json>, showAdvanced: boolean) =>
+  Object.keys(value).filter((key) => visible(key, showAdvanced) && isPanel(value[key]))
+
+function splitsIntoPanels(value: Json, showAdvanced: boolean): boolean {
+  return (
+    isPlainObject(value) &&
+    weigh(value) >= SPLIT_WEIGHT &&
+    panelKeysOf(value, showAdvanced).length >= 2
+  )
+}
+
+function ObjectPanels({
+  path,
+  value,
+  defaultValue,
+  showAdvanced,
+  highlight,
+  onChange,
+}: {
+  path: string
+  value: Record<string, Json>
+  defaultValue: Json
+  showAdvanced: boolean
+  highlight?: string
+  onChange: (next: Json) => void
+}) {
+  const panelKeys = useMemo(() => panelKeysOf(value, showAdvanced), [value, showAdvanced])
+
+  const [open, setOpen] = useState<Record<string, boolean>>(() => {
+    const initial: Record<string, boolean> = {}
+    for (const key of panelKeys) {
+      if (onHighlightPath(highlight, `${path}.${key}`)) initial[key] = true
+    }
+    return initial
+  })
+
+  useEffect(() => {
+    if (!highlight) return
+    setOpen((prev) => {
+      const next = { ...prev }
+      let touched = false
+      for (const key of panelKeys) {
+        if (!next[key] && onHighlightPath(highlight, `${path}.${key}`)) {
+          next[key] = true
+          touched = true
+        }
+      }
+      return touched ? next : prev
+    })
+  }, [highlight, panelKeys, path])
+
+  const defaults = isPlainObject(defaultValue) ? defaultValue : {}
+  const simpleKeys = Object.keys(value).filter(
+    (key) => visible(key, showAdvanced) && !panelKeys.includes(key),
+  )
+  const allOpen = panelKeys.every((key) => open[key])
+
+  return (
+    <div className="flex flex-col gap-3">
+      {panelKeys.length >= 3 ? (
+        <div className="flex justify-end">
+          <button
+            type="button"
+            onClick={() =>
+              setOpen(allOpen ? {} : Object.fromEntries(panelKeys.map((key) => [key, true])))
+            }
+            className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-[12px] text-[#6b7280] hover:border-[#2447D6] hover:text-[#2447D6]"
+          >
+            {allOpen ? 'סגירת כל הבלוקים' : 'פתיחת כל הבלוקים'}
+          </button>
+        </div>
+      ) : null}
+
+      {simpleKeys.length > 0 ? (
+        <div className="flex flex-col gap-3 rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
+          {simpleKeys.map((key) => (
+            <Field
+              key={key}
+              fieldKey={key}
+              path={`${path}.${key}`}
+              value={value[key]}
+              defaultValue={defaults[key]}
+              showAdvanced={showAdvanced}
+              highlight={highlight}
+              onChange={(next) => onChange({ ...value, [key]: next })}
+            />
+          ))}
+        </div>
+      ) : null}
+
+      {panelKeys.map((key) => {
+        const expanded = open[key] ?? false
+        const item = value[key]
+        const items = Array.isArray(item) ? item.length : 0
+        const changed = defaults[key] !== undefined && !deepEqual(item, defaults[key])
+        return (
+          <div key={key} className="rounded-xl border border-gray-100 bg-white shadow-sm">
+            <button
+              type="button"
+              onClick={() => setOpen((prev) => ({ ...prev, [key]: !expanded }))}
+              className="flex w-full items-center gap-2 px-4 py-3 text-right"
+            >
+              <ChevronDown
+                size={15}
+                className={`shrink-0 text-[#9ca3af] transition-transform ${expanded ? '' : 'rotate-90'}`}
+              />
+              <span className="text-[14px] font-semibold text-[#111827]">{labelFor(key)}</span>
+              {items > 0 ? (
+                <span className="rounded-full bg-gray-100 px-2 py-0.5 text-[11px] text-[#6b7280]">
+                  {items}
+                </span>
+              ) : null}
+              {changed ? (
+                <span className="rounded bg-amber-50 px-1.5 py-0.5 text-[10px] text-amber-600">שונה</span>
+              ) : null}
+              <span className="mr-auto font-mono text-[10px] text-[#c3c8d1]" dir="ltr">
+                {key}
+              </span>
+            </button>
+
+            {expanded ? (
+              <div className="border-t border-gray-100 px-4 py-4">
+                <Field
+                  fieldKey={key}
+                  path={`${path}.${key}`}
+                  value={item}
+                  defaultValue={defaults[key]}
+                  showAdvanced={showAdvanced}
+                  highlight={highlight}
+                  onChange={(next) => onChange({ ...value, [key]: next })}
+                  bare
+                />
+              </div>
+            ) : null}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+export function SectionFields({
+  fieldKey,
+  path,
+  value,
+  defaultValue,
+  showAdvanced,
+  highlight,
+  onChange,
+}: {
+  fieldKey: string
+  path: string
+  value: Json
+  defaultValue: Json
+  showAdvanced: boolean
+  highlight?: string
+  onChange: (next: Json) => void
+}) {
+  if (isPlainObject(value) && splitsIntoPanels(value, showAdvanced)) {
+    return (
+      <ObjectPanels
+        path={path}
+        value={value}
+        defaultValue={defaultValue}
+        showAdvanced={showAdvanced}
+        highlight={highlight}
+        onChange={onChange}
+      />
+    )
+  }
+
+  return (
+    <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
+      <Field
+        fieldKey={fieldKey}
+        path={path}
+        value={value}
+        defaultValue={defaultValue}
+        showAdvanced={showAdvanced}
+        highlight={highlight}
+        onChange={onChange}
+        bare
       />
     </div>
   )
