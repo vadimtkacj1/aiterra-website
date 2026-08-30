@@ -27,8 +27,17 @@ export const SITE_LEADS_TOKEN = process.env.NEXT_PUBLIC_SITE_LEADS_TOKEN || 'ait
 
 const mapsQuery = encodeURIComponent(`${OFFICE_ADDRESS_EN}, Israel`)
 
-/** Classic embed (no Maps JavaScript API key). */
-export const GOOGLE_MAPS_EMBED_URL = `https://maps.google.com/maps?q=${mapsQuery}&hl=he&z=16&output=embed`
+const mapsKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+
+/**
+ * Maps Embed API when the key is present, classic embed otherwise. The classic
+ * endpoint renders an empty frame now, so a build without the key shows no map.
+ * NEXT_PUBLIC_* is inlined at build time - the key has to reach `docker build`
+ * as an arg, not only the runtime env_file.
+ */
+export const GOOGLE_MAPS_EMBED_URL = mapsKey
+  ? `https://www.google.com/maps/embed/v1/place?key=${mapsKey}&q=${mapsQuery}&language=he&zoom=16`
+  : `https://maps.google.com/maps?q=${mapsQuery}&hl=he&z=16&output=embed`
 
 export const GOOGLE_MAPS_OPEN_URL = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`
 
