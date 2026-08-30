@@ -61,6 +61,7 @@ export default function AdminV2LivePage() {
   const inlineTimerRef = useRef(0)
   const scanTimerRef = useRef(0)
   const verifyRef = useRef<Edit[] | null>(null)
+  const restoreScrollRef = useRef<number | null>(null)
   const attachRef = useRef<() => void>(() => {})
   const saveRef = useRef<() => void>(() => {})
 
@@ -373,9 +374,22 @@ export default function AdminV2LivePage() {
   useEffect(() => {
     const iframe = iframeRef.current
     if (!iframe) return
-    const onLoad = () => attachRef.current()
+    let retry = 0
+    const onLoad = () => {
+      attachRef.current()
+      const top = restoreScrollRef.current
+      if (top === null) return
+      restoreScrollRef.current = null
+      const apply = () => iframe.contentWindow?.scrollTo({ top, behavior: 'instant' })
+      apply()
+      window.clearTimeout(retry)
+      retry = window.setTimeout(apply, 300)
+    }
     iframe.addEventListener('load', onLoad)
-    return () => iframe.removeEventListener('load', onLoad)
+    return () => {
+      window.clearTimeout(retry)
+      iframe.removeEventListener('load', onLoad)
+    }
   }, [])
 
   useEffect(
@@ -455,6 +469,7 @@ export default function AdminV2LivePage() {
       clearSelection()
       setPanelOpen(false)
       await load()
+      restoreScrollRef.current = iframeRef.current?.contentWindow?.scrollY ?? 0
       iframeRef.current?.contentWindow?.location.reload()
       setJustSaved(true)
       window.setTimeout(() => setJustSaved(false), 2500)
