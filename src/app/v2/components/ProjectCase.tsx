@@ -50,7 +50,11 @@ function Story({
 }) {
   return (
     <section className={styles.story} aria-labelledby={headingId}>
-      <div className={styles.storyInner} data-flip={flip || undefined}>
+      <div
+        className={styles.storyInner}
+        data-flip={flip || undefined}
+        data-solo={block.image ? undefined : true}
+      >
         <div className={styles.storyCopy} data-reveal-item>
           <Eyebrow label={eyebrow} dot="rtl" />
           <h2 id={headingId} className={styles.heading}>

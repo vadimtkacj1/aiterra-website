@@ -197,6 +197,18 @@
   order: 1;
 }
 
+.storyInner[data-solo] {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.storyInner[data-solo] .storyCopy {
+  padding-block: 56px;
+}
+
+.storyInner[data-solo] .storyText {
+  max-width: 92ch;
+}
+
 .storyText {
   margin: 0;
   max-width: 54ch;
