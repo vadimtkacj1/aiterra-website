@@ -85,7 +85,10 @@ export function scanFrame(
     if (!entry) continue
     const edit = edits[entry.pathId]
     if (edit && normalizeText(edit.value) !== norm) node.nodeValue = edit.value
-    register({ id: ++id, entry, el, node, kind: 'text', inline: el.childNodes.length === 1 })
+    const inline = Array.from(el.childNodes).every(
+      (child) => child === node || !normalizeText(child.textContent ?? ''),
+    )
+    register({ id: ++id, entry, el, node, kind: 'text', inline })
   }
 
   for (const el of Array.from(doc.querySelectorAll<HTMLElement>('[placeholder]'))) {

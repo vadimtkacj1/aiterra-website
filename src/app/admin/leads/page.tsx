@@ -107,7 +107,73 @@ export default function AdminLeadsPage() {
             {leads.length === 0 ? 'עדיין לא התקבלו פניות מהאתר.' : 'אין תוצאות לחיפוש הזה.'}
           </div>
         ) : (
-          <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-x-auto">
+          <>
+          <div className="flex flex-col gap-3 md:hidden">
+            {filtered.map((lead) => {
+              const isFresh = Date.now() - new Date(lead.createdAt).getTime() < DAY_MS
+              const isOpen = expanded === lead.id
+              const message = lead.message || ''
+              const isLong = message.length > 120
+              return (
+                <div key={lead.id} className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
+                  <div className="flex items-center justify-between gap-2">
+                    <span dir="ltr" className="text-[12px] text-[#9ca3af]">{formatDate(lead.createdAt)}</span>
+                    {isFresh && (
+                      <span className="rounded bg-[#2447D6]/10 px-1.5 py-0.5 text-[10px] font-semibold text-[#2447D6]">
+                        חדש
+                      </span>
+                    )}
+                  </div>
+
+                  <p className="mt-1.5 text-[15px] font-semibold text-[#111827]">{lead.name}</p>
+                  {lead.source ? (
+                    <p className="mt-0.5 text-[12px] text-[#9ca3af]">
+                      {SOURCE_LABELS[lead.source] || lead.source}
+                    </p>
+                  ) : null}
+
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {lead.phone ? (
+                      <a
+                        href={`tel:${lead.phone.replace(/[^\d+]/g, '')}`}
+                        dir="ltr"
+                        className="flex min-h-11 flex-1 items-center justify-center gap-2 rounded-lg border border-[#2447D6]/25 px-3 text-[13px] font-medium text-[#2447D6]"
+                      >
+                        <Phone size={14} />
+                        {lead.phone}
+                      </a>
+                    ) : null}
+                    {lead.email ? (
+                      <a
+                        href={`mailto:${lead.email}`}
+                        dir="ltr"
+                        className="flex min-h-11 flex-1 items-center justify-center gap-2 rounded-lg border border-gray-200 px-3 text-[13px] text-[#374151]"
+                      >
+                        <Mail size={14} />
+                        <span className="truncate">{lead.email}</span>
+                      </a>
+                    ) : null}
+                  </div>
+
+                  {message ? (
+                    <p className="mt-3 text-[13px] leading-relaxed text-[#6b7280]">
+                      {isLong && !isOpen ? `${message.slice(0, 120)}…` : message}
+                      {isLong ? (
+                        <button
+                          onClick={() => setExpanded(isOpen ? null : lead.id)}
+                          className="ms-1.5 text-[12px] font-medium text-[#2447D6]"
+                        >
+                          {isOpen ? 'הצג פחות' : 'הצג הכל'}
+                        </button>
+                      ) : null}
+                    </p>
+                  ) : null}
+                </div>
+              )
+            })}
+          </div>
+
+          <div className="hidden md:block bg-white rounded-xl border border-gray-100 shadow-sm overflow-x-auto">
             <table className="min-w-[900px] w-full">
               <thead>
                 <tr className="border-b border-gray-100 bg-gray-50/70">
@@ -195,6 +261,7 @@ export default function AdminLeadsPage() {
               </tbody>
             </table>
           </div>
+          </>
         )}
       </div>
     </div>
