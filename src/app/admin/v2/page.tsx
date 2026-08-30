@@ -52,6 +52,7 @@ export default function AdminV2ContentPage() {
   const [query, setQuery] = useState('')
   const [highlight, setHighlight] = useState<string | undefined>(undefined)
   const [showAdvanced, setShowAdvanced] = useState(false)
+  const [activeGroup, setActiveGroup] = useState(SECTION_GROUPS[0].id)
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
 
@@ -344,6 +345,13 @@ export default function AdminV2ContentPage() {
     ),
   })).filter((group) => group.sections.length > 0)
 
+  const visibleGroups = needle ? groups : groups.filter((group) => group.id === activeGroup)
+  const groupCounts = SECTION_GROUPS.map((group) => ({
+    id: group.id,
+    label: group.label,
+    edited: group.sections.filter((section) => section.key in payload.overrides).length,
+  }))
+
   const editedCount = Object.keys(payload.overrides).length
 
   return (
@@ -417,8 +425,37 @@ export default function AdminV2ContentPage() {
           </div>
         ) : null}
 
+        {needle ? null : (
+          <div className="mb-6 flex flex-wrap gap-2">
+            {groupCounts.map((group) => (
+              <button
+                key={group.id}
+                onClick={() => setActiveGroup(group.id)}
+                className={
+                  group.id === activeGroup
+                    ? 'flex items-center gap-2 rounded-lg bg-[#2447D6] px-3.5 py-2 text-[13px] font-semibold text-white'
+                    : 'flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-3.5 py-2 text-[13px] text-[#4b5563] hover:border-[#2447D6]/40 hover:text-[#111827]'
+                }
+              >
+                {group.label}
+                {group.edited > 0 ? (
+                  <span
+                    className={
+                      group.id === activeGroup
+                        ? 'rounded-full bg-white/25 px-1.5 text-[11px]'
+                        : 'rounded-full bg-[#eef2ff] px-1.5 text-[11px] text-[#2447D6]'
+                    }
+                  >
+                    {group.edited}
+                  </span>
+                ) : null}
+              </button>
+            ))}
+          </div>
+        )}
+
         <div className="flex flex-col gap-8">
-          {groups.map((group) => (
+          {visibleGroups.map((group) => (
             <section key={group.id}>
               <h2 className="mb-3 text-[13px] font-bold tracking-wide text-[#6b7280]">{group.label}</h2>
               <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
