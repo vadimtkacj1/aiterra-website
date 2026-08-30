@@ -81,134 +81,136 @@ export default function Header() {
   const close = () => setMenuOpen(false)
 
   return (
-    <header className={styles.bar} data-open={menuOpen || undefined}>
-      <div className={styles.inner}>
-        <Link href="/v2" className={styles.brand} aria-label={header.brand} onClick={close}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/aiterra-logo-dark.png"
-            alt=""
-            width={211}
-            height={50}
-            className={styles.logoMark}
-          />
-        </Link>
+    <>
+      <header className={styles.bar} data-open={menuOpen || undefined}>
+        <div className={styles.inner}>
+          <Link href="/v2" className={styles.brand} aria-label={header.brand} onClick={close}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/aiterra-logo-dark.png"
+              alt=""
+              width={211}
+              height={50}
+              className={styles.logoMark}
+            />
+          </Link>
 
-        <nav className={styles.nav} aria-label={header.navLabel}>
-          {navItems.map((item) =>
-            item.children ? (
-              <div
-                key={item.href}
-                className={styles.navItem}
-                data-open={openMenu === item.href || undefined}
-                onMouseEnter={() => setOpenMenu(item.href)}
-                onMouseLeave={() => setOpenMenu((current) => (current === item.href ? null : current))}
-                onFocus={() => setOpenMenu(item.href)}
-                onBlur={(event) => {
-                  if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
-                    setOpenMenu((current) => (current === item.href ? null : current))
-                  }
-                }}
-                onKeyDown={(event) => {
-                  if (event.key === 'Escape') setOpenMenu(null)
-                }}
-              >
-                <NavAnchor href={item.href} className={styles.navLink}>
-                  <span>{item.label}</span>
-                  <ChevronDownIcon className={styles.navChevron} />
-                </NavAnchor>
-
-                <div className={styles.menu}>
-                  <ul className={styles.menuList}>
-                    {item.children.map((child) => (
-                      <li key={child.href}>
-                        <NavAnchor
-                          href={child.href}
-                          className={styles.menuLink}
-                          onClick={() => setOpenMenu(null)}
-                        >
-                          {child.label}
-                        </NavAnchor>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ) : (
-              <NavAnchor key={item.href} href={item.href} className={styles.navLink}>
-                <span>{item.label}</span>
-              </NavAnchor>
-            ),
-          )}
-        </nav>
-
-        <div className={styles.actions}>
-          <ActionButton
-            href={header.cta.href}
-            label={header.cta.label}
-            className={styles.cta}
-            labelClassName={styles.ctaLabel}
-          />
-
-          <button
-            type="button"
-            className={styles.burger}
-            aria-label={menuOpen ? header.menuClose : header.menuOpen}
-            aria-expanded={menuOpen}
-            aria-controls="v2-mobile-nav"
-            onClick={() => setMenuOpen((open) => !open)}
-          >
-            {menuOpen ? <span className={styles.close} aria-hidden="true" /> : <BurgerIcon className={styles.burgerBars} />}
-          </button>
-        </div>
-      </div>
-
-      {menuOpen ? (
-        <button type="button" className={styles.scrim} aria-label={header.menuClose} onClick={close} />
-      ) : null}
-
-      {menuOpen ? (
-        <div id="v2-mobile-nav" className={styles.sheet}>
-          <nav className={styles.sheetList} aria-label={header.mobileNavLabel}>
+          <nav className={styles.nav} aria-label={header.navLabel}>
             {navItems.map((item) =>
               item.children ? (
-                <div key={item.href} className={styles.sheetGroup} data-expanded={expanded === item.href || undefined}>
-                  <div className={styles.sheetRow}>
-                    <NavAnchor href={item.href} className={styles.sheetRowLink} onClick={close}>
-                      {item.label}
-                    </NavAnchor>
-                    <button
-                      type="button"
-                      className={styles.sheetToggle}
-                      aria-label={`${item.label} — ${expanded === item.href ? header.collapse : header.expand}`}
-                      aria-expanded={expanded === item.href}
-                      aria-controls={`v2-sheet-${item.href.replace(/\W+/g, '-')}`}
-                      onClick={() => setExpanded((current) => (current === item.href ? null : item.href))}
-                    >
-                      <ChevronDownIcon className={styles.sheetChevron} />
-                    </button>
-                  </div>
-                  {expanded === item.href ? (
-                    <ul id={`v2-sheet-${item.href.replace(/\W+/g, '-')}`} className={styles.sheetSub}>
+                <div
+                  key={item.href}
+                  className={styles.navItem}
+                  data-open={openMenu === item.href || undefined}
+                  onMouseEnter={() => setOpenMenu(item.href)}
+                  onMouseLeave={() => setOpenMenu((current) => (current === item.href ? null : current))}
+                  onFocus={() => setOpenMenu(item.href)}
+                  onBlur={(event) => {
+                    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                      setOpenMenu((current) => (current === item.href ? null : current))
+                    }
+                  }}
+                  onKeyDown={(event) => {
+                    if (event.key === 'Escape') setOpenMenu(null)
+                  }}
+                >
+                  <NavAnchor href={item.href} className={styles.navLink}>
+                    <span>{item.label}</span>
+                    <ChevronDownIcon className={styles.navChevron} />
+                  </NavAnchor>
+
+                  <div className={styles.menu}>
+                    <ul className={styles.menuList}>
                       {item.children.map((child) => (
-                        <li key={child.label}>
-                          <NavAnchor href={child.href} className={styles.sheetSubLink} onClick={close}>
+                        <li key={child.href}>
+                          <NavAnchor
+                            href={child.href}
+                            className={styles.menuLink}
+                            onClick={() => setOpenMenu(null)}
+                          >
                             {child.label}
                           </NavAnchor>
                         </li>
                       ))}
                     </ul>
-                  ) : null}
+                  </div>
                 </div>
               ) : (
-                <NavAnchor key={item.href} href={item.href} className={styles.sheetLink} onClick={close}>
-                  {item.label}
+                <NavAnchor key={item.href} href={item.href} className={styles.navLink}>
+                  <span>{item.label}</span>
                 </NavAnchor>
               ),
             )}
           </nav>
+
+          <div className={styles.actions}>
+            <ActionButton
+              href={header.cta.href}
+              label={header.cta.label}
+              className={styles.cta}
+              labelClassName={styles.ctaLabel}
+            />
+
+            <button
+              type="button"
+              className={styles.burger}
+              aria-label={menuOpen ? header.menuClose : header.menuOpen}
+              aria-expanded={menuOpen}
+              aria-controls="v2-mobile-nav"
+              onClick={() => setMenuOpen((open) => !open)}
+            >
+              {menuOpen ? <span className={styles.close} aria-hidden="true" /> : <BurgerIcon className={styles.burgerBars} />}
+            </button>
+          </div>
         </div>
+
+        {menuOpen ? (
+          <div id="v2-mobile-nav" className={styles.sheet}>
+            <nav className={styles.sheetList} aria-label={header.mobileNavLabel}>
+              {navItems.map((item) =>
+                item.children ? (
+                  <div key={item.href} className={styles.sheetGroup} data-expanded={expanded === item.href || undefined}>
+                    <div className={styles.sheetRow}>
+                      <NavAnchor href={item.href} className={styles.sheetRowLink} onClick={close}>
+                        {item.label}
+                      </NavAnchor>
+                      <button
+                        type="button"
+                        className={styles.sheetToggle}
+                        aria-label={`${item.label} — ${expanded === item.href ? header.collapse : header.expand}`}
+                        aria-expanded={expanded === item.href}
+                        aria-controls={`v2-sheet-${item.href.replace(/\W+/g, '-')}`}
+                        onClick={() => setExpanded((current) => (current === item.href ? null : item.href))}
+                      >
+                        <ChevronDownIcon className={styles.sheetChevron} />
+                      </button>
+                    </div>
+                    {expanded === item.href ? (
+                      <ul id={`v2-sheet-${item.href.replace(/\W+/g, '-')}`} className={styles.sheetSub}>
+                        {item.children.map((child) => (
+                          <li key={child.label}>
+                            <NavAnchor href={child.href} className={styles.sheetSubLink} onClick={close}>
+                              {child.label}
+                            </NavAnchor>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
+                ) : (
+                  <NavAnchor key={item.href} href={item.href} className={styles.sheetLink} onClick={close}>
+                    {item.label}
+                  </NavAnchor>
+                ),
+              )}
+            </nav>
+          </div>
+        ) : null}
+      </header>
+
+      {menuOpen ? (
+        <button type="button" className={styles.scrim} aria-label={header.menuClose} onClick={close} />
       ) : null}
-    </header>
+    </>
   )
 }

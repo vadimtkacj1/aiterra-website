@@ -13,6 +13,15 @@
   padding-inline: var(--v2-rail-pad);
 }
 
+.headLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.headLink:hover .title {
+  color: var(--v2-on-dark);
+}
+
 .title {
   font-size: 14px;
   font-weight: 500;

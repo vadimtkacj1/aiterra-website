@@ -227,11 +227,11 @@ export default function Portfolio() {
                 </div>
 
                 <div className={styles.meta}>
-                  <ActionButton href={item.href} label={portfolio.cardAction} />
                   <div className={styles.metaText}>
                     <h3 className={styles.title}>{item.title}</h3>
                     <TagList tags={item.tags} className={styles.tags} />
                   </div>
+                  <ActionButton href={item.href} label={portfolio.cardAction} />
                 </div>
               </article>
             ))}

@@ -206,6 +206,10 @@
 }
 
 @media (max-width: 640px) {
+  .rules {
+    display: grid;
+  }
+
   .inner > .rules {
     display: grid;
     grid-template-columns: var(--v2-mobile-rail) 1fr var(--v2-mobile-rail);
@@ -271,9 +275,6 @@
     color: #ffffff;
   }
 
-  .rule {
-    display: none;
-  }
 
   .stage {
     padding: 35px 0 36px;

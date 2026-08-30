@@ -104,6 +104,10 @@
 }
 
 @media (max-width: 640px) {
+  .rules {
+    display: grid;
+  }
+
   .inner::before,
   .inner::after {
     content: '';
@@ -148,9 +152,6 @@
     margin-top: 6px;
   }
 
-  .rule {
-    display: none;
-  }
 
   .track {
     margin-top: 76px;

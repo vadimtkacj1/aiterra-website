@@ -279,8 +279,8 @@
     padding-block: 44px 56px;
   }
 
-  .bottomRule {
-    display: none;
+  .rails {
+    display: grid;
   }
 
   .stack {

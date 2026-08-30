@@ -48,7 +48,7 @@
   max-width: 1560px;
   margin: 64px auto 0;
   padding: var(--board-pad);
-  border-block: 1px solid var(--v2-hairline-ink);
+  border: 1px solid var(--v2-hairline-ink);
 }
 
 .cross {
@@ -299,7 +299,7 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .board {
     grid-template-columns: minmax(0, 1fr);
     gap: 16px;
@@ -322,6 +322,7 @@
   .featured {
     margin: 0;
     border: 2px solid var(--plan-accent);
+    border-radius: 14px;
   }
 
   .audience {
@@ -334,10 +335,6 @@
 
   .featured .planBody {
     padding: 24px 24px 30px;
-  }
-
-  .featured {
-    border-radius: 14px;
   }
 
   .plan .cta {
@@ -463,46 +460,5 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .heading {
     --v2-heading-size: min(48px, 8cqw);
-  }
-
-  .board {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
-    max-width: 640px;
-    padding: 0;
-    border: 0;
-  }
-
-  .cross {
-    display: none;
-  }
-
-  .plan {
-    overflow: hidden;
-    border: 1px solid var(--v2-hairline-ink);
-    border-radius: 14px;
-    background: #ffffff;
-  }
-
-  .featured {
-    margin: 0;
-    border: 2px solid var(--plan-accent);
-    border-radius: 14px;
-  }
-
-  .audience {
-    min-height: 0;
-  }
-
-  .planBody {
-    padding: 28px 24px 30px;
-  }
-
-  .featured .planBody {
-    padding: 24px 24px 30px;
-  }
-
-  .plan .cta {
-    margin-top: 20px;
   }
 }

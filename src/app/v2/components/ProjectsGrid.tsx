@@ -45,12 +45,12 @@ export default function ProjectsGrid() {
               </div>
 
               <div className={styles.meta}>
-                <ActionButton href={item.href} label={portfolio.cardAction} />
-
                 <div className={styles.metaText}>
                   <h2 className={styles.title}>{item.title}</h2>
                   <TagList tags={item.tags} className={styles.tags} />
                 </div>
+
+                <ActionButton href={item.href} label={portfolio.cardAction} />
               </div>
             </article>
           ))}

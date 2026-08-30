@@ -52,11 +52,11 @@ export default function MoreProjects({
             </Link>
 
             <div className={styles.cardMeta}>
-              <ActionButton href={`/v2/projects/${item.id}`} label={portfolio.cardAction} />
               <div className={styles.cardText}>
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <TagList tags={item.tags} />
               </div>
+              <ActionButton href={`/v2/projects/${item.id}`} label={portfolio.cardAction} />
             </div>
           </article>
         ))}
