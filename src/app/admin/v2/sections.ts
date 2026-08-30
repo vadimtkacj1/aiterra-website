@@ -40,6 +40,8 @@ export const SECTION_GROUPS: SectionGroup[] = [
       { key: 'portfolio', label: 'תיק עבודות — כותרת', hint: 'כותרת, פסקה, כפתורים וטקסט סיום', preview: '/v2#v2-portfolio' },
       { key: 'portfolioFilters', label: 'תיק עבודות — פילטרים', hint: 'תוויות הקטגוריות (מופיעות גם בתפריט)', preview: '/v2#v2-portfolio' },
       { key: 'portfolioItems', label: 'תיק עבודות — פרויקטים', hint: 'הכרטיסים בקרוסלה', preview: '/v2#v2-portfolio' },
+      { key: 'projectPage', label: 'עמוד פרויקט — תוויות', hint: 'כותרות, פירורי לחם וטבלת הפרטים בעמוד פרויקט', preview: '/v2/projects/neot-sade' },
+      { key: 'projectBanner', label: 'עמוד פרויקט — רצועת CTA', hint: 'הכותרת והכפתור ברצועה שלפני "פרויקטים נוספים"', preview: '/v2/projects/neot-sade' },
       { key: 'allIn', label: 'All-in-one — כותרת', hint: 'כותרת סקשן התרשים', preview: '/v2' },
       { key: 'allInNodes', label: 'All-in-one — נקודות', hint: 'תוויות הנקודות (המיקומים בשדות טכניים)', preview: '/v2' },
       { key: 'partners', label: 'טכנולוגיות ושותפים', hint: 'כיתוב ולוגואים', preview: '/v2' },

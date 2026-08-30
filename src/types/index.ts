@@ -47,11 +47,21 @@ export interface PortfolioProject {
   heroCtaSecondaryLabel?: string
   heroCtaSecondaryHref?: string
   galleryImages?: string[]
+  launchedAt?: string
+  projectType?: string
+  technology?: string
+  challenge?: ProjectStoryBlock
+  solution?: ProjectStoryBlock
   /**
    * Bump when editing a project in the repo so the reseeded version overrides
    * the stale copy in production's persistent data volume.
    */
   rev?: number
+}
+
+export interface ProjectStoryBlock {
+  text: string
+  image?: string
 }
 
 export interface BlogPost {

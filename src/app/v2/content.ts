@@ -285,6 +285,31 @@ export const projectsPage = {
     'הפרויקטים שבנינו ב-AITERRA: אתרי מכירות, אתרי תדמית ומערכות ניהול – עם הכלים, הקידום והליווי שהביאו אותם לתוצאות.',
 }
 
+export const projectPage = {
+  crumbHome: 'בית',
+  crumb: 'תיק עבודות',
+  readMore: 'קראו עוד',
+  visit: 'צפו באתר',
+  aboutEyebrow: 'BACKGROUND',
+  aboutHeading: 'על הפרויקט',
+  factDate: 'תאריך',
+  factField: 'תחום',
+  factType: 'סוג פרויקט',
+  factTech: 'טכנולוגיה',
+  challengeEyebrow: 'THE CHALLENGE',
+  challengeHeading: 'מה היה האתגר?',
+  solutionEyebrow: 'OUR SOLUTION',
+  solutionHeading: 'הפתרון שלנו',
+  moreEyebrow: 'MORE PROJECTS',
+  moreHeading: 'פרויקטים נוספים',
+  shotAlt: 'צילום מסך של האתר',
+}
+
+export const projectBanner = {
+  heading: 'בואו נשגר את הפרויקט שלך',
+  action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
+}
+
 export const portfolioFilters = [
   { id: 'all', label: 'הכל' },
   { id: 'sales', label: 'אתרי מכירות' },
@@ -307,15 +332,15 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'אלי בן יצחק – עיצוב שיער',
     tags: ['אתר תדמית', 'מיתוג', 'קידום אורגני'],
     shot: '/images/portfolio/shots/eli-ben-yitzhak.webp',
-    href: '/v2#v2-portfolio',
+    href: '/v2/projects/eli-ben-yitzhak',
     category: 'brand',
   },
   {
     id: 'neot-sade',
     title: 'נאות שדה',
-    tags: ['שיווק', 'פרסום', 'קריאייטיב', 'קידום'],
-    shot: '/images/portfolio1.png',
-    href: '/v2#v2-portfolio',
+    tags: ['חנות אונליין', 'סליקה', 'מועדון לקוחות'],
+    shot: '/images/portfolio/shots/neot-sade.webp',
+    href: '/v2/projects/neot-sade',
     category: 'sales',
   },
   {
@@ -323,7 +348,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Sous Chef',
     tags: ['מערכת', 'פיתוח', 'UI/UX'],
     shot: '/images/portfolio/shots/sous-chef.webp',
-    href: '/v2#v2-portfolio',
+    href: '/v2/projects/sous-chef',
     category: 'systems',
   },
   {
@@ -331,23 +356,63 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'חופית קוסמטיקס',
     tags: ['אתר מכירות', 'קידום', 'עיצוב'],
     shot: '/images/portfolio/shots/hofit-cosmetics.webp',
-    href: '/v2#v2-portfolio',
+    href: '/v2/projects/hofit-cosmetics',
     category: 'sales',
   },
   {
+    id: 'maayan-cosmetics',
+    title: 'מעיין ועקנין — קוסמטיקה קלינית',
+    tags: ['דף נחיתה', 'נגישות', 'לידים'],
+    shot: '/images/portfolio/shots/maayan-cosmetics.webp',
+    href: '/v2/projects/maayan-cosmetics',
+    category: 'brand',
+  },
+  {
+    id: 'olie-6',
+    title: 'Olie 6',
+    tags: ['Shopify', 'חנות אונליין', 'UI/UX'],
+    shot: '/images/portfolio/shots/olie-6.webp',
+    href: '/v2/projects/olie-6',
+    category: 'sales',
+  },
+  {
+    id: 'ecommerce-store',
+    title: 'חנות דיגיטלית',
+    tags: ['חנות אונליין', 'פיתוח', 'סליקה'],
+    shot: '/images/portfolio/shots/ecommerce-store.webp',
+    href: '/v2/projects/ecommerce-store',
+    category: 'sales',
+  },
+  {
+    id: 'brand-identity',
+    title: 'רם וחיים — שיווק נדל"ן',
+    tags: ['קידום אורגני', 'ניהול מוניטין', 'נכסים דיגיטליים'],
+    shot: '/images/portfolio/shots/brand-identity.webp',
+    href: '/v2/projects/brand-identity',
+    category: 'brand',
+  },
+  {
     id: 'marketing-platform',
-    title: 'פלטפורמת שיווק',
-    tags: ['מערכת', 'אוטומציה', 'אינטגרציות'],
+    title: 'אבי ייעוץ משכנתאות',
+    tags: ['מיתוג', 'דפי נחיתה', 'קמפיינים'],
     shot: '/images/portfolio/shots/marketing-platform.webp',
-    href: '/v2#v2-portfolio',
-    category: 'systems',
+    href: '/v2/projects/marketing-platform',
+    category: 'brand',
+  },
+  {
+    id: 'alexandra-patsina',
+    title: 'Alexandra Patsina',
+    tags: ['אתר תדמית', 'מיתוג', 'UI/UX'],
+    shot: '/images/portfolio/shots/alexandra-patsina.webp',
+    href: '/v2/projects/alexandra-patsina',
+    category: 'brand',
   },
   {
     id: 'karin-cohen',
-    title: 'קרין כהן',
+    title: 'קארין כהן — אקדמיה לריסים',
     tags: ['דף נחיתה', 'לידים', 'קמפיינים'],
     shot: '/images/portfolio/shots/karin-cohen.webp',
-    href: '/v2#v2-portfolio',
+    href: '/v2/projects/karin-cohen',
     category: 'brand',
   },
 ]
@@ -975,7 +1040,7 @@ export const servicePages: Record<string, ServicePage> = {
         {
           id: 'spec',
           title: 'איפיון מדויק ומותאם אישית',
-          art: '/images/service-page2.webp',
+          art: '/images/service-page-discovery.webp',
           text: 'מתחילים באפיון של המוצרים, קהל היעד ומסלול הקנייה, כך שכל מסך בחנות נבנה סביב החלטה אמיתית של הלקוח.',
         },
         {
@@ -1001,7 +1066,7 @@ export const servicePages: Record<string, ServicePage> = {
     system: {
       eyebrow: 'MANAGEMENT SYSTEM',
       heading: ['מערכת הניהול של Aiterra'],
-      art: '/images/about-page1.webp',
+      art: '/images/management-console.webp',
       features: [
         {
           id: 'orders',
@@ -1210,6 +1275,8 @@ export const v2ContentDefaults = {
   services,
   serviceTabs,
   portfolio,
+  projectPage,
+  projectBanner,
   portfolioFilters,
   portfolioItems,
   allIn,

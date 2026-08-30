@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import type { PortfolioProject } from '@/types'
+import type { PortfolioProject, ProjectStoryBlock } from '@/types'
 import { PORTFOLIO_SEED } from '@/data/portfolio'
 import bundledSeedJson from '@/data/portfolio-seed.json'
 
@@ -42,6 +42,15 @@ function normalizeGalleryImages(imgs: unknown): string[] | undefined {
   if (!Array.isArray(imgs)) return undefined
   const urls = imgs.map((s) => String(s).trim()).filter(Boolean)
   return urls.length ? urls : undefined
+}
+
+function normalizeStory(block: unknown): ProjectStoryBlock | undefined {
+  if (typeof block !== 'object' || block === null) return undefined
+  const raw = block as Record<string, unknown>
+  const text = typeof raw.text === 'string' ? raw.text.trim() : ''
+  if (!text) return undefined
+  const image = typeof raw.image === 'string' ? raw.image.trim() : ''
+  return image ? { text, image } : { text }
 }
 
 function optStr(s: unknown): string | undefined {
@@ -95,6 +104,11 @@ export function normalizePortfolioPayload(raw: Partial<PortfolioProject>): Portf
     heroCtaSecondaryLabel: optStr(raw.heroCtaSecondaryLabel),
     heroCtaSecondaryHref: optStr(raw.heroCtaSecondaryHref),
     galleryImages: normalizeGalleryImages(raw.galleryImages),
+    launchedAt: optStr(raw.launchedAt),
+    projectType: optStr(raw.projectType),
+    technology: optStr(raw.technology),
+    challenge: normalizeStory(raw.challenge),
+    solution: normalizeStory(raw.solution),
     sortOrder: normalizeSortOrder(raw.sortOrder),
     rev: typeof raw.rev === 'number' && Number.isFinite(raw.rev) ? raw.rev : undefined,
   }

@@ -207,6 +207,70 @@ export default function PortfolioForm({ initial }: { initial?: PortfolioProject 
         </div>
       </Section>
 
+      <Section title="עמוד הפרויקט">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <Field label="תאריך" hint="מוצג בטבלת הפרטים. ריק — השורה לא תוצג">
+            <input value={form.launchedAt ?? ''} onChange={(e) => set('launchedAt', e.target.value || undefined)} placeholder="24/03/2026" className={inputCls} />
+          </Field>
+          <Field label="סוג פרויקט" hint="ריק — יוצג התחום">
+            <input value={form.projectType ?? ''} onChange={(e) => set('projectType', e.target.value || undefined)} placeholder="אתר מכירות" className={inputCls} />
+          </Field>
+          <Field label="טכנולוגיה" hint="ריק — יוצגו שלוש התגיות הראשונות">
+            <input value={form.technology ?? ''} onChange={(e) => set('technology', e.target.value || undefined)} placeholder="Wordpress" className={inputCls} />
+          </Field>
+        </div>
+
+        <Field label="מה היה האתגר?" hint="הפסקה בבלוק THE CHALLENGE. ריק — הבלוק לא יוצג">
+          <textarea
+            rows={4}
+            value={form.challenge?.text ?? ''}
+            onChange={(e) =>
+              set('challenge', e.target.value ? { ...form.challenge, text: e.target.value } : undefined)
+            }
+            className={inputCls}
+          />
+        </Field>
+        <Field label="תמונה לבלוק האתגר">
+          <input
+            value={form.challenge?.image ?? ''}
+            onChange={(e) =>
+              set(
+                'challenge',
+                form.challenge ? { ...form.challenge, image: e.target.value || undefined } : undefined,
+              )
+            }
+            placeholder="/images/portfolio/shots/..."
+            className={inputCls}
+            dir="ltr"
+          />
+        </Field>
+
+        <Field label="הפתרון שלנו" hint="הפסקה בבלוק OUR SOLUTION. ריק — הבלוק לא יוצג">
+          <textarea
+            rows={4}
+            value={form.solution?.text ?? ''}
+            onChange={(e) =>
+              set('solution', e.target.value ? { ...form.solution, text: e.target.value } : undefined)
+            }
+            className={inputCls}
+          />
+        </Field>
+        <Field label="תמונה לבלוק הפתרון">
+          <input
+            value={form.solution?.image ?? ''}
+            onChange={(e) =>
+              set(
+                'solution',
+                form.solution ? { ...form.solution, image: e.target.value || undefined } : undefined,
+              )
+            }
+            placeholder="/images/portfolio/shots/..."
+            className={inputCls}
+            dir="ltr"
+          />
+        </Field>
+      </Section>
+
       {/* ── Помилка + кнопки ── */}
       {error && <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-[13px] text-red-700">{error}</div>}
 
