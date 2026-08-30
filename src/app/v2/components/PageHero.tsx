@@ -21,7 +21,7 @@ export default function PageHero({ title, lede, headingId, crumb, action }: Page
       <div className={styles.media}>
         <video
           className={styles.mediaImage}
-          src="/videos/v2-hero.mp4"
+          src="/videos/v2-hero.mp4?v=2"
           poster="/videos/v2-hero-poster.webp"
           autoPlay
           muted
