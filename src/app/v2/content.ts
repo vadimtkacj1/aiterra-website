@@ -3,6 +3,7 @@ export type HeaderNavItem = {
   label: string
   href: string
   submenu?: 'services' | 'portfolio'
+  overviewLabel?: string
 }
 
 export const header = {
@@ -15,9 +16,21 @@ export const header = {
   collapse: 'סגירה',
   cta: { label: 'לקבלת הצעת מחיר', href: '/v2/contact' },
   nav: [
-    { id: 'services', label: 'שירותים', href: '/v2/services', submenu: 'services' },
+    {
+      id: 'services',
+      label: 'שירותים',
+      href: '/v2/services',
+      submenu: 'services',
+      overviewLabel: 'כל השירותים',
+    },
     { id: 'blog', label: 'בלוג', href: '/v2/blog' },
-    { id: 'portfolio', label: 'תיק עבודות', href: '/v2/projects', submenu: 'portfolio' },
+    {
+      id: 'portfolio',
+      label: 'תיק עבודות',
+      href: '/v2/projects',
+      submenu: 'portfolio',
+      overviewLabel: 'כל הפרויקטים',
+    },
     { id: 'about', label: 'אודות הסוכנות', href: '/v2/about' },
   ] satisfies HeaderNavItem[],
 }

@@ -14,7 +14,7 @@ import { useV2 } from '../V2ContentProvider'
 import styles from './Header.module.css'
 
 type NavLink = { label: string; href: string }
-type NavItem = NavLink & { children?: NavLink[] }
+type NavItem = NavLink & { children?: NavLink[]; overviewLabel?: string }
 
 function NavAnchor({
   href,
@@ -62,6 +62,7 @@ export default function Header() {
   const navItems: NavItem[] = header.nav.map((item) => ({
     label: item.label,
     href: item.href,
+    overviewLabel: item.overviewLabel,
     children: item.submenu ? submenus[item.submenu] : undefined,
   }))
 
@@ -186,7 +187,7 @@ export default function Header() {
                       <ul id={`v2-sheet-${item.href.replace(/\W+/g, '-')}`} className={styles.sheetSub}>
                         <li>
                           <NavAnchor href={item.href} className={styles.sheetSubLink} onClick={close}>
-                            {item.label}
+                            {item.overviewLabel ?? item.label}
                           </NavAnchor>
                         </li>
                         {item.children.map((child) => (
