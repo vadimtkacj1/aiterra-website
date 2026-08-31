@@ -27,8 +27,7 @@
   align-items: center;
   gap: 10px;
   justify-self: start;
-  direction: ltr;
-  padding-inline-start: 25px;
+  padding-inline-start: 15px;
 }
 
 .logoMark {
