@@ -47,7 +47,7 @@ export default function V2BlogPage() {
         <BlogIndex posts={posts} />
       </main>
       <Footer>
-        <ContactForm variant="footer" />
+        <ContactForm variant="footer" source="v2-blog" />
       </Footer>
     </>
   )

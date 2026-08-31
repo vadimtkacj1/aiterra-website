@@ -55,7 +55,7 @@ export default function V2AboutPage() {
         <AboutTeam members={members} />
       </main>
       <Footer>
-        <ContactForm variant="footer" />
+        <ContactForm variant="footer" source="v2-about" />
       </Footer>
     </>
   )

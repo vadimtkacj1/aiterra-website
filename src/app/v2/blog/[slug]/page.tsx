@@ -192,7 +192,7 @@ export default async function V2ArticlePage({ params }: Params) {
         <RelatedPosts posts={related} />
       </main>
       <Footer>
-        <ContactForm variant="footer" />
+        <ContactForm variant="footer" source={`v2-blog-${slug}`} />
       </Footer>
     </>
   )

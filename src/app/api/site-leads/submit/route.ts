@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { readFile, writeFile, mkdir } from 'fs/promises'
-import path from 'path'
 import nodemailer from 'nodemailer'
+import { appendLead, setLeadDelivery } from '@/lib/leads-server'
+import type { SiteLead } from '@/lib/leads-server'
+import { forwardLeadToCrm } from '@/lib/crm-leads'
 
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
@@ -9,21 +10,10 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Headers': 'Content-Type',
 }
 
-interface Lead {
-  id: string
-  publicToken: string
-  name: string
-  phone: string | null
-  email: string | null
-  message: string | null
-  source: string | null
-  createdAt: string
-}
-
 // Email the lead to the office inbox. Best-effort: configured via runtime env
 // (docker-compose env_file → .env). If SMTP isn't set up yet, this is a no-op
 // and the lead is still persisted to disk, so nothing is lost.
-async function notifyByEmail(lead: Lead): Promise<void> {
+async function notifyByEmail(lead: SiteLead): Promise<void> {
   const host = process.env.SMTP_HOST
   const user = process.env.SMTP_USER
   const pass = process.env.SMTP_PASS
@@ -53,6 +43,7 @@ async function notifyByEmail(lead: Lead): Promise<void> {
     ['שם', lead.name],
     ['טלפון', lead.phone],
     ['אימייל', lead.email],
+    ['שירות', lead.treatment],
     ['הודעה', lead.message],
     ['מקור', lead.source],
     ['התקבל', lead.createdAt],
@@ -83,7 +74,7 @@ export async function OPTIONS() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { publicToken, name, phone, email, message, source } = body
+    const { publicToken, name, phone, email, message, treatment, source } = body
 
     if (!publicToken || !name?.trim()) {
       return NextResponse.json(
@@ -92,42 +83,34 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const lead: Lead = {
+    const lead: SiteLead = {
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
       publicToken,
       name: name.trim(),
       phone: phone?.trim() || null,
       email: email?.trim() || null,
       message: message?.trim() || null,
+      treatment: treatment?.trim() || null,
       source: source || null,
       createdAt: new Date().toISOString(),
     }
 
-    const dataDir = path.join(process.cwd(), 'data')
-    const filePath = path.join(dataDir, 'site-leads.json')
+    await appendLead(lead)
 
-    await mkdir(dataDir, { recursive: true })
+    const [, crm] = await Promise.all([
+      notifyByEmail(lead).catch((mailErr) => {
+        console.error('lead email notification failed:', mailErr)
+      }),
+      forwardLeadToCrm(lead),
+    ])
 
-    let leads: unknown[] = []
-    try {
-      const raw = await readFile(filePath, 'utf-8')
-      leads = JSON.parse(raw)
-    } catch {
-      leads = []
+    if (crm !== 'skipped') {
+      await setLeadDelivery(lead.id, crm).catch((writeErr) => {
+        console.error('could not record CRM delivery status:', writeErr)
+      })
     }
 
-    leads.unshift(lead)
-    await writeFile(filePath, JSON.stringify(leads, null, 2))
-
-    // Best-effort email notification — never fail the lead on an email error
-    // (it's already safely persisted above).
-    try {
-      await notifyByEmail(lead)
-    } catch (mailErr) {
-      console.error('lead email notification failed:', mailErr)
-    }
-
-    return NextResponse.json({ ok: true }, { status: 201, headers: CORS_HEADERS })
+    return NextResponse.json({ ok: true, crm }, { status: 201, headers: CORS_HEADERS })
   } catch (e: unknown) {
     const msg = e instanceof Error ? e.message : 'error'
     return NextResponse.json({ error: msg }, { status: 500, headers: CORS_HEADERS })

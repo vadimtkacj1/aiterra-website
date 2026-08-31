@@ -9,6 +9,33 @@ const SOURCE_LABELS: Record<string, string> = {
   'cta-section': 'בלוק CTA',
   'contact-page': 'דף צור קשר',
   'ecommerce-landing': 'לנדינג איקומרס',
+  'v2-home': 'דף הבית',
+  'v2-contact': 'דף צור קשר',
+  'v2-services': 'דף שירותים',
+  'v2-projects': 'דף פרויקטים',
+  'v2-about': 'דף אודות',
+  'v2-blog': 'בלוג',
+}
+
+const CRM_LABELS: Record<string, string> = {
+  sent: 'נשלח',
+  failed: 'נכשל',
+  skipped: 'לא מחובר',
+}
+
+const CRM_CLASSES: Record<string, string> = {
+  sent: 'text-[#047857] bg-[#047857]/10',
+  failed: 'text-[#b91c1c] bg-[#b91c1c]/10',
+  skipped: 'text-[#6b7280] bg-gray-100',
+}
+
+function CrmBadge({ status }: { status?: string }) {
+  if (!status) return <span className="text-[#9ca3af]">-</span>
+  return (
+    <span className={`px-1.5 py-0.5 text-[10px] font-semibold rounded ${CRM_CLASSES[status] || CRM_CLASSES.skipped}`}>
+      {CRM_LABELS[status] || status}
+    </span>
+  )
 }
 
 const DAY_MS = 24 * 60 * 60 * 1000
@@ -49,7 +76,7 @@ export default function AdminLeadsPage() {
     const q = query.trim().toLowerCase()
     if (!q) return leads
     return leads.filter((lead) =>
-      [lead.name, lead.phone, lead.email, lead.message, lead.source]
+      [lead.name, lead.phone, lead.email, lead.message, lead.treatment, lead.source]
         .filter(Boolean)
         .some((field) => field!.toLowerCase().includes(q))
     )
@@ -126,11 +153,11 @@ export default function AdminLeadsPage() {
                   </div>
 
                   <p className="mt-1.5 text-[15px] font-semibold text-[#111827]">{lead.name}</p>
-                  {lead.source ? (
-                    <p className="mt-0.5 text-[12px] text-[#9ca3af]">
-                      {SOURCE_LABELS[lead.source] || lead.source}
-                    </p>
-                  ) : null}
+                  <p className="mt-0.5 flex flex-wrap items-center gap-1.5 text-[12px] text-[#9ca3af]">
+                    {lead.source ? <span>{SOURCE_LABELS[lead.source] || lead.source}</span> : null}
+                    {lead.treatment ? <span className="text-[#6b7280]">· {lead.treatment}</span> : null}
+                    {lead.crm === 'failed' ? <CrmBadge status={lead.crm} /> : null}
+                  </p>
 
                   <div className="mt-3 flex flex-wrap gap-2">
                     {lead.phone ? (
@@ -174,14 +201,16 @@ export default function AdminLeadsPage() {
           </div>
 
           <div className="hidden md:block bg-white rounded-xl border border-gray-100 shadow-sm overflow-x-auto">
-            <table className="min-w-[900px] w-full">
+            <table className="min-w-[1080px] w-full">
               <thead>
                 <tr className="border-b border-gray-100 bg-gray-50/70">
                   <th className="text-right px-3 py-3 text-[12px] font-semibold text-[#6b7280]">Date</th>
                   <th className="text-right px-3 py-3 text-[12px] font-semibold text-[#6b7280]">Name</th>
                   <th className="text-right px-3 py-3 text-[12px] font-semibold text-[#6b7280]">Phone</th>
                   <th className="text-right px-3 py-3 text-[12px] font-semibold text-[#6b7280]">Email</th>
+                  <th className="text-right px-3 py-3 text-[12px] font-semibold text-[#6b7280]">Service</th>
                   <th className="text-right px-3 py-3 text-[12px] font-semibold text-[#6b7280]">Source</th>
+                  <th className="text-right px-3 py-3 text-[12px] font-semibold text-[#6b7280]">CRM</th>
                   <th className="text-right px-3 py-3 text-[12px] font-semibold text-[#6b7280]">Message</th>
                 </tr>
               </thead>
@@ -233,8 +262,14 @@ export default function AdminLeadsPage() {
                           <span className="text-[#9ca3af]">-</span>
                         )}
                       </td>
+                      <td className="px-3 py-3 min-w-[130px] text-[12px] text-[#374151]">
+                        {lead.treatment || <span className="text-[#9ca3af]">-</span>}
+                      </td>
                       <td className="px-3 py-3 min-w-[130px] text-[12px] text-[#6b7280]">
                         {lead.source ? SOURCE_LABELS[lead.source] || lead.source : '-'}
+                      </td>
+                      <td className="px-3 py-3 min-w-[90px] text-[12px] whitespace-nowrap">
+                        <CrmBadge status={lead.crm} />
                       </td>
                       <td className="px-3 py-3 min-w-[300px] text-[12px] text-[#6b7280]">
                         {message ? (

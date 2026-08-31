@@ -12,13 +12,6 @@ import styles from './ContactForm.module.css'
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'
 
-function buildMessage(serviceLabel: string, service: string, message: string) {
-  const lines = []
-  if (service) lines.push(`${serviceLabel}: ${service}`)
-  if (message.trim()) lines.push(message.trim())
-  return lines.join('\n\n')
-}
-
 type ContactFormProps = {
   children?: ReactNode
   source?: string
@@ -50,7 +43,8 @@ export default function ContactForm({ children, source = 'v2-home', variant = 'p
           name: read('name'),
           phone: read('phone'),
           email: read('email'),
-          message: buildMessage(contact.fields.service, read('service'), read('message')),
+          message: read('message'),
+          treatment: read('service'),
           source,
         }),
       })
