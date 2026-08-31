@@ -119,9 +119,11 @@ export default function Portfolio() {
     [activeFilter, portfolioItems],
   )
 
+  const looped = items.length > 1
+
   const loop = useMemo(
-    () => [0, 1, 2].flatMap((copy) => items.map((item) => ({ item, copy }))),
-    [items],
+    () => (looped ? [0, 1, 2] : [0]).flatMap((copy) => items.map((item) => ({ item, copy }))),
+    [items, looped],
   )
 
   const restartAutoplay = useAutoplay(
@@ -138,6 +140,12 @@ export default function Portfolio() {
   useEffect(() => {
     const track = trackRef.current
     if (!track || items.length === 0) return
+
+    if (!looped) {
+      track.scrollLeft = 0
+      setActiveIndex(0)
+      return
+    }
 
     const sign = getComputedStyle(track).direction === 'rtl' ? -1 : 1
     const copyWidth = () => items.length * cardStride(track)
@@ -173,7 +181,7 @@ export default function Portfolio() {
       track.removeEventListener('scroll', onScroll)
       if (frame) cancelAnimationFrame(frame)
     }
-  }, [items])
+  }, [items, looped])
 
   const step = (direction: 'prev' | 'next') => {
     const track = trackRef.current
@@ -218,9 +226,18 @@ export default function Portfolio() {
         </div>
 
         <div className={styles.stage}>
-          <div ref={trackRef} className={styles.track} data-reveal-item>
+          <div
+            ref={trackRef}
+            className={styles.track}
+            data-single={!looped || undefined}
+            data-reveal-item
+          >
             {loop.map(({ item, copy }) => (
-              <article key={`${item.id}-${copy}`} className={styles.card} aria-hidden={copy !== 1}>
+              <article
+                key={`${item.id}-${copy}`}
+                className={styles.card}
+                aria-hidden={looped && copy !== 1}
+              >
                 <div className={styles.shot}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={item.shot} alt="" className={styles.shotImage} />
@@ -259,18 +276,22 @@ export default function Portfolio() {
               <span />
               <span />
             </div>
-            <CircleButton
-              label={portfolio.prev}
-              tone="onPaper"
-              glyph="next"
-              onClick={() => step('prev')}
-            />
-            <CircleButton
-              label={portfolio.next}
-              tone="onPaper"
-              glyph="prev"
-              onClick={() => step('next')}
-            />
+            {looped ? (
+              <>
+                <CircleButton
+                  label={portfolio.prev}
+                  tone="onPaper"
+                  glyph="next"
+                  onClick={() => step('prev')}
+                />
+                <CircleButton
+                  label={portfolio.next}
+                  tone="onPaper"
+                  glyph="prev"
+                  onClick={() => step('next')}
+                />
+              </>
+            ) : null}
           </div>
         </div>
 

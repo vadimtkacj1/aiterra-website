@@ -63,6 +63,11 @@
   display: none;
 }
 
+.track[data-single] {
+  justify-content: center;
+  overflow-x: hidden;
+}
+
 .card {
   position: relative;
   flex: none;
