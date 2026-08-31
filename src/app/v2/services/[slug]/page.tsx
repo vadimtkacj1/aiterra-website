@@ -53,6 +53,8 @@ export default async function V2ServiceDetailPage({ params }: Params) {
           heading={service.advantages.heading}
           lede={service.advantages.lede}
           roles={service.advantages.roles}
+          outro={service.advantages.outro}
+          action={service.advantages.action}
           headingId={`v2-service-${slug}-advantages`}
         />
         {service.system ? (
