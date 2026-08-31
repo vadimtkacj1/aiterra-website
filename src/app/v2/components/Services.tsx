@@ -22,12 +22,16 @@ export default function Services() {
   const [activeId, setActiveId] = useState(serviceTabs[0].id)
   const active = serviceTabs.find((tab) => tab.id === activeId) ?? serviceTabs[0]
 
-  const restartAutoplay = useAutoplay(contentRef, () => {
-    setActiveId((current) => {
-      const index = serviceTabs.findIndex((tab) => tab.id === current)
-      return serviceTabs[(index + 1) % serviceTabs.length].id
-    })
-  })
+  const restartAutoplay = useAutoplay(
+    contentRef,
+    () => {
+      setActiveId((current) => {
+        const index = serviceTabs.findIndex((tab) => tab.id === current)
+        return serviceTabs[(index + 1) % serviceTabs.length].id
+      })
+    },
+    { delay: 10000 },
+  )
 
   const select = useCallback(
     (id: string) => {
