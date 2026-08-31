@@ -367,7 +367,7 @@
 
   .services .tabs button[aria-selected='true'] {
     border-color: #3678e9;
-    background: #ffffff;
+    background: #f1ece5;
     color: #3678e9;
   }
 
