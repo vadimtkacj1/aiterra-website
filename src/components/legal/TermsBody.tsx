@@ -6,7 +6,7 @@ export default function TermsBody() {
     <>
       <h2>1. מבוא</h2>
       <p>
-        ברוכים הבאים לאתר האינטרנט של AITERRA (ע.פ 212614622) בכתובת www.aiterra.co.il (להלן:
+        ברוכים הבאים לאתר האינטרנט של AITERRA בכתובת www.aiterra.co.il (להלן:
         &quot;האתר&quot; ו-&quot;החברה&quot; בהתאמה).
       </p>
       <p>
