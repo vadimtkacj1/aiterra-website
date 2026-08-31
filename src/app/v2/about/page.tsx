@@ -7,12 +7,9 @@ import AboutTeam, { type TeamCard } from '../components/AboutTeam'
 import About from '../components/About'
 import Stats from '../components/Stats'
 import LeadCta from '../components/LeadCta'
-import Partners from '../components/Partners'
-import Faq from '../components/Faq'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import { getAllAuthors } from '@/lib/authors-server'
-import { getFaqData } from '@/lib/faq-server'
 import { getV2Content } from '@/lib/v2-content-server'
 
 export function generateMetadata(): Metadata {
@@ -37,13 +34,6 @@ export default function V2AboutPage() {
     href: `/blog/author/${author.id}`,
   }))
 
-  const faq = getFaqData('/about')
-  const entries = faq.items.map((item, index) => ({
-    id: `about-faq-${index + 1}`,
-    question: item.q,
-    answer: item.a,
-  }))
-
   return (
     <>
       <Header />
@@ -63,8 +53,6 @@ export default function V2AboutPage() {
         <Stats rounded />
         <LeadCta />
         <AboutTeam members={members} />
-        <Partners />
-        <Faq heading={aboutPage.faqHeading} entries={entries} />
       </main>
       <Footer>
         <ContactForm variant="footer" />
