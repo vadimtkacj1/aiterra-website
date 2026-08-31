@@ -407,6 +407,14 @@ export const portfolioItems: PortfolioItem[] = [
     category: 'sales',
   },
   {
+    id: 'alova',
+    title: 'ALOVA — טיפוח שיער',
+    tags: ['Shopify', 'חנות אונליין', 'UI/UX'],
+    shot: '/images/portfolio/cards/alova.webp',
+    href: '/v2/projects/alova',
+    category: 'sales',
+  },
+  {
     id: 'ecommerce-store',
     title: 'חנות דיגיטלית',
     tags: ['חנות אונליין', 'פיתוח', 'סליקה'],
