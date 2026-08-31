@@ -359,7 +359,36 @@
   }
 
   .card {
-    flex-basis: 82vw;
+    flex-basis: 100%;
+    gap: 4px;
+  }
+
+  .cardMeta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding-top: 14px;
+    text-align: center;
+  }
+
+  .cardText {
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .cardMeta > a {
+    width: 288px;
+    max-width: 100%;
+    height: 56px;
+    margin-top: 20px;
+    padding: 8px 16px 8px 12px;
   }
 
   .copy > a {
