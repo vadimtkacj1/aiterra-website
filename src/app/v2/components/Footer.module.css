@@ -123,17 +123,6 @@
   letter-spacing: 0;
 }
 
-.titleButton {
-  display: none;
-}
-
-.chevron {
-  flex: none;
-  width: 12px;
-  height: 12px;
-  transition: transform 0.25s ease;
-}
-
 .list {
   display: grid;
   gap: 12px;
@@ -385,39 +374,13 @@
   }
 
   .title {
+    padding: 22px 18px 12px;
     font-size: 17px;
     font-weight: 600;
   }
 
-  .titleText {
-    display: none;
-  }
-
-  .titleButton {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    width: 100%;
-    padding: 24px 18px 24px 28px;
-    text-align: start;
-  }
-
-  .column[data-open] .titleButton {
-    padding-bottom: 12px;
-  }
-
-  .column[data-open] .chevron {
-    transform: rotate(180deg);
-  }
-
   .body {
-    display: none;
-    padding: 0 18px 22px;
-  }
-
-  .column[data-open] .body {
-    display: block;
+    padding: 0 18px 24px;
   }
 
   .list {
