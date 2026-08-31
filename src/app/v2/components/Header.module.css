@@ -247,15 +247,6 @@
   text-align: start;
 }
 
-.sheetToggle {
-  display: grid;
-  place-items: center;
-  flex: none;
-  width: 48px;
-  align-self: stretch;
-  margin-inline-end: -8px;
-}
-
 .sheetGroup[data-expanded] .sheetRow {
   padding-bottom: 14px;
 }

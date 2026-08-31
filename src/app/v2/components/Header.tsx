@@ -171,22 +171,24 @@ export default function Header() {
                 item.children ? (
                   <div key={item.href} className={styles.sheetGroup} data-expanded={expanded === item.href || undefined}>
                     <div className={styles.sheetRow}>
-                      <NavAnchor href={item.href} className={styles.sheetRowLink} onClick={close}>
-                        {item.label}
-                      </NavAnchor>
                       <button
                         type="button"
-                        className={styles.sheetToggle}
-                        aria-label={`${item.label} — ${expanded === item.href ? header.collapse : header.expand}`}
+                        className={styles.sheetRowLink}
                         aria-expanded={expanded === item.href}
                         aria-controls={`v2-sheet-${item.href.replace(/\W+/g, '-')}`}
                         onClick={() => setExpanded((current) => (current === item.href ? null : item.href))}
                       >
+                        {item.label}
                         <ChevronDownIcon className={styles.sheetChevron} />
                       </button>
                     </div>
                     {expanded === item.href ? (
                       <ul id={`v2-sheet-${item.href.replace(/\W+/g, '-')}`} className={styles.sheetSub}>
+                        <li>
+                          <NavAnchor href={item.href} className={styles.sheetSubLink} onClick={close}>
+                            {item.label}
+                          </NavAnchor>
+                        </li>
                         {item.children.map((child) => (
                           <li key={child.label}>
                             <NavAnchor href={child.href} className={styles.sheetSubLink} onClick={close}>
