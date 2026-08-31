@@ -347,7 +347,8 @@
   }
 
   .services .tabs {
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     gap: 8px;
     margin-top: 24px;
     padding: 0;
@@ -355,14 +356,19 @@
   }
 
   .services .tabs button {
-    flex: 0 0 auto;
-    height: 48px;
-    padding-inline: 16px;
+    grid-column: span 2;
+    justify-content: center;
+    height: 56px;
+    padding-inline: 12px;
     border-radius: 10px;
     border-color: transparent;
     background: #f1ece5;
     color: var(--v2-paper-ink);
-    font-size: 14px;
+    font-size: 16px;
+  }
+
+  .services .tabs button:nth-child(n + 4) {
+    grid-column: span 3;
   }
 
   .services .tabs button[aria-selected='true'] {
