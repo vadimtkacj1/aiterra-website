@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import seedFaqJson from '@/data/faq-seed.json'
+import { readJsonFile } from './read-json-file'
 
 const FILE = path.join(process.cwd(), 'data', 'faq.json')
 
@@ -21,8 +22,7 @@ function ensureFile() {
 
 export function getAllFaqData(): FaqAllData {
   ensureFile()
-  const raw = fs.readFileSync(FILE, 'utf-8')
-  const fileData = JSON.parse(raw) as FaqAllData
+  const fileData = readJsonFile<FaqAllData>(FILE, SEED_FAQ)
   // Seed is the base; the volume (admin edits) overrides per page key, and any
   // key missing from a stale volume falls back to the committed seed.
   return { ...SEED_FAQ, ...fileData }

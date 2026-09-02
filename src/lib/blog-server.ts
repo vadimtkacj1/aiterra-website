@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import { readJsonFile } from './read-json-file'
 import seedPostsJson from '@/data/blog-seed.json'
 
 export interface FaqItem { q: string; a: string }
@@ -63,7 +64,7 @@ function ensureFile() {
 
 function readPostsFile(): AdminPost[] {
   ensureFile()
-  return JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8')) as AdminPost[]
+  return readJsonFile<AdminPost[]>(DATA_FILE, [])
 }
 
 function writePostsFile(posts: AdminPost[]) {

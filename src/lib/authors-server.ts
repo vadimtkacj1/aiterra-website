@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import { readJsonFile } from './read-json-file'
 import { teamMembers } from '@/data/team-members'
 import seedAuthorsJson from '@/data/authors-seed.json'
 
@@ -84,7 +85,7 @@ function normalizeAuthor(author: AuthorProfile): AuthorProfile {
 
 export function getAllAuthors(): AuthorProfile[] {
   ensureFile()
-  const data = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8')) as AuthorProfile[]
+  const data = readJsonFile<AuthorProfile[]>(DATA_FILE, [])
   const normalized = data.map(normalizeAuthor)
   // Seed override: a committed seed with a higher `rev` beats the volume copy, so
   // repo edits survive a stale production data volume (mirrors getAllPosts).

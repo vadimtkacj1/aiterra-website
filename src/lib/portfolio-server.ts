@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import { readJsonFile } from './read-json-file'
 import type { PortfolioProject, ProjectStoryBlock } from '@/types'
 import { PORTFOLIO_SEED } from '@/data/portfolio'
 import bundledSeedJson from '@/data/portfolio-seed.json'
@@ -116,7 +117,7 @@ export function normalizePortfolioPayload(raw: Partial<PortfolioProject>): Portf
 
 function readProjectsFromDisk(): PortfolioProject[] {
   ensureFile()
-  return JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8')) as PortfolioProject[]
+  return readJsonFile<PortfolioProject[]>(DATA_FILE, [])
 }
 
 function sortProjects(list: PortfolioProject[]): PortfolioProject[] {

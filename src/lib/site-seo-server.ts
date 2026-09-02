@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import { readJsonFile } from './read-json-file'
 import type { Metadata } from 'next'
 import { SITE_NAME } from '@/lib/seo'
 import {
@@ -41,7 +42,7 @@ function ensureFile() {
 
 function readOverrides(): SiteSeoFile {
   ensureFile()
-  return JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8')) as SiteSeoFile
+  return readJsonFile<SiteSeoFile>(DATA_FILE, {})
 }
 
 export function resolveRouteSeo(routePath: string): ResolvedRouteSeo | null {
