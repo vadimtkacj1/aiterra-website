@@ -51,7 +51,7 @@ export default function Footer({ children }: { children?: ReactNode }) {
       <div className={styles.inner}>
         <div className={styles.grid}>
           <div className={[styles.column, styles.brandColumn].join(' ')}>
-            <Link href="/v2" className={styles.brand} aria-label={footer.brand}>
+            <Link href="/" className={styles.brand} aria-label={footer.brand}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/aiterra-logo-light.png"
@@ -67,7 +67,7 @@ export default function Footer({ children }: { children?: ReactNode }) {
             <FooterSection key={column.id} id={column.id} title={column.title} as="nav">
               <ul className={styles.list}>
                 {column.links.map((link) => (
-                  <li key={link.href}>
+                  <li key={`${link.href}|${link.label}`}>
                     <Link href={link.href} className={styles.link}>
                       {link.label}
                     </Link>

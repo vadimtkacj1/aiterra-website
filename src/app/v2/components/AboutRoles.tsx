@@ -1,14 +1,16 @@
 'use client'
 
 import { useId, useState } from 'react'
+import Link from 'next/link'
 import type { AboutRole } from '../content'
 import styles from './About.module.css'
 
 type AboutRolesProps = {
   roles: AboutRole[]
+  href?: string
 }
 
-export default function AboutRoles({ roles }: AboutRolesProps) {
+export default function AboutRoles({ roles, href }: AboutRolesProps) {
   const id = useId()
   const [openId, setOpenId] = useState<string | null>(null)
 
@@ -30,6 +32,10 @@ export default function AboutRoles({ roles }: AboutRolesProps) {
             data-open={open ? 'true' : undefined}
             data-reveal-item
           >
+            {href ? (
+              <Link href={href} className={styles.cardCover} aria-label={role.title} />
+            ) : null}
+
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/arrow-up-right.svg"

@@ -9,11 +9,15 @@ import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import { getFaqData } from '@/lib/faq-server'
 import { projectsPage } from '../content'
+import { pageMetadata } from '@/lib/metadata'
+import JsonLd from '@/components/seo/JsonLd'
+import { breadcrumbList, webPage } from '@/lib/schema'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: projectsPage.metaTitle,
   description: projectsPage.metaDescription,
-}
+  path: '/projects',
+})
 
 export const revalidate = 300
 
@@ -27,6 +31,16 @@ export default function V2ProjectsPage() {
 
   return (
     <>
+      <JsonLd data={webPage({
+        path: '/projects',
+        name: projectsPage.metaTitle,
+        description: projectsPage.metaDescription,
+        type: 'CollectionPage',
+      })} />
+      <JsonLd data={breadcrumbList([
+        { name: 'בית', path: '/' },
+        { name: projectsPage.crumb, path: '/projects' },
+      ])} />
       <Header />
       <main id="main-content">
         <PageHero

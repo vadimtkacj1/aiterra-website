@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import type { ReactNode } from 'react'
+import type { MouseEvent, ReactNode } from 'react'
 import { ChevronPrevIcon } from './icons'
 import styles from './ActionButton.module.css'
 
@@ -10,6 +10,7 @@ type ActionButtonProps = {
   glyph?: 'plus' | 'prev' | 'swap'
   className?: string
   labelClassName?: string
+  onClick?: (event: MouseEvent<HTMLAnchorElement>) => void
 }
 
 export default function ActionButton({
@@ -19,6 +20,7 @@ export default function ActionButton({
   glyph = 'plus',
   className,
   labelClassName,
+  onClick,
 }: ActionButtonProps) {
   const classNames = [styles.action, variant === 'primary' ? '' : styles[variant], className]
     .filter(Boolean)
@@ -49,14 +51,14 @@ export default function ActionButton({
 
   if (href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http') || href.includes('#')) {
     return (
-      <a href={href} className={classNames}>
+      <a href={href} className={classNames} onClick={onClick}>
         {content}
       </a>
     )
   }
 
   return (
-    <Link href={href} className={classNames}>
+    <Link href={href} className={classNames} onClick={onClick}>
       {content}
     </Link>
   )

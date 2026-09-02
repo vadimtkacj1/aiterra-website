@@ -15,6 +15,9 @@ import { getAllPosts, getPostBySlug } from '@/lib/blog-server'
 import { getAuthorById } from '@/lib/authors-server'
 import { categoryTag, formatPostDate, matchesKeywords, readingMinutes } from '../../blogCategory'
 import { getV2Content } from '@/lib/v2-content-server'
+import { pageMetadata } from '@/lib/metadata'
+import JsonLd from '@/components/seo/JsonLd'
+import { articleSchema, breadcrumbList, faqPage, toPlainText } from '@/lib/schema'
 import styles from '../../components/Article.module.css'
 
 export const revalidate = 300
@@ -25,10 +28,18 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params
   const post = getPostBySlug(slug)
   if (!post) return {}
-  return {
-    title: `${post.title} — AITERRA`,
+  return pageMetadata({
+    title: post.title,
     description: post.excerpt,
-    }
+    path: `/blog/${slug}`,
+    image: post.images?.[0] || undefined,
+    imageAlt: post.title,
+    type: 'article',
+    publishedTime: post.datePublished,
+    modifiedTime: post.dateModified || post.datePublished,
+    authors: post.author ? [post.author] : undefined,
+    tags: post.tags,
+  })
 }
 
 const renderArticle = (markdown: string, cover: string) => {
@@ -98,16 +109,39 @@ export default async function V2ArticlePage({ params }: Params) {
 
   return (
     <>
+      <JsonLd data={articleSchema({
+        slug: post.slug,
+        title: post.title,
+        excerpt: post.excerpt,
+        datePublished: post.datePublished,
+        dateModified: post.dateModified,
+        images: post.images ?? [],
+        authorName,
+        authorId: post.authorId,
+        tags: post.tags ?? [],
+        wordCount: toPlainText(post.content || '').split(' ').filter(Boolean).length,
+      })} />
+      <JsonLd data={breadcrumbList([
+        { name: blog.crumbHome, path: '/' },
+        { name: blog.title, path: '/blog' },
+        { name: post.title, path: `/blog/${post.slug}` },
+      ])} />
+      {post.faq?.items?.length ? (
+        <JsonLd data={faqPage({
+          path: `/blog/${post.slug}`,
+          entries: post.faq.items.map((item) => ({ question: item.q, answer: item.a })),
+        })!} />
+      ) : null}
       <Header />
       <main id="main-content">
         <article className={styles.article}>
           <div className={styles.inner}>
             <nav className={styles.crumbs} aria-label={blog.crumbsLabel}>
-              <Link href="/v2" className={styles.crumbLink}>
+              <Link href="/" className={styles.crumbLink}>
                 {blog.crumbHome}
               </Link>
               <ChevronPrevIcon className={styles.crumbChevron} />
-              <Link href="/v2/blog" className={styles.crumbLink}>
+              <Link href="/blog" className={styles.crumbLink}>
                 {blog.title}
               </Link>
               <ChevronPrevIcon className={styles.crumbChevron} />

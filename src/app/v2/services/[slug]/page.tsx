@@ -6,12 +6,16 @@ import About from '../../components/About'
 import ManagementSystem from '../../components/ManagementSystem'
 import HowItWorks from '../../components/HowItWorks'
 import Pricing from '../../components/Pricing'
+import ServiceCases from '../../components/ServiceCases'
+import Reels from '../../components/Reels'
 import BannerCta from '../../components/BannerCta'
 import Faq from '../../components/Faq'
 import ContactForm from '../../components/ContactForm'
 import Footer from '../../components/Footer'
+import ServiceJsonLd from '../../components/ServiceJsonLd'
 import { getFaqData } from '@/lib/faq-server'
 import { getV2Content } from '@/lib/v2-content-server'
+import { pageMetadata } from '@/lib/metadata'
 
 type Params = { params: Promise<{ slug: string }> }
 
@@ -24,11 +28,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const service = getV2Content().servicePages[slug]
   if (!service) return {}
 
-  return {
+  return pageMetadata({
     title: service.metaTitle,
     description: service.metaDescription,
-  }
+    path: `/services/${slug}`,
+    image: service.image,
+    imageAlt: service.metaTitle,
+  })
 }
+
+const SHOW_SERVICE_CASES = false
+const SHOW_SERVICE_REELS = false
 
 export const revalidate = 300
 
@@ -45,6 +55,12 @@ export default async function V2ServiceDetailPage({ params }: Params) {
 
   return (
     <>
+      <ServiceJsonLd
+        slug={slug}
+        name={service.metaTitle}
+        description={service.metaDescription}
+        entries={entries}
+      />
       <Header />
       <main id="main-content">
         <ServiceHero service={service} headingId={`v2-service-${slug}-heading`} />
@@ -69,11 +85,19 @@ export default async function V2ServiceDetailPage({ params }: Params) {
             headingId={`v2-service-${slug}-how`}
           />
         ) : null}
+        {SHOW_SERVICE_CASES && service.cases ? (
+          <ServiceCases cases={service.cases} headingId={`v2-service-${slug}-cases`} />
+        ) : null}
+        {SHOW_SERVICE_REELS && service.cases ? <Reels /> : null}
         {service.banner ? (
           <BannerCta banner={service.banner} headingId={`v2-service-${slug}-banner`} />
         ) : null}
         {service.pricing ? (
-          <Pricing pricing={service.pricing} headingId={`v2-service-${slug}-pricing`} />
+          <Pricing
+            pricing={service.pricing}
+            headingId={`v2-service-${slug}-pricing`}
+            serviceLabel={getV2Content().serviceTabs.find((tab) => tab.id === slug)?.label}
+          />
         ) : null}
 
         <Faq heading={service.faqHeading} entries={entries} />

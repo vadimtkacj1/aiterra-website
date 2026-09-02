@@ -93,11 +93,11 @@ export function ProjectIntro({
       <div className={styles.introInner}>
         <div className={styles.copy} data-reveal-item>
           <nav className={styles.crumbs} aria-label={copy.crumb}>
-            <Link href="/v2">{copy.crumbHome}</Link>
+            <Link href="/">{copy.crumbHome}</Link>
             <span className={styles.crumbSep} aria-hidden="true">
               ·
             </span>
-            <Link href="/v2/projects">{copy.crumb}</Link>
+            <Link href="/projects">{copy.crumb}</Link>
             <span className={styles.crumbSep} aria-hidden="true">
               ·
             </span>

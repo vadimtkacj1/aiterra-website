@@ -50,7 +50,7 @@ export default function RelatedPosts({ posts }: { posts: BlogCard[] }) {
               key={post.slug}
               className={[styles.cell, pageOf(index) === offset ? '' : styles.parked].filter(Boolean).join(' ')}
             >
-              <Link href={`/v2/blog/${post.slug}`} className={styles.card}>
+              <Link href={`/blog/${post.slug}`} className={styles.card}>
                 <span className={styles.cover}>
                   {post.image ? (
                     // eslint-disable-next-line @next/next/no-img-element

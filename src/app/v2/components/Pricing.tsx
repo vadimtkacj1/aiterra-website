@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import ActionButton from './ActionButton'
 import Eyebrow from './Eyebrow'
+import PlanCta from './PlanCta'
 import SectionHeading from './SectionHeading'
 import {
   AlertsIcon,
@@ -44,9 +44,11 @@ type ServicePricing = NonNullable<ServicePage['pricing']>
 export default function Pricing({
   pricing,
   headingId,
+  serviceLabel,
 }: {
   pricing: ServicePricing
   headingId: string
+  serviceLabel?: string
 }) {
   return (
     <section className={styles.pricing} aria-labelledby={headingId}>
@@ -85,10 +87,10 @@ export default function Pricing({
 
                 <p className={styles.term}>{plan.term}</p>
 
-                <ActionButton
+                <PlanCta
                   href={plan.action.href}
                   label={plan.action.label}
-                  glyph="swap"
+                  service={[serviceLabel, plan.name].filter(Boolean).join(' - ')}
                   className={styles.cta}
                 />
 

@@ -15,7 +15,7 @@ export default function ProjectsRail() {
     <Rail
       title={heroRails.projectsTitle}
       advanceLabel={heroRails.projectsAdvance}
-      href="/v2/projects"
+      href="/projects"
     >
       <Marquee direction="left" speed={18} highlightCenter className={styles.track}>
         {heroProjects.map((project) => (

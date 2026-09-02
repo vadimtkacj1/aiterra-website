@@ -20,16 +20,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'he_IL',
-    url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'AITERRA | שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם',
-    description: 'סוכנות AITERRA מציעה מערכת 360° לצמיחה עסקית: בניית אתרים מתקדמת, קידום אורגני SEO, פרסום ממומן ואוטומציה עסקית. ייעוץ חינם – השאירו פרטים!',
     images: [{ url: '/images/og/og-aiterra-v2.png', width: 1200, height: 630, alt: 'AITERRA' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AITERRA | שיווק דיגיטלי, בניית אתרים ופיתוח מתקדם',
-    description: 'סוכנות AITERRA מציעה מערכת 360° לצמיחה עסקית: בניית אתרים מתקדמת, קידום אורגני SEO, פרסום ממומן ואוטומציה עסקית. ייעוץ חינם – השאירו פרטים!',
     images: ['/images/og/og-aiterra-v2.png'],
   },
   robots: {
@@ -62,9 +57,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Full-page splash while the page loads. Server-rendered inside
             dangerouslySetInnerHTML so React never reconciles it — the inline
             script below can hide it without fighting hydration. Hides on
-            window load, hard-capped at 2.5s so it can never trap the user;
+            DOMContentLoaded so it clears before images load and never masks
+            the LCP hero, hard-capped at 1.2s so it can never trap the user;
             bfcache restores (pageshow) hide it instantly. */}
         <div
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: `
 <div id="page-loader" aria-hidden="true">
@@ -81,9 +78,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     el.classList.add('page-loader--done');
     setTimeout(function () { el.style.display = 'none'; }, 500);
   }
-  if (document.readyState === 'complete') hide();
-  else window.addEventListener('load', hide, { once: true });
-  setTimeout(hide, 2500);
+  if (document.readyState !== 'loading') hide();
+  else document.addEventListener('DOMContentLoaded', hide, { once: true });
+  setTimeout(hide, 1200);
   window.addEventListener('pageshow', function (e) { if (e.persisted) hide(); });
 })();</script>`,
           }}

@@ -1,4 +1,4 @@
-import { GoogleMapsMark, MailIcon, PhoneIcon, PinIcon, WazeMark } from './icons'
+import { MailIcon, PhoneIcon, PinIcon } from './icons'
 import {
   CONTACT_EMAIL,
   CONTACT_PHONE,
@@ -63,22 +63,24 @@ export default function ContactDetails() {
             </span>
             <span className={styles.apps}>
               <a
-                href={GOOGLE_MAPS_OPEN_URL}
-                className={[styles.app, styles.appMaps].join(' ')}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={details.maps}
-              >
-                <GoogleMapsMark className={styles.appIcon} />
-              </a>
-              <a
                 href={WAZE_OPEN_URL}
                 className={[styles.app, styles.appWaze].join(' ')}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={details.waze}
               >
-                <WazeMark className={styles.appIcon} />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/deliver2.webp" alt="" className={styles.appFace} />
+              </a>
+              <a
+                href={GOOGLE_MAPS_OPEN_URL}
+                className={[styles.app, styles.appMaps].join(' ')}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={details.maps}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/deliver1.webp" alt="" className={styles.appIcon} />
               </a>
             </span>
           </li>

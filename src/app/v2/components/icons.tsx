@@ -187,32 +187,6 @@ export function PinIcon({ className }: IconProps) {
   )
 }
 
-export function GoogleMapsMark({ className }: IconProps) {
-  return (
-    <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-      <path d="M10 19c4-4.7 6.2-8 6.2-11A6.2 6.2 0 0 0 3.8 8c0 3 2.2 6.3 6.2 11Z" fill="#EA4335" />
-      <path d="M5.2 4.3 9 8.6l4.6-5.3A6.2 6.2 0 0 0 5.2 4.3Z" fill="#FBBC04" />
-      <circle cx="10" cy="8" r="2.3" fill="#ffffff" />
-    </svg>
-  )
-}
-
-export function WazeMark({ className }: IconProps) {
-  return (
-    <svg className={className} width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-      <path
-        d="M11 2.7c4.3 0 7.5 2.9 7.5 6.7 0 1-.2 1.7-.5 2.5-.4 1-.3 1.6.2 2.2.5.6.3 1.4-.5 1.6-1.6.4-3.4.6-5 .6H7.2a3.3 3.3 0 0 1-3.3-3.3V9.4c0-3.8 3-6.7 7.1-6.7Z"
-        fill="currentColor"
-      />
-      <circle cx="8.6" cy="8.9" r="1.15" fill="#33CCFF" />
-      <circle cx="13.4" cy="8.9" r="1.15" fill="#33CCFF" />
-      <path d="M8.4 12.1a3.1 3.1 0 0 0 5.2 0" stroke="#33CCFF" strokeWidth="1.3" strokeLinecap="round" fill="none" />
-      <circle cx="7.4" cy="17.7" r="1.7" fill="currentColor" />
-      <circle cx="14.3" cy="17.7" r="1.7" fill="currentColor" />
-    </svg>
-  )
-}
-
 export function OrdersIcon({ className }: IconProps) {
   return (
     <svg className={className} width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -447,6 +421,20 @@ export function TrainingIcon({ className }: IconProps) {
         d="M16.6 4h-4C11.2 4 10 5 10 6.3v9.4c0-.9 1-1.5 2.2-1.5h4.4V4Z"
         stroke="currentColor"
         strokeWidth="1.3"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+export function ExpandIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+      <path
+        d="M5.5 1.5H1.5V5.5M8.5 1.5H12.5V5.5M8.5 12.5H12.5V8.5M5.5 12.5H1.5V8.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
     </svg>

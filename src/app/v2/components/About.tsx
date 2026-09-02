@@ -12,6 +12,7 @@ type AboutProps = {
   heading?: string[]
   lede?: string
   roles?: AboutRole[]
+  roleHref?: string
   outro?: string
   action?: { label: string; href: string }
   headingId?: string
@@ -24,6 +25,7 @@ export default function About(props: AboutProps) {
     heading = about.heading,
     lede = about.lede,
     roles = aboutRoles,
+    roleHref,
     outro = about.outro,
     action = about.action,
     headingId = 'v2-about-heading',
@@ -48,7 +50,7 @@ export default function About(props: AboutProps) {
 
         <GridRule />
 
-        <AboutRoles roles={roles} />
+        <AboutRoles roles={roles} href={roleHref} />
 
         <GridRule />
 

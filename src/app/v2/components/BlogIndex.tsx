@@ -62,7 +62,7 @@ export default function BlogIndex({ posts }: { posts: BlogCard[] }) {
           </div>
 
           <nav className={styles.crumbs} aria-label={blog.crumbsLabel}>
-            <Link href="/v2" className={styles.crumbLink}>
+            <Link href="/" className={styles.crumbLink}>
               {blog.crumbHome}
             </Link>
             <ChevronPrevIcon className={styles.crumbChevron} />
@@ -93,7 +93,7 @@ export default function BlogIndex({ posts }: { posts: BlogCard[] }) {
                 className={[styles.cell, index === 0 ? styles.lead : ''].filter(Boolean).join(' ')}
                 data-col={columnOf(index)}
               >
-                <Link href={`/v2/blog/${post.slug}`} className={styles.card}>
+                <Link href={`/blog/${post.slug}`} className={styles.card}>
                   <span className={styles.cover}>
                     {post.image ? (
                       // eslint-disable-next-line @next/next/no-img-element

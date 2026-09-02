@@ -8,6 +8,9 @@ import MoreProjects from '../../components/MoreProjects'
 import { ProjectAbout, ProjectIntro, ProjectStory } from '../../components/ProjectCase'
 import { getAllPortfolioProjects, getProjectBySlug } from '@/lib/portfolio-server'
 import { getV2Content } from '@/lib/v2-content-server'
+import { pageMetadata } from '@/lib/metadata'
+import JsonLd from '@/components/seo/JsonLd'
+import { breadcrumbList, projectSchema } from '@/lib/schema'
 
 type Params = { params: Promise<{ slug: string }> }
 
@@ -21,10 +24,16 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params
   const project = getProjectBySlug(slug)
   if (!project) return {}
-  return {
+  return pageMetadata({
     title: project.metaTitle || project.title,
-    description: project.metaDescription || project.heroDescription,
-  }
+    description:
+      project.metaDescription ||
+      project.heroDescription ||
+      `${project.title} - פרויקט מתיק העבודות של AITERRA: ${project.category}.`,
+    path: `/projects/${slug}`,
+    image: project.image,
+    imageAlt: project.imageAlt || project.title,
+  })
 }
 
 export default async function V2ProjectPage({ params }: Params) {
@@ -38,6 +47,21 @@ export default async function V2ProjectPage({ params }: Params) {
 
   return (
     <>
+      <JsonLd data={projectSchema({
+        slug: project.slug,
+        title: project.title,
+        description: project.metaDescription || project.heroDescription || project.title,
+        image: project.image,
+        category: project.category,
+        tags: project.tags,
+        launchedAt: project.launchedAt,
+        liveSiteUrl: project.liveSiteUrl || project.externalUrl,
+      })} />
+      <JsonLd data={breadcrumbList([
+        { name: copy.crumbHome, path: '/' },
+        { name: copy.crumb, path: '/projects' },
+        { name: project.title, path: `/projects/${project.slug}` },
+      ])} />
       <Header />
       <main id="main-content">
         <ProjectIntro project={project} item={item} copy={copy} />

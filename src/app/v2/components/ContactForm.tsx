@@ -1,6 +1,6 @@
 'use client'
 
-import { useId, useState } from 'react'
+import { useEffect, useId, useState } from 'react'
 import type { FormEvent, ReactNode } from 'react'
 import Link from 'next/link'
 import SectionHeading from './SectionHeading'
@@ -25,6 +25,19 @@ export default function ContactForm({ children, source = 'v2-home', variant = 'p
   const headingId = useId()
   const fieldId = useId()
   const [status, setStatus] = useState<Status>('idle')
+  const [service, setService] = useState('')
+
+  useEffect(() => {
+    const handlePreset = (event: Event) => {
+      const detail = (event as CustomEvent<string>).detail
+      if (typeof detail === 'string' && detail) setService(detail)
+    }
+    window.addEventListener('v2:contact-service', handlePreset)
+    return () => window.removeEventListener('v2:contact-service', handlePreset)
+  }, [])
+
+  const options =
+    service && !serviceOptions.includes(service) ? [service, ...serviceOptions] : serviceOptions
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -134,14 +147,15 @@ export default function ContactForm({ children, source = 'v2-home', variant = 'p
                       id={`${fieldId}-service`}
                       className={[styles.input, styles.select].join(' ')}
                       name="service"
-                      defaultValue=""
+                      value={service}
+                      onChange={(event) => setService(event.target.value)}
                       aria-label={contact.fields.service}
                       required
                     >
                       <option value="" disabled>
                         {contact.fields.servicePlaceholder}
                       </option>
-                      {serviceOptions.map((option) => (
+                      {options.map((option) => (
                         <option key={option} value={option}>
                           {option}
                         </option>

@@ -32,7 +32,8 @@
   border-inline-end: 0;
 }
 
-.cell:first-child {
+.cell:not(.parked):has(+ .parked),
+.cell:last-child {
   border-inline-end: 1px solid var(--v2-hairline-ink);
 }
 

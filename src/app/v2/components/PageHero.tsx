@@ -17,24 +17,26 @@ export default function PageHero({ title, lede, headingId, crumb, action }: Page
   const { blog } = getV2Content()
   const lines = Array.isArray(title) ? title : [title]
   return (
-    <section className={styles.hero} aria-labelledby={headingId}>
+    <>
+      <link rel="preload" as="image" href="/videos/v2-hero-poster.webp" fetchPriority="high" />
+      <section className={styles.hero} aria-labelledby={headingId}>
       <div className={styles.media}>
         <video
           className={styles.mediaImage}
           src="/videos/v2-hero.mp4?v=2"
           poster="/videos/v2-hero-poster.webp"
-          autoPlay
+          data-autoplay=""
           muted
           loop
           playsInline
-          preload="auto"
+          preload="none"
           aria-hidden="true"
         />
       </div>
       <div className={styles.scrim} />
 
       <nav className={styles.crumbs} aria-label={blog.crumbsLabel}>
-        <Link href="/v2" className={styles.crumbLink}>
+        <Link href="/" className={styles.crumbLink}>
           {blog.crumbHome}
         </Link>
         <ChevronPrevIcon className={styles.crumbChevron} />
@@ -54,6 +56,7 @@ export default function PageHero({ title, lede, headingId, crumb, action }: Page
         </div>
         <div className={styles.column} />
       </div>
-    </section>
+      </section>
+    </>
   )
 }

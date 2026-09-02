@@ -7,7 +7,9 @@ export default function VideoAutopause() {
     const root = document.querySelector('.v2Root')
     if (!root || !('IntersectionObserver' in window)) return
 
-    const videos = Array.from(root.querySelectorAll<HTMLVideoElement>('video[autoplay]'))
+    const videos = Array.from(
+      root.querySelectorAll<HTMLVideoElement>('video[autoplay], video[data-autoplay]'),
+    )
     if (videos.length === 0) return
 
     const observer = new IntersectionObserver(

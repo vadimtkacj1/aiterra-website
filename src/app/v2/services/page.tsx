@@ -10,13 +10,17 @@ import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import { getFaqData } from '@/lib/faq-server'
 import { getV2Content } from '@/lib/v2-content-server'
+import { pageMetadata } from '@/lib/metadata'
+import JsonLd from '@/components/seo/JsonLd'
+import { breadcrumbList, faqPage, webPage } from '@/lib/schema'
 
 export function generateMetadata(): Metadata {
   const { servicesPage } = getV2Content()
-  return {
+  return pageMetadata({
     title: servicesPage.metaTitle,
-    description: servicesPage.lede,
-  }
+    description: servicesPage.metaDescription,
+    path: '/services',
+  })
 }
 
 export const revalidate = 300
@@ -33,6 +37,19 @@ export default function V2ServicesPage() {
 
   return (
     <>
+      <JsonLd data={webPage({
+        path: '/services',
+        name: servicesPage.metaTitle,
+        description: servicesPage.metaDescription,
+        type: 'CollectionPage',
+      })} />
+      <JsonLd data={breadcrumbList([
+        { name: 'בית', path: '/' },
+        { name: servicesPage.crumb, path: '/services' },
+      ])} />
+      {entries.length ? (
+        <JsonLd data={faqPage({ path: '/services', entries })!} />
+      ) : null}
       <Header />
       <main id="main-content">
         <PageHero

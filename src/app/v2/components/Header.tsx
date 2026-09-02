@@ -50,13 +50,13 @@ export default function Header() {
   const submenus: Record<string, NavLink[]> = {
     services: servicesStack.items.map((item) => ({
       label: item.title,
-      href: item.action.href.startsWith('/v2/services/')
+      href: item.action.href.startsWith('/services/')
         ? item.action.href
-        : `/v2/services#v2-service-${item.id}`,
+        : `/services#v2-service-${item.id}`,
     })),
     portfolio: portfolioFilters
       .filter((filter) => filter.id !== 'all')
-      .map((filter) => ({ label: filter.label, href: `/v2/projects?filter=${filter.id}` })),
+      .map((filter) => ({ label: filter.label, href: `/projects?filter=${filter.id}` })),
   }
 
   const navItems: NavItem[] = header.nav.map((item) => ({
@@ -85,7 +85,7 @@ export default function Header() {
     <>
       <header className={styles.bar} data-open={menuOpen || undefined}>
         <div className={styles.inner}>
-          <Link href="/v2" className={styles.brand} aria-label={header.brand} onClick={close}>
+          <Link href="/" className={styles.brand} aria-label={header.brand} onClick={close}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/aiterra-logo-dark.png"

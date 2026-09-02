@@ -43,6 +43,11 @@
   margin-top: 18px;
 }
 
+.system .heading > span {
+  white-space: normal;
+  text-wrap: balance;
+}
+
 .features {
   display: flex;
   flex-direction: column;

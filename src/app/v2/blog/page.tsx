@@ -8,13 +8,17 @@ import Footer from '../components/Footer'
 import { getAllPosts } from '@/lib/blog-server'
 import { formatPostDate, readingMinutes } from '../blogCategory'
 import { getV2Content } from '@/lib/v2-content-server'
+import { pageMetadata } from '@/lib/metadata'
+import JsonLd from '@/components/seo/JsonLd'
+import { breadcrumbList, webPage } from '@/lib/schema'
 
 export function generateMetadata(): Metadata {
   const { blog } = getV2Content()
-  return {
-    title: blog.title,
-    description: blog.lede,
-  }
+  return pageMetadata({
+    title: blog.metaTitle,
+    description: blog.metaDescription,
+    path: '/blog',
+  })
 }
 
 export const revalidate = 300
@@ -41,6 +45,16 @@ export default function V2BlogPage() {
 
   return (
     <>
+      <JsonLd data={webPage({
+        path: '/blog',
+        name: blog.metaTitle,
+        description: blog.metaDescription,
+        type: 'CollectionPage',
+      })} />
+      <JsonLd data={breadcrumbList([
+        { name: blog.crumbHome, path: '/' },
+        { name: blog.title, path: '/blog' },
+      ])} />
       <Header />
       <main id="main-content">
         <PageHero title={blog.title} lede={blog.lede} headingId="v2-blog-heading" />

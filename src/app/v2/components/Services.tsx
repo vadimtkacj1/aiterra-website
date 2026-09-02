@@ -125,9 +125,25 @@ export default function Services() {
 
           <div className={styles.visual}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/services-view-bg.jpg" alt="" className={styles.visualImage} />
+            <img
+              src="/images/services-view-bg.webp"
+              alt=""
+              className={styles.visualImage}
+              width={880}
+              height={820}
+              loading="lazy"
+              decoding="async"
+            />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/services-view.png" alt="" className={styles.visualCard} />
+            <img
+              src="/images/services-view.webp"
+              alt=""
+              className={styles.visualCard}
+              width={486}
+              height={462}
+              loading="lazy"
+              decoding="async"
+            />
           </div>
 
           <ActionButton

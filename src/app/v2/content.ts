@@ -14,24 +14,24 @@ export const header = {
   menuClose: 'סגירת תפריט',
   expand: 'פתיחה',
   collapse: 'סגירה',
-  cta: { label: 'לקבלת הצעת מחיר', href: '/v2/contact' },
+  cta: { label: 'לקבלת הצעת מחיר', href: '/contact' },
   nav: [
     {
       id: 'services',
       label: 'שירותים',
-      href: '/v2/services',
+      href: '/services',
       submenu: 'services',
       overviewLabel: 'כל השירותים',
     },
-    { id: 'blog', label: 'בלוג', href: '/v2/blog' },
+    { id: 'blog', label: 'בלוג', href: '/blog' },
     {
       id: 'portfolio',
       label: 'תיק עבודות',
-      href: '/v2/projects',
+      href: '/projects',
       submenu: 'portfolio',
       overviewLabel: 'כל הפרויקטים',
     },
-    { id: 'about', label: 'אודות הסוכנות', href: '/v2/about' },
+    { id: 'about', label: 'אודות הסוכנות', href: '/about' },
   ] satisfies HeaderNavItem[],
 }
 
@@ -42,8 +42,8 @@ export const hero = {
     'אנחנו בונים אתרי מכירות, אתרי תדמית ודפי נחיתה, מפתחים פתרונות מותאמים לעסקים',
     'ומנהלים את מערך השיווק הדיגיטלי - מקמפיינים במטא ובגוגל ועד קידום אורגני במנועי החיפוש.',
   ],
-  primaryAction: { label: 'בואו נדבר', href: '/v2/contact' },
-  secondaryAction: { label: 'לכל הפרויקטים', href: '/v2#v2-portfolio' },
+  primaryAction: { label: 'בואו נדבר', href: '/contact' },
+  secondaryAction: { label: 'לכל הפרויקטים', href: '/#v2-portfolio' },
 }
 
 export type HeroProject = {
@@ -58,35 +58,35 @@ export const heroProjects: HeroProject[] = [
   {
     id: 'olie',
     label: 'אולי 6',
-    href: '/v2#v2-portfolio',
+    href: '/#v2-portfolio',
     surface: '#e6ecf8',
     shot: '/images/portfolio/tiles/olie-6.webp',
   },
   {
     id: 'neot-sade',
     label: 'נאות שדה',
-    href: '/v2#v2-portfolio',
+    href: '/#v2-portfolio',
     surface: '#f4e8d2',
     shot: '/images/portfolio/tiles/neot-sade.webp',
   },
   {
     id: 'hofit',
     label: 'חופית קוסמטיקס',
-    href: '/v2#v2-portfolio',
+    href: '/#v2-portfolio',
     surface: '#e2ece0',
     shot: '/images/portfolio/tiles/hofit-cosmetics.webp',
   },
   {
     id: 'karin-cohen',
     label: 'קרין כהן',
-    href: '/v2#v2-portfolio',
+    href: '/#v2-portfolio',
     surface: '#ece2f3',
     shot: '/images/portfolio/tiles/karin-cohen.webp',
   },
   {
     id: 'brand-identity',
     label: 'מיתוג ותדמית',
-    href: '/v2#v2-portfolio',
+    href: '/#v2-portfolio',
     surface: '#f7ded6',
     shot: '/images/portfolio/tiles/brand-identity.webp',
   },
@@ -119,7 +119,7 @@ export const about = {
   heading: ['אתר, שיווק, קריאייטיב ופיתוח', 'בלי לנהל חמישה ספקים שונים.'],
   lede: 'כדי לבנות נוכחות דיגיטלית שבאמת עובדת, בדרך כלל צריך לחבר בין לא מעט אנשים: מי שמאפיין את הפרויקט, מי שמעצב אותו, מי שמפתח, מי שמנהל את הקמפיינים, מי שיוצר את התוכן ומי שאחראי על הקידום.',
   outro: 'הצוות שלנו מוכן להתחיל להרים את התדמית הדיגיטלית שלכם ברשתות. ואתם?',
-  action: { label: 'בואו נשבר את הפרויקט', href: '/v2/contact' },
+  action: { label: 'בואו נשבר את הפרויקט', href: '/contact' },
 }
 
 export type AboutRole = {
@@ -198,7 +198,7 @@ export const statItems: StatItem[] = [
 export const services = {
   lead: {
     text: 'בואו נהפוך את המספרים לתוצאות בעסק שלך',
-    action: { label: 'בואו נשבר את הפרויקט', href: '/v2/contact' },
+    action: { label: 'בואו נשבר את הפרויקט', href: '/contact' },
   },
   eyebrow: 'OUR SERVICES',
   heading: ['כל המעטפת לעסק שלך.'],
@@ -231,11 +231,11 @@ export const serviceTabs: ServiceTab[] = [
       'אנחנו לא רק מעלים מודעות ומחכים לתוצאות. אנחנו בונים את כל המהלך: מהבנת העסק והקהל, דרך האסטרטגיה והמסרים ועד לקריאייטיב שמניע בפיד.',
       'כך האתר, המודעות, התוכן והקמפיין לא מרגישים כמו חלקים נפרדים, אלא כמו מערכת אחת שנבנתה כדי להפוך תשומת לב לתנועה.',
     ],
-    action: { label: 'לכל שרותי השיווק שעשינו', href: '/v2#v2-portfolio-sales' },
+    action: { label: 'לכל שרותי השיווק שעשינו', href: '/#v2-portfolio-sales' },
   },
   {
-    id: 'custom',
-    label: 'פיתוח אישי',
+    id: 'development',
+    label: 'פיתוח',
     tags: [
       'אפיון מערכות',
       'פיתוח Full Stack',
@@ -249,7 +249,7 @@ export const serviceTabs: ServiceTab[] = [
       'אנחנו בונים מערכות מותאמות אישית במקום להילחם במגבלות של תבניות מוכנות, כך שכל תהליך בעסק מקבל בדיוק את הכלי שהוא צריך.',
       'הקוד נכתב כדי להחזיק לאורך זמן: מהיר, מאובטח וקל להרחבה כשהעסק גדל.',
     ],
-    action: { label: 'לכל פרויקטי הפיתוח שעשינו', href: '/v2#v2-portfolio-systems' },
+    action: { label: 'לכל פרויקטי הפיתוח שעשינו', href: '/#v2-portfolio-systems' },
   },
   {
     id: 'branding',
@@ -267,7 +267,7 @@ export const serviceTabs: ServiceTab[] = [
       'מיתוג אצלנו מתחיל בשאלה מי הלקוח ומה הוא צריך לזכור, ורק אחר כך מגיע לצבעים ולפונטים.',
       'התוצאה היא שפה אחת שעובדת נכון באתר, בקמפיין ובכל נקודת מגע עם הלקוח.',
     ],
-    action: { label: 'לכל פרויקטי המיתוג שעשינו', href: '/v2#v2-portfolio-brand' },
+    action: { label: 'לכל פרויקטי המיתוג שעשינו', href: '/#v2-portfolio-brand' },
   },
   {
     id: 'brochure',
@@ -285,7 +285,7 @@ export const serviceTabs: ServiceTab[] = [
       'אתר תדמית הוא לא ברושור דיגיטלי. הוא הרושם הראשון של העסק, ולכן הוא נבנה סביב המסר ולא סביב תבנית.',
       'כל עמוד מוביל את הגולש לפעולה הבאה, עם עיצוב שמרגיש מדויק וטעינה שלא גורמת לאף אחד לחכות.',
     ],
-    action: { label: 'לכל אתרי התדמית שעשינו', href: '/v2#v2-portfolio-brand' },
+    action: { label: 'לכל אתרי התדמית שעשינו', href: '/#v2-portfolio-brand' },
   },
   {
     id: 'ecommerce',
@@ -303,7 +303,7 @@ export const serviceTabs: ServiceTab[] = [
       'אנחנו בונים חנויות שמוכרות: מסלול קנייה קצר, עמודי מוצר ברורים וצ׳ק אאוט שלא מאבד לקוחות בדרך.',
       'הכל מחובר למערכות שאתם כבר עובדים איתן, כך שההזמנות, המלאי והדיוור מדברים אותה שפה.',
     ],
-    action: { label: 'לכל חנויות האונליין שעשינו', href: '/v2#v2-portfolio-sales' },
+    action: { label: 'לכל חנויות האונליין שעשינו', href: '/#v2-portfolio-sales' },
   },
 ]
 
@@ -315,16 +315,16 @@ export const portfolio = {
   prev: 'לפרויקט הקודם',
   next: 'לפרויקט הבא',
   outro: 'התרשמתם? בואו להציץ בשאר הפרויקטים שעבדנו עליהם',
-  action: { label: 'לכל הפרויקטים שלנו', href: '/v2/projects' },
+  action: { label: 'לכל הפרויקטים שלנו', href: '/projects' },
 }
 
 export const projectsPage = {
   title: ['תיק עבודות', 'פרויקטים נבחרים'],
   crumb: 'תיק עבודות',
   lede: 'מביסוס תשתיות טכנולוגיות ועד להבאת לקוחות משלמים. אנו מספקים מעטפת שירותים מלאה שתפורה לצרכים של העסק שלכם, כדי להפוך כל נכס דיגיטלי למנוע של צמיחה.',
-  action: { label: 'התחילו פרויקט חדש', href: '/v2/contact' },
+  action: { label: 'התחילו פרויקט חדש', href: '/contact' },
   faqHeading: ['לפני שמתחילים', 'כמה דברים שכדאי לדעת.'],
-  metaTitle: 'תיק עבודות',
+  metaTitle: 'תיק עבודות - אתרים, חנויות ומערכות שבנינו',
   metaDescription:
     'הפרויקטים שבנינו ב-AITERRA: אתרי מכירות, אתרי תדמית ומערכות ניהול – עם הכלים, הקידום והליווי שהביאו אותם לתוצאות.',
 }
@@ -351,7 +351,7 @@ export const projectPage = {
 
 export const projectBanner = {
   heading: 'בואו נשגר את הפרויקט שלך',
-  action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
+  action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/contact' },
 }
 
 export const portfolioFilters = [
@@ -376,7 +376,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'אלי בן יצחק – עיצוב שיער',
     tags: ['אתר תדמית', 'מיתוג', 'קידום אורגני'],
     shot: '/images/portfolio/cards/eli-ben-yitzhak.webp',
-    href: '/v2/projects/eli-ben-yitzhak',
+    href: '/projects/eli-ben-yitzhak',
     category: 'brand',
   },
   {
@@ -384,7 +384,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'נאות שדה',
     tags: ['חנות אונליין', 'סליקה', 'מועדון לקוחות'],
     shot: '/images/portfolio/cards/neot-sade.webp',
-    href: '/v2/projects/neot-sade',
+    href: '/projects/neot-sade',
     category: 'sales',
   },
   {
@@ -392,7 +392,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Sous Chef',
     tags: ['מערכת', 'פיתוח', 'UI/UX'],
     shot: '/images/portfolio/cards/sous-chef.webp',
-    href: '/v2/projects/sous-chef',
+    href: '/projects/sous-chef',
     category: 'systems',
   },
   {
@@ -400,7 +400,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'חופית קוסמטיקס',
     tags: ['אתר מכירות', 'קידום', 'עיצוב'],
     shot: '/images/portfolio/cards/hofit-cosmetics.webp',
-    href: '/v2/projects/hofit-cosmetics',
+    href: '/projects/hofit-cosmetics',
     category: 'sales',
   },
   {
@@ -408,7 +408,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'מעיין ועקנין — קוסמטיקה קלינית',
     tags: ['דף נחיתה', 'נגישות', 'לידים'],
     shot: '/images/portfolio/cards/maayan-cosmetics.webp',
-    href: '/v2/projects/maayan-cosmetics',
+    href: '/projects/maayan-cosmetics',
     category: 'brand',
   },
   {
@@ -416,7 +416,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Olie 6',
     tags: ['Shopify', 'חנות אונליין', 'UI/UX'],
     shot: '/images/portfolio/cards/olie-6.webp',
-    href: '/v2/projects/olie-6',
+    href: '/projects/olie-6',
     category: 'sales',
   },
   {
@@ -424,7 +424,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'ALOVA — טיפוח שיער',
     tags: ['Shopify', 'חנות אונליין', 'UI/UX'],
     shot: '/images/portfolio/cards/alova.webp',
-    href: '/v2/projects/alova',
+    href: '/projects/alova',
     category: 'sales',
   },
   {
@@ -432,7 +432,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'חנות דיגיטלית',
     tags: ['חנות אונליין', 'פיתוח', 'סליקה'],
     shot: '/images/portfolio/shots/ecommerce-store.webp',
-    href: '/v2/projects/ecommerce-store',
+    href: '/projects/ecommerce-store',
     category: 'sales',
   },
   {
@@ -440,7 +440,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'רם וחיים — שיווק נדל"ן',
     tags: ['קידום אורגני', 'ניהול מוניטין', 'נכסים דיגיטליים'],
     shot: '/images/portfolio/cards/brand-identity.webp',
-    href: '/v2/projects/brand-identity',
+    href: '/projects/brand-identity',
     category: 'brand',
   },
   {
@@ -448,7 +448,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'אבי ייעוץ משכנתאות',
     tags: ['מיתוג', 'דפי נחיתה', 'קמפיינים'],
     shot: '/images/portfolio/cards/marketing-platform.webp',
-    href: '/v2/projects/marketing-platform',
+    href: '/projects/marketing-platform',
     category: 'brand',
   },
   {
@@ -456,7 +456,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Alexandra Patsina',
     tags: ['אתר תדמית', 'מיתוג', 'UI/UX'],
     shot: '/images/portfolio/shots/alexandra-patsina.webp',
-    href: '/v2/projects/alexandra-patsina',
+    href: '/projects/alexandra-patsina',
     category: 'brand',
   },
   {
@@ -464,7 +464,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'קארין כהן — אקדמיה לריסים',
     tags: ['דף נחיתה', 'לידים', 'קמפיינים'],
     shot: '/images/portfolio/cards/karin-cohen.webp',
-    href: '/v2/projects/karin-cohen',
+    href: '/projects/karin-cohen',
     category: 'brand',
   },
 ]
@@ -654,6 +654,24 @@ export const faqEntries: FaqEntry[] = [
     answer:
       'ההשקה היא רק ההתחלה. אחרי העלייה לאוויר אנחנו עוקבים אחרי הנתונים, מבצעים אופטימיזציה שוטפת לקמפיינים ולעמודים, דואגים לעדכוני אבטחה וגיבויים לאתר ונשארים זמינים לכל שינוי או הרחבה. אתם מקבלים דוחות ברורים ואיש קשר אחד שמלווה אתכם לאורך כל הדרך.',
   },
+  {
+    id: 'pricing',
+    question: 'כמה עולה לבנות אתר או דף נחיתה?',
+    answer:
+      'המחיר נקבע לפי סוג הפרויקט וההיקף שלו. דף נחיתה ממוקד מתחיל בכמה אלפי שקלים, אתר תדמית לעסק נמצא בטווח רחב יותר לפי מספר העמודים והתכנים, ובניית חנות איקומרס או מערכת מותאמת אישית מתומחרת בנפרד לפי המורכבות. אנחנו בונים הצעת מחיר שקופה לפי הצרכים המדויקים שלכם, בלי עלויות נסתרות — השאירו פרטים ונחזור אליכם עם הערכה מסודרת.',
+  },
+  {
+    id: 'integrations',
+    question: 'האם אתם מתחברים למערכות ולתוכנות שכבר יש לנו בעסק?',
+    answer:
+      'כן. אנחנו מחברים את האתר ואת מערך השיווק למערכות שאתם כבר עובדים איתן: מערכות CRM כמו Fireberry, Powerlink ו-Priority, תוכנות הנהלת חשבונות והפקת חשבוניות כמו חשבשבת, Morning (חשבונית ירוקה), iCount, Greeninvoice ו-Rivhit, וכן סליקת אשראי, דיוור, בוטים לוואטסאפ ומערכות אוטומציה. כך הלידים, ההזמנות והתשלומים זורמים אוטומטית למקום הנכון, בלי הזנה ידנית כפולה.',
+  },
+  {
+    id: 'accessibility',
+    question: 'האם האתר יהיה נגיש ויעמוד בתקן הנגישות הישראלי?',
+    answer:
+      'בהחלט. אנחנו בונים אתרים נגישים בהתאם לתקן הישראלי ת"י 5568 (התואם את הנחיות WCAG 2.0 ברמה AA): ניווט מלא במקלדת, ניגודיות צבעים תקינה, תמיכה בקוראי מסך והצהרת נגישות באתר. עמידה בתקן חוסכת מכם חשיפה לתביעות לפי חוק שוויון זכויות לאנשים עם מוגבלות, וגם מרחיבה את קהל הלקוחות שיכול להשתמש באתר בנוחות.',
+  },
 ]
 
 export type FooterLink = {
@@ -674,29 +692,29 @@ export const footer = {
       id: 'services',
       title: 'שירותים',
       links: [
-        { label: 'אתרים', href: '/v2/services#v2-service-brochure' },
-        { label: 'שיווק', href: '/v2/services#v2-service-marketing' },
-        { label: 'קמפיין בגוגל', href: '/v2/services#v2-service-marketing' },
-        { label: 'פיתוח אישי', href: '/v2/services#v2-service-custom' },
+        { label: 'אתרים', href: '/services#v2-service-brochure' },
+        { label: 'שיווק', href: '/services#v2-service-marketing' },
+        { label: 'קמפיין בגוגל', href: '/services#v2-service-marketing' },
+        { label: 'פיתוח', href: '/services#v2-service-development' },
       ],
     },
     {
       id: 'general',
       title: 'כללי',
       links: [
-        { label: 'תיק עבודות', href: '/v2/projects' },
-        { label: 'אודותינו', href: '/v2/about' },
-        { label: 'בלוג', href: '/v2/blog' },
-        { label: 'יצירת קשר', href: '/v2/contact' },
+        { label: 'תיק עבודות', href: '/projects' },
+        { label: 'אודותינו', href: '/about' },
+        { label: 'בלוג', href: '/blog' },
+        { label: 'יצירת קשר', href: '/contact' },
       ],
     },
   ] satisfies FooterColumn[],
   contactTitle: 'יצירת קשר',
   socialLabels: { instagram: 'אינסטגרם', facebook: 'פייסבוק' },
   legal: [
-    { label: 'הצהרת נגישות', href: '/v2/accessibility-statement' },
-    { label: 'תקנון ותנאי שימוש', href: '/v2/terms-of-use' },
-    { label: 'מדיניות פרטיות', href: '/v2/privacy-policy' },
+    { label: 'הצהרת נגישות', href: '/accessibility-statement' },
+    { label: 'תקנון ותנאי שימוש', href: '/terms-of-use' },
+    { label: 'מדיניות פרטיות', href: '/privacy-policy' },
   ] satisfies FooterLink[],
   copyright: 'Copyright ©Aiterra. All rights reserved',
 }
@@ -818,9 +836,9 @@ export const contact = {
   serviceOther: 'אחר',
   consent: {
     before: 'קראתי ואני מסכים/ה ',
-    terms: { label: 'לתנאי השימוש', href: '/v2/terms-of-use' },
+    terms: { label: 'לתנאי השימוש', href: '/terms-of-use' },
     joiner: ' ',
-    privacy: { label: 'ולמדיניות הפרטיות', href: '/v2/privacy-policy' },
+    privacy: { label: 'ולמדיניות הפרטיות', href: '/privacy-policy' },
     after: '.',
   },
   submit: 'התייעצות ללא עלות',
@@ -834,6 +852,9 @@ export const contact = {
 
 export const blog = {
   title: 'בלוג',
+  metaTitle: 'בלוג דיגיטל - מדריכים לבניית אתרים וקידום',
+  metaDescription:
+    'מדריכים מעשיים ותובנות על בניית אתרים, קידום אורגני בגוגל, קמפיינים ממומנים ואוטומציה עסקית - מהצוות המקצועי של AITERRA.',
   lede: 'תובנות מקצועיות, מדריכים מעשיים וחדשות מעולם הדיגיטל. הידע שלנו - בשבילכם.',
   crumbHome: 'בית',
   crumbsLabel: 'פירורי לחם',
@@ -870,6 +891,9 @@ export const article = {
 
 export const aboutPage = {
   title: 'אודותינו',
+  metaTitle: 'הסוכנות שלנו - צוות, ניסיון וגישה לעבודה',
+  metaDescription:
+    'AITERRA היא סוכנות פיתוח ושיווק דיגיטלי מגוש דן. הכירו את הצוות, שיטת העבודה והניסיון שמאחורי מאות פרויקטים לעסקים בישראל.',
   lede: 'הדיגיטל מתקדם – אנחנו דואגים שתהיו צעד אחד לפניו.',
   eyebrow: 'ABOUT AITERRA',
   heading: ['טכנולוגיה שבונה אתרים.', 'אסטרטגיה שבונה עסקים.'],
@@ -953,23 +977,15 @@ export const servicesStack = {
       image: '/images/service1.webp',
       tags: ['קטלוג מוצרים', 'מערכת Aiterra', 'הקמת חנות', 'סליקה', 'ניהול הזמנות', 'משלוחים'],
       text: 'חנות אונליין שמותאמת למכירה, לניהול ולצמיחה. עם תהליך רכישה ברור וחוויה שעובדת נכון בכל מכשיר.',
-      action: { label: 'לפרטים נוספים', href: '/v2/services/ecommerce' },
+      action: { label: 'לפרטים נוספים', href: '/services/ecommerce' },
     },
     {
-      id: 'custom',
-      title: 'פיתוח אישי',
+      id: 'development',
+      title: 'פיתוח',
       image: '/images/service2.webp',
       tags: ['מערכת מותאמת אישית', 'אוטומציה', 'פורטלים', 'מערכות ניהול', 'API', 'אינטגרציות'],
       text: 'פיתוח מערכות ופתרונות דיגיטליים לפי צורך עסקי ספציפי. בלי להתפשר על פתרונות מדף שלא באמת מתאימים.',
-      action: { label: 'לפרטים נוספים', href: '/v2/services/custom' },
-    },
-    {
-      id: 'brochure',
-      title: 'אתרי תדמית',
-      image: '/images/service3.webp',
-      tags: ['אפיון וחוויית משתמש', 'עיצוב UI', 'כתיבת תוכן', 'התאמה למובייל', 'מהירות טעינה', 'הטמעת אנליטיקס'],
-      text: 'אתר תדמית הוא הרושם הראשון של העסק, ולכן הוא נבנה סביב המסר ולא סביב תבנית. כל עמוד מוביל את הגולש לפעולה הבאה.',
-      action: { label: 'לפרטים נוספים', href: '/v2/services/brochure' },
+      action: { label: 'לפרטים נוספים', href: '/services/development' },
     },
     {
       id: 'marketing',
@@ -977,7 +993,15 @@ export const servicesStack = {
       image: '/images/service4.webp',
       tags: ['אסטרטגיה וקהל יעד', 'קמפיינים במטא', 'קמפיינים בגוגל', 'קריאייטיב', 'צילום ועריכה', 'קידום אורגני'],
       text: 'אנחנו בונים את כל המהלך: מהבנת העסק והקהל, דרך האסטרטגיה והמסרים ועד לקריאייטיב שמניע בפיד.',
-      action: { label: 'לפרטים נוספים', href: '/v2/services/marketing' },
+      action: { label: 'לפרטים נוספים', href: '/services/marketing' },
+    },
+    {
+      id: 'branding',
+      title: 'מיתוג ועיצוב',
+      image: '/images/service-branding.webp',
+      tags: ['מיתוג עסקי', 'שפה ויזואלית', 'עיצוב אתרים', 'UX/UI', 'דפי נחיתה', 'עיצוב אפליקציות'],
+      text: 'מיתוג עסקי, עיצוב אתרים וחוויית משתמש — מקונספט ראשוני ועד ממשק מוכן לפיתוח. עיצוב שלא רק נראה טוב, אלא גם עובד.',
+      action: { label: 'לפרטים נוספים', href: '/services/branding' },
     },
   ] satisfies ServiceStackItem[],
 }
@@ -1026,6 +1050,16 @@ export type ServicePlan = {
   features: { icon: ServicePlanIcon; label: string }[]
 }
 
+export type ServiceCase = {
+  id: string
+  title: string
+  tags: string[]
+  shot: string
+  href: string
+  subtitle?: string
+  metrics?: { label: string; value: string }[]
+}
+
 export type ServicePage = {
   id: string
   crumb: string
@@ -1069,6 +1103,14 @@ export type ServicePage = {
     heading: string
     action: { label: string; href: string }
   }
+  cases?: {
+    eyebrow: string
+    heading: string[]
+    items: ServiceCase[]
+    cardAction: string
+    prev: string
+    next: string
+  }
   faqHeading: string[]
   faqEntries?: { question: string; answer: string }[]
 }
@@ -1082,8 +1124,8 @@ export const servicePages: Record<string, ServicePage> = {
     subhead: 'המומחיות שלנו ב-E-Commerce',
     lede: 'פיתוח בקוד מלא מבוסס מערכת Aiterra - מהיר, מותאם אישית, עם ליווי ועדכונים שוטפים גם לאחר ההשקה.',
     image: '/images/service1.webp',
-    action: { label: 'לשיחת ייעוץ ואפיון', href: '/v2/contact' },
-    metaTitle: 'אתרי E-Commerce',
+    action: { label: 'לשיחת ייעוץ ואפיון', href: '/contact' },
+    metaTitle: 'בניית חנות אינטרנטית לעסקים - פיתוח בקוד מלא',
     metaDescription:
       'בניית חנות אונליין בקוד מלא על מערכת Aiterra: קטלוג מוצרים, סליקה, ניהול הזמנות ומשלוחים, עם ליווי ועדכונים שוטפים גם אחרי ההשקה.',
     advantages: {
@@ -1153,7 +1195,7 @@ export const servicePages: Record<string, ServicePage> = {
           text: 'דוחות מכירות והתנהגות גולשים, חיבור ל-Google Analytics ולפיקסלים, ניהול מטא-דאטה, כתובות ידידותיות ומהירות טעינה גבוהה.',
         },
       ] satisfies ServiceSystemFeature[],
-      action: { label: 'בואו נתאים את החנות שלכם', href: '/v2/contact' },
+      action: { label: 'בואו נתאים את החנות שלכם', href: '/contact' },
     },
     howItWorks: {
       eyebrow: 'HOW IT WORKS',
@@ -1192,7 +1234,7 @@ export const servicePages: Record<string, ServicePage> = {
           price: '500',
           priceNote: '₪ לחודש',
           term: 'בהתחייבות ל-12 חודשים',
-          action: { label: 'הקימו את החנות שלכם', href: '/v2/contact' },
+          action: { label: 'הקימו את החנות שלכם', href: '/contact' },
           featuresTitle: 'מה תקבלו?',
           features: [
             { icon: 'storefront', label: 'חיבור לחנות דיגיטלית אחת' },
@@ -1208,7 +1250,7 @@ export const servicePages: Record<string, ServicePage> = {
           price: '800',
           priceNote: '₪ לחודש',
           term: 'בהתחייבות ל-12 חודשים',
-          action: { label: 'הקימו את החנות שלכם', href: '/v2/contact' },
+          action: { label: 'הקימו את החנות שלכם', href: '/contact' },
           badge: 'הכי משתלם',
           featured: true,
           featuresTitle: 'כל מה שקיים ב-Basic וגם:',
@@ -1226,7 +1268,7 @@ export const servicePages: Record<string, ServicePage> = {
           audience: 'לארגונים ועסקים שצריכים פתרון מותאם',
           price: 'בהתאמה אישית',
           term: 'בהתחייבות ל-12 חודשים',
-          action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
+          action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/contact' },
           featuresTitle: 'כל מה שקיים ב-Pro וגם:',
           features: [
             { icon: 'stores', label: 'ניהול מספר חנויות ממערכת אחת' },
@@ -1239,12 +1281,12 @@ export const servicePages: Record<string, ServicePage> = {
       ] satisfies ServicePlan[],
       footnote: {
         text: 'יש לכם שאלות?',
-        link: { label: 'פנו אלינו ונדבר', href: '/v2/contact' },
+        link: { label: 'פנו אלינו ונדבר', href: '/contact' },
       },
     },
     banner: {
       heading: 'רוצים לראות איך החנות שלכם תיראה?',
-      action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
+      action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/contact' },
     },
     faqHeading: ['לפני שמתחילים', 'כמה דברים שכדאי לדעת.'],
     faqEntries: [
@@ -1285,207 +1327,154 @@ export const servicePages: Record<string, ServicePage> = {
       },
     ],
   },
-  custom: {
-    id: 'custom',
-    crumb: 'פיתוח אישי',
-    eyebrow: 'פיתוח אישי',
-    heading: ['מערכת שנבנית סביב', 'תהליכי העבודה של העסק'],
-    subhead: 'המומחיות שלנו בפיתוח מותאם אישית',
-    lede: 'פיתוח בקוד מלא של מערכות, פורטלים ואוטומציות - בדיוק לפי הצורך העסקי, עם ליווי ועדכונים שוטפים גם אחרי העלייה לאוויר.',
-    image: '/images/service2.webp',
-    action: { label: 'לשיחת ייעוץ ואפיון', href: '/v2/contact' },
-    metaTitle: 'פיתוח אישי',
+  development: {
+    id: 'development',
+    crumb: 'פיתוח',
+    eyebrow: 'פיתוח',
+    heading: ['הופכים רעיון מורכב', 'למערכת שעובדת'],
+    subhead: 'פיתוח / תוכנה ומערכות בהתאמה אישית',
+    lede: 'פיתוח תוכנה, אפליקציות ומערכות מותאמות אישית — מאפיון מדויק, דרך חלוקה לאבני\u00a0דרך נוחות ועד לביצוע בקוד נקי ומאובטח.',
+    image: '/images/service-dev-hero.webp',
+    action: { label: 'לקביעת שיחת אפיון', href: '/contact' },
+    metaTitle: 'פיתוח מערכות ואוטומציה בהתאמה אישית',
     metaDescription:
       'פיתוח מערכות ופתרונות דיגיטליים בהתאמה אישית: אפיון תהליכים, מסכי ניהול, אוטומציות, פורטלים ואינטגרציות דרך API, עם ליווי ותמיכה שוטפת.',
     advantages: {
-      eyebrow: 'OUR ADVANTAGES',
-      heading: ['היתרונות הייחודיים שלנו'],
-      lede: 'מה מיוחד בשירות שלנו בפיתוח מערכות מותאמות אישית?',
+      eyebrow: 'SOLUTIONS',
+      heading: ['מה אנחנו מפתחים?'],
+      lede: 'פתרונות תוכנה ומערכות בהתאמה אישית לכל צורך עסקי',
       roles: [
         {
-          id: 'spec',
-          title: 'אפיון שמתחיל מהתהליך',
-          art: '/images/service-page-discovery.webp',
-          text: 'ממפים את תהליכי העבודה, המשתמשים והנתונים, ומגדירים אילו מסכים ואוטומציות באמת יחסכו לכם זמן ביום-יום.',
-        },
-        {
-          id: 'code',
-          title: 'פיתוח בקוד ייעודי',
-          art: '/images/service-page1.webp',
-          text: 'בלי פתרון מדף שמכתיב לכם איך לעבוד. המערכת נבנית סביב העסק, עם ביצועים גבוהים וקוד שאפשר להרחיב בהמשך.',
-        },
-        {
-          id: 'scale',
-          title: 'ארכיטקטורה שגדלה איתכם',
-          art: '/images/service-page3.webp',
-          text: 'מוסיפים מודולים, משתמשים ואינטגרציות בלי לבנות הכל מחדש. ההרחבות מתוכננות כבר בשלב האפיון.',
-        },
-        {
-          id: 'support',
-          title: 'שירות ותמיכה 24/7',
-          art: '/images/service-page4.webp',
-          text: 'ליווי שוטף אחרי העלייה לאוויר: עדכונים, ניטור, גיבויים ומענה מהיר כשצריך לשנות תהליך.',
-        },
-      ] satisfies AboutRole[],
-    },
-    system: {
-      eyebrow: 'MANAGEMENT SYSTEM',
-      heading: ['מערכת ניהול בהתאמה אישית'],
-      art: '/images/management-console.webp',
-      features: [
-        {
-          id: 'flows',
-          icon: 'orders',
-          title: 'ניהול תהליכים ומשימות',
-          text: 'מסכי עבודה, סטטוסים, הקצאת משימות והתראות אוטומטיות - בדיוק לפי התהליך שכבר קיים אצלכם בעסק.',
-        },
-        {
-          id: 'users',
-          icon: 'club',
-          title: 'משתמשים והרשאות',
-          text: 'ניהול משתמשים, תפקידים והרשאות ברמת המסך והשדה, כך שכל אחד בצוות רואה בדיוק את מה שהוא צריך.',
+          id: 'crm',
+          title: 'מערכות CRM ו-ERP מותאמות אישית',
+          art: '/images/service-dev-icon4.webp',
+          text: 'מרכזים לידים, לקוחות, מכירות ותהליכים פנימיים לפי מבנה הארגון שלכם. השדות, הסטטוסים וההרשאות נקבעים באפיון, והדוחות נחתכים לפי נציג, מקור ליד או שלב בעסקה.',
         },
         {
           id: 'automation',
-          icon: 'sales',
-          title: 'אוטומציות שחוסכות עבודה ידנית',
-          text: 'טריגרים, התראות, מיילים ועדכוני סטטוס אוטומטיים במקום העברות ידניות בין אקסלים ומערכות.',
+          title: 'אוטומציות עסקיות',
+          art: '/images/service-dev-icon2.webp',
+          text: 'חיבור בין המערכות הקיימות דרך API, סנכרון נתונים אוטומטי וטריגרים שמריצים את המשימות החוזרות במקום עבודה ידנית כל בוקר, עם התראה כשתהליך נתקע.',
         },
         {
-          id: 'data',
+          id: 'bots',
+          title: 'בוטים חכמים',
+          art: '/images/service-dev-icon3.webp',
+          text: 'בוט בוואטסאפ, בטלגרם או באתר שעונה על השאלות החוזרות, אוסף פרטים וקובע פגישות - וכשהשיחה חורגת מהתסריט היא עוברת לנציג.',
+        },
+        {
+          id: 'apps',
+          title: 'אפליקציות Mobile & Web',
+          art: '/images/service-dev-icon1.webp',
+          text: 'אפליקציה אחת שרצה על iOS, על אנדרואיד ובדפדפן, עם התחברות משתמשים, התראות Push וסנכרון מול השרת - כך שכולם עובדים על אותם נתונים.',
+        },
+      ] satisfies AboutRole[],
+      outro: 'הצוות שלנו מוכן לאפיין, לפתח ולהטמיע את הפתרון המדויק עבורכם. מתחילים?',
+      action: { label: 'בואו נדבר על הפרויקט שלכם', href: '/contact' },
+    },
+    system: {
+      eyebrow: 'OUR TECH ECOSYSTEM',
+      heading: ['נבחרת המומחים', 'שעומדת לרשותך'],
+      art: '/images/service-dev.webp',
+      features: [
+        {
+          id: 'frontend',
           icon: 'catalog',
-          title: 'נתונים ומסמכים במקום אחד',
-          text: 'ניהול לקוחות, ספקים, מלאי או כל ישות אחרת שהעסק עובד איתה, כולל קבצים ומסמכים מצורפים.',
+          title: 'Frontend Developers',
+          text: 'כל מה שהמשתמש נוגע בו נבנה כאן - טפסים, טבלאות, פילטרים ומצבי טעינה, שגיאה וריק. הרכיבים תומכי RTL ונטענים מהר, כך שהצוות שלכם עובד גם מהטלפון.',
         },
         {
-          id: 'analytics',
+          id: 'backend',
           icon: 'analytics',
-          title: 'דוחות ודשבורדים',
-          text: 'תמונת מצב בזמן אמת על התהליכים העסקיים, עם דוחות שאפשר לחתוך לפי כל פרמטר ולייצא החוצה.',
+          title: 'Backend Developers',
+          text: 'מאחורי המסכים נבנים בסיס הנתונים, ה-API והלוגיקה העסקית - הרשאות, טריגרים ותהליכי רקע ששומרים על נתונים נכונים גם כשכמה משתמשים עובדים על אותה רשומה.',
+        },
+        {
+          id: 'mobile',
+          icon: 'orders',
+          title: 'Mobile App Developers',
+          text: 'האפליקציה לאנדרואיד ול-iOS נבנית מעל אותו API של המערכת - דיווח מהשטח, התראות פוש ועבודה גם בלי רשת. מטפלים גם בהגשה לחנויות ובעדכוני הגרסה שאחרי ההשקה.',
+        },
+        {
+          id: 'design',
+          icon: 'club',
+          title: 'UI/UX Designers & גרפיקאים',
+          text: 'עוד לפני שורת הקוד הראשונה אתם רואים איך המערכת תיראה ומאשרים - מיפוי מסכים, אבטיפוס, עיצוב בשפה של המותג והעברה לפיתוח עם רכיבים, מרווחים ומידות.',
+        },
+        {
+          id: 'integration',
+          icon: 'sales',
+          title: 'מומחי אינטגרציה וחומרה',
+          text: 'מחברים את המערכת שלכם להנהלת חשבונות, סליקה ומשלוחים, וגם לחומרה בשטח - סורקי ברקוד ומדפסות מדבקות. מגדירים מיפוי שדות, וובהוקים וטיפול בכשלי סנכרון, כך שנתון נרשם פעם אחת.',
         },
       ] satisfies ServiceSystemFeature[],
-      action: { label: 'בואו נאפיין את המערכת שלכם', href: '/v2/contact' },
+      action: { label: 'בואו נדבר על הפרויקט שלכם', href: '/contact' },
     },
     howItWorks: {
-      eyebrow: 'HOW IT WORKS',
-      heading: ['איך זה עובד? פשוט מאוד.'],
-      lede: 'פיתוח מותאם אישית לא חייב להיות מסובך. אנחנו מחלקים את הדרך לשלושה שלבים ברורים, כדי שתמיד תדעו איפה הפרויקט עומד ומה השלב הבא.',
+      eyebrow: 'METHODOLOGY',
+      heading: ['המתודולוגיה שלנו'],
+      lede: 'תהליך עבודה שקוף ומסודר — מאפיון מלא לחלוקה לפי שלבים, עד לפיתוח ובדיקות. בלי הפתעות.',
       steps: [
         {
-          id: 'discovery',
-          title: 'נבין את הצרכים שלך בשיחת איפיון',
-          text: 'נכיר את העסק, תהליכי העבודה, האתגרים והמטרות שלך. יחד נמפה את הצרכים ונגדיר מה המערכת צריכה לעשות ואיפה היא חוסכת הכי הרבה זמן.',
+          id: 'spec',
+          title: 'אפיון טכנולוגי ומוצרי מקיף',
+          text: 'הגדרה ברורה של כל מסכי המערכת, תרשימי הזרימה, ה-\u2060Database והארכיטקטורה לפני כתיבת שורת קוד אחת.',
           art: '/images/howitwork1.webp',
         },
         {
-          id: 'build',
-          title: 'נבנה את המערכת בקוד ייעודי',
-          text: 'נתכנן ארכיטקטורה, נבנה את המסכים והאוטומציות ונחבר את המערכות הקיימות. לאורך הדרך תקבלו גרסאות לבדיקה, כדי שתוכלו להעיר תוך כדי ולא רק בסוף.',
+          id: 'planning',
+          title: 'חישוב זמנים ותכנון תקציב מדויק',
+          text: 'לוחות זמנים ריאליים ומוגדרים מראש ללא הפתעות.',
           art: '/images/howitwork2.webp',
         },
         {
-          id: 'launch',
-          title: 'נטמיע, נדריך ונלווה',
-          text: 'נעלה לאוויר, נדריך את הצוות ונלווה אתכם גם אחרי ההשקה: שיפורים, תוספות ותיקונים לפי מה שעולה מהשימוש בפועל.',
+          id: 'milestones',
+          title: 'חלוקה לפרקים (Milestones\u00a0/\u00a0Sprints)',
+          text: 'עבודה לפי שלבים מוגדרים שמאפשרים ללקוח לבדוק, לאשר ולהתקדם בקצב שנוח לו.',
           art: '/images/howitwork3.webp',
         },
       ] satisfies ServiceStep[],
     },
-    pricing: {
-      eyebrow: 'PRICING',
-      heading: ['חבילות ומסלולים'],
-      lede: 'בחרו את המסלול המתאים ביותר לפרויקט שלכם',
-      plans: [
-        {
-          id: 'starter',
-          name: 'Starter',
-          audience: 'לתהליך עסקי אחד',
-          price: 'בהתאמה אישית',
-          term: 'התמחור נקבע בתום האפיון',
-          action: { label: 'בואו נאפיין את הפרויקט', href: '/v2/contact' },
-          featuresTitle: 'מה תקבלו?',
-          features: [
-            { icon: 'dashboard', label: 'מערכת ניהול ייעודית עם דשבורד' },
-            { icon: 'products', label: 'ניהול הנתונים המרכזיים של העסק' },
-            { icon: 'automation', label: 'אוטומציה לתהליך עבודה אחד' },
-            { icon: 'support', label: 'תמיכה ועדכונים שוטפים' },
-          ],
-        },
-        {
-          id: 'pro',
-          name: 'Pro',
-          audience: 'לעסקים עם כמה תהליכים מקבילים',
-          price: 'בהתאמה אישית',
-          term: 'התמחור נקבע בתום האפיון',
-          action: { label: 'בואו נאפיין את הפרויקט', href: '/v2/contact' },
-          badge: 'הכי משתלם',
-          featured: true,
-          featuresTitle: 'כל מה שקיים ב-Starter וגם:',
-          features: [
-            { icon: 'automation', label: 'אוטומציות למספר תהליכים במקביל' },
-            { icon: 'report', label: 'דוחות מתקדמים ותובנות עסקיות' },
-            { icon: 'shipping', label: 'חיבור למערכות חיצוניות קיימות' },
-            { icon: 'alerts', label: 'התראות חכמות ועדכונים בזמן אמת' },
-            { icon: 'support', label: 'תמיכה בעדיפות גבוהה' },
-          ],
-        },
-        {
-          id: 'enterprise',
-          name: 'Enterprise',
-          audience: 'לארגונים עם תהליכים מורכבים',
-          price: 'בהתאמה אישית',
-          term: 'התמחור נקבע בתום האפיון',
-          action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
-          featuresTitle: 'כל מה שקיים ב-Pro וגם:',
-          features: [
-            { icon: 'stores', label: 'ריבוי סביבות, צוותים ומשתמשים' },
-            { icon: 'tailor', label: 'התאמת המערכת לתהליכי הארגון' },
-            { icon: 'api', label: 'חיבור באמצעות API' },
-            { icon: 'manager', label: 'מנהל לקוח וליווי מקצועי צמוד' },
-            { icon: 'training', label: 'הטמעה, הדרכה ותמיכה מורחבת' },
-          ],
-        },
-      ] satisfies ServicePlan[],
-      footnote: {
-        text: 'יש לכם שאלות?',
-        link: { label: 'פנו אלינו ונדבר', href: '/v2/contact' },
-      },
-    },
     banner: {
       heading: 'רוצים לראות איך המערכת שלכם תיראה?',
-      action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
+      action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/contact' },
     },
     faqHeading: ['לפני שמתחילים', 'כמה דברים שכדאי לדעת.'],
     faqEntries: [
       {
-        question: 'מתי כדאי לפתח מערכת מותאמת אישית ולא לקנות פתרון מדף?',
+        question: 'מהו פיתוח אישי (Custom Development)?',
         answer:
-          'כשהתהליך העסקי שלכם ייחודי, כשאתם משלמים על מערכת שמנצלים ממנה חלק קטן, או כשהצוות מעביר נתונים ידנית בין כמה כלים. במקרים כאלה מערכת ייעודית מחזירה את ההשקעה בזמן העבודה שנחסך.',
+          'פיתוח אישי הוא בניית מערכות תוכנה, אפליקציות ומוצרים דיגיטליים בהתאמה מלאה לצרכי העסק — ללא מגבלות של תבניות מוכנות.',
       },
       {
-        question: 'כמה זמן לוקח לפתח מערכת כזו?',
+        question: 'למי השירות מתאים?',
         answer:
-          'תלוי בהיקף: תהליך עסקי אחד עולה לאוויר תוך שבועות, מערכת עם כמה מודולים ואינטגרציות לוקחת יותר. בתום האפיון תקבלו לוח זמנים עם שלבים ותאריכי מסירה ולא הערכה כללית.',
+          'לעסקים ולארגונים שהתהליך המרכזי שלהם רץ היום על אקסלים, טפסים ומיילים, ולמי שמשלם על מערכת מדף שמנצל ממנה חלק קטן. גם סטארטאפים שצריכים מוצר ראשון עם משתמשים והרשאות נכנסים לכאן. בפועל אנחנו מחליפים את ההעברות הידניות בין הכלים במסכי עבודה, סטטוסים וטריגרים.',
       },
       {
-        question: 'האם אפשר לחבר את המערכת למערכות שכבר יש לנו?',
+        question: 'אילו סוגי פרויקטים אפשר לפתח?',
         answer:
-          'כן. אנחנו מתחברים למערכות הנהלת חשבונות, CRM, מערכות שילוח, סליקה וכל שירות שיש לו API. במסלול Enterprise נכלל גם חיבור למערכות פנימיות, כך שהנתונים זורמים בלי הזנה כפולה.',
+          'מערכות ניהול פנימיות, פורטלים ללקוחות ולספקים, אזורים אישיים, אפליקציות ווב ואוטומציות שרצות ברקע. בכל אחד מהם נבנים מסכי ניהול, הרשאות לפי תפקיד, דוחות ואינטגרציות דרך API למערכות שכבר עובדות אצלכם. גם מודול נקודתי שנוסף לצד מערכת קיימת הוא פרויקט לכל דבר.',
       },
       {
-        question: 'מה קורה אם הצרכים שלנו משתנים אחרי ההשקה?',
+        question: 'כמה זמן לוקח לפתח מערכת?',
         answer:
-          'המערכת נבנית בקוד ייעודי עם ארכיטקטורה שמתוכננת להרחבות, ולכן אפשר להוסיף מסכים, אוטומציות ומשתמשים בהמשך. שינויים קטנים נכנסים לליווי השוטף, ושינויים גדולים עוברים אפיון קצר לפני הפיתוח.',
+          'תלוי בהיקף - מערכת ממוקדת סביב תהליך עסקי אחד עולה לאוויר בדרך כלל תוך מספר שבועות, ופלטפורמה עם כמה מודולים, הרשאות ואינטגרציות נמדדת בחודשים. את הטווח קובעים כמות המסכים, מספר המערכות החיצוניות שצריך לחבר והמהירות שבה מגיעים מכם נתונים ואישורים. בתום האפיון תקבלו לוח זמנים לפי אבני דרך, עם תאריך מסירה לכל שלב.',
       },
       {
-        question: 'למי שייכת המערכת שנבנתה?',
+        question: 'איך מתחילים לעבוד עם Aiterra?',
         answer:
-          'המערכת נבנית עבורכם ומשרתת רק את העסק שלכם. את תנאי הבעלות והאחסון נסגור בכתב עוד לפני תחילת הפיתוח, כדי שיהיה ברור בדיוק מה מקבלים.',
+          'מתחילים בשיחת אפיון שבה ממפים את תהליכי העבודה, המשתמשים והנתונים. משם עוברים לאפיון טכנולוגי ומוצרי שמגדיר מסכים, מודל נתונים ואינטגרציות, והפרויקט מחולק לאבני דרך עם תכולה ברורה לכל אחת. הפיתוח והבדיקות רצים לפי אותן אבני דרך, ואתם מקבלים גרסאות לבדיקה תוך כדי - עד ההשקה והליווי השוטף אחריה.',
       },
       {
-        question: 'איך שומרים על אבטחת המידע?',
+        question: 'האם אפשר לשלב מערכות קיימות?',
         answer:
-          'הרשאות ברמת המסך והשדה, הצפנת תעבורה, גיבויים אוטומטיים ותיעוד פעולות משתמשים. בפרויקטים עם דרישות רגולציה נגדיר את התשתית והנהלים כבר בשלב האפיון.',
+          'כן, וברוב הפרויקטים זה בדיוק מה שקורה. מתחברים דרך API להנהלת חשבונות, CRM, מערכות שילוח, סליקה ודיוור, וכשאין ממשק פתוח עובדים מול ייצוא וייבוא קבצים מתוזמן. באפיון נסגור אילו שדות עוברים, לאיזה כיוון ומה קורה בשגיאה - כדי שלא תהיה הזנה כפולה ולא שתי גרסאות של אותו נתון.',
+      },
+      {
+        question: 'מה קורה אחרי ההשקה?',
+        answer:
+          'אחרי ההשקה הצוות מקבל הדרכה ואנחנו נכנסים לליווי שוטף: ניטור, גיבויים אוטומטיים, עדכוני אבטחה ומענה מהיר כשמשהו נתקע. בשבועות הראשונים בדרך כלל עולים חידודים מהשימוש בפועל - שדה שחסר במסך, סטטוס נוסף או התראה שצריך לכוון - והם נכנסים במסגרת הליווי. מודול חדש או תהליך שלם עובר אפיון קצר ותמחור לפני שנכנס לפיתוח.',
       },
     ],
   },
@@ -1497,8 +1486,8 @@ export const servicePages: Record<string, ServicePage> = {
     subhead: 'המומחיות שלנו באתרי תדמית',
     lede: 'אפיון, עיצוב ופיתוח בקוד מלא - אתר מהיר, מותאם למובייל ובנוי לקידום אורגני, עם ליווי ועדכונים גם אחרי ההשקה.',
     image: '/images/service3.webp',
-    action: { label: 'לשיחת ייעוץ ואפיון', href: '/v2/contact' },
-    metaTitle: 'אתרי תדמית',
+    action: { label: 'לשיחת ייעוץ ואפיון', href: '/contact' },
+    metaTitle: 'בניית אתר תדמית לעסק - עיצוב ופיתוח בקוד',
     metaDescription:
       'בניית אתר תדמית בקוד מלא: אפיון וחוויית משתמש, עיצוב UI, כתיבת תוכן, התאמה למובייל, מהירות טעינה וניהול הפניות מהאתר במקום אחד.',
     advantages: {
@@ -1568,7 +1557,7 @@ export const servicePages: Record<string, ServicePage> = {
           text: 'חיבור ל-Google Analytics ולפיקסלים, ניהול מטא-דאטה וכתובות ידידותיות, מפת אתר ומעקב אחרי מהירות הטעינה.',
         },
       ] satisfies ServiceSystemFeature[],
-      action: { label: 'בואו נתאים את האתר שלכם', href: '/v2/contact' },
+      action: { label: 'בואו נתאים את האתר שלכם', href: '/contact' },
     },
     howItWorks: {
       eyebrow: 'HOW IT WORKS',
@@ -1595,69 +1584,9 @@ export const servicePages: Record<string, ServicePage> = {
         },
       ] satisfies ServiceStep[],
     },
-    pricing: {
-      eyebrow: 'PRICING',
-      heading: ['חבילות ומסלולים'],
-      lede: 'בחרו את המסלול המתאים ביותר לאתר שלכם',
-      plans: [
-        {
-          id: 'landing',
-          name: 'Landing',
-          audience: 'לעמוד נחיתה או אתר קצר',
-          price: 'בהתאמה אישית',
-          term: 'התמחור נקבע בתום האפיון',
-          action: { label: 'בואו נבנה את האתר שלכם', href: '/v2/contact' },
-          featuresTitle: 'מה תקבלו?',
-          features: [
-            { icon: 'storefront', label: 'עמוד נחיתה מעוצב בקוד ייעודי' },
-            { icon: 'products', label: 'טופס פניות עם התראות למייל' },
-            { icon: 'dashboard', label: 'חיבור לאנליטיקס ולפיקסלים' },
-            { icon: 'support', label: 'תמיכה ועדכונים שוטפים' },
-          ],
-        },
-        {
-          id: 'business',
-          name: 'Business',
-          audience: 'לאתר תדמית מלא',
-          price: 'בהתאמה אישית',
-          term: 'התמחור נקבע בתום האפיון',
-          action: { label: 'בואו נבנה את האתר שלכם', href: '/v2/contact' },
-          badge: 'הכי משתלם',
-          featured: true,
-          featuresTitle: 'כל מה שקיים ב-Landing וגם:',
-          features: [
-            { icon: 'automation', label: 'מערכת ניהול תוכן לעדכון עצמאי' },
-            { icon: 'products', label: 'עמודי שירותים, אודות ובלוג' },
-            { icon: 'report', label: 'כתיבת תוכן שיווקי ותשתית SEO' },
-            { icon: 'alerts', label: 'ניהול פניות עם סטטוס טיפול' },
-            { icon: 'support', label: 'תמיכה בעדיפות גבוהה' },
-          ],
-        },
-        {
-          id: 'enterprise',
-          name: 'Enterprise',
-          audience: 'לארגונים ואתרים מרובי שפות',
-          price: 'בהתאמה אישית',
-          term: 'התמחור נקבע בתום האפיון',
-          action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
-          featuresTitle: 'כל מה שקיים ב-Business וגם:',
-          features: [
-            { icon: 'stores', label: 'ריבוי שפות ואזורי תוכן' },
-            { icon: 'tailor', label: 'התאמת האתר לתהליכי הארגון' },
-            { icon: 'api', label: 'חיבור למערכות פנימיות באמצעות API' },
-            { icon: 'manager', label: 'מנהל לקוח וליווי מקצועי צמוד' },
-            { icon: 'training', label: 'הטמעה, הדרכה ותמיכה מורחבת' },
-          ],
-        },
-      ] satisfies ServicePlan[],
-      footnote: {
-        text: 'יש לכם שאלות?',
-        link: { label: 'פנו אלינו ונדבר', href: '/v2/contact' },
-      },
-    },
     banner: {
       heading: 'רוצים לראות איך האתר שלכם ייראה?',
-      action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
+      action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/contact' },
     },
     faqHeading: ['לפני שמתחילים', 'כמה דברים שכדאי לדעת.'],
     faqEntries: [
@@ -1700,9 +1629,9 @@ export const servicePages: Record<string, ServicePage> = {
     heading: ['שיווק מבוסס נתונים שמייצר', 'תוצאות - לא ניחושים.'],
     subhead: 'שיווק דיגיטלי / Meta & Google',
     lede: 'ניהול קמפיינים ממומנים ב-Meta וב-Google בהתאמה מדויקת לנישה, לרווחיות ולשלב שבו העסק שלך נמצא.',
-    image: '/images/service1.webp',
-    action: { label: 'לשיחת אפיון שיווקי', href: '/v2/contact' },
-    metaTitle: 'שיווק דיגיטלי',
+    image: '/images/marketing-hero.webp',
+    action: { label: 'לשיחת אפיון שיווקי', href: '/contact' },
+    metaTitle: 'קידום אתרים אורגני וקמפיינים ממומנים',
     metaDescription:
       'ניהול קמפיינים ממומנים ב-Meta וב-Google: מחקר שוק ואפיון פלטפורמות, אסטרטגיה לפי שלב העסק, קריאייטיב ואופטימיזציה שוטפת עם דוחות על עלות לליד.',
     advantages: {
@@ -1713,36 +1642,36 @@ export const servicePages: Record<string, ServicePage> = {
         {
           id: 'new',
           title: 'לקוחות חדשים / עסקים שטרם הצליחו בשיווק',
-          art: '/images/service-page4.webp',
+          art: '/images/service-marketing-icon4.webp',
           text: 'מחקר שוק מעמיק, בדיקת רווחיות, ניתוח מתחרים ואפיון הפלטפורמה המדויקת ביותר — בלי לבזבז תקציב על פלטפורמות לא רלוונטיות.',
         },
         {
           id: 'scale',
           title: 'לעסקים שכבר משווקים ורוצים לצמוח (Scale)',
-          art: '/images/service-page1.webp',
+          art: '/images/service-marketing-icon3.webp',
           text: 'ביצוע אופטימיזציה עמוקה, שיפור יחסי המרה, הוספת ערוצים חדשים ושדרוג הקריאייטיב הקיים להורדת עלות הליד/רכישה.',
         },
         {
           id: 'research',
           title: 'מחקר שוק מעמיק ואפיון פלטפורמות',
-          art: '/images/service-page3.webp',
+          art: '/images/service-marketing-icon2.webp',
           text: 'לפני שמעלים קמפיין בודקים איפה הקהל שלכם באמת נמצא, מה המתחרים עושים ואיזה ערוץ יחזיר את ההשקעה מהר יותר.',
         },
         {
           id: 'creative',
           title: 'אופטימיזציה ושדרוג קריאייטיב',
-          art: '/images/service-page-discovery.webp',
+          art: '/images/service-marketing-icon1.webp',
           text: 'בדיקת גרסאות של מודעות, סרטונים ומסרים לאורך זמן, ושינוי תקציבים וקהלים לפי הנתונים כדי להוריד את העלות לליד.',
         },
       ] satisfies AboutRole[],
       outro:
         'אנחנו מתאימים אסטרטגיה שיווקית מדויקת לכל סוג עסק — בין אם אתם בתחילת הדרך או רוצים לצמוח.',
-      action: { label: 'בואו נבדוק מה מתאים לעסק שלכם', href: '/v2/contact' },
+      action: { label: 'בואו נבדוק מה מתאים לעסק שלכם', href: '/contact' },
     },
     system: {
       eyebrow: 'WORKFLOW',
       heading: ['תרשים הזרימה שלנו'],
-      art: '/images/management-console.webp',
+      art: '/images/service-marketing.webp',
       features: [
         {
           id: 'research',
@@ -1775,7 +1704,7 @@ export const servicePages: Record<string, ServicePage> = {
           text: 'דוח תקופתי עם מספר הלידים, העלות לליד והמסקנות להמשך, כדי שתמיד תדעו לאן הולך התקציב ומה הוא מחזיר.',
         },
       ] satisfies ServiceSystemFeature[],
-      action: { label: 'בואו נבדוק מה מתאים לעסק שלכם', href: '/v2/contact' },
+      action: { label: 'בואו נבדוק מה מתאים לעסק שלכם', href: '/contact' },
     },
     howItWorks: {
       eyebrow: 'KEY ADVANTAGES',
@@ -1802,69 +1731,57 @@ export const servicePages: Record<string, ServicePage> = {
         },
       ] satisfies ServiceStep[],
     },
-    pricing: {
-      eyebrow: 'PRICING',
-      heading: ['חבילות ומסלולים'],
-      lede: 'בחרו את המסלול המתאים ביותר לפעילות השיווקית שלכם',
-      plans: [
-        {
-          id: 'basic',
-          name: 'Basic',
-          audience: 'לעסקים שמתחילים לפרסם',
-          price: 'בהתאמה אישית',
-          term: 'ניהול חודשי, ללא התחייבות ארוכה',
-          action: { label: 'בואו נתחיל לפרסם', href: '/v2/contact' },
-          featuresTitle: 'מה תקבלו?',
-          features: [
-            { icon: 'storefront', label: 'ניהול ערוץ פרסום אחד' },
-            { icon: 'products', label: 'הקמת קמפיינים וקהלי יעד' },
-            { icon: 'dashboard', label: 'מעקב המרות ולידים בזמן אמת' },
-            { icon: 'report', label: 'דוח חודשי עם עלות לליד' },
-          ],
-        },
-        {
-          id: 'pro',
-          name: 'Pro',
-          audience: 'לעסקים שמפרסמים בכמה ערוצים',
-          price: 'בהתאמה אישית',
-          term: 'ניהול חודשי, ללא התחייבות ארוכה',
-          action: { label: 'בואו נתחיל לפרסם', href: '/v2/contact' },
-          badge: 'הכי משתלם',
-          featured: true,
-          featuresTitle: 'כל מה שקיים ב-Basic וגם:',
-          features: [
-            { icon: 'automation', label: 'ניהול גוגל ומטא במקביל' },
-            { icon: 'products', label: 'הפקת קריאייטיב ובדיקת גרסאות' },
-            { icon: 'alerts', label: 'קהלי רימרקטינג ורשימות לקוחות' },
-            { icon: 'report', label: 'דוחות מתקדמים ותובנות עסקיות' },
-            { icon: 'support', label: 'תמיכה בעדיפות גבוהה' },
-          ],
-        },
-        {
-          id: 'enterprise',
-          name: 'Enterprise',
-          audience: 'לארגונים עם פעילות שיווקית רחבה',
-          price: 'בהתאמה אישית',
-          term: 'ניהול חודשי, ללא התחייבות ארוכה',
-          action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
-          featuresTitle: 'כל מה שקיים ב-Pro וגם:',
-          features: [
-            { icon: 'stores', label: 'ניהול מספר מותגים או סניפים' },
-            { icon: 'tailor', label: 'אסטרטגיה ותוכנית שיווק שנתית' },
-            { icon: 'api', label: 'חיבור הלידים למערכות שלכם' },
-            { icon: 'manager', label: 'מנהל לקוח וליווי מקצועי צמוד' },
-            { icon: 'training', label: 'הדרכה לצוות ותמיכה מורחבת' },
-          ],
-        },
-      ] satisfies ServicePlan[],
-      footnote: {
-        text: 'יש לכם שאלות?',
-        link: { label: 'פנו אלינו ונדבר', href: '/v2/contact' },
-      },
-    },
     banner: {
       heading: 'מוכנים להעלות את הקמפיינים שלכם לרמה הבאה?',
-      action: { label: 'שליחה ובדיקת התאמה', href: '/v2/contact' },
+      action: { label: 'שליחה ובדיקת התאמה', href: '/contact' },
+    },
+    cases: {
+      eyebrow: 'CASE STUDIES',
+      heading: ['קבלו הצצה מתוצאות', 'אמיתיות בשטח'],
+      items: [
+        {
+          id: 'meta-1',
+          title: 'נאות שדה',
+          subtitle: 'שיווק ממומן ב-Meta',
+          metrics: [
+            { label: 'ROAS', value: 'תוצאה עסקית' },
+            { label: 'Leads', value: '+202%' },
+            { label: 'Sales', value: '+142%' },
+          ],
+          tags: ['שיווק ממומן ב-Meta', 'Sales +142%', 'Leads +202%'],
+          shot: '/images/service-marketing-portfolio1.webp',
+          href: '/projects',
+        },
+        {
+          id: 'meta-2',
+          title: 'נאות שדה',
+          subtitle: 'שיווק ממומן ב-Meta',
+          metrics: [
+            { label: 'ROAS', value: 'תוצאה עסקית' },
+            { label: 'Leads', value: '+202%' },
+            { label: 'Sales', value: '+142%' },
+          ],
+          tags: ['שיווק ממומן ב-Meta', 'Sales +142%', 'Leads +202%'],
+          shot: '/images/service-marketing-portfolio2.webp',
+          href: '/projects',
+        },
+        {
+          id: 'meta-3',
+          title: 'נאות שדה',
+          subtitle: 'שיווק ממומן ב-Meta',
+          metrics: [
+            { label: 'ROAS', value: 'תוצאה עסקית' },
+            { label: 'Leads', value: '+202%' },
+            { label: 'Sales', value: '+142%' },
+          ],
+          tags: ['שיווק ממומן ב-Meta', 'Sales +142%', 'Leads +202%'],
+          shot: '/images/service-marketing-portfolio3.webp',
+          href: '/projects',
+        },
+      ] satisfies ServiceCase[],
+      cardAction: 'לצפייה בפרויקט',
+      prev: 'הקודם',
+      next: 'הבא',
     },
     faqHeading: ['לפני שמתחילים', 'כמה דברים שכדאי לדעת.'],
     faqEntries: [
@@ -1907,9 +1824,9 @@ export const servicePages: Record<string, ServicePage> = {
     heading: ['עיצוב שמדבר', 'בשפה של העסק שלך'],
     subhead: 'Branding & Web Design / UX/UI',
     lede: 'מיתוג עסקי, עיצוב אתרים וחוויית משתמש — מקונספט ראשוני ועד ממשק מוכן לפיתוח. עיצוב שלא רק נראה טוב, אלא גם עובד.',
-    image: '/images/service1.webp',
-    action: { label: 'לשיחת ייעוץ עיצובי', href: '/v2/contact' },
-    metaTitle: 'מיתוג ועיצוב',
+    image: '/images/service-branding-hero.webp',
+    action: { label: 'לשיחת ייעוץ עיצובי', href: '/contact' },
+    metaTitle: 'מיתוג עסקי ועיצוב חוויית משתמש UX/UI',
     metaDescription:
       'מיתוג עסקי ושפה ויזואלית, עיצוב אתרים וחוויית משתמש, עיצוב אפליקציות מובייל ודפי נחיתה - מקונספט ראשוני ועד ממשק מוכן לפיתוח.',
     advantages: {
@@ -1920,35 +1837,35 @@ export const servicePages: Record<string, ServicePage> = {
         {
           id: 'brand',
           title: 'מיתוג עסקי ושפה ויזואלית',
-          art: '/images/service-page4.webp',
+          art: '/images/service-branding-icon4.webp',
           text: 'לוגו, פלטת צבעים, טיפוגרפיה, מדריך מותג ושפה עיצובית אחידה שמבדילה את העסק שלך מהמתחרים.',
         },
         {
           id: 'web',
           title: 'עיצוב אתרים (UX/UI)',
-          art: '/images/service-page1.webp',
+          art: '/images/service-branding-icon3.webp',
           text: 'אפיון חוויית משתמש, מפת מסכים ועיצוב ממשק מוכן לפיתוח - כך שכל מסך מוביל את הגולש לפעולה הבאה.',
         },
         {
           id: 'mobile',
           title: 'עיצוב אפליקציות מובייל',
-          art: '/images/service-page3.webp',
+          art: '/images/service-branding-icon2.webp',
           text: 'עיצוב מסכי אפליקציה לאנדרואיד ול-iOS, כולל מצבי מערכת, אנימציות ורכיבים לשימוש חוזר בקוד.',
         },
         {
           id: 'landing',
           title: 'דפי נחיתה ועמודי שיווק',
-          art: '/images/service-page-discovery.webp',
+          art: '/images/service-branding-icon1.webp',
           text: 'עמודים ממוקדי המרה לקמפיינים: מסר ברור, היררכיה ויזואלית נכונה וקריאה לפעולה שאי אפשר לפספס.',
         },
       ] satisfies AboutRole[],
       outro: 'הצוות שלנו מוכן ליצור את החוויה הדיגיטלית המושלמת עבורכם. מתחילים?',
-      action: { label: 'בואו נדבר על העיצוב שלכם', href: '/v2/contact' },
+      action: { label: 'בואו נדבר על העיצוב שלכם', href: '/contact' },
     },
     system: {
       eyebrow: 'WORKFLOW',
       heading: ['תרשים הזרימה שלנו'],
-      art: '/images/management-console.webp',
+      art: '/images/service-branding.webp',
       features: [
         {
           id: 'discovery',
@@ -1981,128 +1898,73 @@ export const servicePages: Record<string, ServicePage> = {
           text: 'עוקבים אחרי ההתנהגות באתר ומעדכנים מסכים ומסרים לפי מה שקורה בפועל אצל המשתמשים.',
         },
       ] satisfies ServiceSystemFeature[],
-      action: { label: 'בואו נדבר על העיצוב שלכם', href: '/v2/contact' },
+      action: { label: 'בואו נדבר על העיצוב שלכם', href: '/contact' },
     },
     howItWorks: {
-      eyebrow: 'KEY ADVANTAGES',
-      heading: ['למה לבחור ב-Aiterra?'],
-      lede: 'עיצוב שמחובר לעסק ולא רק לטרנד — עם צוות שמלווה אתכם מהקונספט ועד הפיתוח.',
+      eyebrow: 'OUR DESIGN PROCESS',
+      heading: ['תהליך העיצוב שלנו'],
+      lede: 'תהליך עבודה מסודר ושקוף — ממחקר והבנת הלקוח, דרך קונספט ואבטיפוס, ועד עיצוב סופי מוכן לפיתוח.',
       steps: [
         {
-          id: 'designer',
-          title: 'מעצב צמוד לאורך הפרויקט',
-          text: 'תקשורת ישירה עם מי שמעצב בפועל, בלי מתווכים ובלי טלפון שבור.',
+          id: 'research',
+          title: 'מחקר, אפיון וארכיטקטורת מידע',
+          text: 'הכרת העסק, קהל היעד, המתחרים והמסרות, מיפוי מסכים, תרשימי זרימה והגדרת מבנה התוכן.',
           art: '/images/howitwork1.webp',
         },
         {
-          id: 'options',
-          title: 'כמה כיוונים עיצוביים לבחירה',
-          text: 'מציגים יותר מקונספט אחד ובודקים איתכם מה מדבר לקהל שלכם לפני שממשיכים.',
+          id: 'concept',
+          title: 'קונספט עיצובי ו-Wireframes',
+          text: 'יצירת שפה ויזואלית, בחירת צבעים וטיפוגרפיה, ובניית שלדים ראשוניים לאישור.',
           art: '/images/howitwork2.webp',
         },
         {
           id: 'handoff',
-          title: 'עיצוב מוכן לפיתוח',
-          text: 'קבצים מסודרים, רכיבים ומידות מדויקות — כך שהמעבר לפיתוח לא מאבד את העיצוב בדרך.',
+          title: 'עיצוב סופי ומסירה לפיתוח',
+          text: 'עיצוב כל המסכים בפיקסל פרפקט, מדריך סגנון, אינטראקציות ואנימציות — הכל מוכן להעברה חלקה לצוות הפיתוח.',
           art: '/images/howitwork3.webp',
         },
       ] satisfies ServiceStep[],
     },
-    pricing: {
-      eyebrow: 'PRICING',
-      heading: ['חבילות ומסלולים'],
-      lede: 'בחרו את המסלול המתאים ביותר לפרויקט העיצוב שלכם',
-      plans: [
-        {
-          id: 'brand',
-          name: 'Brand',
-          audience: 'למיתוג ושפה ויזואלית',
-          price: 'בהתאמה אישית',
-          term: 'התמחור נקבע בתום האפיון',
-          action: { label: 'בואו נדבר על העיצוב שלכם', href: '/v2/contact' },
-          featuresTitle: 'מה תקבלו?',
-          features: [
-            { icon: 'storefront', label: 'לוגו ושפה ויזואלית' },
-            { icon: 'products', label: 'פלטת צבעים וטיפוגרפיה' },
-            { icon: 'dashboard', label: 'מדריך מותג בסיסי' },
-            { icon: 'support', label: 'קבצי מקור לשימוש חופשי' },
-          ],
-        },
-        {
-          id: 'product',
-          name: 'Product',
-          audience: 'לעיצוב אתר או אפליקציה',
-          price: 'בהתאמה אישית',
-          term: 'התמחור נקבע בתום האפיון',
-          action: { label: 'בואו נדבר על העיצוב שלכם', href: '/v2/contact' },
-          badge: 'הכי משתלם',
-          featured: true,
-          featuresTitle: 'כל מה שקיים ב-Brand וגם:',
-          features: [
-            { icon: 'automation', label: 'אפיון חוויית משתמש ומפת מסכים' },
-            { icon: 'products', label: 'עיצוב כל המסכים בדסקטופ ובמובייל' },
-            { icon: 'report', label: 'מצבי מערכת, טעינה ושגיאה' },
-            { icon: 'shipping', label: 'העברה מסודרת לפיתוח' },
-            { icon: 'support', label: 'תמיכה בעדיפות גבוהה' },
-          ],
-        },
-        {
-          id: 'enterprise',
-          name: 'Enterprise',
-          audience: 'לארגונים ולמערכות מורכבות',
-          price: 'בהתאמה אישית',
-          term: 'התמחור נקבע בתום האפיון',
-          action: { label: 'דברו איתנו ונתחיל לאפיין', href: '/v2/contact' },
-          featuresTitle: 'כל מה שקיים ב-Product וגם:',
-          features: [
-            { icon: 'stores', label: 'ספריית רכיבים ומערכת עיצוב' },
-            { icon: 'tailor', label: 'התאמת השפה לכמה מותגים או מוצרים' },
-            { icon: 'api', label: 'עבודה מול צוות הפיתוח שלכם' },
-            { icon: 'manager', label: 'מנהל לקוח וליווי מקצועי צמוד' },
-            { icon: 'training', label: 'הדרכה ותמיכה מורחבת' },
-          ],
-        },
-      ] satisfies ServicePlan[],
-      footnote: {
-        text: 'יש לכם שאלות?',
-        link: { label: 'פנו אלינו ונדבר', href: '/v2/contact' },
-      },
-    },
     banner: {
       heading: 'מוכנים לראות איך המותג שלכם יכול להיראות?',
-      action: { label: 'שליחה ובדיקת התאמה', href: '/v2/contact' },
+      action: { label: 'שליחה ובדיקת התאמה', href: '/contact' },
     },
     faqHeading: ['לפני שמתחילים', 'כמה דברים שכדאי לדעת.'],
     faqEntries: [
       {
-        question: 'מה ההבדל בין מיתוג לעיצוב אתר?',
+        question: 'מהו עיצוב UI/UX?',
         answer:
-          'מיתוג הוא השפה של העסק - לוגו, צבעים, טיפוגרפיה וטון. עיצוב האתר הוא היישום של השפה הזאת במסכים, במבנה העמודים ובמסלול שהגולש עובר. אפשר לעשות רק אחד מהם, אבל התוצאה הכי טובה מתקבלת כשהם נבנים יחד.',
+          'UX (חוויית משתמש) מתמקד באיך המוצר עובד ומרגיש - המבנה, מסלול הגולש והנוחות בכל שלב. UI (ממשק משתמש) מתמקד באיך הוא נראה - צבעים, טיפוגרפיה, מרווחים ורכיבים. יחד הם יוצרים חוויה דיגיטלית שלמה: אינטואיטיבית, נעימה ואפקטיבית.',
       },
       {
-        question: 'כמה כיוונים עיצוביים נראה לפני שמחליטים?',
+        question: 'למי שירות העיצוב מתאים?',
         answer:
-          'בשלב הקונספט מציגים יותר מכיוון אחד על מסכים אמיתיים, לא על לוח השראה. אחרי שבוחרים כיוון, ממשיכים איתו לעומק ולא מתחילים מהתחלה בכל סבב.',
+          'לעסקים שמקימים נכס דיגיטלי חדש, לעסקים עם אתר קיים שלא מייצר פניות, ולסטארטאפים שצריכים ממשק מוכן לפיתוח. אם יש לכם מוצר או שירות שצריך להיראות אמין ולהוביל את הגולש לפעולה - זה מתאים.',
       },
       {
-        question: 'כמה סבבי תיקונים כלולים?',
+        question: 'מה כולל תהליך המיתוג?',
         answer:
-          'לכל שלב מוגדרים סבבי תיקונים מראש, כך שידוע מה כלול ומה נחשב שינוי היקף. את המספר המדויק נסגור בהצעת המחיר, אחרי שנבין את גודל הפרויקט.',
+          'הכרת העסק וקהל היעד, חקר מתחרים, ובניית שפה ויזואלית: לוגו, פלטת צבעים, טיפוגרפיה וטון דיבור. בסוף מקבלים מדריך מותג שמסביר איך להשתמש בכל נכס - באתר, ברשתות ובחומרים מודפסים.',
       },
       {
-        question: 'האם אתם גם מפתחים את מה שעיצבתם?',
+        question: 'כמה זמן לוקח לעצב אתר?',
         answer:
-          'כן. אפשר לעצור בעיצוב ולקבל קבצים מוכנים לפיתוח, ואפשר להמשיך איתנו לפיתוח בקוד מלא - כך שאף פרט מהעיצוב לא הולך לאיבוד במעבר.',
+          'אתר תדמית ממוצע לוקח בין שבועיים לארבעה שבועות מרגע קבלת התכנים. פרויקט שכולל מיתוג מלא או מערכת מורכבת ייקח יותר. את לוח הזמנים המדויק נגדיר יחד בשלב האפיון, אחרי שנדע כמה מסכים צריך.',
       },
       {
-        question: 'האם העיצוב יתאים גם למובייל?',
+        question: 'האם אתם גם מפתחים את האתר?',
         answer:
-          'כן. כל מסך מעוצב בגרסת דסקטופ ובגרסת מובייל, כולל מצבי טעינה, שגיאה ומסכים ריקים, כדי שהמפתחים לא ינחשו איך זה אמור להיראות בכל מצב.',
+          'כן. אפשר לעצור בעיצוב ולקבל קבצים מוכנים לפיתוח עבור כל צוות, ואפשר להמשיך איתנו לפיתוח בקוד מלא - כך שאף פרט מהעיצוב לא הולך לאיבוד במעבר בין השלבים.',
       },
       {
-        question: 'למי שייכים קבצי המקור?',
+        question: 'מה אני מקבל בסוף התהליך?',
         answer:
-          'הקבצים שלכם. בסיום הפרויקט מקבלים את קובצי המקור והנכסים הגרפיים, כך שתוכלו להמשיך לעבוד איתם גם מול ספקים אחרים.',
+          'קובצי מקור מלאים, כל המסכים בגרסת דסקטופ ומובייל כולל מצבי טעינה, שגיאה ומסכים ריקים, ספריית רכיבים עם מרווחים ומידות, ומדריך סגנון. הכל שלכם - גם אם תמשיכו לעבוד מול ספק אחר.',
+      },
+      {
+        question: 'האם אפשר לעדכן את העיצוב בהמשך?',
+        answer:
+          'כן. אנחנו בונים את העיצוב כספריית רכיבים, כך שהוספת עמוד או שינוי מסך לא מחייבת להתחיל מחדש. אפשר גם להמשיך בליווי שוטף ולעדכן מסכים ומסרים לפי ההתנהגות של הגולשים באתר.',
       },
     ],
   },
@@ -2111,9 +1973,11 @@ export const servicePages: Record<string, ServicePage> = {
 export const servicesPage = {
   title: ['פתרונות דיגיטל', 'מקצה לקצה'],
   crumb: 'שירותים',
-  metaTitle: 'שירותים',
+  metaTitle: 'שירותי בניית אתרים, קידום ושיווק דיגיטלי',
+  metaDescription:
+    'מעטפת דיגיטלית מלאה מספק אחד: בניית אתרים וחנויות, קידום אורגני בגוגל, קמפיינים ממומנים ואוטומציה עסקית. קבלו ייעוץ ראשוני ללא עלות.',
   lede: 'מביסוס תשתיות טכנולוגיות ועד להבאת לקוחות משלמים. אנו מספקים מעטפת שירותים מלאה שתפורה למידות של העסק שלכם, כדי להפוך כל נכס דיגיטלי למנוע של צמיחה.',
-  action: { label: 'התחילו פרויקט חדש', href: '/v2/contact' },
+  action: { label: 'התחילו פרויקט חדש', href: '/contact' },
   faqHeading: ['שאלות נפוצות', 'על השירותים שלנו'],
 }
 
@@ -2121,7 +1985,9 @@ export const contactPage = {
   title: 'נשמח להכיר',
   crumb: 'יצירת קשר',
   lede: 'מביסוס תשתיות טכנולוגיות ועד להבאת לקוחות משלמים – נשמח להכיר את העסק שלכם. השאירו פרטים ונחזור אליכם עם תוכנית פעולה מותאמת.',
-  metaTitle: 'יצירת קשר',
+  metaTitle: 'צרו קשר - ייעוץ ראשוני חינם לעסק שלכם',
+  metaDescription:
+    'רוצים אתר חדש, קידום או אוטומציה? השאירו פרטים ונחזור אליכם עם תוכנית פעולה מותאמת ותמחור שקוף. משרדנו בבת ים, עובדים עם עסקים בכל הארץ.',
   details: {
     heading: 'פרטי התקשרות',
     mapTitle: 'מיקום המשרד של AITERRA',

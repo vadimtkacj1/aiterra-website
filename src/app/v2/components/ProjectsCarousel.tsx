@@ -4,9 +4,15 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import ActionButton from './ActionButton'
 import CircleButton from './CircleButton'
 import GridRule from './GridRule'
+import { ExpandIcon } from './icons'
 import TagList from './TagList'
 import useAutoplay from './useAutoplay'
 import styles from './ProjectsCarousel.module.css'
+
+export type CarouselMetric = {
+  label: string
+  value: string
+}
 
 export type CarouselProject = {
   id: string
@@ -14,6 +20,8 @@ export type CarouselProject = {
   tags: string[]
   shot: string
   href: string
+  subtitle?: string
+  metrics?: CarouselMetric[]
 }
 
 const cardMetrics = (track: HTMLElement) => {
@@ -37,6 +45,8 @@ const centerOffset = (track: HTMLElement) => {
   if (width <= track.clientWidth / 2) return 0
   return (track.clientWidth - width) / 2 - margin
 }
+
+const HEBREW = /[֐-׿]/
 
 const GLIDE_DURATION = 900
 
@@ -105,6 +115,9 @@ type ProjectsCarouselProps = {
   prevLabel: string
   nextLabel: string
   className?: string
+  showAction?: boolean
+  fit?: 'cover' | 'contain'
+  zoomable?: boolean
 }
 
 export default function ProjectsCarousel({
@@ -113,10 +126,23 @@ export default function ProjectsCarousel({
   prevLabel,
   nextLabel,
   className,
+  showAction = true,
+  fit = 'cover',
+  zoomable = false,
 }: ProjectsCarouselProps) {
   const trackRef = useRef<HTMLDivElement>(null)
   const glideRef = useRef<() => void>(noop)
   const [activeIndex, setActiveIndex] = useState(0)
+  const [zoomed, setZoomed] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (!zoomed) return
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setZoomed(null)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [zoomed])
 
   const looped = items.length > 1
 
@@ -201,18 +227,52 @@ export default function ProjectsCarousel({
             className={styles.card}
             aria-hidden={looped && copy !== 1}
           >
-            <div className={styles.shot}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={item.shot} alt="" className={styles.shotImage} />
+            <div className={[styles.shot, fit === 'contain' ? styles.shotContain : '']
+              .filter(Boolean)
+              .join(' ')}>
+              <div className={styles.shotFrame}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={item.shot} alt="" className={styles.shotImage} />
+
+                {zoomable ? (
+                  <button
+                    type="button"
+                    className={styles.zoom}
+                    onClick={() => setZoomed(item.shot)}
+                    aria-label={item.title}
+                  >
+                    <ExpandIcon className={styles.zoomIcon} />
+                  </button>
+                ) : null}
+              </div>
             </div>
 
-            <div className={styles.meta}>
-              <div className={styles.metaText}>
-                <h3 className={styles.title}>{item.title}</h3>
-                <TagList tags={item.tags} className={styles.tags} />
+            {item.metrics ? (
+              <div className={styles.factsMeta}>
+                <div className={styles.fact}>
+                  <h3 className={styles.factTitle}>{item.title}</h3>
+                  {item.subtitle ? <p className={styles.factValue}>{item.subtitle}</p> : null}
+                </div>
+                {item.metrics.map((metric) => (
+                  <div key={metric.label} className={styles.fact}>
+                    <p className={styles.factLabel} dir="ltr">
+                      {metric.label}
+                    </p>
+                    <p className={styles.factValue}>
+                      {HEBREW.test(metric.value) ? metric.value : <bdi dir="ltr">{metric.value}</bdi>}
+                    </p>
+                  </div>
+                ))}
               </div>
-              <ActionButton href={item.href} label={action} />
-            </div>
+            ) : (
+              <div className={styles.meta}>
+                <div className={styles.metaText}>
+                  <h3 className={styles.title}>{item.title}</h3>
+                  <TagList tags={item.tags} className={styles.tags} />
+                </div>
+                {showAction ? <ActionButton href={item.href} label={action} /> : null}
+              </div>
+            )}
           </article>
         ))}
       </div>
@@ -223,11 +283,25 @@ export default function ProjectsCarousel({
         <div className={styles.stageMeta}>
           <p className={styles.stageTitle}>{activeItem.title}</p>
           <TagList tags={activeItem.tags} align="center" className={styles.stageTags} />
-          <ActionButton
-            href={activeItem.href}
-            label={action}
-            className={styles.stageAction}
-          />
+          {showAction ? (
+            <ActionButton
+              href={activeItem.href}
+              label={action}
+              className={styles.stageAction}
+            />
+          ) : null}
+        </div>
+      ) : null}
+
+      {zoomed ? (
+        <div
+          className={styles.lightbox}
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setZoomed(null)}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={zoomed} alt="" className={styles.lightboxImage} />
         </div>
       ) : null}
 

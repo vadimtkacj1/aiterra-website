@@ -18,6 +18,7 @@
   position: absolute;
   inset: 0;
   z-index: -2;
+  border-radius: inherit;
 }
 
 .mediaImage {
@@ -27,12 +28,14 @@
   height: 100%;
   object-fit: cover;
   object-position: 50% 45%;
+  border-radius: inherit;
 }
 
 .scrim {
   position: absolute;
   inset: 0;
   z-index: -1;
+  border-radius: inherit;
   background: linear-gradient(180deg, rgba(1, 1, 1, 0) -14.32%, rgba(1, 1, 1, 0.448046) 58.41%, #010101 119.05%);
 }
 
@@ -60,6 +63,13 @@
   padding: 0 28px 24px;
   border-inline: 1px solid var(--v2-hairline);
   text-align: center;
+  container-type: inline-size;
+}
+
+@media (min-width: 1024px) {
+  .hero .copy > h1 {
+    font-size: min(100px, 11cqw);
+  }
 }
 
 .lede {

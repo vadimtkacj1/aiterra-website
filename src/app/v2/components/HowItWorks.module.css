@@ -81,13 +81,19 @@
   text-align: start;
 }
 
+@media (min-width: 641px) {
+  .stepText {
+    container-type: inline-size;
+  }
+}
+
 .step:nth-child(even) .stepText {
   grid-column: 3;
 }
 
 .stepTitle {
   font-family: var(--v2-font-display);
-  font-size: 28px;
+  font-size: min(28px, 6.6cqw);
   font-weight: 500;
   line-height: 1.25;
 }
@@ -166,7 +172,7 @@
   }
 
   .stepTitle {
-    font-size: 24px;
+    font-size: min(24px, 6.6cqw);
   }
 }
 

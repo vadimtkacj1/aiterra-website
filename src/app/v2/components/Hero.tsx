@@ -10,17 +10,19 @@ export default function Hero() {
   const { hero } = getV2Content()
 
   return (
-    <section className={styles.hero}>
+    <>
+      <link rel="preload" as="image" href="/videos/v2-hero-poster.webp" fetchPriority="high" />
+      <section className={styles.hero}>
       <div className={styles.media}>
         <video
           className={styles.mediaImage}
           src="/videos/v2-hero.mp4?v=2"
           poster="/videos/v2-hero-poster.webp"
-          autoPlay
+          data-autoplay=""
           muted
           loop
           playsInline
-          preload="auto"
+          preload="none"
           aria-hidden="true"
         />
       </div>
@@ -61,6 +63,7 @@ export default function Hero() {
           <ProjectsRail />
         </div>
       </div>
-    </section>
+      </section>
+    </>
   )
 }

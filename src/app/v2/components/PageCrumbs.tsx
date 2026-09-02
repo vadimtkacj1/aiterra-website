@@ -14,7 +14,7 @@ export default function PageCrumbs({ current }: { current: string }) {
         <span />
       </div>
       <nav className={styles.crumbs} aria-label={blog.crumbsLabel}>
-        <Link href="/v2" className={styles.crumbLink}>
+        <Link href="/" className={styles.crumbLink}>
           {blog.crumbHome}
         </Link>
         <ChevronPrevIcon className={styles.crumbChevron} />

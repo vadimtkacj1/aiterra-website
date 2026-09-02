@@ -12,40 +12,47 @@ import Faq from './components/Faq'
 import ContactForm from './components/ContactForm'
 import Reviews from './components/Reviews'
 import Footer from './components/Footer'
+import HomeJsonLd from './components/HomeJsonLd'
 import { getV2Content } from '@/lib/v2-content-server'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
-  title: { absolute: 'AITERRA — סוכנות פיתוח ושיווק דיגיטלי' },
+export const metadata: Metadata = pageMetadata({
+  title: 'בניית אתרים ושיווק דיגיטלי לעסקים',
   description:
-    'אנחנו בונים אתרי מכירות, אתרי תדמית ודפי נחיתה, מפתחים פתרונות מותאמים לעסקים ומנהלים את מערך השיווק הדיגיטלי — מקמפיינים במטא ובגוגל ועד קידום אורגני במנועי החיפוש.',
-  alternates: { canonical: '/' },
-}
+    'סוכנות AITERRA בונה אתרים מהירים, מקדמת אורגנית (SEO) ומנהלת קמפיינים בגוגל ומטא — ספק אחד לכל הדיגיטל. קבלו ייעוץ ותוכנית צמיחה לעסק.',
+  path: '/',
+})
+
+const SHOW_REELS = false
 
 export default function V2Page() {
   const { clientStories, clientStoryItems } = getV2Content()
 
   return (
     <>
+      <HomeJsonLd />
       <Header />
       <main id="main-content">
         <Hero />
-        <About />
+        <About roleHref="/about" />
         <Stats />
         <Services />
         <Portfolio />
         <AllIn />
         <Partners />
-        <Reels />
+        {SHOW_REELS ? <Reels /> : null}
         <Reviews />
-        <Reels
-          eyebrow={clientStories.eyebrow}
-          heading={clientStories.heading}
-          lede={clientStories.lede}
-          items={clientStoryItems}
-          prevLabel={clientStories.prev}
-          nextLabel={clientStories.next}
-          connected
-        />
+        {SHOW_REELS ? (
+          <Reels
+            eyebrow={clientStories.eyebrow}
+            heading={clientStories.heading}
+            lede={clientStories.lede}
+            items={clientStoryItems}
+            prevLabel={clientStories.prev}
+            nextLabel={clientStories.next}
+            connected
+          />
+        ) : null}
         <Faq />
       </main>
       <Footer>

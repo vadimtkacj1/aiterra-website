@@ -11,13 +11,17 @@ import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import { getAllAuthors } from '@/lib/authors-server'
 import { getV2Content } from '@/lib/v2-content-server'
+import { pageMetadata } from '@/lib/metadata'
+import JsonLd from '@/components/seo/JsonLd'
+import { breadcrumbList, webPage } from '@/lib/schema'
 
 export function generateMetadata(): Metadata {
   const { aboutPage } = getV2Content()
-  return {
-    title: aboutPage.title,
-    description: aboutPage.lede,
-  }
+  return pageMetadata({
+    title: aboutPage.metaTitle,
+    description: aboutPage.metaDescription,
+    path: '/about',
+  })
 }
 
 export const revalidate = 300
@@ -36,6 +40,16 @@ export default function V2AboutPage() {
 
   return (
     <>
+      <JsonLd data={webPage({
+        path: '/about',
+        name: aboutPage.metaTitle,
+        description: aboutPage.metaDescription,
+        type: 'AboutPage',
+      })} />
+      <JsonLd data={breadcrumbList([
+        { name: 'בית', path: '/' },
+        { name: aboutPage.title, path: '/about' },
+      ])} />
       <Header />
       <main id="main-content">
         <PageHero title={aboutPage.title} lede={aboutPage.lede} headingId="v2-about-page-heading" />

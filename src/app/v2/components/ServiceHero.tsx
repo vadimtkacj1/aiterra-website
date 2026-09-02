@@ -21,11 +21,11 @@ export default function ServiceHero({
       <div className={styles.inner}>
         <div className={styles.copy}>
           <nav className={styles.crumbs} aria-label={blog.crumbsLabel}>
-            <Link href="/v2" className={styles.crumbLink}>
+            <Link href="/" className={styles.crumbLink}>
               {blog.crumbHome}
             </Link>
             <ChevronPrevIcon className={styles.crumbChevron} />
-            <Link href="/v2/services" className={styles.crumbLink}>
+            <Link href="/services" className={styles.crumbLink}>
               {servicesPage.crumb}
             </Link>
             <ChevronPrevIcon className={styles.crumbChevron} />

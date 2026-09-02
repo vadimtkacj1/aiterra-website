@@ -15,6 +15,7 @@
   position: absolute;
   inset: 0;
   z-index: -2;
+  border-radius: inherit;
 }
 
 .mediaImage {
@@ -24,12 +25,14 @@
   height: 100%;
   object-fit: cover;
   object-position: 50% 62%;
+  border-radius: inherit;
 }
 
 .wash {
   position: absolute;
   inset: 0;
   z-index: -1;
+  border-radius: inherit;
   background: linear-gradient(
     180deg,
     #faf7f3 0%,
@@ -43,6 +46,11 @@
 
 .inner {
   width: 100%;
+  border-radius: inherit;
+}
+
+.board {
+  border-radius: inherit;
 }
 
 .topRule {
