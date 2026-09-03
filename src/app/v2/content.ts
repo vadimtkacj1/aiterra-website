@@ -545,14 +545,34 @@ export type PartnerLogo = {
   name: string
   src: string
   scale?: number
+  hideName?: boolean
 }
 
 export const partners: { caption: string; logos: PartnerLogo[] } = {
   caption: 'פלטפורמות וטכנולוגיות שאנחנו מתמחים בהם',
   logos: [
-    { name: 'WordPress', src: '/images/partner1.png' },
-    { name: 'Google Ads', src: '/images/partner2.png' },
-    { name: 'Meta', src: '/images/partner3.png', scale: 0.7 },
+    { name: 'Next.js', src: '/icons/tech/nextjs.svg', scale: 0.9 },
+    { name: 'React', src: '/icons/tech/react.svg', scale: 0.95 },
+    { name: 'React Native', src: '/icons/tech/react-native.svg', scale: 0.9 },
+    { name: 'TypeScript', src: '/icons/tech/typescript.svg', scale: 0.9 },
+    { name: 'Tailwind CSS', src: '/icons/tech/tailwindcss.svg', scale: 0.95 },
+    { name: 'Vite', src: '/icons/tech/vite.svg', scale: 0.9 },
+    { name: 'Three.js', src: '/icons/tech/threejs.svg', scale: 0.85 },
+    { name: 'Node.js', src: '/icons/tech/nodejs.svg', scale: 0.95 },
+    { name: 'FastAPI', src: '/icons/tech/fastapi.svg', scale: 0.9 },
+    { name: 'Python', src: '/icons/tech/python.svg', scale: 0.95 },
+    { name: 'Prisma', src: '/icons/tech/prisma.svg', scale: 0.9 },
+    { name: 'PostgreSQL', src: '/icons/tech/postgresql.svg', scale: 0.95 },
+    { name: 'MongoDB', src: '/icons/tech/mongodb.svg', scale: 0.95 },
+    { name: 'Docker', src: '/icons/tech/docker.svg', scale: 0.95 },
+    { name: 'GitHub Actions', src: '/icons/tech/githubactions.svg', scale: 0.85 },
+    { name: 'AWS', src: '/icons/tech/aws.svg', scale: 0.9 },
+    { name: 'Cloudflare', src: '/icons/tech/cloudflare.svg', scale: 0.95 },
+    { name: 'Figma', src: '/icons/tech/figma.svg', scale: 0.85 },
+    { name: 'Google Analytics', src: '/icons/tech/googleanalytics.svg', scale: 0.8 },
+    { name: 'Google Tag Manager', src: '/icons/tech/googletagmanager.svg', scale: 0.8 },
+    { name: 'Google Ads', src: '/images/partner2.png', hideName: true },
+    { name: 'Meta', src: '/images/partner3.png', scale: 0.7, hideName: true },
   ],
 }
 
