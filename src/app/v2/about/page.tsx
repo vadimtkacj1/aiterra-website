@@ -3,13 +3,11 @@ import Header from '../components/Header'
 import PageHero from '../components/PageHero'
 import PageCrumbs from '../components/PageCrumbs'
 import AboutIntro from '../components/AboutIntro'
-import AboutTeam, { type TeamCard } from '../components/AboutTeam'
 import About from '../components/About'
 import Stats from '../components/Stats'
 import LeadCta from '../components/LeadCta'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
-import { getAllAuthors } from '@/lib/authors-server'
 import { getV2Content } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
@@ -28,15 +26,6 @@ export const revalidate = 300
 
 export default function V2AboutPage() {
   const { about, aboutPage, aboutValues } = getV2Content()
-
-  const members: TeamCard[] = getAllAuthors().map((author) => ({
-    id: author.id,
-    name: author.name,
-    role: author.role,
-    bio: author.bio ?? '',
-    image: `/images/team-${author.id}.webp`,
-    href: `/blog/author/${author.id}`,
-  }))
 
   return (
     <>
@@ -66,7 +55,6 @@ export default function V2AboutPage() {
         />
         <Stats rounded />
         <LeadCta />
-        <AboutTeam members={members} />
       </main>
       <Footer>
         <ContactForm variant="footer" source="v2-about" />
