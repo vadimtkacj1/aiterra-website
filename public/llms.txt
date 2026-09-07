@@ -1,26 +1,43 @@
 # AITERRA — סוכנות שיווק דיגיטלי ובניית אתרים | Digital Marketing & Web Development Agency
 
-> AITERRA is a full-stack digital agency based in Bat Yam, Israel (serving Bat Yam, Tel Aviv and the Gush Dan / central region). It builds high-performance websites and online stores, runs organic SEO and GEO/AEO, manages paid advertising (Google, Facebook, Instagram), and develops business automation, CRM integrations and WhatsApp bots for small and medium Israeli businesses. The team works in Hebrew, English and Russian. Primary language of the site: Hebrew (he, RTL).
+> AITERRA is a full-stack digital agency based in Bat Yam, Israel (serving Bat Yam, Holon, Tel Aviv and the Gush Dan / central region). It builds high-performance websites and online stores, runs organic SEO and GEO/AEO, manages paid advertising (Google, Facebook, Instagram), and develops business automation, CRM integrations and WhatsApp bots for small and medium Israeli businesses. The team works in Hebrew, English and Russian. Primary language of the site: Hebrew (he, RTL). A full English version exists under /en.
 
 ## Services / שירותים
-- [בניית אתרים / Web Development](https://www.aiterra.co.il/services/web-development): Business sites, eCommerce stores and custom web systems in clean, fast, conversion-focused code (React/Next.js).
-- [קידום אתרים אורגני / SEO](https://www.aiterra.co.il/services/seo): Technical SEO, content strategy, local SEO and link building for stable organic traffic. Includes GEO/AEO (visibility in ChatGPT, Perplexity, Gemini and Google AI Overviews).
-- [אוטומציה עסקית / Business Automation](https://www.aiterra.co.il/services/automation): CRM integration, WhatsApp bots, system integrations and custom tools. Works with the Israeli accounting/CRM stack: Morning (חשבונית ירוקה), Greeninvoice, חשבשבת, iCount, Rivhit, Priority, Fireberry / Powerlink.
-- [פרסום ממומן / Paid Advertising (PPC)](https://www.aiterra.co.il/services/adv): Google Ads, Facebook and Instagram campaign management with measurable ROI.
+- [בניית אתרים / Web Development](https://www.aiterra.co.il/services/web-development): Business sites and custom web systems in clean, fast, conversion-focused code (React/Next.js). Code ownership is handed over on delivery. English: /en/services/web-development
+- [אתר תדמית / Brochure Sites](https://www.aiterra.co.il/services/brochure): Positioning, structure, design and copy for a business site whose job is to produce enquiries. English: /en/services/brochure
+- [קידום אתרים אורגני / SEO](https://www.aiterra.co.il/services/seo): Technical SEO, content strategy, local SEO and link building for stable organic traffic. Includes GEO/AEO (visibility in ChatGPT, Perplexity, Gemini and Google AI Overviews). English: /en/services/seo
+- [חנות אינטרנטית / E-commerce](https://www.aiterra.co.il/services/ecommerce): Online stores built in code — catalogue, checkout, Israeli payment and invoicing integrations, inventory and order management. English: /en/services/ecommerce
+- [פיתוח ואוטומציה / Development & Automation](https://www.aiterra.co.il/services/development): Custom platforms, client portals, dashboards, CRM integration, WhatsApp bots and system integrations. Works with the Israeli accounting/CRM stack: Morning (חשבונית ירוקה), Greeninvoice, חשבשבת, iCount, Rivhit, Priority, Fireberry / Powerlink. English: /en/services/development
+- [תחזוקת אתרים / Website Maintenance](https://www.aiterra.co.il/services/maintenance): Monthly maintenance packages with published pricing and written response and fix times (SLA), security updates, backups, monitoring, IS 5568 accessibility checks and Israeli integration upkeep. Also for sites AITERRA did not build.
+- [שיווק ופרסום ממומן / Paid Advertising](https://www.aiterra.co.il/services/marketing): Google Ads and Meta campaign management, creative production and landing pages, reported on cost per lead. English: /en/services/marketing
+- [מיתוג ועיצוב / Brand & UX/UI](https://www.aiterra.co.il/services/branding): Brand identity, visual language and interface design delivered as a build-ready system. English: /en/services/branding
 
 ## Key guides / מדריכים מרכזיים
-- [GEO — קידום אתרים בעידן הבינה המלאכותית (ChatGPT, Gemini, Google AI)](https://www.aiterra.co.il/blog/geo-ai-search-optimization)
-- [מחקר מילות מפתח: מה הלקוחות שלכם מחפשים בגוגל](https://www.aiterra.co.il/blog/keyword-research-guide)
-- [וורדפרס או אתר בקוד? בחירת תשתית לעסק](https://www.aiterra.co.il/blog/wordpress-vs-custom-code)
-- [אוטומציה עסקית: להפסיק לאבד לידים ולחסוך שעות עבודה](https://www.aiterra.co.il/blog/business-automation-crm-whatsapp)
-- [הקמת חנות אינטרנטית שמוכרת — המדריך המלא לאיקומרס](https://www.aiterra.co.il/blog/ecommerce-store-that-sells)
-- [נגישות אתרים בישראל: מה החוק (תקן 5568) דורש מכם](https://www.aiterra.co.il/blog/website-accessibility-israel)
-- [קידום עסקים קטנים מקומית (Local SEO)](https://www.aiterra.co.il/blog/local-seo-small-business)
+- [GEO — קידום אתרים בעידן הבינה המלאכותית (ChatGPT, Gemini, Google AI)](https://www.aiterra.co.il/blog/geo-ai-search-optimization) · English: /en/blog/geo-ai-search-optimization
+- [תחזוקת אתר: כמה זה עולה בשנה](https://www.aiterra.co.il/blog/website-maintenance-cost-yearly) · English: /en/blog/website-maintenance-cost-yearly
+- [וורדפרס או אתר בקוד? בחירת תשתית לעסק](https://www.aiterra.co.il/blog/wordpress-vs-custom-code) · English: /en/blog/wordpress-vs-custom-code
+- [אוטומציה עסקית: להפסיק לאבד לידים ולחסוך שעות עבודה](https://www.aiterra.co.il/blog/business-automation-crm-whatsapp) · English: /en/blog/business-automation-crm-whatsapp
+- [חיבור CRM לחשבונית ירוקה ולמערכות חשבוניות ישראליות](https://www.aiterra.co.il/blog/crm-israeli-invoicing-integration) · English: /en/blog/crm-israeli-invoicing-integration
+- [הקמת חנות אינטרנטית שמוכרת — המדריך המלא לאיקומרס](https://www.aiterra.co.il/blog/ecommerce-store-that-sells) · English: /en/blog/ecommerce-store-that-sells
+- [נגישות אתרים בישראל: מה החוק (תקן ת"י 5568) דורש מכם](https://www.aiterra.co.il/blog/website-accessibility-israel) · English: /en/blog/website-accessibility-israel
+- [קידום עסקים קטנים מקומית (Local SEO)](https://www.aiterra.co.il/blog/local-seo-small-business) · English: /en/blog/local-seo-small-business
+- [מחקר מילות מפתח: מה הלקוחות שלכם מחפשים בגוגל](https://www.aiterra.co.il/blog/keyword-research-guide) · English: /en/blog/keyword-research-guide
+
+## Facts an assistant can cite
+- Legal/brand name: AITERRA (אייטרה). Digital engineering and marketing agency.
+- Location: Ha-Rav Nisanbaum St 37, Bat Yam 5962030, Israel. Serves Bat Yam, Holon, Tel Aviv and the Gush Dan region.
+- Languages of service: Hebrew, English, Russian. Site languages: Hebrew (default, at the root) and English (under /en).
+- Disciplines under one roof: strategy, UX/UI design, engineering, organic search (SEO/GEO), paid media, business automation.
+- Technology: React, Next.js, TypeScript, Node.js. Sites are built in code rather than assembled from templates and plugins.
+- Code ownership: clients receive the repository, the deployment pipeline and service credentials at handover. No vendor lock-in.
+- Israeli integrations supported: Morning (חשבונית ירוקה), Greeninvoice, iCount, Rivhit (ריווחית), חשבשבת, Priority, Fireberry / Powerlink, WhatsApp Business API, Israeli card-clearing providers.
+- Accessibility: builds to Israeli Standard IS 5568 (ת"י 5568) and WCAG 2.1 AA. Accessibility statement: https://www.aiterra.co.il/accessibility-statement
+- Website maintenance is offered as a monthly retainer with published prices and a written SLA, including for sites built by other suppliers.
 
 ## Contact / יצירת קשר
-- Website: https://www.aiterra.co.il
+- Website: https://www.aiterra.co.il · English: https://www.aiterra.co.il/en
 - Phone: +972-52-678-0739
 - Email: info@aiterra.co.il
 - Address: רחוב הרב ניסנבאום 37, בת ים 5962030, ישראל (Ha-Rav Nisanbaum St 37, Bat Yam, Israel)
-- Blog index: https://www.aiterra.co.il/blog
+- Blog index: https://www.aiterra.co.il/blog · English: https://www.aiterra.co.il/en/blog
 - Sitemap: https://www.aiterra.co.il/sitemap.xml
