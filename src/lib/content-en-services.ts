@@ -49,7 +49,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     system: {
       eyebrow: 'MANAGEMENT SYSTEM',
       heading: ['The Aiterra management console'],
-      art: '/images/management-console.webp',
+      art: '/images/service-cms.webp',
       features: [
         {
           id: 'pages',
@@ -196,7 +196,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     system: {
       eyebrow: 'REPORTING & TRACKING',
       heading: ['Your reporting and tracking layer'],
-      art: '/images/management-console.webp',
+      art: '/images/service-seo.webp',
       features: [
         {
           id: 'rankings',
@@ -348,7 +348,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     system: {
       eyebrow: 'WHAT WE BUILD',
       heading: ['Systems we build most often'],
-      art: '/images/management-console.webp',
+      art: '/images/service-platform.webp',
       features: [
         {
           id: 'portals',
@@ -703,7 +703,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     system: {
       eyebrow: 'WHAT YOU GET',
       heading: ['Everything the site needs to do'],
-      art: '/images/management-console.webp',
+      art: '/images/service-brochure.webp',
       features: [
         {
           id: 'pages',
@@ -1144,7 +1144,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     system: {
       eyebrow: 'WHAT IS INCLUDED',
       heading: ['What maintenance covers - and what it does not'],
-      art: '/images/services-view-bg.webp',
+      art: '/images/service-maintenance.webp',
       features: [
         {
           id: 'updates',
