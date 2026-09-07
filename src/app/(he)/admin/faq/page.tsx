@@ -7,15 +7,10 @@ import type { FaqData, FaqItem, FaqAllData } from '@/lib/faq-server'
 const gradient = 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)'
 
 const PAGE_LABELS: Record<string, string> = {
-  '/': 'דף הבית',
+  '/services': 'שירותים',
+  '/projects': 'תיק עבודות',
   '/about': 'אודותינו',
   '/contact': 'צור קשר',
-  '/portfolio': 'תיק עבודות',
-  '/services': 'שירותים',
-  '/services/web-development': 'פיתוח אתרים',
-  '/services/seo': 'קידום אתרים (SEO)',
-  '/services/automation': 'אוטומציה',
-  '/services/adv': 'פרסום ממומן',
 }
 
 export default function AdminFaqPage() {

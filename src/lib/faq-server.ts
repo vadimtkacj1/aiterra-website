@@ -6,7 +6,7 @@ import { readJsonFile } from './read-json-file'
 const FILE = path.join(process.cwd(), 'data', 'faq.json')
 
 export interface FaqItem { q: string; a: string }
-export interface FaqData { title: string; items: FaqItem[] }
+export interface FaqData { title: string; items: FaqItem[]; rev?: number }
 export type FaqAllData = Record<string, FaqData>
 
 // Snapshot of data/faq.json copied into src/ by scripts/sync-data-seeds.mjs (runs
@@ -23,9 +23,12 @@ function ensureFile() {
 export function getAllFaqData(): FaqAllData {
   ensureFile()
   const fileData = readJsonFile<FaqAllData>(FILE, SEED_FAQ)
-  // Seed is the base; the volume (admin edits) overrides per page key, and any
-  // key missing from a stale volume falls back to the committed seed.
-  return { ...SEED_FAQ, ...fileData }
+  const merged: FaqAllData = { ...SEED_FAQ, ...fileData }
+  for (const [key, seed] of Object.entries(SEED_FAQ)) {
+    const stored = merged[key]
+    if (stored && stored !== seed && (seed.rev ?? 0) > (stored.rev ?? 0)) merged[key] = seed
+  }
+  return merged
 }
 
 export function getFaqData(pageKey: string): FaqData {
