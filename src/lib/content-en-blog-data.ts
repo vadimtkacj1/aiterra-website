@@ -13,6 +13,176 @@ type PostOverride = {
  * entry here — an untranslated post is omitted rather than served in Hebrew.
  */
 export const postsEn: Record<string, PostOverride> = {
+  'website-security-guide': {
+    title: 'Website security: protecting your site, your customers and your reputation',
+    excerpt:
+      'A hacked site is not only technical damage — it is lost trust, damaged rankings and sometimes legal exposure. SSL, backups, updates and form protection: the practical guide for business owners.',
+    tags: ['Security', 'Development'],
+    content: `**In short (TL;DR):** Website security is the set of measures protecting your business site from intrusion, data theft and defacement. The essential baseline is an SSL certificate (HTTPS), regular updates, automatic backups and form protection — and the strongest and cheapest defence of all is a clean architecture that reduces the attack surface in advance.
+
+Most business owners think a site breach is something that happens to large companies. The reality is the opposite: small business sites are the preferred target, precisely because attackers know nobody is watching them. And a breach is not only a technical matter — a site distributing spam gets buried in Google, customers whose details leaked do not come back, and in some cases there is legal exposure under privacy law.
+
+![A laptop screen showing cyber protection and information security](/images/blog/website-security.webp)
+
+## The baseline you cannot skip: HTTPS, updates and backups
+
+**An SSL certificate (HTTPS):** if your site still runs on HTTP, the browser shows visitors a "not secure" warning and Google marks you down. It is the first step, the cheapest, and an official ranking signal Google confirms.
+
+**System and plugin updates:** most breaches exploit known security holes in old plugins. A WordPress site with twenty un-updated plugins is an open door with a welcome sign on it. Keeping the core and the plugins current closes most of those holes before anyone tries to use them.
+
+**Automatic backups:** the question is not whether you will need a backup, but when. An automatic daily backup stored off the server turns a disaster of days into an inconvenience of an hour, and lets you get back online quickly after a breach or a server fault.
+
+## The layers every business site needs
+
+| Layer of protection | What it protects against | Urgency |
+|---|---|---|
+| SSL / HTTPS certificate | Traffic interception, "not secure" warnings, ranking damage | Critical — immediate |
+| System and plugin updates | Exploitation of known holes in old code | High — ongoing |
+| Automatic daily backup | Data loss and prolonged downtime after a fault or breach | High |
+| Form validation and rate limiting | Code injection, spam floods and data theft | High |
+| Clean architecture (few plugins) | Reducing the overall attack surface in advance | Strategic |
+
+## Why forms are the attacker's front door
+
+Every form on the site — contact, registration, payment — is a potential point of entry. Without proper input validation, an attacker can inject malicious code, steal data, or flood you with thousands of spam enquiries that drown the real leads. Proper protection means server-side input filtering, request rate limiting and anti-bot mechanisms that do not damage the experience for genuine visitors. Simple techniques such as a honeypot field or CAPTCHA verification block a significant share of automated bots without burdening the real customer.
+
+## How much does a breach actually cost the business?
+
+The greatest damage is usually commercial rather than technical. [Google holds roughly 90% of the search market](https://gs.statcounter.com/search-engine-market-share) in Israel and worldwide, so almost all of your organic traffic comes through it. According to [Google's official documentation](https://developers.google.com/search/docs), sites that have been hacked and distribute malicious content can receive a warning label in search results and even be removed from the index. In other words, a single breach can wipe out your main source of customers at a stroke — on top of the direct damage of data theft, downtime and reputational harm.
+
+## What to do if the site has already been breached
+
+1. **Isolate immediately:** put the site into maintenance mode to stop the damage to visitors and prevent malicious content spreading.
+2. **Restore from a clean backup:** return to a backup point you are confident was not compromised.
+3. **Change passwords and permissions:** reset every administrative, hosting and database password.
+4. **Close the hole:** update the core and the plugins, and remove any suspicious code or files.
+5. **Request a review:** ask Google to re-examine the site through Search Console so the security warning is lifted.
+
+## The advantage of a site written in clean code
+
+Here is a confession: a large part of our security work is architectural prevention. A site built in modern code, without dozens of third-party plugins, with a proper separation between interface and server, simply offers far less attack surface. In the systems we build in Next.js, most common attack vectors are blocked at the infrastructure level, and the site receives security updates routinely without breaking anything. Fewer dependencies means fewer emergency updates, fewer known vulnerabilities and fewer points of failure an attacker can use.
+
+Not sure when anyone last checked your site's security? Leave your details and we will run a basic security scan — better to find the holes before somebody else does.
+
+---
+
+**Want a website that works for you?** Take a look at AITERRA's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
+
+## Further reading
+
+- [Why is your website slow? The complete 2026 guide to modern web development](/en/blog/website-performance-2026)
+- [Custom web systems: client portals, account areas and tools that save a full-time role](/en/blog/custom-web-systems)`,
+    faq: {
+      title: 'Common questions about website security',
+      items: [
+        {
+          q: 'How do I know if my site has been hacked?',
+          a: 'Common signs: the site suddenly slows down, redirects to unfamiliar sites appear, Google shows a security warning beside your result, or an alert arrives in Search Console. The safest approach is a periodic security scan, which finds malicious code and suspicious files before the damage is noticed by visitors or by Google.',
+        },
+        {
+          q: 'Is an SSL certificate enough to make a site secure?',
+          a: 'No. An SSL certificate encrypts communication between the visitor and the site and prevents interception, but it does not protect against a server breach, compromised plugins or forms without validation. It is a necessary baseline that also affects Google ranking, but full security also requires ongoing updates, backups and protection of the input points on the site.',
+        },
+        {
+          q: 'How much does it cost to secure a site?',
+          a: 'The baseline — SSL, automatic backups and regular updates — is very cheap and usually already included with quality hosting. More advanced protection depends on the complexity of the site and the sensitivity of the data it collects. Either way the cost is negligible against the damage of a single breach: downtime, lost customers, damaged Google rankings and sometimes legal exposure under privacy law.',
+        },
+        {
+          q: 'Is a WordPress site less secure than a custom coded one?',
+          a: 'WordPress itself is safe; the risk comes mainly from the volume of third-party plugins that are not always maintained — every old plugin is a potential security hole. A custom coded site, for example in Next.js, offers a far smaller attack surface. On any platform, it is ongoing updates, backups and form protection that determine the actual level of security.',
+        },
+      ],
+    },
+  },
+
+  'ux-ui-design-conversions': {
+    title: 'UX/UI design that sells: why a beautiful site is not enough, and what actually lifts conversions',
+    excerpt:
+      'A site can be stunning and sell nothing. The difference is in the user experience: clear hierarchy, an intelligent customer journey and design that leads to action — not just impresses the eye.',
+    tags: ['Design', 'Conversions', 'UX'],
+    content: `**In short (TL;DR):** UX/UI design that sells is the engineering of a customer journey, not decoration. A site converts when the logic (UX) and the visual design (UI) work together to lead the visitor without friction toward the intended action — rather than merely impressing the eye.
+
+There are beautiful sites that sell nothing, and plain sites that produce leads without pause. The difference is not how impressive the site is — it is how clear it is. Professional UX/UI design is not decoration: it is the engineering of a customer journey, and it starts with one question — what does the visitor need to do on this page, and what is stopping them?
+
+![A designer sketching user interface wireframes for an application](/images/blog/ux-ui-conversions.webp)
+
+## UX versus UI: the difference, and why both are critical
+
+User experience (UX) is the logic: how the journey is built from arriving on the site through to leaving contact details, which pages exist, the order of the information and where each button sits. User interface (UI) is the visual expression: colour, typography, spacing and animation. An impressive UI without intelligent UX is a beautiful site that confuses; intelligent UX with weak UI is a convenient site that does not convey credibility. Conversions arrive only when the two work together.
+
+| Aspect | UX — user experience | UI — user interface |
+|---|---|---|
+| What it is | The logic and the journey | The visual expression |
+| Covers | Structure, order of information, button placement | Colour, typography, spacing, animation |
+| The central question | Is the action easy to complete? | Does it look credible and professional? |
+| When it is missing | A convenient site that conveys no credibility | A beautiful site that confuses |
+
+## The design principles that actually move the needle
+
+Design that converts rests on a few principles that recur in every successful project. These are the four central ones:
+
+**Visual hierarchy:** the eye scans, it does not read. A strong headline, a supporting subheading and a prominent button — in that order. If everything shouts, nothing is heard.
+
+**Reducing friction:** every unnecessary click, long form or confusing menu burns conversion rate. The shortest route to the action wins.
+
+**Consistency and trust:** uniform design, correct right-to-left rendering in Hebrew, and reviews in the right places — all of it conveys professionalism the visitor feels without noticing.
+
+**Mobile first:** most of your visitors arrive on a phone. If the mobile experience is a squeezed version of the desktop rather than a design in its own right, you are losing most of them.
+
+## How much does design really affect conversions? The numbers
+
+Design is not measured by feel but by data, and three figures explain why it affects the bottom line directly:
+
+- **Mobile first:** most browsing traffic worldwide now arrives from mobile devices, so a design that was not planned for the phone first misses the bulk of the audience.
+- **Speed equals conversions:** according to [Google's web.dev](https://web.dev/articles/vitals), meeting the Core Web Vitals — load speed, visual stability and responsiveness — improves user experience and reduces abandonment.
+- **Organic search:** Google holds roughly [90% of the search market](https://gs.statcounter.com/search-engine-market-share), so fast design that keeps visitors on the site supports organic ranking directly as well.
+
+## The design mistakes worth avoiding
+
+Most sites that fail to convert fall into the same recurring traps. Avoiding them alone improves results:
+
+- **A weak or hidden call to action:** if the visitor has to hunt for where to leave their details, they will not leave them.
+- **Forms that are too long:** every unnecessary field lowers the conversion rate. Ask only for what you genuinely need now.
+- **Text that is a wall of words:** long paragraphs without subheadings or emphasis drive the eye away.
+- **Ignoring mobile:** a design built for desktop and then compressed onto a phone damages exactly the largest audience.
+
+## Designing by data rather than personal taste
+
+The best decisions come from real visitor behaviour: heat maps showing where people click, session recordings revealing where they get stuck, and A/B tests that settle design arguments with numbers. Instead of arguing about what looks better, let the data decide. At Aiterra we put every design project through those lenses — because the goal is not a site that impresses designers, but a site that converts customers.
+
+Feel like your site is beautiful but not working? Leave your details and we will run a professional UX analysis showing exactly where your visitors are getting lost.
+
+---
+
+**Want a website that works for you?** Take a look at AITERRA's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
+
+## Further reading
+
+- [Why is your website slow? The complete 2026 guide to modern web development](/en/blog/website-performance-2026)
+- [WordPress or a coded site? How to choose the right foundation for your business](/en/blog/wordpress-vs-custom-code)`,
+    faq: {
+      title: 'Common questions about UX/UI design',
+      items: [
+        {
+          q: 'What is the difference between UX and UI?',
+          a: 'UX is the design of the experience and the visitor journey — the structure, the logic and the order of actions from arrival through to conversion. UI is the visual design of that journey: colour, typography and components. UX determines whether it is easy to act, and UI determines whether it looks credible. Only when both work together does the visitor leave their details rather than leaving the site.',
+        },
+        {
+          q: 'Is a redesign of an existing site worth it?',
+          a: 'A rebuild is not always necessary. Sometimes targeted improvements — a more prominent button, a shorter form, a clearer hierarchy — lift conversions by tens of percent at low cost. The rule is to start with an analysis of visitor behaviour rather than with design: first understand where people are being lost, then decide between a full redesign and a targeted fix.',
+        },
+        {
+          q: 'How does design affect organic ranking in Google?',
+          a: 'Google measures behavioural signals: time on page, bounce rate and returns to the search results. Good, fast design keeps visitors on the site and signals that the content meets the expectation. Meeting the Core Web Vitals is also part of the page experience Google rewards, which is why design and organic search are two sides of the same coin.',
+        },
+        {
+          q: 'How do you know a new design has actually succeeded?',
+          a: 'You measure rather than guess. Before launch you set a clear target — conversion rate, number of leads or time on page — and compare it against historical data. Tools such as GA4, heat maps and A/B tests show whether the new version produces more actions. A successful design is one the numbers confirm, not one that merely looks good.',
+        },
+      ],
+    },
+  },
+
   'freelancer-vs-web-agency': {
     title: 'Freelancer or web agency — which is right for your business, and why',
     excerpt:
