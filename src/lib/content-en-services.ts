@@ -1275,7 +1275,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
       {
         question: 'How much does website maintenance cost per month?',
         answer:
-          'In the Israeli market the range runs roughly from ₪190 to ₪690 per month for a marketing site, and higher for stores and custom systems. Our Basic plan is ₪290 per month and the Business plan is ₪590 per month, both on an annual term; stores and platforms are quoted against scope. Those figures buy a defined cycle of updates, daily off-server backups, uptime monitoring and a written response time rather than an open-ended promise of support. A full breakdown of what a site costs to keep running across a year, including hosting, domain, SSL and accumulated technical debt, is set out in our guide to yearly website maintenance cost.',
+          'It is easier to compare annually. Our guide to yearly website maintenance cost puts a small marketing site at roughly ₪300 to ₪900 a year when it is mostly domain and hosting, a business site under managed maintenance at ₪2,000 to ₪6,000 a year, and an online store at ₪6,000 and above. Our Basic plan is ₪290 per month and the Business plan is ₪590 per month, both on an annual term; stores and platforms are quoted against scope. Those figures buy a defined cycle of updates, daily off-server backups, uptime monitoring and a written response time rather than an open-ended promise of support. A full breakdown of what a site costs to keep running across a year, including hosting, domain, SSL and accumulated technical debt, is set out in our guide to yearly website maintenance cost.',
       },
       {
         question: 'What does a maintenance plan include, and what does it exclude?',
