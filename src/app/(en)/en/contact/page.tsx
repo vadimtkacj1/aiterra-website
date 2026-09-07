@@ -5,10 +5,12 @@ import PageCrumbs from '../../../(he)/v2/components/PageCrumbs'
 import ContactForm from '../../../(he)/v2/components/ContactForm'
 import ContactDetails from '../../../(he)/v2/components/ContactDetails'
 import Footer from '../../../(he)/v2/components/Footer'
+import Faq from '../../../(he)/v2/components/Faq'
 import { getV2ContentEn } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
-import { breadcrumbList, webPage } from '@/lib/schema'
+import { breadcrumbList, faqPage, webPage } from '@/lib/schema'
+import { getEnFaq } from '@/lib/content-en-faq'
 
 export function generateMetadata(): Metadata {
   const { contactPage } = getV2ContentEn()
@@ -25,6 +27,17 @@ export const revalidate = 300
 
 export default function EnContactPage() {
   const { contactPage } = getV2ContentEn()
+  const enFaq = getEnFaq('/en/contact')
+  const entries = (enFaq?.items ?? []).map((item, index) => ({
+    id: `en-contact-faq-${index + 1}`,
+    question: item.q,
+    answer: item.a,
+  }))
+  const faqJsonLd = faqPage({
+    path: '/en/contact',
+    entries: entries.map(({ question, answer }) => ({ question, answer })),
+    locale: 'en',
+  })
 
   return (
     <>
@@ -43,6 +56,7 @@ export default function EnContactPage() {
           { name: contactPage.crumb, path: '/en/contact' },
         ])}
       />
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header />
       <main id="main-content">
         <PageHero
@@ -56,6 +70,8 @@ export default function EnContactPage() {
         <ContactForm source="en-contact">
           <ContactDetails locale="en" />
         </ContactForm>
+        {entries.length && enFaq ? <Faq heading={enFaq.heading} entries={entries} /> : null}
+
       </main>
       <Footer locale="en" />
     </>

@@ -8,6 +8,7 @@ export const EN_SERVICE_SLUGS = [
   'brochure',
   'marketing',
   'branding',
+  'maintenance',
 ] as const
 
 export const contentEn: Partial<V2Content> = {
@@ -447,6 +448,7 @@ export const contentEn: Partial<V2Content> = {
           { label: 'Business websites', href: '/en/services/brochure' },
           { label: 'Paid campaigns', href: '/en/services/marketing' },
           { label: 'Brand and UX/UI', href: '/en/services/branding' },
+          { label: 'Website maintenance', href: '/en/services/maintenance' },
           { label: 'All services', href: '/en/services' },
         ],
       },
@@ -747,6 +749,36 @@ export const contentEn: Partial<V2Content> = {
         text: 'Identity and interface design delivered as a system with rules and states - made by a team that also has to build it, so the design survives implementation.',
         action: { label: 'Learn more', href: '/en/services/branding' },
       },
+      {
+        id: 'brochure',
+        title: 'Business websites',
+        image: '/images/service-dev.webp',
+        tags: [
+          'Positioning',
+          'Page structure',
+          'Copywriting',
+          'Design',
+          'Forms and leads',
+          'Measurement',
+        ],
+        text: 'A business site whose job is to produce enquiries: positioning, structure, copy and design that lead the visitor to one clear action rather than to a brochure.',
+        action: { label: 'Learn more', href: '/en/services/brochure' },
+      },
+      {
+        id: 'maintenance',
+        title: 'Website maintenance',
+        image: '/images/services-view-bg.webp',
+        tags: [
+          'Published pricing',
+          'Written SLA',
+          'Security updates',
+          'Backups and monitoring',
+          'IS 5568 checks',
+          'Israeli integrations',
+        ],
+        text: 'Monthly maintenance with published prices and response times written into the agreement - including for sites we did not build.',
+        action: { label: 'Learn more', href: '/en/services/maintenance' },
+      },
     ],
   },
 
@@ -768,6 +800,7 @@ export const contentEn: Partial<V2Content> = {
     metaTitle: 'Contact AiTerra - Free Initial Consultation',
     metaDescription:
       'Planning a custom website, a web platform or an SEO programme? Leave your details and we will respond with a tailored plan and transparent pricing.',
+    faqHeading: ['Frequently asked questions', 'before you get in touch'],
     details: {
       heading: 'Contact details',
       mapTitle: 'AITERRA office location',

@@ -714,10 +714,15 @@ export const footer = {
       id: 'services',
       title: 'שירותים',
       links: [
-        { label: 'אתרים', href: '/services#v2-service-brochure' },
-        { label: 'שיווק', href: '/services#v2-service-marketing' },
-        { label: 'קמפיין בגוגל', href: '/services#v2-service-marketing' },
-        { label: 'פיתוח', href: '/services#v2-service-development' },
+        { label: 'בניית אתרים', href: '/services/web-development' },
+        { label: 'קידום אתרים אורגני', href: '/services/seo' },
+        { label: 'חנות אינטרנטית', href: '/services/ecommerce' },
+        { label: 'פיתוח ואוטומציה', href: '/services/development' },
+        { label: 'אתר תדמית', href: '/services/brochure' },
+        { label: 'שיווק ופרסום ממומן', href: '/services/marketing' },
+        { label: 'מיתוג ועיצוב', href: '/services/branding' },
+        { label: 'תחזוקת אתרים', href: '/services/maintenance' },
+        { label: 'כל השירותים', href: '/services' },
       ],
     },
     {
@@ -728,6 +733,7 @@ export const footer = {
         { label: 'אודותינו', href: '/about' },
         { label: 'בלוג', href: '/blog' },
         { label: 'יצירת קשר', href: '/contact' },
+        { label: 'English site', href: '/en' },
       ],
     },
   ] satisfies FooterColumn[],
@@ -1040,6 +1046,22 @@ export const servicesStack = {
       tags: ['מיתוג עסקי', 'שפה ויזואלית', 'עיצוב אתרים', 'UX/UI', 'דפי נחיתה', 'עיצוב אפליקציות'],
       text: 'מיתוג עסקי, עיצוב אתרים וחוויית משתמש — מקונספט ראשוני ועד ממשק מוכן לפיתוח. עיצוב שלא רק נראה טוב, אלא גם עובד.',
       action: { label: 'לפרטים נוספים', href: '/services/branding' },
+    },
+    {
+      id: 'brochure',
+      title: 'אתר תדמית',
+      image: '/images/service-dev.webp',
+      tags: ['מיצוב ומסרים', 'מבנה עמודים', 'כתיבת תוכן', 'עיצוב', 'טפסים ולידים', 'מדידה'],
+      text: 'אתר תדמית שתפקידו לייצר פניות: מיצוב, מבנה, תוכן ועיצוב שמובילים את הגולש לפעולה אחת ברורה.',
+      action: { label: 'לפרטים נוספים', href: '/services/brochure' },
+    },
+    {
+      id: 'maintenance',
+      title: 'תחזוקת אתרים',
+      image: '/images/services-view-bg.webp',
+      tags: ['מחירון גלוי', 'זמני תגובה בהסכם', 'עדכוני אבטחה', 'גיבויים וניטור', 'ת"י 5568', 'אינטגרציות ישראליות'],
+      text: 'חבילות תחזוקה חודשיות עם מחירון גלוי וזמני תגובה כתובים בהסכם — כולל אתרים שלא נבנו אצלנו.',
+      action: { label: 'לפרטים נוספים', href: '/services/maintenance' },
     },
   ] satisfies ServiceStackItem[],
 }
@@ -2532,6 +2554,7 @@ export const contactPage = {
   metaTitle: 'צרו קשר - ייעוץ ראשוני חינם לעסק שלכם',
   metaDescription:
     'רוצים אתר חדש, קידום או אוטומציה? השאירו פרטים ונחזור אליכם עם תוכנית פעולה מותאמת ותמחור שקוף. משרדנו בבת ים, עובדים עם עסקים בכל הארץ.',
+  faqHeading: ['שאלות נפוצות', 'לפני שמשאירים פרטים'],
   details: {
     heading: 'פרטי התקשרות',
     mapTitle: 'מיקום המשרד של AITERRA',

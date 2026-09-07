@@ -4,14 +4,16 @@ import PageHero from '../components/PageHero'
 import PageCrumbs from '../components/PageCrumbs'
 import AboutIntro from '../components/AboutIntro'
 import About from '../components/About'
+import Faq from '../components/Faq'
 import Stats from '../components/Stats'
 import LeadCta from '../components/LeadCta'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import { getV2Content } from '@/lib/v2-content-server'
+import { getFaqData } from '@/lib/faq-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
-import { breadcrumbList, webPage } from '@/lib/schema'
+import { breadcrumbList, faqPage, webPage } from '@/lib/schema'
 
 export function generateMetadata(): Metadata {
   const { aboutPage } = getV2Content()
@@ -27,6 +29,13 @@ export const revalidate = 300
 
 export default function V2AboutPage() {
   const { about, aboutPage, aboutValues } = getV2Content()
+  const faq = getFaqData('/about')
+  const entries = faq.items.map((item, index) => ({
+    id: `about-faq-${index + 1}`,
+    question: item.q,
+    answer: item.a,
+  }))
+  const faqJsonLd = faqPage({ path: '/about', entries: entries.map(({ question, answer }) => ({ question, answer })) })
 
   return (
     <>
@@ -40,6 +49,7 @@ export default function V2AboutPage() {
         { name: 'בית', path: '/' },
         { name: aboutPage.title, path: '/about' },
       ])} />
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header />
       <main id="main-content">
         <PageHero title={aboutPage.title} lede={aboutPage.lede} headingId="v2-about-page-heading" />
@@ -56,6 +66,7 @@ export default function V2AboutPage() {
           headingId="v2-values-heading"
         />
         <Stats rounded />
+        {entries.length ? <Faq heading={aboutPage.faqHeading} entries={entries} /> : null}
         <LeadCta />
       </main>
       <Footer>

@@ -167,3 +167,45 @@ export function projectSchema({
     ...(liveSiteUrl ? { sameAs: [liveSiteUrl] } : {}),
   }
 }
+
+export type ServicePlanOffer = {
+  id: string
+  name: string
+  price: string
+  priceNote?: string
+  audience?: string
+}
+
+export function serviceOffers(url: string, plans: ServicePlanOffer[] | undefined) {
+  if (!plans?.length) return undefined
+  const offers = plans
+    .map((plan) => {
+      const amount = plan.price.replace(/[^\d.]/g, '')
+      if (!amount) return null
+      const note = plan.priceNote || ''
+      const monthly = note.includes('לחודש') || /month/i.test(note)
+      return {
+        '@type': 'Offer',
+        '@id': `${url}#offer-${plan.id}`,
+        name: plan.name,
+        ...(plan.audience ? { description: plan.audience } : {}),
+        priceCurrency: 'ILS',
+        price: amount,
+        ...(monthly
+          ? {
+              priceSpecification: {
+                '@type': 'UnitPriceSpecification',
+                price: amount,
+                priceCurrency: 'ILS',
+                unitCode: 'MON',
+                billingIncrement: 1,
+              },
+            }
+          : {}),
+        availability: 'https://schema.org/InStock',
+        url,
+      }
+    })
+    .filter(Boolean)
+  return offers.length ? offers : undefined
+}

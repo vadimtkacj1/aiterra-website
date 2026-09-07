@@ -12,6 +12,7 @@ import { getV2ContentEn } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
 import { breadcrumbList, faqPage, webPage } from '@/lib/schema'
+import { getEnFaq } from '@/lib/content-en-faq'
 
 export function generateMetadata(): Metadata {
   const { servicesPage } = getV2ContentEn()
@@ -27,8 +28,18 @@ export function generateMetadata(): Metadata {
 export const revalidate = 300
 
 export default function EnServicesPage() {
-  const { servicesPage, faqEntries } = getV2ContentEn()
-  const entries = faqEntries.map((item) => ({ question: item.question, answer: item.answer }))
+  const { servicesPage } = getV2ContentEn()
+  const enFaq = getEnFaq('/en/services')
+  const entries = (enFaq?.items ?? []).map((item, index) => ({
+    id: `en-services-faq-${index + 1}`,
+    question: item.q,
+    answer: item.a,
+  }))
+  const faqJsonLd = faqPage({
+    path: '/en/services',
+    entries: entries.map(({ question, answer }) => ({ question, answer })),
+    locale: 'en',
+  })
 
   return (
     <>
@@ -47,7 +58,7 @@ export default function EnServicesPage() {
           { name: servicesPage.crumb, path: '/en/services' },
         ])}
       />
-      {entries.length ? <JsonLd data={faqPage({ path: '/en/services', entries, locale: 'en' })!} /> : null}
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header />
       <main id="main-content">
         <PageHero
@@ -62,7 +73,7 @@ export default function EnServicesPage() {
         <ServicesStack />
         <AllIn />
         <Partners locale="en" />
-        <Faq heading={servicesPage.faqHeading} />
+        {entries.length && enFaq ? <Faq heading={enFaq.heading} entries={entries} /> : null}
       </main>
       <Footer locale="en">
         <ContactForm variant="footer" source="en-services" />

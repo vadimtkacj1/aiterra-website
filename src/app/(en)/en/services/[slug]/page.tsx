@@ -10,7 +10,7 @@ import Faq from '../../../../(he)/v2/components/Faq'
 import ContactForm from '../../../../(he)/v2/components/ContactForm'
 import Footer from '../../../../(he)/v2/components/Footer'
 import JsonLd from '@/components/seo/JsonLd'
-import { breadcrumbList, faqPage, ORG_ID } from '@/lib/schema'
+import { breadcrumbList, faqPage, serviceOffers, ORG_ID } from '@/lib/schema'
 import { SITE_URL } from '@/lib/seo'
 import { getV2Content, getV2ContentEn } from '@/lib/v2-content-server'
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
@@ -57,6 +57,7 @@ export default async function EnServiceDetailPage({ params }: Params) {
   }))
 
   const url = `${SITE_URL}/en/services/${slug}`
+  const offers = serviceOffers(url, service.pricing?.plans)
 
   return (
     <>
@@ -71,6 +72,8 @@ export default async function EnServiceDetailPage({ params }: Params) {
           url,
           inLanguage: 'en',
           provider: { '@id': ORG_ID },
+          areaServed: { '@type': 'Country', name: 'Israel' },
+          ...(offers ? { offers } : {}),
         }}
       />
       <JsonLd

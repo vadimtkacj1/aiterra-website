@@ -4,11 +4,13 @@ import PageHero from '../components/PageHero'
 import PageCrumbs from '../components/PageCrumbs'
 import ContactForm from '../components/ContactForm'
 import ContactDetails from '../components/ContactDetails'
+import Faq from '../components/Faq'
 import Footer from '../components/Footer'
 import { getV2Content } from '@/lib/v2-content-server'
+import { getFaqData } from '@/lib/faq-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
-import { breadcrumbList, webPage } from '@/lib/schema'
+import { breadcrumbList, faqPage, webPage } from '@/lib/schema'
 
 export function generateMetadata(): Metadata {
   const { contactPage } = getV2Content()
@@ -22,6 +24,13 @@ export function generateMetadata(): Metadata {
 
 export default function V2ContactPage() {
   const { contactPage } = getV2Content()
+  const faq = getFaqData('/contact')
+  const entries = faq.items.map((item, index) => ({
+    id: `contact-faq-${index + 1}`,
+    question: item.q,
+    answer: item.a,
+  }))
+  const faqJsonLd = faqPage({ path: '/contact', entries: entries.map(({ question, answer }) => ({ question, answer })) })
 
   return (
     <>
@@ -35,6 +44,7 @@ export default function V2ContactPage() {
         { name: 'בית', path: '/' },
         { name: contactPage.crumb, path: '/contact' },
       ])} />
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header />
       <main id="main-content">
         <PageHero
@@ -47,6 +57,7 @@ export default function V2ContactPage() {
         <ContactForm source="v2-contact">
           <ContactDetails />
         </ContactForm>
+        {entries.length ? <Faq heading={contactPage.faqHeading} entries={entries} /> : null}
       </main>
       <Footer />
     </>

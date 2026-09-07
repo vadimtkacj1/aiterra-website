@@ -13,7 +13,7 @@ import { projectsPage } from '../content'
 import { getV2Content } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
-import { breadcrumbList, webPage } from '@/lib/schema'
+import { breadcrumbList, faqPage, webPage } from '@/lib/schema'
 
 export const metadata: Metadata = pageMetadata({
   title: projectsPage.metaTitle,
@@ -26,12 +26,16 @@ export const revalidate = 300
 
 export default function V2ProjectsPage() {
   const content = getV2Content()
-  const faq = getFaqData('/')
+  const faq = getFaqData('/projects')
   const entries = faq.items.map((item, index) => ({
     id: `projects-faq-${index + 1}`,
     question: item.q,
     answer: item.a,
   }))
+  const faqJsonLd = faqPage({
+    path: '/projects',
+    entries: faq.items.map((item) => ({ question: item.q, answer: item.a })),
+  })
 
   return (
     <>
@@ -45,6 +49,7 @@ export default function V2ProjectsPage() {
         { name: 'בית', path: '/' },
         { name: projectsPage.crumb, path: '/projects' },
       ])} />
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header />
       <main id="main-content">
         <PageHero

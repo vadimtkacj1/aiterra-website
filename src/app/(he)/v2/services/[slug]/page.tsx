@@ -64,6 +64,7 @@ export default async function V2ServiceDetailPage({ params }: Params) {
         name={service.metaTitle}
         description={service.metaDescription}
         entries={entries}
+        plans={service.pricing?.plans}
       />
       <Header />
       <main id="main-content">

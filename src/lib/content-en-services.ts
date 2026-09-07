@@ -1095,4 +1095,218 @@ export const servicePagesEn: Record<string, ServicePage> = {
       },
     ],
   },
+
+  maintenance: {
+    id: 'maintenance',
+    crumb: 'Website maintenance',
+    eyebrow: 'Website maintenance',
+    heading: ['Website maintenance', 'with published prices and written response times'],
+    subhead: 'Our maintenance service',
+    lede: 'Monthly maintenance plans with visible pricing, response and fix times written into the agreement, security updates, backups and monitoring - including for sites we did not build.',
+    image: '/images/service2.webp',
+    action: { label: 'Request a maintenance quote', href: '/en/contact' },
+    metaTitle: 'Website Maintenance Services - Monthly Plans',
+    metaDescription:
+      'Monthly website maintenance with published pricing and a written SLA: security updates, daily backups, uptime monitoring, content changes and IS 5568 accessibility checks.',
+    advantages: {
+      eyebrow: 'OUR ADVANTAGES',
+      heading: ['What makes our maintenance different'],
+      lede: 'Most maintenance providers will not publish what is included or how fast they respond. We do.',
+      outro: 'Our team is ready to take responsibility for your site. Are you?',
+      action: { label: 'Request a maintenance quote', href: '/en/contact' },
+      roles: [
+        {
+          id: 'sla',
+          title: 'Response times in writing, not promises',
+          art: '/images/service-page-discovery.webp',
+          text: 'Every plan states a response time and a fix time in the agreement. You know in advance what happens when the site goes down on a Friday, rather than discovering it at that moment.',
+        },
+        {
+          id: 'security',
+          title: 'Security as routine, not as incident response',
+          art: '/images/service-page1.webp',
+          text: 'Core, plugin and dependency updates, uptime monitoring and daily backups held off the server. Most breaches exploit known holes that a regular update cycle would already have closed.',
+        },
+        {
+          id: 'accessibility',
+          title: 'Accessibility treated as ongoing work',
+          art: '/images/service-page3.webp',
+          text: 'Israeli standard IS 5568 is not a one-off test. Any content change can break compliance, so accessibility is re-checked every maintenance cycle rather than once a year in an audit.',
+        },
+        {
+          id: 'orphan',
+          title: 'Including sites we did not build',
+          art: '/images/service-page4.webp',
+          text: 'Inherited a site whose developer has disappeared? We map what exists, recover access, document the current state and take responsibility from that point onwards.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'WHAT IS INCLUDED',
+      heading: ['What maintenance covers - and what it does not'],
+      art: '/images/services-view-bg.webp',
+      features: [
+        {
+          id: 'updates',
+          icon: 'orders',
+          title: 'System and dependency updates',
+          text: 'Core, plugin and code dependency updates, each verified against the live site so an update does not quietly break something else.',
+        },
+        {
+          id: 'backup',
+          icon: 'catalog',
+          title: 'Backups and uptime monitoring',
+          text: 'Automatic daily backups stored off the server, plus monitoring that alerts us when the site goes down - before a customer calls you about it.',
+        },
+        {
+          id: 'content',
+          icon: 'club',
+          title: 'Routine content changes',
+          text: 'Text, image, price and banner updates within the hours included in your plan, without opening a new project every time something needs changing.',
+        },
+        {
+          id: 'integrations',
+          icon: 'sales',
+          title: 'Israeli integrations upkeep',
+          text: 'Morning (Green Invoice), iCount, Rivhit and card clearing. Providers change their APIs and connections fail silently. We find and fix them.',
+        },
+        {
+          id: 'report',
+          icon: 'analytics',
+          title: 'Monthly report',
+          text: 'What was done this month, what monitoring caught and what we recommend fixing next - in plain language rather than a technical log.',
+        },
+      ],
+      action: { label: 'Request a maintenance quote', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'HOW IT WORKS',
+      heading: ['How it starts. Straightforwardly.'],
+      lede: 'Maintenance begins with a survey, not a signature. First we establish what exists, then we commit.',
+      steps: [
+        {
+          id: 'audit',
+          title: 'Survey and condition check',
+          text: 'We establish what the site is built on, which plugins and versions are running, the state of backups and security, and what is already broken.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'handover',
+          title: 'Access transfer and documentation',
+          text: 'We recover access to hosting, domain and connected systems, document the current state and settle ownership - which matters most when the previous developer has vanished.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'ongoing',
+          title: 'Ongoing maintenance and reporting',
+          text: 'A fixed cycle of updates, backups and monitoring, with a monthly report and a named contact who actually knows your site.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    pricing: {
+      eyebrow: 'PRICING',
+      heading: ['Website maintenance plans'],
+      lede: 'Published monthly prices on an annual term. Every plan states a defined response time and fix time.',
+      plans: [
+        {
+          id: 'basic',
+          name: 'Basic',
+          audience: 'For marketing sites and landing pages',
+          price: '290',
+          priceNote: '₪ / month',
+          term: 'on a 12-month term',
+          action: { label: 'Get a quote', href: '/en/contact' },
+          featuresTitle: 'What you get',
+          features: [
+            { icon: 'automation', label: 'Core, plugin and dependency updates' },
+            { icon: 'inventory', label: 'Daily off-server backups' },
+            { icon: 'alerts', label: 'Uptime monitoring and alerts' },
+            { icon: 'support', label: 'Response within 24 business hours' },
+          ],
+        },
+        {
+          id: 'pro',
+          name: 'Business',
+          audience: 'For sites generating leads continuously',
+          price: '590',
+          priceNote: '₪ / month',
+          term: 'on a 12-month term',
+          badge: 'Most popular',
+          featured: true,
+          action: { label: 'Get a quote', href: '/en/contact' },
+          featuresTitle: 'Everything in Basic, plus',
+          features: [
+            { icon: 'products', label: 'Up to two hours of content changes monthly' },
+            { icon: 'api', label: 'Integration upkeep (Green Invoice, CRM)' },
+            { icon: 'dashboard', label: 'Quarterly IS 5568 accessibility check' },
+            { icon: 'report', label: 'Structured monthly report' },
+            { icon: 'support', label: 'Response within 4 business hours' },
+          ],
+        },
+        {
+          id: 'ecommerce',
+          name: 'Stores and platforms',
+          audience: 'For online stores and management systems',
+          price: 'Custom',
+          term: 'scoped to the system',
+          action: { label: 'Talk to us', href: '/en/contact' },
+          featuresTitle: 'Everything in Business, plus',
+          features: [
+            { icon: 'storefront', label: 'Catalogue, checkout and shipping upkeep' },
+            { icon: 'tailor', label: 'Ongoing development and new features' },
+            { icon: 'manager', label: 'A named contact who knows the system' },
+            { icon: 'alerts', label: 'Transaction monitoring and failure alerts' },
+            { icon: 'training', label: 'Team training and documentation' },
+          ],
+        },
+      ],
+      footnote: {
+        text: 'Not sure which plan fits?',
+        link: { label: 'Talk to us and we will check the site', href: '/en/contact' },
+      },
+    },
+    banner: {
+      heading: 'Want to know what condition your site is actually in?',
+      action: { label: 'Request a site condition check', href: '/en/contact' },
+    },
+    faqHeading: ['Questions we get', 'about website maintenance'],
+    faqEntries: [
+      {
+        question: 'How much does website maintenance cost per month?',
+        answer:
+          'In the Israeli market the range runs roughly from ₪190 to ₪690 per month for a marketing site, and higher for stores and custom systems. Our Basic plan is ₪290 per month and the Business plan is ₪590 per month, both on an annual term; stores and platforms are quoted against scope. Those figures buy a defined cycle of updates, daily off-server backups, uptime monitoring and a written response time rather than an open-ended promise of support. A full breakdown of what a site costs to keep running across a year, including hosting, domain, SSL and accumulated technical debt, is set out in our guide to yearly website maintenance cost.',
+      },
+      {
+        question: 'What does a maintenance plan include, and what does it exclude?',
+        answer:
+          'Included: core, plugin and dependency updates, daily backups held off the server, uptime monitoring, fault fixing, and content changes within the hours your plan allows. Excluded: building new features, redesigning pages, writing marketing copy and running advertising campaigns. Those are quoted separately and deliberately so, because bundling them into a monthly fee means paying every month for work you consume once a year. The boundary is written into the agreement rather than left to interpretation, which is what makes it possible to compare our plan against another supplier on equal terms instead of comparing two different definitions of the word maintenance.',
+      },
+      {
+        question: 'Do you maintain sites you did not build?',
+        answer:
+          'Yes, and it is a large part of the work. It starts with a survey: what the site is built on, which versions are running, what state the backups are in and what is already broken. Then we recover access to hosting, domain, DNS and connected systems, document the current state and settle ownership formally - which matters most in the common case where the previous developer has disappeared, nobody has the code, and the domain is registered to someone who no longer answers email. Once that is resolved the site enters the normal maintenance cycle. We will tell you honestly if a site is too far gone to maintain economically and a rebuild would cost less.',
+      },
+      {
+        question: 'What are the actual response times?',
+        answer:
+          'On the Basic plan, within 24 business hours. On the Business plan, within 4 business hours. A fault that takes the site down entirely is treated as top priority on every plan regardless of tier. Both the response time and the fix time are written into the agreement rather than left as a verbal assurance, which means you have something to point at when it matters. This is worth checking against any competing quote you receive: many maintenance contracts specify a monthly price and a list of tasks but never state how quickly anyone is obliged to answer when the site stops working.',
+      },
+      {
+        question: 'Does maintenance cover accessibility under IS 5568?',
+        answer:
+          'On the Business plan and above, yes - a quarterly check. This matters because accessibility is not a fixed state that a site reaches once and keeps. Adding an image without alternative text, changing a button colour so contrast drops below the required ratio, or embedding a third-party widget that traps keyboard focus can each break compliance that was previously in place. A one-off audit describes the site on the day it was performed and nothing after that. Israeli businesses are legally required to meet IS 5568, and the exposure sits with the site owner rather than with whoever built it, so treating accessibility as a recurring maintenance item rather than a launch task is the safer position.',
+      },
+      {
+        question: 'What happens to integrations when a provider changes its API?',
+        answer:
+          'This is one of the quietest and most expensive failures a site can have: the connection to Green Invoice, iCount or the card clearing provider stops working, orders keep arriving, and no invoice is generated for any of them. Nothing on the site looks broken, so it is often found weeks later by an accountant rather than immediately by a customer. On the Business plan integration upkeep is included, covering repairs when a provider changes its interface, along with monitoring that flags a failed hand-off rather than waiting for someone to notice the gap in the invoice sequence.',
+      },
+      {
+        question: 'Can we cancel the contract?',
+        answer:
+          'The plans run on an annual term, because maintenance is measured over time rather than in a single month - the value of an update cycle and a backup regime only shows up when something eventually goes wrong. At the end of the term you are free not to renew, and you receive every access credential, all backups and the full documentation when you leave. The site is yours regardless of whether we continue working together, and nothing in the arrangement is designed to make leaving difficult or to leave you dependent on us for access to your own infrastructure.',
+      },
+    ],
+  },
 }

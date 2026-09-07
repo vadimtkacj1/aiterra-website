@@ -1,5 +1,6 @@
 import JsonLd from '@/components/seo/JsonLd'
-import { breadcrumbList, faqPage, ORG_ID } from '@/lib/schema'
+import { breadcrumbList, faqPage, serviceOffers, ORG_ID } from '@/lib/schema'
+import type { ServicePlanOffer } from '@/lib/schema'
 import { SITE_URL } from '@/lib/seo'
 
 type Entry = { question: string; answer: string }
@@ -9,10 +10,18 @@ type ServiceJsonLdProps = {
   name: string
   description: string
   entries: Entry[]
+  plans?: ServicePlanOffer[]
 }
 
-export default function ServiceJsonLd({ slug, name, description, entries }: ServiceJsonLdProps) {
+export default function ServiceJsonLd({
+  slug,
+  name,
+  description,
+  entries,
+  plans,
+}: ServiceJsonLdProps) {
   const url = `${SITE_URL}/services/${slug}`
+  const offers = serviceOffers(url, plans)
 
   const service = {
     '@context': 'https://schema.org',
@@ -25,6 +34,7 @@ export default function ServiceJsonLd({ slug, name, description, entries }: Serv
     inLanguage: 'he',
     provider: { '@id': ORG_ID },
     areaServed: { '@type': 'Country', name: 'Israel' },
+    ...(offers ? { offers } : {}),
   }
 
   const crumbs = breadcrumbList([

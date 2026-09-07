@@ -8,10 +8,12 @@ import Stats from '../../../(he)/v2/components/Stats'
 import LeadCta from '../../../(he)/v2/components/LeadCta'
 import ContactForm from '../../../(he)/v2/components/ContactForm'
 import Footer from '../../../(he)/v2/components/Footer'
+import Faq from '../../../(he)/v2/components/Faq'
 import { getV2ContentEn } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
-import { breadcrumbList, webPage } from '@/lib/schema'
+import { breadcrumbList, faqPage, webPage } from '@/lib/schema'
+import { getEnFaq } from '@/lib/content-en-faq'
 
 export function generateMetadata(): Metadata {
   const { aboutPage } = getV2ContentEn()
@@ -28,6 +30,17 @@ export const revalidate = 300
 
 export default function EnAboutPage() {
   const { about, aboutPage, aboutValues } = getV2ContentEn()
+  const enFaq = getEnFaq('/en/about')
+  const entries = (enFaq?.items ?? []).map((item, index) => ({
+    id: `en-about-faq-${index + 1}`,
+    question: item.q,
+    answer: item.a,
+  }))
+  const faqJsonLd = faqPage({
+    path: '/en/about',
+    entries: entries.map(({ question, answer }) => ({ question, answer })),
+    locale: 'en',
+  })
 
   return (
     <>
@@ -46,6 +59,7 @@ export default function EnAboutPage() {
           { name: aboutPage.title, path: '/en/about' },
         ])}
       />
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header />
       <main id="main-content">
         <PageHero
@@ -68,6 +82,7 @@ export default function EnAboutPage() {
           locale="en"
         />
         <Stats rounded locale="en" />
+        {entries.length && enFaq ? <Faq heading={enFaq.heading} entries={entries} /> : null}
         <LeadCta locale="en" />
       </main>
       <Footer locale="en">
