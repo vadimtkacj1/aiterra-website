@@ -36,12 +36,14 @@ export function webPage({
   description,
   image,
   type = 'WebPage',
+  locale = 'he',
 }: {
   path: string
   name: string
   description: string
   image?: string
   type?: 'WebPage' | 'AboutPage' | 'ContactPage' | 'CollectionPage'
+  locale?: 'he' | 'en'
 }) {
   const url = abs(path)
   return {
@@ -51,20 +53,28 @@ export function webPage({
     url,
     name,
     description,
-    inLanguage: 'he',
+    inLanguage: locale,
     isPartOf: { '@id': SITE_ID },
     about: { '@id': ORG_ID },
     ...(image ? { primaryImageOfPage: { '@type': 'ImageObject', url: abs(image) } } : {}),
   }
 }
 
-export function faqPage({ path, entries }: { path: string; entries: { question: string; answer: string }[] }) {
+export function faqPage({
+  path,
+  entries,
+  locale = 'he',
+}: {
+  path: string
+  entries: { question: string; answer: string }[]
+  locale?: 'he' | 'en'
+}) {
   if (!entries.length) return null
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     '@id': `${abs(path)}#faq`,
-    inLanguage: 'he',
+    inLanguage: locale,
     mainEntity: entries.map((entry) => ({
       '@type': 'Question',
       name: toPlainText(entry.question),

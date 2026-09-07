@@ -221,6 +221,10 @@ body.cookie-banner-open .asw-menu-btn {
     --font-google-sans: 'Google Sans', Arial, sans-serif;
   }
 
+  html[dir='ltr'] {
+    direction: ltr;
+  }
+
   html {
     direction: rtl;
     /* Reserve the scrollbar gutter so locking body scroll under the page-load

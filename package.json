@@ -7,7 +7,8 @@
     "prebuild": "node scripts/sync-data-seeds.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "check:product": "node --experimental-strip-types scripts/check-product-summary.mjs"
   },
   "dependencies": {
     "@react-three/fiber": "^9.6.0",

@@ -8,7 +8,29 @@ declare global {
   }
 }
 
-export default function CookieConsent() {
+const COPY = {
+  he: {
+    dir: 'rtl' as const,
+    aria: 'הסכמה לשימוש בעוגיות',
+    title: 'אנו משתמשים בעוגיות (Cookies)',
+    body: 'לשיפור חווית המשתמש וניתוח תנועה באמצעות Google Analytics. ניתן לבטל את הסכמתכם בכל עת.',
+    decline: 'דחיה',
+    accept: 'אני מסכים',
+    align: 'sm:text-right',
+  },
+  en: {
+    dir: 'ltr' as const,
+    aria: 'Cookie consent',
+    title: 'We use cookies',
+    body: 'To improve your experience and measure traffic with Google Analytics. You can withdraw consent at any time.',
+    decline: 'Decline',
+    accept: 'Accept',
+    align: 'sm:text-left',
+  },
+}
+
+export default function CookieConsent({ locale = 'he' }: { locale?: 'he' | 'en' }) {
+  const copy = COPY[locale]
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -44,18 +66,17 @@ export default function CookieConsent() {
         <div
           className="fixed bottom-0 left-0 right-0 z-[9999] px-4 py-4 md:px-8 md:py-5"
           style={{ background: 'rgba(255,255,255,0.97)', borderTop: '1px solid rgba(17,24,39,0.12)' }}
-          dir="rtl"
+          dir={copy.dir}
           role="dialog"
-          aria-label="הסכמה לשימוש בעוגיות"
+          aria-label={copy.aria}
         >
           <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-center sm:text-right">
+            <div className={`text-center ${copy.align}`}>
               <p className="text-[#111827] font-semibold text-[15px] mb-0.5">
-                אנו משתמשים בעוגיות (Cookies)
+                {copy.title}
               </p>
               <p className="text-[#6b7280] text-[13px] leading-relaxed">
-                לשיפור חווית המשתמש וניתוח תנועה באמצעות Google Analytics.{' '}
-                ניתן לבטל את הסכמתכם בכל עת.
+                {copy.body}
               </p>
             </div>
 
@@ -64,14 +85,14 @@ export default function CookieConsent() {
                 onClick={decline}
                 className="px-5 py-2.5 text-[13px] font-semibold text-[#4b5563] hover:text-[#111827] border border-[#d1d5db] hover:border-[#9ca3af] transition-colors rounded-md"
               >
-                דחיה
+                {copy.decline}
               </button>
               <button
                 onClick={accept}
                 className="px-6 py-2.5 text-[13px] font-bold text-white rounded-md"
                 style={{ background: 'linear-gradient(92.63deg, #2447D6 14.57%, #3E96F9 99.27%)' }}
               >
-                אני מסכים
+                {copy.accept}
               </button>
             </div>
           </div>

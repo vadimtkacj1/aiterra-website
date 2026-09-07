@@ -4,6 +4,7 @@ import { getAllAuthors } from '@/lib/authors-server'
 import { getAllPortfolioProjects } from '@/lib/portfolio-server'
 import { getV2Content } from '@/lib/v2-content-server'
 import { SITE_URL } from '@/lib/seo'
+import { EN_SERVICE_SLUGS } from '@/lib/content-en'
 
 export const revalidate = 3600
 
@@ -61,6 +62,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
+  const enEntries: MetadataRoute.Sitemap = [
+    { path: '/en', priority: 0.9 },
+    { path: '/en/services', priority: 0.9 },
+    ...EN_SERVICE_SLUGS.map((slug) => ({ path: `/en/services/${slug}`, priority: 0.9 })),
+    { path: '/en/projects', priority: 0.8 },
+    { path: '/en/about', priority: 0.6 },
+    { path: '/en/contact', priority: 0.6 },
+  ].map((r) => ({
+    url: `${SITE_URL}${r.path}`,
+    lastModified: latestContent,
+    changeFrequency: 'monthly' as const,
+    priority: r.priority,
+  }))
+
   const projectEntries: MetadataRoute.Sitemap = getAllPortfolioProjects().map((project) => {
     const imgs = [project.image, ...(project.galleryImages ?? [])]
       .filter((x): x is string => Boolean(x))
@@ -96,6 +111,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...commercialEntries,
     ...legalEntries,
     ...serviceEntries,
+    ...enEntries,
     ...projectEntries,
     ...postEntries,
     ...authorEntries,

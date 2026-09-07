@@ -23,6 +23,8 @@ type PageMetaInput = {
   section?: string
   tags?: string[]
   noIndex?: boolean
+  locale?: 'he' | 'en'
+  altPath?: string
 }
 
 const withSuffix = (title: string) =>
@@ -47,21 +49,32 @@ export function pageMetadata({
   section,
   tags,
   noIndex = false,
+  locale = 'he',
+  altPath,
 }: PageMetaInput): Metadata {
   const canonical = normalizePath(path)
   const fullTitle = withSuffix(title)
+  const alt = altPath ? normalizePath(altPath) : undefined
+
+  const hePath = locale === 'he' ? canonical : alt
+  const enPath = locale === 'en' ? canonical : alt
+
+  const languages =
+    hePath && enPath
+      ? { 'he-IL': hePath, en: enPath, 'x-default': enPath }
+      : undefined
 
   return {
     title: { absolute: fullTitle },
     description,
     alternates: {
       canonical,
-      languages: { 'he-IL': canonical, 'x-default': canonical },
+      ...(languages ? { languages } : {}),
     },
     ...(noIndex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       type,
-      locale: 'he_IL',
+      locale: locale === 'en' ? 'en_US' : 'he_IL',
       siteName: SITE_NAME,
       url: canonical,
       title: fullTitle,

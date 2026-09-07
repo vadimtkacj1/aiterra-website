@@ -1,0 +1,374 @@
+.how {
+  position: relative;
+  background: #faf7f3;
+  color: var(--v2-paper-ink);
+}
+
+.inner {
+  width: 100%;
+  max-width: 1920px;
+  margin-inline: auto;
+  padding: 86px 24px 96px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  container-type: inline-size;
+  text-align: center;
+}
+
+.heading {
+  --v2-heading-size: min(64px, 7.4cqw);
+
+  margin-top: 24px;
+}
+
+.lede {
+  max-width: 880px;
+  margin-top: 26px;
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--v2-paper-ink-muted);
+}
+
+.steps {
+  --progress: 0px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-top: 64px;
+  padding-inline: 19.06%;
+}
+
+.steps::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 50%;
+  width: 1px;
+  background: var(--v2-hairline-ink);
+}
+
+.steps::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  inset-inline-start: 50%;
+  width: 2px;
+  height: var(--progress);
+  margin-inline-start: -1px;
+  background: #3070de;
+}
+
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 439fr 220fr 529fr;
+  align-items: center;
+}
+
+.step:nth-child(even) {
+  grid-template-columns: 529fr 220fr 439fr;
+}
+
+.stepText {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: start;
+}
+
+@media (min-width: 641px) {
+  .stepText {
+    container-type: inline-size;
+  }
+}
+
+.step:nth-child(even) .stepText {
+  grid-column: 3;
+}
+
+.stepTitle {
+  font-family: var(--v2-font-display);
+  font-size: min(28px, 6.6cqw);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.stepBody {
+  margin-top: 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--v2-paper-ink-muted);
+}
+
+.badgeCell {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.badge {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  inset-inline-start: 50%;
+  margin-block-start: -22px;
+  margin-inline-start: -22px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #faf7f3;
+  color: var(--v2-paper-ink);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.step[data-reached] .badge {
+  background: #3070de;
+  color: #ffffff;
+  box-shadow: 0 2px 14px 0 #3070de4d;
+}
+
+.stepArt {
+  grid-column: 3;
+  grid-row: 1;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 528 / 337;
+  border-radius: 18px;
+  background: #f1ece5;
+}
+
+.step:nth-child(even) .stepArt {
+  grid-column: 1;
+}
+
+.stepArtImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1439px) {
+  .inner {
+    padding: 64px 24px 72px;
+  }
+
+  .steps {
+    padding-inline: 8%;
+  }
+
+  .stepTitle {
+    font-size: min(24px, 6.6cqw);
+  }
+}
+
+@media (max-width: 1023px) {
+  .heading {
+    --v2-heading-size: min(48px, 8cqw);
+  }
+
+  .steps {
+    gap: 40px;
+    margin-top: 44px;
+    padding-inline: 0;
+  }
+
+  .steps::before,
+  .steps::after {
+    display: none;
+  }
+
+  .step,
+  .step:nth-child(even) {
+    grid-template-columns: 56px minmax(0, 1fr);
+    align-items: start;
+    row-gap: 20px;
+  }
+
+  .stepArt,
+  .step:nth-child(even) .stepArt {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    aspect-ratio: 16 / 10;
+  }
+
+  .badgeCell {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  .badge {
+    position: static;
+    margin: 0;
+  }
+
+  .stepText,
+  .step:nth-child(even) .stepText {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .inner {
+    padding: 44px var(--v2-mobile-rail) 52px;
+  }
+
+  .lede {
+    font-size: 14px;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 4.8%;
+    margin-top: 28px;
+    margin-inline: calc(-1 * var(--v2-mobile-rail));
+    padding-inline-start: 11%;
+    padding-inline-end: var(--v2-mobile-rail);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline-start: 11%;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .steps::-webkit-scrollbar {
+    display: none;
+  }
+
+  .step,
+  .step:nth-child(even) {
+    display: flex;
+    flex: 0 0 86%;
+    flex-direction: column;
+    scroll-snap-align: start;
+  }
+
+  .stepArt,
+  .step:nth-child(even) .stepArt {
+    order: 1;
+    aspect-ratio: 328 / 208;
+    border-radius: 12px;
+  }
+
+  .badgeCell,
+  .step:nth-child(even) .badgeCell {
+    order: 2;
+    position: relative;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  .badgeCell::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    inset-inline: 0;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--v2-hairline-ink);
+    transform: translateY(-50%);
+    transition: background 0.35s ease;
+  }
+
+  .step:not(:last-child) .badgeCell::after {
+    inset-inline-end: calc(-100% * 4.8 / 86);
+  }
+
+  .step[data-reached] .badgeCell::after {
+    background: #3070de;
+  }
+
+  .badge {
+    position: relative;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    font-size: 13px;
+  }
+
+  .stepText,
+  .step:nth-child(even) .stepText {
+    order: 3;
+    margin-top: 14px;
+  }
+
+  .stepTitle {
+    font-size: 18px;
+  }
+
+  .stepBody {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .heading {
+    --v2-heading-size: min(48px, 8cqw);
+  }
+
+  .steps {
+    gap: 40px;
+    margin-top: 44px;
+    padding-inline: 0;
+  }
+
+  .steps::before,
+  .steps::after {
+    display: none;
+  }
+
+  .step,
+  .step:nth-child(even) {
+    grid-template-columns: 56px minmax(0, 1fr);
+    align-items: start;
+    row-gap: 20px;
+  }
+
+  .stepArt,
+  .step:nth-child(even) .stepArt {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    aspect-ratio: 16 / 10;
+  }
+
+  .badgeCell {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  .badge {
+    position: static;
+    margin: 0;
+  }
+
+  .stepText,
+  .step:nth-child(even) .stepText {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}

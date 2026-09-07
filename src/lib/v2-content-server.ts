@@ -1,7 +1,9 @@
 import fs from 'fs'
 import path from 'path'
-import { v2ContentDefaults, type V2Content, type V2ContentKey } from '@/app/v2/content'
-import { diffV2, mergeV2, type V2Overrides } from '@/app/v2/contentMerge'
+import { v2ContentDefaults, type V2Content, type V2ContentKey } from '@/app/(he)/v2/content'
+import { diffV2, mergeV2, type V2Overrides } from '@/app/(he)/v2/contentMerge'
+import { contentEn } from '@/lib/content-en'
+import { servicePagesEn } from '@/lib/content-en-services'
 
 const FILE = path.join(process.cwd(), 'data', 'v2-content.json')
 
@@ -51,6 +53,25 @@ export function readV2ContentFile(): V2ContentFile {
 
 export function getV2Content(): V2Content {
   const overrides = readV2Overrides()
+  const out = {} as Record<string, unknown>
+  for (const key of Object.keys(v2ContentDefaults) as V2ContentKey[]) {
+    out[key] = mergeV2(v2ContentDefaults[key], overrides[key])
+  }
+  return out as V2Content
+}
+
+export type Locale = 'he' | 'en'
+
+export function getContent(locale: Locale = 'he'): V2Content {
+  return locale === 'en' ? getV2ContentEn() : getV2Content()
+}
+
+export function enOverrides(): V2Overrides {
+  return { ...contentEn, servicePages: servicePagesEn } as V2Overrides
+}
+
+export function getV2ContentEn(): V2Content {
+  const overrides = enOverrides()
   const out = {} as Record<string, unknown>
   for (const key of Object.keys(v2ContentDefaults) as V2ContentKey[]) {
     out[key] = mergeV2(v2ContentDefaults[key], overrides[key])

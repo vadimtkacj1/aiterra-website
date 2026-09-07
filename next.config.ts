@@ -15,8 +15,6 @@ const cleanToV2: { clean: string; v2: string }[] = [
 ]
 
 const retiredServiceSlugs: { from: string; to: string }[] = [
-  { from: '/services/web-development', to: '/services/brochure' },
-  { from: '/services/seo', to: '/services/marketing' },
   { from: '/services/adv', to: '/services/marketing' },
   { from: '/services/automation', to: '/services/development' },
   { from: '/services/custom', to: '/services/development' },

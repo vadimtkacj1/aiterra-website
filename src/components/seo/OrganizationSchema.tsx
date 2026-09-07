@@ -87,7 +87,7 @@ export default function OrganizationSchema() {
     url: SITE_URL,
     name: SITE_NAME,
     publisher: { '@id': `${SITE_URL}#organization` },
-    inLanguage: 'he',
+    inLanguage: ['he', 'en'],
   }
 
   return (
