@@ -23,7 +23,9 @@ export type BlogCard = {
   minutes: number
 }
 
-const FIRST_PAGE = 9
+// The blog is 40 posts; showing them all beats hiding 31 behind a button.
+// Kept as a ceiling so the control reappears if the archive ever grows large.
+const FIRST_PAGE = 60
 const PAGE = 8
 const COLUMNS = 4
 const LEAD_CELLS = 5
