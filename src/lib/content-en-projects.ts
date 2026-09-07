@@ -198,5 +198,10 @@ export const projectsEn: Record<string, ProjectOverride> = {
 
 export function applyProjectEn<T extends PortfolioProject>(project: T): T {
   const override = projectsEn[project.slug]
-  return override ? { ...project, ...override } : project
+  if (!override) return project
+
+  const merged = { ...project, ...override }
+  if (override.challenge) merged.challenge = { ...project.challenge, ...override.challenge }
+  if (override.solution) merged.solution = { ...project.solution, ...override.solution }
+  return merged
 }

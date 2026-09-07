@@ -6,11 +6,9 @@
 .introInner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  grid-template-areas:
-    'crumbs shot'
-    'copy shot';
+  grid-template-areas: 'copy shot';
   gap: 18px 48px;
-  align-items: center;
+  align-items: start;
   max-width: 1760px;
   margin-inline: auto;
   padding: 40px var(--v2-bar-inset) 64px;
@@ -25,8 +23,7 @@
 }
 
 .crumbs {
-  grid-area: crumbs;
-  align-self: end;
+  align-self: start;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -69,10 +66,20 @@
 .shotPanel {
   grid-area: shot;
   display: grid;
-  place-items: center;
+  place-items: start center;
   padding: 40px;
   border-radius: var(--v2-card-radius, 32px);
   background: var(--v2-paper);
+}
+
+.shotPanel .shotFrame {
+  max-height: min(620px, 58vh);
+}
+
+.shotPanel .shotImage {
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .shotFrame {
@@ -240,15 +247,10 @@
   .introInner {
     grid-template-columns: 1fr;
     grid-template-areas:
-      'crumbs'
       'shot'
       'copy';
     gap: 24px;
     padding-bottom: 48px;
-  }
-
-  .crumbs {
-    align-self: start;
   }
 
   .storyInner {
@@ -276,6 +278,10 @@
 
   .shotPanel {
     padding: 24px;
+  }
+
+  .shotPanel .shotFrame {
+    max-height: min(420px, 46vh);
   }
 }
 

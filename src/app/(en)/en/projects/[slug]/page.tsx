@@ -77,7 +77,7 @@ export default async function EnProjectPage({ params }: Params) {
       />
       <Header />
       <main id="main-content">
-        <ProjectIntro project={project} item={item} copy={copy} />
+        <ProjectIntro project={project} item={item} copy={copy} locale="en" />
         <ProjectAbout project={project} item={item} copy={copy} />
         <ProjectStory project={project} copy={copy} />
         <BannerCta banner={content.projectBanner} headingId="v2-project-banner" />

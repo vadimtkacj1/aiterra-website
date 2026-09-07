@@ -80,24 +80,28 @@ export function ProjectIntro({
   project,
   item,
   copy,
+  locale = 'he',
 }: {
   project: PortfolioProject
   item?: PortfolioItem
   copy: Copy
+  locale?: 'he' | 'en'
 }) {
   const shot = project.screenshot || project.image
   const tags = item?.tags?.length ? item.tags : project.tags
+  const homeHref = locale === 'en' ? '/en' : '/'
+  const indexHref = locale === 'en' ? '/en/projects' : '/projects'
 
   return (
     <section className={styles.intro} aria-labelledby="v2-project-heading">
       <div className={styles.introInner}>
         <div className={styles.copy} data-reveal-item>
           <nav className={styles.crumbs} aria-label={copy.crumb}>
-            <Link href="/">{copy.crumbHome}</Link>
+            <Link href={homeHref}>{copy.crumbHome}</Link>
             <span className={styles.crumbSep} aria-hidden="true">
               ·
             </span>
-            <Link href="/projects">{copy.crumb}</Link>
+            <Link href={indexHref}>{copy.crumb}</Link>
             <span className={styles.crumbSep} aria-hidden="true">
               ·
             </span>
