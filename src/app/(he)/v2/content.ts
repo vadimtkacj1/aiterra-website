@@ -1200,7 +1200,7 @@ export const servicePages: Record<string, ServicePage> = {
     system: {
       eyebrow: 'MANAGEMENT SYSTEM',
       heading: ['מערכת הניהול של Aiterra'],
-      art: '/images/management-console.webp',
+      art: '/images/services-view.webp',
       features: [
         {
           id: 'pages',
@@ -1706,7 +1706,7 @@ export const servicePages: Record<string, ServicePage> = {
     system: {
       eyebrow: 'REPORTING & TRACKING',
       heading: ['לוח הבקרה והדוחות שלכם'],
-      art: '/images/management-console.webp',
+      art: '/images/chips-v2.webp',
       features: [
         {
           id: 'rankings',
@@ -1855,7 +1855,7 @@ export const servicePages: Record<string, ServicePage> = {
     system: {
       eyebrow: 'MANAGEMENT SYSTEM',
       heading: ['מערכת ניהול התוכן של Aiterra'],
-      art: '/images/management-console.webp',
+      art: '/images/services-view-bg.webp',
       features: [
         {
           id: 'pages',
