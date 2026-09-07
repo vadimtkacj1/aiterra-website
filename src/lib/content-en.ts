@@ -155,28 +155,28 @@ export const contentEn: Partial<V2Content> = {
 
   statItems: [
     {
-      id: 'clients',
-      value: '75+',
-      label: 'Businesses served',
-      text: 'Companies that moved their site, their search visibility or their internal systems forward with us.',
-    },
-    {
       id: 'campaigns',
       value: '50+',
-      label: 'Campaigns under management',
-      text: 'Paid and organic programmes we run and measure continuously, not set-and-forget launches.',
+      label: 'Campaigns running',
+      text: 'Campaigns we manage and measure continuously as part of our clients marketing, not set-and-forget launches.',
     },
     {
-      id: 'ownership',
+      id: 'clients',
+      value: '75+',
+      label: 'Business owners served',
+      text: 'Owners who took a step forward and grew the traffic their business gets, with us.',
+    },
+    {
+      id: 'uptime',
       value: '100%',
-      label: 'Code ownership on handover',
-      text: 'You receive the repository and every service credential at delivery. No vendor lock-in, no hostage situations.',
+      label: 'Stable services',
+      text: 'Infrastructure built to stay up, fast and stable as the business keeps growing.',
     },
     {
-      id: 'disciplines',
-      value: '5',
-      label: 'Disciplines under one roof',
-      text: 'Strategy, design, engineering, organic search and paid media - staffed in-house rather than subcontracted.',
+      id: 'performance',
+      value: '95+',
+      label: 'Performance score',
+      text: 'Speed and load performance handled inside the development process, not patched on at the end.',
     },
   ],
 
