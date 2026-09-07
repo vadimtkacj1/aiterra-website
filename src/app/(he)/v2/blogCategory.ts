@@ -22,8 +22,10 @@ export const readingMinutes = (content: string) => {
 }
 
 const dateFormat = new Intl.DateTimeFormat('he-IL', { day: 'numeric', month: 'long', year: 'numeric' })
+const dateFormatEn = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 
-export const formatPostDate = (iso: string) => {
+export const formatPostDate = (iso: string, locale: 'he' | 'en' = 'he') => {
   const date = new Date(iso)
-  return Number.isNaN(date.getTime()) ? iso : dateFormat.format(date)
+  if (Number.isNaN(date.getTime())) return iso
+  return (locale === 'en' ? dateFormatEn : dateFormat).format(date)
 }

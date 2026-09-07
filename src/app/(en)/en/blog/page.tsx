@@ -31,7 +31,7 @@ function loadCards(defaultAuthor: string): BlogCard[] {
       slug: post.slug,
       title: post.title,
       excerpt: post.excerpt,
-      date: formatPostDate(post.datePublished),
+      date: formatPostDate(post.datePublished, 'en'),
       author: post.author || defaultAuthor,
       authorImage: post.authorImage || '',
       image: post.images?.[0] || '',

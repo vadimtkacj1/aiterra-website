@@ -14,6 +14,7 @@ import { ChevronPrevIcon } from '../../../../(he)/v2/components/icons'
 import { getAllPostsEn, getPostEnBySlug } from '@/lib/content-en-blog'
 import type { AdminPost } from '@/lib/blog-server'
 import { getAuthorById } from '@/lib/authors-server'
+import { applyAuthorEn } from '@/lib/content-en-authors'
 import { categoryTag, formatPostDate, matchesKeywords, readingMinutes } from '../../../../(he)/v2/blogCategory'
 import { getV2ContentEn } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
@@ -77,7 +78,7 @@ const toCard = (post: AdminPost, defaultAuthor: string): BlogCard => ({
   slug: post.slug,
   title: post.title,
   excerpt: post.excerpt,
-  date: formatPostDate(post.datePublished),
+  date: formatPostDate(post.datePublished, 'en'),
   author: post.author || defaultAuthor,
   authorImage: post.authorImage || '',
   image: post.images?.[0] || '',
@@ -91,7 +92,8 @@ export default async function EnArticlePage({ params }: Params) {
   if (!post) notFound()
 
   const { article, blog, contact } = getV2ContentEn()
-  const profile = post.authorId ? getAuthorById(post.authorId) : null
+  const rawProfile = post.authorId ? getAuthorById(post.authorId) : null
+  const profile = rawProfile ? applyAuthorEn(rawProfile) : null
   const authorName = post.author.trim() || profile?.name || blog.defaultAuthor
   const authorImage = post.authorImage?.trim() || profile?.image || ''
   const authorBio = profile?.bio || (profile?.role ? `${authorName} — ${profile.role}` : authorName)
@@ -165,7 +167,7 @@ export default async function EnArticlePage({ params }: Params) {
               <div className={styles.byline}>
                 <ShareButton title={post.title} />
                 <span>
-                  {article.publishedPrefix} {formatPostDate(post.datePublished)}
+                  {article.publishedPrefix} {formatPostDate(post.datePublished, 'en')}
                 </span>
               </div>
               {post.excerpt ? <p className={styles.lede}>{post.excerpt}</p> : null}

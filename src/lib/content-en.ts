@@ -482,6 +482,18 @@ export const contentEn: Partial<V2Content> = {
     action: { label: 'See all our work', href: '/en/projects' },
   },
 
+  article: {
+    tocTitle: 'Contents',
+    authorLabel: 'Written by',
+    share: 'Share',
+    copied: 'Link copied',
+    publishedPrefix: 'Published',
+    promoLabel: 'Let us work together',
+    relatedTitle: 'More articles you might find useful',
+    prev: 'Previous articles',
+    next: 'More articles',
+  },
+
   projectPage: {
     crumbHome: 'Home',
     crumb: 'Work',
