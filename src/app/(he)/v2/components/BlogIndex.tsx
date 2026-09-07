@@ -57,7 +57,9 @@ export default function BlogIndex({
     setLimit(FIRST_PAGE)
   }
 
-  const shown = visible.slice(0, limit)
+  // Every post is rendered so a crawler sees the full link graph; the ones past
+  // the current page are hidden with CSS rather than left out of the markup.
+  const shown = visible
 
   return (
     <section className={styles.index} aria-label={blog.title}>
@@ -98,7 +100,13 @@ export default function BlogIndex({
             {shown.map((post, index) => (
               <li
                 key={post.slug}
-                className={[styles.cell, index === 0 ? styles.lead : ''].filter(Boolean).join(' ')}
+                className={[
+                  styles.cell,
+                  index === 0 ? styles.lead : '',
+                  index >= limit ? styles.cellBeyondPage : '',
+                ]
+                  .filter(Boolean)
+                  .join(' ')}
                 data-col={columnOf(index)}
               >
                 <Link href={`${postBase}/${post.slug}`} className={styles.card}>
@@ -133,7 +141,7 @@ export default function BlogIndex({
 
         <GridRule columns={[1, 2, 1]} />
 
-        {visible.length > shown.length ? (
+        {visible.length > limit ? (
           <div className={styles.moreRow}>
             <button type="button" className={styles.loadMore} onClick={() => setLimit((current) => current + PAGE)}>
               <ActionButton href="#" label={blog.loadMore} className={styles.loadMoreFace} />

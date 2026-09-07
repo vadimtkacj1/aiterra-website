@@ -468,3 +468,7 @@
     padding: 20px;
   }
 }
+
+.cellBeyondPage {
+  display: none;
+}
