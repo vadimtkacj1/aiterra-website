@@ -318,61 +318,61 @@ export const contentEn: Partial<V2Content> = {
       id: 'cost',
       question: 'How much does a custom website cost to build?',
       answer:
-        'Pricing follows scope rather than page count alone. A focused landing page, a full marketing site, and a custom platform with authentication and integrations sit in very different ranges. After a short discovery call you get a written quote that states exactly what is included and what is not, with no costs that surface halfway through the build.',
+        'Pricing follows scope rather than page count. A focused landing page, a full marketing site, and a custom platform with authentication and integrations sit in three separate brackets. What actually moves the number is usually the integration work - Israeli card clearing, invoicing through Morning, Greeninvoice or iCount, a CRM connection, inventory management - rather than the volume of text or the number of pages, since twenty pages running on three templates is far less work than five pages that each look different. After a short discovery call you receive a written quote stating exactly what is included, what is excluded and what would count as an addition. Nothing surfaces halfway through the build that was not on that document, and you can compare it against a competing proposal on the same terms.',
     },
     {
       id: 'timeline',
       question: 'How long does it take to build a custom website?',
       answer:
-        'A landing page ships in a few weeks. A full marketing site typically runs one to two months. Web applications and custom platforms take longer, driven by the depth of the business logic and the integrations involved. In practice the schedule is set less by engineering than by content and assets, which is why we lock those during discovery.',
+        'A landing page ships in a few weeks. A full marketing site typically runs one to two months from the moment the specification is approved. An online store with a catalogue, card clearing and an invoicing connection runs one to three months, and a custom platform with user permissions and real business logic takes longer than either. In practice the schedule is set by content, photography and client approvals far more often than by engineering time, which is why we lock those during discovery rather than chasing them mid-build. Projects that arrive with their content ready almost always finish on schedule. We deliver in increments you can click through, so corrections land early instead of in the last week before launch.',
     },
     {
       id: 'template-vs-custom',
       question: 'What is the difference between custom web development and a website template?',
       answer:
-        'A template forces your content, navigation and workflows into layouts someone else designed for a generic business. Custom development inverts that: the structure follows how your business actually sells and operates. The practical differences show up in page speed, in how cleanly the site connects to your CRM and back office, and in what happens when you need a feature the template author never anticipated.',
+        'A template forces your content, navigation and workflows into layouts someone else designed for a generic business. Custom development inverts that: the structure follows how your business actually sells and operates. The practical differences show up in three places. Page speed, because a template carries markup and scripts for features you will never use, and Core Web Vitals feed directly into Google rankings. Integration, because connecting cleanly to your CRM and back office is straightforward in code and a plugin problem otherwise. And the day you need a feature the template author never anticipated - that is where the template tax is actually paid, in workarounds that cost more each year than building it properly once. Every plugin is also a security and update dependency.',
     },
     {
       id: 'ownership',
       question: 'Do we own the code after the project is delivered?',
       answer:
-        'Yes. You receive full ownership of the repository plus access to the domain, hosting and every connected service at handover. We do not retain clients through technical lock-in. If you decide to continue with another partner, the transition is documented and straightforward.',
+        'Yes. At handover you receive the code repository, the deployment pipeline to the server, and credentials for every connected service: hosting, domain, payment processing, invoicing and analytics. Design source files and brand assets are handed over too. We do not retain clients through technical lock-in, so if you decide to continue with another partner the transition is documented and does not require rebuilding the site from scratch. That is the practical difference from closed platforms such as Wix or Shopify, where the content and the design are yours but the system running them is not. It is worth confirming this clause appears in writing in any proposal you are weighing, ours included, because the absence of it is itself information.',
     },
     {
       id: 'seo-timeline',
       question: 'How long does SEO take to show results?',
       answer:
-        'Early signals - improved indexation and movement on lower-competition terms - usually appear within two to four months. Meaningful gains on competitive commercial terms typically take six months or more. A brand new domain starts slower than an established site with existing authority. Anyone promising faster than that is describing an outcome they cannot control.',
+        'Early signals - improved indexation, rising impressions and movement on lower-competition terms - usually appear within two to four months. Meaningful gains on competitive commercial terms typically take six months or more, and longer in saturated categories. A brand new domain starts slower than an established site with existing authority, and the technical state of the site changes the answer again: a site that is not being crawled properly will not rank even excellent content. We measure progress in the Google Search Console and GA4 accounts you own, and in the first months we report on impressions and indexation - the metrics that actually move first - rather than only on enquiries. Anyone promising faster than this is describing an outcome they do not control.',
     },
     {
       id: 'seo-vs-ads',
       question: 'Should we invest in SEO or paid ads?',
       answer:
-        'Paid search delivers traffic on day one and stops the moment the budget does. Organic search takes months to compound but keeps producing enquiries after the spend pauses. For most businesses the answer is both, weighted differently by stage: paid to validate demand and messaging quickly, organic as the asset that lowers acquisition cost over time.',
+        'Paid search delivers traffic on day one and stops the moment the budget does - it buys exposure rather than building an asset. Organic search takes months to compound but keeps producing enquiries after the spend pauses, and reaches people who are still researching rather than ready to buy. The difference shows up in unit economics: with paid, cost per lead stays roughly flat over time; with organic, it falls as the content accumulates authority. For most businesses the answer is both, weighted by stage - paid to validate demand and messaging quickly and to gather market data, organic running in parallel as the asset that lowers acquisition cost over the following year. What you should not do is judge either channel without conversion tracking in place.',
     },
     {
       id: 'ai-search',
       question: 'Will our site show up in AI Overviews and ChatGPT answers?',
       answer:
-        'That work is called generative engine optimisation, and we treat it as part of the SEO engagement rather than an upsell. In practice it means content that answers questions directly and citably, valid structured data, authority and mentions across sources these systems already trust, and crawler access configured deliberately. It matters because a growing share of searches now end without a click to any website.',
+        'That work is called generative engine optimisation, and we treat it as part of the SEO engagement rather than an upsell. In practice it requires four things. Content that answers questions directly, self-containedly and with enough concrete fact that a whole passage can be quoted without surrounding context. Valid structured data in JSON-LD, including published prices, FAQ entries and organisation details. Authority and brand mentions across sources these systems already trust, since a model draws on what others write about you and not only on what you write about yourself. And crawler access configured deliberately in robots.txt and llms.txt rather than left to chance. It matters because a growing share of searches now end in an answer rather than a click to any website.',
     },
     {
       id: 'integrations',
       question: 'Can you integrate with our CRM, ERP and payment systems?',
       answer:
-        'Yes - it is usually the reason clients come to us. We build API integrations between the site and the tools you already run, so leads, orders, invoices and inventory move automatically instead of being retyped between systems. Where an integration is genuinely not feasible, we tell you during discovery rather than after the contract is signed.',
+        'Yes, and it is usually the reason clients come to us. We build API integrations between the site and the tools you already run: accounting and invoicing through Morning (Green Invoice), Greeninvoice, iCount, Rivhit, Hashavshevet or Priority; CRM systems such as Fireberry and Powerlink; plus Israeli card clearing, shipping providers, email and the WhatsApp Business API. Leads, orders, invoices and inventory then move automatically instead of being retyped between systems. During discovery we settle which fields move, in which direction, how often, and what happens on error - because the important question in an integration is not what happens when everything works, but what happens when a provider is unavailable or returns something unexpected. Where an integration is genuinely not feasible, we say so before the contract is signed.',
     },
     {
       id: 'existing-site',
       question: 'We already have a website. Can you improve it instead of rebuilding?',
       answer:
-        'Often, yes. Discovery starts by establishing what is worth keeping: content, URL structure and existing organic rankings. Where a rebuild is the right call, we plan the 301 redirect map before anything moves. An unplanned migration off an established site is one of the fastest ways to erase years of accumulated search equity.',
+        'Often, yes, and it is a technical question rather than a matter of taste. Discovery starts by establishing what is worth keeping - content that ranks, URL structure, inbound links and existing organic positions - alongside a crawl of the site, a speed and Core Web Vitals check, and its indexing status in Google Search Console. If an upgrade solves the problem we will say so, because it costs less and preserves the history you have already earned. Where a rebuild is the right call, we plan the 301 redirect map before anything moves, preserve heading structure and metadata, and monitor coverage and rankings after launch. An unplanned migration off an established site is one of the fastest ways to erase years of search equity, and the cause is almost always URLs that changed without a redirect.',
     },
     {
       id: 'support',
       question: 'What happens after launch?',
       answer:
-        'Launch is the start of the engagement, not the end of it. We monitor performance and errors, ship security and dependency updates, keep improving the pages that carry commercial weight, and stay available for changes. You get clear reporting and one named point of contact throughout.',
+        'Launch is the start of the engagement, not the end of it. We monitor performance and uptime, ship security and dependency updates, run daily off-server backups, keep improving the pages that carry commercial weight, and track behaviour in GA4 and Google Search Console. The first few weeks almost always surface refinements that only real use exposes - a form that should be shorter, a message that is not landing, a missing field - and those are handled as part of the engagement rather than reopened as a new project. You get a clear monthly report and one named point of contact who knows the build. Ongoing maintenance is available as a monthly plan with published pricing and a response time written into the agreement.',
     },
   ],
 

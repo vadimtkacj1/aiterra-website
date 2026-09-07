@@ -116,34 +116,34 @@ export const servicePagesEn: Record<string, ServicePage> = {
     faqHeading: ['Before we start', 'a few things worth knowing.'],
     faqEntries: [
       {
-        question: 'How much does a custom website cost to build?',
+        question: 'What drives the cost of a custom web development project?',
         answer:
-          'Pricing follows scope rather than page count. A focused landing page, a full marketing site, and a custom platform with authentication and integrations sit in very different ranges. After a short discovery call you get a written quote stating exactly what is included and what is not, with no costs that surface halfway through.',
+          'Scope, not page count. A focused landing page, a full marketing site, and a custom platform with authentication and integrations sit in three separate brackets. Within any of them the number is moved mainly by integration work - Israeli card clearing, invoicing through Morning, Greeninvoice or iCount, a CRM connection, inventory management - and by the count of genuinely distinct templates, since twenty pages running on three layouts is far less work than five pages that each look different. After a short discovery call you get a written quote stating exactly what is included, what is excluded, and what would count as an addition. Nothing surfaces halfway through the build that was not on that document, which is also what makes a competing proposal comparable.',
       },
       {
-        question: 'How long does it take to build a custom website?',
+        question: 'How long does a custom web development project take?',
         answer:
-          'A landing page ships in a few weeks; a full marketing site typically runs one to two months; applications and platforms take longer. In practice the schedule is usually set by content and assets rather than engineering, which is why we lock those during discovery.',
+          'A landing page ships in a few weeks; a full marketing site typically runs one to two months from the moment the specification is approved; applications and platforms with user permissions and real business logic take longer. In practice the schedule is set by content, photography and client approvals rather than by engineering, which is why those are locked during discovery instead of chased mid-build - projects that arrive with content ready almost always finish on time. We deliver in working increments you can click through, so corrections land early rather than in the final week. Where a second language, a full brand identity or product photography is in scope, that is quoted into the timeline at the start rather than discovered later.',
       },
       {
         question: 'What is the difference between custom development and a website template?',
         answer:
-          'A template forces your content and workflows into layouts designed for a generic business. Custom development inverts that: the structure follows how your business sells and operates. The difference shows up in page speed, in how cleanly the site connects to your back office, and in what happens when you need something the template author never anticipated.',
+          'A template forces your content and workflows into layouts designed for a generic business. Custom development inverts that: the structure follows how your business sells and operates. The difference shows up in three places. Page speed, because a template ships markup and scripts for features you will never use, and Core Web Vitals feed directly into rankings. Back-office integration, which is routine in code and a plugin problem otherwise. And the day you need something the template author never anticipated - that is where the cost actually lands, in workarounds that compound annually. Every plugin is also a security and update dependency: the larger the stack, the higher the odds that one update quietly breaks something else.',
       },
       {
         question: 'Do we own the code after delivery?',
         answer:
-          'Yes. You receive full ownership of the repository plus access to the domain, hosting and every connected service at handover. We do not retain clients through technical lock-in.',
+          'Yes. At handover you receive the code repository, the deployment pipeline to the server, and credentials for every connected service: hosting, domain, payment processing, invoicing and analytics. Design source files come with it. Nothing is retained in our name and no component stops working if you leave, so the site can move to another developer at any point without being rebuilt. That is the practical difference from closed platforms such as Wix or Shopify, where the content and design are yours but the system running them is not. It is worth confirming that this appears in writing in every proposal you are weighing, ours included - a supplier who will not put it in writing has told you something useful.',
       },
       {
         question: 'Will the site meet accessibility requirements?',
         answer:
-          'We build to WCAG 2.1 AA: full keyboard navigation, sufficient colour contrast, screen reader support and a published accessibility statement. Accessibility is a legal requirement in a growing number of jurisdictions, and an overlay widget on its own generally does not satisfy it.',
+          'Yes, and it is checked before launch rather than after a complaint. We build to Israeli standard IS 5568, which is based on WCAG 2.0 Level AA, and also implement WCAG 2.1 Level AA: full keyboard navigation, sufficient colour contrast, alternative text on images, a heading hierarchy a screen reader can traverse, properly labelled form fields and a published accessibility statement. In Israel this is a legal requirement and the exposure sits with the site owner rather than with whoever built the site. An overlay widget on its own generally does not satisfy the standard - it adds a control layer above the page but does not repair broken structure, low contrast or unreachable navigation underneath it.',
       },
       {
         question: 'Can you improve our existing site instead of rebuilding it?',
         answer:
-          'Often, yes. Discovery establishes what is worth preserving: content, URL structure and existing organic rankings. Where a rebuild is right, we plan the 301 redirect map before anything moves - an unplanned migration is one of the fastest ways to erase years of search equity.',
+          'Often, yes, and it is a technical question rather than a matter of taste. Discovery establishes what is worth preserving - content that ranks, URL structure, inbound links and current organic positions - alongside a crawl, a speed and Core Web Vitals check, and the indexing status in Google Search Console. If the structure is sound and the real problem is copy, design or conversion, an upgrade costs less and keeps the history you have earned. Where a rebuild is right, we plan the 301 redirect map before anything moves, preserve heading structure and metadata, and monitor coverage afterwards. An unplanned migration is one of the fastest ways to erase years of search equity, and the cause is nearly always URLs that changed without redirects.',
       },
     ],
   },
@@ -263,39 +263,39 @@ export const servicePagesEn: Record<string, ServicePage> = {
     faqHeading: ['Before we start', 'a few things worth knowing.'],
     faqEntries: [
       {
-        question: 'How long does SEO take to show results?',
+        question: 'How long before an SEO campaign produces measurable traffic?',
         answer:
-          'Early signals - improved indexation and movement on lower-competition terms - usually appear within two to four months. Meaningful gains on competitive commercial terms typically take six months or more. A brand new domain starts slower than an established site with existing authority.',
+          'Early signals - improved indexation, rising impressions and movement on lower-competition terms - usually appear within two to four months. Meaningful gains on competitive commercial terms typically take six months or more, and longer in saturated categories. A brand new domain starts slower than an established site with existing authority, and the technical condition of the site shifts the answer again: a site that is not being crawled cleanly will not rank even excellent content. We measure in the Google Search Console and GA4 accounts you own, and in the early months we report impressions and indexation - the metrics that move first - rather than only enquiries, so progress is visible before it becomes revenue.',
       },
       {
         question: 'How much do SEO services cost per month?',
         answer:
-          'The retainer depends on competitiveness of the vertical, the technical condition of the site and how much content needs producing. After an initial review we present a clear range with a breakdown of what each month includes - research, technical work, content and authority building - so you know precisely what you are paying for.',
+          'The retainer depends on three things: how competitive the vertical is, the technical condition of the existing site, and how much content actually needs producing. A site that needs two months of technical repair before promotion can even begin is priced differently from a healthy one. After an initial review we present a clear range with a breakdown of what each month includes - keyword research, technical work, content writing, local SEO and authority building - and how many hours go to each, so you know what you are paying for. Treat any quote issued before the site has been examined with caution: without a technical review, nobody can know whether the fee covers promotion or repair.',
       },
       {
         question: 'What is the difference between SEO and paid ads?',
         answer:
-          'Paid search delivers traffic on day one and stops when the budget does. Organic takes months to compound but keeps producing enquiries after the spend pauses. For most businesses the answer is both, weighted by stage: paid to validate demand quickly, organic as the asset that lowers acquisition cost over time.',
+          'Paid search delivers traffic on day one and stops when the budget does - it buys exposure rather than building an asset. Organic takes months to compound but keeps producing enquiries after the spend pauses, and reaches people still researching rather than only those ready to buy. The economics differ: with paid, cost per lead stays roughly flat over time; with organic, it falls as content accumulates authority. For most businesses the answer is both, weighted by stage - paid to validate demand and gather market data quickly, organic running in parallel as the asset that lowers acquisition cost over the following year. What you should not do is judge either channel without conversion tracking already in place.',
       },
       {
         question: 'Can you guarantee a number one ranking?',
         answer:
-          'No, and nobody credibly can. Google does not sell organic positions and changes its systems continuously. What we do commit to is a defined plan of work, full transparency on what was done each month, and measurement against enquiries. A guaranteed number one is a red flag, not a selling point.',
+          'No, and nobody credibly can. Google does not sell organic positions, changes its systems dozens of times a year, and personalises results by location, device and search history - so "position one" is not even the same result for two different people. What we commit to instead is a written plan of work, full transparency on what was done each month, access to your own measurement accounts, and reporting against enquiries rather than rankings alone. A guaranteed number one is a red flag rather than a selling point, and in practice such guarantees usually attach to a phrase so specific that nobody searches it - which is exactly why ranking first for it is easy.',
       },
       {
         question: 'How do we get cited in ChatGPT and Google AI Overviews?',
         answer:
-          'That discipline is generative engine optimisation, and we treat it as part of the engagement. In practice it requires content that answers questions directly and citably, valid structured data, authority and mentions across sources these systems already trust, and deliberate crawler access. It matters because a large share of searches now end without a click to any site.',
+          'That discipline is generative engine optimisation, and we treat it as part of the engagement rather than an upsell. In practice it requires four things. Content that answers questions directly, self-containedly and with enough concrete detail that a whole passage can be quoted without surrounding context. Valid structured data in JSON-LD, including published prices, FAQ entries and organisation details. Authority and brand mentions across sources these systems already trust, since a model draws on what others write about you and not only on what you publish. And deliberate crawler access, configured in robots.txt and llms.txt rather than left to chance. It matters because a large and growing share of searches now end in an answer rather than a click to any site.',
       },
       {
         question: 'We are a local business. Do you handle local SEO?',
         answer:
-          'Yes. For a business serving a defined area, the Google Business Profile and the local pack often matter more than the website itself. We handle profile optimisation, review strategy, location-specific service pages and local citations so you surface for nearby searchers.',
+          'Yes. For a business serving a defined area - a clinic, a legal practice, a trade - the Google Business Profile and the local pack often matter more than the website itself, because a large share of local searches end in a phone call placed directly from the profile without anyone visiting the site. We handle profile optimisation and category selection, review collection and response, location-specific service pages, and local citations. We also make sure the business name, address and phone number appear identically everywhere the business is listed: consistency across citations is one of the simplest local ranking signals available, and one of the most commonly neglected.',
       },
       {
         question: 'Our site was built by someone else. Can you still rank it?',
         answer:
-          'Yes, and we do it regularly. We start with a technical review of what is blocking performance on the current build. Many fixes are possible on a site we did not write. If we find a structural blocker that cannot be worked around, we tell you upfront instead of billing months against work that cannot succeed.',
+          'Yes, and we do it regularly. We start with a technical review of what is blocking performance on the current build: a full crawl, speed and Core Web Vitals, URL structure, duplicate content, indexing status in Google Search Console and current positions. Many fixes are possible on a site we did not write, including WordPress and hosted platforms. If we find a structural blocker that cannot be worked around - a URL structure that cannot be changed, a platform that will not expose its tags, or performance that will not improve without a rebuild - we tell you upfront and in writing, instead of billing months against a technical ceiling that was knowable from the start.',
       },
     ],
   },
@@ -417,32 +417,32 @@ export const servicePagesEn: Record<string, ServicePage> = {
       {
         question: 'How is a custom platform different from off-the-shelf software?',
         answer:
-          'Off-the-shelf software is the right answer whenever your process is standard - accounting, email, payroll. A custom platform earns its cost when the process is genuinely specific to how you compete, or when you are paying several subscriptions plus manual work to bridge the gaps between them. We will tell you honestly which situation you are in.',
+          'Off-the-shelf software is the right answer whenever the process is standard - accounting, email, payroll - and we will say so rather than sell you a build. A custom platform earns its cost when the process is genuinely specific to how you compete, or when you are already paying several subscriptions plus manual labour to bridge the gaps between them. The clearest signal that the threshold has been crossed is somebody on the team retyping the same record into a second system, or nobody being able to state the status of anything without asking a particular person. Custom means the data model, screens, permissions and automations follow how you work, rather than your process being reshaped to fit a product roadmap you do not control.',
       },
       {
         question: 'What integrations can you build?',
         answer:
-          'We integrate with CRM systems, ERP and accounting platforms, payment providers, shipping and logistics services, email and messaging tools, and internal databases. Where a vendor exposes an API we can generally connect to it; where one does not, we will say so during discovery rather than after contracting.',
+          'We integrate with CRM systems including Fireberry and Powerlink, ERP and accounting platforms such as Priority, Hashavshevet, Morning (Green Invoice), Greeninvoice, iCount and Rivhit, Israeli payment providers, shipping and logistics services, email and the WhatsApp Business API, and internal databases. Where a vendor exposes an API we can generally connect to it; where one does not, we work with scheduled file import and export, and we say so during discovery rather than after contracting. What we settle in the specification is which fields move, in which direction, how often and what happens on error - because the question that matters in an integration is not what happens when everything works, but what happens when a provider is unavailable or returns something unexpected.',
       },
       {
         question: 'How long does a platform project take?',
         answer:
-          'A focused internal tool can ship in weeks. A portal or a dashboard suite with multiple roles and integrations typically runs a few months. We deliver in working increments rather than one large handover, so you see and steer real software early instead of approving documents.',
+          'A focused internal tool built around a single business process can ship in weeks. A portal or dashboard suite with multiple roles, permissions and integrations typically runs a few months. Three things set the range: the number of screens and states, the number of external systems to connect - each integration is a small project of its own, with error handling and edge cases - and how quickly decisions, data and approvals come back from your side. We deliver in working increments rather than one large handover, so you steer real software early instead of approving documents. The stage least worth compressing is the specification: changing the data model after a system is in production is the most expensive change there is.',
       },
       {
         question: 'Do we own the platform and its code?',
         answer:
-          'Yes. The repository, the infrastructure accounts and all credentials are yours. We also document the architecture and deployment process, so another team could pick it up without reverse-engineering it first.',
+          'Yes. The repository, the infrastructure accounts and every credential are yours, and the deployment pipeline is handed over with them. We also document the architecture, the data model and the deployment process, so another team could pick the system up without reverse-engineering it first - which is what makes the ownership meaningful rather than nominal. Nothing stops working if you stop working with us, and no licence key sits in our name. This matters more with an internal platform than with a website, because a system your operations depend on daily is the worst possible thing to be locked out of, and undocumented custom software is a well-known way for businesses to end up dependent on a single supplier.',
       },
       {
         question: 'What happens to our existing data?',
         answer:
-          'Migration is planned as part of the project, not treated as an afterthought. We map the existing data, clean and transform it, run trial migrations against a staging environment, and keep the old system available in parallel until the new one is verified.',
+          'Migration is planned as part of the project rather than treated as an afterthought, because it is where these projects most often go wrong. We map the existing data wherever it lives - a legacy system, a set of spreadsheets, or both - then clean and transform it, resolve duplicates and decide what is worth carrying across at all. Trial migrations run against a staging environment so the count and the content can be verified before anything is committed, and the old system stays available in parallel until the new one has been checked against it. Data that has accumulated for years in spreadsheets is rarely as consistent as anyone expects, and finding that out during a trial run is considerably cheaper than finding it out afterwards.',
       },
       {
         question: 'Who maintains it after launch?',
         answer:
-          'We do, under an ongoing support arrangement: monitoring, security and dependency updates, bug fixes and new features as the process changes. If you would rather run it with an internal team, we hand over documentation and support the transition.',
+          'We do, under an ongoing support arrangement covering monitoring, security and dependency updates, backups, integration upkeep and fixes, plus new features as the process changes. The first weeks after launch almost always surface refinements that only real use exposes - a missing field, an extra status, a permission that needs splitting, an alert that needs tuning - and those are handled within the arrangement rather than reopened as a new project. A whole new module goes through a short specification and is priced before development, so the boundary between support and new work is explicit in the agreement rather than argued about later. If you would rather run it with an internal team, we hand over documentation and support the transition.',
       },
     ],
   },
@@ -625,32 +625,32 @@ export const servicePagesEn: Record<string, ServicePage> = {
       {
         question: 'Do you build on Shopify and WooCommerce, or only custom?',
         answer:
-          'Both. If your catalogue and workflows fit a platform, using one is the faster and cheaper answer and we will say so. We build custom when the platform fee, the plugin stack or the checkout constraints start costing more than they save - typically with large catalogues, unusual pricing rules or deep integration with internal systems.',
+          'Both, and the honest answer often is the platform. If your catalogue and workflows fit Shopify or WooCommerce, using one is faster and cheaper and we will say so rather than quote a build. We build custom when the platform fee, the plugin stack or the checkout constraints start costing more than they save - typically with large catalogues where speed and filtering become real problems, with pricing rules a template cannot express, or where the store has to integrate deeply with a warehouse or an ERP. The cost of a platform is rarely the monthly fee; it is the accumulation of plugins bought to work around limitations, each one a security and update dependency, and the checkout you are not allowed to change.',
       },
       {
         question: 'Can you connect the store to our payment and invoicing providers?',
         answer:
-          'Yes, and this is usually where template stores break down. We integrate the payment gateway and the invoicing system you already use, so an order produces a payment and a valid invoice automatically instead of someone re-keying it at the end of the day.',
+          'Yes, and this is usually where template stores break down. We integrate the Israeli card clearing provider and the invoicing system you already use - Morning (Green Invoice), Greeninvoice, iCount or Rivhit - so an order produces a payment and a legally valid invoice automatically instead of someone re-keying it at the end of the day. It is worth knowing the failure mode this prevents: when such a connection breaks, nothing on the store looks wrong. Orders keep arriving and no invoices are generated for them, which is typically discovered weeks later by an accountant rather than immediately by a customer. Our maintenance plans include integration upkeep and monitoring that flags a failed hand-off, because providers change their APIs without warning.',
       },
       {
         question: 'Who owns the store when the project ends?',
         answer:
-          'You do. The repository, the deployment pipeline and the data are yours, and we hand over documentation with them. There is no licence that stops working if you stop working with us.',
+          'You do. The repository, the deployment pipeline, the product and customer data and every service credential are yours, and documentation is handed over with them. There is no licence that stops working if you stop working with us, and no component held in our name, so the store can move to another developer without being rebuilt. This is the practical difference from a hosted platform, where your catalogue and design are yours but the system selling them is not, and where leaving means exporting what the export tool happens to support. Worth checking in writing in any proposal you are weighing: a supplier who will not commit to it on paper has answered a different question than the one you asked.',
       },
       {
         question: 'Can you migrate an existing store without losing search rankings?',
         answer:
-          'Yes. Migration work includes a full URL map with permanent redirects, preserved page structure and metadata, and monitoring of coverage and rankings after launch. Most ranking loss in migrations comes from URLs quietly changing, which a redirect map prevents.',
+          'Yes, and this is the single most important part of a store migration. The work includes a full URL map with permanent 301 redirects from every old address, preserved page structure, headings and metadata, product and customer data migration, end-to-end payment testing in a staging environment, and monitoring of index coverage and rankings after launch. We also switch over during a low-traffic window rather than mid-day. Most ranking loss in migrations comes from URLs quietly changing - a category path that gains a segment, a product slug that changes format - and a redirect map is what prevents it. A store that ranks today represents years of accumulated equity, and it is entirely possible to lose it in an afternoon.',
       },
       {
         question: 'How long does a store take to build?',
         answer:
-          'It depends far more on catalogue complexity and integrations than on design. A focused store with a clean catalogue and one payment provider is a matter of weeks; multi-market stores with ERP integration take longer. We give a schedule after the catalogue and requirements step, not before.',
+          'It depends far more on catalogue complexity and integrations than on design. A focused store with a clean catalogue, one payment provider and one invoicing connection runs from about one to three months; multi-market stores with ERP integration, unusual pricing rules or thousands of SKUs take longer. The variables that actually move the date are the product model - variants, options, pricing rules, filters - and the number of external systems involved, since each integration carries its own error handling. We give a schedule after the catalogue and requirements step rather than before it, because a date quoted before anyone has seen the catalogue is a guess. Product photography and copy are, as usual, the most common source of delay.',
       },
       {
-        question: 'What happens after launch?',
+        question: 'How much maintenance does an online store need?',
         answer:
-          'Stores need active maintenance more than brochure sites do: payment APIs change, dependencies need security patches and traffic patterns shift. Our plans cover monitoring, updates and support so problems are caught before a customer finds them.',
+          'More than a marketing site does, and the difference is not marginal. Payment and invoicing providers change their APIs, dependencies need security patches, shipping partners change formats, and traffic patterns shift around campaigns and holidays. A store also fails silently in ways a brochure site cannot: a broken checkout or a failed invoice hand-off can run for days while orders keep arriving. Our plans cover uptime and transaction monitoring, updates, backups, integration upkeep and support, so problems surface through an alert rather than through a customer complaint. Pricing is published by plan and response times are written into the agreement, including for stores we did not build ourselves.',
       },
     ],
   },
@@ -772,32 +772,32 @@ export const servicePagesEn: Record<string, ServicePage> = {
       {
         question: 'How much does a business website cost?',
         answer:
-          'It depends on the number of pages, whether copy and photography are needed, and how much of the content you want to manage yourself. We quote after the positioning and structure step, when the scope is actually known - a number given before that is a guess dressed as an estimate.',
+          'It depends on the number of genuinely distinct templates rather than pages, on whether copy and photography are needed, and on how much of the content you want to manage yourself afterwards. Integrations move the figure too: a contact form is trivial, a booking flow wired into a CRM is not. We quote after the positioning and structure step, when the scope is actually known - a number given before that is a guess dressed as an estimate, and it is usually the reason budgets move during a build. The quote states what is included, what is excluded and what would count as an addition, which is also the only basis on which you can compare it against a competing proposal fairly.',
       },
       {
         question: 'Why build in code instead of using WordPress or Wix?',
         answer:
-          'For a simple brochure site a platform is often fine, and we will tell you when that is the case. Coded sites win when performance matters, when the design cannot be forced into a template, when plugin licences and their security exposure start to add up, or when the site has to integrate with systems you already run.',
+          'For a simple brochure site a platform is often fine, and we will tell you when that is the case rather than quote a build you do not need. Coded sites win in four situations: when performance matters, because Core Web Vitals feed directly into Google rankings and a template ships code for features you will never use; when the design cannot be forced into a template without fighting it; when plugin licences and their security exposure start to accumulate, since every plugin is an update dependency that can break something else; and when the site has to integrate with systems you already run, such as a CRM or Israeli invoicing. There is also ownership: with a coded site you receive the repository and can leave.',
       },
       {
         question: 'Can I update the content myself?',
         answer:
-          'Yes. The text and images that change regularly are editable through an admin, without touching code. Structural changes - new page types, new sections - come to us, which is deliberate: it is what keeps the site consistent.',
+          'Yes. The text, images, prices and banners that change regularly are editable through an admin interface, without touching code and without opening a support ticket. Your team gets training at handover and written documentation to go with it. Structural changes - a new page type, a new integration, a change in behaviour - come to us, which is deliberate rather than restrictive: it is what stops a site drifting into six different layouts over a year, and it is equally true of WordPress. If you would rather not touch the site at all, routine content changes are included in our monthly maintenance plans within the hours the plan allows, so a banner update is not a separate conversation each time.',
       },
       {
         question: 'Do you write the copy?',
         answer:
-          'We can, and we recommend it. Copy written alongside the design almost always outperforms copy supplied afterwards to fit a finished layout. If you have a writer, we work with them from the structure step onward.',
+          'We can, and we recommend it. Copy written alongside the design almost always outperforms copy supplied afterwards to fit a finished layout, because the structure and the argument are the same decision made twice. We write from the discovery call, the material you provide and keyword research, so the text does more than describe the business - it uses the phrases people actually search. If you have a writer we work with them from the structure step onward rather than at the end. Either way we review the copy together before launch, since you know your customers and the objections that recur in sales conversations better than any outside writer will. Content is also the most common cause of delay, so deciding who owns it early is worth doing.',
       },
       {
         question: 'Will the site be accessible?',
         answer:
-          'Yes, and built in rather than bolted on. Semantic structure, keyboard navigation, contrast and alternative text are part of the build. Accessibility overlays added after the fact tend to slow the site down without fixing the underlying markup.',
+          'Yes, and built in rather than bolted on. Semantic structure, a heading hierarchy a screen reader can traverse, full keyboard navigation, sufficient colour contrast, labelled form fields and alternative text are part of the build and are checked before launch rather than after a complaint. We build to Israeli standard IS 5568, which is based on WCAG 2.0 Level AA, and also implement WCAG 2.1 Level AA. In Israel this is a legal requirement and the exposure sits with the site owner rather than the builder. Accessibility overlays added after the fact tend to slow the site down without repairing the underlying markup: the widget sits above the page, while the broken structure, the low contrast and the unreachable navigation remain beneath it.',
       },
       {
-        question: 'What happens after launch?',
+        question: 'What does it cost to keep a business website running?',
         answer:
-          'The site needs hosting, security updates, dependency patching, backups and occasional content work. We offer an ongoing arrangement for that, or hand over documentation if you would rather run it internally.',
+          'A live site needs hosting, an SSL certificate, a domain renewal, security and dependency patching, backups, uptime monitoring and occasional content work. Those are the recurring costs people forget when comparing build quotes, and they are the reason a cheap build sometimes turns out to be the expensive option. We offer this as a monthly plan with published pricing and a response time written into the agreement, starting at 290 shekels a month for a marketing site and 590 for one generating leads continuously. Alternatively we hand over the repository, the deployment pipeline and full documentation, and you run it internally or with another supplier - nothing in the build depends on us continuing.',
       },
     ],
   },
@@ -919,32 +919,32 @@ export const servicePagesEn: Record<string, ServicePage> = {
       {
         question: 'What is a realistic minimum budget?',
         answer:
-          'It depends on the competitiveness of your market far more than on the platform. Too small a budget cannot gather enough conversion data to optimise on, so it stays permanently in learning. We will tell you if a proposed budget is below the level where management fees make sense.',
+          'It depends on how competitive your market is far more than on which platform you use. The mechanism worth understanding is that a budget too small to gather conversion volume never leaves the learning phase, so the algorithm keeps optimising on guesswork rather than data - which is why splitting a modest budget across Google, Meta, Instagram and TikTok usually produces four underperforming campaigns instead of one working channel. With a limited budget we concentrate on high purchase-intent keywords, a defined geography and restricted hours, and expand only once the first channel proves itself. If a proposed budget sits below the level where management fees make sense, we say so in the first conversation and suggest local SEO or a Google Business Profile instead.',
       },
       {
         question: 'How soon will we see results?',
         answer:
-          'Expect the first month to buy information rather than efficiency. Campaigns need conversion volume before optimisation has anything to work with. Anyone promising a specific cost per lead before launch is guessing.',
+          'First enquiries usually arrive within the opening weeks - that is the main advantage of paid over organic, which takes three to six months to show real movement. But a stable cost per lead only emerges after one to three months, once campaigns have accumulated enough conversions for the algorithm to optimise on data rather than assumption. The first month buys information: which audiences, which messages and which keywords actually produce enquiries. Anyone promising a specific cost per lead before launch is guessing, because the ad platforms themselves cannot supply that figure at that stage. We report what the first month found and what changes as a result, rather than presenting early volatility as either success or failure.',
       },
       {
         question: 'Do you build the landing pages too?',
         answer:
-          'Yes, and we think it is the main reason our campaigns perform. When the same team writes the ad, builds the page and implements the tracking, there is no gap between what the ad promises and what the page delivers - and no argument about whose fault a poor conversion rate is.',
+          'Yes, and we think it is the main reason our campaigns perform. When the same team writes the ad, builds the page and implements the tracking, there is no gap between what the ad promises and what the page delivers, and no argument about whose fault a poor conversion rate is - the failure mode where the agency blames the developer for a slow page and the developer blames the agency for irrelevant traffic simply does not arise. It also means a landing page can be changed the same week rather than queued with a third party. Pages ship with conversion tracking wired in from the start, so you can see the conversion rate rather than only the traffic that arrived.',
       },
       {
         question: 'Who owns the ad accounts?',
         answer:
-          'You do. We work inside your accounts, or set them up in your name if they do not exist yet. If we stop working together you keep the accounts, the history and the data, which is what makes future optimisation possible.',
+          'You do. We work inside your accounts, or open them in your business name if they do not exist yet: Google Ads, Meta Ads Manager, GA4 and Google Search Console. We take management permission, not ownership. This sounds procedural but it is one of the sharper problems in the market - when campaigns run from an agency-owned account, moving to another supplier erases the algorithm learning history and forces a restart from zero. Here, ending the engagement means removing our access, not transferring an asset. It is worth asking this of any agency you are considering, before signing rather than afterwards, because the answer is difficult to change once the account already exists in someone else name.',
       },
       {
         question: 'Google or Meta - which should we start with?',
         answer:
-          'Google captures demand that already exists; Meta creates demand among people who were not searching. If people are actively searching for what you sell, start with Google. If the category needs explaining, Meta usually earns its place first. Most accounts end up running both, weighted differently.',
+          'Google captures demand that already exists; Meta creates demand among people who were not searching for anything. If people are actively searching for what you sell - a service with an obvious name and a clear moment of need - start with Google, where intent is already present and the click is closer to a purchase. If the category needs explaining, or the product is discovered rather than sought, Meta usually earns its place first. Most accounts end up running both, weighted differently by season and campaign. One practical difference worth planning for: on Meta the creative is the variable that moves cost per lead most, more than audience settings, so budget for producing and refreshing it rather than running one ad for months.',
       },
       {
         question: 'How do you report?',
         answer:
-          'Monthly, on cost per lead and cost per acquisition, with what changed and what we are testing next. Impressions and clicks appear as context, never as the headline - they do not pay for anything.',
+          'Monthly, on cost per lead and cost per acquisition, with what changed, what it produced and what we are testing next. Impressions and clicks appear as context, never as the headline, because they do not pay for anything. Reporting runs on full conversion tracking - GA4, the Meta pixel and Google Ads - from the click through to the form or the phone call, and where a CRM exists, through to the deal that closed. That is what lets you see which channel, campaign and individual ad produce paying customers rather than merely enquiries. When a number falls it appears as it is: volatility is part of the work, and a report that never contains a decline is being edited rather than measured.',
       },
     ],
   },
@@ -1066,32 +1066,32 @@ export const servicePagesEn: Record<string, ServicePage> = {
       {
         question: 'Do you do branding without building the website?',
         answer:
-          'Yes. Identity, visual language and guidelines are delivered as a standalone package your own team or another agency can apply. We do ask what it will be built in, because a system designed with no implementation in mind tends not to survive one.',
+          'Yes. Identity, visual language and written guidelines are delivered as a standalone package that your own team or another agency can apply, with the source files included so nothing depends on us afterwards. We do ask what it will be built in, because a system designed with no implementation in mind tends not to survive one: colour choices that fail contrast requirements, type scales that collapse on mobile, and logo variants that do not exist at the sizes actually needed are all found at build time rather than in the presentation. Designing with the build in view costs nothing extra at this stage and avoids the round of quiet compromises that otherwise happens later, once the brand is already in use.',
       },
       {
         question: 'What do we actually receive at the end?',
         answer:
-          'Source files, exported assets in the formats you will need, and written guidelines covering colour, typography, spacing, logo usage and tone. For interface work you also get a component specification with states and breakpoints.',
+          'Source files, exported assets in every format you will actually need, and written guidelines covering colour, typography, spacing, logo usage and tone of voice - including the rules for what not to do, which is the half most guidelines omit and the half that gets broken first. For interface work you also receive a component specification with states and breakpoints: hover, focus, disabled, loading, error and empty, plus desktop and mobile. Everything is handed over and remains yours, whether or not you continue working with us. The guidelines are what keep the brand from fragmenting six months later, when a new supplier interprets the colours their own way and nobody has a document to point at.',
       },
       {
         question: 'Can you redesign an existing brand without starting over?',
         answer:
-          'Often, yes. If the equity in the current identity is worth keeping we evolve it - tightening the system, fixing accessibility and adding the rules that were never written down - rather than replacing something your customers already recognise.',
+          'Often, yes, and it is usually the better answer. If there is real equity in the current identity - customers recognise it, it appears on signage, packaging and vehicles - we evolve it rather than replace it: tightening the system, correcting contrast ratios that fail accessibility requirements, producing the logo variants that were never made, and writing down the rules that only ever existed in one designer head. A full replacement is warranted when the identity actively works against the business, when it cannot be used in the places the business now needs it, or when the positioning itself has changed. We say which of these applies after looking at where the brand is currently used, not before.',
       },
       {
         question: 'How many concept directions do you present?',
         answer:
-          'Usually two or three considered directions rather than a wall of options. Each comes with the reasoning behind it, so the conversation is about which argument fits the business, not which picture someone likes most.',
+          'Usually two or three considered directions rather than a wall of options. Each arrives with the reasoning behind it - the positioning it expresses, the audience it addresses, and how it differs from what competitors in the category already look like - so the conversation is about which argument fits the business rather than which picture someone happens to like. Presenting twenty variations tends to produce decisions by committee taste, and the result is usually the least objectionable option rather than the most effective one. Each direction is shown applied to real surfaces the business actually uses, not on an abstract board, because a mark that works in isolation and fails on a mobile header has not been tested.',
       },
       {
         question: 'Do you design mobile apps as well as websites?',
         answer:
-          'Yes - app interfaces, web products and landing pages. The deliverable is the same shape: a component system with states and behaviour specified, not a set of static screens.',
+          'Yes - app interfaces, web products, admin panels and landing pages. The deliverable is the same shape in each case: a component system with states and behaviour specified, not a set of static screens. That distinction matters more than it sounds, because the screens that are missing from most design handovers are the ones that decide how the product feels in use - loading, error, empty state before any data exists, and what happens when a list has one item or two hundred. We specify those, along with breakpoints and interaction behaviour, so a developer is not left inventing them under time pressure. It is also why the same team can build what it designed without anything being reinterpreted at the handover.',
       },
       {
         question: 'Will the design pass accessibility requirements?',
         answer:
-          'We design to meet them: contrast ratios checked against the standard, visible focus states, and a hierarchy that works with a screen reader. Note that a logo is exempt from contrast requirements while the interface built around it is not - a distinction that catches a lot of brand work.',
+          'We design to meet them: contrast ratios checked against the standard rather than eyeballed, visible focus states on every interactive element, touch targets large enough to use, and a heading hierarchy that works with a screen reader. In Israel the applicable standard is IS 5568, based on WCAG 2.0 Level AA, and we also design to WCAG 2.1 Level AA. One distinction catches a great deal of brand work: a logo is exempt from contrast requirements, while the interface built around it is not - so a pale brand colour can be entirely legitimate on the mark and entirely unusable on a button or body text. Establishing an accessible palette at the identity stage avoids rebuilding it during the site build.',
       },
     ],
   },
