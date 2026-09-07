@@ -11,10 +11,7 @@
 
 .line {
   display: block;
-}
-
-.section .line {
-  white-space: nowrap;
+  text-wrap: balance;
 }
 
 .hero {
@@ -40,9 +37,5 @@
 
   .section {
     font-size: clamp(30px, 8vw, 40px);
-  }
-
-  .section .line {
-    white-space: normal;
   }
 }

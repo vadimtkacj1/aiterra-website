@@ -4,11 +4,13 @@ import Header from '../components/Header'
 import PageHero from '../components/PageHero'
 import PageCrumbs from '../components/PageCrumbs'
 import ProjectsGrid from '../components/ProjectsGrid'
+import ProjectsGridStatic from '../components/ProjectsGridStatic'
 import Faq from '../components/Faq'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import { getFaqData } from '@/lib/faq-server'
 import { projectsPage } from '../content'
+import { getV2Content } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
 import { breadcrumbList, webPage } from '@/lib/schema'
@@ -23,6 +25,7 @@ export const metadata: Metadata = pageMetadata({
 export const revalidate = 300
 
 export default function V2ProjectsPage() {
+  const content = getV2Content()
   const faq = getFaqData('/')
   const entries = faq.items.map((item, index) => ({
     id: `projects-faq-${index + 1}`,
@@ -52,7 +55,11 @@ export default function V2ProjectsPage() {
           headingId="v2-projects-heading"
         />
         <PageCrumbs current={projectsPage.crumb} />
-        <Suspense fallback={null}>
+        <Suspense
+          fallback={
+            <ProjectsGridStatic items={content.portfolioItems} cardAction={content.portfolio.cardAction} />
+          }
+        >
           <ProjectsGrid />
         </Suspense>
         <Faq heading={projectsPage.faqHeading} entries={entries} />

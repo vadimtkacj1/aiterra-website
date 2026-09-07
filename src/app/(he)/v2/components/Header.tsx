@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { counterpartPath, localeOf } from '@/lib/locale-path'
 import ActionButton from './ActionButton'
 import { BurgerIcon, ChevronDownIcon, FlagIlIcon, FlagUsIcon } from './icons'
 import {
@@ -71,9 +73,13 @@ export default function Header() {
       .map((filter) => ({ label: filter.label, href: `${portfolioHref}?filter=${filter.id}` })),
   }
 
+  const pathname = usePathname() ?? '/'
+  const locale = localeOf(pathname)
+  const homeHref = locale === 'en' ? '/en' : '/'
+
   const navItems: NavItem[] = header.nav.map((item) => ({
     label: item.label,
-    href: item.href,
+    href: item.flag ? counterpartPath(pathname, item.flag === 'us' ? 'en' : 'he') : item.href,
     flag: item.flag,
     overviewLabel: item.overviewLabel,
     children: item.submenu ? submenus[item.submenu] : undefined,
@@ -98,7 +104,7 @@ export default function Header() {
     <>
       <header className={styles.bar} data-open={menuOpen || undefined}>
         <div className={styles.inner}>
-          <Link href="/" className={styles.brand} aria-label={header.brand} onClick={close}>
+          <Link href={homeHref} className={styles.brand} aria-label={header.brand} onClick={close}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/aiterra-logo-dark.png"

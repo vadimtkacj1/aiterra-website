@@ -67,8 +67,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/en/services', priority: 0.9 },
     ...EN_SERVICE_SLUGS.map((slug) => ({ path: `/en/services/${slug}`, priority: 0.9 })),
     { path: '/en/projects', priority: 0.8 },
+    ...getAllPortfolioProjects().map((project) => ({
+      path: `/en/projects/${project.slug}`,
+      priority: 0.7,
+    })),
     { path: '/en/about', priority: 0.6 },
     { path: '/en/contact', priority: 0.6 },
+    { path: '/en/privacy-policy', priority: 0.3 },
+    { path: '/en/terms-of-use', priority: 0.3 },
+    { path: '/en/accessibility-statement', priority: 0.3 },
   ].map((r) => ({
     url: `${SITE_URL}${r.path}`,
     lastModified: latestContent,

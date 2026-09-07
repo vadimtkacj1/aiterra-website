@@ -3,17 +3,19 @@ import Link from 'next/link'
 import Header from './Header'
 import Footer from './Footer'
 import { ChevronPrevIcon } from './icons'
-import { getV2Content } from '@/lib/v2-content-server'
+import { getV2Content, getV2ContentEn } from '@/lib/v2-content-server'
 import styles from './LegalPage.module.css'
 
 type LegalPageProps = {
   title: string
   lastUpdated: string
+  locale?: 'he' | 'en'
   children: ReactNode
 }
 
-export default function LegalPage({ title, lastUpdated, children }: LegalPageProps) {
-  const { blog, legal } = getV2Content()
+export default function LegalPage({ title, lastUpdated, locale = 'he', children }: LegalPageProps) {
+  const { blog, legal } = locale === 'en' ? getV2ContentEn() : getV2Content()
+  const homeHref = locale === 'en' ? '/en' : '/'
 
   return (
     <>
@@ -21,7 +23,7 @@ export default function LegalPage({ title, lastUpdated, children }: LegalPagePro
       <main id="main-content" className={styles.page}>
         <div className={styles.inner}>
           <nav className={styles.crumbs} aria-label={blog.crumbsLabel}>
-            <Link href="/" className={styles.crumbLink}>
+            <Link href={homeHref} className={styles.crumbLink}>
               {blog.crumbHome}
             </Link>
             <ChevronPrevIcon className={styles.crumbChevron} />
@@ -37,12 +39,12 @@ export default function LegalPage({ title, lastUpdated, children }: LegalPagePro
             </p>
           </header>
 
-          <article className={styles.prose} dir="rtl">
+          <article className={styles.prose} dir={locale === 'en' ? 'ltr' : 'rtl'}>
             {children}
           </article>
         </div>
       </main>
-      <Footer />
+      <Footer locale={locale} />
     </>
   )
 }

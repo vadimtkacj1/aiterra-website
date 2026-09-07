@@ -58,7 +58,11 @@ export default function Footer({
       <div className={styles.inner}>
         <div className={styles.grid}>
           <div className={[styles.column, styles.brandColumn].join(' ')}>
-            <Link href="/" className={styles.brand} aria-label={footer.brand}>
+            <Link
+              href={locale === 'en' ? '/en' : '/'}
+              className={styles.brand}
+              aria-label={footer.brand}
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/aiterra-logo-light.png"

@@ -1,6 +1,14 @@
 import type { V2Content } from '@/app/(he)/v2/content'
 
-export const EN_SERVICE_SLUGS = ['web-development', 'seo', 'development'] as const
+export const EN_SERVICE_SLUGS = [
+  'web-development',
+  'seo',
+  'development',
+  'ecommerce',
+  'brochure',
+  'marketing',
+  'branding',
+] as const
 
 export const contentEn: Partial<V2Content> = {
   header: {
@@ -410,9 +418,9 @@ export const contentEn: Partial<V2Content> = {
     serviceOther: 'Other',
     consent: {
       before: 'I have read and agree to the ',
-      terms: { label: 'terms of use', href: '/terms-of-use' },
+      terms: { label: 'terms of use', href: '/en/terms-of-use' },
       joiner: ' and the ',
-      privacy: { label: 'privacy policy', href: '/privacy-policy' },
+      privacy: { label: 'privacy policy', href: '/en/privacy-policy' },
       after: '.',
     },
     submit: 'Request a free consultation',
@@ -433,7 +441,11 @@ export const contentEn: Partial<V2Content> = {
         links: [
           { label: 'Custom web development', href: '/en/services/web-development' },
           { label: 'SEO and website promotion', href: '/en/services/seo' },
+          { label: 'Online stores', href: '/en/services/ecommerce' },
           { label: 'Custom web platforms', href: '/en/services/development' },
+          { label: 'Business websites', href: '/en/services/brochure' },
+          { label: 'Paid campaigns', href: '/en/services/marketing' },
+          { label: 'Brand and UX/UI', href: '/en/services/branding' },
           { label: 'All services', href: '/en/services' },
         ],
       },
@@ -451,9 +463,9 @@ export const contentEn: Partial<V2Content> = {
     contactTitle: 'Get in touch',
     socialLabels: { instagram: 'Instagram', facebook: 'Facebook' },
     legal: [
-      { label: 'Accessibility statement', href: '/accessibility-statement' },
-      { label: 'Terms of use', href: '/terms-of-use' },
-      { label: 'Privacy policy', href: '/privacy-policy' },
+      { label: 'Accessibility statement', href: '/en/accessibility-statement' },
+      { label: 'Terms of use', href: '/en/terms-of-use' },
+      { label: 'Privacy policy', href: '/en/privacy-policy' },
     ],
     copyright: 'Copyright ©Aiterra. All rights reserved',
   },
@@ -469,6 +481,31 @@ export const contentEn: Partial<V2Content> = {
     action: { label: 'See all our work', href: '/en/projects' },
   },
 
+  projectPage: {
+    crumbHome: 'Home',
+    crumb: 'Work',
+    readMore: 'Read more',
+    visit: 'Visit the site',
+    aboutEyebrow: 'BACKGROUND',
+    aboutHeading: 'About the project',
+    factDate: 'Date',
+    factField: 'Field',
+    factType: 'Project type',
+    factTech: 'Technology',
+    challengeEyebrow: 'THE CHALLENGE',
+    challengeHeading: 'What was the challenge?',
+    solutionEyebrow: 'OUR SOLUTION',
+    solutionHeading: 'Our solution',
+    moreEyebrow: 'MORE PROJECTS',
+    moreHeading: 'More projects',
+    shotAlt: 'Screenshot of the site',
+  },
+
+  projectBanner: {
+    heading: 'Let us ship your project',
+    action: { label: 'Talk to us and we will scope it', href: '/en/contact' },
+  },
+
   portfolioFilters: [
     { id: 'all', label: 'All' },
     { id: 'sales', label: 'Online stores' },
@@ -482,7 +519,7 @@ export const contentEn: Partial<V2Content> = {
       title: 'Neot Sade — grocery delivery store',
       tags: ['Next.js', 'eCommerce', 'Payments', 'Loyalty club'],
       shot: '/images/portfolio/cards/neot-sade.webp',
-      href: 'https://neotsade.co.il/',
+      href: '/en/projects/neot-sade',
       category: 'sales',
     },
     {
@@ -490,7 +527,7 @@ export const contentEn: Partial<V2Content> = {
       title: 'ALOVA — hair care store',
       tags: ['Shopify', 'Online store', 'UI/UX'],
       shot: '/images/portfolio/cards/alova.webp',
-      href: 'https://alovacosmetics.com/',
+      href: '/en/projects/alova',
       category: 'sales',
     },
     {
@@ -498,7 +535,7 @@ export const contentEn: Partial<V2Content> = {
       title: 'Olie 6 — olive oil store',
       tags: ['Shopify', 'eCommerce', 'UI/UX'],
       shot: '/images/portfolio/cards/olie-6.webp',
-      href: 'https://olie6.com/',
+      href: '/en/projects/olie-6',
       category: 'sales',
     },
     {
@@ -506,7 +543,7 @@ export const contentEn: Partial<V2Content> = {
       title: 'Hofit Cosmetics — treatment booking',
       tags: ['Landing page', 'UI/UX', 'Lead capture', 'WhatsApp'],
       shot: '/images/portfolio/cards/hofit-cosmetics.webp',
-      href: 'https://hofit-cosmetics.com/',
+      href: '/en/projects/hofit-cosmetics',
       category: 'sales',
     },
     {
@@ -514,7 +551,7 @@ export const contentEn: Partial<V2Content> = {
       title: 'Sous Chef — SaaS product site',
       tags: ['SaaS', 'Product site', 'UI/UX'],
       shot: '/images/portfolio/cards/sous-chef.webp',
-      href: 'https://onetablet.com/',
+      href: '/en/projects/sous-chef',
       category: 'systems',
     },
     {
@@ -522,7 +559,7 @@ export const contentEn: Partial<V2Content> = {
       title: 'Karin Cohen — lash academy',
       tags: ['Landing page', 'UI/UX', 'Lead capture', 'WhatsApp'],
       shot: '/images/portfolio/cards/karin-cohen.webp',
-      href: 'https://karin-cohen.com/',
+      href: '/en/projects/karin-cohen',
       category: 'brand',
     },
     {
@@ -530,7 +567,7 @@ export const contentEn: Partial<V2Content> = {
       title: 'Maayan Vaknin — clinical cosmetics',
       tags: ['Landing page', 'UI/UX', 'Accessibility', 'Lead capture'],
       shot: '/images/portfolio/cards/maayan-cosmetics.webp',
-      href: 'https://maayan-cosmetics.com/',
+      href: '/en/projects/maayan-cosmetics',
       category: 'brand',
     },
     {
@@ -538,7 +575,7 @@ export const contentEn: Partial<V2Content> = {
       title: 'Eli Ben Yitzhak — hair design',
       tags: ['Landing page', 'UI/UX', 'Work gallery', 'WhatsApp'],
       shot: '/images/portfolio/cards/eli-ben-yitzhak.webp',
-      href: 'https://elibenyizhak.com/',
+      href: '/en/projects/eli-ben-yitzhak',
       category: 'brand',
     },
     {
@@ -546,7 +583,7 @@ export const contentEn: Partial<V2Content> = {
       title: 'Ram and Haim — real estate marketing',
       tags: ['SEO', 'Reputation', 'Digital assets'],
       shot: '/images/portfolio/cards/brand-identity.webp',
-      href: 'https://ram-haim.co.il/',
+      href: '/en/projects/brand-identity',
       category: 'brand',
     },
     {
@@ -554,7 +591,23 @@ export const contentEn: Partial<V2Content> = {
       title: 'Avi — mortgage advisory',
       tags: ['Branding', 'Landing pages', 'Meta ads', 'Funnel'],
       shot: '/images/portfolio/cards/marketing-platform.webp',
-      href: 'https://avi-mashkanta.com/',
+      href: '/en/projects/marketing-platform',
+      category: 'brand',
+    },
+    {
+      id: 'ecommerce-store',
+      title: 'Digital store',
+      tags: ['Online store', 'Development', 'Payments'],
+      shot: '/images/portfolio/shots/ecommerce-store.webp',
+      href: '/en/projects/ecommerce-store',
+      category: 'sales',
+    },
+    {
+      id: 'alexandra-patsina',
+      title: 'Alexandra Patsina',
+      tags: ['Brand site', 'Branding', 'UI/UX'],
+      shot: '/images/portfolio/shots/alexandra-patsina.webp',
+      href: '/en/projects/alexandra-patsina',
       category: 'brand',
     },
   ],
@@ -622,6 +675,21 @@ export const contentEn: Partial<V2Content> = {
         action: { label: 'Learn more', href: '/en/services/seo' },
       },
       {
+        id: 'ecommerce',
+        title: 'Online stores',
+        image: '/images/service1.webp',
+        tags: [
+          'Catalogue design',
+          'Checkout',
+          'Payments',
+          'Inventory',
+          'Order management',
+          'Migration',
+        ],
+        text: 'Stores engineered in code rather than assembled from plugins - catalogue, checkout and the payment and invoicing integrations your business already runs on.',
+        action: { label: 'Learn more', href: '/en/services/ecommerce' },
+      },
+      {
         id: 'development',
         title: 'Custom web platforms',
         image: '/images/service2.webp',
@@ -635,6 +703,36 @@ export const contentEn: Partial<V2Content> = {
         ],
         text: 'Portals, dashboards, internal tools and the integrations between them - built for the workflows that off-the-shelf software cannot cover.',
         action: { label: 'Learn more', href: '/en/services/development' },
+      },
+      {
+        id: 'marketing',
+        title: 'Paid campaigns',
+        image: '/images/service4.webp',
+        tags: [
+          'Google Ads',
+          'Meta Ads',
+          'Landing pages',
+          'Creative',
+          'Conversion tracking',
+          'Reporting',
+        ],
+        text: 'Campaigns judged on cost per lead, with the landing page and the tracking built by the same team that runs the ads - so nothing is lost between the click and the enquiry.',
+        action: { label: 'Learn more', href: '/en/services/marketing' },
+      },
+      {
+        id: 'branding',
+        title: 'Brand and UX/UI',
+        image: '/images/service-branding.webp',
+        tags: [
+          'Brand identity',
+          'Visual language',
+          'UX/UI design',
+          'Design systems',
+          'Mobile apps',
+          'Developer handoff',
+        ],
+        text: 'Identity and interface design delivered as a system with rules and states - made by a team that also has to build it, so the design survives implementation.',
+        action: { label: 'Learn more', href: '/en/services/branding' },
       },
     ],
   },

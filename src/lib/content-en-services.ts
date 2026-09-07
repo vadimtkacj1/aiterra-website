@@ -446,4 +446,653 @@ export const servicePagesEn: Record<string, ServicePage> = {
       },
     ],
   },
+  ecommerce: {
+    id: 'ecommerce',
+    crumb: 'Online stores',
+    eyebrow: 'E-commerce',
+    heading: ['Online stores built in code,', 'not assembled from plugins'],
+    subhead: 'Our e-commerce practice',
+    lede: 'Catalogue, checkout, payments, inventory and order management - engineered as one system, integrated with the payment and invoicing providers your business actually uses, and fast enough to convert on mobile.',
+    image: '/images/service1.webp',
+    action: { label: 'Discuss your store', href: '/en/contact' },
+    metaTitle: 'E-commerce Development - Custom Online Stores',
+    metaDescription:
+      'Custom online store development: product catalogue, secure checkout, payment and invoicing integrations, inventory and order management, built in code and owned by you.',
+    advantages: {
+      eyebrow: 'OUR ADVANTAGES',
+      heading: ['What sets our store builds apart'],
+      lede: 'Why a coded storefront outlives a template once the catalogue and the order volume grow.',
+      outro: 'Our team is ready to scope the catalogue, the checkout and the integrations. Are you?',
+      action: { label: 'Discuss your store', href: '/en/contact' },
+      roles: [
+        {
+          id: 'spec',
+          title: 'The catalogue is designed first',
+          art: '/images/service-page-discovery.webp',
+          text: 'Product structure, variants, pricing rules and filters are modelled before any screen is designed. Retrofitting a catalogue model after launch is the single most expensive change in e-commerce.',
+        },
+        {
+          id: 'code',
+          title: 'Built in code, owned by you',
+          art: '/images/service-page1.webp',
+          text: 'No plugin tax, no template you cannot modify, no monthly licence for the parts that matter. You get the repository, the deployment pipeline and the ability to move providers without a rebuild.',
+        },
+        {
+          id: 'scale',
+          title: 'Speed that survives a full catalogue',
+          art: '/images/service-page3.webp',
+          text: 'Server-rendered pages, image pipelines and sensible caching, so a store with thousands of SKUs still loads on a mobile connection. Most abandoned carts start as an abandoned page load.',
+        },
+        {
+          id: 'support',
+          title: 'Maintained after launch',
+          art: '/images/service-page4.webp',
+          text: 'Payment providers change APIs, shipping partners change formats and dependencies need patching. Ongoing support means a broken checkout is found by monitoring rather than by a customer.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'WHAT YOU GET',
+      heading: ['A store you can actually run'],
+      art: '/images/management-console.webp',
+      features: [
+        {
+          id: 'orders',
+          icon: 'orders',
+          title: 'Order management',
+          text: 'Every order in one place with status, fulfilment and history, plus the automatic notifications the customer expects at each step.',
+        },
+        {
+          id: 'club',
+          icon: 'club',
+          title: 'Customer accounts',
+          text: 'Registered customers, saved addresses, order history and repeat purchase flows - the groundwork for retention rather than one-off sales.',
+        },
+        {
+          id: 'sales',
+          icon: 'sales',
+          title: 'Checkout and payments',
+          text: 'A short, mobile-first checkout wired to your payment provider, with automatic invoicing so finance is not reconciling orders by hand.',
+        },
+        {
+          id: 'catalog',
+          icon: 'catalog',
+          title: 'Catalogue and inventory',
+          text: 'Products, variants, collections and stock levels managed from one admin, with quantities that update as orders come in.',
+        },
+        {
+          id: 'analytics',
+          icon: 'analytics',
+          title: 'Store analytics',
+          text: 'Revenue, conversion and product performance in a dashboard built for decisions, not a raw export you have to interpret.',
+        },
+      ],
+      action: { label: 'Discuss your store', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'HOW IT WORKS',
+      heading: ['How it works. Straightforwardly.'],
+      lede: 'Most store projects stall on catalogue and payment decisions, so we settle those first.',
+      steps: [
+        {
+          id: 'discovery',
+          title: 'Catalogue and requirements',
+          text: 'We map products, variants, pricing and shipping rules, and confirm which payment and invoicing providers you use, before design starts.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'fit',
+          title: 'Design and build',
+          text: 'Storefront and checkout designed around the catalogue, then built in working increments you can click through - so changes land early instead of at handover.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'launch',
+          title: 'Launch and support',
+          text: 'Test transactions end to end, migrate products, go live, then monitor. Support continues after launch, because that is when real orders expose the edge cases.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    pricing: {
+      eyebrow: 'PRICING',
+      heading: ['Store management plans'],
+      lede: 'Ongoing plans for running the store after it is built. Development is quoted per project.',
+      plans: [
+        {
+          id: 'basic',
+          name: 'Basic',
+          audience: 'For small businesses',
+          price: '500',
+          priceNote: '₪ / month',
+          term: 'on a 12-month term',
+          action: { label: 'Start your store', href: '/en/contact' },
+          featuresTitle: 'What you get',
+          features: [
+            { icon: 'storefront', label: 'One connected storefront' },
+            { icon: 'products', label: 'Product, order and customer management' },
+            { icon: 'inventory', label: 'Inventory and stock updates' },
+            { icon: 'dashboard', label: 'Live store dashboard' },
+          ],
+        },
+        {
+          id: 'pro',
+          name: 'Pro',
+          audience: 'For growing stores',
+          price: '800',
+          priceNote: '₪ / month',
+          term: 'on a 12-month term',
+          badge: 'Most popular',
+          featured: true,
+          action: { label: 'Start your store', href: '/en/contact' },
+          featuresTitle: 'Everything in Basic, plus',
+          features: [
+            { icon: 'automation', label: 'Automated order and customer flows' },
+            { icon: 'shipping', label: 'Shipping provider integration' },
+            { icon: 'report', label: 'Monthly performance reporting' },
+            { icon: 'alerts', label: 'Stock and failure alerts' },
+            { icon: 'support', label: 'Priority support' },
+          ],
+        },
+        {
+          id: 'enterprise',
+          name: 'Enterprise',
+          audience: 'For multi-store and custom operations',
+          price: 'Custom',
+          term: 'scoped to your operation',
+          action: { label: 'Talk to us', href: '/en/contact' },
+          featuresTitle: 'Everything in Pro, plus',
+          features: [
+            { icon: 'stores', label: 'Multiple storefronts and markets' },
+            { icon: 'tailor', label: 'Custom features and workflows' },
+            { icon: 'api', label: 'ERP and CRM integrations' },
+            { icon: 'manager', label: 'A named account contact' },
+            { icon: 'training', label: 'Team training and documentation' },
+          ],
+        },
+      ],
+      footnote: {
+        text: 'Questions about which plan fits?',
+        link: { label: 'Talk to us', href: '/en/contact' },
+      },
+    },
+    banner: {
+      heading: 'Want to see what your store could look like?',
+      action: { label: 'Talk to us and we will scope it', href: '/en/contact' },
+    },
+    faqHeading: ['Questions we get', 'about online stores'],
+    faqEntries: [
+      {
+        question: 'Do you build on Shopify and WooCommerce, or only custom?',
+        answer:
+          'Both. If your catalogue and workflows fit a platform, using one is the faster and cheaper answer and we will say so. We build custom when the platform fee, the plugin stack or the checkout constraints start costing more than they save - typically with large catalogues, unusual pricing rules or deep integration with internal systems.',
+      },
+      {
+        question: 'Can you connect the store to our payment and invoicing providers?',
+        answer:
+          'Yes, and this is usually where template stores break down. We integrate the payment gateway and the invoicing system you already use, so an order produces a payment and a valid invoice automatically instead of someone re-keying it at the end of the day.',
+      },
+      {
+        question: 'Who owns the store when the project ends?',
+        answer:
+          'You do. The repository, the deployment pipeline and the data are yours, and we hand over documentation with them. There is no licence that stops working if you stop working with us.',
+      },
+      {
+        question: 'Can you migrate an existing store without losing search rankings?',
+        answer:
+          'Yes. Migration work includes a full URL map with permanent redirects, preserved page structure and metadata, and monitoring of coverage and rankings after launch. Most ranking loss in migrations comes from URLs quietly changing, which a redirect map prevents.',
+      },
+      {
+        question: 'How long does a store take to build?',
+        answer:
+          'It depends far more on catalogue complexity and integrations than on design. A focused store with a clean catalogue and one payment provider is a matter of weeks; multi-market stores with ERP integration take longer. We give a schedule after the catalogue and requirements step, not before.',
+      },
+      {
+        question: 'What happens after launch?',
+        answer:
+          'Stores need active maintenance more than brochure sites do: payment APIs change, dependencies need security patches and traffic patterns shift. Our plans cover monitoring, updates and support so problems are caught before a customer finds them.',
+      },
+    ],
+  },
+
+  brochure: {
+    id: 'brochure',
+    crumb: 'Business websites',
+    eyebrow: 'Business websites',
+    heading: ['A business website that earns', 'the first impression and the enquiry'],
+    subhead: 'Our website practice',
+    lede: 'Positioning, structure, design and copy built into a fast coded site - the pages a prospect reads before deciding whether to contact you, and the enquiry flow that makes contacting you easy.',
+    image: '/images/service3.webp',
+    action: { label: 'Discuss your website', href: '/en/contact' },
+    metaTitle: 'Business Website Design and Development',
+    metaDescription:
+      'Business website design and development: positioning and structure, UX and UI design, copywriting, mobile performance and lead capture - built in code, owned by you.',
+    advantages: {
+      eyebrow: 'OUR ADVANTAGES',
+      heading: ['What sets our websites apart'],
+      lede: 'Why a coded business site outperforms a template once it has to do real work.',
+      outro: 'Our team is ready to plan the structure and build the site around it. Are you?',
+      action: { label: 'Discuss your website', href: '/en/contact' },
+      roles: [
+        {
+          id: 'spec',
+          title: 'Structure before decoration',
+          art: '/images/service-page-discovery.webp',
+          text: 'We decide what each page has to prove and in what order, then design. A beautiful site with the wrong page order still loses the enquiry.',
+        },
+        {
+          id: 'code',
+          title: 'Built in code, owned by you',
+          art: '/images/service-page1.webp',
+          text: 'No template lock-in, no plugin stack quietly accumulating cost and attack surface. You own the repository and can move hosting or agency without rebuilding.',
+        },
+        {
+          id: 'scale',
+          title: 'Fast on a real phone',
+          art: '/images/service-page3.webp',
+          text: 'Server-rendered pages, optimised images and restrained scripts. Most business sites lose visitors to load time long before they lose them to content.',
+        },
+        {
+          id: 'support',
+          title: 'Accessible and maintained',
+          art: '/images/service-page4.webp',
+          text: 'Built to accessibility standards from the start rather than patched with an overlay afterwards, and kept updated so the site does not decay.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'WHAT YOU GET',
+      heading: ['Everything the site needs to do'],
+      art: '/images/management-console.webp',
+      features: [
+        {
+          id: 'pages',
+          icon: 'catalog',
+          title: 'Pages that answer objections',
+          text: 'Services, process, proof and pricing structured in the order a prospect actually asks about them, so the site does the qualifying for you.',
+        },
+        {
+          id: 'leads',
+          icon: 'orders',
+          title: 'Enquiry capture that works',
+          text: 'Forms that submit reliably, notify the right person immediately and land in your CRM instead of a shared inbox nobody watches.',
+        },
+        {
+          id: 'audience',
+          icon: 'club',
+          title: 'Content you can edit',
+          text: 'An admin for the text and images that change often, so routine updates do not require a developer or a support ticket.',
+        },
+        {
+          id: 'landing',
+          icon: 'sales',
+          title: 'Landing pages for campaigns',
+          text: 'Dedicated pages for paid traffic, built on the same system, so campaign spend lands somewhere designed to convert rather than on the homepage.',
+        },
+        {
+          id: 'analytics',
+          icon: 'analytics',
+          title: 'Measurement from day one',
+          text: 'Analytics and conversion tracking configured at launch, so you know which pages produce enquiries instead of guessing.',
+        },
+      ],
+      action: { label: 'Discuss your website', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'HOW IT WORKS',
+      heading: ['How it works. Straightforwardly.'],
+      lede: 'Sites go wrong when design starts before anyone has agreed what the site must say.',
+      steps: [
+        {
+          id: 'discovery',
+          title: 'Positioning and structure',
+          text: 'We agree the audience, the offer and the page structure, and what proof each page needs. This is where most of the value is decided.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'design',
+          title: 'Design and copy',
+          text: 'Interface and copy developed together rather than copy poured into a finished layout, so the words and the design support the same argument.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'launch',
+          title: 'Build, launch, measure',
+          text: 'Built in code, tested on real devices, launched with analytics and conversion tracking in place, then reviewed against actual enquiries.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Ready to see what your website could be?',
+      action: { label: 'Talk to us and we will scope it', href: '/en/contact' },
+    },
+    faqHeading: ['Questions we get', 'about business websites'],
+    faqEntries: [
+      {
+        question: 'How much does a business website cost?',
+        answer:
+          'It depends on the number of pages, whether copy and photography are needed, and how much of the content you want to manage yourself. We quote after the positioning and structure step, when the scope is actually known - a number given before that is a guess dressed as an estimate.',
+      },
+      {
+        question: 'Why build in code instead of using WordPress or Wix?',
+        answer:
+          'For a simple brochure site a platform is often fine, and we will tell you when that is the case. Coded sites win when performance matters, when the design cannot be forced into a template, when plugin licences and their security exposure start to add up, or when the site has to integrate with systems you already run.',
+      },
+      {
+        question: 'Can I update the content myself?',
+        answer:
+          'Yes. The text and images that change regularly are editable through an admin, without touching code. Structural changes - new page types, new sections - come to us, which is deliberate: it is what keeps the site consistent.',
+      },
+      {
+        question: 'Do you write the copy?',
+        answer:
+          'We can, and we recommend it. Copy written alongside the design almost always outperforms copy supplied afterwards to fit a finished layout. If you have a writer, we work with them from the structure step onward.',
+      },
+      {
+        question: 'Will the site be accessible?',
+        answer:
+          'Yes, and built in rather than bolted on. Semantic structure, keyboard navigation, contrast and alternative text are part of the build. Accessibility overlays added after the fact tend to slow the site down without fixing the underlying markup.',
+      },
+      {
+        question: 'What happens after launch?',
+        answer:
+          'The site needs hosting, security updates, dependency patching, backups and occasional content work. We offer an ongoing arrangement for that, or hand over documentation if you would rather run it internally.',
+      },
+    ],
+  },
+
+  marketing: {
+    id: 'marketing',
+    crumb: 'Paid campaigns',
+    eyebrow: 'Paid media',
+    heading: ['Paid campaigns judged on', 'cost per lead, not impressions'],
+    subhead: 'Our paid media practice',
+    lede: 'Google and Meta campaigns planned around your funnel stage, with creative, landing pages and conversion tracking built by the same team - so the ad, the page it lands on and the measurement agree with each other.',
+    image: '/images/marketing-hero.webp',
+    action: { label: 'Discuss your campaigns', href: '/en/contact' },
+    metaTitle: 'Paid Campaign Management - Google and Meta Ads',
+    metaDescription:
+      'Paid campaign management on Google and Meta: audience and market research, creative production, landing pages and conversion tracking, reported on cost per lead.',
+    advantages: {
+      eyebrow: 'OUR ADVANTAGES',
+      heading: ['What sets our campaign work apart'],
+      lede: 'Why campaigns run next to the engineering perform better than campaigns run beside it.',
+      outro: 'Our team is ready to plan the campaigns and the pages behind them. Are you?',
+      action: { label: 'Discuss your campaigns', href: '/en/contact' },
+      roles: [
+        {
+          id: 'new',
+          title: 'The landing page is part of the campaign',
+          art: '/images/service-marketing-icon4.webp',
+          text: 'We build the page the ad points at, not just the ad. Most wasted spend is not bad targeting - it is good traffic arriving somewhere that was never designed to convert it.',
+        },
+        {
+          id: 'scale',
+          title: 'Tracking that is actually correct',
+          art: '/images/service-marketing-icon3.webp',
+          text: 'Conversion tracking implemented in the code we wrote, verified end to end. Optimising toward a broken conversion event is worse than not optimising at all.',
+        },
+        {
+          id: 'research',
+          title: 'Research before spend',
+          art: '/images/service-marketing-icon2.webp',
+          text: 'Market, competitor and platform research first, so the budget starts against a considered angle instead of discovering the angle by burning through spend.',
+        },
+        {
+          id: 'creative',
+          title: 'Creative produced in-house',
+          art: '/images/service-marketing-icon1.webp',
+          text: 'Copy, static and video creative made by the same team, so new variants ship in days. Creative fatigue, not bidding, is what quietly kills most accounts.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'HOW WE RUN IT',
+      heading: ['What campaign management includes'],
+      art: '/images/service-marketing.webp',
+      features: [
+        {
+          id: 'research',
+          icon: 'catalog',
+          title: 'Market and platform research',
+          text: 'Who is already bidding, what they promise and where the gap is - then which platforms deserve budget for your funnel stage.',
+        },
+        {
+          id: 'angles',
+          icon: 'club',
+          title: 'Positioning and angles',
+          text: 'The specific claims each audience segment responds to, turned into a testable set of messages rather than one campaign with one promise.',
+        },
+        {
+          id: 'campaigns',
+          icon: 'sales',
+          title: 'Campaign build and structure',
+          text: 'Account structure, audiences, budgets and bidding set up so results are attributable and the account stays legible as it grows.',
+        },
+        {
+          id: 'launch',
+          icon: 'orders',
+          title: 'Creative and landing pages',
+          text: 'Ad creative and the pages behind it produced together, with variants prepared before performance starts to decay.',
+        },
+        {
+          id: 'reports',
+          icon: 'analytics',
+          title: 'Optimisation and reporting',
+          text: 'Ongoing optimisation with reporting on cost per lead and cost per acquisition - the numbers that decide budget, not impressions and clicks.',
+        },
+      ],
+      action: { label: 'Discuss your campaigns', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'HOW IT WORKS',
+      heading: ['How it works. Straightforwardly.'],
+      lede: 'The first month buys information. We plan for that instead of promising results it cannot produce.',
+      steps: [
+        {
+          id: 'manager',
+          title: 'Research and setup',
+          text: 'Market and competitor research, tracking implementation and account structure. We verify conversion tracking before spending, not after.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'variants',
+          title: 'Test and learn',
+          text: 'Several angles and creative variants run against each other on a controlled budget, until the data says which message and audience deserve scale.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'production',
+          title: 'Scale and report',
+          text: 'Budget moves to what works, creative is refreshed before fatigue sets in, and reporting stays on cost per lead so decisions are made on outcomes.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want campaigns measured on leads, not clicks?',
+      action: { label: 'Talk to us about your budget', href: '/en/contact' },
+    },
+    faqHeading: ['Questions we get', 'about paid campaigns'],
+    faqEntries: [
+      {
+        question: 'What is a realistic minimum budget?',
+        answer:
+          'It depends on the competitiveness of your market far more than on the platform. Too small a budget cannot gather enough conversion data to optimise on, so it stays permanently in learning. We will tell you if a proposed budget is below the level where management fees make sense.',
+      },
+      {
+        question: 'How soon will we see results?',
+        answer:
+          'Expect the first month to buy information rather than efficiency. Campaigns need conversion volume before optimisation has anything to work with. Anyone promising a specific cost per lead before launch is guessing.',
+      },
+      {
+        question: 'Do you build the landing pages too?',
+        answer:
+          'Yes, and we think it is the main reason our campaigns perform. When the same team writes the ad, builds the page and implements the tracking, there is no gap between what the ad promises and what the page delivers - and no argument about whose fault a poor conversion rate is.',
+      },
+      {
+        question: 'Who owns the ad accounts?',
+        answer:
+          'You do. We work inside your accounts, or set them up in your name if they do not exist yet. If we stop working together you keep the accounts, the history and the data, which is what makes future optimisation possible.',
+      },
+      {
+        question: 'Google or Meta - which should we start with?',
+        answer:
+          'Google captures demand that already exists; Meta creates demand among people who were not searching. If people are actively searching for what you sell, start with Google. If the category needs explaining, Meta usually earns its place first. Most accounts end up running both, weighted differently.',
+      },
+      {
+        question: 'How do you report?',
+        answer:
+          'Monthly, on cost per lead and cost per acquisition, with what changed and what we are testing next. Impressions and clicks appear as context, never as the headline - they do not pay for anything.',
+      },
+    ],
+  },
+
+  branding: {
+    id: 'branding',
+    crumb: 'Brand and design',
+    eyebrow: 'Brand and UX/UI',
+    heading: ['Design that carries the business,', 'not just the aesthetic'],
+    subhead: 'Our design practice',
+    lede: 'Brand identity, visual language and interface design - from first concept to a specification developers can build from, made by a team that also has to build it.',
+    image: '/images/service-branding-hero.webp',
+    action: { label: 'Discuss your brand', href: '/en/contact' },
+    metaTitle: 'Brand Identity and UX/UI Design Services',
+    metaDescription:
+      'Brand identity and UX/UI design: visual language, website and product interfaces, mobile app design and landing pages, delivered as a build-ready specification.',
+    advantages: {
+      eyebrow: 'OUR ADVANTAGES',
+      heading: ['What sets our design work apart'],
+      lede: 'Why design made next to engineering survives contact with implementation.',
+      outro: 'Our team is ready to define the brand and design the interface. Are you?',
+      action: { label: 'Discuss your brand', href: '/en/contact' },
+      roles: [
+        {
+          id: 'brand',
+          title: 'Identity with rules, not just a logo',
+          art: '/images/service-branding-icon4.webp',
+          text: 'Colour, type, spacing and tone documented as a system anyone can apply consistently - so the brand still looks like itself on the fifth page and the fiftieth ad.',
+        },
+        {
+          id: 'web',
+          title: 'Designed to be built',
+          art: '/images/service-branding-icon3.webp',
+          text: 'Components, states and breakpoints specified, not just three perfect screens. Handover includes the cases that break layouts: long text, empty states, error states.',
+        },
+        {
+          id: 'mobile',
+          title: 'Interfaces that behave on touch',
+          art: '/images/service-branding-icon2.webp',
+          text: 'Hover is not a thing on a phone. We design the touch behaviour explicitly rather than discovering at build time that half the interactions have no mobile equivalent.',
+        },
+        {
+          id: 'landing',
+          title: 'Accessible by construction',
+          art: '/images/service-branding-icon1.webp',
+          text: 'Contrast, focus states and hierarchy checked while designing. Accessibility problems fixed in design cost nothing; the same problems fixed after launch cost a rebuild.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'WHAT WE DELIVER',
+      heading: ['From concept to build-ready'],
+      art: '/images/service-branding.webp',
+      features: [
+        {
+          id: 'discovery',
+          icon: 'catalog',
+          title: 'Discovery and positioning',
+          text: 'Audience, competitors and the promise the brand has to carry, agreed before anything visual is proposed.',
+        },
+        {
+          id: 'concept',
+          icon: 'club',
+          title: 'Visual identity',
+          text: 'Logo, colour, typography and imagery direction, delivered with the rules that keep them coherent across every surface.',
+        },
+        {
+          id: 'screens',
+          icon: 'sales',
+          title: 'Interface design',
+          text: 'Website, product and mobile screens designed as a component system, with the states and breakpoints a build actually needs.',
+        },
+        {
+          id: 'handoff',
+          icon: 'orders',
+          title: 'Developer handoff',
+          text: 'Specifications, tokens and assets organised so engineering can build without guessing - or so we build it ourselves.',
+        },
+        {
+          id: 'iterate',
+          icon: 'analytics',
+          title: 'Iteration after launch',
+          text: 'Design revisited against real usage rather than treated as finished at handover, because the first version is a hypothesis.',
+        },
+      ],
+      action: { label: 'Discuss your brand', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'HOW IT WORKS',
+      heading: ['How it works. Straightforwardly.'],
+      lede: 'Design decisions are cheapest at the start and most expensive after launch. We front-load them.',
+      steps: [
+        {
+          id: 'research',
+          title: 'Research and direction',
+          text: 'Audience, competitors and the positioning the design has to express, agreed in writing before concepts - so feedback is about fit, not taste.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'concept',
+          title: 'Concept and system',
+          text: 'A direction developed into a working system: components, states, responsive behaviour and the rules that hold it together.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'handoff',
+          title: 'Handoff and build',
+          text: 'Specifications and assets handed to engineering - usually ours, sometimes yours - with the edge cases documented rather than discovered mid-build.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Ready to give the business a design that holds together?',
+      action: { label: 'Talk to us about your brand', href: '/en/contact' },
+    },
+    faqHeading: ['Questions we get', 'about brand and design'],
+    faqEntries: [
+      {
+        question: 'Do you do branding without building the website?',
+        answer:
+          'Yes. Identity, visual language and guidelines are delivered as a standalone package your own team or another agency can apply. We do ask what it will be built in, because a system designed with no implementation in mind tends not to survive one.',
+      },
+      {
+        question: 'What do we actually receive at the end?',
+        answer:
+          'Source files, exported assets in the formats you will need, and written guidelines covering colour, typography, spacing, logo usage and tone. For interface work you also get a component specification with states and breakpoints.',
+      },
+      {
+        question: 'Can you redesign an existing brand without starting over?',
+        answer:
+          'Often, yes. If the equity in the current identity is worth keeping we evolve it - tightening the system, fixing accessibility and adding the rules that were never written down - rather than replacing something your customers already recognise.',
+      },
+      {
+        question: 'How many concept directions do you present?',
+        answer:
+          'Usually two or three considered directions rather than a wall of options. Each comes with the reasoning behind it, so the conversation is about which argument fits the business, not which picture someone likes most.',
+      },
+      {
+        question: 'Do you design mobile apps as well as websites?',
+        answer:
+          'Yes - app interfaces, web products and landing pages. The deliverable is the same shape: a component system with states and behaviour specified, not a set of static screens.',
+      },
+      {
+        question: 'Will the design pass accessibility requirements?',
+        answer:
+          'We design to meet them: contrast ratios checked against the standard, visible focus states, and a hierarchy that works with a screen reader. Note that a logo is exempt from contrast requirements while the interface built around it is not - a distinction that catches a lot of brand work.',
+      },
+    ],
+  },
 }
