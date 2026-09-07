@@ -28,6 +28,7 @@ export const contentEn: Partial<V2Content> = {
         submenu: 'services',
         overviewLabel: 'All services',
       },
+      { id: 'blog', label: 'Blog', href: '/en/blog' },
       {
         id: 'portfolio',
         label: 'Work',

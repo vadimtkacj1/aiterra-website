@@ -1,4 +1,5 @@
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
+import { postsEn } from '@/lib/content-en-blog-data'
 
 export type Locale = 'he' | 'en'
 
@@ -10,6 +11,7 @@ const PAIRED_ROOTS = [
   '/privacy-policy',
   '/terms-of-use',
   '/accessibility-statement',
+  '/blog',
 ] as const
 
 const stripTrailingSlash = (path: string) => (path.length > 1 ? path.replace(/\/+$/, '') : path)
@@ -46,6 +48,8 @@ function hasEnglishCounterpart(hePath: string): boolean {
   if (hePath === '/') return true
   if ((PAIRED_ROOTS as readonly string[]).includes(hePath)) return true
   if (/^\/projects\/[a-z0-9-]+$/.test(hePath)) return true
+  const post = /^\/blog\/([a-z0-9-]+)$/.exec(hePath)
+  if (post) return Boolean(postsEn[post[1]])
   const slug = isServiceSlugPath(hePath)
   return slug ? (EN_SERVICE_SLUGS as readonly string[]).includes(slug) : false
 }

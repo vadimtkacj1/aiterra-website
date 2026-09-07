@@ -5,6 +5,7 @@ import { getAllPortfolioProjects } from '@/lib/portfolio-server'
 import { getV2Content } from '@/lib/v2-content-server'
 import { SITE_URL } from '@/lib/seo'
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
+import { getAllPostsEn } from '@/lib/content-en-blog'
 
 export const revalidate = 3600
 
@@ -71,6 +72,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       path: `/en/projects/${project.slug}`,
       priority: 0.7,
     })),
+    { path: '/en/blog', priority: 0.8 },
+    ...getAllPostsEn().map((post) => ({ path: `/en/blog/${post.slug}`, priority: 0.6 })),
     { path: '/en/about', priority: 0.6 },
     { path: '/en/contact', priority: 0.6 },
     { path: '/en/privacy-policy', priority: 0.3 },

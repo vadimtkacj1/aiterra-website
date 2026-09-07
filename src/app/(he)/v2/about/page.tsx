@@ -52,6 +52,7 @@ export default function V2AboutPage() {
           roles={aboutValues.roles}
           outro={about.outro}
           action={about.action}
+          roleHref="/services"
           headingId="v2-values-heading"
         />
         <Stats rounded />

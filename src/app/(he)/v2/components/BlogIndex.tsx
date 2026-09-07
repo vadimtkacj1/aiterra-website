@@ -34,8 +34,16 @@ const columnOf = (index: number) => {
   return (index - LEAD_CELLS) % COLUMNS
 }
 
-export default function BlogIndex({ posts }: { posts: BlogCard[] }) {
+export default function BlogIndex({
+  posts,
+  locale = 'he',
+}: {
+  posts: BlogCard[]
+  locale?: 'he' | 'en'
+}) {
   const blog = useV2('blog', blogDefaults)
+  const homeHref = locale === 'en' ? '/en' : '/'
+  const postBase = locale === 'en' ? '/en/blog' : '/blog'
   const [filterId, setFilterId] = useState(blog.filters[0].id)
   const [limit, setLimit] = useState(FIRST_PAGE)
 
@@ -62,7 +70,7 @@ export default function BlogIndex({ posts }: { posts: BlogCard[] }) {
           </div>
 
           <nav className={styles.crumbs} aria-label={blog.crumbsLabel}>
-            <Link href="/" className={styles.crumbLink}>
+            <Link href={homeHref} className={styles.crumbLink}>
               {blog.crumbHome}
             </Link>
             <ChevronPrevIcon className={styles.crumbChevron} />
@@ -93,7 +101,7 @@ export default function BlogIndex({ posts }: { posts: BlogCard[] }) {
                 className={[styles.cell, index === 0 ? styles.lead : ''].filter(Boolean).join(' ')}
                 data-col={columnOf(index)}
               >
-                <Link href={`/blog/${post.slug}`} className={styles.card}>
+                <Link href={`${postBase}/${post.slug}`} className={styles.card}>
                   <span className={styles.cover}>
                     {post.image ? (
                       // eslint-disable-next-line @next/next/no-img-element

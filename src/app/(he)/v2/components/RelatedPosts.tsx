@@ -12,7 +12,14 @@ import styles from './RelatedPosts.module.css'
 
 const PAGE = 3
 
-export default function RelatedPosts({ posts }: { posts: BlogCard[] }) {
+export default function RelatedPosts({
+  posts,
+  locale = 'he',
+}: {
+  posts: BlogCard[]
+  locale?: 'he' | 'en'
+}) {
+  const postBase = locale === 'en' ? '/en/blog' : '/blog'
   const article = useV2('article', articleDefaults)
   const blog = useV2('blog', blogDefaults)
   const trackRef = useRef<HTMLUListElement>(null)
@@ -50,7 +57,7 @@ export default function RelatedPosts({ posts }: { posts: BlogCard[] }) {
               key={post.slug}
               className={[styles.cell, pageOf(index) === offset ? '' : styles.parked].filter(Boolean).join(' ')}
             >
-              <Link href={`/blog/${post.slug}`} className={styles.card}>
+              <Link href={`${postBase}/${post.slug}`} className={styles.card}>
                 <span className={styles.cover}>
                   {post.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
