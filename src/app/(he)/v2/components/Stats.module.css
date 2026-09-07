@@ -242,7 +242,7 @@
   }
 
   .stats .heading > span {
-    white-space: nowrap;
+    text-wrap: balance;
   }
 
   .lede {

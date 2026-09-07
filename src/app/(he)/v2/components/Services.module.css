@@ -359,12 +359,15 @@
     grid-column: span 2;
     justify-content: center;
     height: 56px;
-    padding-inline: 12px;
+    padding-inline: 8px;
     border-radius: 10px;
     border-color: transparent;
     background: #f1ece5;
     color: var(--v2-paper-ink);
-    font-size: 16px;
+    font-size: 14px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.15;
   }
 
   .services .tabs button:nth-child(n + 4) {

@@ -553,6 +553,11 @@
 }
 
 @media (max-width: 640px) {
+  .prose table {
+    display: block;
+    overflow-x: auto;
+  }
+
   .inner {
     padding: calc(16px + var(--v2-bar-height) + 24px) 16px 0;
   }

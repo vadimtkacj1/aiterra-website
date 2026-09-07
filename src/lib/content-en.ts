@@ -20,7 +20,7 @@ export const contentEn: Partial<V2Content> = {
     menuClose: 'Close menu',
     expand: 'Expand',
     collapse: 'Collapse',
-    cta: { label: 'Get a project quote', href: '/en/contact' },
+    cta: { label: 'Get a quote', href: '/en/contact' },
     nav: [
       {
         id: 'services',
@@ -244,6 +244,42 @@ export const contentEn: Partial<V2Content> = {
         'Every platform is designed to be extended. Growth should mean adding a module, not commissioning a rewrite.',
       ],
       action: { label: 'Custom web platforms', href: '/en/services/development' },
+    },
+    {
+      id: 'ecommerce',
+      label: 'Online stores',
+      tags: [
+        'Custom storefront',
+        'Checkout and payments',
+        'Israeli invoicing',
+        'Inventory and orders',
+        'Mobile conversion',
+        'Store migration',
+      ],
+      question: 'What is different about the stores we build?',
+      paragraphs: [
+        'A store is judged on the checkout, not the homepage. We build the catalogue, the cart and the payment flow in code, and connect them to the card clearing and invoicing providers you already use, so an order produces a payment and a valid invoice without anyone re-keying it.',
+        'The failure mode we design against is the silent one: a broken hand-off where orders keep arriving and invoices quietly stop. Monitoring catches it before your accountant does.',
+      ],
+      action: { label: 'Online store development', href: '/en/services/ecommerce' },
+    },
+    {
+      id: 'branding',
+      label: 'Branding',
+      tags: [
+        'Brand strategy',
+        'Logo design',
+        'Visual language',
+        'Brand guidelines',
+        'Tone of voice',
+        'Sales collateral',
+      ],
+      question: 'What is different about our branding work?',
+      paragraphs: [
+        'Branding here starts with who the customer is and what they need to remember, and only then arrives at colours and typefaces. A palette chosen before that question is decoration, not positioning.',
+        'The result is one language that holds up on the site, in the campaign and at every other point of contact - and it is made by the team that also has to build it, so nothing in the guidelines is undeliverable.',
+      ],
+      action: { label: 'Branding and design', href: '/en/services/branding' },
     },
   ],
 
