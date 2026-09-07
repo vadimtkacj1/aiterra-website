@@ -13,6 +13,173 @@ type PostOverride = {
  * entry here — an untranslated post is omitted rather than served in Hebrew.
  */
 export const postsEn: Record<string, PostOverride> = {
+  'business-automation-12-processes': {
+    title: 'Business automation for a small business: 12 processes to stop doing by hand',
+    excerpt:
+      'Every small business wastes tens of hours a month on repetitive tasks that could be automated. Twelve concrete processes to stop doing manually — and free the time for what actually grows the business.',
+    tags: ['Automation', 'Small business', 'Efficiency', 'Lead management', 'Time saving'],
+    content: `**In short (TL;DR):** Business automation is defining rules of the form "when X happens, do Y automatically", so repetitive tasks run without anyone touching them. In a small business, automating lead capture, first response, follow-ups and reminders saves tens of hours a month, prevents lost leads — and frees time and attention for growth.
+
+Every small business wastes tens of hours a month on repetitive, predictable tasks — typing in leads, chasing follow-ups, sending reminders, issuing invoices. The good news: most of them can be automated today with accessible tools. Here are twelve processes worth stopping by hand, to free time and attention for what actually grows the business.
+
+![Business automation for a small business — a robotic arm performing a task carefully](/images/blog/business-automation-12-processes.webp)
+
+Business automation means defining "when X happens, automatically do Y", so repetitive tasks run without human touch. The purpose is not to replace people, but to free them from mechanical work in favour of work that requires human judgement.
+
+## The 12 processes worth stopping by hand
+
+1. **Capturing leads into the system.** Every enquiry — from a form, from WhatsApp, from an ad — enters the CRM automatically, with no typing.
+2. **An immediate first response.** An automatic "we have received your enquiry" message, even at two in the morning.
+3. **Following up leads that did not close.** An automatic reminder or message to a client who never came back.
+4. **Appointment reminders.** An automatic reminder that dramatically reduces no-shows.
+5. **Issuing invoices and receipts.** A connection between the sales system and the accounting software.
+6. **Requesting a review.** An automatic message after the service, asking for a Google review.
+7. **Tagging and routing leads.** Automatic assignment of a lead to the right representative by type or region.
+8. **Status updates to the client.** "Your order has shipped" / "the work is complete" — automatically.
+9. **Collecting details before a call.** A bot that gathers the basics so the representative arrives prepared.
+10. **Weekly reports.** A performance report that arrives by email automatically, without building it by hand.
+11. **Calendar sync and scheduling.** A booking link that syncs with the calendar without the back and forth.
+12. **Abandoned cart recovery.** In a store — an automatic reminder to anyone who did not complete the purchase.
+
+## The difference between doing it by hand and automating it
+
+Here are the five highest-return processes, before automation and after:
+
+| Process | By hand | After automation | Typical tool |
+|---|---|---|---|
+| Lead capture | Manual typing from every channel, leads falling through the cracks | Every enquiry enters the system automatically | CRM |
+| First response | The client waits hours for an answer | An immediate acknowledgement, 24/7 | WhatsApp + CRM |
+| Appointment reminders | Manual phone calls, a high no-show rate | An automatic reminder before the appointment | SMS / WhatsApp |
+| Issuing invoices | Double entry between systems | The invoice is created automatically when the deal closes | Accounting software |
+| Weekly reports | Built by hand every week | A performance report arrives by email automatically | GA4 / CRM |
+
+As an illustration only: if following up each lead manually takes around 10 minutes, and a business receives around 100 leads a month, that is roughly 16 hours of work — before counting reminders, invoicing and reports. Automation returns most of that time, and at the same time prevents the leads that get forgotten and never answered. The exact saving depends on the business, but the direction is almost always the same: less mechanical work, more deals closed.
+
+## How to know what to automate first
+
+The rule is simple: **automate first what repeats and hurts most.** Look for tasks meeting three conditions — they recur (daily or weekly), they are predictable (the same process every time), and they take time. That is where the return is fastest. It is also worth setting up basic measurement of your lead sources so you know which channel genuinely produces deals — and automate that one first.
+
+## What you need to get started
+
+The heart of most automations is a good CRM that the other tools connect to, so the first step is choosing it correctly. Much of the value happens through WhatsApp — the channel where most customers in Israel already are — so connecting WhatsApp to the CRM is usually the second step. There is no need to automate everything in one day: start with one painful process, and expand.
+
+---
+
+**Want to stop doing by hand what a machine could do?** Take a look at AITERRA's [development and automation service](/en/services/development), or [talk to us](/en/contact) and we will map together what is worth automating first.
+
+## Further reading
+
+- [Custom web systems: client portals, account areas and tools that save a full-time role](/en/blog/custom-web-systems)
+- [Why is your website slow? The complete 2026 guide to modern web development](/en/blog/website-performance-2026)`,
+    faq: {
+      title: 'Common questions about automation for a small business',
+      items: [
+        {
+          q: 'What should a small business automate first?',
+          a: 'Automate first what repeats, is predictable and takes time. Usually the fastest return is in automatic lead capture into the system, an immediate first response, and following up leads that did not close — that is where the most money falls between the chairs and customers go to competitors.',
+        },
+        {
+          q: 'Does business automation replace employees?',
+          a: 'No. The purpose is to free employees from mechanical, repetitive tasks (data entry, reminders, follow-ups) in favour of work that requires human judgement, such as closing deals and personal service. Automation increases the output of the existing team — the same team handles more clients without burning out.',
+        },
+        {
+          q: 'What do you need to start automating?',
+          a: 'The foundation is a good CRM that the other tools connect to, and in most businesses in Israel a WhatsApp connection as well. You do not need to automate everything at once — start with one painful process that consumes a lot of time, measure the saving, and expand gradually to further processes.',
+        },
+        {
+          q: 'How much time does business automation actually save?',
+          a: 'It depends on the business, but recurring processes such as lead capture, reminders and issuing invoices easily consume tens of hours a month when done by hand. Automating them returns that time — and also prevents human error and leads that are forgotten and never answered in time.',
+        },
+      ],
+    },
+  },
+
+  'ecommerce-store-that-sells': {
+    title: 'Building an online store that sells: the complete guide to profitable e-commerce in 2026',
+    excerpt:
+      'Most online stores are a handsome window display with a quiet till. Cart abandonment, awkward checkout and poor-quality traffic — here is how to fix the three problems choking your sales.',
+    tags: ['E-commerce', 'Development', 'Digital'],
+    content: `**In short (TL;DR):** A store that sells is not a handsome window display but a selling system: a fast site, a short checkout with local payment methods, automation to recover abandoned carts, and quality traffic. Fixing the three points of friction — speed, payment and traffic — is what turns visitors into real revenue.
+
+A physical shop is limited by opening hours, by location and by how many customers walk through the door. An online store sells 24/7, across the country, even while you sleep. But here is the truth that gets discussed less: most online stores in Israel do not really sell. They exist, they look good, but the till is quiet. After guiding dozens of digital projects, we at Aiterra know exactly what separates a store that produces real revenue from an expensive digital window display.
+
+![A customer paying by credit card while shopping in an online store](/images/blog/ecommerce-store-that-sells.webp)
+
+## Why most online stores do not sell
+
+It is almost always one of three problems: the store is slow (every second of waiting costs conversion rate and damages Core Web Vitals scores), the checkout is awkward (too many steps, a forced registration, surprises in the shipping price), or there simply is no quality traffic. The good news: all three are fixable — and the fix pays back quickly.
+
+## How much money is actually left on the floor?
+
+Cart abandonment is the largest leak in e-commerce. According to the [Baymard Institute](https://baymard.com/lists/cart-abandonment-rate), the average cart abandonment rate worldwide stands at roughly 70%, and in Israel the numbers are similar or higher. In plain figures:
+
+- For every 10 customers who add a product to the cart, around 7 leave moments before paying.
+- Every unnecessary field in the checkout and every surprise in the shipping price increases the abandonment rate.
+- Recovery automation — a reminder email and a WhatsApp message with a direct link back to the cart, sometimes with a small voucher — brings back a meaningful share of those who left. It is the automation with the fastest return in e-commerce.
+
+## Fast payment: what the customer expects
+
+Customers want to pay however suits them: credit card, Bit, Apple Pay or Google Pay — in one tap and without creating an account. Every point of friction in checkout costs you sales. When we build a store, the payment page receives the greatest attention: a minimum of fields, secure processing, and complete transparency about the shipping cost from the start — with no surprises at the final step.
+
+## Which platform to choose
+
+There is no single platform that suits everyone — the choice depends on catalogue size, the complexity of the business logic and the integrations you need. The table below summarises the three common routes:
+
+| Parameter | Ready-made platform (Shopify) | WooCommerce | Custom development |
+| --- | --- | --- | --- |
+| Suits | A small to medium catalogue | A business with an existing WordPress site | A large catalogue / complex logic |
+| Design flexibility | Medium | High | Complete |
+| Initial cost | Low to medium | Medium | High |
+| Inventory / CRM connection | Limited to plugins | Good | Full, no ceiling |
+| Speed (Core Web Vitals) | Depends on the theme | Depends on the plugins | Optimal |
+
+For a small store with a simple catalogue, a ready-made platform is enough. As the catalogue grows or promotion logic and deep system connections are required, custom development gives speed, flexibility and control a template will not reach.
+
+## Traffic that sells: bringing visitors who buy
+
+A store without traffic is a warehouse. Since [Google holds roughly 90% of the search market](https://gs.statcounter.com/search-engine-market-share), the growth strategy starts with organic search for category and product pages — including structured data that shows price and stock directly in Google's results. That is complemented by Google Shopping campaigns and social remarketing that brings interested visitors back to the store. That is how you build a selling machine that does not depend on a single traffic source.
+
+## Behind the scenes: the automation that saves a full-time role
+
+A successful store is also operations: stock updates, invoices, shipping labels and keeping the customer informed about order status. We connect all the systems — payments, inventory, shipping and CRM — into one automatic process, so you deal with products and customers rather than spreadsheets. The result: fewer human errors, faster dispatch and a customer informed at every stage, which reduces support enquiries and increases the share of returning customers.
+
+Dreaming of a store that genuinely sells, or have a store that is not taking off? Leave your details and we will come back with an orderly plan of action — from scoping through to the first sale.
+
+---
+
+**Want a store that works for you?** Take a look at AITERRA's [e-commerce service](/en/services/ecommerce), or [talk to us](/en/contact) for a scoping call at no cost.
+
+## Further reading
+
+- [Why is your website slow? The complete 2026 guide to modern web development](/en/blog/website-performance-2026)
+- [UX/UI design that sells: why a beautiful site is not enough](/en/blog/ux-ui-design-conversions)`,
+    faq: {
+      title: 'Common questions about building an online store',
+      items: [
+        {
+          q: 'Which platform should I build an online store on?',
+          a: 'It depends on scale and complexity. For a small store with a simple catalogue, a ready-made platform such as Shopify is enough. For a store with a large catalogue, complex promotion logic or a deep connection to inventory and CRM systems, custom development gives speed, flexibility and control that a template cannot reach. The simple rule: the more complex the business logic, the greater the advantage of purpose-built development.',
+        },
+        {
+          q: 'How much does it cost to build an online store?',
+          a: 'The range is wide and depends on the number of products, the design and the integrations required (payments, inventory, shipping). A short scoping call gives an accurate proposal — and more importantly, makes sure the budget is divided properly between the build and the marketing that will bring the customers. A beautiful store with no marketing budget stays a quiet window display.',
+        },
+        {
+          q: 'How do you reduce cart abandonment?',
+          a: 'A combination of a short checkout, fast payment methods such as Bit and Apple Pay, complete transparency about shipping costs from the start of the process, and recovery automations — an email and a WhatsApp message with a direct link back to the cart. Since the average abandonment rate is around 70%, each of these steps raises completion measurably.',
+        },
+        {
+          q: 'Which payment methods are essential for a store in Israel?',
+          a: 'The minimum is credit cards and Bit, and preferably Apple Pay and Google Pay for one-tap payment from a phone. The more local and fast methods you offer, the lower the friction at payment and the higher the conversion rate. It is important to make sure processing is secure and that the shipping cost is shown transparently before the payment step.',
+        },
+        {
+          q: 'Does an online store need organic search (SEO)?',
+          a: 'Absolutely. Google holds roughly 90% of the search market, and a large share of buying journeys start with a product search. Organic search for category and product pages, together with structured data showing price and stock in the results, brings quality traffic cheaply over time — unlike paid advertising, which stops the moment you stop paying.',
+        },
+      ],
+    },
+  },
+
   'website-security-guide': {
     title: 'Website security: protecting your site, your customers and your reputation',
     excerpt:
