@@ -66,7 +66,7 @@ We are not the ambassadors of any one platform. We look at your processes and re
 
 ---
 
-**Want a CRM that actually fits your business?** See the [automation and integrations service](/en/services/development) from AITERRA, or [leave your details](/en/contact) for a consultation.
+**Want a CRM that actually fits your business?** See the [automation and integrations service](/en/services/development) from Aiterra, or [leave your details](/en/contact) for a consultation.
 
 ## Further reading
 
@@ -144,7 +144,7 @@ We do not sell "automation" as a product. We map the processes that eat the most
 
 ---
 
-**Ready to stop working by hand?** See the [business automation service](/en/services/development) from AITERRA, or [leave your details](/en/contact) and we will work out the saving.
+**Ready to stop working by hand?** See the [business automation service](/en/services/development) from Aiterra, or [leave your details](/en/contact) and we will work out the saving.
 
 ## Further reading
 
@@ -234,7 +234,7 @@ Tired of losing leads and burning hours on manual work? Leave your details and w
 
 ---
 
-**Want to save working hours every week?** See the AITERRA [business automation](/en/services/development) service, or [talk to us](/en/contact) for a free scoping call.
+**Want to save working hours every week?** See the Aiterra [business automation](/en/services/development) service, or [talk to us](/en/contact) for a free scoping call.
 
 ## Further reading
 
@@ -323,7 +323,7 @@ Before deciding, it is worth understanding the full price ranges in the [2026 we
 
 ---
 
-**Not sure which suits you?** Tell us about the business through the [contact page](/en/contact) and we will give you an honest recommendation — brochure site, store, or a combination of the two. Take a look at AITERRA's [web development service](/en/services/web-development).
+**Not sure which suits you?** Tell us about the business through the [contact page](/en/contact) and we will give you an honest recommendation — brochure site, store, or a combination of the two. Take a look at Aiterra's [web development service](/en/services/web-development).
 
 ## Further reading
 
@@ -404,7 +404,7 @@ When you are testing an idea on a minimal budget, understand the limitations pre
 
 ---
 
-**Want a transparent proposal with no surprises?** At AITERRA we say up front what is included, what is not, and what you will pay across the year. Take a look at our [web development service](/en/services/web-development) or [leave your details](/en/contact) for an honest proposal.
+**Want a transparent proposal with no surprises?** At Aiterra we say up front what is included, what is not, and what you will pay across the year. Take a look at our [web development service](/en/services/web-development) or [leave your details](/en/contact) for an honest proposal.
 
 ## Further reading
 
@@ -494,7 +494,7 @@ Want a blog that produces leads rather than just words? Leave your details and w
 
 ---
 
-**Want us to do it for you?** See the AITERRA [organic SEO](/en/services/seo) service, or [leave your details](/en/contact) for a free consultation.
+**Want us to do it for you?** See the Aiterra [organic SEO](/en/services/seo) service, or [leave your details](/en/contact) for a free consultation.
 
 ## Further reading
 
@@ -586,7 +586,7 @@ This is one of the highest-return automations there is, and it slots straight in
 
 ---
 
-**Want to stop typing everything twice?** Take a look at AITERRA's [business automation service](/en/services/development), or [talk to us](/en/contact) and we will connect your CRM to your accounting software.
+**Want to stop typing everything twice?** Take a look at Aiterra's [business automation service](/en/services/development), or [talk to us](/en/contact) and we will connect your CRM to your accounting software.
 
 ## Further reading
 
@@ -672,7 +672,7 @@ Does your business look like everyone else? Leave your details and we will build
 
 ---
 
-**Want campaigns that return the investment?** See the AITERRA [paid advertising](/en/services/marketing) service, or [leave your details](/en/contact) for a free consultation.
+**Want campaigns that return the investment?** See the Aiterra [paid advertising](/en/services/marketing) service, or [leave your details](/en/contact) for a free consultation.
 
 ## Further reading
 
@@ -759,7 +759,7 @@ Want to turn your customer list into a revenue machine? Leave your details and w
 
 ---
 
-**Want to save hours of work every week?** Take a look at AITERRA's [business automation service](/en/services/development), or [talk to us](/en/contact) for a scoping call at no cost.
+**Want to save hours of work every week?** Take a look at Aiterra's [business automation service](/en/services/development), or [talk to us](/en/contact) for a scoping call at no cost.
 
 ## Further reading
 
@@ -841,7 +841,7 @@ Want to know how many new customers the feed could bring you? Leave your details
 
 ---
 
-**Want campaigns that return the investment?** Take a look at AITERRA's [paid advertising service](/en/services/marketing), or [leave your details](/en/contact) for a consultation at no cost.
+**Want campaigns that return the investment?** Take a look at Aiterra's [paid advertising service](/en/services/marketing), or [leave your details](/en/contact) for a consultation at no cost.
 
 ## Further reading
 
@@ -930,11 +930,11 @@ Connecting that measurement to your campaigns is what turns advertising from exp
 
 Installation is only the start. If nobody looks at the data and no decisions come out of it, you measured for nothing. Set aside half an hour a week to check which channel the conversions came from, and let the data move budget towards what works. That, rather than the installation itself, is where the real return on investment sits.
 
-At AITERRA we see it again and again: the difference between a business that wastes its advertising budget and one that profits from it is not the tool that was installed, but the habit of reading the numbers and acting on them. When measurement is wired up properly, every marketing decision stops being a gamble and becomes an answer backed by numbers.
+At Aiterra we see it again and again: the difference between a business that wastes its advertising budget and one that profits from it is not the tool that was installed, but the habit of reading the numbers and acting on them. When measurement is wired up properly, every marketing decision stops being a gamble and becomes an answer backed by numbers.
 
 ---
 
-**Want measurement that shows you exactly what brings customers?** Take a look at AITERRA's [paid campaigns and analytics service](/en/services/marketing), or [talk to us](/en/contact) about setting it up properly.
+**Want measurement that shows you exactly what brings customers?** Take a look at Aiterra's [paid campaigns and analytics service](/en/services/marketing), or [talk to us](/en/contact) about setting it up properly.
 
 ## Further reading
 
@@ -1037,7 +1037,7 @@ Want to know what ChatGPT says when it is asked about your field? Leave your det
 
 ---
 
-**Want us to do it for you?** Take a look at AITERRA's [organic search service](/en/services/seo), or [leave your details](/en/contact) for a consultation at no cost.
+**Want us to do it for you?** Take a look at Aiterra's [organic search service](/en/services/seo), or [leave your details](/en/contact) for a consultation at no cost.
 
 ## Further reading
 
@@ -1116,7 +1116,7 @@ It is time to move to campaign management that is smart, transparent and built o
 
 ---
 
-**Want campaigns that return the investment?** See the AITERRA [paid advertising](/en/services/marketing) service, or [leave your details](/en/contact) for a free consultation.
+**Want campaigns that return the investment?** See the Aiterra [paid advertising](/en/services/marketing) service, or [leave your details](/en/contact) for a free consultation.
 
 ## Further reading
 
@@ -1205,7 +1205,7 @@ Want to own the local results? Leave your details and we will run a full diagnos
 
 ---
 
-**Want us to do it for you?** See the AITERRA [organic SEO](/en/services/seo) service, or [leave your details](/en/contact) for a free consultation.
+**Want us to do it for you?** See the Aiterra [organic SEO](/en/services/seo) service, or [leave your details](/en/contact) for a free consultation.
 
 ## Further reading
 
@@ -1289,7 +1289,7 @@ If you are still weighing up a freelancer against a company, we have [an honest 
 
 ---
 
-**Want a supplier that starts from understanding the business rather than from a number?** At AITERRA every project begins with a free scoping call. [Talk to us](/en/contact) and judge for yourself.
+**Want a supplier that starts from understanding the business rather than from a number?** At Aiterra every project begins with a free scoping call. [Talk to us](/en/contact) and judge for yourself.
 
 ## Further reading
 
@@ -1377,7 +1377,7 @@ Want to know which terms your business should be fighting for? Leave your detail
 
 ---
 
-**Want us to do it for you?** Take a look at AITERRA's [organic search service](/en/services/seo), or [leave your details](/en/contact) for a consultation at no cost.
+**Want us to do it for you?** Take a look at Aiterra's [organic search service](/en/services/seo), or [leave your details](/en/contact) for a consultation at no cost.
 
 ## Further reading
 
@@ -1472,7 +1472,7 @@ Want to dominate the search results in your own area? Leave us your details now 
 
 ---
 
-**Want us to handle it for you?** Discover AITERRA's [organic SEO service](/en/services/seo), or [leave your details](/en/contact) for a consultation at no cost.
+**Want us to handle it for you?** Discover Aiterra's [organic SEO service](/en/services/seo), or [leave your details](/en/contact) for a consultation at no cost.
 
 ## Further reading
 
@@ -1556,7 +1556,7 @@ Want to know which half of your budget is working? Leave your details and we wil
 
 ---
 
-**Want campaigns that return the investment?** See the AITERRA [paid advertising](/en/services/marketing) service, or [leave your details](/en/contact) for a free consultation.
+**Want campaigns that return the investment?** See the Aiterra [paid advertising](/en/services/marketing) service, or [leave your details](/en/contact) for a free consultation.
 
 ## Further reading
 
@@ -1642,7 +1642,7 @@ This is the great advantage: first leads can arrive within days. But there is a 
 
 ---
 
-**Want a campaign that brings leads instead of burning budget?** Take a look at AITERRA's [paid advertising service](/en/services/marketing), or [leave your details](/en/contact) for a tailored budget plan.
+**Want a campaign that brings leads instead of burning budget?** Take a look at Aiterra's [paid advertising service](/en/services/marketing), or [leave your details](/en/contact) for a tailored budget plan.
 
 ## Further reading
 
@@ -1730,7 +1730,7 @@ Before choosing an SEO supplier, it is worth reading [the guide to choosing SEO 
 
 ---
 
-**Want to know what it would cost to promote your own business?** Take a look at the [SEO service](/en/services/seo) from AITERRA, or [leave your details](/en/contact) for a tailored quote.
+**Want to know what it would cost to promote your own business?** Take a look at the [SEO service](/en/services/seo) from Aiterra, or [leave your details](/en/contact) for a tailored quote.
 
 ## Further reading
 
@@ -1914,7 +1914,7 @@ Want your business to show up in the feed of your next customers? Leave your det
 
 ---
 
-**Want campaigns that return the investment?** See the AITERRA [paid advertising](/en/services/marketing) service, or [leave your details](/en/contact) for a free consultation.
+**Want campaigns that return the investment?** See the Aiterra [paid advertising](/en/services/marketing) service, or [leave your details](/en/contact) for a free consultation.
 
 ## Further reading
 
@@ -1952,9 +1952,9 @@ Want your business to show up in the feed of your next customers? Leave your det
     excerpt:
       'Choosing a web development company in Bat Yam: why a local supplier helps, how the process runs, 2026 price ranges and what never to compromise on.',
     tags: ['Web development', 'Bat Yam', 'Local SEO', 'Small business'],
-    content: `**TL;DR:** A web development company in Bat Yam means face-to-face discovery meetings, familiarity with the local market, and full ownership of the domain and the code. We at AITERRA are based in Bat Yam and build websites for businesses in the city and across Gush Dan. Price ranges for 2026 run from ₪3,000 for a landing page to ₪12,000+ for a full brochure site.
+    content: `**TL;DR:** A web development company in Bat Yam means face-to-face discovery meetings, familiarity with the local market, and full ownership of the domain and the code. We at Aiterra are based in Bat Yam and build websites for businesses in the city and across Gush Dan. Price ranges for 2026 run from ₪3,000 for a landing page to ₪12,000+ for a full brochure site.
 
-Looking for a web development company in Bat Yam? There is a real advantage to working with a local supplier, and not out of sentiment: a successful website project rests on good communication and an understanding of the business, and that works best when you can meet in person. We at AITERRA are based in Bat Yam, on Rabbi Nissenbaum Street, and work with local businesses from the neighbourhood and from across the centre of the country.
+Looking for a web development company in Bat Yam? There is a real advantage to working with a local supplier, and not out of sentiment: a successful website project rests on good communication and an understanding of the business, and that works best when you can meet in person. We at Aiterra are based in Bat Yam, on Rabbi Nissenbaum Street, and work with local businesses from the neighbourhood and from across the centre of the country.
 
 ![A team building a website for a local business in Bat Yam](/images/blog/web-development-bat-yam.webp)
 
@@ -2001,7 +2001,7 @@ Make sure you get full ownership of the domain, the hosting and the code; a fast
 
 ---
 
-**Want a site that brings in customers from Bat Yam and the surrounding area?** See the [web development service](/en/services/web-development) from AITERRA, or [talk to us](/en/contact) about a discovery call.
+**Want a site that brings in customers from Bat Yam and the surrounding area?** See the [web development service](/en/services/web-development) from Aiterra, or [talk to us](/en/contact) about a discovery call.
 
 ## Further reading
 
@@ -2049,7 +2049,7 @@ Make sure you get full ownership of the domain, the hosting and the code; a fast
   ],
   content: `**In short (TL;DR):** Web development in Gush Dan means building a site end to end with a digital agency that knows the competitive market of the Tel Aviv metropolitan area. Choose a local supplier you can meet face to face, one that builds a site ready for search from day one and gives you full ownership. Prices in 2026 run from about ₪3,000 for a landing page to ₪25,000 and up for a brochure site.
 
-Looking for a web development company in Gush Dan? Choose a local supplier you can meet in person, one that knows how competitive the centre of the country is, and one that gives you full ownership of the domain, the hosting and the code. We at AITERRA are based in Bat Yam — in the middle of Gush Dan — and work with businesses in Holon, Rishon LeZion, Tel Aviv, Ramat Gan and Givatayim. Prices in 2026 range from ₪3,000 for a landing page up to ₪25,000 and above for a full brochure site, depending on scope and search readiness.
+Looking for a web development company in Gush Dan? Choose a local supplier you can meet in person, one that knows how competitive the centre of the country is, and one that gives you full ownership of the domain, the hosting and the code. We at Aiterra are based in Bat Yam — in the middle of Gush Dan — and work with businesses in Holon, Rishon LeZion, Tel Aviv, Ramat Gan and Givatayim. Prices in 2026 range from ₪3,000 for a landing page up to ₪25,000 and above for a full brochure site, depending on scope and search readiness.
 
 ![The Gush Dan skyline — a local digital agency building websites in Holon, Rishon LeZion, Tel Aviv and Ramat Gan](/images/blog/web-development-gush-dan.webp)
 
@@ -2105,7 +2105,7 @@ Weighing up quotes, or want to know what the site you actually need would cost? 
 
 ---
 
-**Want a website that works for you?** Take a look at the [website build service](/en/services/web-development) from AITERRA, or [talk to us](/en/contact) for a free scoping call.
+**Want a website that works for you?** Take a look at the [website build service](/en/services/web-development) from Aiterra, or [talk to us](/en/contact) for a free scoping call.
 
 ## Further reading
 
@@ -2187,7 +2187,7 @@ Accessibility does more than lower legal risk — it widens the audience (a sign
 
 ---
 
-**Not sure whether your site meets the standard?** Take a look at the [website build and accessibility service](/en/services/web-development) from AITERRA, or [talk to us](/en/contact) for an accessibility check and a quote.
+**Not sure whether your site meets the standard?** Take a look at the [website build and accessibility service](/en/services/web-development) from Aiterra, or [talk to us](/en/contact) for an accessibility check and a quote.
 
 ## Further reading
 
@@ -2281,7 +2281,7 @@ Not sure whether your site meets the requirements? Leave your details and we wil
 
 ---
 
-**Want a site that works for you?** See the AITERRA [website building](/en/services/web-development) service, or [talk to us](/en/contact) for a scoping call at no cost.
+**Want a site that works for you?** See the Aiterra [website building](/en/services/web-development) service, or [talk to us](/en/contact) for a scoping call at no cost.
 
 ## Further reading
 
@@ -2369,7 +2369,7 @@ We price against what you actually need, not against a "package". In a scoping c
 
 ---
 
-**Want a website that pays for itself?** Take a look at AITERRA's [web development service](/en/services/web-development).
+**Want a website that pays for itself?** Take a look at Aiterra's [web development service](/en/services/web-development).
 
 ## Further reading
 
@@ -2455,7 +2455,7 @@ A maintenance package worth paying for includes quality hosting, ongoing securit
 
 ---
 
-**Want somebody keeping your site quiet and secure?** Take a look at AITERRA's [website build and maintenance service](/en/services/web-development), or [talk to us](/en/contact) about a maintenance package that fits.
+**Want somebody keeping your site quiet and secure?** Take a look at Aiterra's [website build and maintenance service](/en/services/web-development), or [talk to us](/en/contact) about a maintenance package that fits.
 
 ## Further reading
 
@@ -2547,7 +2547,7 @@ If the foundation is sound and the site merely looks dated, a design refresh wil
 
 ---
 
-**Want to move without losing what you have built?** Take a look at the [website build service](/en/services/web-development) from AITERRA, or [talk to us](/en/contact) for a review of your current site and a safe migration plan.
+**Want to move without losing what you have built?** Take a look at the [website build service](/en/services/web-development) from Aiterra, or [talk to us](/en/contact) for a review of your current site and a safe migration plan.
 
 ## Further reading
 
@@ -2635,7 +2635,7 @@ The cost has two parts: a usage fee to the API provider, charged as a monthly su
 
 ---
 
-**Want every WhatsApp enquiry captured automatically?** Take a look at AITERRA's [business automation service](/en/services/development), or [talk to us](/en/contact) and we will build the connection for you.
+**Want every WhatsApp enquiry captured automatically?** Take a look at Aiterra's [business automation service](/en/services/development), or [talk to us](/en/contact) and we will build the connection for you.
 
 ## Further reading
 
@@ -2729,7 +2729,7 @@ Are your campaigns bringing clicks but not customers? Leave your details and we 
 
 ---
 
-**Want a website that works for you?** Take a look at AITERRA's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
+**Want a website that works for you?** Take a look at Aiterra's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
 
 ## Further reading
 
@@ -2813,7 +2813,7 @@ Weighing up proposals, or want to know what the site you actually need would cos
 
 ---
 
-**Want a website that works for you?** Take a look at AITERRA's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
+**Want a website that works for you?** Take a look at Aiterra's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
 
 ## Further reading
 
@@ -2898,7 +2898,7 @@ The heart of most automations is a good CRM that the other tools connect to, so 
 
 ---
 
-**Want to stop doing by hand what a machine could do?** Take a look at AITERRA's [development and automation service](/en/services/development), or [talk to us](/en/contact) and we will map together what is worth automating first.
+**Want to stop doing by hand what a machine could do?** Take a look at Aiterra's [development and automation service](/en/services/development), or [talk to us](/en/contact) and we will map together what is worth automating first.
 
 ## Further reading
 
@@ -2980,7 +2980,7 @@ Dreaming of a store that genuinely sells, or have a store that is not taking off
 
 ---
 
-**Want a store that works for you?** Take a look at AITERRA's [e-commerce service](/en/services/ecommerce), or [talk to us](/en/contact) for a scoping call at no cost.
+**Want a store that works for you?** Take a look at Aiterra's [e-commerce service](/en/services/ecommerce), or [talk to us](/en/contact) for a scoping call at no cost.
 
 ## Further reading
 
@@ -3066,7 +3066,7 @@ Not sure when anyone last checked your site's security? Leave your details and w
 
 ---
 
-**Want a website that works for you?** Take a look at AITERRA's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
+**Want a website that works for you?** Take a look at Aiterra's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
 
 ## Further reading
 
@@ -3154,7 +3154,7 @@ Feel like your site is beautiful but not working? Leave your details and we will
 
 ---
 
-**Want a website that works for you?** Take a look at AITERRA's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
+**Want a website that works for you?** Take a look at Aiterra's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
 
 ## Further reading
 
@@ -3233,7 +3233,7 @@ Whoever you choose — freelancer or agency — the rules for spotting a reliabl
 
 ---
 
-**Not sure which suits you?** Tell us about the project through the [contact page](/en/contact), and we will tell you honestly whether it is a case for a freelancer or an agency — whether that is us or not. Take a look at AITERRA's [web development service](/en/services/web-development).
+**Not sure which suits you?** Tell us about the project through the [contact page](/en/contact), and we will tell you honestly whether it is a case for a freelancer or an agency — whether that is us or not. Take a look at Aiterra's [web development service](/en/services/web-development).
 
 ## Further reading
 
@@ -3326,7 +3326,7 @@ At Aiterra we start every project with a deep diagnostic. We examine your existi
 
 ---
 
-**Want a website that works for you?** Take a look at AITERRA's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
+**Want a website that works for you?** Take a look at Aiterra's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
 
 ## Further reading
 
@@ -3409,7 +3409,7 @@ Feel like the business is being run by spreadsheets? Leave your details and we w
 
 ---
 
-**Want a website that works for you?** Take a look at AITERRA's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
+**Want a website that works for you?** Take a look at Aiterra's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
 
 ## Further reading
 

@@ -114,7 +114,7 @@ export const contentEn: Partial<V2Content> = {
   ],
 
   about: {
-    eyebrow: 'ABOUT AITERRA',
+    eyebrow: 'ABOUT Aiterra',
     heading: ['Engineering, design and search', 'without juggling five vendors.'],
     lede: 'Most digital projects break in the handoffs: the agency that designs it cannot build it, the developer who builds it cannot rank it, and the SEO consultant files tickets nobody picks up. We keep all of it in one team.',
     outro: 'Our team is ready to take your digital presence forward. Are you?',
@@ -631,7 +631,7 @@ export const contentEn: Partial<V2Content> = {
     title: 'Blog',
     metaTitle: 'Blog - Guides on Web Development and SEO',
     metaDescription:
-      'Practical guides and insights on custom web development, organic search, paid campaigns and business automation from the AiTerra team.',
+      'Practical guides and insights on custom web development, organic search, paid campaigns and business automation from the Aiterra team.',
     lede: 'Professional insight, practical guides and news from the world of digital. Our knowledge, for you.',
     crumbHome: 'Home',
     crumbsLabel: 'Breadcrumb',
@@ -787,7 +787,7 @@ export const contentEn: Partial<V2Content> = {
     crumb: 'Services',
     metaTitle: 'Custom Web Development, SEO and Platform Services',
     metaDescription:
-      'Custom web development, SEO and website promotion, and bespoke web platforms from one in-house team. Full code ownership, measurable organic growth, no vendor lock-in.',
+      'Custom web development, SEO and bespoke web platforms from one in-house team. Full code ownership, measurable organic growth, no vendor lock-in.',
     lede: 'From the technical foundations through to paying customers. We provide a complete service layer sized to your business, built to turn every digital asset into a growth engine.',
     action: { label: 'Start a project', href: '/en/contact' },
     faqHeading: ['Frequently asked questions', 'about our services'],
@@ -797,13 +797,13 @@ export const contentEn: Partial<V2Content> = {
     title: 'Let us talk',
     crumb: 'Contact',
     lede: 'From technical foundations through to paying customers - we would like to hear about your business. Leave your details and we will come back with a tailored plan of action.',
-    metaTitle: 'Contact AiTerra - Free Initial Consultation',
+    metaTitle: 'Contact Aiterra - Free Initial Consultation',
     metaDescription:
       'Planning a custom website, a web platform or an SEO programme? Leave your details and we will respond with a tailored plan and transparent pricing.',
     faqHeading: ['Frequently asked questions', 'before you get in touch'],
     details: {
       heading: 'Contact details',
-      mapTitle: 'AITERRA office location',
+      mapTitle: 'Aiterra office location',
       emailLabel: 'Email us',
       phoneLabel: 'Call us',
       addressLabel: 'Our address',
@@ -814,22 +814,22 @@ export const contentEn: Partial<V2Content> = {
 
   aboutPage: {
     title: 'About us',
-    metaTitle: 'About AiTerra - Engineering and Growth Under One Roof',
+    metaTitle: 'About Aiterra - Engineering and Growth in One Team',
     metaDescription:
-      'AiTerra is a custom web development and SEO agency. Meet the team, the working method and the experience behind hundreds of delivered projects.',
+      'Aiterra is a custom web development and SEO agency. Meet the team, the working method and the experience behind hundreds of delivered projects.',
     lede: 'Digital moves fast. We make sure you stay a step ahead of it.',
-    eyebrow: 'ABOUT AITERRA',
+    eyebrow: 'ABOUT Aiterra',
     heading: ['Technology that builds websites.', 'Strategy that builds businesses.'],
     paragraphs: [
-      'AiTerra closes the gap between complex technology and results a business can actually measure.',
+      'Aiterra closes the gap between complex technology and results a business can actually measure.',
       'From strategy and UX through scalable platform engineering, organic search and paid campaigns, we turn your digital presence into a growth engine rather than a line item.',
     ],
     blocks: [
       {
         id: 'about',
-        eyebrow: 'ABOUT AITERRA',
+        eyebrow: 'ABOUT Aiterra',
         heading: ['Moving businesses', 'two steps ahead'],
-        text: 'With AiTerra there is no need to chase a different vendor for every stage. Discovery, design, engineering, organic search, paid campaigns and content sit with one team that owns the whole process. The result is a smoother project, direct communication, and a complete digital solution that actually moves the numbers.',
+        text: 'With Aiterra there is no need to chase a different vendor for every stage. Discovery, design, engineering, organic search, paid campaigns and content sit with one team that owns the whole process. The result is a smoother project, direct communication, and a complete digital solution that actually moves the numbers.',
         image: '/images/about-page1.webp',
       },
       {
@@ -845,7 +845,7 @@ export const contentEn: Partial<V2Content> = {
     teamLede: 'The best technology in the world is worth very little without the right people running it. We keep a small, senior team where the person who scopes your project is the person accountable for delivering it.',
     teamMore: 'More about',
     teamClose: 'Close',
-    faqHeading: ['Frequently asked questions', 'why work with AiTerra?'],
+    faqHeading: ['Frequently asked questions', 'why work with Aiterra?'],
   },
 
   aboutValues: {
@@ -882,12 +882,12 @@ export const contentEn: Partial<V2Content> = {
 }
 
 export const projectsPageEn = {
-  title: ['Selected work'],
+  title: ['Our work', 'Selected projects'],
   crumb: 'Work',
-  lede: 'Ten live projects — online stores, lead-generating sites and product platforms. Every one was built in code, shipped by the same team that handles its organic search, and is running in production today.',
+  lede: 'Twelve live projects: three online stores, marketing and lead-generation sites across cosmetics and personal brands, and work in real estate and mortgage advisory. All written in code by the same team that promotes them, and all in production today.',
   action: { label: 'Start a project', href: '/en/contact' },
   faqHeading: ['Before we start', 'a few things worth knowing.'],
-  metaTitle: 'Our Work - Custom Websites, Online Stores and Platforms',
+  metaTitle: 'Our Work - 12 Sites, Stores and Systems We Built',
   metaDescription:
-    'Ten live projects built in code by AITERRA: Shopify and Next.js stores, lead-generating sites and SaaS product platforms. See what we shipped and what each one was built to do.',
+    'Twelve live Aiterra projects: online stores, lead-generation sites and management systems, all built in code. See the goal, the integrations and what shipped.',
 }

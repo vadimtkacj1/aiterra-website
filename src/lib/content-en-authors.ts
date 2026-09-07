@@ -14,7 +14,7 @@ export const authorsEn: Record<string, AuthorOverride> = {
   michael: {
     name: 'Michael',
     role: 'Head of sales and project management',
-    bio: 'Michael is the face of AITERRA to our clients and the driving force behind every project. He runs the sales side and makes sure every stage of the work — from scoping the requirements through to a successful launch — moves smoothly. Michael makes sure we hold to the schedule and deliver exactly the solution your business needs in order to grow.',
+    bio: 'Michael is the face of Aiterra to our clients and the driving force behind every project. He runs the sales side and makes sure every stage of the work — from scoping the requirements through to a successful launch — moves smoothly. Michael makes sure we hold to the schedule and deliver exactly the solution your business needs in order to grow.',
   },
   vadim: {
     name: 'Vadim',

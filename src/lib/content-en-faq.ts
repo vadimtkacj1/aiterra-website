@@ -16,7 +16,7 @@ export const enPageFaq: Record<string, EnFaqBlock> = {
     items: [
       {
         q: 'Do we have to take every service, or can we choose only what we need?',
-        a: 'You choose. Businesses come to AITERRA for a single piece of work — a website, an SEO programme, a Google Ads account, a CRM integration — and each of those is sold on its own with its own scope and price. The reason we mention the full stack at all is sequencing rather than upselling: a paid campaign pointed at a slow site wastes budget, and an SEO programme running on a platform that cannot produce clean URLs or fast pages will underperform whatever the content quality. In a discovery call we say plainly which parts matter for your situation and which can wait a quarter or a year. If the honest answer is that you need one service and not four, that is what the written quote will contain.',
+        a: 'You choose. Businesses come to Aiterra for a single piece of work — a website, an SEO programme, a Google Ads account, a CRM integration — and each of those is sold on its own with its own scope and price. The reason we mention the full stack at all is sequencing rather than upselling: a paid campaign pointed at a slow site wastes budget, and an SEO programme running on a platform that cannot produce clean URLs or fast pages will underperform whatever the content quality. In a discovery call we say plainly which parts matter for your situation and which can wait a quarter or a year. If the honest answer is that you need one service and not four, that is what the written quote will contain.',
       },
       {
         q: 'We already have a website. Is it better to upgrade it or rebuild from scratch?',
@@ -42,7 +42,7 @@ export const enPageFaq: Record<string, EnFaqBlock> = {
     heading: ['Before we start', 'a few things worth knowing.'],
     items: [
       {
-        q: 'What exactly am I looking at in the AITERRA portfolio?',
+        q: 'What exactly am I looking at in the Aiterra portfolio?',
         a: 'Twelve live projects built by the same in-house team: three online stores (Neot Sade, ALOVA and a digital retail store), seven marketing and lead-generation sites across cosmetics, skincare and personal branding (Hofit Cosmetics, Maayan Vaknin, Karin Cohen, Olie 6, Alexandra Patsina, Sous Chef, Eli Ben Yitzhak), one real-estate marketing project and one digital-promotion programme for a mortgage advisory practice. Each has its own page setting out the business objective, the systems it was connected to and what was actually built, rather than a screenshot of the design alone. All of them were written in code using React and Next.js instead of being assembled from a template and a stack of plugins, which is why the same team can also maintain them and rank them afterwards.',
       },
       {
@@ -69,12 +69,12 @@ export const enPageFaq: Record<string, EnFaqBlock> = {
   },
 
   '/en/about': {
-    title: 'Frequently asked questions about AITERRA',
-    heading: ['Frequently asked questions', 'why work with AITERRA?'],
+    title: 'Frequently asked questions about Aiterra',
+    heading: ['Frequently asked questions', 'why work with Aiterra?'],
     items: [
       {
-        q: 'What separates AITERRA from an advertising agency or a web development shop?',
-        a: 'Most suppliers sit on one side of the line: agencies buy media and produce creative but outsource the build, while development studios ship a site and hand the marketing problem back to you. AITERRA runs both under one roof — strategy, UX and UI design, engineering, organic search, paid media and business automation — which removes the failure mode where each supplier blames the other for flat results. In practice that means the person writing the code knows what the SEO plan requires, and the person running the campaign can have a landing page changed the same week rather than filing a ticket with a third party. We are based in Bat Yam and work with businesses across Israel in Hebrew, English and Russian.',
+        q: 'What separates Aiterra from an advertising agency or a web development shop?',
+        a: 'Most suppliers sit on one side of the line: agencies buy media and produce creative but outsource the build, while development studios ship a site and hand the marketing problem back to you. Aiterra runs both under one roof — strategy, UX and UI design, engineering, organic search, paid media and business automation — which removes the failure mode where each supplier blames the other for flat results. In practice that means the person writing the code knows what the SEO plan requires, and the person running the campaign can have a landing page changed the same week rather than filing a ticket with a third party. We are based in Bat Yam and work with businesses across Israel in Hebrew, English and Russian.',
       },
       {
         q: 'What kinds of businesses usually work with you?',

@@ -18,7 +18,7 @@ import { faqPage, webPage } from '@/lib/schema'
 export const metadata: Metadata = pageMetadata({
   title: 'Custom Web Development and SEO Agency',
   description:
-    'AiTerra builds custom websites and web platforms in code, then ranks them. Full-stack engineering, SEO and website promotion from one in-house team.',
+    'Aiterra builds custom websites and web platforms in code, then ranks them. Full-stack engineering, SEO and website promotion from one in-house team.',
   path: '/en',
   locale: 'en',
   altPath: '/',
@@ -37,7 +37,7 @@ export default function EnHomePage() {
           path: '/en',
           name: 'Custom Web Development and SEO Agency',
           description:
-            'AiTerra builds custom websites and web platforms in code, then ranks them. Full-stack engineering, SEO and website promotion from one in-house team.',
+            'Aiterra builds custom websites and web platforms in code, then ranks them. Full-stack engineering, SEO and website promotion from one in-house team.',
           locale: 'en',
         })}
       />

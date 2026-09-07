@@ -12,7 +12,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     action: { label: 'Book a scoping call', href: '/en/contact' },
     metaTitle: 'Custom Web Development Agency - Full-Stack Builds',
     metaDescription:
-      'Custom web development in Next.js, React and TypeScript: discovery, UX/UI, integrations and Core Web Vitals handled in code. Full repository ownership, no vendor lock-in.',
+      'Custom web development in Next.js, React and TypeScript: discovery, UX/UI, integrations and Core Web Vitals handled in code. You own the repository.',
     advantages: {
       eyebrow: 'OUR ADVANTAGES',
       heading: ['What sets our engineering apart'],
@@ -48,7 +48,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     },
     system: {
       eyebrow: 'MANAGEMENT SYSTEM',
-      heading: ['The AiTerra management console'],
+      heading: ['The Aiterra management console'],
       art: '/images/management-console.webp',
       features: [
         {
@@ -159,7 +159,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     action: { label: 'Request a visibility review', href: '/en/contact' },
     metaTitle: 'SEO and Website Promotion Services - AI-Search Ready',
     metaDescription:
-      'SEO services built by engineers: keyword research, technical SEO fixed in code, content, digital PR and transparent monthly reporting - plus visibility in AI Overviews and ChatGPT.',
+      'SEO built by engineers: keyword research, technical fixes made in code, content, digital PR and monthly reporting - plus visibility in AI Overviews and ChatGPT.',
     advantages: {
       eyebrow: 'OUR ADVANTAGES',
       heading: ['What sets our SEO apart'],
@@ -457,7 +457,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     action: { label: 'Discuss your store', href: '/en/contact' },
     metaTitle: 'E-commerce Development - Custom Online Stores',
     metaDescription:
-      'Custom online store development: product catalogue, secure checkout, payment and invoicing integrations, inventory and order management, built in code and owned by you.',
+      'Custom online stores: product catalogue, secure checkout, Israeli payment and invoicing integrations, inventory and order management. Built in code, owned by you.',
     advantages: {
       eyebrow: 'OUR ADVANTAGES',
       heading: ['What sets our store builds apart'],
@@ -1107,7 +1107,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     action: { label: 'Request a maintenance quote', href: '/en/contact' },
     metaTitle: 'Website Maintenance Services - Monthly Plans',
     metaDescription:
-      'Monthly website maintenance with published pricing and a written SLA: security updates, daily backups, uptime monitoring, content changes and IS 5568 accessibility checks.',
+      'Monthly website maintenance with published pricing and a written SLA: security updates, daily backups, uptime monitoring and IS 5568 accessibility checks.',
     advantages: {
       eyebrow: 'OUR ADVANTAGES',
       heading: ['What makes our maintenance different'],
