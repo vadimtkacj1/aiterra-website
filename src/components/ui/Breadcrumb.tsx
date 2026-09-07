@@ -13,8 +13,8 @@ interface Props {
 
 const BASE_URL = 'https://www.aiterra.co.il'
 
-export default function Breadcrumb({ items, variant = 'light' }: Props) {
-  const all = [{ label: 'ראשי', href: '/' }, ...items]
+export default function Breadcrumb({ items, variant = 'light', homeLabel = 'ראשי', homeHref = '/' }: Props & { homeLabel?: string; homeHref?: string }) {
+  const all = [{ label: homeLabel, href: homeHref }, ...items]
 
   const jsonLd = {
     '@context': 'https://schema.org',

@@ -74,6 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     { path: '/en/blog', priority: 0.8 },
     ...getAllPostsEn().map((post) => ({ path: `/en/blog/${post.slug}`, priority: 0.6 })),
+    ...getAllAuthors().map((a) => ({ path: `/en/blog/author/${a.id}`, priority: 0.5 })),
     { path: '/en/about', priority: 0.6 },
     { path: '/en/contact', priority: 0.6 },
     { path: '/en/privacy-policy', priority: 0.3 },

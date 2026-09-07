@@ -8,11 +8,13 @@ interface Props {
   post: BlogPost
   /** Eager-load the image for above-the-fold cards */
   eager?: boolean
+  locale?: 'he' | 'en'
 }
 
-export default function BlogCard({ post, eager = false }: Props) {
+export default function BlogCard({ post, eager = false, locale = 'he' }: Props) {
+  const base = locale === 'en' ? '/en/blog' : '/blog'
   return (
-    <Link href={`/blog/${post.slug}`} className="group block relative overflow-hidden" style={{ height: '480px' }}>
+    <Link href={`${base}/${post.slug}`} className="group block relative overflow-hidden" style={{ height: '480px' }}>
       {/* Branded gradient paints instantly; the photo covers it once loaded */}
       <div
         className="absolute inset-0"

@@ -48,6 +48,7 @@ function hasEnglishCounterpart(hePath: string): boolean {
   if (hePath === '/') return true
   if ((PAIRED_ROOTS as readonly string[]).includes(hePath)) return true
   if (/^\/projects\/[a-z0-9-]+$/.test(hePath)) return true
+  if (/^\/blog\/author\/[a-z0-9-]+$/.test(hePath)) return true
   const post = /^\/blog\/([a-z0-9-]+)$/.exec(hePath)
   if (post) return Boolean(postsEn[post[1]])
   const slug = isServiceSlugPath(hePath)
