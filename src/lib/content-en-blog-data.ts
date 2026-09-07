@@ -13,6 +13,183 @@ type PostOverride = {
  * entry here — an untranslated post is omitted rather than served in Hebrew.
  */
 export const postsEn: Record<string, PostOverride> = {
+  'landing-pages-that-convert': {
+    title: 'A landing page that converts: why most visitors leave without getting in touch — and how to change it',
+    excerpt:
+      'Sending expensive traffic to a page that does not do the job? The difference between an ordinary landing page and a conversion-focused one is the difference between a losing campaign and a profitable one.',
+    tags: ['Conversions', 'Design', 'Digital'],
+    content: `**In short (TL;DR):** A landing page that converts is a focused page with one purpose — turning a visitor who arrived from a campaign into a lead or a customer. It is built on one message, one audience and one action, loads fast and removes every distraction. That is how expensive paid traffic becomes real enquiries.
+
+Every click in a paid campaign costs you real money. The visitor clicked, arrived at the page — and left after a few seconds without leaving their details. In most cases the problem is not the campaign, not the audience and not even your price: the problem is the landing page. The difference between a generic landing page and a conversion-focused one is often the difference between a losing campaign and a profitable one — on exactly the same budget.
+
+![A conversion-focused landing page design on a laptop in a workspace](/images/blog/landing-pages-that-convert.webp)
+
+## What makes a landing page convert
+
+A landing page is not another page on the site. It is a page with one single purpose: to get the visitor to take an action — leave their details, call, or buy. The moment the page has more than one goal, distracting menus and links leading away, the conversion rate collapses. The principle that guides us at Aiterra on every landing page project is simple: one message, one audience, one action.
+
+## How a landing page differs from an ordinary site page
+
+| Characteristic | Conversion-focused landing page | Generic site page |
+| --- | --- | --- |
+| Purpose | One action: a lead, a call or a purchase | Presenting information and general browsing |
+| Navigation | No menu and no distracting links | A full menu and links leading away |
+| Message | One message for one audience | Multiple messages for every audience |
+| Form | Short: name and phone | Long or general forms |
+| Success metric | Conversion rate | Time on page and page views |
+
+## The five components of a winning landing page
+
+**A headline that lands in three seconds:** the visitor has no patience. The main headline has to answer immediately what is in it for them — not who you are, but what you will solve.
+
+**A clear value proposition:** why you specifically? A time-limited offer, a free assessment or a service guarantee — a concrete offer beats general slogans.
+
+**Social proof:** genuine reviews, client logos, numbers and results. The visitor does not believe you — they believe your customers.
+
+**A short, intelligent form:** every additional field lowers the conversion rate. Name and phone — and get to work. Collect the rest in the call.
+
+**Loading speed:** a slow landing page kills campaigns. According to Google's page experience metrics ([web.dev](https://web.dev/articles/vitals)), slow load times damage conversion directly. We build every page in clean code so it loads in milliseconds, including on mobile over a congested network — because that is where most of your visitors are.
+
+## Matching the ad to the landing page
+
+One of the most common reasons for abandonment is a disconnect between what the ad promised and what the visitor finds on the page. If the ad promises "a free consultation" and the page opens with "a little about us", trust breaks within a second. Message match means the headline, the image and the offer on the page continue directly from the promise that brought the visitor. The tighter the match, the higher the conversion rate — and the better the ad quality score in Google Ads, which lowers your cost per click.
+
+## How design leads the eye to the action
+
+Good landing page design is not a matter of beauty but of psychology: a clear hierarchy, a call-to-action button that stands out and repeats down the page, and correct text direction that feels natural. Since most paid traffic arrives on mobile, we design for the small screen first: a large tappable button, readable text without zooming, and a form that can be completed one-handed. Every element on the page has to justify its existence — if it does not advance the conversion, it obstructs it.
+
+## What counts as a good conversion rate
+
+- Below 2%: there is work to do — usually a problem with the message, the form or the page speed.
+- Around 3–5%: a healthy range for most sectors and traffic sources.
+- Above 7%: excellent performance, mainly with a focused audience and a sharp offer.
+- Improving from 2% to 5% means 2.5 times more leads — on exactly the same media budget.
+
+## Test rather than guess
+
+The difference between an amateur agency and a professional one is measurement. We run A/B tests on headlines, offers and buttons, analyse session recordings and heat maps, and measure every action through GA4 ([Google Analytics](https://support.google.com/analytics)). That is how a 2% conversion rate becomes 5%, and your cost per lead is cut in half without adding a shekel to the media budget.
+
+Are your campaigns bringing clicks but not customers? Leave your details and we will analyse your existing landing page — with an orderly list of improvements you can apply this week.
+
+---
+
+**Want a website that works for you?** Take a look at AITERRA's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
+
+## Further reading
+
+- [UX/UI design that sells: why a beautiful site is not enough](/en/blog/ux-ui-design-conversions)
+- [Why is your website slow? The complete 2026 guide to modern web development](/en/blog/website-performance-2026)`,
+    faq: {
+      title: 'Common questions about landing pages',
+      items: [
+        {
+          q: 'What is the difference between a landing page and an ordinary site?',
+          a: 'A site presents everything the business does and allows free browsing between pages, while a landing page focuses on one goal: converting focused traffic from a single source — an ad, a campaign or a post — into one action. So a landing page has no menu and no distracting links, one sharp message and a short form, and it is judged on conversion rate alone.',
+        },
+        {
+          q: 'How many fields should a landing page form have?',
+          a: 'As few as possible. In most cases a name and a phone number are enough to open a conversation, and every additional field lowers the conversion rate and drives enquiries away. If you need one more detail to qualify leads, add a single field — the rest is always better collected in the phone call, not in the form.',
+        },
+        {
+          q: 'What is a good conversion rate for a landing page?',
+          a: 'It depends on the sector and the traffic source, but as a rule of thumb: below 2% there is work to do, 3–5% is considered good, and above 7% is excellent. The number is affected by traffic quality, the message and page speed. With ongoing A/B testing it is almost always possible to improve the existing rate without increasing the media budget.',
+        },
+        {
+          q: 'How long does a landing page take to build, and when do results appear?',
+          a: 'A focused landing page usually goes live within a few working days, depending on the scope of the content and design. First conversion data starts accumulating with the first clicks from the campaign, but reliable optimisation needs enough visitors — usually a few hundred — before drawing conclusions and running an improvement round.',
+        },
+      ],
+    },
+  },
+
+  'website-building-services': {
+    title: 'Building a business website: how to choose a company, what the process involves and what it really costs',
+    excerpt:
+      'A new website is a significant investment — and most businesses have no real way to compare proposals. What a professional build includes, the price ranges in Israel, and the questions to ask before signing.',
+    tags: ['Development', 'Design', 'SEO', 'WordPress'],
+    content: `**In short (TL;DR):** Building a business website is a five-stage process — scoping, design, development, content and launch — priced by scope. In Israel a landing page runs around ₪3,000–7,000, a brochure site around ₪8,000–25,000, and an e-commerce store around ₪20,000–80,000 and up. A dramatically cheap proposal almost always hides a generic template or costs that appear later.
+
+![Building a business website: how to choose a company, what the process involves and what it really costs](/images/blog/website-building-services.webp)
+
+Your website is the only salesperson that works 24/7. When it is slow, dated or not built for mobile, you lose customers to competitors with every second that passes. At Aiterra, as a [web development](/en/services/web-development) company and technology agency, we do not simply design attractive pages — we build foundations for growth. Our build process combines modern server-side technology, a user experience designed to convert, and complete preparation for search engines.
+
+## Which kind of site does your business need?
+
+Every business has its own DNA, which is why scoping is our first and most critical stage. We offer solutions matched to the business model:
+
+**A brochure site:** service providers, law firms, clinics? A business brochure site exists to convey credibility, quality and authority. We build sites for small and large businesses alike, with the emphasis on an interface that leads to a fast and direct enquiry.
+
+**An online store (e-commerce):** a physical shop is excellent, but an online store exposes you to the whole country and beyond. Our experience covers flexible store builds, an intelligent catalogue, an e-commerce site that loads in milliseconds, and smooth, secure payment integration.
+
+## Why a custom site beats a standard platform
+
+Everyone knows WordPress builds, and we certainly offer premium WordPress work — but the real advantage of Aiterra is the ability to develop complex systems. When you have back-end engineers alongside a team of designers working in the same office, a web project becomes far more precise. From user research through to product launch, every line of code is written to serve your bottom line.
+
+## What a website costs in Israel
+
+Market ranges vary by scope and technology, but these are the realistic figures in Israel:
+
+| Type of site | Price range | Suits |
+|---|---|---|
+| Professional landing page | ₪3,000–7,000 | A paid campaign, a product launch |
+| Business brochure site | ₪8,000–25,000 | Most small and medium businesses |
+| E-commerce store | ₪20,000–80,000+ | Selling online, depending on catalogue and integrations |
+| Custom system | ₪50,000+ | A portal, an account area, automation |
+
+A proposal dramatically below the range almost always hides a generic template, an absence of scoping, or follow-on costs that emerge later.
+
+## Why build for search from the start
+
+Since Google holds roughly 90% of the search market in Israel and worldwide ([StatCounter](https://gs.statcounter.com/search-engine-market-share)), a site built correctly for speed, heading structure and structured data starts with a genuine advantage. Building for search from the outset costs slightly more at the build stage, but saves thousands in code fixes and campaigns later. At Aiterra we build all of these components by default, not as an expensive add-on after launch.
+
+## The questions to ask before signing
+
+- **Who owns the domain, the hosting and the code?** The only right answer: you do. Many businesses discover at the point of separation that their site was rented.
+- **Is the site built ready for organic search?** Heading structure, speed, structured data and meta tags — fixing this after the fact costs more than building it correctly.
+- **What is included after launch?** A warranty period, response times for faults, and the cost of ongoing changes.
+- **How will the site look on a phone?** More than half of visitors in Israel arrive on mobile — ask to see previous work on a smartphone, not in a slide deck.
+
+## What a proper process looks like
+
+An orderly project passes through five stages: scoping (goals, audiences, structure and content — the stage that saves the most money), design (visual language and a conversion-focused user experience), development (clean, fast code), content and search preparation (copy, images, meta and structured data), and launch with measurement (analytics, heat maps and an improvement plan). If the proposal you received has no scoping stage, that is the first warning sign.
+
+Weighing up proposals, or want to know what the site you actually need would cost? Leave your details and we will come back with an honest estimate — including what is not worth paying for.
+
+---
+
+**Want a website that works for you?** Take a look at AITERRA's [web development service](/en/services/web-development), or [talk to us](/en/contact) for a scoping call at no cost.
+
+## Further reading
+
+- [WordPress or a coded site? How to choose the right foundation for your business](/en/blog/wordpress-vs-custom-code)
+- [Freelancer or web agency — which is right for your business, and why](/en/blog/freelancer-vs-web-agency)`,
+    faq: {
+      title: 'Common questions about the website build process',
+      items: [
+        {
+          q: 'What does it cost to build a business website in Israel?',
+          a: 'The market range in Israel is roughly ₪3,000–7,000 for a landing page, ₪8,000–25,000 for a brochure site, and ₪20,000–80,000 and up for an e-commerce store. Custom systems start around ₪50,000. The price is set by the number of pages, the level of design, development complexity and whether the site is built for search.',
+        },
+        {
+          q: 'What are the stages in a professional website build?',
+          a: 'An orderly project passes through five stages: scoping (goals, audiences and structure), design (visual language and a conversion-focused experience), development (clean, fast code), content and search preparation (copy, meta and structured data), and launch with measurement (analytics and an improvement plan). The absence of a scoping stage in a proposal is the first warning sign.',
+        },
+        {
+          q: 'Will the site be ready for organic search?',
+          a: 'Unambiguously yes, and it is our central added value. Every project includes the foundations for search — speed, heading structure, structured data and meta tags — which saves you thousands in future code fixes and turns the site into an asset that produces work on an ongoing basis.',
+        },
+        {
+          q: 'What should I ask a supplier before signing?',
+          a: 'Confirm four things: that the domain, the hosting and the code will be entirely yours; that the site is built ready for organic search; exactly what is included after launch (warranty, response times and the cost of changes); and how the site looks on a real phone rather than in a slide deck. A proposal with no scoping stage, or without code ownership, is a red flag.',
+        },
+        {
+          q: 'Do you provide hosting as well?',
+          a: 'Yes. Every build has to sit on a strong server. We offer hosting on modern cloud infrastructure, to make sure the site stays available and fast even under campaign load, rather than buckling at the moments that matter most to the business.',
+        },
+      ],
+    },
+  },
+
   'business-automation-12-processes': {
     title: 'Business automation for a small business: 12 processes to stop doing by hand',
     excerpt:
