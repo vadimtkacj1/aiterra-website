@@ -26,16 +26,16 @@ export default function Footer({
     {
       id: 'instagram',
       label: footer.socialLabels.instagram,
-      href: SOCIAL_PROFILES.instagram || 'https://www.instagram.com/',
+      href: SOCIAL_PROFILES.instagram,
       Icon: InstagramIcon,
     },
     {
       id: 'facebook',
       label: footer.socialLabels.facebook,
-      href: SOCIAL_PROFILES.facebook || 'https://www.facebook.com/',
+      href: SOCIAL_PROFILES.facebook,
       Icon: FacebookIcon,
     },
-  ]
+  ].filter((link) => Boolean(link.href))
 
   return (
     <footer className={styles.footer}>

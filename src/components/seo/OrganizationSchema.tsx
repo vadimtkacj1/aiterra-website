@@ -19,7 +19,7 @@ export default function OrganizationSchema() {
     '@id': `${SITE_URL}#organization`,
     url: SITE_URL,
     name: SITE_NAME,
-    alternateName: ['Aiterra', 'AITERRA – Digital Marketing & Web Development Agency'],
+    alternateName: ['Aiterra', 'אייטרה', 'AITERRA – Digital Marketing & Web Development Agency'],
     email: CONTACT_EMAIL,
     telephone: CONTACT_PHONE_INTL,
     description: 'סוכנות שיווק דיגיטלי מלא – בניית אתרים, SEO, פרסום ממומן ואוטומציה עסקית',
