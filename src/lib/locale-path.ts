@@ -58,3 +58,9 @@ function hasEnglishCounterpart(hePath: string): boolean {
 function hasHebrewCounterpart(hePath: string): boolean {
   return hasEnglishCounterpart(hePath)
 }
+
+export function hasCounterpart(pathname: string): boolean {
+  const path = stripTrailingSlash(pathname)
+  if (localeOf(path) === 'he') return hasEnglishCounterpart(path)
+  return hasHebrewCounterpart(path === '/en' ? '/' : path.slice(3))
+}

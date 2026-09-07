@@ -6,10 +6,12 @@ import { getV2Content } from '@/lib/v2-content-server'
 import { SITE_URL } from '@/lib/seo'
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
 import { getAllPostsEn } from '@/lib/content-en-blog'
+import { hasCounterpart, toEnglishPath, toHebrewPath } from '@/lib/locale-path'
 
 export const revalidate = 3600
 
 const LEGAL_DATE = new Date('2026-05-01')
+const CONTENT_REVISED = new Date('2026-09-07')
 
 const absUrl = (u: string) =>
   u.startsWith('http') ? u : `${SITE_URL}${u.startsWith('/') ? '' : '/'}${u}`
@@ -21,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const latestContent = posts.reduce<Date>((max, p) => {
     const d = new Date(p.dateModified || p.datePublished || now)
     return Number.isNaN(d.getTime()) ? max : d > max ? d : max
-  }, LEGAL_DATE)
+  }, CONTENT_REVISED)
 
   const commercialRoutes: {
     path: string
@@ -118,7 +120,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }))
 
-  return [
+  const entries: MetadataRoute.Sitemap = [
     ...commercialEntries,
     ...legalEntries,
     ...serviceEntries,
@@ -127,4 +129,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...postEntries,
     ...authorEntries,
   ]
+
+  return entries.map((entry) => {
+    const path = entry.url.slice(SITE_URL.length) || '/'
+    if (!hasCounterpart(path)) return entry
+    const he = `${SITE_URL}${toHebrewPath(path)}`
+    const en = `${SITE_URL}${toEnglishPath(path)}`
+    return {
+      ...entry,
+      alternates: { languages: { 'he-IL': he, en, 'x-default': en } },
+    }
+  })
 }
