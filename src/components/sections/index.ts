@@ -31,7 +31,6 @@ export { default as StatsSection } from './common/StatsSection'
 
 // blog
 export { default as BlogPostsSection } from './blog/BlogPostsSection'
-export { default as RelatedServicesSection } from './blog/RelatedServicesSection'
 
 // contact
 export { default as ContactFormSection } from './contact/ContactFormSection'

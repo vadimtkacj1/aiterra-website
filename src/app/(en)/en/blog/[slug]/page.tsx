@@ -7,6 +7,7 @@ import ArticleToc, { type TocEntry } from '../../../../(he)/(site)/components/Ar
 import ShareButton from '../../../../(he)/(site)/components/ShareButton'
 import ActionButton from '../../../../(he)/(site)/components/ActionButton'
 import RelatedPosts from '../../../../(he)/(site)/components/RelatedPosts'
+import RelatedServices from '../../../../(he)/(site)/components/RelatedServices'
 import ContactForm from '../../../../(he)/(site)/components/ContactForm'
 import Footer from '../../../../(he)/(site)/components/Footer'
 import type { BlogCard } from '../../../../(he)/(site)/components/BlogIndex'
@@ -227,6 +228,19 @@ export default async function EnArticlePage({ params }: Params) {
             </div>
           </div>
         </article>
+
+        <RelatedServices
+          tags={post.tags}
+          title={post.title}
+          seed={slug}
+          heading="Services that can help"
+          basePath="/en/services"
+          items={Object.values(getV2ContentEn().servicePages).map((service) => ({
+            slug: service.id,
+            label: service.crumb,
+            blurb: service.subhead,
+          }))}
+        />
 
         <RelatedPosts posts={related} locale="en" />
       </main>

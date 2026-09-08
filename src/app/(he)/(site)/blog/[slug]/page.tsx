@@ -7,6 +7,7 @@ import ArticleToc, { type TocEntry } from '../../components/ArticleToc'
 import ShareButton from '../../components/ShareButton'
 import ActionButton from '../../components/ActionButton'
 import RelatedPosts from '../../components/RelatedPosts'
+import RelatedServices from '../../components/RelatedServices'
 import ContactForm from '../../components/ContactForm'
 import Footer from '../../components/Footer'
 import type { BlogCard } from '../../components/BlogIndex'
@@ -224,6 +225,19 @@ export default async function V2ArticlePage({ params }: Params) {
             </div>
           </div>
         </article>
+
+        <RelatedServices
+          tags={post.tags}
+          title={post.title}
+          seed={slug}
+          heading="שירותים שיכולים לעזור"
+          basePath="/services"
+          items={Object.values(getV2Content().servicePages).map((service) => ({
+            slug: service.id,
+            label: service.crumb,
+            blurb: service.subhead,
+          }))}
+        />
 
         <RelatedPosts posts={related} />
       </main>
