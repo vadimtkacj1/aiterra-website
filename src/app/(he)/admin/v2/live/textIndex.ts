@@ -1,4 +1,4 @@
-import type { V2ContentKey } from '@/app/(he)/v2/content'
+import type { V2ContentKey } from '@/app/(he)/(site)/content'
 import { ADVANCED_KEYS, FIELD_LABELS, IMAGE_KEYS, SECTION_INDEX } from '../sections'
 
 export type TextEntry = {

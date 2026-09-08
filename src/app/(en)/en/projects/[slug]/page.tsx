@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Header from '../../../../(he)/v2/components/Header'
-import BannerCta from '../../../../(he)/v2/components/BannerCta'
-import ContactForm from '../../../../(he)/v2/components/ContactForm'
-import Footer from '../../../../(he)/v2/components/Footer'
-import MoreProjects from '../../../../(he)/v2/components/MoreProjects'
+import Header from '../../../../(he)/(site)/components/Header'
+import BannerCta from '../../../../(he)/(site)/components/BannerCta'
+import ContactForm from '../../../../(he)/(site)/components/ContactForm'
+import Footer from '../../../../(he)/(site)/components/Footer'
+import MoreProjects from '../../../../(he)/(site)/components/MoreProjects'
 import {
   ProjectAbout,
   ProjectIntro,
   ProjectStory,
-} from '../../../../(he)/v2/components/ProjectCase'
+} from '../../../../(he)/(site)/components/ProjectCase'
 import { getAllPortfolioProjects, getProjectBySlug } from '@/lib/portfolio-server'
 import { applyProjectEn } from '@/lib/content-en-projects'
 import { getV2ContentEn } from '@/lib/v2-content-server'

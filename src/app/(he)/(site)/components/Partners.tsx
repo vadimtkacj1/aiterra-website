@@ -1,5 +1,5 @@
 import { getContent, type Locale } from '@/lib/v2-content-server'
-import type { PartnerLogo } from '@/app/(he)/v2/content'
+import type { PartnerLogo } from '@/app/(he)/(site)/content'
 import styles from './Partners.module.css'
 
 function Row({ logos, clone = false }: { logos: PartnerLogo[]; clone?: boolean }) {

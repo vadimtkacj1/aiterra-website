@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { ChevronDown, ImageUp, Plus, RotateCcw, Trash2 } from 'lucide-react'
-import { deepEqual } from '@/app/(he)/v2/contentMerge'
+import { deepEqual } from '@/app/(he)/(site)/contentMerge'
 import { ADVANCED_KEYS, FIELD_LABELS, IMAGE_KEYS, LONG_TEXT_KEYS } from './sections'
 
 type Json = unknown

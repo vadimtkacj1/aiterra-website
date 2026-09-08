@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react'
 import { enOverrides } from '@/lib/v2-content-server'
-import ScrollReveal from '../../(he)/v2/components/ScrollReveal'
-import VideoAutopause from '../../(he)/v2/components/VideoAutopause'
-import V2ContentProvider from '../../(he)/v2/V2ContentProvider'
-import '../../(he)/v2/styles/v2.css'
+import ScrollReveal from '../../(he)/(site)/components/ScrollReveal'
+import VideoAutopause from '../../(he)/(site)/components/VideoAutopause'
+import V2ContentProvider from '../../(he)/(site)/V2ContentProvider'
+import '../../(he)/(site)/styles/v2.css'
 
 export default function EnLayout({ children }: { children: ReactNode }) {
   return (

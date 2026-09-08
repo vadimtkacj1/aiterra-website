@@ -1,4 +1,4 @@
-import type { ServicePage } from '@/app/(he)/v2/content'
+import type { ServicePage } from '@/app/(he)/(site)/content'
 
 export const servicePagesEn: Record<string, ServicePage> = {
   'web-development': {

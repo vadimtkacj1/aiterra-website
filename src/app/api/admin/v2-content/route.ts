@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { revalidatePath } from 'next/cache'
-import { v2ContentDefaults, type V2ContentKey } from '@/app/(he)/v2/content'
+import { v2ContentDefaults, type V2ContentKey } from '@/app/(he)/(site)/content'
 import {
   readV2ContentFile,
   resetV2Content,
@@ -19,7 +19,7 @@ function isContentKey(value: unknown): value is V2ContentKey {
 }
 
 function refresh() {
-  revalidatePath('/v2', 'layout')
+  revalidatePath('/', 'layout')
 }
 
 export async function GET(req: NextRequest) {

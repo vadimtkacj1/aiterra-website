@@ -10,18 +10,18 @@ export const DEVICES: { id: DeviceId; label: string; width: number | null }[] = 
 ]
 
 export const PAGES: { path: string; label: string }[] = [
-  { path: '/v2', label: 'דף הבית' },
-  { path: '/v2/about', label: 'אודות' },
-  { path: '/v2/services', label: 'שירותים' },
-  { path: '/v2/services/ecommerce', label: 'שירות — E-Commerce' },
-  { path: '/v2/projects', label: 'פרויקטים' },
-  { path: '/v2/projects/neot-sade', label: 'פרויקט — דוגמה' },
-  { path: '/v2/blog', label: 'בלוג' },
-  { path: '/v2/blog/whatsapp-business-api-crm-integration', label: 'מאמר — דוגמה' },
-  { path: '/v2/contact', label: 'יצירת קשר' },
-  { path: '/v2/terms-of-use', label: 'תנאי שימוש' },
-  { path: '/v2/privacy-policy', label: 'מדיניות פרטיות' },
-  { path: '/v2/accessibility-statement', label: 'הצהרת נגישות' },
+  { path: '/', label: 'דף הבית' },
+  { path: '/about', label: 'אודות' },
+  { path: '/services', label: 'שירותים' },
+  { path: '/services/ecommerce', label: 'שירות — E-Commerce' },
+  { path: '/projects', label: 'פרויקטים' },
+  { path: '/projects/neot-sade', label: 'פרויקט — דוגמה' },
+  { path: '/blog', label: 'בלוג' },
+  { path: '/blog/whatsapp-business-api-crm-integration', label: 'מאמר — דוגמה' },
+  { path: '/contact', label: 'יצירת קשר' },
+  { path: '/terms-of-use', label: 'תנאי שימוש' },
+  { path: '/privacy-policy', label: 'מדיניות פרטיות' },
+  { path: '/accessibility-statement', label: 'הצהרת נגישות' },
 ]
 
 export const EDITOR_STYLE_ID = 'v2-live-editor-style'

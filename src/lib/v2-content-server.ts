@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
-import { v2ContentDefaults, type V2Content, type V2ContentKey } from '@/app/(he)/v2/content'
-import { diffV2, mergeV2, type V2Overrides } from '@/app/(he)/v2/contentMerge'
+import { v2ContentDefaults, type V2Content, type V2ContentKey } from '@/app/(he)/(site)/content'
+import { diffV2, mergeV2, type V2Overrides } from '@/app/(he)/(site)/contentMerge'
 import { contentEn } from '@/lib/content-en'
 import { servicePagesEn } from '@/lib/content-en-services'
 

@@ -1,17 +1,17 @@
 import type { NextConfig } from 'next'
 
-const cleanToV2: { clean: string; v2: string }[] = [
-  { clean: '/services', v2: '/v2/services' },
-  { clean: '/services/:slug', v2: '/v2/services/:slug' },
-  { clean: '/about', v2: '/v2/about' },
-  { clean: '/contact', v2: '/v2/contact' },
-  { clean: '/blog', v2: '/v2/blog' },
-  { clean: '/blog/:slug', v2: '/v2/blog/:slug' },
-  { clean: '/projects', v2: '/v2/projects' },
-  { clean: '/projects/:slug', v2: '/v2/projects/:slug' },
-  { clean: '/privacy-policy', v2: '/v2/privacy-policy' },
-  { clean: '/terms-of-use', v2: '/v2/terms-of-use' },
-  { clean: '/accessibility-statement', v2: '/v2/accessibility-statement' },
+const legacyV2Paths: string[] = [
+  '/services',
+  '/services/:slug',
+  '/about',
+  '/contact',
+  '/blog',
+  '/blog/:slug',
+  '/projects',
+  '/projects/:slug',
+  '/privacy-policy',
+  '/terms-of-use',
+  '/accessibility-statement',
 ]
 
 const retiredServiceSlugs: { from: string; to: string }[] = [
@@ -27,16 +27,6 @@ const nextConfig: NextConfig = {
     qualities: [75, 90],
     minimumCacheTTL: 2592000,
   },
-  async rewrites() {
-    return {
-      beforeFiles: [
-        { source: '/', destination: '/v2' },
-        ...cleanToV2.map(({ clean, v2 }) => ({ source: clean, destination: v2 })),
-      ],
-      afterFiles: [],
-      fallback: [],
-    }
-  },
   async redirects() {
     return [
       ...retiredServiceSlugs.map(({ from, to }) => ({
@@ -48,7 +38,11 @@ const nextConfig: NextConfig = {
       { source: '/portfolio', destination: '/projects', permanent: true },
       { source: '/portfolio/:slug', destination: '/projects/:slug', permanent: true },
       { source: '/v2', destination: '/', permanent: true },
-      ...cleanToV2.map(({ clean, v2 }) => ({ source: v2, destination: clean, permanent: true })),
+      ...legacyV2Paths.map((path) => ({
+        source: `/v2${path}`,
+        destination: path,
+        permanent: true,
+      })),
     ]
   },
 }

@@ -1,4 +1,4 @@
-import type { V2Content } from '@/app/(he)/v2/content'
+import type { V2Content } from '@/app/(he)/(site)/content'
 
 export const EN_SERVICE_SLUGS = [
   'web-development',

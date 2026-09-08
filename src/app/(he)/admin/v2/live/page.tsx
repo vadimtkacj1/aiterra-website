@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AlertTriangle, RotateCcw, TextCursorInput, X } from 'lucide-react'
 import AdminHeader from '@/components/admin/AdminHeader'
-import type { V2Content, V2ContentKey } from '@/app/(he)/v2/content'
-import { mergeV2, type V2Overrides } from '@/app/(he)/v2/contentMerge'
+import type { V2Content, V2ContentKey } from '@/app/(he)/(site)/content'
+import { mergeV2, type V2Overrides } from '@/app/(he)/(site)/contentMerge'
 import ChangesPanel, { type PendingChange } from './ChangesPanel'
 import LiveToolbar from './LiveToolbar'
 import TextPopover, { type PopoverField } from './TextPopover'
@@ -36,7 +36,7 @@ export default function AdminV2LivePage() {
   const [payload, setPayload] = useState<Payload | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [warning, setWarning] = useState<string | null>(null)
-  const [page, setPage] = useState('/v2')
+  const [page, setPage] = useState('/')
   const [device, setDevice] = useState<DeviceId>('desktop')
   const [mode, setMode] = useState<EditorMode>('edit')
   const [edits, setEdits] = useState<Record<string, Edit>>({})
@@ -638,7 +638,7 @@ export default function AdminV2LivePage() {
       <div className="relative flex-1 overflow-auto bg-[#e9eaee] p-3">
         <iframe
           ref={iframeRef}
-          src="/v2"
+          src="/"
           title="תצוגה מקדימה של האתר"
           className="mx-auto block h-full rounded-lg border border-gray-300 bg-white shadow-sm"
           style={{ width: width ? `${width}px` : '100%', maxWidth: '100%' }}

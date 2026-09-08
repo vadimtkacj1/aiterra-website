@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { pageMetadata } from '@/lib/metadata'
-import LegalPage from '../../../(he)/v2/components/LegalPage'
+import LegalPage from '../../../(he)/(site)/components/LegalPage'
 import TermsBodyEn, { LAST_UPDATED } from '@/components/legal/en/TermsBodyEn'
 
 const TITLE = 'Terms of use'
