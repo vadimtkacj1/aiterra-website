@@ -799,6 +799,77 @@ export const contentEn: Partial<V2Content> = {
 
   reviewItems: [
     {
+      id: 'tzion-weinberg',
+      author: 'ציון ויינברג',
+      when: '2 months ago',
+      rating: 5,
+      tint: '#7b61c4',
+      body: [
+        { text: 'Working with Aiterra changed our business. They took on ' },
+        { text: 'all of our digital marketing', accent: true },
+        { text: ', from the initial discovery through to content strategy. We are in a completely different place today.' },
+      ],
+    },
+    {
+      id: 'eliya-ben-hamo',
+      author: 'אליה בן חמו',
+      when: '3 months ago',
+      rating: 5,
+      tint: '#3678e9',
+      body: [
+        { text: 'I was sceptical about the whole world of digital marketing, but this company proved me wrong. ' },
+        { text: 'They built me a fast, high-quality site and they run my campaigns superbly.', accent: true },
+      ],
+    },
+    {
+      id: 'shira-malka',
+      author: 'שירה מלכה',
+      when: '2 months ago',
+      rating: 5,
+      tint: '#c25b7c',
+      body: [
+        { text: 'For two years we tried to make progress on organic search with different suppliers. ' },
+        { text: 'Six months with them and we reached the first page of Google', accent: true },
+        { text: ' on the most competitive keywords.' },
+      ],
+    },
+    {
+      id: 'omer-dayan',
+      author: 'עומר דיין',
+      when: '5 months ago',
+      rating: 5,
+      tint: '#2f8f7a',
+      body: [
+        { text: 'The new site launched on time and looks exactly as we imagined, and most importantly ' },
+        { text: 'it brings us quality enquiries every week', accent: true },
+        { text: '. At last we have a digital asset that works.' },
+      ],
+    },
+    {
+      id: 'noa-berkovitz',
+      author: 'נועה ברקוביץ',
+      when: '8 months ago',
+      rating: 5,
+      tint: '#c98a3a',
+      body: [
+        { text: 'Personal attention, remarkable availability and ' },
+        { text: 'full transparency on every shekel of the budget', accent: true },
+        { text: '. At last we have control over what happens in our marketing.' },
+      ],
+    },
+    {
+      id: 'yaniv-shitrit',
+      author: 'יניב שטרית',
+      when: '10 months ago',
+      rating: 5,
+      tint: '#2f8f7a',
+      body: [
+        { text: 'We were looking for one supplier who could do everything, from design through to campaigns. ' },
+        { text: 'We got a whole team that works with us every day', accent: true },
+        { text: ' and talks to us as equals.' },
+      ],
+    },
+    {
       id: 'erez-shmueli',
       author: 'ארז שמואלי',
       when: '6 days ago',
