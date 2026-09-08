@@ -35,6 +35,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       })),
       { source: '/packages', destination: '/services', permanent: true },
+      { source: '/landings/ecomerce', destination: '/lp/ecomerce', permanent: true },
       { source: '/portfolio', destination: '/projects', permanent: true },
       { source: '/portfolio/:slug', destination: '/projects/:slug', permanent: true },
       { source: '/v2', destination: '/', permanent: true },

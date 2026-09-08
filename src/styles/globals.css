@@ -4,6 +4,7 @@
    Served at /landings/ecomerce. Merged into this one Tailwind entry so its
    @theme tokens and @utility rules are part of the same build. */
 @import './ecomerce.css';
+@import './lp-agency.css';
 
 @font-face {
   font-family: 'Google Sans';

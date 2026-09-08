@@ -45,6 +45,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: r.priority,
   }))
 
+  const landingEntries: MetadataRoute.Sitemap = [
+    '/lp/agency',
+    '/lp/ecomerce',
+    '/lp/ai-agents',
+  ].map((route) => ({
+    url: `${SITE_URL}${route}`,
+    lastModified: latestContent,
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
   const legalEntries: MetadataRoute.Sitemap = [
     '/privacy-policy',
     '/terms-of-use',
@@ -122,6 +133,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const entries: MetadataRoute.Sitemap = [
     ...commercialEntries,
+    ...landingEntries,
     ...legalEntries,
     ...serviceEntries,
     ...enEntries,

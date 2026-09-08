@@ -15,11 +15,11 @@ export const metadata: Metadata = {
   title: 'חנות אינטרנטית שמייצרת מכירות — פיתוח איקומרס פרימיום',
   description:
     'מערכת איקומרס עצמאית ומתקדמת, ללא מגבלות וורדפרס או שופיפיי. עיצוב מותאם אישית, אינטגרציה מלאה, מהירות טעינה גבוהה וליווי צמוד לשנה שלמה. השאירו פרטים לשיחת אפיון.',
-  alternates: { canonical: '/landings/ecomerce' },
+  alternates: { canonical: '/lp/ecomerce' },
   openGraph: {
     type: 'website',
     locale: 'he_IL',
-    url: '/landings/ecomerce',
+    url: '/lp/ecomerce',
     title: 'Aiterra | חנות אינטרנטית שמייצרת מכירות — פיתוח איקומרס פרימיום',
     description:
       'מערכת איקומרס עצמאית ומתקדמת, ללא מגבלות וורדפרס או שופיפיי. עיצוב מותאם אישית, אינטגרציה מלאה וליווי צמוד לשנה שלמה.',

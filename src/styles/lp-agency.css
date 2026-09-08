@@ -1,0 +1,38 @@
+.lpAgency {
+  direction: rtl;
+  color: #171717;
+  background: #ffffff;
+}
+
+.lpAgency .gradient-border-wrapper {
+  position: relative;
+  border-radius: 100px;
+  padding: 0;
+  background: #fff;
+}
+
+.lpAgency .gradient-border-wrapper.focused {
+  background: linear-gradient(90deg, #0066ff 0%, #2979ff 50%, #00c6ff 100%);
+  padding: 1px;
+}
+
+.lpAgency .gradient-border-wrapper input {
+  background: white;
+  border-radius: 100px;
+}
+
+@keyframes lpAgencyFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lpAgency .animate-fadeIn,
+.animate-fadeIn {
+  animation: lpAgencyFadeIn 0.3s ease-out forwards;
+}
