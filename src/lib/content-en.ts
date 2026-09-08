@@ -281,6 +281,60 @@ export const contentEn: Partial<V2Content> = {
       ],
       action: { label: 'Branding and design', href: '/en/services/branding' },
     },
+    {
+      id: 'brochure',
+      label: 'Brochure sites',
+      tags: [
+        'Positioning and structure',
+        'UX and UI design',
+        'Conversion copy',
+        'Mobile performance',
+        'Enquiry capture',
+        'Analytics from day one',
+      ],
+      question: 'What is different about our brochure sites?',
+      paragraphs: [
+        'A brochure site is not a digital leaflet. It is the first impression the business makes, so it is built around the message rather than around a template, and each page leads to the next thing you want the visitor to do.',
+        'The pages answer objections in the order a prospect actually raises them - services, process, proof, pricing - so the site does part of the qualifying before anyone picks up the phone.',
+      ],
+      action: { label: 'Brochure site development', href: '/en/services/brochure' },
+    },
+    {
+      id: 'marketing',
+      label: 'Paid media',
+      tags: [
+        'Google Ads',
+        'Meta campaigns',
+        'Landing pages',
+        'Creative production',
+        'Conversion tracking',
+        'Budget management',
+      ],
+      question: 'What is different about how we run campaigns?',
+      paragraphs: [
+        'The ad, the page it lands on and the tracking behind it are built by the same team, so campaign spend does not land on a homepage that was never designed to convert it.',
+        'Campaigns are planned around the stage your business is actually at rather than a template media plan, and measured against enquiries rather than impressions.',
+      ],
+      action: { label: 'Campaign management', href: '/en/services/marketing' },
+    },
+    {
+      id: 'maintenance',
+      label: 'Maintenance',
+      tags: [
+        'Security updates',
+        'Daily backups',
+        'Uptime monitoring',
+        'Content changes',
+        'Integration upkeep',
+        'Monthly report',
+      ],
+      question: 'What does maintenance cover?',
+      paragraphs: [
+        'Monthly plans with published pricing and response times written into the agreement rather than promised, including for sites we did not build ourselves.',
+        'Payment and invoicing connections are checked continuously, because when one breaks nothing on the site looks wrong: orders keep arriving and invoices simply stop being created.',
+      ],
+      action: { label: 'Website maintenance', href: '/en/services/maintenance' },
+    },
   ],
 
   allIn: {
