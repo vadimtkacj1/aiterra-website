@@ -1460,4 +1460,155 @@ export const servicePagesEn: Record<string, ServicePage> = {
       },
     ],
   },
+  'ai-search': {
+    id: 'ai-search',
+    crumb: 'AI search',
+    eyebrow: 'AI search',
+    heading: ['Visibility in the answers', 'ChatGPT, Gemini and Google write'],
+    subhead: 'Our GEO service',
+    lede: 'More searches now end in a written answer rather than a list of links. This service asks a different question from organic SEO: not where you sit in the list, but whether the engine mentions you at all.',
+    image: '/images/service-ai-search-hero.webp',
+    action: { label: 'Request an AI visibility check', href: '/en/contact' },
+    metaTitle: 'GEO and AI Search Visibility — ChatGPT, Gemini, AI Overviews',
+    metaDescription:
+      'GEO and AEO services: turning your business into a defined entity that AI engines cite. Entity and schema work, quotable content, presence in the sources engines read, and a monthly visibility report.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our AI search work'],
+      lede: 'An engine writing an answer does not choose a link, it chooses a source. The work is making you a source that is easy to quote.',
+      outro: 'Want to know what ChatGPT says today when someone asks about your field?',
+      action: { label: 'Request an AI visibility check', href: '/en/contact' },
+      roles: [
+        {
+          id: 'entity',
+          title: 'The entity first, the content after',
+          art: '/images/service-page1.webp',
+          text: 'An engine will not cite a business it is unsure exists. One consistent name, the same address and phone everywhere, a verified business profile and explicit links between your assets - without that base, the rest of the work does not register.',
+        },
+        {
+          id: 'quotable',
+          title: 'Content written to be quoted',
+          art: '/images/service-page2.webp',
+          text: 'A direct answer in the opening paragraph, figures with a source behind them, comparison tables and questions phrased the way a customer asks them. A general marketing paragraph cannot be quoted, so it simply is not chosen.',
+        },
+        {
+          id: 'schema',
+          title: 'Structured data written for machines',
+          art: '/images/service-page3.webp',
+          text: 'Organization, LocalBusiness, Service, FAQPage and Breadcrumb joined into one graph with stable identifiers. That is what lets an engine understand who is saying a thing and about what, rather than only reading text.',
+        },
+        {
+          id: 'measure',
+          title: 'Measurement without rankings',
+          art: '/images/service-page4.webp',
+          text: 'There is no first place in an AI answer, so we measure differently: a fixed bank of questions is run and checked for whether you are mentioned, in what context and next to whom, then compared month over month.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What is included',
+      heading: ['What AI search work consists of'],
+      art: '/images/service-ai-search.webp',
+      features: [
+        {
+          id: 'prompts',
+          icon: 'orders',
+          title: 'Mapping the real questions',
+          text: 'We build a bank of the questions a customer actually types into an engine - full questions rather than short keywords - and record what comes back today.',
+        },
+        {
+          id: 'facts',
+          icon: 'catalog',
+          title: 'A quotable base of facts',
+          text: 'Prices, timeframes, standards and terms are written as discrete facts with a source, instead of being scattered through marketing paragraphs.',
+        },
+        {
+          id: 'graph',
+          icon: 'club',
+          title: 'Entity and schema joined up',
+          text: 'The organisation, its expertise and its services defined as one graph, including the links to external profiles that confirm the business is real.',
+        },
+        {
+          id: 'sources',
+          icon: 'sales',
+          title: 'Presence in the sources engines read',
+          text: 'An engine leans on external sources at least as heavily as on your own site: local directories, professional profiles and mentions elsewhere.',
+        },
+        {
+          id: 'report',
+          icon: 'analytics',
+          title: 'Monthly visibility report',
+          text: 'Which questions name you, where you disappeared, who is named in your place and what changed since last month - in plain language, not a technical log.',
+        },
+      ],
+      action: { label: 'Request an AI visibility check', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How it starts. Simply.'],
+      lede: 'We start from what the engines say about you today, because it is usually a surprise.',
+      steps: [
+        {
+          id: 'baseline',
+          title: 'Baseline check',
+          text: 'We run the question bank against ChatGPT, Gemini and Google AI results and record what is said about you, what is said instead of you, and where the engine is simply wrong about you.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'foundation',
+          title: 'Fixing the base',
+          text: 'Entity and schema are put in order, business details are unified across assets, and the commercial pages are rewritten to carry answers that can be quoted.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'track',
+          title: 'Tracking and extension',
+          text: 'The same question bank is checked each month to see where you entered and where you were pushed out, then extended to the topics where being cited is realistic.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want to see what AI says about you today?',
+      action: { label: 'Request an AI visibility check', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about AI search visibility'],
+    faqEntries: [
+      {
+        question: 'What is GEO, and how does it differ from ordinary SEO?',
+        answer:
+          'Organic SEO competes for a position in a list of results. GEO, also called AEO, is about what happens when there is no list but a single written answer - in Google AI Overviews, in ChatGPT or in Gemini. There is no first or second place there; there is a source that was cited and a source that was not. A good deal of the technical groundwork is shared: a fast site, a clear structure and correct schema help both. The difference is emphasis - an engine composing an answer is looking for a discrete fact with a source behind it, not a page tuned to a keyword.',
+      },
+      {
+        question: 'Can you actually influence what ChatGPT says?',
+        answer:
+          'You cannot control the answer, and anyone claiming otherwise is overstating it. You can influence what the engine finds about you, and that part is genuinely in your hands: how clearly you are identified, whether your business details match everywhere, whether a page answers the question directly, and whether external sources corroborate what you claim. An engine composing an answer avoids a source it is not confident in. The practical leverage is therefore on the engine confidence in you rather than on its phrasing - and that is exactly where the difference between being named and being left out sits.',
+      },
+      {
+        question: 'How do you measure success when there are no rankings?',
+        answer:
+          'We build a fixed bank of real questions from your field and run it every month against the same engines. For each question we record whether you were mentioned, in what context, which competitors appeared alongside you, and whether you were linked. This is comparative rather than absolute measurement, because the same question can produce different phrasing on different runs - which is why the bank has to stay fixed and the run has to repeat. Alongside it we track what is measurable with certainty: traffic, enquiries, and what Google actually reports in Search Console.',
+      },
+      {
+        question: 'Does this replace organic SEO?',
+        answer:
+          'No, and it is worth being wary of anyone selling it as a replacement. Most searches still end in a click on a result, and the AI engines themselves lean on the same underlying signals: a fast site, a sound structure, content someone is willing to quote, and genuine authority. GEO is not a separate channel but a layer on top of organic work that is already sound. For a business whose base is shaky - a slow site, thin content, business details that contradict each other - the right move is to repair the base rather than buy an additional service that assumes the base exists.',
+      },
+      {
+        question: 'How long before anything changes?',
+        answer:
+          'The technical part moves relatively quickly: fixing the entity, the schema and inconsistent business details is picked up within weeks, and sometimes that alone is enough for an engine to stop confusing you with a similarly named company. The content part is slower, because an engine quotes a source it already trusts, and trust is not built in a month. We measure from the first month so there is a baseline to compare against, but we read the trend across several months rather than a single run - a single run can differ without anything having changed.',
+      },
+      {
+        question: 'What if the AI says something about us that is wrong?',
+        answer:
+          'It happens, and more often than people expect - particularly for businesses whose name resembles another company, or whose details appear in different forms in different places. An engine fills gaps with what seems plausible, so an inconsistent detail easily becomes a confidently worded error. The remedy is not a request for correction but the removal of ambiguity: unify the name and details across every asset, link the profiles to each other explicitly, and publish a clear page that settles the facts. The more consistent the sources, the less room the engine has to invent.',
+      },
+      {
+        question: 'What does it cost?',
+        answer:
+          'The work splits in two, and so does the pricing. There is a one-off opening stage - the baseline check, the entity and schema work, and rewriting the commercial pages - and then ongoing monthly work covering measurement, content and extension. The scope follows the number of commercial pages and the state of the base, which is why we do not publish a single figure for this service. The baseline check tells you where you stand today before you commit to anything ongoing, and if your organic foundations are still missing we will tell you to start there rather than here.',
+      },
+    ],
+  },
 }

@@ -10,6 +10,7 @@ export const EN_SERVICE_SLUGS = [
   'branding',
   'maintenance',
   'ai-agents',
+  'ai-search',
 ] as const
 
 export const contentEn: Partial<V2Content> = {
@@ -354,6 +355,24 @@ export const contentEn: Partial<V2Content> = {
       ],
       action: { label: 'AI agent development', href: '/en/services/ai-agents' },
     },
+    {
+      id: 'ai-search',
+      label: 'AI search',
+      tags: [
+        'AI Overviews',
+        'ChatGPT and Gemini',
+        'Entity definition',
+        'Structured data',
+        'Quotable content',
+        'Visibility report',
+      ],
+      question: 'What is different about how we work on AI search?',
+      paragraphs: [
+        'An answer written by an engine has no first place - there is a source it cited and a source it did not. So the work starts with entity and schema rather than with content: an engine does not cite a business it is unsure exists.',
+        'Measurement changes with it. A fixed set of real questions is run every month to record whether you were named, in what context and alongside whom, instead of tracking positions that do not exist there.',
+      ],
+      action: { label: 'AI search visibility', href: '/en/services/ai-search' },
+    },
   ],
 
   allIn: {
@@ -559,6 +578,7 @@ export const contentEn: Partial<V2Content> = {
           { label: 'Brand and UX/UI', href: '/en/services/branding' },
           { label: 'Website maintenance', href: '/en/services/maintenance' },
           { label: 'AI agents', href: '/en/services/ai-agents' },
+          { label: 'AI search visibility', href: '/en/services/ai-search' },
           { label: 'All services', href: '/en/services' },
         ],
       },
@@ -903,6 +923,21 @@ export const contentEn: Partial<V2Content> = {
         ],
         text: 'AI agents that answer from your own content, act inside the systems you already run, and hand the conversation to a person at the point you defined in advance.',
         action: { label: 'Learn more', href: '/en/services/ai-agents' },
+      },
+      {
+        id: 'ai-search',
+        title: 'AI search visibility',
+        image: '/images/service-ai-search-hero.webp',
+        tags: [
+          'AI Overviews',
+          'ChatGPT and Gemini',
+          'Entity definition',
+          'Structured data',
+          'Quotable content',
+          'Visibility report',
+        ],
+        text: 'Getting cited in the answers engines write rather than the lists they used to return: entity and schema work, content built to be quoted, and a monthly report of where you are named and where you are not.',
+        action: { label: 'Learn more', href: '/en/services/ai-search' },
       },
     ],
   },
