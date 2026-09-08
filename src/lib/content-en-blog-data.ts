@@ -3529,4 +3529,236 @@ Not sure which foundation is right for your business? Leave your details and we 
       ],
     },
   },
+  'ai-agents-for-business': {
+    title: 'AI Agents for Business: What They Do, How They Differ From a Chatbot',
+    excerpt:
+      'An AI agent does not only answer, it acts inside your systems. What separates it from a chatbot, why Hebrew breaks half the off-the-shelf products, and when an agent simply does not pay back.',
+    tags: ['AI agents', 'Automation', 'Chatbot', 'Customer service', 'CRM'],
+    content: `**TL;DR:** An AI agent is not an improved chatbot. A chatbot routes a question to a prepared answer; an AI agent understands an open question, retrieves an answer from your own knowledge sources, and carries out an action in the systems you already run - opening a lead, booking a meeting, checking an order. The practical difference is that an agent finishes tasks while a bot only passes them on. That difference is also what makes it more expensive to build, because any action that changes data needs permissions, an audit trail and a way to undo it.
+
+Most businesses that approach us about AI agents have seen an impressive demo and want one. The trouble is that a demo always works: it was built around questions the presenter chose. What decides whether an agent survives contact with real customers is exactly what a demo never shows - what happens when it does not know, what happens when the customer writes in broken Hebrew, and what happens when it gets a price wrong. This article is about that.
+
+![An AI agent handling a customer conversation and updating business systems](/images/blog/ai-agents-for-business.webp)
+
+## What is the difference between a chatbot and an AI agent?
+
+| Aspect | Classic chatbot | AI agent |
+|---|---|---|
+| How it understands | Menu or keywords | An open question in natural language |
+| Source of the answer | A script written in advance | Your own knowledge sources |
+| What it does | Routes, points at a form | Carries out an action in a system |
+| When there is no answer | Gets stuck or returns to the menu | Says it does not know and hands over |
+| Build cost | Low | Higher, driven by the number of actions |
+
+The third row is the one that matters. The moment an agent performs an action - opening a record, booking a meeting, updating a status - it stops being an interface and becomes a user of your systems. That is where the value comes from, and it is also where the risk comes from.
+
+## What an AI agent actually does in a business
+
+- **First response around the clock.** Questions about price, availability, opening hours and order status get answered the moment the enquiry lands. Most WhatsApp enquiries arrive after working hours, which is exactly when the customer is also checking your competitor.
+- **Lead qualification.** The agent asks the qualifying questions you defined - type of business, scope, timeline - so what reaches you is a lead with answers attached rather than a name and a number.
+- **Meeting booking.** Checking calendar availability, booking the slot and sending the reminder, without anyone re-keying details at the end of the day.
+- **Answers from your content.** Pricing, service terms and catalogue are loaded as the knowledge base; update a document and the answers move with it.
+- **An orderly handover to a person.** When the subject crosses the boundary you set, the conversation moves to a human with the full transcript.
+
+## The real problem: hallucination, and why it costs money
+
+A language model is built to produce an answer even when it has no source. That is not a fault, it is how it works, and in a business setting it is the central risk. A price the agent invented is a statement made in your name, and a customer who has it in writing will expect to receive it.
+
+The fix is not asking the model politely not to invent. It is constraining it: the agent answers from your sources only, and when a question has no source the defined behaviour is to say so and pass the conversation to a person. Before launch it is worth running a set of deliberately awkward questions to find where it gives way. The gap between a wrong answer and a missing one is the gap between a complaint and a follow-up call.
+
+## Hebrew: why half the off-the-shelf products break here
+
+Hebrew is where demos stop working. Hebrew text arrives with mixed full and defective spelling, heavy abbreviation, product names in Latin script mid-sentence, and RTL directionality that changes how replies render in WhatsApp and on the site. An agent built in English and translated afterwards answers a well-formed question correctly and breaks on how an Israeli customer actually writes.
+
+The right test is not a list of sample questions but your own real enquiries from recent months. That is also the stage where it often emerges that the price list itself is written in a way nobody can answer from - which is a problem with the business, not with the model.
+
+## When an AI agent does not pay back
+
+Plainly: it is not for every business. At five enquiries a week an agent will not recover its build and running cost, and the same budget is better spent on [campaigns](/en/services/marketing) or [organic search](/en/services/seo) that generate enquiries in the first place. An agent pays back when there is recurring volume, when a large share of the questions repeat, and when response time genuinely affects whether you win the work - for instance where a customer contacts three suppliers and goes with whoever answered first.
+
+A simple test: if you answer the same question more than ten times a week, there is something here worth automating.
+
+## How to start properly
+
+Start from the conversations already happening, not from the model. Read the enquiries of recent months, mark what repeats, and agree in writing what the agent takes and what stays with a person. Then connect to the systems with a narrow permission for each action, and run a pilot on part of the traffic - read real transcripts and correct before widening.
+
+That stage looks like a delay, and it is what stops the agent meeting every one of your customers with the same mistake. The full service is described on our [AI agent development](/en/services/ai-agents) page, and if you want to check which of your enquiries are even suitable for automation, [talk to us](/en/contact).`,
+    faq: {
+      title: 'Frequently asked questions about AI agents for business',
+      items: [
+        {
+          q: 'What is the difference between an AI agent and a chatbot?',
+          a: 'A chatbot runs on a script or a menu and breaks when a customer phrases something nobody planned for. An AI agent understands an open question, retrieves an answer from your knowledge sources, and can also carry out an action - opening a lead, booking a meeting or checking an order status. The practical difference is that an agent finishes tasks while a bot routes them. That also explains the cost gap: an action that changes data in a system needs permissions, an audit trail and a way to undo it, not just a well-phrased reply.',
+        },
+        {
+          q: 'How do you stop an AI agent inventing prices?',
+          a: 'You restrict it to your own sources - pricing, service terms, catalogue and procedures - rather than letting it lean on the general knowledge of the model. When a question has no source, the defined behaviour is to say it does not know and hand over to a person. Before launch you run a set of deliberately awkward questions to find where it gives way. This matters because a price the agent stated to a customer is a commitment made in your name, and a customer who received a number will expect it to hold.',
+        },
+        {
+          q: 'Does an AI agent work well in Hebrew?',
+          a: 'It depends how it was built. Hebrew arrives with mixed spelling conventions, heavy abbreviation, product names in Latin script mid-sentence, and RTL directionality that affects rendering. An agent built in English and translated afterwards answers correctly in a demo and breaks on how an Israeli customer actually writes. The right test is your own real enquiries from recent months rather than a set of sample questions.',
+        },
+        {
+          q: 'When is an AI agent not worth it?',
+          a: 'When enquiry volume is low. At five enquiries a week the agent will not recover its build and running cost, and the same budget is better spent generating enquiries in the first place. An agent pays back when volume recurs, when a substantial share of questions repeat, and when response time affects whether the work closes - for example where a customer contacts several suppliers and goes with whoever replied first. A simple signal: if you answer the same question more than ten times a week, there is something to automate.',
+        },
+        {
+          q: 'What happens when a customer gets annoyed with the agent?',
+          a: 'The handover rule is set in advance rather than improvised. The agent passes to a person when the customer asks for one, when the subject is a refund, a complaint or a legal matter, when anger is detected in the wording, and when three consecutive replies have not resolved the issue. The handover carries the transcript so the customer does not start the story again - that is the point at which most deployments irritate people more than they help them.',
+        },
+      ],
+    },
+  },
+  'ai-overviews-israel': {
+    title: 'Google AI Overviews: What It Means for Your Business and How to Get Cited',
+    excerpt:
+      'Google answers the customer above the organic results. What that does to your traffic, why clicks fall even when rankings hold, and what actually gets a business into the answer.',
+    tags: ['AI Overviews', 'SEO', 'GEO', 'Google', 'Visibility'],
+    content: `**TL;DR:** AI Overviews is a written answer Google places above the organic results. For a business it means you can hold your ranking and still lose clicks, because the visitor got the answer without scrolling. What gets a business into the answer is not a trick but three things together: an entity Google is confident about, content someone can quote a whole sentence from, and outside sources that corroborate it.
+
+Plenty of site owners in Israel are seeing a confusing pattern in Search Console: impressions hold or even rise, average position has not slipped, and clicks are down. In many cases this is not a drop in rankings but a change in the shape of the results page. This article explains what is happening and what can actually be done.
+
+![A Google search result with an AI answer above the organic listings](/images/blog/ai-overviews-israel.webp)
+
+## What AI Overviews is and where it sits
+
+AI Overviews is a summary Google generates at the top of the results page, with links to the sources it drew on. The visitor gets a direct answer, and only below it come the familiar blue results. For a business this is not another box on the page but a change in reading order: what used to be "choose among ten results" has become "read the answer, and continue only if it was not enough".
+
+The practical consequence: informational queries lose clicks faster than queries with buying intent. Someone looking for a definition gets it in the answer; someone looking for a supplier still has to click.
+
+## Why the Search Console numbers mislead
+
+It matters how Google counts: an appearance inside AI Overviews is counted as an impression. So a page can appear more often, lose clicks, and look in the report as though its CTR collapsed for no reason.
+
+| What the report shows | What it may mean |
+|---|---|
+| Impressions up, clicks down | The answer was given on the page; no reason to enter |
+| Position improves, clicks fall | The page rose but was pushed below the answer |
+| Informational queries fall, commercial hold | The typical signature of the shift to AI answers |
+
+The practical conclusion: position on its own is no longer a sufficient measure. Look at clicks and enquiries by query type rather than at an average that hides the picture.
+
+## What actually gets a business into the answer
+
+**An entity Google is confident about.** An engine composing an answer avoids a source whose identity it is unsure of. One consistent business name, the same address and phone everywhere, a verified business profile, and links between your assets - that is the base. A business whose details appear in three different forms online is giving the engine a reason to pick somebody else.
+
+**Content you can quote a sentence from.** A direct answer in the opening paragraph, figures with a source, and a table that settles a comparison. A general marketing paragraph cannot be quoted, so it is simply not chosen. Ask yourself: if I had to copy one sentence from this page as the answer, which sentence would it be? If there is not one, there is nothing to cite.
+
+**Structured data in order.** Organization, LocalBusiness, FAQPage and Breadcrumb joined into one graph with stable identifiers. That is what lets an engine work out who is saying what, rather than only reading text.
+
+**Corroboration from outside.** An engine leans on what others say about you at least as much as on what you say about yourself: a [Google Business Profile](/en/blog/google-business-profile-guide), local directories and mentions elsewhere.
+
+## What not to do
+
+Do not delete informational content on the grounds that "it gets no clicks anyway". That content is usually what earns the authority behind being cited at all, and what brings a visitor to the brand early. The right move is the opposite: make sure informational pages lead clearly to the relevant commercial page, so the visits that do happen are worth something.
+
+And do not block the AI crawlers and then wonder why you are absent from the answers.
+
+## The bottom line
+
+AI Overviews did not abolish organic search; it changed what you measure. The base is the same base - a fast site, a clear structure, real content - with a layer of clarity added on top: who you are, what you claim, and who confirms it. We cover that layer on our [AI search visibility](/en/services/ai-search) page and in our article on [GEO and generative engine optimisation](/en/blog/geo-ai-search-optimization).`,
+    faq: {
+      title: 'Frequently asked questions about AI Overviews',
+      items: [
+        {
+          q: 'Does AI Overviews hurt traffic to a website?',
+          a: 'It depends on the query type. Informational queries - definitions, explanations, "what is" - lose clicks, because the visitor gets the answer on the page and has no reason to enter. Queries with buying intent suffer less, because someone looking for a supplier still has to choose and make contact. Analysing by overall average therefore misleads, and the report needs splitting by query type to see what actually happened.',
+        },
+        {
+          q: 'Why are impressions up while clicks are down?',
+          a: 'Because an appearance inside the AI answer counts as an impression even when the visitor does not click. The result is that a page can look in the report as though its CTR collapsed, when in fact it appeared in a place where the answer had already been given. This is why average position is no longer a sufficient measure, and why clicks and enquiries should be measured by query group.',
+        },
+        {
+          q: 'How do you get a business into an AI answer?',
+          a: 'Three things together. First, a clear entity: the same name, address and phone everywhere and a verified business profile, so the engine is confident who you are. Second, content you can quote a whole sentence from - a direct answer up front, figures with a source, a comparison table. Third, outside corroboration: mentions and directories that confirm what you claim. Without the first, the other two barely register.',
+        },
+        {
+          q: 'Should you delete informational content that gets no clicks?',
+          a: 'No. Informational content is usually what builds the authority behind being cited, and what puts the brand in front of someone early in their search. The right step is to make sure every informational page leads clearly to the relevant commercial page, so the visits that do occur are worth something - not to delete what generates the exposure in the first place.',
+        },
+        {
+          q: 'Should you block AI crawlers?',
+          a: 'Blocking prevents an engine from citing you, so it removes you from the answers you are trying to enter. Some businesses have a genuine commercial reason to block - paid content, for instance - but you cannot block and complain about absence at the same time. The decision should be deliberate rather than a default left over from an old line in a robots file.',
+        },
+      ],
+    },
+  },
+  'chatgpt-about-your-business': {
+    title: 'What ChatGPT Says About Your Business, and How to Fix It When It Is Wrong',
+    excerpt:
+      'AI engines already answer questions about you, whether you asked them to or not. How to check what is being said, why confident errors happen, and how to correct them without asking anyone for a correction.',
+    tags: ['ChatGPT', 'GEO', 'Reputation', 'Entity', 'Visibility'],
+    content: `**TL;DR:** AI engines already answer questions about your business, and some of those answers are wrong. There is no correction form and nobody to appeal to; what you can do is remove the ambiguity that produced the error. The check takes half an hour: run a fixed list of questions, record what is said, and compare again in a month. The fix is almost always the same - unify your business details everywhere and link your assets to each other.
+
+A client of ours discovered that ChatGPT was attributing services to him that he does not offer. Not maliciously - simply because his business name resembles another company and the engine merged the two. This is far more common than people assume, and it happens quietly: nobody tells you it occurred.
+
+![Checking what an AI engine answers about a business](/images/blog/chatgpt-about-your-business.webp)
+
+## How to check, in half an hour
+
+Build a list of ten to fifteen questions a customer would really ask, and run it against ChatGPT, Gemini and Perplexity:
+
+1. What is [business name]?
+2. Who provides [your service] in [your city]?
+3. How much does [your service] cost in Israel?
+4. What is the difference between [business name] and [competitor]?
+5. Is [business name] reliable?
+
+For each question record three things: whether you were mentioned, what was said about you, and who was named instead of you. Keep the record - it is the basis for comparison, and without a repeat measurement you have no way of knowing whether anything improved.
+
+One thing to know: the same question can produce different phrasing on different runs. Do not draw a conclusion from a single run, and do not celebrate one either.
+
+## Why the engine is wrong with complete confidence
+
+A language model fills gaps with what seems plausible. When the information about you is partial or contradictory, that gap gets filled with a guess phrased like a fact. Three common causes:
+
+| The cause | How it shows up in the answer |
+|---|---|
+| A name close to another company | Two businesses merged into one entity |
+| Business details in several versions | A wrong address or phone number |
+| No external source confirming you | "I am not aware of such a business" |
+
+The third row is the worst of them, not the first. A wrong answer can be corrected; complete absence from the answer means you do not exist as far as the engine is concerned.
+
+## How to fix it - not by asking, by being consistent
+
+There is no "correct what is said about me" form. The fix works differently: you shrink the space in which the engine can invent.
+
+- **One name, everywhere.** Exactly the same name on the site, in the Google Business Profile, on social platforms and in every directory. An extra variant of the name is an invitation to confusion.
+- **Identical details.** Address and phone in the same form across every asset. A small difference - a floor number present in one place and absent in another - is enough to create a contradiction.
+- **Explicit links between assets.** The site points at the profiles and the profiles point back. That is what lets an engine merge them into one entity.
+- **A page that settles the facts.** A clear about page with founding year, areas of work and location, which can be quoted.
+- **Outside confirmation.** A [Google Business Profile](/en/blog/google-business-profile-guide) with real reviews, local directories and mentions elsewhere.
+
+## How long it takes
+
+The technical part - unified details, linked assets, schema - is picked up within weeks, and sometimes that alone is enough for an engine to stop confusing you with another company. Building authority is slower, because an engine cites a source it already trusts, and that is not built in a month.
+
+So the practical advice is simple: run the check now so you have a baseline, fix what is in your control, and run it again in a month. If you would rather we did it for you, that is exactly what our [AI search visibility](/en/services/ai-search) service covers - or simply [talk to us](/en/contact).`,
+    faq: {
+      title: 'Frequently asked questions about what AI says about your business',
+      items: [
+        {
+          q: 'How do I check what ChatGPT says about my business?',
+          a: 'Build a fixed list of ten to fifteen questions a customer would really ask - what the business is, who provides the service locally, what it costs, how it differs from a competitor - and run it against ChatGPT, Gemini and Perplexity. For each question record whether you were mentioned, what was said, and who was named instead. Repeat monthly with the same list, because the same question can produce different phrasing on different runs and a conclusion drawn from one run is not reliable.',
+        },
+        {
+          q: 'Can you ask ChatGPT to correct wrong information about you?',
+          a: 'There is no correction mechanism and nobody to appeal to. What does work is removing the ambiguity that created the error: unify the business name and details everywhere, link the site to the profiles and back again, and publish a clear page that settles the facts. A model fills gaps with a plausible-sounding guess, so the more consistent the sources, the less room it has to invent.',
+        },
+        {
+          q: 'Why does AI confuse our business with another company?',
+          a: 'Usually a similar name combined with incomplete information. When an engine lacks signals that separate two entities - address, field of work, linked profiles - it tends to merge them. The remedy is not to complain but to strengthen the distinguishing signals: a consistent name, an explicit location, an about page that states facts, and two-way links between your site and your external profiles.',
+        },
+        {
+          q: 'Which is worse - a wrong answer or no mention at all?',
+          a: 'No mention. A wrong answer at least shows the engine knows you exist, and consistency of information can correct it. An answer along the lines of "I am not aware of such a business" means there are not enough sources confirming that you exist, and that calls for more basic work: a verified business profile, external mentions, and content of your own that can be quoted.',
+        },
+        {
+          q: 'How long before the answers change?',
+          a: 'The technical part lands within weeks: unified business details, linked assets and sound schema work relatively quickly, and sometimes that alone stops an engine confusing you with another company. Building authority takes months, because engines cite sources they already trust. So measure from the first month to have a baseline, but read the trend across several months rather than a single run.',
+        },
+      ],
+    },
+  },
 }

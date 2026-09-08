@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       project.heroDescription ||
       `${project.title} - פרויקט מתיק העבודות של AITERRA: ${project.category}.`,
     path: `/projects/${slug}`,
+    altPath: `/en/projects/${slug}`,
     image: project.image,
     imageAlt: project.imageAlt || project.title,
   })

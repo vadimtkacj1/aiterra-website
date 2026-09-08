@@ -10,6 +10,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     'הצהרת הנגישות של אתר AITERRA לפי תקן ישראלי 5568 ו-WCAG 2.1: התאמות שבוצעו, רכיב הנגישות באתר ודרכי פנייה לרכז הנגישות.',
   path: '/accessibility-statement',
+  altPath: '/en/accessibility-statement',
 })
 
 export default function V2AccessibilityPage() {

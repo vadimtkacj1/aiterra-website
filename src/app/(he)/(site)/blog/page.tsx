@@ -18,6 +18,7 @@ export function generateMetadata(): Metadata {
     title: blog.metaTitle,
     description: blog.metaDescription,
     path: '/blog',
+    altPath: '/en/blog',
   })
 }
 

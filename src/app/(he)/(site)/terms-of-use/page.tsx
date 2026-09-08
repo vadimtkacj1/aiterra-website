@@ -10,6 +10,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     'תקנון ותנאי השימוש באתר AITERRA: זכויות יוצרים, שימוש בתכנים, אחריות, מדיניות תשלומים והדין החל.',
   path: '/terms-of-use',
+  altPath: '/en/terms-of-use',
 })
 
 export default function V2TermsPage() {

@@ -12,6 +12,7 @@ import Footer from '../../components/Footer'
 import type { BlogCard } from '../../components/BlogIndex'
 import { ChevronPrevIcon } from '../../components/icons'
 import { getAllPosts, getPostBySlug } from '@/lib/blog-server'
+import { isTranslated } from '@/lib/content-en-blog'
 import { getAuthorById } from '@/lib/authors-server'
 import { categoryTag, formatPostDate, matchesKeywords, readingMinutes } from '../../blogCategory'
 import { getV2Content } from '@/lib/v2-content-server'
@@ -32,6 +33,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title: post.title,
     description: post.excerpt,
     path: `/blog/${slug}`,
+    ...(isTranslated(slug) ? { altPath: `/en/blog/${slug}` } : {}),
     image: post.images?.[0] || undefined,
     imageAlt: post.title,
     type: 'article',

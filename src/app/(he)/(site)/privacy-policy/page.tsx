@@ -10,6 +10,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     'מדיניות הפרטיות של AITERRA: אילו נתונים אנחנו אוספים באתר, למה הם משמשים, כמה זמן הם נשמרים ואיך תוכלו לממש את זכויותיכם.',
   path: '/privacy-policy',
+  altPath: '/en/privacy-policy',
 })
 
 export default function V2PrivacyPage() {
