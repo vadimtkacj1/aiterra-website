@@ -7,6 +7,7 @@ import Services from '../../(he)/(site)/components/Services'
 import Portfolio from '../../(he)/(site)/components/Portfolio'
 import AllIn from '../../(he)/(site)/components/AllIn'
 import Partners from '../../(he)/(site)/components/Partners'
+import Reviews from '../../(he)/(site)/components/Reviews'
 import Faq from '../../(he)/(site)/components/Faq'
 import ContactForm from '../../(he)/(site)/components/ContactForm'
 import Footer from '../../(he)/(site)/components/Footer'
@@ -27,7 +28,7 @@ export const metadata: Metadata = pageMetadata({
 export const revalidate = 300
 
 export default function EnHomePage() {
-  const { faqEntries } = getV2ContentEn()
+  const { faqEntries, reviews, reviewItems } = getV2ContentEn()
   const entries = faqEntries.map((item) => ({ question: item.question, answer: item.answer }))
 
   return (
@@ -51,6 +52,15 @@ export default function EnHomePage() {
         <Portfolio />
         <AllIn />
         <Partners locale="en" />
+        <Reviews
+          eyebrow={reviews.eyebrow}
+          heading={reviews.heading}
+          items={reviewItems}
+          railLabel={reviews.rail}
+          ratingLabel={reviews.rating}
+          prevLabel={reviews.prev}
+          nextLabel={reviews.next}
+        />
         <Faq />
       </main>
       <Footer locale="en">

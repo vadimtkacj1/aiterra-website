@@ -784,6 +784,118 @@ export const contentEn: Partial<V2Content> = {
     defaultAuthor: 'The Aiterra team',
   },
 
+  reviews: {
+    eyebrow: 'GOOGLE REVIEWS',
+    heading: ['You have heard our side.', 'Now hear the clients.'],
+    lede: [
+      'Every review below is a real one left on our Google Business Profile.',
+      'They are shown here in the English Google publishes them in; the originals were written in Hebrew.',
+    ],
+    rail: 'Client reviews from Google',
+    rating: 'Rated {value} out of 5 stars',
+    prev: 'Previous review',
+    next: 'Next review',
+  },
+
+  reviewItems: [
+    {
+      id: 'erez-shmueli',
+      author: 'ארז שמואלי',
+      when: '6 days ago',
+      rating: 5,
+      tint: '#3678e9',
+      body: [
+        { text: 'They made a new website for our business and ' },
+        { text: 'the phone has not stopped ringing since', accent: true },
+        { text: '. I did not expect results so quickly.' },
+      ],
+    },
+    {
+      id: 'nardit-m',
+      author: 'Nardit M',
+      when: 'a month ago',
+      rating: 5,
+      tint: '#c25b7c',
+      body: [
+        { text: 'I did not think it was possible to reach such high rankings so quickly, but ' },
+        { text: 'their promotion worked magic', accent: true },
+        { text: '. Every customer who comes through the site compliments its design and speed.' },
+      ],
+    },
+    {
+      id: 'lidor-nisan-ben-shitrit',
+      author: 'לידור ניסן בן שיטרית',
+      when: 'a month ago',
+      rating: 5,
+      tint: '#7b61c4',
+      body: [
+        { text: 'We came for digital marketing and stayed for the results. ' },
+        { text: 'We reached the first page of Google in a short time', accent: true },
+        { text: ', with quality leads coming in every day.' },
+      ],
+    },
+    {
+      id: 'michel-tern',
+      author: 'מישל טרן',
+      when: '2 months ago',
+      rating: 5,
+      tint: '#2f8f7a',
+      body: [
+        { text: 'International level service. We needed to develop a complex system and ' },
+        { text: 'they knew exactly how to solve our technical challenges', accent: true },
+        { text: '. I have never met such a courteous and professional team.' },
+      ],
+    },
+    {
+      id: 'hanan-elul',
+      author: 'חנן אלול',
+      when: '2 months ago',
+      rating: 5,
+      tint: '#c98a3a',
+      body: [
+        { text: 'We were looking for an SEO company that would know how to get us to the right places. ' },
+        { text: 'We are already on the first page for the phrases that matter most to us', accent: true },
+        { text: '. Highly recommended.' },
+      ],
+    },
+    {
+      id: 'gal-kaufman',
+      author: 'Gal Kaufman',
+      when: '3 months ago',
+      rating: 5,
+      tint: '#3678e9',
+      body: [
+        { text: 'I recommend them. They did ' },
+        { text: 'organic SEO for me that works like clockwork', accent: true },
+        { text: ', built me a professional website that conveys reliability, and their service is unmatched.' },
+      ],
+    },
+    {
+      id: 'dvir-cohen',
+      author: 'Dvir Cohen',
+      when: '4 months ago',
+      rating: 5,
+      tint: '#7b61c4',
+      body: [
+        { text: 'They are simply great at social media advertising. ' },
+        { text: 'Plenty of quality leads and huge organic traffic', accent: true },
+        { text: '. Thanks for everything.' },
+      ],
+    },
+    {
+      id: 'mor',
+      author: 'Mor',
+      when: '4 months ago',
+      rating: 5,
+      tint: '#c25b7c',
+      body: [
+        { text: 'We had an old website that was not working. They rebuilt it and set up our Google campaigns, and since then the business has simply been growing. ' },
+        { text: 'The best return on investment I have made this year', accent: true },
+        { text: '.' },
+      ],
+    },
+  ],
+
   servicesStack: {
     eyebrow: 'OUR SERVICES',
     heading: ['Every capability under', 'one roof'],
