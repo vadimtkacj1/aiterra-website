@@ -9,6 +9,7 @@ export const EN_SERVICE_SLUGS = [
   'marketing',
   'branding',
   'maintenance',
+  'ai-agents',
 ] as const
 
 export const contentEn: Partial<V2Content> = {
@@ -335,6 +336,24 @@ export const contentEn: Partial<V2Content> = {
       ],
       action: { label: 'Website maintenance', href: '/en/services/maintenance' },
     },
+    {
+      id: 'ai-agents',
+      label: 'AI agents',
+      tags: [
+        'Round-the-clock replies',
+        'Lead qualification',
+        'Meeting booking',
+        'CRM connection',
+        'WhatsApp',
+        'Human handoff',
+      ],
+      question: 'What is different about the AI agents we build?',
+      paragraphs: [
+        'The agent answers from your own pricing, terms and catalogue rather than from the model general knowledge, and when a question has no source behind it the defined answer is that it does not know - a price it invents is a commitment made in your name.',
+        'It also acts rather than only replying: opening a lead, booking a meeting and updating a status in the systems you already run, so nobody is left copying details across by hand at the end of the day.',
+      ],
+      action: { label: 'AI agent development', href: '/en/services/ai-agents' },
+    },
   ],
 
   allIn: {
@@ -539,6 +558,7 @@ export const contentEn: Partial<V2Content> = {
           { label: 'Paid campaigns', href: '/en/services/marketing' },
           { label: 'Brand and UX/UI', href: '/en/services/branding' },
           { label: 'Website maintenance', href: '/en/services/maintenance' },
+          { label: 'AI agents', href: '/en/services/ai-agents' },
           { label: 'All services', href: '/en/services' },
         ],
       },
@@ -868,6 +888,21 @@ export const contentEn: Partial<V2Content> = {
         ],
         text: 'Monthly maintenance with published prices and response times written into the agreement - including for sites we did not build.',
         action: { label: 'Learn more', href: '/en/services/maintenance' },
+      },
+      {
+        id: 'ai-agents',
+        title: 'AI agents',
+        image: '/images/service-agents-hero.webp',
+        tags: [
+          'Round-the-clock replies',
+          'Lead qualification',
+          'Meeting booking',
+          'CRM connection',
+          'WhatsApp',
+          'Human handoff',
+        ],
+        text: 'AI agents that answer from your own content, act inside the systems you already run, and hand the conversation to a person at the point you defined in advance.',
+        action: { label: 'Learn more', href: '/en/services/ai-agents' },
       },
     ],
   },

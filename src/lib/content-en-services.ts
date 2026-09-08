@@ -1309,4 +1309,155 @@ export const servicePagesEn: Record<string, ServicePage> = {
       },
     ],
   },
+  'ai-agents': {
+    id: 'ai-agents',
+    crumb: 'AI agents',
+    eyebrow: 'AI agents',
+    heading: ['AI agents that answer customers', 'and act inside your systems'],
+    subhead: 'Our AI agent service',
+    lede: 'An AI agent that answers from your own content, carries out real actions in the systems you already run - opening a lead, booking a meeting, checking an order - and knows the moment to hand the conversation to a person.',
+    image: '/images/service-agents-hero.webp',
+    action: { label: 'Request an agent discovery call', href: '/en/contact' },
+    metaTitle: 'AI Agent Development for Businesses in Israel',
+    metaDescription:
+      'AI agent and smart chatbot development for Israeli businesses: round-the-clock replies in Hebrew and English, lead qualification, meeting booking and connections to CRM, WhatsApp and invoicing, with written guardrails and human handoff.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our AI agents'],
+      lede: 'The distance between an impressive demo and an agent you can leave in front of customers is what happens when it does not know the answer.',
+      outro: 'Want to find out which of your enquiries an agent could actually take?',
+      action: { label: 'Request an agent discovery call', href: '/en/contact' },
+      roles: [
+        {
+          id: 'grounding',
+          title: 'Answers from your content, not the model',
+          art: '/images/service-page1.webp',
+          text: 'The agent answers out of your pricing, terms and catalogue rather than the general knowledge it was trained on. A question with no source behind it gets a defined "I do not know" and moves on, because a price it invents is a commitment made in your name.',
+        },
+        {
+          id: 'actions',
+          title: 'It acts, it does not only reply',
+          art: '/images/service-page2.webp',
+          text: 'An agent that only answers hands the work back to you. Ours connect to the systems you run: opening a lead, booking into the calendar, updating an order status. Every action is permission-scoped, written to a log and reversible.',
+        },
+        {
+          id: 'bilingual',
+          title: 'Hebrew and English, tested on real messages',
+          art: '/images/service-page3.webp',
+          text: 'Hebrew is where most off-the-shelf agents come apart: mixed spelling, abbreviations, product names in Latin script mid-sentence and RTL rendering. We test on real enquiries from your business rather than on sample questions.',
+        },
+        {
+          id: 'handoff',
+          title: 'Handover to a person at the right moment',
+          art: '/images/service-page4.webp',
+          text: 'The stopping rules are set in advance: a refund request, a complaint, anger in the wording, or three replies that did not resolve it. The conversation moves across with the full transcript, so the customer never starts the story again.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What it does',
+      heading: ['What an AI agent does in your business'],
+      art: '/images/service-agents.webp',
+      features: [
+        {
+          id: 'answer',
+          icon: 'orders',
+          title: 'First response around the clock',
+          text: 'Questions about price, availability, opening hours and order status are answered the moment the enquiry arrives - at ten at night and on a Saturday, not the next morning.',
+        },
+        {
+          id: 'qualify',
+          icon: 'club',
+          title: 'Lead qualification',
+          text: 'The agent asks the qualifying questions you defined - type of business, scope, timeline - so what reaches you is a lead with answers attached rather than a name and a phone number.',
+        },
+        {
+          id: 'book',
+          icon: 'sales',
+          title: 'Booking and CRM updates',
+          text: 'Checking calendar availability, booking the slot, sending the reminder and opening the client record, without anyone re-keying details at the end of the day.',
+        },
+        {
+          id: 'knowledge',
+          icon: 'catalog',
+          title: 'Your content as the only source',
+          text: 'Pricing, service terms, catalogue and FAQs are loaded as the knowledge base. Update a document and the answers move with it instead of quietly going stale.',
+        },
+        {
+          id: 'log',
+          icon: 'analytics',
+          title: 'Logging and measurement',
+          text: 'Every conversation is kept: what was asked, what was answered, what went to a human and where the agent got stuck. That record is what lets us improve it on evidence rather than guesswork.',
+        },
+      ],
+      action: { label: 'Request an agent discovery call', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How an agent gets built. Simply.'],
+      lede: 'We start from the conversations your business already has, not from the model.',
+      steps: [
+        {
+          id: 'scenarios',
+          title: 'Scenario discovery',
+          text: 'We read the real enquiries of recent months, mark what repeats, decide what the agent takes and what stays with a person. That boundary is agreed in writing before any code is written.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'build',
+          title: 'Build and system connections',
+          text: 'We load the knowledge sources, define which actions are permitted and connect the calendar, CRM, WhatsApp and invoicing - each action scoped to its own narrow permission.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'pilot',
+          title: 'Pilot and refinement',
+          text: 'We run it on part of the traffic, read actual transcripts and correct. Only once the answers hold to the standard agreed in discovery does the agent take every enquiry.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want to know which of your enquiries an AI agent could take?',
+      action: { label: 'Request an agent discovery call', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about AI agents'],
+    faqEntries: [
+      {
+        question: 'What is an AI agent, and how does it differ from a chatbot?',
+        answer:
+          'A classic chatbot runs on a decision tree - press 1 for pricing, 2 for support - and breaks the moment a customer phrases something nobody scripted. An AI agent understands an open question, retrieves the answer from your knowledge sources, and can carry out an action: opening a lead, booking a meeting or checking an order status instead of pointing at a form. The practical difference is that an agent finishes tasks while a bot only routes them. That difference is also what makes it more expensive to build, because an action that changes data needs permissions, an audit trail and a way to undo it.',
+      },
+      {
+        question: 'How do you stop the agent making answers up?',
+        answer:
+          'A language model is built to produce an answer even when it has no source, and in a business deployment that is the real risk. We restrict the agent to your material only: pricing, service terms, catalogue and procedures. When a question has no source behind it, the defined behaviour is to say so and pass the conversation to a person. Before launch we run a set of deliberately awkward questions to find where it gives way. The reason this matters is simple: a price or a commitment the agent states to a customer is a statement made in your name, and the gap between a wrong answer and a missing one is the gap between a complaint and a follow-up call.',
+      },
+      {
+        question: 'Does the agent work properly in Hebrew?',
+        answer:
+          'Yes, and Hebrew is precisely where many off-the-shelf agents fall down. Hebrew text arrives with mixed full and defective spelling, heavy use of abbreviations, product names in Latin script in the middle of a sentence, and RTL directionality that affects how replies render in WhatsApp and on the site. An agent built in English and translated afterwards answers correctly in a demo and breaks on how an Israeli customer actually writes. We therefore test on real enquiries from your business rather than on sample questions, and that is often the stage where it emerges that the price list itself is written in a way nobody can answer from.',
+      },
+      {
+        question: 'What can the agent connect to?',
+        answer:
+          'To the systems you already run. On the enquiry side that is usually WhatsApp Business and the chat on your site; behind them a CRM, a calendar, an Israeli invoicing system such as Green Invoice, iCount or Rivhit, and your product or order data. Each connection is given a narrow permission: the agent can read an order status but not change a price, open a lead but not delete a customer. Every action is written to a log with its time, its conversation and its result, so afterwards you can check exactly what happened rather than relying on a model to recall it.',
+      },
+      {
+        question: 'What happens when the agent does not know, or the customer gets angry?',
+        answer:
+          'The handover rule is written during discovery, not improvised at runtime. The agent passes to a person when the customer asks for one, when the subject is a refund, a complaint or a legal matter, when anger or distress is detected in the wording, and when three consecutive replies have failed to resolve the issue. The handover carries the full transcript, so the customer does not tell the story from the beginning - that is the point at which most deployments irritate people more than they serve them. Outside working hours the agent collects the details, states when someone will come back, and opens a task rather than leaving the enquiry hanging.',
+      },
+      {
+        question: 'How long does it take to build an AI agent?',
+        answer:
+          'The timeline follows the number of actions the agent performs far more than the number of questions it answers. An agent that answers from a price list and service documents and hands off to a person is a comparatively short project. One that books meetings, opens CRM records and updates order statuses needs permission design, failure handling and testing, and takes longer. In either case we start with a pilot on part of the traffic: read real transcripts, correct, and only then widen. That stage looks like a delay, and it is the thing that stops the agent meeting every customer with the same mistake.',
+      },
+      {
+        question: 'What does AI agent development cost?',
+        answer:
+          'Pricing follows the scope of discovery and the number of system connections, which is why we do not publish a single figure for this service - one number would not survive contact with two different projects. What is worth knowing in advance is the shape of the cost: a one-off build, alongside a monthly running cost covering model usage and maintenance. Model cost grows with conversation volume, so we present it as a range against an estimated volume rather than a fixed sum. In the discovery call we will also tell you the less comfortable version: whether your enquiry volume is too small to justify an agent at all.',
+      },
+    ],
+  },
 }

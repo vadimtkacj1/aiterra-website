@@ -370,9 +370,6 @@
     line-height: 1.15;
   }
 
-  .services .tabs button:nth-child(n + 7) {
-    grid-column: span 3;
-  }
 
   .services .tabs button[aria-selected='true'] {
     border-color: #3070de;
