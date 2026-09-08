@@ -1288,6 +1288,11 @@ export const servicePagesEn: Record<string, ServicePage> = {
           'Yes, and it is a large part of the work. It starts with a survey: what the site is built on, which versions are running, what state the backups are in and what is already broken. Then we recover access to hosting, domain, DNS and connected systems, document the current state and settle ownership formally - which matters most in the common case where the previous developer has disappeared, nobody has the code, and the domain is registered to someone who no longer answers email. Once that is resolved the site enters the normal maintenance cycle. We will tell you honestly if a site is too far gone to maintain economically and a rebuild would cost less.',
       },
       {
+        question: 'What is the difference between website maintenance and website support?',
+        answer:
+          'Maintenance is proactive and scheduled: updates, backups and monitoring that happen on a fixed cycle whether or not anything has gone wrong. Support is reactive - you get in touch when something breaks, and it is usually billed by the hour or by the call. A business buying support alone pays less in an ordinary month and more in the month something happens, and crucially nobody prevented the fault in the first place. In our plans the scheduled work is covered by the monthly price, alongside an allowance of hours for changes; work beyond that allowance is quoted separately and in advance rather than appearing on the invoice as a surprise. That is also why we publish what is included and what is not - so you can compare us with another supplier on the same terms.',
+      },
+      {
         question: 'What are the actual response times?',
         answer:
           'On the Basic plan, within 24 business hours. On the Business plan, within 4 business hours. A fault that takes the site down entirely is treated as top priority on every plan regardless of tier. Both the response time and the fix time are written into the agreement rather than left as a verbal assurance, which means you have something to point at when it matters. This is worth checking against any competing quote you receive: many maintenance contracts specify a monthly price and a list of tasks but never state how quickly anyone is obliged to answer when the site stops working.',
