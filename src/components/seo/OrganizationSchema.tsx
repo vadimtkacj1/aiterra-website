@@ -1,5 +1,10 @@
 import JsonLd from './JsonLd'
-import { CONTACT_EMAIL, CONTACT_PHONE_INTL, SOCIAL_PROFILES } from '@/lib/contact'
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE_INTL,
+  GOOGLE_BUSINESS_PROFILE_URL,
+  SOCIAL_PROFILES,
+} from '@/lib/contact'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import { teamMembers } from '@/data/team-members'
 
@@ -39,6 +44,7 @@ export default function OrganizationSchema() {
       postalCode: '5962030',
       addressCountry: 'IL',
     },
+    hasMap: GOOGLE_BUSINESS_PROFILE_URL,
     areaServed: [
       { '@type': 'Country', name: 'Israel' },
       { '@type': 'City', name: 'בת ים' },
@@ -73,11 +79,7 @@ export default function OrganizationSchema() {
     priceRange: '₪₪',
     employee: employees,
     numberOfEmployees: { '@type': 'QuantitativeValue', value: teamMembers.length },
-    // TODO (needs real data): founder (which team members founded AITERRA),
-    // foundingDate (real year), geo (geocode Ha-Rav Nisanbaum St 37),
-    // openingHoursSpecification, and a real Review[]/AggregateRating once
-    // genuine on-page reviews exist.
-    sameAs: Object.values(SOCIAL_PROFILES).filter(Boolean),
+    sameAs: [...Object.values(SOCIAL_PROFILES).filter(Boolean), GOOGLE_BUSINESS_PROFILE_URL],
   }
 
   const website = {

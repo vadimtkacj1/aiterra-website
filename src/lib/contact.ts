@@ -16,6 +16,8 @@ export const SOCIAL_PROFILES = {
   facebook: '',
 }
 
+export const GOOGLE_BUSINESS_PROFILE_URL = 'https://maps.google.com/?cid=13840747656603668464'
+
 /**
  * Token sent with public lead-form submissions to /api/site-leads/submit so the
  * lead is attributable to this site. Overridable via env; the endpoint only
@@ -38,6 +40,6 @@ export const GOOGLE_MAPS_EMBED_URL = mapsKey
   ? `https://www.google.com/maps/embed/v1/place?key=${mapsKey}&q=${mapsQuery}&language=he&zoom=16`
   : `https://maps.google.com/maps?q=${mapsQuery}&hl=he&z=16&output=embed`
 
-export const GOOGLE_MAPS_OPEN_URL = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`
+export const GOOGLE_MAPS_OPEN_URL = GOOGLE_BUSINESS_PROFILE_URL
 
 export const WAZE_OPEN_URL = `https://waze.com/ul?q=${mapsQuery}&navigate=yes`
