@@ -42,13 +42,13 @@ export default function Footer({
       <div className={styles.media}>
         <video
           className={styles.mediaVideo}
-          src="/videos/v2-hero.mp4?v=2"
-          poster="/videos/v2-hero-poster.webp"
-          autoPlay
+          src="/videos/v2-footer.mp4"
+          poster="/videos/v2-footer-poster.webp"
+          data-autoplay=""
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="none"
           aria-hidden="true"
         />
       </div>

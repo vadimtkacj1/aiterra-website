@@ -433,8 +433,15 @@
 }
 
 @media (min-width: 1921px) {
+  .footer {
+    display: flow-root;
+    overflow-x: visible;
+    overflow-y: clip;
+  }
+
+  .media,
   .inner::before {
-    inset-inline: calc(50% - 960px);
+    inset-inline: calc(50% - 50vw - 24px);
   }
 }
 

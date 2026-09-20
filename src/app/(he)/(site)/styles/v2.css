@@ -154,9 +154,11 @@
 @media (min-width: 1921px) {
   body:has(.v2Root) {
     background: #faf7f3;
+    overflow-x: clip;
   }
 
   .v2Root {
+    overflow-x: visible;
     max-width: 1920px;
     margin-inline: auto;
   }
