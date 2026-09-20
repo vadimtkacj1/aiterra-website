@@ -42,8 +42,8 @@ export default function Footer({
       <div className={styles.media}>
         <video
           className={styles.mediaVideo}
-          src="/videos/v2-footer.mp4"
-          poster="/videos/v2-footer-poster.webp"
+          src="/videos/v2-footer.mp4?v=2"
+          poster="/videos/v2-footer-poster.webp?v=2"
           data-autoplay=""
           muted
           loop
