@@ -42,7 +42,6 @@ export default function Footer({
       <div className={styles.media}>
         <video
           className={styles.mediaVideo}
-          src="/videos/v2-footer.mp4?v=2"
           poster="/videos/v2-footer-poster.webp?v=2"
           data-autoplay=""
           muted
@@ -50,7 +49,10 @@ export default function Footer({
           playsInline
           preload="none"
           aria-hidden="true"
-        />
+        >
+          <source src="/videos/v2-footer-wide.mp4" type="video/mp4" media="(min-width: 1921px)" />
+          <source src="/videos/v2-footer.mp4?v=2" type="video/mp4" />
+        </video>
       </div>
 
       {children}
