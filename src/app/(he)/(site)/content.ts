@@ -413,12 +413,12 @@ export const portfolio = {
 export const projectsPage = {
   title: ['תיק עבודות', 'פרויקטים נבחרים'],
   crumb: 'תיק עבודות',
-  lede: '12 פרויקטים חיים: שלוש חנויות אינטרנטיות, אתרי תדמית ולידים בקוסמטיקה ובמותג אישי, ופרויקטים בנדל"ן ובייעוץ משכנתאות. כולם נבנו בקוד על ידי אותו צוות שגם מקדם אותם, וכולם באוויר היום.',
+  lede: '15 פרויקטים חיים: שלוש חנויות אינטרנטיות, אתרי תדמית ולידים בקוסמטיקה ובמותג אישי, פרויקטים בנדל"ן ובייעוץ משכנתאות, ושלוש פלטפורמות AI ותפעול ללקוחות בקנדה. כולם נבנו בקוד על ידי הצוות שלנו, וכולם באוויר היום.',
   action: { label: 'התחילו פרויקט חדש', href: '/contact' },
   faqHeading: ['לפני שמתחילים', 'כמה דברים שכדאי לדעת.'],
-  metaTitle: 'תיק עבודות - 12 אתרים, חנויות ומערכות שבנינו',
+  metaTitle: 'תיק עבודות - 15 אתרים, חנויות ומערכות שבנינו',
   metaDescription:
-    '12 פרויקטים חיים של Aiterra: חנויות אינטרנטיות, אתרי תדמית ולידים ומערכות ניהול, כולם בנויים בקוד. לכל פרויקט: מה הייתה המטרה, מה חובר ומה נבנה.',
+    '15 פרויקטים חיים של Aiterra: חנויות אינטרנטיות, אתרי תדמית ולידים, מערכות ניהול ופלטפורמות AI, כולם בנויים בקוד. לכל פרויקט: מה הייתה המטרה, מה חובר ומה נבנה.',
 }
 
 export const projectPage = {
@@ -496,6 +496,14 @@ export const portfolioItems: PortfolioItem[] = [
     category: 'sales',
   },
   {
+    id: 'zentax',
+    title: 'Zentax — הנהלת חשבונות עם AI',
+    tags: ['מערכת', 'AI', 'אפליקציה'],
+    shot: '/images/portfolio/cards/zentax.webp',
+    href: '/projects/zentax',
+    category: 'systems',
+  },
+  {
     id: 'maayan-cosmetics',
     title: 'מעיין ועקנין — קוסמטיקה קלינית',
     tags: ['דף נחיתה', 'נגישות', 'לידים'],
@@ -520,6 +528,14 @@ export const portfolioItems: PortfolioItem[] = [
     category: 'sales',
   },
   {
+    id: 'apprify',
+    title: 'Apprify — משכנתאות עם AI',
+    tags: ['מערכת', 'AI', 'FinTech'],
+    shot: '/images/portfolio/cards/apprify.webp',
+    href: '/projects/apprify',
+    category: 'systems',
+  },
+  {
     id: 'ecommerce-store',
     title: 'חנות דיגיטלית',
     tags: ['חנות אונליין', 'פיתוח', 'סליקה'],
@@ -542,6 +558,14 @@ export const portfolioItems: PortfolioItem[] = [
     shot: '/images/portfolio/cards/marketing-platform.webp',
     href: '/projects/marketing-platform',
     category: 'brand',
+  },
+  {
+    id: 'tech-embassy',
+    title: 'Tech Embassy — ניהול אירועים',
+    tags: ['מערכת', 'אפליקציה', 'אוטומציה'],
+    shot: '/images/portfolio/cards/tech-embassy.webp',
+    href: '/projects/tech-embassy',
+    category: 'systems',
   },
   {
     id: 'alexandra-patsina',

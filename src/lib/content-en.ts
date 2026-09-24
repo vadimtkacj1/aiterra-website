@@ -700,6 +700,30 @@ export const contentEn: Partial<V2Content> = {
       category: 'systems',
     },
     {
+      id: 'zentax',
+      title: 'Zentax — AI accounting platform',
+      tags: ['AI', 'FinTech', 'Web and mobile'],
+      shot: '/images/portfolio/cards/zentax.webp',
+      href: '/en/projects/zentax',
+      category: 'systems',
+    },
+    {
+      id: 'apprify',
+      title: 'Apprify — AI mortgage processing',
+      tags: ['AI', 'FinTech', 'LLM'],
+      shot: '/images/portfolio/cards/apprify.webp',
+      href: '/en/projects/apprify',
+      category: 'systems',
+    },
+    {
+      id: 'tech-embassy',
+      title: 'Tech Embassy — event operations',
+      tags: ['Platform', 'React Native', 'Luma'],
+      shot: '/images/portfolio/cards/tech-embassy.webp',
+      href: '/en/projects/tech-embassy',
+      category: 'systems',
+    },
+    {
       id: 'karin-cohen',
       title: 'Karin Cohen — lash academy',
       tags: ['Landing page', 'UI/UX', 'Lead capture', 'WhatsApp'],
@@ -1227,10 +1251,10 @@ export const contentEn: Partial<V2Content> = {
 export const projectsPageEn = {
   title: ['Our work', 'Selected projects'],
   crumb: 'Work',
-  lede: 'Twelve live projects: three online stores, marketing and lead-generation sites across cosmetics and personal brands, and work in real estate and mortgage advisory. All written in code by the same team that promotes them, and all in production today.',
+  lede: 'Fifteen live projects: three online stores, marketing and lead-generation sites across cosmetics and personal brands, work in real estate and mortgage advisory, and three AI and operations platforms for clients in Canada. All written in code by our team, and all in production today.',
   action: { label: 'Start a project', href: '/en/contact' },
   faqHeading: ['Before we start', 'a few things worth knowing.'],
-  metaTitle: 'Our Work - 12 Sites, Stores and Systems We Built',
+  metaTitle: 'Our Work - 15 Sites, Stores and Systems We Built',
   metaDescription:
-    'Twelve live Aiterra projects: online stores, lead-generation sites and management systems, all built in code. See the goal, the integrations and what shipped.',
+    'Fifteen live Aiterra projects: online stores, lead-generation sites, management systems and AI platforms, all built in code. See the goal, the integrations and what shipped.',
 }

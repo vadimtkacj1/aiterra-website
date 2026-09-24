@@ -194,6 +194,66 @@ export const projectsEn: Record<string, ProjectOverride> = {
       'A product site for Sous Chef, an AI platform for restaurant management and menu control across delivery apps. Dark design, clear messaging and a conversion path to a demo.',
     imageAlt: 'Screenshot of the Sous Chef homepage — a restaurant management platform',
   },
+
+  zentax: {
+    title: 'Zentax — AI accounting platform',
+    category: 'Custom software',
+    heroTitle: 'Zentax — an AI-powered accounting and ledger platform',
+    projectType: 'AI platform',
+    technology: 'ASP.NET · React · React Native',
+    tags: ['AI', 'FinTech', 'React Native', 'Stripe'],
+    heroDescription:
+      'Zentax is an AI-powered platform we built for an accounting firm in Canada that serves sole proprietors, corporations and SMEs. It reads invoices and bank statements, keeps every client ledger in one place and generates financial statements on demand, with a web app for accountants and a mobile app for their clients.',
+    metaDescription:
+      'An AI accounting platform for a Canadian firm: invoice and bank statement recognition, a central ledger, banking and Stripe integrations and a mobile app for clients.',
+    imageAlt: 'Screenshot of the accountant workspace in Zentax',
+    challenge: {
+      text: 'The firm serves sole proprietors, corporations and SMEs. Demand was growing, but manual processes and disconnected tools meant every new client cost more accountant hours: financial data arrived by email, transactions were typed into Excel by hand, every document was reviewed one by one, there was no central place for client data and no real-time view of finances. The result was high operational overhead, a higher risk of errors and limited room to grow.',
+    },
+    solution: {
+      text: 'We built one platform for the whole accounting workflow. Computer vision and LLMs read invoices and bank statements, a centralised ledger is the single source of truth for every client, and banking APIs, Stripe and CRM systems feed data in automatically. Accountants work in a web app that brings transactions, tax codes, mapping and balance checks into one table, with real-time dashboards across all clients and jobs and P&L statements generated on demand. Clients get a mobile app with their jobs, activity, chat and files. The platform went from concept to delivery in 6 months, and accountants now serve more clients without new hires.',
+    },
+  },
+
+  apprify: {
+    title: 'Apprify — AI mortgage platform',
+    category: 'Custom software',
+    heroTitle: 'Apprify — an AI mortgage processing and decisioning platform',
+    projectType: 'AI platform',
+    technology: 'ASP.NET · Razor Pages · LLM',
+    tags: ['AI', 'FinTech', 'ASP.NET', 'LLM'],
+    heroDescription:
+      'Apprify is an AI platform for processing mortgage applications, built for a mortgage broker in Canada. It reads the documents applicants upload, extracts income and credit data, calculates eligibility ratios and compares every application with lender criteria. The AI does the analysis; the broker makes the call.',
+    metaDescription:
+      'An AI platform for a Canadian mortgage broker: LLM document parsing, instant GDS, TDS and LTV calculations and lender matching. Applications processed twice as fast.',
+    imageAlt: 'Screenshot of the summary and calculations screen in Apprify',
+    challenge: {
+      text: 'A mortgage broker runs a complex financial analysis for every loan, and before this project each step of it was manual: client data arrived by email, brokers reviewed every document by hand, calculations were done by hand, data was scattered across many files and lender criteria were compared one by one. The result was slow turnaround, a higher risk of errors and a hard cap on how many applications the team could process.',
+    },
+    solution: {
+      text: 'We built a platform that takes every application through five steps: applicants, income and existing properties, down payment verification, summary and calculations, and lender match. LLM-based parsing sorts the PDFs applicants upload, verifies paystubs and job letters, and flags income discrepancies and inconsistencies between documents. The system confirms the source and availability of down payment funds, calculates GDS, TDS, LTV and payments instantly, and compares each application with bank criteria, with a summary and recommendations. All applicant data lives in one client profile. The platform went from concept to delivery in 3 months, and applications are now processed twice as fast, with far less manual work, more applications per broker and structured decisions with a clear audit trail.',
+    },
+  },
+
+  'tech-embassy': {
+    title: 'Tech Embassy — event management platform',
+    category: 'Custom software',
+    heroTitle: 'Tech Embassy — an event operations and management platform',
+    projectType: 'Event management platform',
+    technology: 'ASP.NET · React Native · Luma',
+    tags: ['ASP.NET', 'React Native', 'Luma', 'Automation'],
+    heroDescription:
+      'Tech Embassy runs tech events across several cities, bringing together startups, investors, judges and guests. We built it one system for the whole event lifecycle, from preparation and check-in to post-event follow-up: role-based views for every participant, registrations synced from Luma, live startup judging and a single hub for participant communication.',
+    metaDescription:
+      'An event operations platform for Tech Embassy: Luma sync, live startup judging from a phone and the same workflow in every city. See the full project.',
+    imageAlt: 'Screenshot of participant management and the judging table in Tech Embassy',
+    challenge: {
+      text: 'Every Tech Embassy event brings together startups, investors, accelerators and guests across several locations, and coordinating them relied on hand-kept lists, spreadsheets and scattered chats. Communication was split across many tools, there was no central system for event operations and the team had little visibility into participants and progress. Every event carried heavy coordination overhead, and every new city multiplied the work.',
+    },
+    solution: {
+      text: 'We built a platform that holds the whole event lifecycle. Each participant appears in a view for their role — startup, investor, judge or guest — and registrations and attendance statuses sync from Luma automatically. Approvals, invitations and bans take one click, and all participant communication runs from one place, before and after the event. During the competition every judge scores each startup on market, product, model, traction and team, the leaderboard updates live, organisers follow and close the vote from their phone, and prizes are assigned from one screen right after. The platform went from concept to delivery in one to two months, and today events run the same way in every city with far less manual coordination.',
+    },
+  },
 }
 
 export function applyProjectEn<T extends PortfolioProject>(project: T): T {
