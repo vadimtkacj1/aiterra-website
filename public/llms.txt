@@ -16,6 +16,8 @@
 - [מיתוג ועיצוב / Brand & UX/UI](https://www.aiterra.co.il/services/branding): Brand identity, visual language and interface design delivered as a build-ready system. English: /en/services/branding
 
 ## Key guides / מדריכים מרכזיים
+- [בוט וואטסאפ לעסקים: מה זה, אילו סוגים יש ואיך בוחרים](https://www.aiterra.co.il/blog/whatsapp-bot-for-business)
+- [מה סוכן AI עושה בעסק ובמה הוא שונה מצ׳אטבוט](https://www.aiterra.co.il/blog/ai-agents-for-business)
 - [סוכני AI לעסקים בישראל 2026: השוואת 7 סוגי פתרונות](https://www.aiterra.co.il/blog/ai-agents-solutions-comparison-israel)
 - [אוטומציה לעסקים: כמה עולה פיתוח תוכנה בהתאמה אישית](https://www.aiterra.co.il/blog/custom-software-development-cost-israel)
 - [פיתוח אפליקציה לעסק: כמה עולה ומתי זה משתלם](https://www.aiterra.co.il/blog/app-development-cost-israel)
