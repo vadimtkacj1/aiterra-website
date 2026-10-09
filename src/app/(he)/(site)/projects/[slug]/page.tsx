@@ -5,6 +5,7 @@ import BannerCta from '../../components/BannerCta'
 import ContactForm from '../../components/ContactForm'
 import Footer from '../../components/Footer'
 import MoreProjects from '../../components/MoreProjects'
+import RelatedServices from '../../components/RelatedServices'
 import { ProjectAbout, ProjectIntro, ProjectStory } from '../../components/ProjectCase'
 import { getAllPortfolioProjects, getProjectBySlug } from '@/lib/portfolio-server'
 import { getV2Content } from '@/lib/v2-content-server'
@@ -69,6 +70,18 @@ export default async function V2ProjectPage({ params }: Params) {
         <ProjectAbout project={project} item={item} copy={copy} />
         <ProjectStory project={project} copy={copy} />
         <BannerCta banner={content.projectBanner} headingId="v2-project-banner" />
+        <RelatedServices
+          tags={project.tags}
+          title={`${project.title} ${project.projectType ?? ''} ${project.technology ?? ''}`}
+          seed={slug}
+          heading="השירותים שמאחורי הפרויקט"
+          basePath="/services"
+          items={Object.values(content.servicePages).map((service) => ({
+            slug: service.id,
+            label: service.crumb,
+            blurb: service.subhead,
+          }))}
+        />
         <MoreProjects
           currentId={slug}
           eyebrow={copy.moreEyebrow}
