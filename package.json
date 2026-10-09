@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "check:product": "node --experimental-strip-types scripts/check-product-summary.mjs",
     "ai-visibility": "node --env-file-if-exists=.env scripts/ai-visibility.mjs",
+    "indexnow": "node scripts/indexnow.mjs",
     "rank-tracker": "node --env-file-if-exists=.env scripts/rank-tracker.mjs"
   },
   "dependencies": {
