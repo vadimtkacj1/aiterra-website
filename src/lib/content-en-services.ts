@@ -1436,7 +1436,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
       {
         question: 'How much does automation cost for a small business?',
         answer:
-          'Setup is priced by the number of systems connected and the number of scenarios, not by company size. A WhatsApp bot with automatic replies and a CRM connection is usually a project of a few thousand shekels; a full lead flow with quotes sits in the middle; automation that also links accounting, inventory and shipping costs more. Our cost guide sets out ranges at three levels, starting from roughly 3,000 ILS for a basic setup. Alongside the one-off build there is a monthly cost for the tools themselves - the CRM, the WhatsApp messaging provider and the automation platform - which depends on usage volume, plus ongoing upkeep of the connections.',
+          'Setup is priced by the number of systems connected and the number of scenarios, not by company size. A WhatsApp bot with automatic replies and a CRM connection is usually a project of a few thousand shekels; a full lead flow with quotes sits in the middle; automation that also links accounting, inventory and shipping costs more. Our cost guide in the blog sets out the structure, and the exact figure for your business follows the process mapping. Alongside the one-off build there is a monthly cost for the tools themselves - the CRM, the WhatsApp messaging provider and the automation platform - which depends on usage volume, plus ongoing upkeep of the connections.',
       },
       {
         question: 'What is the difference between plain automation and automation with AI?',
