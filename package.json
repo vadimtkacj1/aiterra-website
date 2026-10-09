@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "check:product": "node --experimental-strip-types scripts/check-product-summary.mjs"
+    "check:product": "node --experimental-strip-types scripts/check-product-summary.mjs",
+    "ai-visibility": "node --env-file-if-exists=.env scripts/ai-visibility.mjs"
   },
   "dependencies": {
     "@react-three/fiber": "^9.6.0",

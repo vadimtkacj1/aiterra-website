@@ -23,8 +23,9 @@ export default function SectionHeading({
     <Tag id={id} className={[styles.heading, styles[size], align === 'start' ? styles.alignStart : '', className]
         .filter(Boolean)
         .join(' ')}>
-      {lines.map((line) => (
+      {lines.map((line, index) => (
         <span key={line} className={styles.line}>
+          {index > 0 ? ' ' : null}
           {line}
         </span>
       ))}

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description:
     'סוכן AI שעונה מתוך המחירון שלכם, מסנן לידים וקובע פגישות במערכות הקיימות, עם גבולות כתובים והעברה לנציג. השאירו פרטים לבדיקת התאמה ללא עלות.',
   alternates: { canonical: '/lp/ai-agents' },
+  robots: { index: false, follow: true },
   openGraph: {
     type: 'website',
     locale: 'he_IL',

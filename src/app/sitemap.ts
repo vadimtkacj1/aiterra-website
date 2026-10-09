@@ -48,7 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const landingEntries: MetadataRoute.Sitemap = [
     '/lp/agency',
     '/lp/ecomerce',
-    '/lp/ai-agents',
   ].map((route) => ({
     url: `${SITE_URL}${route}`,
     lastModified: latestContent,

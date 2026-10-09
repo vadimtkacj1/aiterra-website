@@ -309,7 +309,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     lede: 'Portals, dashboards, internal tools and the integrations between them - engineered for the operations that off-the-shelf software cannot cover, and designed to be extended rather than replaced.',
     image: '/images/service-dev-hero.webp',
     action: { label: 'Discuss your platform', href: '/en/contact' },
-    metaTitle: 'Custom Web Platform and Application Development',
+    metaTitle: 'Custom Software Development for Businesses in Israel - Platforms, CRM and Apps',
     metaDescription:
       'Custom web application development: customer portals, operational dashboards, workflow automation and API integrations, engineered in Next.js, Node and PostgreSQL.',
     advantages: {
@@ -1311,6 +1311,162 @@ export const servicePagesEn: Record<string, ServicePage> = {
         question: 'Can we cancel the contract?',
         answer:
           'The plans run on an annual term, because maintenance is measured over time rather than in a single month - the value of an update cycle and a backup regime only shows up when something eventually goes wrong. At the end of the term you are free not to renew, and you receive every access credential, all backups and the full documentation when you leave. The site is yours regardless of whether we continue working together, and nothing in the arrangement is designed to make leaving difficult or to leave you dependent on us for access to your own infrastructure.',
+      },
+    ],
+  },
+  automation: {
+    id: 'automation',
+    crumb: 'Business automation',
+    eyebrow: 'Business automation',
+    heading: ['Business automation', 'that connects your systems and ends the re-keying'],
+    subhead: 'Our automation and AI workflow service',
+    lede: 'Automation that joins your website, WhatsApp, CRM and invoicing into one flow: a lead arrives, gets answered, recorded and scheduled without anyone copying details by hand - with AI used only where a fixed rule is not enough.',
+    image: '/images/service-platform.webp',
+    action: { label: 'Book a process-mapping call', href: '/en/contact' },
+    metaTitle: 'Business Automation Services in Israel - CRM, WhatsApp and AI Workflows',
+    metaDescription:
+      'Business process automation for Israeli companies: lead routing into your CRM, WhatsApp bots, Green Invoice and iCount integration, order and inventory sync and automated reporting, with AI where it genuinely helps. Process mapping, delivery in weeks, monitoring and upkeep.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our automation'],
+      lede: 'Good automation goes unnoticed: the lead simply arrives qualified, the invoice simply goes out, and nobody asks who handled it.',
+      outro: 'Want to know which of your processes is worth automating first?',
+      action: { label: 'Book a process-mapping call', href: '/en/contact' },
+      roles: [
+        {
+          id: 'process',
+          title: 'The process comes before the tool',
+          art: '/images/service-page1.webp',
+          text: 'Before choosing Make, n8n or code, we map how a lead, an order and an invoice actually travel between people and systems today, exceptions included. Automation built around a tool rather than the process breaks on the first exception and hands the manual work straight back.',
+        },
+        {
+          id: 'israeli',
+          title: 'Connected to the Israeli stack',
+          art: '/images/service-page2.webp',
+          text: 'Green Invoice (Morning), iCount, Rivhit, Hashavshevet and Priority on the accounting side; Fireberry, Powerlink, Monday and HubSpot on the CRM side; WhatsApp Business API, Israeli card clearing and couriers. Allocation numbers, VAT and Hebrew fields included - the details an international integration does not know about.',
+        },
+        {
+          id: 'ai',
+          title: 'AI where it genuinely helps',
+          art: '/images/service-page3.webp',
+          text: 'When the rule is clear - form submitted, so open a lead - plain automation is cheaper and more reliable. AI steps in where free text has to be understood: classifying an enquiry, summarising a call, drafting a first reply or pulling a figure out of a document. Every AI output passes a validation rule before it touches a system.',
+        },
+        {
+          id: 'monitoring',
+          title: 'You see it when something stalls',
+          art: '/images/service-page4.webp',
+          text: 'Every run is logged, a failure raises an alert instead of disappearing quietly, and a record that did not sync is retried rather than lost. After launch we keep monitoring and maintaining the connections, because an invoicing API changes without asking you first.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What gets automated',
+      heading: ['The processes businesses', 'automate with us'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'leads',
+          icon: 'orders',
+          title: 'Leads from the site and WhatsApp straight into the CRM',
+          text: 'A website form, a WhatsApp message or a campaign lead becomes a CRM record with its source, campaign and first answers attached - and gets a first reply within a minute, not the next morning.',
+        },
+        {
+          id: 'whatsapp',
+          icon: 'club',
+          title: 'WhatsApp bot and first response',
+          text: 'Questions about price, availability and opening hours are answered automatically, the enquiry is qualified against the questions you defined, and anything off-script moves to a person with the full history.',
+        },
+        {
+          id: 'billing',
+          icon: 'sales',
+          title: 'Quotes, invoices and collections',
+          text: 'A deal closed in the CRM produces the quote, the invoice in Green Invoice or iCount and the payment reminder - same details, no double entry and no invoice someone forgot to issue.',
+        },
+        {
+          id: 'orders',
+          icon: 'catalog',
+          title: 'Orders, stock and shipping',
+          text: 'A store order updates inventory, books the shipment with the courier and sends the customer a tracking number. When a product runs out, the site knows before the customer orders it.',
+        },
+        {
+          id: 'reports',
+          icon: 'analytics',
+          title: 'Automated reports and alerts',
+          text: 'A morning digest of yesterday’s leads, sales and collections, and a WhatsApp alert when a lead has gone two hours without a reply or a process has failed - instead of finding out at month end.',
+        },
+      ],
+      action: { label: 'Book a process-mapping call', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['From mapping to running. In stages.'],
+      lede: 'Three stages, and you see a result at the end of each one before the next begins.',
+      steps: [
+        {
+          id: 'map',
+          title: 'Process mapping',
+          text: 'We sit with the people doing the work today and draw the process as it really is: where data enters, who copies it, where it gets lost. Then we rank what to automate first by hours saved.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'build',
+          title: 'Build and connect',
+          text: 'We connect the systems through their APIs, map the fields, define the rules and what happens on failure. Every automation is tested on real data before it touches the CRM or issues an invoice.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'run',
+          title: 'Run, monitor, improve',
+          text: 'We go live gradually, follow the run log and fix what reality reveals. Once it is stable we move to ongoing upkeep of the connections and to the next automation on the list.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want to see how many hours a month automation would save you?',
+      action: { label: 'Book a process-mapping call', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about business automation'],
+    faqEntries: [
+      {
+        question: 'What is business automation, and which processes can be automated?',
+        answer:
+          'Business automation connects the systems you already run so that an event in one of them triggers the next step by itself: a lead from the website is opened in the CRM and gets a first reply, a closed deal produces an invoice, a store order creates a shipment. The processes worth automating first are the ones that repeat every day and involve copying data by hand: lead intake, first response on WhatsApp, quotes and invoices, payment reminders, inventory sync and reporting. During mapping we measure how many hours a month each process consumes and start with the one that saves the most. Nothing is automated on a hunch; the saving is counted before the build begins.',
+      },
+      {
+        question: 'How much does automation cost for a small business?',
+        answer:
+          'Setup is priced by the number of systems connected and the number of scenarios, not by company size. A WhatsApp bot with automatic replies and a CRM connection is usually a project of a few thousand shekels; a full lead flow with quotes sits in the middle; automation that also links accounting, inventory and shipping costs more. Our cost guide sets out ranges at three levels, starting from roughly 3,000 ILS for a basic setup. Alongside the one-off build there is a monthly cost for the tools themselves - the CRM, the WhatsApp messaging provider and the automation platform - which depends on usage volume, plus ongoing upkeep of the connections.',
+      },
+      {
+        question: 'What is the difference between plain automation and automation with AI?',
+        answer:
+          'Plain automation follows a fixed rule: if a form is submitted, open a lead; if a deal closes, issue an invoice. It is cheap, fast and predictable, which is why it is the foundation of most processes. AI comes in when the input is free text that a rule cannot interpret: classifying a WhatsApp enquiry, summarising a call into a CRM note, extracting an amount and date from a scanned invoice or drafting a first reply in Hebrew. In our builds every AI output passes a validation rule before it changes a record, and when confidence is low the item goes to a person. You get the flexibility without letting the model invent anything.',
+      },
+      {
+        question: 'Which systems do you connect to?',
+        answer:
+          'The ones you already run, and in particular the Israeli ones an international integration does not know: Green Invoice (Morning), iCount, Rivhit, Hashavshevet and Priority on the accounting side, including allocation numbers and VAT; Fireberry, Powerlink, Monday, HubSpot and Zoho on the CRM side; WhatsApp Business API, Israeli card clearing, courier companies, Shopify and WooCommerce, Google Sheets and calendars. Where a system has no open API we work through scheduled file export and import. Every connection has a field mapping and a defined failure path, so a record is written once and lands in the right place.',
+      },
+      {
+        question: 'Which tools do you use: Make, n8n, Zapier or code?',
+        answer:
+          'Whichever will hold up over time for the specific process. Make and n8n have the edge when the scenario is simple and you want to see and edit it yourself; n8n also runs on your own server, which matters when the data is sensitive. Zapier is convenient for American SaaS but lacks the Israeli systems. When the process is complex, the volume is high or real business logic is needed, we write the connection in code on top of the systems’ APIs, with tests and a log. The answer is often a mix of both, and the choice is explained in the specification document so you know why.',
+      },
+      {
+        question: 'How long does it take to set up automation?',
+        answer:
+          'A single focused automation, such as routing website leads into the CRM with a first reply on WhatsApp, usually goes live within one to three weeks from mapping to running. A wider setup connecting several systems - CRM, invoicing, inventory and shipping - is measured in one to two months, because each connection is a small project with its own testing. We launch gradually: one process first, running alongside the manual work, compare the results, and only then switch the manual work off and move to the next process. That order keeps the business running while the automation proves itself.',
+      },
+      {
+        question: 'What happens when an automation fails?',
+        answer:
+          'It does not fail quietly. Every run is logged with its input, output and result; a failure sends an alert by WhatsApp or email to the people you named, and the record that did not go through is queued and retried instead of vanishing. Invoicing and CRM APIs change from time to time without notice, so after launch we stay on ongoing upkeep: monitoring, updating the connections and responding when something stalls. You get access to the run log, so even without contacting us you can see what ran, what failed and why.',
+      },
+      {
+        question: 'Is this suitable for a small business without an IT person?',
+        answer:
+          'Yes, and most of our automation clients are businesses of two to twenty people with no IT department. You do not need to know what an API is: during mapping we talk about leads, invoices and working hours, and we take the technical side. After launch the team gets a short walkthrough and a document explaining what runs and when, and the parts you can edit yourselves - a bot script or a message template - are left open for editing. Ongoing upkeep covers the rest.',
       },
     ],
   },

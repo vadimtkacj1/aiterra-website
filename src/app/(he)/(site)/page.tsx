@@ -17,9 +17,9 @@ import { getV2Content } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'בניית אתרים ושיווק דיגיטלי לעסקים',
+  title: 'בניית אתרים, אוטומציה וסוכני AI לעסקים',
   description:
-    'סוכנות AITERRA בונה אתרים מהירים, מקדמת אורגנית (SEO) ומנהלת קמפיינים בגוגל ומטא — ספק אחד לכל הדיגיטל. קבלו ייעוץ ותוכנית צמיחה לעסק.',
+    'סוכנות AITERRA בונה אתרים מהירים, מקדמת בגוגל וב-AI (SEO/GEO), מנהלת קמפיינים ומטמיעה אוטומציה לעסקים וסוכני בינה מלאכותית — ספק אחד לכל הדיגיטל. קבלו ייעוץ ותוכנית צמיחה לעסק.',
   path: '/',
   altPath: '/en',
 })

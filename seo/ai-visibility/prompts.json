@@ -1,0 +1,150 @@
+{
+  "brand": {
+    "patterns": [
+      "aiterra",
+      "אייטרה",
+      "איטרה"
+    ],
+    "domains": [
+      "aiterra.co.il"
+    ]
+  },
+  "country": "IL",
+  "serp": {
+    "location_name": "Israel",
+    "language_name": "Hebrew",
+    "device": "mobile",
+    "depth": 20
+  },
+  "models": {
+    "chat_gpt": "gpt-5-mini",
+    "perplexity": "sonar",
+    "gemini": "gemini-2.5-flash",
+    "claude": "claude-sonnet-4-0"
+  },
+  "prompts": [
+    {
+      "id": "maintenance-vendor",
+      "service": "maintenance",
+      "prompt": "אני מחפש חברה לתחזוקת אתר אינטרנט לעסק קטן בישראל. את מי כדאי לבדוק ומה אמור להיות כלול בשירות?",
+      "keyword": "תחזוקת אתרים"
+    },
+    {
+      "id": "maintenance-price",
+      "service": "maintenance",
+      "prompt": "כמה עולה תחזוקת אתר אינטרנט בחודש בישראל, ומה ההבדל בין החבילות?",
+      "keyword": "כמה עולה תחזוקת אתר"
+    },
+    {
+      "id": "brochure-vendor",
+      "service": "brochure",
+      "prompt": "אני צריך אתר תדמית לעסק קטן. אילו חברות בישראל כדאי לבדוק ובכמה זה עולה?",
+      "keyword": "בניית אתר תדמית"
+    },
+    {
+      "id": "web-dev-bat-yam",
+      "service": "web-development",
+      "prompt": "תמליץ על חברה לבניית אתרים לעסקים באזור בת ים וחולון",
+      "keyword": "בניית אתרים בת ים"
+    },
+    {
+      "id": "ecommerce-vendor",
+      "service": "ecommerce",
+      "prompt": "איזו חברה בישראל בונה חנות אינטרנטית עם סליקה ישראלית ותחזוקה שוטפת?",
+      "keyword": "בניית חנות אינטרנטית"
+    },
+    {
+      "id": "seo-vendor",
+      "service": "seo",
+      "prompt": "אני מחפש חברת קידום אתרים אורגני לעסק קטן בישראל. את מי כדאי לבדוק?",
+      "keyword": "חברת קידום אתרים"
+    },
+    {
+      "id": "seo-price",
+      "service": "seo",
+      "prompt": "כמה עולה קידום אתרים בגוגל בחודש לעסק קטן בישראל?",
+      "keyword": "כמה עולה קידום אתרים בגוגל"
+    },
+    {
+      "id": "keyword-research",
+      "service": "seo",
+      "prompt": "איך עושים מחקר מילות מפתח בעברית, ואילו כלים חינמיים יש?",
+      "keyword": "מחקר מילות מפתח"
+    },
+    {
+      "id": "geo-vendor",
+      "service": "ai-search",
+      "prompt": "איך גורמים ל-ChatGPT ולגוגל להמליץ על העסק שלי? יש חברות בישראל שעושות את זה?",
+      "keyword": "קידום GEO"
+    },
+    {
+      "id": "ai-agents",
+      "service": "ai-agents",
+      "prompt": "איזו חברה בישראל בונה סוכן AI שעונה ללקוחות בוואטסאפ ומחובר ל-CRM?",
+      "keyword": "סוכן AI לעסק"
+    },
+    {
+      "id": "crm-whatsapp",
+      "service": "development",
+      "prompt": "מי יכול לחבר לי מערכת CRM לוואטסאפ ולחשבונית ירוקה בעסק קטן בישראל?",
+      "keyword": "חיבור וואטסאפ API"
+    },
+    {
+      "id": "google-ads",
+      "service": "marketing",
+      "prompt": "אני מחפש מישהו שינהל לי קמפיין ממומן בגוגל לעסק קטן. ממה להיזהר ואת מי לבדוק?",
+      "keyword": "ניהול קמפיין ממומן בגוגל"
+    },
+    {
+      "id": "accessibility",
+      "service": "accessibility",
+      "prompt": "מי מנגיש אתרים לפי תקן 5568 ובכמה זה עולה לעסק קטן?",
+      "keyword": "הנגשת אתרים מחיר"
+    },
+    {
+      "id": "brand-what",
+      "service": "brand",
+      "prompt": "מה זה Aiterra (אייטרה) ומה החברה עושה?",
+      "keyword": "aiterra"
+    },
+    {
+      "id": "brand-reviews",
+      "service": "brand",
+      "prompt": "מה הביקורות על Aiterra Agency? האם כדאי לעבוד איתם?",
+      "keyword": "ביקורות על aiterra agency"
+    },
+    {
+      "id": "en-web-design",
+      "service": "web-development",
+      "prompt": "Which web design agencies in Israel would you recommend for a small business website?",
+      "keyword": "website design israel",
+      "serp": {
+        "language_name": "English"
+      }
+    },
+    {
+      "id": "automation-vendor",
+      "service": "automation",
+      "prompt": "איזו חברה בישראל מומלצת לאוטומציה לעסקים: חיבור טפסים ווואטסאפ ל-CRM, חשבונית ירוקה ו-iCount? תן שמות של חברות",
+      "keyword": "אוטומציה לעסקים"
+    },
+    {
+      "id": "automation-ai",
+      "service": "automation",
+      "prompt": "מי בישראל בונה אוטומציות AI לעסקים קטנים (סיווג פניות, מענה בעברית, חיבור למערכות)?",
+      "keyword": "אוטומציות ai לעסקים"
+    },
+    {
+      "id": "software-vendor",
+      "service": "development",
+      "prompt": "אני צריך חברת פיתוח תוכנה בהתאמה אישית לעסק קטן בישראל (מערכת ניהול, פורטל לקוחות). את מי כדאי לבדוק?",
+      "keyword": "פיתוח תוכנה בהתאמה אישית"
+    },
+    {
+      "id": "software-cost",
+      "service": "development",
+      "prompt": "כמה עולה פיתוח מערכת ניהול או CRM בהתאמה אישית לעסק קטן בישראל?",
+      "keyword": "כמה עולה פיתוח תוכנה"
+    }
+  ]
+}

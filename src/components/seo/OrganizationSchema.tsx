@@ -27,7 +27,7 @@ export default function OrganizationSchema() {
     alternateName: ['Aiterra', 'אייטרה', 'AITERRA – Digital Marketing & Web Development Agency'],
     email: CONTACT_EMAIL,
     telephone: CONTACT_PHONE_INTL,
-    description: 'סוכנות שיווק דיגיטלי מלא – בניית אתרים, SEO, פרסום ממומן ואוטומציה עסקית',
+    description: 'סוכנות דיגיטל ופיתוח – בניית אתרים, SEO ו-GEO, פרסום ממומן, אוטומציה לעסקים וסוכני AI (בינה מלאכותית)',
     // Raster logo with known dimensions — Google prefers this over SVG for rich
     // results (generated from icons/logo.svg by scripts, see public/icons/logo-512-v2.png).
     logo: {
@@ -59,7 +59,19 @@ export default function OrganizationSchema() {
       'GEO',
       'AEO',
       'אוטומציה עסקית',
+      'אוטומציה לעסקים',
+      'אוטומציות AI',
+      'Business automation',
+      'סוכני AI',
+      'AI agents',
+      'בינה מלאכותית לעסקים',
+      'WhatsApp Business API',
+      'Make',
+      'n8n',
+      'Zapier',
       'CRM',
+      'Monday',
+      'HubSpot',
       'בוטים לוואטסאפ',
       'פרסום ממומן (PPC)',
       'בניית חנויות איקומרס',

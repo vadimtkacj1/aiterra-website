@@ -16,7 +16,6 @@ const legacyV2Paths: string[] = [
 
 const retiredServiceSlugs: { from: string; to: string }[] = [
   { from: '/services/adv', to: '/services/marketing' },
-  { from: '/services/automation', to: '/services/development' },
   { from: '/services/custom', to: '/services/development' },
 ]
 
