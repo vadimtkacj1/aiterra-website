@@ -1328,8 +1328,8 @@ export const servicePagesEn: Record<string, ServicePage> = {
       'Business process automation for Israeli companies: lead routing into your CRM, WhatsApp bots, Green Invoice and iCount integration, order and inventory sync and automated reporting, with AI where it genuinely helps. Process mapping, delivery in weeks, monitoring and upkeep.',
     advantages: {
       eyebrow: 'Why us',
-      heading: ['What is different about our automation'],
-      lede: 'Good automation goes unnoticed: the lead simply arrives qualified, the invoice simply goes out, and nobody asks who handled it.',
+      heading: ['What business automation services include'],
+      lede: 'Business automation services map the repeating processes in a company, connect the systems involved through their APIs, define the rules and the AI steps, and run the result with monitoring and upkeep. Ours also include what most providers leave to you: a run log, failure alerts and repairs when a system changes its API.',
       outro: 'Want to know which of your processes is worth automating first?',
       action: { label: 'Book a process-mapping call', href: '/en/contact' },
       roles: [

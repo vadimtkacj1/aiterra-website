@@ -117,7 +117,7 @@ export const heroTopics = [
 ]
 
 export const about = {
-  eyebrow: 'ABOUT Aiterra',
+  eyebrow: 'על Aiterra',
   heading: ['אתר, שיווק, קריאייטיב ופיתוח', 'בלי לנהל חמישה ספקים שונים.'],
   lede: 'כדי לבנות נוכחות דיגיטלית שבאמת עובדת, בדרך כלל צריך לחבר בין לא מעט אנשים: מי שמאפיין את הפרויקט, מי שמעצב אותו, מי שמפתח, מי שמנהל את הקמפיינים, מי שיוצר את התוכן ומי שאחראי על הקידום.',
   outro: 'הצוות שלנו מוכן להתחיל להרים את התדמית הדיגיטלית שלכם ברשתות. ואתם?',
@@ -202,7 +202,7 @@ export const services = {
     text: 'בואו נהפוך את המספרים לתוצאות בעסק שלך',
     action: { label: 'בואו נשבר את הפרויקט', href: '/contact' },
   },
-  eyebrow: 'OUR SERVICES',
+  eyebrow: 'השירותים שלנו',
   heading: ['כל המעטפת לעסק שלך.'],
   lede: 'אפיון, עיצוב, פיתוח, קמפיינים וקידום אורגני - כל שלב בבניית הנוכחות הדיגיטלית שלכם נמצא אצלנו תחת קורת גג אחת, עם מנהל פרויקט אחד שמלווה אתכם מהשיחה הראשונה, דרך ההשקה ואחריה.',
 }
@@ -400,7 +400,7 @@ export const serviceTabs: ServiceTab[] = [
 ]
 
 export const portfolio = {
-  eyebrow: 'SELECTED WORK',
+  eyebrow: 'עבודות נבחרות',
   heading: ['קבלו הצצה לחלק', 'מהפרויקטים שעבדנו עליהם'],
   lede: 'אתרי מכירות, חנויות אונליין, מערכות ניהול ומיתוג - בחרנו כמה פרויקטים שממחישים איך נראית עבודה שמשלבת עיצוב, קוד נקי וקידום. לכל אחד מהם יש מטרה עסקית מוגדרת, לא רק צילום מסך יפה.',
   cardAction: 'צפו בפרויקט',
@@ -426,17 +426,17 @@ export const projectPage = {
   crumb: 'תיק עבודות',
   readMore: 'קראו עוד',
   visit: 'צפו באתר',
-  aboutEyebrow: 'BACKGROUND',
+  aboutEyebrow: 'רקע',
   aboutHeading: 'על הפרויקט',
   factDate: 'תאריך',
   factField: 'תחום',
   factType: 'סוג פרויקט',
   factTech: 'טכנולוגיה',
-  challengeEyebrow: 'THE CHALLENGE',
+  challengeEyebrow: 'האתגר',
   challengeHeading: 'מה היה האתגר?',
-  solutionEyebrow: 'OUR SOLUTION',
+  solutionEyebrow: 'הפתרון',
   solutionHeading: 'הפתרון שלנו',
-  moreEyebrow: 'MORE PROJECTS',
+  moreEyebrow: 'עוד פרויקטים',
   moreHeading: 'פרויקטים נוספים',
   shotAlt: 'צילום מסך של האתר',
 }
@@ -586,7 +586,7 @@ export const portfolioItems: PortfolioItem[] = [
 ]
 
 export const allIn = {
-  eyebrow: 'ALL-IN-ONE',
+  eyebrow: 'הכול במקום אחד',
   heading: ['הפיתוח, האתר והשיווק', 'צריכים לעבוד ביחד'],
 }
 
@@ -693,7 +693,7 @@ export const partners: { caption: string; logos: PartnerLogo[] } = {
 }
 
 export const reels = {
-  eyebrow: 'CREATIVE & REELS',
+  eyebrow: 'קריאייטיב ורילסים',
   heading: ['הקריאייטיב שהקהל שלכם באמת פוגש'],
   lede: [
     'אסטרטגיה טובה צריכה בסוף להפוך למשהו שאנשים עוצרים לראות.',
@@ -720,7 +720,7 @@ export const reelItems: ReelItem[] = [
 ]
 
 export const clientStories = {
-  eyebrow: 'CLIENT STORIES',
+  eyebrow: 'סיפורי לקוחות',
   heading: ['ומה הלקוחות משתפים?'],
   lede: [] as string[],
   prev: 'לסיפור הקודם',
@@ -865,7 +865,7 @@ export const footer = {
 }
 
 export const reviews = {
-  eyebrow: 'GOOGLE REVIEWS',
+  eyebrow: 'ביקורות בגוגל',
   heading: ['את הצד שלנו כבר שמעתם.', 'עכשיו הלקוחות.'],
   lede: [
     'אסטרטגיה טובה צריכה בסוף להפוך למשהו שאנשים עוצרים לראות.',
@@ -1136,7 +1136,7 @@ export const aboutPage = {
   metaDescription:
     'Aiterra היא סוכנות פיתוח ושיווק דיגיטלי מגוש דן. הכירו את הצוות, שיטת העבודה והניסיון שמאחורי מאות פרויקטים לעסקים בישראל.',
   lede: 'הדיגיטל מתקדם – אנחנו דואגים שתהיו צעד אחד לפניו.',
-  eyebrow: 'ABOUT Aiterra',
+  eyebrow: 'על Aiterra',
   heading: ['טכנולוגיה שבונה אתרים.', 'אסטרטגיה שבונה עסקים.'],
   paragraphs: [
     'מערכת 360° לצמיחה עסקית בדיגיטל. אנו ב-Aiterra מגשרים על הפער בין טכנולוגיה מורכבת לתוצאות עסקיות בשטח.',
@@ -1145,20 +1145,20 @@ export const aboutPage = {
   blocks: [
     {
       id: 'about',
-      eyebrow: 'ABOUT Aiterra',
+      eyebrow: 'על Aiterra',
       heading: ['מקדמים בעלי עסקים', '2 צעדים קדימה'],
       text: 'ב-Aiterra אין צורך לרדוף אחרי ספקים שונים לכל שלב בדרך. אנחנו מרכזים את כל המומחיות – אפיון, עיצוב, פיתוח, קידום אורגני, קמפיינים ממומנים ויצירת תוכן – בצוות אחד שמגבש לעסק שלכם תהליך שלם. התוצאה? תהליך חלק יותר, תקשורת ישירה, ופתרון דיגיטלי שלם שבאמת מניע תוצאות.',
       image: '/images/about-page1.webp',
     },
     {
       id: 'strategy',
-      eyebrow: 'OUR STRATEGY',
+      eyebrow: 'האסטרטגיה שלנו',
       heading: ['מאסטרטגיה ועד לתוצאות'],
       text: 'אנחנו ב-Aiterra לא רק בונים אתרים – אנחנו מלווים עסקים בכל שלב של הנוכחות הדיגיטלית. מעיצוב חוויית משתמש ופיתוח טכנולוגי, דרך קידום אורגני וקמפיינים ממומנים, ועד ליצירת תוכן שיווקי שמדבר לקהל שלכם. המעטפת הכוללת שלנו חוסכת לכם זמן, כסף ותיאומים מיותרים – ומאפשרת לכם להתמקד בלהצמיח את העסק.',
       image: '/images/about-page2.webp',
     },
   ],
-  teamEyebrow: 'OUR PEOPLE',
+  teamEyebrow: 'הצוות שלנו',
   teamHeading: ['המוחות מאחורי הטכנולוגיה', 'וההצלחה שלכם'],
   teamLede: 'ב-Aiterra, אנחנו מאמינים שהטכנולוגיה הכי טובה בעולם לא שווה הרבה בלי האנשים הנכונים שמפעילים אותה. לכן, הרכבנו "סיירת דיגיטלית" ממוקדת-מטרה, המשלבת יכולות פיתוח עמוקות יחד עם אסטרטגיות שיווק ולידים אגרסיביות.',
   teamMore: 'עוד על',
@@ -1167,7 +1167,7 @@ export const aboutPage = {
 }
 
 export const aboutValues = {
-  eyebrow: 'OUR VALUES',
+  eyebrow: 'הערכים שלנו',
   heading: ['הערכים והחזון שלנו'],
   lede: 'הערכים שמובילים אותנו עם כל לקוח וכל פרויקט שאנחנו לוקחים על עצמנו.',
   roles: [
@@ -1208,7 +1208,7 @@ export type ServiceStackItem = {
 }
 
 export const servicesStack = {
-  eyebrow: 'OUR SERVICES',
+  eyebrow: 'השירותים שלנו',
   heading: ['כל הפתרונות תחת', 'קורת גג אחת'],
   lede: 'ב-Aiterra, אנחנו מבינים שעוצמות דיגיטליות צריכה לייצר אימפקט מוחשי. כחברה לבניית אתרים וסוכנות דיגיטל, אנחנו לא מפרידים בין הטכנולוגיה לשיווק – אנחנו מחברים ביניהם.',
   items: [
@@ -1440,7 +1440,7 @@ export const servicePages: Record<string, ServicePage> = {
     metaDescription:
       'חברה לבניית אתרים בקוד מלא: אפיון, עיצוב UX/UI ופיתוח ב-Next.js ו-React. אתר מהיר, נגיש לפי תקן ישראלי ובנוי לקידום אורגני - עם בעלות מלאה שלכם על הקוד.',
     advantages: {
-      eyebrow: 'OUR ADVANTAGES',
+      eyebrow: 'היתרונות שלנו',
       heading: ['היתרונות הייחודיים שלנו'],
       lede: 'מה מיוחד בבניית אתרים אצלנו, ולמה זה משנה לעסק שלכם?',
       roles: [
@@ -1471,7 +1471,7 @@ export const servicePages: Record<string, ServicePage> = {
       ] satisfies AboutRole[],
     },
     system: {
-      eyebrow: 'MANAGEMENT SYSTEM',
+      eyebrow: 'מערכת ניהול',
       heading: ['מערכת הניהול של Aiterra'],
       art: '/images/service-cms.webp',
       features: [
@@ -1509,7 +1509,7 @@ export const servicePages: Record<string, ServicePage> = {
       action: { label: 'בואו נתאים את האתר שלכם', href: '/contact' },
     },
     howItWorks: {
-      eyebrow: 'HOW IT WORKS',
+      eyebrow: 'איך זה עובד',
       heading: ['איך זה עובד? פשוט מאוד.'],
       lede: 'שלושה שלבים ברורים מהשיחה הראשונה ועד העלייה לאוויר, עם מנהל פרויקט אחד שמלווה אתכם לאורך כל הדרך.',
       steps: [
@@ -1584,7 +1584,7 @@ export const servicePages: Record<string, ServicePage> = {
     metaDescription:
       'בניית חנות אונליין בקוד מלא על מערכת Aiterra: קטלוג מוצרים, סליקה, ניהול הזמנות ומשלוחים, עם ליווי ועדכונים שוטפים גם אחרי ההשקה.',
     advantages: {
-      eyebrow: 'OUR ADVANTAGES',
+      eyebrow: 'היתרונות שלנו',
       heading: ['היתרונות הייחודיים שלנו'],
       lede: 'מה מיוחד בשירות שלנו באתרי מסחר וחנויות דיגיטליות?',
       roles: [
@@ -1615,7 +1615,7 @@ export const servicePages: Record<string, ServicePage> = {
       ] satisfies AboutRole[],
     },
     system: {
-      eyebrow: 'MANAGEMENT SYSTEM',
+      eyebrow: 'מערכת ניהול',
       heading: ['מערכת הניהול של Aiterra'],
       art: '/images/management-console.webp',
       features: [
@@ -1653,7 +1653,7 @@ export const servicePages: Record<string, ServicePage> = {
       action: { label: 'בואו נתאים את החנות שלכם', href: '/contact' },
     },
     howItWorks: {
-      eyebrow: 'HOW IT WORKS',
+      eyebrow: 'איך זה עובד',
       heading: ['איך זה עובד? פשוט מאוד.'],
       lede: 'Aiterra מרכזת את כל הפעילות של החנות הדיגיטלית במקום אחד, כדי שתוכלו לנהל בקלות, לקבל תמונת מצב ברורה ולצמוח בלי לעבור בין אינספור מערכות.',
       steps: [
@@ -1678,7 +1678,7 @@ export const servicePages: Record<string, ServicePage> = {
       ] satisfies ServiceStep[],
     },
     pricing: {
-      eyebrow: 'PRICING',
+      eyebrow: 'מחירים',
       heading: ['חבילות ומסלולים'],
       lede: 'בחרו את המסלול המתאים ביותר עבור החנות שלכם',
       plans: [
@@ -1795,7 +1795,7 @@ export const servicePages: Record<string, ServicePage> = {
     metaDescription:
       'חברת פיתוח תוכנה לעסקים בישראל: מערכות ניהול ו-CRM בהתאמה אישית, פורטלי לקוחות, אפליקציות ואינטגרציות לחשבונית ירוקה, iCount וסליקה. אפיון כתוב, מחיר קבוע לכל אבן דרך, קוד בבעלותכם וליווי אחרי ההשקה.',
     advantages: {
-      eyebrow: 'SOLUTIONS',
+      eyebrow: 'פתרונות',
       heading: ['מה זה פיתוח תוכנה בהתאמה אישית?'],
       lede: 'פיתוח תוכנה בהתאמה אישית הוא בניית מערכת סביב התהליכים של העסק שלכם, במקום התאמת העסק למגבלות של תוכנת מדף. בוחרים בו כשהתהליך המרכזי לא נכנס לאף תבנית, כשמשלמים על כמה מערכות שלא מדברות זו עם זו, או כשהצוות גדל ותשלום לפי משתמש נהיה יקר מפיתוח. זה מה שאנחנו מפתחים:',
       roles: [
@@ -1828,7 +1828,7 @@ export const servicePages: Record<string, ServicePage> = {
       action: { label: 'בואו נדבר על הפרויקט שלכם', href: '/contact' },
     },
     system: {
-      eyebrow: 'OUR TECH ECOSYSTEM',
+      eyebrow: 'הטכנולוגיות שלנו',
       heading: ['נבחרת המומחים', 'שעומדת לרשותך'],
       art: '/images/service-dev.webp',
       features: [
@@ -1866,7 +1866,7 @@ export const servicePages: Record<string, ServicePage> = {
       action: { label: 'בואו נדבר על הפרויקט שלכם', href: '/contact' },
     },
     howItWorks: {
-      eyebrow: 'METHODOLOGY',
+      eyebrow: 'שיטת העבודה',
       heading: ['המתודולוגיה שלנו'],
       lede: 'תהליך עבודה שקוף ומסודר — מאפיון מלא לחלוקה לפי שלבים, עד לפיתוח ובדיקות. בלי הפתעות.',
       steps: [
@@ -1951,7 +1951,7 @@ export const servicePages: Record<string, ServicePage> = {
     metaDescription:
       'שירות קידום אתרים אורגני: מחקר מילות מפתח, קידום טכני, תוכן, בניית קישורים ודוח חודשי שקוף. כולל התאמה לתשובות AI בגוגל וב-ChatGPT.',
     advantages: {
-      eyebrow: 'OUR ADVANTAGES',
+      eyebrow: 'היתרונות שלנו',
       heading: ['היתרונות הייחודיים שלנו'],
       lede: 'מה מיוחד בשירות הקידום האורגני שלנו?',
       roles: [
@@ -1982,7 +1982,7 @@ export const servicePages: Record<string, ServicePage> = {
       ] satisfies AboutRole[],
     },
     system: {
-      eyebrow: 'REPORTING & TRACKING',
+      eyebrow: 'דיווח ומעקב',
       heading: ['לוח הבקרה והדוחות שלכם'],
       art: '/images/service-seo.webp',
       features: [
@@ -2020,7 +2020,7 @@ export const servicePages: Record<string, ServicePage> = {
       action: { label: 'בואו נבדוק איפה אתם היום', href: '/contact' },
     },
     howItWorks: {
-      eyebrow: 'HOW IT WORKS',
+      eyebrow: 'איך זה עובד',
       heading: ['איך זה עובד? פשוט מאוד.'],
       lede: 'קידום אורגני הוא תהליך מצטבר. כך הוא נראה אצלנו מהבדיקה הראשונה ועד הצמיחה השוטפת.',
       steps: [
@@ -2100,7 +2100,7 @@ export const servicePages: Record<string, ServicePage> = {
     metaDescription:
       'בניית אתר תדמית בקוד מלא: אפיון וחוויית משתמש, עיצוב UI, כתיבת תוכן, התאמה למובייל, מהירות טעינה וניהול הפניות מהאתר במקום אחד.',
     advantages: {
-      eyebrow: 'OUR ADVANTAGES',
+      eyebrow: 'היתרונות שלנו',
       heading: ['היתרונות הייחודיים שלנו'],
       lede: 'מה מיוחד בשירות שלנו באתרי תדמית ונוכחות דיגיטלית?',
       roles: [
@@ -2131,7 +2131,7 @@ export const servicePages: Record<string, ServicePage> = {
       ] satisfies AboutRole[],
     },
     system: {
-      eyebrow: 'MANAGEMENT SYSTEM',
+      eyebrow: 'מערכת ניהול',
       heading: ['מערכת ניהול התוכן של Aiterra'],
       art: '/images/service-brochure.webp',
       features: [
@@ -2169,7 +2169,7 @@ export const servicePages: Record<string, ServicePage> = {
       action: { label: 'בואו נתאים את האתר שלכם', href: '/contact' },
     },
     howItWorks: {
-      eyebrow: 'HOW IT WORKS',
+      eyebrow: 'איך זה עובד',
       heading: ['איך זה עובד? פשוט מאוד.'],
       lede: 'אתר תדמית טוב מתחיל בהבנה של העסק ולא בבחירת תבנית. שלושה שלבים ברורים מהשיחה הראשונה ועד העלייה לאוויר.',
       steps: [
@@ -2244,7 +2244,7 @@ export const servicePages: Record<string, ServicePage> = {
     metaDescription:
       'ניהול קמפיינים ממומנים ב-Meta וב-Google: מחקר שוק ואפיון פלטפורמות, אסטרטגיה לפי שלב העסק, קריאייטיב ואופטימיזציה שוטפת עם דוחות על עלות לליד.',
     advantages: {
-      eyebrow: 'STRATEGY',
+      eyebrow: 'אסטרטגיה',
       heading: ['הגישה שלנו'],
       lede: 'חלוקה ויזואלית לשני מצבים נפוצים של לקוחות',
       roles: [
@@ -2278,7 +2278,7 @@ export const servicePages: Record<string, ServicePage> = {
       action: { label: 'בואו נבדוק מה מתאים לעסק שלכם', href: '/contact' },
     },
     system: {
-      eyebrow: 'WORKFLOW',
+      eyebrow: 'תהליך העבודה',
       heading: ['תרשים הזרימה שלנו'],
       art: '/images/service-marketing.webp',
       features: [
@@ -2316,7 +2316,7 @@ export const servicePages: Record<string, ServicePage> = {
       action: { label: 'בואו נבדוק מה מתאים לעסק שלכם', href: '/contact' },
     },
     howItWorks: {
-      eyebrow: 'KEY ADVANTAGES',
+      eyebrow: 'יתרונות מרכזיים',
       heading: ['למה לבחור ב-Aiterra?'],
       lede: 'ניהול קמפיינים ממוקד, שקוף ומבוסס נתונים — עם צוות שמלווה אתכם לכל אורך הדרך.',
       steps: [
@@ -2345,7 +2345,7 @@ export const servicePages: Record<string, ServicePage> = {
       action: { label: 'שליחה ובדיקת התאמה', href: '/contact' },
     },
     cases: {
-      eyebrow: 'CASE STUDIES',
+      eyebrow: 'תיקי לקוחות',
       heading: ['קבלו הצצה מתוצאות', 'אמיתיות בשטח'],
       items: [
         {
@@ -2429,7 +2429,7 @@ export const servicePages: Record<string, ServicePage> = {
   branding: {
     id: 'branding',
     crumb: 'מיתוג ועיצוב',
-    eyebrow: 'Branding & Web Design',
+    eyebrow: 'מיתוג ועיצוב אתרים',
     heading: ['עיצוב שמדבר', 'בשפה של העסק שלך'],
     subhead: 'Branding & Web Design / UX/UI',
     lede: 'מיתוג עסקי, עיצוב אתרים וחוויית משתמש — מקונספט ראשוני ועד ממשק מוכן לפיתוח. עיצוב שלא רק נראה טוב, אלא גם עובד.',
@@ -2439,7 +2439,7 @@ export const servicePages: Record<string, ServicePage> = {
     metaDescription:
       'מיתוג עסקי ושפה ויזואלית, עיצוב אתרים וחוויית משתמש, עיצוב אפליקציות מובייל ודפי נחיתה - מקונספט ראשוני ועד ממשק מוכן לפיתוח.',
     advantages: {
-      eyebrow: 'SERVICES',
+      eyebrow: 'שירותים',
       heading: ['מה אנחנו מעצבים?'],
       lede: 'שירותי עיצוב ומיתוג מקצה לקצה — מזהות ויזואלית ועד ממשקי משתמש מורכבים',
       roles: [
@@ -2472,7 +2472,7 @@ export const servicePages: Record<string, ServicePage> = {
       action: { label: 'בואו נדבר על העיצוב שלכם', href: '/contact' },
     },
     system: {
-      eyebrow: 'WORKFLOW',
+      eyebrow: 'תהליך העבודה',
       heading: ['תרשים הזרימה שלנו'],
       art: '/images/service-branding.webp',
       features: [
@@ -2510,7 +2510,7 @@ export const servicePages: Record<string, ServicePage> = {
       action: { label: 'בואו נדבר על העיצוב שלכם', href: '/contact' },
     },
     howItWorks: {
-      eyebrow: 'OUR DESIGN PROCESS',
+      eyebrow: 'תהליך העיצוב שלנו',
       heading: ['תהליך העיצוב שלנו'],
       lede: 'תהליך עבודה מסודר ושקוף — ממחקר והבנת הלקוח, דרך קונספט ואבטיפוס, ועד עיצוב סופי מוכן לפיתוח.',
       steps: [
@@ -2809,8 +2809,8 @@ export const servicePages: Record<string, ServicePage> = {
       'שירותי אוטומציה עסקית לעסקים בישראל: זרימת לידים ל-CRM, בוט וואטסאפ, חיבור לחשבונית ירוקה, iCount וריווחית, סנכרון הזמנות ודוחות אוטומטיים, עם AI איפה שהוא באמת עוזר. אפיון תהליכים, הקמה תוך שבועות, ניטור ותחזוקה שוטפת.',
     advantages: {
       eyebrow: 'למה אנחנו',
-      heading: ['מה מייחד את האוטומציה שלנו'],
-      lede: 'אוטומציה טובה לא מורגשת: הליד פשוט מגיע מסונן, החשבונית פשוט יוצאת, והצוות מפסיק לשאול מי טיפל בזה.',
+      heading: ['מה כוללים שירותי אוטומציה לעסקים?'],
+      lede: 'שירותי אוטומציה לעסקים הם מיפוי של התהליכים החוזרים בעסק, חיבור המערכות שמשתתפות בהם דרך API, הגדרת הכללים ושלבי ה-AI, והרצה עם ניטור ותחזוקה. אצלנו זה כולל גם את מה שרוב הספקים משאירים לכם: יומן ריצות, התראות על כשל ותיקון החיבורים כשמערכת משנה API.',
       outro: 'רוצים לדעת אילו תהליכים אצלכם שווה לאטמט קודם?',
       action: { label: 'לקביעת שיחת מיפוי תהליכים', href: '/contact' },
       roles: [
@@ -3245,6 +3245,11 @@ export const servicePages: Record<string, ServicePage> = {
         question: 'מה קורה אם ה-AI אומר עלינו משהו לא נכון?',
         answer:
           'זה קורה, ולעיתים קרובות יותר ממה שנדמה — במיוחד לעסקים ששמם דומה לשם של חברה אחרת, או שפרטיהם מופיעים בגרסאות שונות במקומות שונים. מנוע ממלא פערים מתוך מה שנראה לו סביר, ולכן פרט לא עקבי הופך בקלות לטעות מנוסחת בביטחון. הטיפול אינו בקשה לתיקון אלא הסרת העמימות: איחוד השם והפרטים בכל הנכסים, קישור מפורש בין הפרופילים, ועמוד ברור באתר שקובע את העובדות. ככל שהמקורות עקביים יותר, כך פוחת המרחב שבו המנוע ממציא.',
+      },
+      {
+        question: 'איך בודקים ספק קידום ב-AI לפני שחותמים?',
+        answer:
+          'בארבע שאלות, ואנחנו עונים עליהן על עצמנו כאן. אילו מנועים נמדדים: אצלנו ChatGPT, Gemini, Perplexity ו-AI Overviews של גוגל, בעברית ובאנגלית. אילו שאלות נמדדות: רשימת הפרומפטים שנבנית מהפניות שלכם ומוצגת לכם, לא רשימה גנרית. באיזו תדירות חוזרים על הבדיקה: תשובות AI משתנות בין הרצות, ולכן בדיקה אחת לא מוכיחה כלום; אנחנו מודדים כל חודש באותו יום ומראים מגמה של שלושה חודשים ומעלה. ואיזה גישה יש לכם לנתונים: התשובות המלאות והמקורות שצוטטו נשמרים ונמסרים לכם, לא רק אחוז. סימני אזהרה אצל כל ספק: הבטחה לתוצאה בזמן קבוע, היעדר תוכנית כבר בשיחת האפיון, ומקרי לקוח בלי מספרים של נראות ב-AI לפני ואחרי.',
       },
       {
         question: 'כמה זה עולה?',

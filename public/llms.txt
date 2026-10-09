@@ -16,6 +16,9 @@
 - [מיתוג ועיצוב / Brand & UX/UI](https://www.aiterra.co.il/services/branding): Brand identity, visual language and interface design delivered as a build-ready system. English: /en/services/branding
 
 ## Key guides / מדריכים מרכזיים
+- [סוכני AI לעסקים בישראל 2026: השוואת 7 סוגי פתרונות](https://www.aiterra.co.il/blog/ai-agents-solutions-comparison-israel)
+- [אוטומציה לעסקים: כמה עולה פיתוח תוכנה בהתאמה אישית](https://www.aiterra.co.il/blog/custom-software-development-cost-israel)
+- [פיתוח אפליקציה לעסק: כמה עולה ומתי זה משתלם](https://www.aiterra.co.il/blog/app-development-cost-israel)
 - [GEO — קידום אתרים בעידן הבינה המלאכותית (ChatGPT, Gemini, Google AI)](https://www.aiterra.co.il/blog/geo-ai-search-optimization) · English: /en/blog/geo-ai-search-optimization
 - [תחזוקת אתר: כמה זה עולה בשנה](https://www.aiterra.co.il/blog/website-maintenance-cost-yearly) · English: /en/blog/website-maintenance-cost-yearly
 - [וורדפרס או אתר בקוד? בחירת תשתית לעסק](https://www.aiterra.co.il/blog/wordpress-vs-custom-code) · English: /en/blog/wordpress-vs-custom-code
