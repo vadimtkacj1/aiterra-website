@@ -678,6 +678,14 @@ export const contentEn: Partial<V2Content> = {
       category: 'sales',
     },
     {
+      id: 'bradley',
+      title: 'Bradley — streetwear store',
+      tags: ['Shopify', 'Online store', 'Fashion'],
+      shot: '/images/portfolio/cards/bradley.webp',
+      href: '/en/projects/bradley',
+      category: 'sales',
+    },
+    {
       id: 'olie-6',
       title: 'Olie 6 — olive oil store',
       tags: ['Shopify', 'eCommerce', 'UI/UX'],
@@ -724,6 +732,14 @@ export const contentEn: Partial<V2Content> = {
       shot: '/images/portfolio/cards/tech-embassy.webp',
       href: '/en/projects/tech-embassy',
       category: 'systems',
+    },
+    {
+      id: 'natan-borochov',
+      title: 'Natan Borochov — barbershop',
+      tags: ['Brand site', 'WhatsApp', 'UI/UX'],
+      shot: '/images/portfolio/cards/natan-borochov.webp',
+      href: '/en/projects/natan-borochov',
+      category: 'brand',
     },
     {
       id: 'karin-cohen',
@@ -1261,10 +1277,10 @@ export const contentEn: Partial<V2Content> = {
 export const projectsPageEn = {
   title: ['Our work', 'Selected projects'],
   crumb: 'Work',
-  lede: 'Fifteen live projects: three online stores, marketing and lead-generation sites across cosmetics and personal brands, work in real estate and mortgage advisory, and three AI and operations platforms for clients in Canada. All written in code by our team, and all in production today.',
+  lede: 'Seventeen live projects: four online stores, marketing and lead-generation sites across cosmetics, grooming and personal brands, work in real estate and mortgage advisory, and three AI and operations platforms for clients in Canada. All written in code by our team, and all in production today.',
   action: { label: 'Start a project', href: '/en/contact' },
   faqHeading: ['Before we start', 'a few things worth knowing.'],
-  metaTitle: 'Our Work - 15 Sites, Stores and Systems We Built',
+  metaTitle: 'Our Work - 17 Sites, Stores and Systems We Built',
   metaDescription:
-    'Fifteen live Aiterra projects: online stores, lead-generation sites, management systems and AI platforms, all built in code. See the goal, the integrations and what shipped.',
+    'Seventeen live Aiterra projects: online stores, lead-generation sites, management systems and AI platforms, all built in code. See the goal, the integrations and what shipped.',
 }

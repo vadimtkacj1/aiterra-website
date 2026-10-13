@@ -254,6 +254,46 @@ export const projectsEn: Record<string, ProjectOverride> = {
       text: 'We built a platform that holds the whole event lifecycle. Each participant appears in a view for their role — startup, investor, judge or guest — and registrations and attendance statuses sync from Luma automatically. Approvals, invitations and bans take one click, and all participant communication runs from one place, before and after the event. During the competition every judge scores each startup on market, product, model, traction and team, the leaderboard updates live, organisers follow and close the vote from their phone, and prizes are assigned from one screen right after. The platform went from concept to delivery in one to two months, and today events run the same way in every city with far less manual coordination.',
     },
   },
+
+  bradley: {
+    title: 'Bradley — men’s streetwear',
+    category: 'Online stores',
+    heroTitle: 'Bradley — an online store for a men’s streetwear brand',
+    projectType: 'Online store',
+    technology: 'Shopify · design and Hebrew localisation',
+    tags: ['Shopify', 'Online store', 'Fashion', 'RTL'],
+    heroDescription:
+      'Bradley is a men’s streetwear brand sold online. We built the brand a fully right-to-left Hebrew Shopify store with a catalogue of more than 250 items: shirts, trousers, shoes and accessories. The design is a clean black and white, collection photography leads the homepage, and every product card shows the available colours and adds to the cart straight from the listing.',
+    metaDescription:
+      'A Shopify store for the Bradley streetwear brand: a catalogue of hundreds of items in right-to-left Hebrew, colour swatches on product cards, a customer club and a slide-out cart.',
+    imageAlt: 'Screenshot of the Bradley online store homepage',
+    challenge: {
+      text: 'In a fashion store the catalogue is the challenge: hundreds of items, most of them in several colours and sizes, and collections that change every season. A visitor has to reach the kind of item they want quickly, see every colour while still in the product listing and finish a purchase on a phone in a few taps. On top of that, Shopify and most of its themes were built for English, so a Hebrew store needs a full right-to-left adaptation, from the menu to the cart.',
+    },
+    solution: {
+      text: 'We built the store on Shopify with navigation by item type: shirts, trousers, shoes and accessories, each with its own sub-categories, alongside New and Sale pages. Product cards carry colour swatches, and items are added to the cart straight from the listing. An announcement bar shows the coupon code and the free-shipping threshold, the customer club collects sign-ups for news on collections and offers, and a slide-out cart keeps the visitor inside the catalogue until checkout. The whole site runs in right-to-left Hebrew, with an accessibility menu, an accessibility statement and policy pages.',
+    },
+  },
+
+  'natan-borochov': {
+    title: 'Natan Borochov — barbershop',
+    category: 'Web development',
+    heroTitle: 'Natan Borochov — a barbershop site in Holon',
+    projectType: 'Brand site',
+    technology: 'React · Vite · Tailwind CSS',
+    tags: ['Brand site', 'UI/UX', 'WhatsApp', 'React'],
+    heroDescription:
+      'A brand site for Natan Borochov’s barbershop in Holon. We built a single dark page with large typography and a gold accent that answers the three questions every client has: what it costs, what the work looks like, and where and when to come. Every row in the price list opens WhatsApp with a ready-made message to book that service.',
+    metaDescription:
+      'A brand site for Natan Borochov’s barbershop in Holon: a price list that leads straight to WhatsApp booking, a gallery of work from Instagram, opening hours and directions.',
+    imageAlt: 'Screenshot of the Borohov Barbershop homepage',
+    challenge: {
+      text: 'A neighbourhood barbershop does not need a complex booking system: appointments are made on WhatsApp and the work is published on Instagram. What was missing was one place that gives a quick answer to anyone looking for the shop: price, address, hours and examples of the work. The site had to deliver all of that on a phone, look like the barbershop itself and not like a template, and lead to a booking in one tap.',
+    },
+    solution: {
+      text: 'We built a single-page site in React: an opening screen with the shop name and a WhatsApp button, a price list where every service is a WhatsApp link with a ready-made message, a short section about Natan, a gallery of work that links to videos on Instagram, and a where-and-when section with opening hours, phone and navigation in Waze and Google Maps. The design is dark with a gold accent and a red and blue barber-pole stripe, and scrolling is smooth with subtle animation. The site also has an accessibility menu, an accessibility statement, a privacy policy and terms of use.',
+    },
+  },
 }
 
 export function applyProjectEn<T extends PortfolioProject>(project: T): T {

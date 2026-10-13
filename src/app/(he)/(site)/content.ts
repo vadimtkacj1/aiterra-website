@@ -413,12 +413,12 @@ export const portfolio = {
 export const projectsPage = {
   title: ['תיק עבודות', 'פרויקטים נבחרים'],
   crumb: 'תיק עבודות',
-  lede: '15 פרויקטים חיים: שלוש חנויות אינטרנטיות, אתרי תדמית ולידים בקוסמטיקה ובמותג אישי, פרויקטים בנדל"ן ובייעוץ משכנתאות, ושלוש פלטפורמות AI ותפעול ללקוחות בקנדה. כולם נבנו בקוד על ידי הצוות שלנו, וכולם באוויר היום.',
+  lede: '17 פרויקטים חיים: ארבע חנויות אינטרנטיות, אתרי תדמית ולידים בקוסמטיקה, בטיפוח ובמותג אישי, פרויקטים בנדל"ן ובייעוץ משכנתאות, ושלוש פלטפורמות AI ותפעול ללקוחות בקנדה. כולם נבנו בקוד על ידי הצוות שלנו, וכולם באוויר היום.',
   action: { label: 'התחילו פרויקט חדש', href: '/contact' },
   faqHeading: ['לפני שמתחילים', 'כמה דברים שכדאי לדעת.'],
-  metaTitle: 'תיק עבודות - 15 אתרים, חנויות ומערכות שבנינו',
+  metaTitle: 'תיק עבודות - 17 אתרים, חנויות ומערכות שבנינו',
   metaDescription:
-    '15 פרויקטים חיים של Aiterra: חנויות אינטרנטיות, אתרי תדמית ולידים, מערכות ניהול ופלטפורמות AI, כולם בנויים בקוד. לכל פרויקט: מה הייתה המטרה, מה חובר ומה נבנה.',
+    '17 פרויקטים חיים של Aiterra: חנויות אינטרנטיות, אתרי תדמית ולידים, מערכות ניהול ופלטפורמות AI, כולם בנויים בקוד. לכל פרויקט: מה הייתה המטרה, מה חובר ומה נבנה.',
 }
 
 export const projectPage = {
@@ -480,6 +480,14 @@ export const portfolioItems: PortfolioItem[] = [
     category: 'sales',
   },
   {
+    id: 'bradley',
+    title: 'Bradley — אופנת סטריטוור',
+    tags: ['Shopify', 'חנות אונליין', 'אופנה'],
+    shot: '/images/portfolio/cards/bradley.webp',
+    href: '/projects/bradley',
+    category: 'sales',
+  },
+  {
     id: 'sous-chef',
     title: 'Sous Chef',
     tags: ['מערכת', 'פיתוח', 'UI/UX'],
@@ -502,6 +510,14 @@ export const portfolioItems: PortfolioItem[] = [
     shot: '/images/portfolio/cards/zentax.webp',
     href: '/projects/zentax',
     category: 'systems',
+  },
+  {
+    id: 'natan-borochov',
+    title: 'נתן בורוכוב — ברברשופ',
+    tags: ['אתר תדמית', 'WhatsApp', 'UI/UX'],
+    shot: '/images/portfolio/cards/natan-borochov.webp',
+    href: '/projects/natan-borochov',
+    category: 'brand',
   },
   {
     id: 'maayan-cosmetics',
