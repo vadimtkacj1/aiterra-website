@@ -10,13 +10,21 @@ export const CONTACT_PHONE_HREF = 'tel:+972526780739'
 /** International format for structured data (schema.org telephone) */
 export const CONTACT_PHONE_INTL = '+972-52-678-0739'
 
+export const WHATSAPP_URL = 'https://wa.me/972526780739'
+
 export const SOCIAL_PROFILES = {
   linkedin: '',
   instagram: 'https://www.instagram.com/aiterra.il/',
+  tiktok: 'https://www.tiktok.com/@aiterra.il',
   facebook: '',
 }
 
 export const GOOGLE_BUSINESS_PROFILE_URL = 'https://maps.google.com/?cid=13840747656603668464'
+
+export const OPENING_HOURS = [
+  { days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'], opens: '09:00', closes: '21:00' },
+  { days: ['Friday'], opens: '09:00', closes: '14:00' },
+]
 
 /**
  * Token sent with public lead-form submissions to /api/site-leads/submit so the

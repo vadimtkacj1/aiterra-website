@@ -4,6 +4,8 @@ import Script from 'next/script'
 import Providers from '@/components/layout/Providers'
 import OrganizationSchema from '@/components/seo/OrganizationSchema'
 import CookieConsent from '@/components/layout/CookieConsent'
+import WhatsAppButton from '@/components/layout/WhatsAppButton'
+import A11yWidgetTweaks from '@/components/layout/A11yWidgetTweaks'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import '../../styles/globals.css'
 
@@ -122,6 +124,8 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
         <OrganizationSchema />
         <Providers>{children}</Providers>
         <CookieConsent locale="en" />
+        <WhatsAppButton locale="en" />
+        <A11yWidgetTweaks locale="en" />
       </body>
     </html>
   )

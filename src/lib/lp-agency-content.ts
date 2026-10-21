@@ -88,6 +88,7 @@ export const FOOTER_LINKS = [
 
 export const SOCIAL_LINKS = [
   { platform: "instagram", icon: "", url: SOCIAL_PROFILES.instagram, label: "Instagram" },
+  { platform: "tiktok", icon: "", url: SOCIAL_PROFILES.tiktok, label: "TikTok" },
   { platform: "facebook", icon: "", url: SOCIAL_PROFILES.facebook, label: "Facebook" },
   { platform: "linkedin", icon: "", url: SOCIAL_PROFILES.linkedin, label: "LinkedIn" },
 ].filter((link) => Boolean(link.url));

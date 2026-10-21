@@ -3,6 +3,7 @@ import {
   CONTACT_EMAIL,
   CONTACT_PHONE_INTL,
   GOOGLE_BUSINESS_PROFILE_URL,
+  OPENING_HOURS,
   SOCIAL_PROFILES,
 } from '@/lib/contact'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
@@ -45,6 +46,12 @@ export default function OrganizationSchema() {
       addressCountry: 'IL',
     },
     hasMap: GOOGLE_BUSINESS_PROFILE_URL,
+    openingHoursSpecification: OPENING_HOURS.map(({ days, opens, closes }) => ({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: days.map((day) => `https://schema.org/${day}`),
+      opens,
+      closes,
+    })),
     areaServed: [
       { '@type': 'Country', name: 'Israel' },
       { '@type': 'City', name: 'בת ים' },

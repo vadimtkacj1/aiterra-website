@@ -3,6 +3,8 @@ export type PostFaqEn = { title: string; items: { q: string; a: string }[] }
 type PostOverride = {
   title: string
   excerpt: string
+  seoTitle?: string
+  seoDescription?: string
   content: string
   tags: string[]
   faq?: PostFaqEn
@@ -1730,7 +1732,7 @@ Before choosing an SEO supplier, it is worth reading [the guide to choosing SEO 
 
 ---
 
-**Want to know what it would cost to promote your own business?** Take a look at the [SEO service](/en/services/seo) from Aiterra, or [leave your details](/en/contact) for a tailored quote.
+**Want to know what it would cost to promote your own business?** Take a look at Aiterra's [SEO services in Israel](/en/services/seo), or [leave your details](/en/contact) for a tailored quote.
 
 ## Further reading
 

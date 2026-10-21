@@ -30,8 +30,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const base = getProjectBySlug(slug)
   if (!base) return {}
   const project = applyProjectEn(base)
+  const namedTitle = project.title.includes('—')
+    ? project.title
+    : `${project.title} — ${project.category} case study`
   return pageMetadata({
-    title: project.metaTitle || project.title,
+    title: project.metaTitle || namedTitle,
     description:
       project.metaDescription ||
       project.heroDescription ||

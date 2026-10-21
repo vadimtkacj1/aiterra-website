@@ -596,7 +596,7 @@ export const contentEn: Partial<V2Content> = {
       },
     ],
     contactTitle: 'Get in touch',
-    socialLabels: { instagram: 'Instagram', facebook: 'Facebook' },
+    socialLabels: { instagram: 'Instagram', tiktok: 'TikTok', facebook: 'Facebook' },
     legal: [
       { label: 'Accessibility statement', href: '/en/accessibility-statement' },
       { label: 'Terms of use', href: '/en/terms-of-use' },

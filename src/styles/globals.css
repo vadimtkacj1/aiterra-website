@@ -68,11 +68,91 @@
   display: none !important;
 }
 
-/* The Sienna launcher ships at 58px, which reads oversized next to this
-   site's own floating controls. */
 .asw-menu-btn.asw-menu-btn {
-  transform: scale(0.8);
-  transform-origin: bottom left;
+  --asw-widget-size: 52px !important;
+  --asw-icon-size: 30px !important;
+  --asw-border-radius: 16px !important;
+  border: 0 !important;
+  outline: 0 !important;
+  background: linear-gradient(135deg, #2447d6 0%, #3a7cf0 100%) !important;
+  box-shadow:
+    0 12px 28px -10px rgba(36, 71, 214, 0.7),
+    0 2px 6px rgba(6, 11, 34, 0.16);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.asw-menu-btn.asw-menu-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 16px 32px -10px rgba(36, 71, 214, 0.75),
+    0 3px 8px rgba(6, 11, 34, 0.18);
+}
+
+.asw-menu-btn.asw-menu-btn:focus-visible {
+  outline: 3px solid #3e96f9 !important;
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .asw-menu-btn.asw-menu-btn {
+    --asw-widget-size: 48px !important;
+    --asw-icon-size: 28px !important;
+  }
+}
+
+.asw-menu.asw-menu {
+  --asw-primary: #2447d6 !important;
+  --asw-primary-subtle: rgba(36, 71, 214, 0.1) !important;
+  --asw-primary-faint: rgba(36, 71, 214, 0.06) !important;
+  --asw-font-family: 'Google Sans', Arial, sans-serif;
+  background: rgba(250, 247, 243, 0.97);
+  box-shadow: 0 0 60px rgba(6, 11, 34, 0.18);
+}
+
+.asw-menu.asw-menu .asw-menu-header {
+  background: linear-gradient(92.63deg, #2447d6 14.57%, #3e96f9 99.27%) !important;
+  box-shadow: none;
+}
+
+.asw-menu.asw-menu .asw-menu-reset,
+.asw-menu.asw-menu .asw-menu-close {
+  border-radius: 12px;
+}
+
+.asw-menu.asw-menu .asw-card {
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid rgba(11, 18, 48, 0.07);
+  box-shadow: 0 1px 2px rgba(6, 11, 34, 0.04);
+}
+
+.asw-menu.asw-menu .asw-btn,
+.asw-menu.asw-menu .asw-profile-btn {
+  border-radius: 14px;
+  border-color: rgba(11, 18, 48, 0.08) !important;
+  box-shadow: none;
+}
+
+.asw-menu.asw-menu .asw-btn:hover,
+.asw-menu.asw-menu .asw-profile-btn:hover {
+  border-color: rgba(36, 71, 214, 0.35) !important;
+}
+
+.asw-menu.asw-menu .asw-btn.asw-selected,
+.asw-menu.asw-menu .asw-profile-btn.asw-selected {
+  border-color: #2447d6 !important;
+}
+
+.asw-menu.asw-menu .asw-footer {
+  background: rgba(255, 255, 255, 0.92);
+  border-top-color: rgba(11, 18, 48, 0.07);
+  box-shadow: none;
+}
+
+.asw-menu.asw-menu .asw-footer-powered {
+  color: #2447d6 !important;
 }
 
 /* While the cookie banner is up it owns the bottom strip. The Sienna launcher

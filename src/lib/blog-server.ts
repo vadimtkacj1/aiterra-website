@@ -10,6 +10,8 @@ export interface AdminPost {
   slug: string
   title: string
   excerpt: string
+  seoTitle?: string
+  seoDescription?: string
   content: string
   /** YYYY-MM-DD; empty in API payload → saved as today */
   datePublished: string

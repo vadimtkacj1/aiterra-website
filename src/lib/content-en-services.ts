@@ -152,12 +152,12 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'seo',
     crumb: 'SEO',
     eyebrow: 'Organic growth',
-    heading: ['SEO and website promotion', 'that produces enquiries'],
+    heading: ['SEO services in Israel', 'that produce enquiries'],
     subhead: 'Our organic search practice',
     lede: 'Keyword research, technical SEO, content and authority building - organic growth measured in qualified enquiries rather than positions, including visibility inside AI-generated answers.',
     image: '/images/service-marketing.webp',
     action: { label: 'Request a visibility review', href: '/en/contact' },
-    metaTitle: 'SEO and Website Promotion Services - AI-Search Ready',
+    metaTitle: 'SEO Services in Israel, Built by Engineers',
     metaDescription:
       'SEO built by engineers: keyword research, technical fixes made in code, content, digital PR and monthly reporting - plus visibility in AI Overviews and ChatGPT.',
     advantages: {
@@ -302,16 +302,16 @@ export const servicePagesEn: Record<string, ServicePage> = {
 
   development: {
     id: 'development',
-    crumb: 'Web platforms',
+    crumb: 'Custom software',
     eyebrow: 'Custom platforms',
-    heading: ['Custom web platforms', 'built around your workflow'],
+    heading: ['Custom software and CRM development', 'built around your workflow'],
     subhead: 'Our platform engineering practice',
     lede: 'Portals, dashboards, internal tools and the integrations between them - engineered for the operations that off-the-shelf software cannot cover, and designed to be extended rather than replaced.',
     image: '/images/service-dev-hero.webp',
     action: { label: 'Discuss your platform', href: '/en/contact' },
-    metaTitle: 'Custom Software Development for Businesses in Israel - Platforms, CRM and Apps',
+    metaTitle: 'Custom Software and CRM Development in Israel',
     metaDescription:
-      'Custom web application development: customer portals, operational dashboards, workflow automation and API integrations, engineered in Next.js, Node and PostgreSQL.',
+      'Custom software and CRM development in Israel: client portals, dashboards, workflow automation and API integrations, built in Next.js, Node and PostgreSQL.',
     advantages: {
       eyebrow: 'OUR ADVANTAGES',
       heading: ['What sets our platform work apart'],
@@ -811,9 +811,9 @@ export const servicePagesEn: Record<string, ServicePage> = {
     lede: 'Google and Meta campaigns planned around your funnel stage, with creative, landing pages and conversion tracking built by the same team - so the ad, the page it lands on and the measurement agree with each other.',
     image: '/images/marketing-hero.webp',
     action: { label: 'Discuss your campaigns', href: '/en/contact' },
-    metaTitle: 'Paid Campaign Management - Google and Meta Ads',
+    metaTitle: 'PPC Management in Israel - Google and Meta Ads',
     metaDescription:
-      'Paid campaign management on Google and Meta: audience and market research, creative production, landing pages and conversion tracking, reported on cost per lead.',
+      'PPC management on Google and Meta: audience research, creative production, landing pages and conversion tracking, reported on cost per lead.',
     advantages: {
       eyebrow: 'OUR ADVANTAGES',
       heading: ['What sets our campaign work apart'],
@@ -1325,7 +1325,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     action: { label: 'Book a process-mapping call', href: '/en/contact' },
     metaTitle: 'Business Automation Services in Israel - CRM, WhatsApp and AI Workflows',
     metaDescription:
-      'Business process automation for Israeli companies: lead routing into your CRM, WhatsApp bots, Green Invoice and iCount integration, order and inventory sync and automated reporting, with AI where it genuinely helps. Process mapping, delivery in weeks, monitoring and upkeep.',
+      'Business automation for Israeli companies: leads routed into your CRM, WhatsApp bots, Green Invoice and iCount links, order sync and automated reports.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What business automation services include'],
@@ -1481,7 +1481,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     action: { label: 'Request an agent discovery call', href: '/en/contact' },
     metaTitle: 'AI Agent Development for Businesses in Israel',
     metaDescription:
-      'AI agent and smart chatbot development for Israeli businesses: round-the-clock replies in Hebrew and English, lead qualification, meeting booking and connections to CRM, WhatsApp and invoicing, with written guardrails and human handoff.',
+      'AI agent development for Israeli businesses: replies in Hebrew and English around the clock, lead qualification, booking, and CRM and WhatsApp connections.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our AI agents'],
@@ -1632,7 +1632,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     action: { label: 'Request an AI visibility check', href: '/en/contact' },
     metaTitle: 'GEO and AI Search Visibility — ChatGPT, Gemini, AI Overviews',
     metaDescription:
-      'GEO and AEO services: turning your business into a defined entity that AI engines cite. Entity and schema work, quotable content, presence in the sources engines read, and a monthly visibility report.',
+      'GEO and AEO services: making your business a defined entity that AI engines cite, with schema, quotable content, source presence and a visibility report.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our AI search work'],

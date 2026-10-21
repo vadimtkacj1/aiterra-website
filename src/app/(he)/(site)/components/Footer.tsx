@@ -8,7 +8,7 @@ import {
   OFFICE_ADDRESS_HE,
   SOCIAL_PROFILES,
 } from '@/lib/contact'
-import { FacebookIcon, InstagramIcon } from './icons'
+import { FacebookIcon, InstagramIcon, TikTokIcon } from './icons'
 import FooterSection from './FooterSection'
 import { getContent, type Locale } from '@/lib/v2-content-server'
 import styles from './Footer.module.css'
@@ -28,6 +28,12 @@ export default function Footer({
       label: footer.socialLabels.instagram,
       href: SOCIAL_PROFILES.instagram,
       Icon: InstagramIcon,
+    },
+    {
+      id: 'tiktok',
+      label: footer.socialLabels.tiktok,
+      href: SOCIAL_PROFILES.tiktok,
+      Icon: TikTokIcon,
     },
     {
       id: 'facebook',

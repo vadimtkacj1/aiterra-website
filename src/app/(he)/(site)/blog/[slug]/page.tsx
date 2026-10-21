@@ -31,8 +31,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const post = getPostBySlug(slug)
   if (!post) return {}
   return pageMetadata({
-    title: post.title,
-    description: post.excerpt,
+    title: post.seoTitle || post.title,
+    description: post.seoDescription || post.excerpt,
     path: `/blog/${slug}`,
     ...(isTranslated(slug) ? { altPath: `/en/blog/${slug}` } : {}),
     image: post.images?.[0] || undefined,

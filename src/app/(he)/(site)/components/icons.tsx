@@ -86,6 +86,17 @@ export function InstagramIcon({ className }: IconProps) {
   )
 }
 
+export function TikTokIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M16.6 2.5h-3.2v12.9a2.8 2.8 0 1 1-2.8-2.8c.3 0 .6 0 .9.1V9.4a6.1 6.1 0 1 0 5.1 6V8.9a7.8 7.8 0 0 0 4.4 1.4V7.1a4.4 4.4 0 0 1-4.4-4.6Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
 export function CrossMark({ className }: IconProps) {
   return (
     <svg className={className} width="7" height="7" viewBox="0 0 7 7" aria-hidden="true">

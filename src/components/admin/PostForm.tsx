@@ -210,6 +210,16 @@ export default function PostForm({ initial }: { initial?: AdminPost }) {
           rows={3} required placeholder="תיאור קצר של הפוסט..." className={inputCls} />
       </Field>
 
+      <Field label="כותרת לגוגל" hint={`עד 50 תווים, ריק = כותרת הפוסט (${(form.seoTitle ?? '').length})`}>
+        <input value={form.seoTitle ?? ''} onChange={(e) => set('seoTitle', e.target.value)}
+          placeholder={form.title} className={inputCls} />
+      </Field>
+
+      <Field label="תיאור לגוגל" hint={`עד 155 תווים, ריק = התקציר (${(form.seoDescription ?? '').length})`}>
+        <textarea value={form.seoDescription ?? ''} onChange={(e) => set('seoDescription', e.target.value)}
+          rows={2} placeholder={form.excerpt} className={inputCls} />
+      </Field>
+
       {/* ── Content editor ─────────────────────────────────────────────────── */}
       <Field label="תוכן">
         <div className="border border-[#d9d9d9] rounded-xl overflow-hidden transition-all focus-within:border-[#2447D6] focus-within:ring-2 focus-within:ring-[#2447D6]/15">

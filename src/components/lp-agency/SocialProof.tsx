@@ -13,6 +13,8 @@ export default function SocialProof() {
             <a
               key={social.platform}
               href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-700 hover:text-gray-900 transition text-lg"
               aria-label={social.label}
             >

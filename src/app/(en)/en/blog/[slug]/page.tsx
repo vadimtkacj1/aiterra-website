@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const post = getPostEnBySlug(slug)
   if (!post) return {}
   return pageMetadata({
-    title: post.title,
-    description: post.excerpt,
+    title: post.seoTitle || post.title,
+    description: post.seoDescription || post.excerpt,
     path: `/en/blog/${slug}`,
     locale: 'en',
     altPath: `/blog/${slug}`,

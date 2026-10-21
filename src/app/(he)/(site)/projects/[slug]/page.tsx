@@ -25,8 +25,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params
   const project = getProjectBySlug(slug)
   if (!project) return {}
+  const namedTitle = project.title.includes('—') ? project.title : `${project.title} — ${project.category}`
   return pageMetadata({
-    title: project.metaTitle || project.title,
+    title: project.metaTitle || namedTitle,
     description:
       project.metaDescription ||
       project.heroDescription ||

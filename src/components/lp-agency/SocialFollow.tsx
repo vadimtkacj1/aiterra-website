@@ -1,12 +1,13 @@
 import Image from "next/image";
+import { SOCIAL_PROFILES } from "@/lib/contact";
 
 export default function SocialFollow() {
   const socialLinks = [
-    { name: "Instagram", icon: "/images/lp/instagram.svg", url: "https://instagram.com" },
-    { name: "Facebook", icon: "/images/lp/facebook.svg", url: "https://facebook.com" },
-    { name: "LinkedIn", icon: "/images/lp/linkedin.svg", url: "https://linkedin.com" },
-    { name: "TikTok", icon: "/images/lp/tiktok.svg", url: "https://tiktok.com" }
-  ];
+    { name: "Instagram", icon: "/images/lp/instagram.svg", url: SOCIAL_PROFILES.instagram },
+    { name: "Facebook", icon: "/images/lp/facebook.svg", url: SOCIAL_PROFILES.facebook },
+    { name: "LinkedIn", icon: "/images/lp/linkedin.svg", url: SOCIAL_PROFILES.linkedin },
+    { name: "TikTok", icon: "/images/lp/tiktok.svg", url: SOCIAL_PROFILES.tiktok }
+  ].filter((social) => Boolean(social.url));
 
   return (
     <section className="py-20 bg-gradient-to-b">
