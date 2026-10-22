@@ -126,6 +126,13 @@ export const tools: ToolEntry[] = [
     icon: 'type',
   },
   {
+    path: '/tools/image-to-text',
+    title: 'המרת תמונה לטקסט בעברית',
+    description: 'ממירים תמונה או צילום מסך לטקסט בעברית ובאנגלית, מתקנים, מעתיקים או פותחים ב-Word. התמונה לא עולה לשרת.',
+    category: 'marketing',
+    icon: 'search',
+  },
+  {
     path: '/tools/israeli-phone-format',
     title: 'קידומת ישראל +972 למספר טלפון',
     description: 'מספר ישראלי בפורמט בינלאומי לוואטסאפ, לחיוג מחו״ל ול-CRM, עם סוג המספר, וניקוי רשימה שלמה לקובץ CSV.',
