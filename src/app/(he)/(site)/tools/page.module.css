@@ -1,62 +1,7 @@
-.jump {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 12px 5.5% 8px;
-}
-
-.jumpLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 48px;
-  padding: 0 20px;
-  border: 1px solid var(--v2-hairline-ink);
-  border-radius: 999px;
-  background: #ffffff;
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--v2-paper-ink);
-  transition: border-color 0.2s ease;
-}
-
-.jumpLink:hover {
-  border-color: var(--v2-paper-ink);
-}
-
-.jumpLink:focus-visible {
-  outline: 2px solid var(--v2-blue);
-  outline-offset: 3px;
-}
-
-.jumpCount {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 24px;
-  height: 24px;
-  padding: 0 6px;
-  border-radius: 999px;
-  background: #eef2fd;
-  font-size: 13px;
-  color: var(--v2-blue);
-  font-variant-numeric: tabular-nums;
-}
-
-.section {
-  padding-top: 72px;
-  padding-bottom: 24px;
-  scroll-margin-top: calc(var(--v2-bar-height) + 24px);
-}
-
 .band {
   width: 100%;
   max-width: 1400px;
-  margin: 72px auto 0;
+  margin: 24px auto 0;
   padding: 0 5.5% 96px;
 }
 
@@ -113,21 +58,12 @@
 }
 
 @media (max-width: 1023px) {
-  .jump,
   .band {
     padding-inline: 20px;
   }
 }
 
 @media (max-width: 640px) {
-  .jump {
-    justify-content: flex-start;
-    padding: 20px 16px 0;
-  }
-
-  .section {
-    padding-top: 48px;
-  }
 
   .band {
     margin-top: 48px;

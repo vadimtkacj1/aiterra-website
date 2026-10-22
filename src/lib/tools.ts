@@ -34,11 +34,59 @@ export const TOOLS_HUB_PATH = '/tools'
 
 export const TOOLS_REVIEWED = '2026-10-22'
 
-export const toolCategories: { id: ToolCategory; label: string; title: string }[] = [
-  { id: 'marketing', label: 'שיווק ועיצוב', title: 'כלים לשיווק, לעיצוב ולאתר' },
-  { id: 'money', label: 'כספים וחישובים', title: 'מחשבונים ומסמכים לעסק' },
-  { id: 'legal', label: 'משפטי ואתר', title: 'המסמכים המשפטיים של האתר' },
-  { id: 'dates', label: 'תאריכים וזמנים', title: 'תאריכים, ימים ושעות' },
+export type ToolCategoryInfo = {
+  id: ToolCategory
+  label: string
+  title: string
+  description: string
+  service: { label: string; text: string; href: string }
+}
+
+export const toolCategories: ToolCategoryInfo[] = [
+  {
+    id: 'marketing',
+    label: 'שיווק ועיצוב',
+    title: 'שיווק ועיצוב',
+    description: 'קודי QR, קישורים לוואטסאפ, חתימות, תמונות ופונטים לעסק ולאתר.',
+    service: {
+      label: 'שיווק ופרסום ממומן',
+      text: 'קמפיינים בגוגל ובמטא, קריאייטיב ודפי נחיתה שנמדדים בעלות לליד.',
+      href: '/services/marketing',
+    },
+  },
+  {
+    id: 'money',
+    label: 'כספים וחישובים',
+    title: 'כספים וחישובים',
+    description: 'מע״מ, אחוזים והצעות מחיר: החישובים שעסק עושה כל יום.',
+    service: {
+      label: 'אוטומציה לעסקים',
+      text: 'הצעות מחיר, חשבוניות ותזכורות תשלום שיוצאים לבד מה-CRM.',
+      href: '/services/automation',
+    },
+  },
+  {
+    id: 'legal',
+    label: 'משפטי ואתר',
+    title: 'משפטי ואתר',
+    description: 'מדיניות פרטיות, הצהרת נגישות ותקנון: הסט המשפטי של כל אתר עסקי.',
+    service: {
+      label: 'תחזוקת אתרים',
+      text: 'עדכוני אבטחה, בדיקות נגישות ועמידה בתיקון 13 באתר קיים.',
+      href: '/services/maintenance',
+    },
+  },
+  {
+    id: 'dates',
+    label: 'תאריכים וזמנים',
+    title: 'תאריכים וזמנים',
+    description: 'תאריך עברי, ימי עבודה ושעות: חישובי זמן בלוח העברי והלועזי.',
+    service: {
+      label: 'פיתוח תוכנה לעסקים',
+      text: 'מערכות תורים, נוכחות ולוחות זמנים שמחשבים תאריכים בדיוק.',
+      href: '/services/development',
+    },
+  },
 ]
 
 export const tools: ToolEntry[] = [
@@ -99,6 +147,20 @@ export const tools: ToolEntry[] = [
     icon: 'receipt',
   },
   {
+    path: '/tools/self-employed-tax-calculator',
+    title: 'מחשבון מס הכנסה לעצמאי 2026',
+    description: 'מס הכנסה, ביטוח לאומי ודמי בריאות לעצמאי לפי מדרגות 2026, עם נטו לחודש ולשנה ומקדמה משוערת.',
+    category: 'money',
+    icon: 'landmark',
+  },
+  {
+    path: '/tools/loan-calculator',
+    title: 'מחשבון הלוואה',
+    description: 'החזר חודשי, סך הריבית ולוח סילוקין מלא בשפיצר, קרן שווה, בלון או גרייס, עם עמלות והשוואה בין שתי הצעות.',
+    category: 'money',
+    icon: 'calculator',
+  },
+  {
     path: '/tools/price-quote-generator',
     title: 'מחולל הצעת מחיר',
     description: 'הצעת מחיר מסודרת עם הנחות, מע״מ או עוסק פטור, מוכנה להדפסה או לשמירה כ-PDF בגודל A4.',
@@ -125,6 +187,27 @@ export const tools: ToolEntry[] = [
     description: 'תקנון לאתר תדמית, לחנות אינטרנטית או לאתר שירותים, עם סעיפי ביטול עסקה לפי חוק הגנת הצרכן.',
     category: 'legal',
     icon: 'scroll',
+  },
+  {
+    path: '/tools/hebrew-date-converter',
+    title: 'המרת תאריך עברי ללועזי',
+    description: 'ממירים תאריך עברי ללועזי ולהפך, כולל אחרי השקיעה ואדר א׳ וב׳, עם גיל עברי ותאריך בר ובת מצווה.',
+    category: 'dates',
+    icon: 'calendarRange',
+  },
+  {
+    path: '/tools/retirement-age-calculator',
+    title: 'מחשבון גיל פרישה',
+    description: 'גיל הפרישה לנשים ולגברים לפי החוק והתיקון של 2022, התאריך המדויק וכמה זמן נשאר.',
+    category: 'dates',
+    icon: 'hourglass',
+  },
+  {
+    path: '/tools/work-hours-calculator',
+    title: 'מחשבון שעות עבודה',
+    description: 'כמה שעות עבדתם, גם במשמרת לילה, בשעות ודקות ובשבר עשרוני, ודוח חודשי עם שעות נוספות ושכר.',
+    category: 'dates',
+    icon: 'clock',
   },
 ]
 

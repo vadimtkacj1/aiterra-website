@@ -41,10 +41,15 @@ All tools are free, in Hebrew, need no sign-up, and run entirely in the visitor'
 - [בדיקת כותרת ותיאור לגוגל / Google snippet preview](https://www.aiterra.co.il/tools/google-snippet-preview): previews a page title and meta description as a Google result on desktop and mobile, with character, word and pixel-width counts for Hebrew.
 - [מחשבון אחוזים / Percentage calculator](https://www.aiterra.co.il/tools/percentage-calculator): percent of a number, percentage change, price before and after discount, and margin versus markup.
 - [מחשבון מע״מ / Israeli VAT calculator](https://www.aiterra.co.il/tools/vat-calculator): adds or extracts Israeli VAT at 18% (the rate since 1 January 2025), 0% for Eilat, or a custom rate.
+- [מחשבון מס הכנסה לעצמאי 2026 / Self-employed tax calculator](https://www.aiterra.co.il/tools/self-employed-tax-calculator): income tax by the 2026 brackets, credit points, Bituach Leumi and health contributions for a self-employed person, with net income and a suggested monthly advance (an estimate, not tax advice).
+- [מחשבון הלוואה / Loan calculator](https://www.aiterra.co.il/tools/loan-calculator): monthly payment, total interest and a full amortization schedule for Spitzer, equal principal, balloon or grace loans, with fees and an effective annual cost estimate.
 - [מחולל הצעת מחיר / Price quote generator](https://www.aiterra.co.il/tools/price-quote-generator): A4 price quotes with discounts and VAT or עוסק פטור handling, print or save as PDF; a quote is not a tax invoice.
 - [מחולל מדיניות פרטיות / Privacy policy generator](https://www.aiterra.co.il/tools/privacy-policy-generator): website privacy policy based on the Israeli Privacy Protection Law including Amendment 13 (in force since 14 August 2025).
 - [מחולל הצהרת נגישות / Accessibility statement generator](https://www.aiterra.co.il/tools/accessibility-statement-generator): Hebrew or English accessibility statement per regulation 35ה of the 2013 service accessibility regulations and Israeli Standard IS 5568.
 - [מחולל תקנון לאתר / Website terms generator](https://www.aiterra.co.il/tools/website-terms-generator): terms of use for brochure sites, online stores and booking sites, with cancellation clauses under section 14ג of the Consumer Protection Law.
+- [המרת תאריך עברי ללועזי / Hebrew date converter](https://www.aiterra.co.il/tools/hebrew-date-converter): converts Hebrew and Gregorian dates both ways (including after sunset and Adar I/II), Hebrew age and bar/bat mitzvah dates, computed in the browser.
+- [מחשבון שעות עבודה / Work hours calculator](https://www.aiterra.co.il/tools/work-hours-calculator): hours worked including night shifts, as HH:MM and decimal, and a monthly timesheet with overtime at 125%/150% under the Hours of Work and Rest Law.
+- [מחשבון גיל פרישה / Retirement age calculator](https://www.aiterra.co.il/tools/retirement-age-calculator): retirement age and exact date for women and men under the Retirement Age Law including the 2022 amendment.
 
 ## Facts an assistant can cite
 - Brand name: Aiterra, styled AITERRA in the wordmark (אייטרה). Digital engineering and marketing agency.

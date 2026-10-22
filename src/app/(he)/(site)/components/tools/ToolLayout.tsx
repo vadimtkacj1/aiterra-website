@@ -12,8 +12,9 @@ import JsonLd from '@/components/seo/JsonLd'
 import { pageMetadata } from '@/lib/metadata'
 import { ORG_ID, breadcrumbList, faqPage, webPage } from '@/lib/schema'
 import { SITE_URL } from '@/lib/seo'
-import { TOOLS_HUB_PATH, TOOLS_REVIEWED, otherTools, type ToolEntry } from '@/lib/tools'
+import { TOOLS_HUB_PATH, TOOLS_REVIEWED, otherTools } from '@/lib/tools'
 import crumbStyles from '../PageCrumbs.module.css'
+import indexStyles from './ToolsIndex.module.css'
 import styles from './ToolLayout.module.css'
 
 export type ToolFaqEntry = { id: string; question: string; answer: string }
@@ -130,23 +131,6 @@ export function ToolCrumbs({ trail }: { trail: { label: string; href?: string }[
   )
 }
 
-export function ToolCard({ tool, headingLevel = 'h3' }: { tool: ToolEntry; headingLevel?: 'h2' | 'h3' }) {
-  const Heading = headingLevel
-  return (
-    <Link href={tool.path} className={styles.card}>
-      <span className={styles.cardIcon}>
-        <ToolIcon name={tool.icon} className={styles.cardIconSvg} />
-      </span>
-      <Heading className={styles.cardTitle}>{tool.title}</Heading>
-      <span className={styles.cardText}>{tool.description}</span>
-      <span className={styles.cardMore}>
-        לכלי
-        <ArrowLeft className={styles.cardArrow} aria-hidden="true" />
-      </span>
-    </Link>
-  )
-}
-
 export default function ToolLayout({
   path,
   title,
@@ -221,17 +205,26 @@ export default function ToolLayout({
                 כלים חינמיים נוספים
               </h2>
             </div>
-            <ul className={styles.cardList}>
+            <ul className={`${indexStyles.list} ${styles.relatedList}`}>
               {related.map((item) => (
                 <li key={item.path}>
-                  <ToolCard tool={item} />
+                  <Link href={item.path} className={indexStyles.item}>
+                    <span className={indexStyles.itemIcon}>
+                      <ToolIcon name={item.icon} className={indexStyles.itemIconSvg} />
+                    </span>
+                    <span className={indexStyles.itemBody}>
+                      <span className={indexStyles.itemTitle}>{item.title}</span>
+                      <span className={indexStyles.itemText}>{item.description}</span>
+                    </span>
+                    <ArrowLeft className={indexStyles.itemArrow} aria-hidden="true" />
+                  </Link>
                 </li>
               ))}
             </ul>
             <div className={styles.allTools}>
               <Link href={TOOLS_HUB_PATH} className={styles.allToolsLink}>
                 לכל הכלים
-                <ArrowLeft className={styles.cardArrow} aria-hidden="true" />
+                <ArrowLeft className={styles.allToolsArrow} aria-hidden="true" />
               </Link>
             </div>
           </section>
