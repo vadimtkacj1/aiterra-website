@@ -12,14 +12,13 @@ import Faq from './components/Faq'
 import ContactForm from './components/ContactForm'
 import Reviews from './components/Reviews'
 import Footer from './components/Footer'
-import HomeJsonLd from './components/HomeJsonLd'
+import HomeJsonLd, { HOME_DESCRIPTION, HOME_TITLE } from './components/HomeJsonLd'
 import { getV2Content } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'אייטרה AITERRA | בניית אתרים, אוטומציה וסוכני AI לעסקים',
-  description:
-    'סוכנות AITERRA בונה אתרים מהירים, מקדמת בגוגל וב-AI (SEO/GEO), מנהלת קמפיינים ומטמיעה אוטומציה וסוכני בינה מלאכותית לעסקים. ספק אחד לכל הדיגיטל.',
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
   path: '/',
   altPath: '/en',
 })

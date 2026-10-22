@@ -16,10 +16,13 @@ import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
 import { faqPage, webPage } from '@/lib/schema'
 
+const HOME_TITLE = 'AITERRA | Custom Web Development and SEO Agency in Israel'
+const HOME_DESCRIPTION =
+  'Aiterra builds custom websites and web platforms in code, then ranks them. Full-stack engineering, SEO and website promotion from one in-house team.'
+
 export const metadata: Metadata = pageMetadata({
-  title: 'AITERRA | Custom Web Development and SEO Agency in Israel',
-  description:
-    'Aiterra builds custom websites and web platforms in code, then ranks them. Full-stack engineering, SEO and website promotion from one in-house team.',
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
   path: '/en',
   locale: 'en',
   altPath: '/',
@@ -36,9 +39,8 @@ export default function EnHomePage() {
       <JsonLd
         data={webPage({
           path: '/en',
-          name: 'Custom Web Development and SEO Agency',
-          description:
-            'Aiterra builds custom websites and web platforms in code, then ranks them. Full-stack engineering, SEO and website promotion from one in-house team.',
+          name: HOME_TITLE,
+          description: HOME_DESCRIPTION,
           locale: 'en',
         })}
       />

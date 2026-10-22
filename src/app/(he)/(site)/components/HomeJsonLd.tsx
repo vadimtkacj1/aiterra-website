@@ -2,9 +2,9 @@ import JsonLd from '@/components/seo/JsonLd'
 import { faqPage, webPage } from '@/lib/schema'
 import { getV2Content } from '@/lib/v2-content-server'
 
-const HOME_TITLE = 'בניית אתרים ושיווק דיגיטלי לעסקים | AITERRA'
-const HOME_DESCRIPTION =
-  'סוכנות AITERRA בונה אתרים מהירים, מקדמת אורגנית (SEO) ומנהלת קמפיינים בגוגל ומטא — ספק אחד לכל הדיגיטל.'
+export const HOME_TITLE = 'אייטרה AITERRA | בניית אתרים, אוטומציה וסוכני AI לעסקים'
+export const HOME_DESCRIPTION =
+  'סוכנות AITERRA בונה אתרים מהירים, מקדמת בגוגל וב-AI (SEO/GEO), מנהלת קמפיינים ומטמיעה אוטומציה וסוכני בינה מלאכותית לעסקים. ספק אחד לכל הדיגיטל.'
 
 export default function HomeJsonLd() {
   const { faqEntries } = getV2Content()
