@@ -70,7 +70,7 @@ services:
     # Bump to force-recreate the container when nginx.docker.conf changes —
     # the bind mount updates the file but nginx never reloads it otherwise
     labels:
-      nginx-config-version: "2026-06-13.1"
+      nginx-config-version: "2026-10-23.1"
     depends_on:
       web:
         condition: service_healthy
