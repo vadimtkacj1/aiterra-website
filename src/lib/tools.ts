@@ -182,6 +182,13 @@ export const tools: ToolEntry[] = [
     icon: 'receipt',
   },
   {
+    path: '/tools/id-number-check',
+    title: 'בדיקת תעודת זהות וספרת ביקורת',
+    description: 'בודקים אם מספר תעודת זהות, ח.פ. או עוסק מורשה תקין לפי ספרת הביקורת, מחשבים ספרת ביקורת ומקבלים נוסחה לאקסל.',
+    category: 'money',
+    icon: 'shield',
+  },
+  {
     path: '/tools/self-employed-tax-calculator',
     title: 'מחשבון מס הכנסה לעצמאי 2026',
     description: 'מס הכנסה, ביטוח לאומי ודמי בריאות לעצמאי לפי מדרגות 2026, עם נטו לחודש ולשנה ומקדמה משוערת.',

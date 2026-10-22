@@ -13,6 +13,7 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/allocation-number': ['חשבונית', 'הנהלת חשבונות', 'icount', 'חשבשבת', 'רואי חשבון'],
   '/tools/vat-calculator': ['מחירים', 'חשבונית', 'הנהלת חשבונות', 'כמה עולה'],
   '/tools/amount-in-words': ['קבלה', 'צ׳ק', "צ'ק", 'הנהלת חשבונות'],
+  '/tools/id-number-check': ['תעודת זהות', 'טפסים', 'טופס', 'פורטל לקוחות'],
   '/tools/self-employed-tax-calculator': ['עצמאי', 'פרילנסר', 'רואי חשבון', 'יועצי מס'],
   '/tools/loan-calculator': ['הלוואה', 'מימון'],
   '/tools/price-quote-generator': ['הצעת מחיר', 'מחירון', 'פרילנסר', 'עלויות'],
