@@ -112,6 +112,13 @@ export const tools: ToolEntry[] = [
     icon: 'message',
   },
   {
+    path: '/tools/whatsapp-auto-reply-messages',
+    title: 'הודעות אוטומטיות לוואטסאפ עסקי',
+    description: 'נוסחים מוכנים להודעת פתיחה, להודעת היעדרות ולתשובות מהירות בוואטסאפ עסקי לפי סוג העסק, וגם מענה אוטומטי למייל.',
+    category: 'marketing',
+    icon: 'message',
+  },
+  {
     path: '/tools/website-spec-template',
     title: 'מסמך אפיון אתר לדוגמה',
     description: 'שאלון אפיון מודרך שיוצר מסמך אפיון מסודר: מטרות, טבלת עמודים, תוכן, פונקציות, נגישות ותקציב, מוכן לשליחה לחברות בניית אתרים.',

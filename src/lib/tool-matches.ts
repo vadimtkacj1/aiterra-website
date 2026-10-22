@@ -4,6 +4,7 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/qr-code-generator': ['qr', 'כרטיס עסק', 'ביקורות', 'דפוס', 'שילוט'],
   '/tools/holiday-greetings': ['ברכ', 'אימייל מרקטינג', 'דיוור', 'ניוזלטר', 'שימור לקוחות'],
   '/tools/whatsapp-link-generator': ['וואטסאפ', 'whatsapp', 'לידים'],
+  '/tools/whatsapp-auto-reply-messages': ['וואטסאפ', 'whatsapp', 'בוט', 'שירות לקוחות', 'מענה'],
   '/tools/website-spec-template': ['אפיון', 'בניית אתר', 'בניית אתרים', 'בחירת ספק', 'סוכנות דיגיטל', 'פרילנסר', 'רידיזיין'],
   '/tools/email-signature-generator': ['אימייל', 'מייל', 'מיתוג'],
   '/tools/creative-brief-template': ['מיתוג', 'קמפיין', 'קריאייטיב', 'פרסום', 'לוגו', 'וידאו'],
