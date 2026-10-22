@@ -1,8 +1,7 @@
 .tool {
   position: relative;
   z-index: 1;
-  margin-top: -120px;
-  padding: 0 5.5% 80px;
+  padding: 8px 5.5% 24px;
   color: var(--v2-paper-ink);
 }
 
@@ -385,8 +384,7 @@
 
 @media (max-width: 640px) {
   .tool {
-    margin-top: -88px;
-    padding: 0 12px 56px;
+    padding: 20px 12px 8px;
   }
 
   .inner {

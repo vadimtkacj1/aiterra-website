@@ -1,0 +1,28 @@
+.term {
+  white-space: nowrap;
+}
+
+.sources {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--v2-hairline-ink);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--v2-paper-ink-muted);
+}
+
+.sources p {
+  margin: 0 0 8px;
+}
+
+.sources strong {
+  color: var(--v2-paper-ink);
+}
+
+.sources ul {
+  margin: 0 0 12px;
+}
+
+.sources li {
+  margin-bottom: 4px;
+}

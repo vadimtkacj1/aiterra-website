@@ -150,3 +150,104 @@ p.statusProblem {
     transition: none;
   }
 }
+
+.mail {
+  overflow: hidden;
+  border: 1px solid rgba(14, 23, 48, 0.12);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 28px 56px -36px rgba(6, 11, 34, 0.5);
+}
+
+.mailBar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 16px;
+  background: var(--v2-ink-deep);
+  color: #ffffff;
+}
+
+.mailDots {
+  display: inline-flex;
+  flex: none;
+  gap: 6px;
+}
+
+.mailDots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.mailBarTitle {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mailFields {
+  padding: 4px 20px;
+  border-bottom: 1px solid #ece7e0;
+}
+
+.mailField {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 40px;
+  border-bottom: 1px solid #f2eee8;
+  font-size: 14px;
+}
+
+.mailField:last-child {
+  border-bottom: 0;
+}
+
+.mailLabel {
+  flex: none;
+  width: 40px;
+  color: var(--v2-paper-ink-muted);
+}
+
+.mailValue {
+  overflow: hidden;
+  color: var(--v2-paper-ink);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mailBody {
+  border: 0;
+  border-radius: 0;
+}
+
+.mailText {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.mailText span {
+  display: block;
+  height: 9px;
+  border-radius: 999px;
+  background: #efebe5;
+}
+
+.mailText span:nth-child(1) {
+  inline-size: 92%;
+}
+
+.mailText span:nth-child(2) {
+  inline-size: 78%;
+}
+
+.mailText span:nth-child(3) {
+  inline-size: 40%;
+}
+
+.wide {
+  flex: 1 1 100%;
+}

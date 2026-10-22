@@ -1,5 +1,6 @@
 'use client'
 
+import { Code, Copy, Type } from 'lucide-react'
 import { useEffect, useId, useState, type ChangeEvent, type ComponentProps, type ReactNode } from 'react'
 import {
   ASSET_PATH,
@@ -422,24 +423,54 @@ export default function EmailSignatureGenerator() {
         <div className={ui.output}>
           <div className={ui.sticky}>
             <h2 className={ui.outputTitle}>החתימה שלכם</h2>
-            <div
-              className={`${ui.paper} ${styles.paper}`}
-              role="region"
-              aria-label="תצוגה מקדימה של החתימה"
-              tabIndex={0}
-            >
-              {empty ? <p className={styles.sample}>זו דוגמה. מלאו את הפרטים והחתימה תתעדכן כאן.</p> : null}
-              <div className={styles.canvas} dir={input.direction} dangerouslySetInnerHTML={{ __html: previewHtml }} />
+            <div className={styles.mail}>
+              <div className={styles.mailBar} aria-hidden="true">
+                <span className={styles.mailDots}>
+                  <span />
+                  <span />
+                  <span />
+                </span>
+                <span className={styles.mailBarTitle}>הודעה חדשה</span>
+              </div>
+              <div className={styles.mailFields} aria-hidden="true">
+                <div className={styles.mailField}>
+                  <span className={styles.mailLabel}>אל</span>
+                  <span className={styles.mailValue} dir="ltr">
+                    client@example.co.il
+                  </span>
+                </div>
+                <div className={styles.mailField}>
+                  <span className={styles.mailLabel}>נושא</span>
+                  <span className={styles.mailValue}>הצעת מחיר ופרטים נוספים</span>
+                </div>
+              </div>
+              <div
+                className={`${ui.paper} ${styles.paper} ${styles.mailBody}`}
+                role="region"
+                aria-label="תצוגה מקדימה של החתימה"
+                tabIndex={0}
+              >
+                <div className={styles.mailText} aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                {empty ? <p className={styles.sample}>זו דוגמה. מלאו את הפרטים והחתימה תתעדכן כאן.</p> : null}
+                <div className={styles.canvas} dir={input.direction} dangerouslySetInnerHTML={{ __html: previewHtml }} />
+              </div>
             </div>
             <div className={ui.actions}>
-              <button type="button" className={ui.primary} onClick={() => copy('rich')}>
+              <button type="button" className={`${ui.primary} ${styles.wide}`} onClick={() => copy('rich')}>
+                <Copy aria-hidden="true" />
                 העתקת החתימה
               </button>
               <button type="button" className={ui.secondary} onClick={() => copy('html')}>
-                העתקת קוד HTML
+                <Code aria-hidden="true" />
+                קוד HTML
               </button>
               <button type="button" className={ui.secondary} onClick={() => copy('text')}>
-                העתקת טקסט בלבד
+                <Type aria-hidden="true" />
+                טקסט בלבד
               </button>
             </div>
             <p

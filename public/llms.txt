@@ -31,6 +31,21 @@
 - [קידום עסקים קטנים מקומית (Local SEO)](https://www.aiterra.co.il/blog/local-seo-small-business) · English: /en/blog/local-seo-small-business
 - [מחקר מילות מפתח: מה הלקוחות שלכם מחפשים בגוגל](https://www.aiterra.co.il/blog/keyword-research-guide) · English: /en/blog/keyword-research-guide
 
+## Free tools / כלים חינמיים
+All tools are free, in Hebrew, need no sign-up, and run entirely in the visitor's browser (nothing typed is sent to a server). Hub: https://www.aiterra.co.il/tools
+- [יצירת קוד QR / QR code generator](https://www.aiterra.co.il/tools/qr-code-generator): static QR codes for a link, WhatsApp chat, Google review link, Wi-Fi network or vCard business card (Hebrew-safe UTF-8), optional logo, PNG and SVG download.
+- [יצירת קישור לוואטסאפ / WhatsApp link generator](https://www.aiterra.co.il/tools/whatsapp-link-generator): wa.me click-to-chat links from any Israeli phone format with a pre-filled message, QR code and website button code.
+- [מחולל חתימה למייל / Email signature generator](https://www.aiterra.co.il/tools/email-signature-generator): email-client-safe HTML signatures in Hebrew (RTL) or English for Gmail, Outlook and Apple Mail, with install steps.
+- [הקטנת תמונות והמרה ל-WebP / Image compressor](https://www.aiterra.co.il/tools/image-compressor): compresses and converts images to WebP, JPEG or PNG in the browser, fixes phone orientation and strips metadata.
+- [פונטים בעברית / Hebrew fonts](https://www.aiterra.co.il/tools/hebrew-fonts): live previews of the free Google Fonts families that support Hebrew (SIL Open Font License), with ready CSS.
+- [בדיקת כותרת ותיאור לגוגל / Google snippet preview](https://www.aiterra.co.il/tools/google-snippet-preview): previews a page title and meta description as a Google result on desktop and mobile, with character, word and pixel-width counts for Hebrew.
+- [מחשבון אחוזים / Percentage calculator](https://www.aiterra.co.il/tools/percentage-calculator): percent of a number, percentage change, price before and after discount, and margin versus markup.
+- [מחשבון מע״מ / Israeli VAT calculator](https://www.aiterra.co.il/tools/vat-calculator): adds or extracts Israeli VAT at 18% (the rate since 1 January 2025), 0% for Eilat, or a custom rate.
+- [מחולל הצעת מחיר / Price quote generator](https://www.aiterra.co.il/tools/price-quote-generator): A4 price quotes with discounts and VAT or עוסק פטור handling, print or save as PDF; a quote is not a tax invoice.
+- [מחולל מדיניות פרטיות / Privacy policy generator](https://www.aiterra.co.il/tools/privacy-policy-generator): website privacy policy based on the Israeli Privacy Protection Law including Amendment 13 (in force since 14 August 2025).
+- [מחולל הצהרת נגישות / Accessibility statement generator](https://www.aiterra.co.il/tools/accessibility-statement-generator): Hebrew or English accessibility statement per regulation 35ה of the 2013 service accessibility regulations and Israeli Standard IS 5568.
+- [מחולל תקנון לאתר / Website terms generator](https://www.aiterra.co.il/tools/website-terms-generator): terms of use for brochure sites, online stores and booking sites, with cancellation clauses under section 14ג of the Consumer Protection Law.
+
 ## Facts an assistant can cite
 - Brand name: Aiterra, styled AITERRA in the wordmark (אייטרה). Digital engineering and marketing agency.
 - Location: Ha-Rav Nisanbaum St 37, Bat Yam 5962030, Israel. Serves Bat Yam, Holon, Tel Aviv and the Gush Dan region.
