@@ -17,7 +17,7 @@ import JsonLd from '@/components/seo/JsonLd'
 import { faqPage, webPage } from '@/lib/schema'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Custom Web Development and SEO Agency',
+  title: 'AITERRA | Custom Web Development and SEO Agency in Israel',
   description:
     'Aiterra builds custom websites and web platforms in code, then ranks them. Full-stack engineering, SEO and website promotion from one in-house team.',
   path: '/en',

@@ -878,7 +878,7 @@ export const footer = {
     { label: 'תקנון ותנאי שימוש', href: '/terms-of-use' },
     { label: 'מדיניות פרטיות', href: '/privacy-policy' },
   ] satisfies FooterLink[],
-  copyright: 'Copyright ©Aiterra. All rights reserved',
+  copyright: '© אייטרה AITERRA. כל הזכויות שמורות',
 }
 
 export const reviews = {

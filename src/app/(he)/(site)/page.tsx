@@ -17,7 +17,7 @@ import { getV2Content } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'בניית אתרים, אוטומציה וסוכני AI לעסקים',
+  title: 'אייטרה AITERRA | בניית אתרים, אוטומציה וסוכני AI לעסקים',
   description:
     'סוכנות AITERRA בונה אתרים מהירים, מקדמת בגוגל וב-AI (SEO/GEO), מנהלת קמפיינים ומטמיעה אוטומציה וסוכני בינה מלאכותית לעסקים. ספק אחד לכל הדיגיטל.',
   path: '/',
