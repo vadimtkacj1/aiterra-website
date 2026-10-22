@@ -71,7 +71,7 @@ export default function WhatsAppLinkGeneratorPage() {
           050-1234567 הופך ל-<code dir="ltr">https://wa.me/972501234567</code>
         </li>
         <li>
-          03-1234567 הופך ל-<code dir="ltr">https://wa.me/97231234567</code>
+          03-6123456 הופך ל-<code dir="ltr">https://wa.me/97236123456</code>
         </li>
       </ul>
       <p>

@@ -126,6 +126,13 @@ export const tools: ToolEntry[] = [
     icon: 'type',
   },
   {
+    path: '/tools/israeli-phone-format',
+    title: 'קידומת ישראל +972 למספר טלפון',
+    description: 'מספר ישראלי בפורמט בינלאומי לוואטסאפ, לחיוג מחו״ל ול-CRM, עם סוג המספר, וניקוי רשימה שלמה לקובץ CSV.',
+    category: 'marketing',
+    icon: 'message',
+  },
+  {
     path: '/tools/email-signature-generator',
     title: 'מחולל חתימה למייל',
     description: 'חתימה מעוצבת למייל בעברית או באנגלית, מוכנה להדבקה ב-Gmail, ב-Outlook וב-Apple Mail.',
