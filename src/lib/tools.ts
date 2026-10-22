@@ -210,6 +210,13 @@ export const tools: ToolEntry[] = [
     icon: 'landmark',
   },
   {
+    path: '/tools/self-employed-pension-deposits',
+    title: 'מחשבון קרן השתלמות ופנסיה לעצמאי',
+    description: 'כמה להפקיד עד 31.12 לקרן השתלמות ולפנסיה לפי תקרות 2026, כולל פנסיה חובה, וכמה מס תחסכו.',
+    category: 'money',
+    icon: 'calculator',
+  },
+  {
     path: '/tools/loan-calculator',
     title: 'מחשבון הלוואה',
     description: 'החזר חודשי, סך הריבית ולוח סילוקין מלא בשפיצר, קרן שווה, בלון או גרייס, עם עמלות והשוואה בין שתי הצעות.',

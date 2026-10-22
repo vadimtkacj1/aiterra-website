@@ -17,6 +17,7 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/israeli-phone-format': ['טלפון', 'אנשי קשר', 'רשימת לקוחות', 'crm', 'דיוור'],
   '/tools/image-to-text': ['מסמכים', 'סריקה', 'הקלדה ידנית', 'ידני'],
   '/tools/self-employed-tax-calculator': ['עצמאי', 'פרילנסר', 'רואי חשבון', 'יועצי מס'],
+  '/tools/self-employed-pension-deposits': ['עצמאי', 'פרילנסר', 'פנסיה', 'קרן השתלמות'],
   '/tools/loan-calculator': ['הלוואה', 'מימון'],
   '/tools/price-quote-generator': ['הצעת מחיר', 'מחירון', 'פרילנסר', 'עלויות'],
   '/tools/nda-generator': ['פרילנסר', 'בחירת ספק', 'פיתוח תוכנה', 'אפליקצי'],
