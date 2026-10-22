@@ -1,0 +1,102 @@
+.sample {
+  margin: 8px 0 20px;
+  padding: 28px 32px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 16px;
+  background: #ffffff;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.sample h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.sample h4 {
+  margin: 20px 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.sample p {
+  margin: 0 0 8px;
+}
+
+.sample ul {
+  margin: 0 0 10px;
+}
+
+.sampleMeta {
+  font-size: 14px;
+  color: var(--v2-paper-ink-muted);
+}
+
+.metaItem {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.sampleIntro {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ece7e0;
+}
+
+.clauseNo {
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.table {
+  width: 100%;
+  margin: 4px 0 14px;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.caption {
+  padding-bottom: 6px;
+  font-size: 13px;
+  text-align: start;
+  color: var(--v2-paper-ink-muted);
+}
+
+.table th,
+.table td {
+  padding: 8px 12px;
+  border: 1px solid #e2ddd6;
+  text-align: start;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.table thead th {
+  background: #f6f4f0;
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.table tbody th {
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.table td:first-child {
+  width: 2.4em;
+  color: var(--v2-paper-ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 640px) {
+  .sample {
+    padding: 20px 16px;
+  }
+
+  .table th,
+  .table td {
+    padding: 7px 8px;
+  }
+}

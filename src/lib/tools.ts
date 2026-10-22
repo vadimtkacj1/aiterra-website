@@ -98,11 +98,25 @@ export const tools: ToolEntry[] = [
     icon: 'qr',
   },
   {
+    path: '/tools/holiday-greetings',
+    title: 'ברכות לחג ללקוחות ולעובדים',
+    description: 'ברכות מוכנות לחנוכה, לראש השנה, לפסח ולכל חג, ללקוחות, לעובדים ולספקים, עם שם העסק ושליחה ישירה בוואטסאפ.',
+    category: 'marketing',
+    icon: 'message',
+  },
+  {
     path: '/tools/whatsapp-link-generator',
     title: 'יצירת קישור לוואטסאפ',
     description: 'קישור ישיר לוואטסאפ עם הודעה מוכנה, קוד QR וכפתור לאתר.',
     category: 'marketing',
     icon: 'message',
+  },
+  {
+    path: '/tools/website-spec-template',
+    title: 'מסמך אפיון אתר לדוגמה',
+    description: 'שאלון אפיון מודרך שיוצר מסמך אפיון מסודר: מטרות, טבלת עמודים, תוכן, פונקציות, נגישות ותקציב, מוכן לשליחה לחברות בניית אתרים.',
+    category: 'marketing',
+    icon: 'file',
   },
   {
     path: '/tools/email-signature-generator',
@@ -138,6 +152,13 @@ export const tools: ToolEntry[] = [
     description: 'אחוז ממספר, שינוי באחוזים, מחיר אחרי ולפני הנחה, ומרווח רווח מול תוספת.',
     category: 'money',
     icon: 'percent',
+  },
+  {
+    path: '/tools/allocation-number',
+    title: 'בדיקת מספר הקצאה לחשבונית',
+    description: 'האם חשבונית מס צריכה מספר הקצאה: הסף לפי תאריך החשבונית, מ-25,000 ₪ ב-2024 ועד 5,000 ₪ מיוני 2026.',
+    category: 'money',
+    icon: 'receipt',
   },
   {
     path: '/tools/vat-calculator',
