@@ -1,0 +1,87 @@
+.sample {
+  margin: 8px 0 20px;
+  padding: 28px 32px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 16px;
+  background: #ffffff;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.sample h3 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.sample h4 {
+  margin: 20px 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.sample p {
+  margin: 0 0 8px;
+}
+
+.sample ul {
+  margin: 0 0 10px;
+}
+
+.sampleMeta {
+  font-size: 14px;
+  text-align: center;
+  color: var(--v2-paper-ink-muted);
+}
+
+.lead {
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.clauseNo {
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.signatures {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid #ece7e0;
+}
+
+.sigGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.sample .sigLine {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.sigLine span {
+  flex: 1;
+  min-width: 60px;
+  border-bottom: 1px solid #8f8a83;
+}
+
+.reviewed {
+  font-size: 14px;
+  color: var(--v2-paper-ink-muted);
+}
+
+@media (max-width: 640px) {
+  .sample {
+    padding: 20px 18px;
+  }
+
+  .sigGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

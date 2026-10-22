@@ -168,6 +168,13 @@ export const tools: ToolEntry[] = [
     icon: 'file',
   },
   {
+    path: '/tools/nda-generator',
+    title: 'מחולל הסכם סודיות (NDA)',
+    description: 'הסכם סודיות הדדי או חד-צדדי בין חברות, מול פרילנסר או עובד, עם חריגים, משך סודיות ופיצוי מוסכם, מוכן להעתקה ולהדפסה.',
+    category: 'legal',
+    icon: 'lock',
+  },
+  {
     path: '/tools/privacy-policy-generator',
     title: 'מחולל מדיניות פרטיות',
     description: 'מדיניות פרטיות לאתר לפי חוק הגנת הפרטיות ותיקון 13: טפסים, עוגיות, דיוור וספקי שירות, מוכנה להעתקה.',
@@ -201,6 +208,13 @@ export const tools: ToolEntry[] = [
     description: 'גיל הפרישה לנשים ולגברים לפי החוק והתיקון של 2022, התאריך המדויק וכמה זמן נשאר.',
     category: 'dates',
     icon: 'hourglass',
+  },
+  {
+    path: '/tools/work-days-calculator',
+    title: 'מחשבון ימי עבודה',
+    description: 'ימי עבודה בין תאריכים לפי החגים בישראל, מועד יעד בימי עסקים ותאריך תשלום בשוטף + 30 עד 90.',
+    category: 'dates',
+    icon: 'calendar',
   },
   {
     path: '/tools/work-hours-calculator',

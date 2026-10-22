@@ -1,0 +1,134 @@
+.anchor {
+  scroll-margin-top: calc(var(--v2-bar-height) + 32px);
+}
+
+.tableWrap {
+  margin: 8px 0 20px;
+  overflow: hidden;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 15px;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+}
+
+.table caption {
+  padding: 14px 16px 8px;
+  font-weight: 600;
+  text-align: start;
+  color: var(--v2-paper-ink);
+}
+
+.colMonth {
+  width: 22%;
+}
+
+.colCount {
+  width: 16%;
+}
+
+.colStrict {
+  width: 20%;
+}
+
+.table th,
+.table td {
+  padding: 10px 14px;
+  border-top: 1px solid #ece7e0;
+  text-align: start;
+  vertical-align: top;
+  overflow-wrap: break-word;
+}
+
+.table thead th {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--v2-paper-ink-muted);
+  background: #f6f4f0;
+  vertical-align: bottom;
+}
+
+.table tbody th,
+.table tfoot th {
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.table tfoot th,
+.table tfoot td {
+  background: #f6f4f0;
+}
+
+.count {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.table .cellList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.table .cellList li {
+  margin: 0 0 4px;
+}
+
+.table .cellList li:last-child {
+  margin-bottom: 0;
+}
+
+.muted {
+  color: var(--v2-paper-ink-muted);
+}
+
+.reviewed {
+  font-size: 14px;
+  color: var(--v2-paper-ink-muted);
+}
+
+@media (max-width: 640px) {
+  .table {
+    font-size: 14px;
+  }
+
+  .colMonth {
+    width: 23%;
+  }
+
+  .colCount {
+    width: 17%;
+  }
+
+  .colStrict {
+    width: 19%;
+  }
+
+  .table th,
+  .table td {
+    padding: 9px 7px;
+  }
+
+  .table thead th {
+    font-size: 13px;
+  }
+
+  .count {
+    font-size: 16px;
+  }
+
+  .table .cellList {
+    font-size: 13px;
+  }
+}
