@@ -175,6 +175,13 @@ export const tools: ToolEntry[] = [
     icon: 'receipt',
   },
   {
+    path: '/tools/amount-in-words',
+    title: "סכום במילים לצ'ק",
+    description: "סכום בספרות למילים בנוסח של צ'ק, חשבונית או קבלה, עם שקלים חדשים ואגורות, וגם מספרים במילים בזכר ובנקבה.",
+    category: 'money',
+    icon: 'receipt',
+  },
+  {
     path: '/tools/self-employed-tax-calculator',
     title: 'מחשבון מס הכנסה לעצמאי 2026',
     description: 'מס הכנסה, ביטוח לאומי ודמי בריאות לעצמאי לפי מדרגות 2026, עם נטו לחודש ולשנה ומקדמה משוערת.',
