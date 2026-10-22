@@ -6,6 +6,7 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/whatsapp-link-generator': ['וואטסאפ', 'whatsapp', 'לידים'],
   '/tools/website-spec-template': ['אפיון', 'בניית אתר', 'בניית אתרים', 'בחירת ספק', 'סוכנות דיגיטל', 'פרילנסר', 'רידיזיין'],
   '/tools/email-signature-generator': ['אימייל', 'מייל', 'מיתוג'],
+  '/tools/creative-brief-template': ['מיתוג', 'קמפיין', 'קריאייטיב', 'פרסום', 'לוגו', 'וידאו'],
   '/tools/image-compressor': ['ביצועים', 'core web vitals', 'איטי', 'מהירות', 'תמונות', 'webp'],
   '/tools/hebrew-fonts': ['עיצוב', 'מיתוג', 'פונט', 'טיפוגרפ', 'ux', 'ui'],
   '/tools/google-snippet-preview': ['seo', 'קידום', 'מילות מפתח', 'ai overviews', 'geo'],

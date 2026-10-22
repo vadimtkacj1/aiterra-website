@@ -140,6 +140,13 @@ export const tools: ToolEntry[] = [
     icon: 'message',
   },
   {
+    path: '/tools/creative-brief-template',
+    title: 'תבנית בריף לקמפיין ולמיתוג',
+    description: 'שאלון מודרך שיוצר בריף מסודר לקמפיין, למיתוג, ללוגו, לסרטון, לאתר או לסושיאל, מוכן להדפסה ולשליחה.',
+    category: 'marketing',
+    icon: 'file',
+  },
+  {
     path: '/tools/email-signature-generator',
     title: 'מחולל חתימה למייל',
     description: 'חתימה מעוצבת למייל בעברית או באנגלית, מוכנה להדבקה ב-Gmail, ב-Outlook וב-Apple Mail.',
