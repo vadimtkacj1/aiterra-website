@@ -1,0 +1,120 @@
+.types {
+  display: grid;
+  gap: 8px;
+}
+
+.typeCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 56px;
+  padding: 12px 14px;
+  border: 1px solid #e2ddd6;
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.typeCard:hover {
+  border-color: #b9b3ab;
+}
+
+.typeCard:has(input:checked) {
+  border-color: rgba(36, 71, 214, 0.55);
+  background: #f3f5fd;
+}
+
+.typeCard:has(input:focus-visible) {
+  outline: 2px solid var(--v2-blue);
+  outline-offset: 2px;
+}
+
+.typeText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.typeName {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--v2-paper-ink);
+}
+
+.typeHint {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--v2-paper-ink-muted);
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hintLink {
+  color: var(--v2-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hintLink:focus-visible {
+  outline: 2px solid var(--v2-blue);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.footer {
+  margin-top: 24px;
+}
+
+.disclaimer {
+  margin: 0 0 14px;
+  padding: 12px 16px;
+  border-inline-start: 3px solid var(--v2-blue);
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+  border-start-end-radius: 12px;
+  border-end-end-radius: 12px;
+  background: #ffffff;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--v2-paper-ink);
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--v2-paper-ink-muted);
+}
+
+.clauseNo {
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.placeholder {
+  padding: 0 2px;
+  border-radius: 4px;
+  background: #fdecb5;
+  color: #2b2300;
+}
+
+@media (max-width: 640px) {
+  .pair {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  div.compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typeCard {
+    transition: none;
+  }
+}

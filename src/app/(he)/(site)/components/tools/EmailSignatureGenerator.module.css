@@ -1,0 +1,152 @@
+.templates {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.templateOption {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 44px;
+  padding: 14px;
+  border: 1px solid #c9c4bd;
+  border-radius: 14px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.templateOption:hover {
+  border-color: #8f8a83;
+}
+
+.templateOption:has(input:checked) {
+  border-color: var(--v2-blue);
+  background: #f2f4fd;
+  box-shadow: inset 0 0 0 1px var(--v2-blue);
+}
+
+.templateOption:has(input:focus-visible) {
+  outline: 2px solid var(--v2-blue);
+  outline-offset: 2px;
+}
+
+.templateText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.templateName {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.templateHint {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--v2-paper-ink-muted);
+}
+
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+}
+
+.inline > label {
+  min-height: 44px;
+  align-items: center;
+}
+
+.colorRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.color {
+  flex: none;
+  width: 64px;
+  height: 48px;
+  padding: 4px;
+  border: 1px solid #c9c4bd;
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.color:focus-visible {
+  outline: 2px solid var(--v2-blue);
+  outline-offset: 2px;
+}
+
+.hex {
+  direction: ltr;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+  color: var(--v2-paper-ink);
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.problem {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #b42318;
+}
+
+.problem:empty {
+  margin-top: -6px;
+}
+
+label.check {
+  min-height: 44px;
+  align-items: center;
+}
+
+.paper {
+  overflow-x: auto;
+}
+
+.sample {
+  margin: 0 0 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed var(--v2-hairline-ink);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--v2-paper-ink-muted);
+}
+
+p.statusProblem {
+  color: #b42318;
+}
+
+.canvas table {
+  border-collapse: collapse;
+}
+
+.canvas img {
+  max-width: none;
+}
+
+@media (max-width: 640px) {
+  .templates,
+  .pair {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .templateOption {
+    transition: none;
+  }
+}

@@ -865,6 +865,7 @@ export const footer = {
         { label: 'תיק עבודות', href: '/projects' },
         { label: 'אודותינו', href: '/about' },
         { label: 'בלוג', href: '/blog' },
+        { label: 'כלים חינמיים', href: '/tools' },
         { label: 'יצירת קשר', href: '/contact' },
         { label: 'English site', href: '/en' },
       ],

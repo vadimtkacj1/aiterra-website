@@ -4,6 +4,7 @@ import { getAllAuthors } from '@/lib/authors-server'
 import { getAllPortfolioProjects } from '@/lib/portfolio-server'
 import { getV2Content } from '@/lib/v2-content-server'
 import { SITE_URL } from '@/lib/seo'
+import { TOOLS_HUB_PATH, tools } from '@/lib/tools'
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
 import { getAllPostsEn } from '@/lib/content-en-blog'
 import { hasCounterpart, toEnglishPath, toHebrewPath } from '@/lib/locale-path'
@@ -36,6 +37,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/blog', changeFrequency: 'weekly', priority: 0.8 },
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
+    { path: TOOLS_HUB_PATH, changeFrequency: 'monthly', priority: 0.7 },
+    ...tools.map((tool) => ({ path: tool.path, changeFrequency: 'monthly' as const, priority: 0.7 })),
   ]
 
   const commercialEntries: MetadataRoute.Sitemap = commercialRoutes.map((r) => ({
