@@ -21,6 +21,7 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/self-employed-pension-deposits': ['עצמאי', 'פרילנסר', 'פנסיה', 'קרן השתלמות'],
   '/tools/loan-calculator': ['הלוואה', 'מימון'],
   '/tools/price-quote-generator': ['הצעת מחיר', 'מחירון', 'פרילנסר', 'עלויות'],
+  '/tools/employment-confirmation-letter': ['עובד', 'גיוס', 'משאבי אנוש', 'מסמכים'],
   '/tools/nda-generator': ['פרילנסר', 'בחירת ספק', 'פיתוח תוכנה', 'אפליקצי'],
   '/tools/privacy-policy-generator': ['פרטיות', 'אבטחה', 'ga4', 'פיקסל', 'אנליטיקס', 'מדידת המרות', 'crm'],
   '/tools/accessibility-statement-generator': ['נגישות', '5568', 'wcag', 'הנגשה'],

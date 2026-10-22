@@ -238,6 +238,13 @@ export const tools: ToolEntry[] = [
     icon: 'file',
   },
   {
+    path: '/tools/employment-confirmation-letter',
+    title: 'מכתב אישור העסקה לעובד',
+    description: 'אישור העסקה לבנק, למשכנתא, לשכירות, לגן או לשגרירות, בעברית או באנגלית, מוכן להדפסה או ל-PDF.',
+    category: 'legal',
+    icon: 'file',
+  },
+  {
     path: '/tools/nda-generator',
     title: 'מחולל הסכם סודיות (NDA)',
     description: 'הסכם סודיות הדדי או חד-צדדי בין חברות, מול פרילנסר או עובד, עם חריגים, משך סודיות ופיצוי מוסכם, מוכן להעתקה ולהדפסה.',
