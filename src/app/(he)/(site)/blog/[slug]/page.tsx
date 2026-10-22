@@ -8,6 +8,7 @@ import ShareButton from '../../components/ShareButton'
 import ActionButton from '../../components/ActionButton'
 import RelatedPosts from '../../components/RelatedPosts'
 import RelatedServices from '../../components/RelatedServices'
+import RelatedTools from '../../components/RelatedTools'
 import ContactForm from '../../components/ContactForm'
 import Footer from '../../components/Footer'
 import type { BlogCard } from '../../components/BlogIndex'
@@ -238,6 +239,8 @@ export default async function V2ArticlePage({ params }: Params) {
             blurb: service.subhead,
           }))}
         />
+
+        <RelatedTools title={post.title} tags={post.tags} excerpt={post.excerpt} seed={slug} />
 
         <RelatedPosts posts={related} />
       </main>

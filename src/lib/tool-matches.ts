@@ -1,0 +1,49 @@
+import { tools, type ToolEntry } from './tools'
+
+const TOOL_KEYWORDS: Record<string, string[]> = {
+  '/tools/qr-code-generator': ['qr', 'כרטיס עסק', 'ביקורות', 'דפוס', 'שילוט'],
+  '/tools/holiday-greetings': ['ברכ', 'אימייל מרקטינג', 'דיוור', 'ניוזלטר', 'שימור לקוחות'],
+  '/tools/whatsapp-link-generator': ['וואטסאפ', 'whatsapp', 'לידים'],
+  '/tools/website-spec-template': ['אפיון', 'בניית אתר', 'בניית אתרים', 'בחירת ספק', 'סוכנות דיגיטל', 'פרילנסר', 'רידיזיין'],
+  '/tools/email-signature-generator': ['אימייל', 'מייל', 'מיתוג'],
+  '/tools/image-compressor': ['ביצועים', 'core web vitals', 'איטי', 'מהירות', 'תמונות', 'webp'],
+  '/tools/hebrew-fonts': ['עיצוב', 'מיתוג', 'פונט', 'טיפוגרפ', 'ux', 'ui'],
+  '/tools/google-snippet-preview': ['seo', 'קידום', 'מילות מפתח', 'ai overviews', 'geo'],
+  '/tools/percentage-calculator': ['roi', 'החזר השקעה', 'המרות', 'תקציב'],
+  '/tools/allocation-number': ['חשבונית', 'הנהלת חשבונות', 'icount', 'חשבשבת', 'רואי חשבון'],
+  '/tools/vat-calculator': ['מחירים', 'חשבונית', 'הנהלת חשבונות', 'כמה עולה'],
+  '/tools/self-employed-tax-calculator': ['עצמאי', 'פרילנסר', 'רואי חשבון', 'יועצי מס'],
+  '/tools/loan-calculator': ['הלוואה', 'מימון'],
+  '/tools/price-quote-generator': ['הצעת מחיר', 'מחירון', 'פרילנסר', 'עלויות'],
+  '/tools/nda-generator': ['פרילנסר', 'בחירת ספק', 'פיתוח תוכנה', 'אפליקצי'],
+  '/tools/privacy-policy-generator': ['פרטיות', 'אבטחה', 'ga4', 'פיקסל', 'אנליטיקס', 'מדידת המרות', 'crm'],
+  '/tools/accessibility-statement-generator': ['נגישות', '5568', 'wcag', 'הנגשה'],
+  '/tools/website-terms-generator': ['תקנון', 'חנות', 'איקומרס', 'woocommerce', 'shopify'],
+  '/tools/work-days-calculator': ['ימי עבודה', 'כמה זמן', 'לוח זמנים', 'התהליך'],
+  '/tools/work-hours-calculator': ['שעות עבודה', 'חיסכון בזמן', 'יעילות', 'משרה'],
+}
+
+const MAX_TOOLS = 3
+
+function seedOffset(seed: string): number {
+  let hash = 0
+  for (let index = 0; index < seed.length; index += 1) {
+    hash = (hash * 31 + seed.charCodeAt(index)) % 100000
+  }
+  return hash
+}
+
+export function relatedTools(haystack: string, seed: string): ToolEntry[] {
+  const text = haystack.toLowerCase()
+  const offset = seedOffset(seed)
+  return tools
+    .map((tool, index) => ({
+      tool,
+      score: (TOOL_KEYWORDS[tool.path] ?? []).filter((keyword) => text.includes(keyword)).length,
+      order: (index + offset) % tools.length,
+    }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score || a.order - b.order)
+    .slice(0, MAX_TOOLS)
+    .map((entry) => entry.tool)
+}
