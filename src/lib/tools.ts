@@ -119,6 +119,13 @@ export const tools: ToolEntry[] = [
     icon: 'file',
   },
   {
+    path: '/tools/keyboard-language-fix',
+    title: 'כתבתי באנגלית במקום בעברית',
+    description: 'הקלדתם בשפה הלא נכונה? מדביקים את הטקסט ומקבלים אותו מתוקן לעברית או לאנגלית לפי המקלדת.',
+    category: 'marketing',
+    icon: 'type',
+  },
+  {
     path: '/tools/email-signature-generator',
     title: 'מחולל חתימה למייל',
     description: 'חתימה מעוצבת למייל בעברית או באנגלית, מוכנה להדבקה ב-Gmail, ב-Outlook וב-Apple Mail.',
