@@ -129,6 +129,12 @@ All tools are free, in Hebrew and need no sign-up. Most run entirely in the visi
 - [מזל סיני לפי תאריך לידה](https://www.aiterra.co.il/tools/chinese-zodiac-finder): Chinese zodiac animal and element by exact birth date (lunar new year dates 1924–2044).
 - [נורות אזהרה ברכב](https://www.aiterra.co.il/tools/car-warning-lights-guide): 17 dashboard warning lights drawn as SVG with meaning, colour urgency and what to do.
 - [שמות לכלבים](https://www.aiterra.co.il/tools/dog-name-generator): 212 Hebrew and English dog names filtered by gender, size and style, with random pick and favourites.
+- [חרוזים למילה](https://www.aiterra.co.il/tools/hebrew-rhyme-finder): Hebrew rhyme dictionary of about 3,400 words and forms, grouped into full, good and near rhymes.
+- [מטרונום אונליין](https://www.aiterra.co.il/tools/online-metronome): Web Audio metronome 30–300 BPM with tap tempo, time signatures, subdivisions and accents.
+- [מחשבון מחזורי שינה](https://www.aiterra.co.il/tools/sleep-cycle-calculator): bedtimes or wake-up times from 4–6 sleep cycles of editable length plus time to fall asleep; general estimate, not medical advice.
+- [ברכה לחתונה](https://www.aiterra.co.il/tools/wedding-blessing-generator): original Hebrew wedding blessings by closeness and tone with the couple's names, a card line and WhatsApp sending.
+- [ברכה לבר מצווה ולבת מצווה](https://www.aiterra.co.il/tools/bar-mitzvah-blessing-generator): original Hebrew bar and bat mitzvah blessings in four tones with gendered grammar and a parents' speech skeleton.
+- [ברכה ליום הולדת](https://www.aiterra.co.il/tools/birthday-blessing-generator): original Hebrew birthday blessings by closeness, age, gender and tone, with a card line and WhatsApp sending.
 
 ## Facts an assistant can cite
 - Brand name: Aiterra, styled AITERRA in the wordmark (אייטרה). Digital engineering and marketing agency.

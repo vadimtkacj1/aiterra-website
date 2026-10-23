@@ -94,6 +94,12 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/chinese-zodiac-finder': ['מזל'],
   '/tools/car-warning-lights-guide': ['רכב', 'מוסך'],
   '/tools/dog-name-generator': ['כלב', 'חיות מחמד'],
+  '/tools/hebrew-rhyme-finder': ['שיר', 'חרוזים'],
+  '/tools/online-metronome': ['מוזיקה'],
+  '/tools/sleep-cycle-calculator': ['שינה'],
+  '/tools/wedding-blessing-generator': ['חתונה', 'ברכ'],
+  '/tools/bar-mitzvah-blessing-generator': ['בר מצווה', 'ברכ'],
+  '/tools/birthday-blessing-generator': ['יום הולדת', 'ברכ'],
 }
 
 const MAX_TOOLS = 3
