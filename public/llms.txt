@@ -114,6 +114,12 @@ All tools are free, in Hebrew and need no sign-up. Most run entirely in the visi
 - [מחשבון ממוצע ציונים משוקלל / Weighted GPA calculator](https://www.aiterra.co.il/tools/gpa-calculator): credit-weighted academic average, pass/fail courses excluded, and the grade needed in remaining credits to reach a target.
 - [ממיר קודי צבע HEX, RGB, HSL / Color code converter](https://www.aiterra.co.il/tools/color-code-converter): HEX, RGB and HSL in sync with a color picker, WCAG contrast check against white and black, and one-click CSS copy.
 - [ממיר מספרים רומיים / Roman numerals converter](https://www.aiterra.co.il/tools/roman-numerals-converter): converts numbers 1 to 3999 to Roman numerals and back, with validation that suggests the standard form and a reference table.
+- [נוסח הזמנה לחתונה / Hebrew wedding invitation text generator](https://www.aiterra.co.il/tools/wedding-invitation-text): builds Hebrew wedding, bar and bat mitzvah invitation text in six tones with the Hebrew date, for copy, WhatsApp and printing, in the browser.
+- [כמה לשים במעטפה בחתונה / Wedding gift amount calculator](https://www.aiterra.co.il/tools/wedding-gift-amount): estimates a wedding envelope range in shekels from per-plate cost, closeness and number of guests, with every assumption editable.
+- [רשימת אריזה לחו״ל / Travel packing checklist](https://www.aiterra.co.il/tools/travel-packing-checklist): builds a printable packing list by trip type, weather and number of days, with checkable items saved in the browser.
+- [כמה צבע צריך / Paint quantity calculator](https://www.aiterra.co.il/tools/paint-quantity-calculator): estimates litres and cans of paint for a room from dimensions, doors, windows, coats and editable coverage taken from Tambour spec pages.
+- [מידת טבעת / Ring size converter](https://www.aiterra.co.il/tools/ring-size-converter): converts finger circumference or ring diameter in millimetres to ISO 8653, US, UK and continental ring sizes, with a full chart and measuring guide.
+- [מחשבון אלכוהול לאירוע / Party alcohol calculator](https://www.aiterra.co.il/tools/party-alcohol-calculator): plans how many bottles of beer, wine and spirits to buy for an event from guests, hours and drink mix, with editable assumptions based on the Ministry of Health standard drink, and a responsible-serving note.
 
 ## Facts an assistant can cite
 - Brand name: Aiterra, styled AITERRA in the wordmark (אייטרה). Digital engineering and marketing agency.

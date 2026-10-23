@@ -79,6 +79,12 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/gpa-calculator': ['לימודים', 'ממוצע'],
   '/tools/color-code-converter': ['עיצוב', 'מיתוג', 'צבע', 'נגישות', 'ux'],
   '/tools/roman-numerals-converter': ['מספרים'],
+  '/tools/wedding-invitation-text': ['הזמנה', 'חתונה', 'אירוע'],
+  '/tools/wedding-gift-amount': ['חתונה', 'אירוע'],
+  '/tools/travel-packing-checklist': ['טיסה', 'חו״ל', 'טיול'],
+  '/tools/paint-quantity-calculator': ['שיפוץ', 'צבע'],
+  '/tools/ring-size-converter': ['תכשיטים', 'חנות'],
+  '/tools/party-alcohol-calculator': ['אירוע', 'מסעדה', 'קייטרינג'],
 }
 
 const MAX_TOOLS = 3
