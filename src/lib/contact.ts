@@ -19,6 +19,7 @@ export const SOCIAL_PROFILES = {
   facebook: 'https://www.facebook.com/profile.php?id=61595777100656',
   x: 'https://x.com/aiterra_il',
   threads: 'https://www.threads.com/@aiterra.il',
+  youtube: 'https://www.youtube.com/@aiterra_il',
 }
 
 export const GOOGLE_BUSINESS_PROFILE_URL = 'https://maps.google.com/?cid=13840747656603668464'
