@@ -1,0 +1,131 @@
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.words {
+  min-height: 180px;
+  font-size: 17px;
+}
+
+.difficulty {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.optionHint {
+  display: block;
+  font-size: 13px;
+  color: var(--v2-paper-ink-muted);
+}
+
+.range {
+  width: 100%;
+  min-height: 44px;
+  accent-color: var(--v2-blue);
+}
+
+.range:focus-visible {
+  outline: 2px solid var(--v2-blue);
+  outline-offset: 2px;
+}
+
+.seedRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.seedRow > div {
+  flex: 1 1 160px;
+}
+
+.grid {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: #ffffff;
+  direction: rtl;
+}
+
+.cell {
+  height: calc((100vw - 64px) / var(--size));
+  padding: 0;
+  border: 1px solid #d9d3cb;
+  text-align: center;
+  vertical-align: middle;
+  font-size: min(22px, calc(56vw / var(--size)));
+  font-weight: 700;
+  line-height: 1;
+  color: var(--v2-paper-ink);
+}
+
+.hit {
+  background: #ffe08a;
+}
+
+.listTitle {
+  margin: 18px 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.list {
+  columns: 2;
+  column-gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--v2-paper-ink);
+}
+
+.where {
+  font-size: 13px;
+  color: var(--v2-paper-ink-muted);
+}
+
+.skipped {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid #e8c48a;
+  border-radius: 12px;
+  background: #fff7e8;
+  font-size: 14px;
+  color: #6b4100;
+}
+
+.skipped p {
+  margin: 0 0 4px;
+  font-weight: 600;
+}
+
+.skipped ul {
+  margin: 0;
+  padding-inline-start: 18px;
+}
+
+.keyToggle {
+  margin-top: 14px;
+}
+
+@media (min-width: 1024px) {
+  .cell {
+    height: min(40px, calc(34vw / var(--size)));
+    font-size: min(22px, calc(30vw / var(--size)));
+  }
+}
+
+@media (max-width: 640px) {
+  .list {
+    columns: 1;
+  }
+}

@@ -60,6 +60,9 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/child-allowance-calculator-2026': ['ילדים', 'ביטוח לאומי', 'קצבה'],
   '/tools/exempt-dealer-threshold': ['עוסק פטור', 'עצמאי', 'פרילנסר', 'מע״מ'],
   '/tools/rental-income-tax-calculator': ['שכר דירה', 'נדל״ן', 'מס הכנסה'],
+  '/tools/hebrew-calendar-2027': ['לוח שנה', 'חגים', 'תאריך עברי'],
+  '/tools/gematria-calculator': ['גימטריה', 'שם העסק', 'מיתוג'],
+  '/tools/word-search-maker': ['תפזורת', 'חינוך', 'הדפסה'],
 }
 
 const MAX_TOOLS = 3

@@ -566,6 +566,30 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-10-23',
     icon: 'landmark',
   },
+  {
+    path: '/tools/hebrew-calendar-2027',
+    title: 'לוח שנה עברי-לועזי 2026–2027',
+    description: 'לוח שנה עברי-לועזי לתשפ״ז, 2026 ו-2027 עם חגים, צומות וראשי חודשים, הדפסה ב-A4 וייצוא החגים ליומן.',
+    category: 'dates',
+    reviewed: '2026-10-23',
+    icon: 'calendar',
+  },
+  {
+    path: '/tools/gematria-calculator',
+    title: 'מחשבון גימטריה',
+    description: 'ערך של מילה, שם או משפט בגימטריה: מספר הכרחי, גדול, קטן וסידורי, אתב״ש ואלב״ם, עם פירוט לכל אות.',
+    category: 'marketing',
+    reviewed: '2026-10-23',
+    icon: 'calculator',
+  },
+  {
+    path: '/tools/word-search-maker',
+    title: 'מחולל תפזורת בעברית',
+    description: 'תפזורת בעברית מרשימת מילים, עם אותיות סופיות, כיוונים ורמות קושי, להדפסה ב-A4 עם דף פתרון.',
+    category: 'marketing',
+    reviewed: '2026-10-23',
+    icon: 'search',
+  },
 ]
 
 export const otherTools = (path: string) => {
