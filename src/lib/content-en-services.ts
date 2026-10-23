@@ -2059,6 +2059,439 @@ export const servicePagesEn: Record<string, ServicePage> = {
       },
     ],
   },
+  'voice-agents': {
+    id: 'voice-agents',
+    crumb: 'Voice AI agents & phone bots',
+    eyebrow: 'Voice AI agents & phone bots',
+    heading: ['Hebrew voice AI agents for business', 'phone answering wired into your systems'],
+    subhead: 'Our voice agent service',
+    lede: 'Answering incoming calls, an after-hours line, appointment booking by phone, outbound reminder calls and a summary of every call written straight into the CRM - a voice agent that speaks Hebrew, runs on top of your existing phone system and hands over to a person the moment it should.',
+    image: '/images/services-view.webp',
+    action: { label: 'Request a voice agent scoping', href: '/en/contact' },
+    metaTitle: 'Hebrew Voice AI Agents for Business - Phone Answering, Booking and Reminder Calls',
+    metaDescription:
+      'Hebrew voice AI agents for Israeli businesses: answering incoming calls, an after-hours line, appointment booking by phone, reminder calls, call summaries into the CRM and handoff to a person. We start with scoping and a voice quality test.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our voice agents'],
+      lede: 'A phone call is less forgiving than a chat: there is no scrolling back, no time to think, and the caller expects an answer immediately. So we test the agent on real calls before it is connected to your line.',
+      outro: 'Want to hear how a voice agent would answer your customers?',
+      action: { label: 'Request a voice agent scoping', href: '/en/contact' },
+      roles: [
+        {
+          id: 'hebrew-quality',
+          title: 'Hebrew quality tested before launch',
+          art: '/images/service-page1.webp',
+          text: 'Hebrew speech recognition and text-to-speech are good today but not perfect: names, addresses, numbers, accents and background noise all trip them up. Before launch we measure how often recognition fails on calls like yours and pick the right engine, rather than promising an accuracy we cannot keep.',
+        },
+        {
+          id: 'handoff',
+          title: 'Handoff to a person without losing the call',
+          art: '/images/service-page2.webp',
+          text: 'The agent knows what it does not know. When the caller is upset, asks for a person or raises something outside the defined scope, the call goes to a team member together with a short summary, so nobody has to explain everything again.',
+        },
+        {
+          id: 'telephony',
+          title: 'Works on the telephony you already have',
+          art: '/images/service-page3.webp',
+          text: 'There is no need to change your number or your exchange. The agent connects through your existing telephony provider or PBX - for example Voicenter, 019, a PBX or Twilio - and takes calls on the number customers already know.',
+        },
+        {
+          id: 'records',
+          title: 'Every call logged and summarised',
+          art: '/images/service-page4.webp',
+          text: 'Each call keeps a summary, the caller\'s details and the action taken, and these flow into the customer record in the CRM automatically. You can review calls and refine the script according to what actually happened.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What we build',
+      heading: ['What a voice agent does in your business'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'inbound',
+          icon: 'orders',
+          title: 'Answering incoming calls',
+          text: 'The agent picks up in the first second, finds out what the caller needs, answers common questions from your own content and routes anyone who needs it to the right person or team.',
+        },
+        {
+          id: 'after-hours',
+          icon: 'club',
+          title: 'An after-hours line',
+          text: 'In the evening, on Saturdays and on holidays calls no longer go unanswered: the agent collects details, sorts by urgency and leaves the team a tidy summary to start the day.',
+        },
+        {
+          id: 'booking',
+          icon: 'catalog',
+          title: 'Appointment booking by phone',
+          text: 'Checking the calendar, booking, changing and cancelling an appointment in one call, with a confirmation message to the customer. Suited to clinics, treatment centres, garages and any business that lives by its calendar.',
+        },
+        {
+          id: 'outbound',
+          icon: 'sales',
+          title: 'Outbound reminder calls',
+          text: 'An appointment reminder, a request to confirm attendance, a follow-up on an open invoice or a follow-up call to a lead. Every call ends with a clear outcome that is recorded in your system.',
+        },
+        {
+          id: 'crm',
+          icon: 'analytics',
+          title: 'Call summaries straight into the CRM',
+          text: 'A transcript, a short summary, the caller\'s intent and the next task are written to the right record, so the team sees exactly what was agreed without listening to recordings.',
+        },
+      ],
+      action: { label: 'Request a voice agent scoping', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How a project runs. Simply.'],
+      lede: 'Every stage ends with your decision whether to continue, and no real call reaches the agent before we have tested it.',
+      steps: [
+        {
+          id: 'scoping',
+          title: 'Call scoping and script',
+          text: 'We go through real calls, map the reasons people phone and define what the agent does, what it hands to a person and what it never does. The stage ends with a written script and a list of integrations.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'pilot',
+          title: 'Pilot and quality test',
+          text: 'We connect the agent to a test line, run simulated calls and a limited number of real ones, and measure speech recognition, response time and the share of calls handed to a person. If quality is not enough, we fix it or stop.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'launch',
+          title: 'Launch and monitoring',
+          text: 'We switch the line, or only the after-hours calls, to the agent, monitor conversations and refine the script according to what happens, and every change is tested before it goes live.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want every call answered, even when nobody is in the office?',
+      action: { label: 'Request a voice agent scoping', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about voice agents and phone bots'],
+    faqEntries: [
+      {
+        question: 'How is a voice agent different from a WhatsApp or chat AI agent?',
+        answer:
+          'The principle is similar, but the channel changes everything. In chat the customer reads and types at their own pace; on the phone they expect an answer within a fraction of a second, interrupt the agent mid-sentence and speak over background noise. So a voice agent needs speech recognition, speech synthesis and turn-taking, and a shorter script. Our chat and WhatsApp agents are described on the AI agents page, and in many projects both channels share the same knowledge base and the same CRM connection. That also drives the architecture: a short response time matters more than a detailed phrasing. That difference shapes the script as well.',
+      },
+      {
+        question: 'How good and accurate is the Hebrew on a call?',
+        answer:
+          'Hebrew speech recognition and synthesis have improved a great deal, but they are still less accurate than English. Common difficulties are personal and street names, phone and ID numbers, different accents, calls from a car or the street, and switching between Hebrew and English terms. So we test the engine on recordings from your business, ask the caller to confirm critical details, and hand over to a person when recognition is uncertain. We do not promise an accuracy figure before we have measured it. Every engine is tested on real recordings, and if it does not reach the bar agreed in advance, we swap it or narrow the range of topics the agent handles.',
+      },
+      {
+        question: 'Are we allowed to record calls handled by a voice agent?',
+        answer:
+          'Recording and processing calls involves personal data, so the subject falls under Israeli privacy and wiretapping rules. In general it is standard practice to tell the caller at the start that the call is recorded and handled by an automated system, and to keep only what is needed for the stated purpose. This is not legal advice: the wording of the notice, the retention period and the legal basis should be confirmed with your own legal counsel, and we configure the system according to their decision. That way the caller knows what is happening with their call, and the business settles its consents and procedures before the agent answers the first call.',
+      },
+      {
+        question: 'Do we need to replace our phone exchange or number?',
+        answer:
+          'Usually not. The agent connects to the telephony you already have. With providers such as Voicenter and 019, with a PBX, or with a service such as Twilio, calls can be routed to the agent by rules - for example only after hours, only when the line is busy, or only on a specific number. The number stays the same, and a call that needs a person returns to your queue or your usual team member. In the feasibility check we confirm which connection your provider supports before any commitment. If you run an older exchange, we plan the link through a SIP gateway or call forwarding instead of replacing your infrastructure.',
+      },
+      {
+        question: 'What happens when the agent does not understand, or the caller wants a person?',
+        answer:
+          'That is part of the design, not an edge case. If the agent fails to understand twice in a row, if the caller asks for a person, or if the call touches a topic defined as sensitive, the call is transferred to a team member or logged as a callback request with a full summary. When nobody is available, the agent says so honestly and commits only to what the business can actually deliver. We review the handoff cases to improve the script over time. That way the caller is never stuck in a loop, and the team receives the calls that really need a person, already knowing what the caller asked for.',
+      },
+      {
+        question: 'What do we get at the end of the project?',
+        answer:
+          'A voice agent running on your line, connected to your calendar and CRM, with a written script you can update and a call log that shows what was said and what was done. You also receive documentation of the telephony connections, the handoff rules and the recording and retention settings. After launch you can continue with monthly maintenance, or take over running the system with your own team. The documentation is written in plain language a non-technical reader can follow, so you do not depend on us to understand what the system does. We can also run a short session for your team on reading the summaries and editing the script themselves.',
+      },
+    ],
+  },
+  'generative-ai': {
+    id: 'generative-ai',
+    crumb: 'Generative AI for marketing content',
+    eyebrow: 'Generative AI for marketing content',
+    heading: ['Generative AI for marketing content', 'images, video and copy in your brand style'],
+    subhead: 'Our generative AI service',
+    lede: 'Product photos and lifestyle images, short videos and reels, ad creative variations, Hebrew copywriting at scale, avatar and voiceover videos and an automated content pipeline from your catalogue - all following a brand style guide, with a human editor approving before anything is published.',
+    image: '/images/services-view.webp',
+    action: { label: 'Request an AI content proposal', href: '/en/contact' },
+    metaTitle: 'Generative AI for Marketing - Images, Video and Hebrew Copy',
+    metaDescription:
+      'Generative AI for marketing content for Israeli businesses: product photos, videos and reels, ad variations, Hebrew copywriting with human editing, avatars and voiceover, and an automated content pipeline from your catalogue.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our generative AI work'],
+      lede: 'You get a lot of content quickly without giving up your brand style or your accountability: rules written in advance, a human check on every item and a record of the tools and licences we used.',
+      outro: 'Want to see how your products would look in AI-generated content?',
+      action: { label: 'Request an AI content proposal', href: '/en/contact' },
+      roles: [
+        {
+          id: 'style-guide',
+          title: 'A style guide a machine can read',
+          art: '/images/service-page1.webp',
+          text: 'Before producing content we write a guide the model can follow: colours, lighting, composition, tone of voice, words you use and words you avoid. That way two people on two different weeks get results that look as if they came from the same hand.',
+        },
+        {
+          id: 'human-review',
+          title: 'A human editor before every publication',
+          art: '/images/service-page2.webp',
+          text: 'AI makes mistakes: an extra finger on a hand, a product that changes shape, a Hebrew sentence that sounds translated. Every image and text is checked by a person against a fixed checklist, and only what is approved goes live.',
+        },
+        {
+          id: 'hebrew',
+          title: 'Natural Hebrew, not translation',
+          art: '/images/service-page3.webp',
+          text: 'Hebrew copy is written and edited to sound like an Israeli brand: the right register, consistent spelling, numbers and punctuation in the correct direction. Someone who knows the market reads everything before it reaches customers.',
+        },
+        {
+          id: 'rights',
+          title: 'Rights, disclosure and transparency',
+          art: '/images/service-page4.webp',
+          text: 'Each project records which tools we used and what their commercial terms are. We label AI-generated content where the law, the platform or good taste requires it, and we never create the likeness or voice of a real person without written consent.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What we build',
+      heading: ['What generative AI does in your marketing'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'product-images',
+          icon: 'catalog',
+          title: 'Product photos and lifestyle images',
+          text: 'A new background for a studio shot, the product placed in a scene, seasonal and holiday versions and images for the site and social - built from a real photo of the product so shape, colour and logo stay true to reality.',
+        },
+        {
+          id: 'video',
+          icon: 'sales',
+          title: 'Short videos and reels',
+          text: 'Animating product images and producing clips of four to fifteen seconds for reels, stories and ads, with Hebrew subtitles and versions in the format each platform expects.',
+        },
+        {
+          id: 'ad-variants',
+          icon: 'sales',
+          title: 'Ad creative variations',
+          text: 'Headlines, wording, images and video cuts across several message angles, ready for A/B testing in campaigns, so you find what works on your audience instead of guessing.',
+        },
+        {
+          id: 'avatar',
+          icon: 'club',
+          title: 'Avatar and voiceover',
+          text: 'Explainer videos with a digital presenter and Hebrew voiceover for training, product and FAQ videos, without booking a studio every time the script changes. Only with licensed voices and characters.',
+        },
+        {
+          id: 'pipeline',
+          icon: 'orders',
+          title: 'An automated content pipeline from the catalogue',
+          text: 'A new product enters the catalogue and the system generates images, a description, a title and tags. Everything waits in a queue for an editor, and only then is it published to the store, so thousands of items do not become endless manual work.',
+        },
+      ],
+      action: { label: 'Request an AI content proposal', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How a project runs. Simply.'],
+      lede: 'We start with a small sample on your own products and continue only if the result fits the brand.',
+      steps: [
+        {
+          id: 'style',
+          title: 'Style guide and pilot',
+          text: 'We collect the brand materials, define the rules and create a few samples on your real products. At the end of the stage you see how it looks and decide whether the style is right, with no commitment to continue.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'production',
+          title: 'Production at scale',
+          text: 'We produce the content in batches, with a human check on every item. Rejected items go back for correction, and approved ones are stored in an organised asset library with a record of the tools and licences.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'pipeline',
+          title: 'Connection and ongoing improvement',
+          text: 'We connect the process to the catalogue, the store and the ad platforms, and review which creatives produced results. On that basis we update the style guide and the instructions given to the models.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want marketing content at scale without losing your brand style?',
+      action: { label: 'Request an AI content proposal', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about generative AI for marketing'],
+    faqEntries: [
+      {
+        question: 'Can we use AI-generated images commercially?',
+        answer:
+          'Usually yes, but it depends on the tool and its terms of use. Some tools allow commercial use only on a paid plan, and others restrict it. In addition, a work created entirely by a machine does not always carry full copyright, which can make it harder to protect against copying. We choose tools with clear commercial terms, keep a record for every project and do not use the likeness or voice of a real person without consent. This is not legal advice, and for sensitive cases it is worth checking with a lawyer before you publish anything. Before release we also check that an image is not too close to a recognisable work by someone else, which is a separate risk from the licence itself.',
+      },
+      {
+        question: 'Do we have to label content as AI-generated?',
+        answer:
+          'There is no single rule for every case. Some platforms, such as social networks and ad networks, ask you to label realistic content created or altered with AI, and transparency duties are arriving in the European Union that may also reach Israeli businesses selling there. Beyond obligation there is trust: customers value honesty. We recommend labelling images of people, avatar videos and synthetic voices, and agreeing at the start of each project what is labelled and where, according to the platform and your audience. Whatever the rule, keep the prompts and original files, because they show who made the content and how, which matters if a claim is ever raised.',
+      },
+      {
+        question: 'How do we stop the content from looking like every other AI output?',
+        answer:
+          'With real source material and with rules. We start from a real photo of the product rather than a written description, define a style guide covering lighting, colour, space and tone, and keep approved examples as a reference for every new item. In text we add brand language, real facts about the product and details only you know. Then a human editor rejects anything that looks generic, flat or strange. The result is not fully automatic, which is exactly why it does not look like the rest of the internet. That keeps the output consistent over months, even when new people or new tools join the process and nobody remembers the original brief.',
+      },
+      {
+        question: 'Does the Hebrew copy sound natural?',
+        answer:
+          'Not always, if you leave it to the model alone. You sometimes get wording that sounds translated, the wrong grammatical gender, reversed punctuation in mixed-direction text or a word no Israeli would say. So Hebrew copy with us is written to a tone guide, checked and edited by a Hebrew speaker who knows the field, and only then released. At large volumes, such as thousands of product descriptions, the editor reviews a large sample against fixed rules and fixes the instructions instead of correcting every sentence one by one. That keeps both speed and quality. When there is doubt about a phrase, the tone guide decides, not the taste of whoever happens to be reviewing that day, which keeps decisions consistent.',
+      },
+      {
+        question: 'What do we get at the end of the project?',
+        answer:
+          'The content itself in the formats suited to the site, the store and social networks, an organised asset library and a written style guide you can keep using. If we build an automated pipeline, you receive it connected to the catalogue and the publishing system, with an approval queue and a record of the tools and licence terms. You can leave ongoing production with us, or take training for your team and work on your own. The guide, the instructions and the assets belong to you, and the process does not depend on a single vendor. The training covers the tools, the checking rules and the labelling, so your team does not need us for every small change to the process.',
+      },
+    ],
+  },
+  'ai-product-development': {
+    id: 'ai-product-development',
+    crumb: 'AI product & SaaS development',
+    eyebrow: 'AI product & SaaS development',
+    heading: ['AI product & SaaS development', 'from idea to MVP to launch'],
+    subhead: 'Our AI product development service',
+    lede: 'A web or mobile app with AI at its core: choosing models and APIs, prompt infrastructure and quality evaluation, cost-per-request control, usage limits and billing, security and abuse prevention - from the first specification to launch, with the code and ownership fully yours.',
+    image: '/images/services-view.webp',
+    action: { label: 'Request a product scoping', href: '/en/contact' },
+    metaTitle: 'AI Product & SaaS Development for Startups and Businesses - Idea to MVP',
+    metaDescription:
+      'AI product development for startups and businesses in Israel: an MVP as a web or mobile app, model selection, quality evaluation, cost control, billing and usage limits, security and full code and IP handover.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our AI product development'],
+      lede: 'An AI product breaks where a demo does not: cost that climbs with every user, answers that change from run to run, and users who push the system. We build for that from day one.',
+      outro: 'Have a product idea and want to know what it takes to ship it?',
+      action: { label: 'Request a product scoping', href: '/en/contact' },
+      roles: [
+        {
+          id: 'mvp',
+          title: 'An MVP you can launch, not a demo',
+          art: '/images/service-page1.webp',
+          text: 'First we define the one thing the product must do well and build only that: a screen, a flow and a model. You reach the market after a few weeks of work and learn from real users before expanding.',
+        },
+        {
+          id: 'evals',
+          title: 'Quality checks before every change',
+          art: '/images/service-page2.webp',
+          text: 'For every AI capability we build a set of examples with the desired answer, including Hebrew edge cases. Every prompt change or model swap is tested against it, so you can upgrade without learning about the damage from your users.',
+        },
+        {
+          id: 'unit-cost',
+          title: 'Cost per request measured from the start',
+          art: '/images/service-page3.webp',
+          text: 'Every model call is logged with its token count and cost, per user and per feature. You see what an active customer costs and can choose a cheaper model, a cache or limits before the bill surprises you.',
+        },
+        {
+          id: 'ownership',
+          title: 'Code and IP are yours, with no lock-in',
+          art: '/images/service-page4.webp',
+          text: 'The repository, infrastructure and accounts are registered in your name from day one, and the keys stay with you. At the end you receive documentation and training, and can continue with an in-house team, another vendor or us.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What we build',
+      heading: ['What a market-ready AI product includes'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'product',
+          icon: 'catalog',
+          title: 'Web or mobile app',
+          text: 'An interface and a server built around the experience your user needs, including sign-in, accounts and administration. We choose whether to start with a website or an app based on where your customers are.',
+        },
+        {
+          id: 'models',
+          icon: 'orders',
+          title: 'Model and API selection',
+          text: 'We compare several model providers on your own examples, define a fallback model in case of an outage or a price change, and separate the code from the provider so it can be swapped.',
+        },
+        {
+          id: 'prompts',
+          icon: 'analytics',
+          title: 'Prompts and quality evaluation',
+          text: 'Prompts are versioned and covered by automated tests that run on every change, with a quality metric that shows whether answers got better or worse.',
+        },
+        {
+          id: 'billing',
+          icon: 'sales',
+          title: 'Billing, plans and usage limits',
+          text: 'Monthly or usage-based payment, quotas per user and plan, and consumption tracking that stops one user from spending everyone\'s budget.',
+        },
+        {
+          id: 'security',
+          icon: 'club',
+          title: 'Security and abuse prevention',
+          text: 'Protection against prompt injection, rate limiting, isolation of customer data from one another and content filtering, so the product stays stable and lawful even when users try to break it.',
+        },
+      ],
+      action: { label: 'Request a product scoping', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How a project runs. Simply.'],
+      lede: 'Every stage ends with your decision whether to continue, so nothing is built before you know the idea survives testing.',
+      steps: [
+        {
+          id: 'scope',
+          title: 'Scoping and feasibility proof',
+          text: 'We define the user, the problem and one core AI capability, and build a prototype that tests on real examples whether the model reaches the required quality. If it does not, we stop before any build investment.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'mvp',
+          title: 'MVP build and closed launch',
+          text: 'We build the product with accounts, billing and cost measurement, and launch to a limited group of users. We track usage, quality and cost per request and fix issues before opening to everyone.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'scale',
+          title: 'Scaling and ownership handover',
+          text: 'We open to the public, add caching, queues and limits according to load, and hand over code, accounts and documentation. After that you can keep developing on your own or leave maintenance with us.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Have an AI product idea and want to check whether it can be launched?',
+      action: { label: 'Request a product scoping', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about AI product and SaaS development'],
+    faqEntries: [
+      {
+        question: 'How is building an AI product different from ordinary software development?',
+        answer:
+          'In ordinary software the same action gives the same result. In an AI product the answer varies, and the cost of each request varies with it. So three layers are added: quality evaluation that measures the answers, cost tracking on every call, and a protection layer against abuse. The rest of the product, such as accounts, interface and payment, is built like any well-made system. If you only need a business system without a model at its core, our custom software development service is the better fit, and if you need an agent that performs tasks, we have a separate service for that. Teams that build these products also need both skills at once: understanding models and running a live service over time.',
+      },
+      {
+        question: 'How long does it take to reach an MVP?',
+        answer:
+          'It depends on scope, but a focused MVP with one core AI capability, one main screen, accounts and basic billing is usually built in a few weeks of work rather than half a year. What mostly sets the difference is the number of capabilities. That is why we begin with a specification that narrows the product to the most important thing and leaves the other ideas for later versions. At the end of scoping you receive a detailed schedule for each stage, with a decision point after the feasibility proof. In practice every new capability goes through a short definition of what counts as a good answer, which prevents surprises after launch.',
+      },
+      {
+        question: 'How do we keep model costs from eating the margin?',
+        answer:
+          'We measure every call per user and per feature, and work out what an active customer costs before pricing is set. Then cost is reduced in several ways: a small model for simple tasks, a cache for repeated questions, shorter context and quotas for each plan. An alert is also defined for unusual consumption, so you do not discover a problem in an invoice. Pricing then rests on real data rather than on a guess, and you can see how each change affects the cost of an average customer. Each of these decisions is recorded in a short document, so anyone who joins the team later understands why the product is built the way it is.',
+      },
+      {
+        question: 'How do you handle security and abuse?',
+        answer:
+          'We limit what the model can see and do: it receives only the current user\'s data, and sensitive actions require confirmation. We add rate limiting, filtering of malicious input and output screening. Customer data is isolated between accounts, and keys stay on the server side only. Suspicious usage is logged as well. In line with Amendment 13 to the Privacy Protection Law, we define in advance which data is stored and for how long. This is not legal advice, and a privacy adviser can review the result if your case requires it. Before launch we also test the product against common bypass attempts, and we repeat the check after every significant change.',
+      },
+      {
+        question: 'Who owns the code and the intellectual property?',
+        answer:
+          'You do. The code, design, prompts and evaluation sets belong to your company, and the repository and the cloud and model-provider accounts are opened in your name from the start. There is no lock-in with us: at the end of the project you receive documentation and training, and development can move to an in-house team. The agreement states this in writing. Open-source components keep their own licences, and we list them so it is clear exactly what the product uses and under which terms. If partners or investors ask for proof of ownership, we can prepare an organised document of the components and licences for them.',
+      },
+      {
+        question: 'Can the product be built without tying it to a single model provider?',
+        answer:
+          'Yes, and we recommend it. An abstraction layer isolates your code from the provider, so changing a model is a configuration change rather than a rewrite. The evaluation set shows straight away whether a new model is better, cheaper or worse on your cases. This protects you from price increases, service interruptions or a newer model that is more cost-effective, and it lets you use several providers in parallel depending on the type of task, for example a strong model for analysis and a cheap one for simple classification. That way the product does not depend on the commercial decisions of one company, and contract and cost management stays in your hands.',
+      },
+    ],
+  },
   'ai-search': {
     id: 'ai-search',
     crumb: 'AI search',
