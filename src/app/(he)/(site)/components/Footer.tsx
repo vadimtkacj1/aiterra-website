@@ -8,7 +8,7 @@ import {
   OFFICE_ADDRESS_HE,
   SOCIAL_PROFILES,
 } from '@/lib/contact'
-import { FacebookIcon, InstagramIcon, TikTokIcon } from './icons'
+import { FacebookIcon, InstagramIcon, ThreadsIcon, TikTokIcon, XIcon } from './icons'
 import FooterSection from './FooterSection'
 import { getContent, type Locale } from '@/lib/v2-content-server'
 import styles from './Footer.module.css'
@@ -40,6 +40,18 @@ export default function Footer({
       label: footer.socialLabels.facebook,
       href: SOCIAL_PROFILES.facebook,
       Icon: FacebookIcon,
+    },
+    {
+      id: 'threads',
+      label: 'Threads',
+      href: SOCIAL_PROFILES.threads,
+      Icon: ThreadsIcon,
+    },
+    {
+      id: 'x',
+      label: 'X',
+      href: SOCIAL_PROFILES.x,
+      Icon: XIcon,
     },
   ].filter((link) => Boolean(link.href))
 
