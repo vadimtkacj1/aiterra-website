@@ -5,6 +5,7 @@ import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { counterpartPath, localeOf } from '@/lib/locale-path'
+import { useLocaleCounterparts } from '@/components/layout/LocaleCounterparts'
 import ActionButton from './ActionButton'
 import { BurgerIcon, ChevronDownIcon, FlagIlIcon, FlagUsIcon } from './icons'
 import {
@@ -74,12 +75,13 @@ export default function Header() {
   }
 
   const pathname = usePathname() ?? '/'
+  const counterparts = useLocaleCounterparts()
   const locale = localeOf(pathname)
   const homeHref = locale === 'en' ? '/en' : '/'
 
   const navItems: NavItem[] = header.nav.map((item) => ({
     label: item.label,
-    href: item.flag ? counterpartPath(pathname, item.flag === 'us' ? 'en' : 'he') : item.href,
+    href: item.flag ? counterpartPath(pathname, item.flag === 'us' ? 'en' : 'he', counterparts) : item.href,
     flag: item.flag,
     overviewLabel: item.overviewLabel,
     children: item.submenu ? submenus[item.submenu] : undefined,

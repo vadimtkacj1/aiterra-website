@@ -8,6 +8,7 @@ import { TOOLS_HUB_PATH, toolReviewed, tools } from '@/lib/tools'
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
 import { getAllPostsEn } from '@/lib/content-en-blog'
 import { hasCounterpart, toEnglishPath, toHebrewPath } from '@/lib/locale-path'
+import { EN_COUNTERPARTS } from '@/lib/locale-counterparts'
 
 export const revalidate = 3600
 
@@ -153,9 +154,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return entries.map((entry) => {
     const path = entry.url.slice(SITE_URL.length) || '/'
-    if (!hasCounterpart(path)) return entry
-    const he = `${SITE_URL}${toHebrewPath(path)}`
-    const en = `${SITE_URL}${toEnglishPath(path)}`
+    if (!hasCounterpart(path, EN_COUNTERPARTS)) return entry
+    const he = `${SITE_URL}${toHebrewPath(path, EN_COUNTERPARTS)}`
+    const en = `${SITE_URL}${toEnglishPath(path, EN_COUNTERPARTS)}`
     return {
       ...entry,
       alternates: { languages: { 'he-IL': he, en, 'x-default': en } },

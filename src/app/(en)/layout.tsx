@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import Script from 'next/script'
 import Providers from '@/components/layout/Providers'
+import LocaleCounterpartsProvider from '@/components/layout/LocaleCounterparts'
+import { EN_POST_SLUGS, EN_SERVICE_SLUG_LIST } from '@/lib/locale-counterparts'
 import OrganizationSchema from '@/components/seo/OrganizationSchema'
 import CookieConsent from '@/components/layout/CookieConsent'
 import WhatsAppButton from '@/components/layout/WhatsAppButton'
@@ -116,7 +118,11 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
           </>
         )}
         <OrganizationSchema />
-        <Providers>{children}</Providers>
+        <Providers>
+          <LocaleCounterpartsProvider posts={EN_POST_SLUGS} services={EN_SERVICE_SLUG_LIST}>
+            {children}
+          </LocaleCounterpartsProvider>
+        </Providers>
         <CookieConsent locale="en" />
         <WhatsAppButton locale="en" />
         <A11yWidgetTweaks locale="en" />
