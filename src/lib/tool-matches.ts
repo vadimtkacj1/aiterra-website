@@ -66,6 +66,9 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/photo-consent-form': ['צילום', 'תמונות', 'אינסטגרם', 'רשתות', 'פרטיות'],
   '/tools/ai-tools-hebrew': ['בינה מלאכותית', 'כלי ai', 'chatgpt', 'אוטומציות ai'],
   '/tools/chatgpt-whatsapp': ['וואטסאפ', 'whatsapp', 'chatgpt', 'בוט'],
+  '/tools/fridge-storage-times': ['מסעדה', 'מזון', 'קייטרינג'],
+  '/tools/shoe-size-chart': ['חנות', 'אופנה', 'איקומרס'],
+  '/tools/death-notice-generator': ['הודעה', 'נוסח'],
 }
 
 const MAX_TOOLS = 3

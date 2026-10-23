@@ -1,0 +1,18 @@
+.ltr {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+.sources li {
+  text-align: start;
+}
+
+.sources a {
+  display: inline;
+  unicode-bidi: isolate;
+}
+
+.reviewed {
+  font-size: 14px;
+  color: var(--v2-paper-ink-muted);
+}

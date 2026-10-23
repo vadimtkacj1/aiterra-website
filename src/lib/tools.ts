@@ -614,6 +614,30 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-10-23',
     icon: 'message',
   },
+  {
+    path: '/tools/fridge-storage-times',
+    title: 'כמה זמן מחזיק במקרר',
+    description: 'טבלת זמני אחסון של 100 מזונות במקרר, במקפיא ובטמפרטורת החדר, עם מקור לכל שורה ממשרדי בטיחות מזון רשמיים.',
+    category: 'marketing',
+    reviewed: '2026-10-23',
+    icon: 'search',
+  },
+  {
+    path: '/tools/shoe-size-chart',
+    title: 'טבלת מידות נעליים',
+    description: 'המרת אורך כף רגל בס״מ למידות ישראל ואירופה, ארה״ב ובריטניה, לגברים, לנשים ולילדים, לפי טבלאות היצרן.',
+    category: 'marketing',
+    reviewed: '2026-10-23',
+    icon: 'calculator',
+  },
+  {
+    path: '/tools/death-notice-generator',
+    title: 'נוסח מודעת אבל',
+    description: 'נוסח מכובד למודעת אבל ולהודעת פטירה, מסורתי או חילוני, עם תאריך עברי, לעיתון, לוואטסאפ, לפייסבוק ולהדפסה.',
+    category: 'dates',
+    reviewed: '2026-10-23',
+    icon: 'scroll',
+  },
 ]
 
 export const otherTools = (path: string) => {
