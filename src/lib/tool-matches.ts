@@ -57,6 +57,9 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/freelancer-hourly-rate': ['פרילנסר', 'עצמאי', 'תמחור', 'הצעת מחיר'],
   '/tools/profit-margin-calculator': ['תמחור', 'רווח', 'חנות', 'מוצרים', 'איקומרס'],
   '/tools/iban-calculator': ['iban', 'העברה בנקאית', 'סליקה', 'תשלומים'],
+  '/tools/child-allowance-calculator-2026': ['ילדים', 'ביטוח לאומי', 'קצבה'],
+  '/tools/exempt-dealer-threshold': ['עוסק פטור', 'עצמאי', 'פרילנסר', 'מע״מ'],
+  '/tools/rental-income-tax-calculator': ['שכר דירה', 'נדל״ן', 'מס הכנסה'],
 }
 
 const MAX_TOOLS = 3

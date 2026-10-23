@@ -542,6 +542,30 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-10-23',
     icon: 'landmark',
   },
+  {
+    path: '/tools/child-allowance-calculator-2026',
+    title: 'מחשבון קצבת ילדים 2026',
+    description: 'קצבת ילדים 2026 לפי הביטוח הלאומי: 173 ₪ לילד הראשון, 219 ₪ לשני עד הרביעי, תוספת 113 ₪ ו-58 ₪ לחיסכון לכל ילד.',
+    category: 'money',
+    reviewed: '2026-10-23',
+    icon: 'calculator',
+  },
+  {
+    path: '/tools/exempt-dealer-threshold',
+    title: 'תקרת עוסק פטור 2026',
+    description: 'תקרת עוסק פטור 2026 היא 122,833 ₪: כמה נשאר עד התקרה, באיזה חודש תעברו אותה ומה קורה כשעוברים לעוסק מורשה.',
+    category: 'money',
+    reviewed: '2026-10-23',
+    icon: 'receipt',
+  },
+  {
+    path: '/tools/rental-income-tax-calculator',
+    title: 'מחשבון מס על שכר דירה',
+    description: 'מס על שכר דירה 2026: פטור עד 5,654 ₪ בחודש, הפחתה שקל מול שקל, מסלול 10% ומסלול רגיל, השוואה בין שלושת המסלולים.',
+    category: 'money',
+    reviewed: '2026-10-23',
+    icon: 'landmark',
+  },
 ]
 
 export const otherTools = (path: string) => {
