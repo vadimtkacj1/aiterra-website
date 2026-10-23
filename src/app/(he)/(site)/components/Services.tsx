@@ -127,6 +127,8 @@ export default function Services() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/services-view-bg.webp"
+              srcSet="/images/services-view-bg-sm.webp 720w, /images/services-view-bg.webp 880w"
+              sizes="(max-width: 640px) 90vw, 880px"
               alt=""
               className={styles.visualImage}
               width={880}
@@ -137,6 +139,8 @@ export default function Services() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/services-view.webp"
+              srcSet="/images/services-view-sm.webp 320w, /images/services-view.webp 486w"
+              sizes="(max-width: 640px) 40vw, 486px"
               alt=""
               className={styles.visualCard}
               width={486}

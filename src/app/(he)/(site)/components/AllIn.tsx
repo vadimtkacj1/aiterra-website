@@ -100,6 +100,10 @@ export default function AllIn() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/hero/hero-aiterra.webp"
+          srcSet="/images/hero/hero-aiterra-sm.webp 420w, /images/hero/hero-aiterra.webp 1362w"
+          sizes="(max-width: 640px) 51vw, 806px"
+          width={1362}
+          height={293}
           alt=""
           className={styles.wordmark}
           aria-hidden="true"

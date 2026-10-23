@@ -5,6 +5,13 @@ import Link from 'next/link'
 import type { AboutRole } from '../content'
 import styles from './About.module.css'
 
+const SMALL_ART: Record<string, string> = {
+  '/images/about-card1.webp': '/images/about-card1-sm.webp',
+  '/images/about-card2.webp': '/images/about-card2-sm.webp',
+  '/images/about-card3.webp': '/images/about-card3-sm.webp',
+  '/images/about-card4.webp': '/images/about-card4-sm.webp',
+}
+
 type AboutRolesProps = {
   roles: AboutRole[]
   href?: string
@@ -47,7 +54,15 @@ export default function AboutRoles({ roles, href }: AboutRolesProps) {
 
             <div className={styles.cardArt}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={role.art} alt="" className={styles.cardArtImage} loading="lazy" decoding="async" />
+              <img
+                src={role.art}
+                srcSet={SMALL_ART[role.art] ? `${SMALL_ART[role.art]} 120w, ${role.art} 250w` : undefined}
+                sizes={SMALL_ART[role.art] ? '(max-width: 640px) 60px, 230px' : undefined}
+                alt=""
+                className={styles.cardArtImage}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
             <h3 className={styles.cardTitle}>
