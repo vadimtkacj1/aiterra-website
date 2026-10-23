@@ -4,7 +4,7 @@ import { getAllAuthors } from '@/lib/authors-server'
 import { getAllPortfolioProjects } from '@/lib/portfolio-server'
 import { getV2Content } from '@/lib/v2-content-server'
 import { SITE_URL } from '@/lib/seo'
-import { TOOLS_HUB_PATH, tools } from '@/lib/tools'
+import { TOOLS_HUB_PATH, toolReviewed, tools } from '@/lib/tools'
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
 import { getAllPostsEn } from '@/lib/content-en-blog'
 import { hasCounterpart, toEnglishPath, toHebrewPath } from '@/lib/locale-path'
@@ -38,7 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
     { path: TOOLS_HUB_PATH, changeFrequency: 'monthly', priority: 0.7 },
-    ...tools.map((tool) => ({ path: tool.path, changeFrequency: 'monthly' as const, priority: 0.7 })),
   ]
 
   const commercialEntries: MetadataRoute.Sitemap = commercialRoutes.map((r) => ({
@@ -46,6 +45,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: latestContent,
     changeFrequency: r.changeFrequency,
     priority: r.priority,
+  }))
+
+  const toolEntries: MetadataRoute.Sitemap = tools.map((tool) => ({
+    url: `${SITE_URL}${tool.path}`,
+    lastModified: new Date(toolReviewed(tool.path)),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
   }))
 
   const landingEntries: MetadataRoute.Sitemap = [
@@ -135,6 +141,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const entries: MetadataRoute.Sitemap = [
     ...commercialEntries,
+    ...toolEntries,
     ...landingEntries,
     ...legalEntries,
     ...serviceEntries,

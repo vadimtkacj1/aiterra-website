@@ -12,7 +12,7 @@ import JsonLd from '@/components/seo/JsonLd'
 import { pageMetadata } from '@/lib/metadata'
 import { ORG_ID, breadcrumbList, faqPage, webPage } from '@/lib/schema'
 import { SITE_URL } from '@/lib/seo'
-import { TOOLS_HUB_PATH, TOOLS_REVIEWED, otherTools } from '@/lib/tools'
+import { TOOLS_HUB_PATH, otherTools, toolReviewed } from '@/lib/tools'
 import crumbStyles from '../PageCrumbs.module.css'
 import indexStyles from './ToolsIndex.module.css'
 import styles from './ToolLayout.module.css'
@@ -52,12 +52,14 @@ export function ToolHero({
   lede,
   chips = [],
   large = false,
+  reviewed,
 }: {
   eyebrow: string
   title: string
   lede: string
   chips?: string[]
   large?: boolean
+  reviewed?: string
 }) {
   return (
     <>
@@ -85,6 +87,11 @@ export function ToolHero({
               {title}
             </h1>
             <p className={styles.lede}>{lede}</p>
+            {reviewed ? (
+              <p className={styles.reviewed}>
+                עודכן ונבדק מול המקורות: <time dateTime={reviewed}>{reviewed.split('-').reverse().join('.')}</time>
+              </p>
+            ) : null}
             {chips.length ? (
               <ul className={styles.chips}>
                 {chips.map((chip) => (
@@ -168,7 +175,7 @@ export default function ToolLayout({
           applicationCategory: 'BusinessApplication',
           operatingSystem: 'Any',
           isAccessibleForFree: true,
-          dateModified: TOOLS_REVIEWED,
+          dateModified: toolReviewed(path),
           offers: { '@type': 'Offer', price: 0, priceCurrency: 'ILS' },
           publisher: { '@id': ORG_ID },
         }}
@@ -176,7 +183,7 @@ export default function ToolLayout({
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header />
       <main id="main-content" className={styles.page}>
-        <ToolHero eyebrow="כלי חינמי" title={title} lede={lede} chips={chips} />
+        <ToolHero eyebrow="כלי חינמי" title={title} lede={lede} chips={chips} reviewed={toolReviewed(path)} />
         <ToolCrumbs
           trail={[
             { label: 'בית', href: '/' },

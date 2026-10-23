@@ -29,6 +29,7 @@ export type ToolEntry = {
   description: string
   category: ToolCategory
   icon: ToolIconName
+  reviewed?: string
 }
 
 export const TOOLS_HUB_PATH = '/tools'
@@ -103,6 +104,7 @@ export const tools: ToolEntry[] = [
     title: 'יצירת ברקוד למוצר',
     description: 'ברקוד EAN-13, UPC-A, EAN-8 או Code 128 עם ספרת ביקורת אוטומטית, להורדה ב-SVG או PNG ולהדפסה על דף מדבקות A4.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'qr',
   },
   {
@@ -124,6 +126,7 @@ export const tools: ToolEntry[] = [
     title: 'הודעות אוטומטיות לוואטסאפ עסקי',
     description: 'נוסחים מוכנים להודעת פתיחה, להודעת היעדרות ולתשובות מהירות בוואטסאפ עסקי לפי סוג העסק, וגם מענה אוטומטי למייל.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'message',
   },
   {
@@ -138,6 +141,7 @@ export const tools: ToolEntry[] = [
     title: 'כתבתי באנגלית במקום בעברית',
     description: 'הקלדתם בשפה הלא נכונה? מדביקים את הטקסט ומקבלים אותו מתוקן לעברית או לאנגלית לפי המקלדת.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'type',
   },
   {
@@ -145,6 +149,7 @@ export const tools: ToolEntry[] = [
     title: 'המרת תמונה לטקסט בעברית',
     description: 'ממירים תמונה או צילום מסך לטקסט בעברית ובאנגלית, מתקנים, מעתיקים או פותחים ב-Word. התמונה לא עולה לשרת.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'search',
   },
   {
@@ -152,6 +157,7 @@ export const tools: ToolEntry[] = [
     title: 'קידומת ישראל +972 למספר טלפון',
     description: 'מספר ישראלי בפורמט בינלאומי לוואטסאפ, לחיוג מחו״ל ול-CRM, עם סוג המספר, וניקוי רשימה שלמה לקובץ CSV.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'message',
   },
   {
@@ -159,6 +165,7 @@ export const tools: ToolEntry[] = [
     title: 'תבנית בריף לקמפיין ולמיתוג',
     description: 'שאלון מודרך שיוצר בריף מסודר לקמפיין, למיתוג, ללוגו, לסרטון, לאתר או לסושיאל, מוכן להדפסה ולשליחה.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'file',
   },
   {
@@ -215,6 +222,7 @@ export const tools: ToolEntry[] = [
     title: "סכום במילים לצ'ק",
     description: "סכום בספרות למילים בנוסח של צ'ק, חשבונית או קבלה, עם שקלים חדשים ואגורות, וגם מספרים במילים בזכר ובנקבה.",
     category: 'money',
+    reviewed: '2026-10-23',
     icon: 'receipt',
   },
   {
@@ -222,6 +230,7 @@ export const tools: ToolEntry[] = [
     title: 'בדיקת חברה לפי ח.פ. או שם',
     description: 'בודקים לפי ח.פ. או לפי שם אם חברה פעילה, מחוקה, בפירוק או מפרת חוק, ממאגר רשם החברות שמתעדכן כל יום.',
     category: 'money',
+    reviewed: '2026-10-23',
     icon: 'search',
   },
   {
@@ -229,6 +238,7 @@ export const tools: ToolEntry[] = [
     title: 'בדיקת תעודת זהות וספרת ביקורת',
     description: 'בודקים אם מספר תעודת זהות, ח.פ. או עוסק מורשה תקין לפי ספרת הביקורת, מחשבים ספרת ביקורת ומקבלים נוסחה לאקסל.',
     category: 'money',
+    reviewed: '2026-10-23',
     icon: 'shield',
   },
   {
@@ -236,6 +246,7 @@ export const tools: ToolEntry[] = [
     title: 'שכר מינימום 2026',
     description: 'שכר המינימום מ-1.4.2026: 6,443.85 ₪ לחודש ו-35.40 ₪ לשעה, לנוער לפי גיל ולמשרה חלקית, ובדיקה אם השכר עומד במינימום.',
     category: 'money',
+    reviewed: '2026-10-23',
     icon: 'calculator',
   },
   {
@@ -250,6 +261,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון קרן השתלמות ופנסיה לעצמאי',
     description: 'כמה להפקיד עד 31.12 לקרן השתלמות ולפנסיה לפי תקרות 2026, כולל פנסיה חובה, וכמה מס תחסכו.',
     category: 'money',
+    reviewed: '2026-10-23',
     icon: 'calculator',
   },
   {
@@ -271,6 +283,7 @@ export const tools: ToolEntry[] = [
     title: 'מכתב אישור העסקה לעובד',
     description: 'אישור העסקה לבנק, למשכנתא, לשכירות, לגן או לשגרירות, בעברית או באנגלית, מוכן להדפסה או ל-PDF.',
     category: 'legal',
+    reviewed: '2026-10-23',
     icon: 'file',
   },
   {
@@ -278,6 +291,7 @@ export const tools: ToolEntry[] = [
     title: 'יצירת חתימה אונליין',
     description: 'חתימה בכתב יד כקובץ PNG שקוף: מציירים עם העכבר, האצבע או עט, או מקלידים שם, ומוסיפים למסמך Word או PDF.',
     category: 'legal',
+    reviewed: '2026-10-23',
     icon: 'signature',
   },
   {
@@ -320,6 +334,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון ימי חופשה לפי ותק',
     description: 'כמה ימי חופשה מגיעים לפי ותק, לפי החוק וצו ההרחבה, בשבוע של 5 או 6 ימים, כולל חלק יחסי לשנה חלקית.',
     category: 'dates',
+    reviewed: '2026-10-23',
     icon: 'calendarRange',
   },
   {
@@ -327,6 +342,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון חופשת לידה',
     description: 'תאריך סיום חופשת הלידה ויום החזרה לעבודה, 26 או 15 שבועות, שבועות בתשלום מביטוח לאומי והגנה מפיטורים.',
     category: 'dates',
+    reviewed: '2026-10-23',
     icon: 'calendar',
   },
   {
@@ -348,6 +364,7 @@ export const tools: ToolEntry[] = [
     title: 'סידור עבודה שבועי למשמרות',
     description: 'בונים סידור משמרות לשבוע עם אילוצים ומילוי אוטומטי, מדפיסים, מורידים לאקסל ושולחים לעובדים בוואטסאפ.',
     category: 'dates',
+    reviewed: '2026-10-23',
     icon: 'calendarRange',
   },
   {
@@ -355,6 +372,7 @@ export const tools: ToolEntry[] = [
     title: 'דוח שעות עבודה חודשי להדפסה',
     description: 'טופס נוכחות חודשי עם שבתות וחגים מסומנים, להדפסה ריק או עם שעות, עם שעות נוספות 125% ו-150% וקובץ ל-Excel.',
     category: 'dates',
+    reviewed: '2026-10-23',
     icon: 'calendar',
   },
   {
@@ -369,6 +387,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון ימי מחלה לפי חוק',
     description: 'כמה ימי מחלה צברתם, יום וחצי לחודש ועד 90, וכמה משלמים על תקופת מחלה: יום ראשון לא, שני ושלישי חצי, מהרביעי מלא.',
     category: 'money',
+    reviewed: '2026-10-23',
     icon: 'calculator',
   },
   {
@@ -376,6 +395,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון הודעה מוקדמת',
     description: 'כמה ימי הודעה מוקדמת מגיעים בפיטורים ובהתפטרות, לעובד חודשי ולעובד שעתי, ובאיזה תאריך תקופת ההודעה מסתיימת.',
     category: 'dates',
+    reviewed: '2026-10-23',
     icon: 'hourglass',
   },
   {
@@ -383,6 +403,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון דמי הבראה 2026',
     description: 'דמי הבראה 2026 במגזר הפרטי לפי 451.50 ₪ ליום: 5 עד 10 ימים לפי ותק, משרה חלקית, חלק משנה והשלמה מ-418 ₪.',
     category: 'money',
+    reviewed: '2026-10-23',
     icon: 'receipt',
   },
   {
@@ -390,6 +411,7 @@ export const tools: ToolEntry[] = [
     title: 'שער יציג לחשבונית לפי תאריך',
     description: 'השער היציג של בנק ישראל לכל תאריך, המרה לשקלים ובחזרה עם מע״מ, ושורה מוכנה לחשבונית במטבע חוץ.',
     category: 'money',
+    reviewed: '2026-10-23',
     icon: 'landmark',
   },
   {
@@ -397,6 +419,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון ימים בין תאריכים',
     description: 'כמה ימים, שבועות וחודשים יש בין תאריכים, הוספת ימים לתאריך וספירה לאחור לחגים, עם קישור לשיתוף.',
     category: 'dates',
+    reviewed: '2026-10-23',
     icon: 'calendarRange',
   },
   {
@@ -404,6 +427,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון הצמדה למדד',
     description: 'שכר דירה או כל סכום צמוד למדד המחירים לצרכן, לפי מדד ידוע או מדד בגין, עם רצפה והודעה מוכנה למשכיר.',
     category: 'money',
+    reviewed: '2026-10-23',
     icon: 'percent',
   },
   {
@@ -411,6 +435,7 @@ export const tools: ToolEntry[] = [
     title: 'ביטול עסקה: עד מתי ובכמה',
     description: 'עד מתי אפשר לבטל עסקה באינטרנט, בטלפון או בחנות, כמה דמי ביטול מותר לגבות, ונוסח מוכן להודעת ביטול.',
     category: 'legal',
+    reviewed: '2026-10-23',
     icon: 'shield',
   },
   {
@@ -418,6 +443,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון עלות WhatsApp Business API',
     description: 'כמה עולה וואטסאפ עסקי API בחודש: תעריפי Meta לישראל מ-1.10.2026 לכל סוג הודעה, בדולרים ובשקלים.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'message',
   },
   {
@@ -425,6 +451,7 @@ export const tools: ToolEntry[] = [
     title: 'בדיקת נראות האתר בבינה מלאכותית',
     description: 'בודקים אם ChatGPT, Gemini, Perplexity וגוגל יכולים לקרוא את האתר: robots.txt לכל בוט AI, חסימה ב-Cloudflare, noindex וטקסט בלי JavaScript.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'search',
   },
   {
@@ -432,6 +459,7 @@ export const tools: ToolEntry[] = [
     title: 'גודל תמונה לאינסטגרם ולרשתות',
     description: '24 גדלים לאינסטגרם, סטורי, פייסבוק, וואטסאפ, טיקטוק, לינקדאין, יוטיוב וגוגל, עם חיתוך והורדה בגודל המדויק.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'image',
   },
   {
@@ -439,6 +467,7 @@ export const tools: ToolEntry[] = [
     title: 'ספירת מילים ותווים בעברית',
     description: 'סופרים מילים ותווים בעברית, זמן קריאה ומגבלות התווים של X, SMS, אינסטגרם וגוגל, ומסירים ניקוד בלחיצה.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'type',
   },
   {
@@ -446,6 +475,7 @@ export const tools: ToolEntry[] = [
     title: 'מחולל פרומפטים בעברית',
     description: 'בוחרים משימה לעסק וממלאים פרטים, ומקבלים פרומפט מוכן ל-ChatGPT, ל-Claude ול-Gemini, ועוד 37 פרומפטים מוכנים.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'message',
   },
   {
@@ -453,6 +483,7 @@ export const tools: ToolEntry[] = [
     title: 'מילון מונחי בינה מלאכותית',
     description: '90 מונחים בעברית פשוטה: מה זה טוקן, פרומפט, LLM, RAG, MCP, סוכן AI ו-GEO, עם דוגמה מהעסק.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'search',
   },
   {
@@ -460,6 +491,7 @@ export const tools: ToolEntry[] = [
     title: 'כמה עולה ChatGPT בשקלים',
     description: 'מחירי ChatGPT, Claude, Gemini, Copilot ו-Perplexity בשקלים: Plus ב-70 ₪ בישראל, חיוב חודשי או שנתי ועלות לצוות.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'receipt',
   },
   {
@@ -467,6 +499,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון טוקנים ועלות API',
     description: 'כמה טוקנים יש בטקסט בעברית וכמה זה עולה ב-GPT, Claude ו-Gemini: מחירים למיליון טוקנים ועלות חודשית בשקלים.',
     category: 'marketing',
+    reviewed: '2026-10-23',
     icon: 'calculator',
   },
   {
@@ -474,6 +507,7 @@ export const tools: ToolEntry[] = [
     title: 'מכתב התראה ללקוח שלא משלם',
     description: 'תזכורת תשלום, דרישה רשמית או מכתב התראה לפני תביעה, עם טבלת חשבוניות, מועד תשלום והודעה לוואטסאפ.',
     category: 'legal',
+    reviewed: '2026-10-23',
     icon: 'receipt',
   },
   {
@@ -481,6 +515,7 @@ export const tools: ToolEntry[] = [
     title: 'מדיניות שימוש בבינה מלאכותית',
     description: 'נוהל AI לעובדים בעברית: כלים מאושרים, מידע אסור לפי חוק הגנת הפרטיות ותיקון 13, בדיקת תוצרים והצהרת עובד.',
     category: 'legal',
+    reviewed: '2026-10-23',
     icon: 'shield',
   },
   {
@@ -488,6 +523,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון תעריף שעתי לפרילנסר',
     description: 'כמה לגבות לשעה כעצמאי: תעריף לפי נטו רצוי, הוצאות, שעות לחיוב, מס 2026 ומע״מ לעוסק מורשה או פטור.',
     category: 'money',
+    reviewed: '2026-10-23',
     icon: 'clock',
   },
   {
@@ -495,6 +531,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון רווח גולמי ותמחור מוצר',
     description: 'מחיר מכירה לפי מרווח או תוספת על העלות, לפני ואחרי מע״מ, ונקודת איזון לפי הוצאות קבועות.',
     category: 'money',
+    reviewed: '2026-10-23',
     icon: 'percent',
   },
   {
@@ -502,6 +539,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון IBAN ישראלי',
     description: 'IBAN לכל בנק בישראל מקוד בנק, סניף וחשבון, לפי נוסחת בנק ישראל, ובדיקה אם IBAN קיים תקין.',
     category: 'money',
+    reviewed: '2026-10-23',
     icon: 'landmark',
   },
 ]
@@ -515,5 +553,8 @@ export const otherTools = (path: string) => {
     ...rest.filter((tool) => tool.category !== current.category),
   ]
 }
+
+export const toolReviewed = (path: string) =>
+  tools.find((tool) => tool.path === path)?.reviewed ?? TOOLS_REVIEWED
 
 export const toolsIn = (category: ToolCategory) => tools.filter((tool) => tool.category === category)
