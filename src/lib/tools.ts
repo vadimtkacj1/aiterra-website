@@ -98,6 +98,13 @@ export const tools: ToolEntry[] = [
     icon: 'qr',
   },
   {
+    path: '/tools/barcode-generator',
+    title: 'יצירת ברקוד למוצר',
+    description: 'ברקוד EAN-13, UPC-A, EAN-8 או Code 128 עם ספרת ביקורת אוטומטית, להורדה ב-SVG או PNG ולהדפסה על דף מדבקות A4.',
+    category: 'marketing',
+    icon: 'qr',
+  },
+  {
     path: '/tools/holiday-greetings',
     title: 'ברכות לחג ללקוחות ולעובדים',
     description: 'ברכות מוכנות לחנוכה, לראש השנה, לפסח ולכל חג, ללקוחות, לעובדים ולספקים, עם שם העסק ושליחה ישירה בוואטסאפ.',

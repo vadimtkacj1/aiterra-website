@@ -2,6 +2,7 @@ import { tools, type ToolEntry } from './tools'
 
 const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/qr-code-generator': ['qr', 'כרטיס עסק', 'ביקורות', 'דפוס', 'שילוט'],
+  '/tools/barcode-generator': ['ברקוד', 'מלאי', 'קטלוג', 'מוצרים', 'חנות'],
   '/tools/holiday-greetings': ['ברכ', 'אימייל מרקטינג', 'דיוור', 'ניוזלטר', 'שימור לקוחות'],
   '/tools/whatsapp-link-generator': ['וואטסאפ', 'whatsapp', 'לידים'],
   '/tools/whatsapp-auto-reply-messages': ['וואטסאפ', 'whatsapp', 'בוט', 'שירות לקוחות', 'מענה'],
