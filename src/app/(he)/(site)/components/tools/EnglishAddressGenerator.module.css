@@ -1,0 +1,9 @@
+.address {
+  margin: 0;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--v2-paper-ink);
+}

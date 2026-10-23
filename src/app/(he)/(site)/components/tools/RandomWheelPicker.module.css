@@ -1,0 +1,48 @@
+.names {
+  min-height: 320px;
+  line-height: 1.7;
+}
+
+.stage {
+  position: relative;
+  width: min(100%, 460px);
+  margin-inline: auto;
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.pointer {
+  position: absolute;
+  inset-block-start: -4px;
+  inset-inline: 0;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  margin-inline: auto;
+  background: #060b22;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.centered {
+  justify-content: center;
+}
+
+.result {
+  min-height: 40px;
+  margin: 16px 0 0;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--v2-paper-ink);
+}
+
+.centered button:disabled,
+.names ~ div button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

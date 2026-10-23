@@ -72,6 +72,10 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/flight-time-from-israel': ['טיסה', 'חו״ל', 'תיירות'],
   '/tools/time-difference-israel': ['חו״ל', 'לקוחות בחו״ל', 'שעות'],
   '/tools/hebrew-name-to-english': ['שם העסק', 'דומיין', 'אנגלית'],
+  '/tools/random-wheel-picker': ['הגרלה', 'אינסטגרם', 'רשתות'],
+  '/tools/idf-ranks-chart': ['צבא', 'מילואים'],
+  '/tools/cooking-times-chart': ['מסעדה', 'מזון', 'קייטרינג'],
+  '/tools/english-address-generator': ['משלוח', 'חו״ל', 'איקומרס', 'חנות'],
 }
 
 const MAX_TOOLS = 3

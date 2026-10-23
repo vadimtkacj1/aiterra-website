@@ -1,0 +1,218 @@
+.panel {
+  display: block;
+  padding: 28px 36px 36px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 28px;
+  align-items: start;
+}
+
+.main {
+  min-width: 0;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.grow {
+  flex: 1 1 240px;
+}
+
+.tableWrap {
+  margin-top: 20px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 16px;
+  overflow-x: auto;
+}
+
+.tableWrap:focus-visible {
+  outline: 2px solid var(--v2-blue);
+  outline-offset: 2px;
+}
+
+.table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.table caption {
+  padding: 12px 16px;
+  font-weight: 600;
+  text-align: start;
+}
+
+.table th,
+.table td {
+  padding: 9px 12px;
+  border-top: 1px solid #ece7e0;
+  text-align: start;
+  vertical-align: top;
+}
+
+.table thead th {
+  background: #f6f4f0;
+  color: var(--v2-paper-ink-muted);
+  font-size: 14px;
+}
+
+.groupRow th {
+  background: #eef1fb;
+}
+
+.time {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.safe {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #8a2c0d;
+}
+
+.timerButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid #d6d0c8;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--v2-paper-ink);
+  font: inherit;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.timerButton svg {
+  width: 16px;
+  height: 16px;
+}
+
+.timerButton:hover {
+  border-color: var(--v2-paper-ink);
+}
+
+.timerButton:focus-visible,
+.remove:focus-visible {
+  outline: 2px solid var(--v2-blue);
+  outline-offset: 2px;
+}
+
+.empty {
+  min-height: 20px;
+  margin: 12px 0 0;
+  color: var(--v2-paper-ink-muted);
+}
+
+.timers {
+  position: sticky;
+  top: calc(var(--v2-bar-height) + 28px);
+  padding: 20px;
+  border-radius: 20px;
+  background: #f4f0ea;
+}
+
+.custom {
+  display: grid;
+  gap: 10px;
+}
+
+.timerList {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timerItem {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto 44px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px 8px 12px;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.timerItem[data-done='true'] {
+  background: #fff1d6;
+}
+
+.timerName {
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+.clock {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 20px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.clock svg {
+  width: 18px;
+  height: 18px;
+}
+
+.remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--v2-paper-ink);
+  cursor: pointer;
+}
+
+.remove svg {
+  width: 18px;
+  height: 18px;
+}
+
+.srOnly {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 1023px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .timers {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel {
+    padding: 20px 14px 28px;
+  }
+}

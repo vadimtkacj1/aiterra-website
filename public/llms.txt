@@ -107,6 +107,10 @@ All tools are free, in Hebrew and need no sign-up. Most run entirely in the visi
 - [כמה זמן טיסה מישראל / Flight time from Israel](https://www.aiterra.co.il/tools/flight-time-from-israel): typical (estimated) direct and one-stop flight durations, distance and time difference for 70+ destinations from Ben Gurion, plus a distance-based flight time estimator.
 - [הפרש שעות ישראל / Time difference from Israel](https://www.aiterra.co.il/tools/time-difference-israel): live clock and DST-aware time difference between Israel and 60+ cities, winter and summer offset table, and a work-hours meeting planner.
 - [איך כותבים שם באנגלית / Hebrew name to English](https://www.aiterra.co.il/tools/hebrew-name-to-english): Hebrew first names and surnames with common Latin spellings (380+ names), rule-based transliteration for unlisted names, passport-style uppercase and copy buttons.
+- [גלגל מזל להגרלת שמות / Random wheel picker](https://www.aiterra.co.il/tools/random-wheel-picker): spins a wheel over a list of names, picks the winner with crypto-grade randomness, removes the winner, shares the list by URL, keyboard and reduced-motion friendly.
+- [דרגות בצה״ל לפי הסדר / IDF ranks in order](https://www.aiterra.co.il/tools/idf-ranks-chart): all IDF enlisted, NCO and officer ranks in order with Hebrew abbreviations, English names, NATO codes for officers, searchable, with a rank comparison box. Unofficial.
+- [כמה זמן לבשל? טבלת זמני בישול וטיימר / Cooking times chart](https://www.aiterra.co.il/tools/cooking-times-chart): 70 foods with method and approximate time, USDA minimum safe internal temperatures, and a built-in multi-timer.
+- [איך כותבים כתובת באנגלית / Hebrew address to English](https://www.aiterra.co.il/tools/english-address-generator): converts an Israeli address into English line order for forms and international shipping, with city names from the data.gov.il settlements dataset and a link to the Israel Post zip lookup; never invents a postcode.
 
 ## Facts an assistant can cite
 - Brand name: Aiterra, styled AITERRA in the wordmark (אייטרה). Digital engineering and marketing agency.

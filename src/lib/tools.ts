@@ -662,6 +662,38 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-10-23',
     icon: 'type',
   },
+  {
+    path: '/tools/random-wheel-picker',
+    title: 'גלגל מזל להגרלת שמות',
+    description: 'מדביקים רשימת שמות, מסובבים ומקבלים זוכה אקראי: הסרת הזוכה, שיתוף בקישור, הפעלה מהמקלדת.',
+    category: 'marketing',
+    reviewed: '2026-10-23',
+    icon: 'calculator',
+  },
+  {
+    path: '/tools/idf-ranks-chart',
+    title: 'דרגות בצה״ל לפי הסדר',
+    description: 'טבלת דרגות צה״ל: חוגרים, נגדים וקצינים, עם ראשי תיבות, שם באנגלית ותיאור סימן הדרגה.',
+    category: 'dates',
+    reviewed: '2026-10-23',
+    icon: 'search',
+  },
+  {
+    path: '/tools/cooking-times-chart',
+    title: 'טבלת זמני בישול וטיימר',
+    description: 'כמה זמן לבשל אורז, ביצים, פסטה, קטניות, ירקות, עוף ובשר: 70 מאכלים, טמפרטורות בטוחות לפי USDA וטיימר.',
+    category: 'dates',
+    reviewed: '2026-10-23',
+    icon: 'hourglass',
+  },
+  {
+    path: '/tools/english-address-generator',
+    title: 'איך כותבים כתובת באנגלית',
+    description: 'כתובת ישראלית בעברית הופכת לכתובת באנגלית בסדר הנכון לטפסים ולמשלוחים לחו״ל, עם שם העיר מהרשימה הממשלתית.',
+    category: 'marketing',
+    reviewed: '2026-10-23',
+    icon: 'mail',
+  },
 ]
 
 export const otherTools = (path: string) => {
