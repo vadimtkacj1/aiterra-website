@@ -6,6 +6,7 @@ import OrganizationSchema from '@/components/seo/OrganizationSchema'
 import CookieConsent from '@/components/layout/CookieConsent'
 import WhatsAppButton from '@/components/layout/WhatsAppButton'
 import A11yWidgetTweaks from '@/components/layout/A11yWidgetTweaks'
+import DeferredThirdParty from '@/components/layout/DeferredThirdParty'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import '../../styles/globals.css'
 
@@ -93,17 +94,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           דלגו לתוכן הראשי
         </a>
-        {/* Sienna accessibility widget (open source) — floating a11y menu
-            (contrast, text size, stop animations, screen-reader hints etc.).
-            Renders in Hebrew via html lang="he". lazyOnload: the button is
-            not part of the initial paint, so keep it off the LCP path. */}
-        <Script
-          src="https://website-widgets.pages.dev/dist/sienna.min.js"
-          strategy="lazyOnload"
-        />
-        <Script id="microsoft-clarity" strategy="lazyOnload">
-          {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "wjb2tel6du");`}
-        </Script>
         {GA_ID && (
           <>
             {/* Google Analytics 4 — Consent Mode v2. The tag loads on every page
@@ -148,6 +138,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <CookieConsent />
         <WhatsAppButton />
         <A11yWidgetTweaks />
+        <DeferredThirdParty />
       </body>
     </html>
   )

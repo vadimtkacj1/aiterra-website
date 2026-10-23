@@ -6,6 +6,7 @@ import OrganizationSchema from '@/components/seo/OrganizationSchema'
 import CookieConsent from '@/components/layout/CookieConsent'
 import WhatsAppButton from '@/components/layout/WhatsAppButton'
 import A11yWidgetTweaks from '@/components/layout/A11yWidgetTweaks'
+import DeferredThirdParty from '@/components/layout/DeferredThirdParty'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import '../../styles/globals.css'
 
@@ -88,13 +89,6 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
         >
           Skip to main content
         </a>
-        <Script
-          src="https://website-widgets.pages.dev/dist/sienna.min.js"
-          strategy="lazyOnload"
-        />
-        <Script id="microsoft-clarity" strategy="lazyOnload">
-          {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "wjb2tel6du");`}
-        </Script>
         {GA_ID && (
           <>
             <Script id="ga-consent-default" strategy="beforeInteractive">{`
@@ -126,6 +120,7 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
         <CookieConsent locale="en" />
         <WhatsAppButton locale="en" />
         <A11yWidgetTweaks locale="en" />
+        <DeferredThirdParty />
       </body>
     </html>
   )
