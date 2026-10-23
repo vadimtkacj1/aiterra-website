@@ -12,6 +12,8 @@ export const EN_SERVICE_SLUGS = [
   'maintenance',
   'ai-agents',
   'ai-search',
+  'machine-learning',
+  'computer-vision',
 ] as const
 
 export const contentEn: Partial<V2Content> = {
@@ -374,6 +376,42 @@ export const contentEn: Partial<V2Content> = {
       ],
       action: { label: 'AI search visibility', href: '/en/services/ai-search' },
     },
+    {
+      id: 'machine-learning',
+      label: 'Machine learning',
+      tags: [
+        'Demand and sales forecasting',
+        'Lead scoring',
+        'Churn risk',
+        'Store recommendations',
+        'Hebrew text classification',
+        'Dashboards and BI',
+      ],
+      question: 'What is different about our data science work?',
+      paragraphs: [
+        'We start with the data you already have and a baseline: how well the current method performs. A model that does not beat it on data it has never seen does not go live.',
+        'The prediction lands where the decision is made - the CRM, the inventory system or a dashboard - and stays under monitoring, because markets and customers change and the model has to change with them.',
+      ],
+      action: { label: 'Machine learning & data science', href: '/en/services/machine-learning' },
+    },
+    {
+      id: 'computer-vision',
+      label: 'Computer vision',
+      tags: [
+        'Hebrew OCR',
+        'Object detection',
+        'Quality inspection',
+        'People and vehicle counting',
+        'Face blurring',
+        'Product image tagging',
+      ],
+      question: 'What is different about the computer vision we build?',
+      paragraphs: [
+        'Recognition is tested on your own images, scans and cameras, including the hard cases, rather than on a sample dataset - so you see in advance where it will struggle.',
+        'The result goes straight into a system: an invoice into accounting, a defect alert to the shift manager, tags into the catalogue - with faces blurred before anything is stored.',
+      ],
+      action: { label: 'Computer vision', href: '/en/services/computer-vision' },
+    },
   ],
 
   allIn: {
@@ -581,6 +619,8 @@ export const contentEn: Partial<V2Content> = {
           { label: 'Website maintenance', href: '/en/services/maintenance' },
           { label: 'AI agents', href: '/en/services/ai-agents' },
           { label: 'AI search visibility', href: '/en/services/ai-search' },
+          { label: 'Machine learning & data science', href: '/en/services/machine-learning' },
+          { label: 'Computer vision', href: '/en/services/computer-vision' },
           { label: 'All services', href: '/en/services' },
         ],
       },
@@ -1171,6 +1211,36 @@ export const contentEn: Partial<V2Content> = {
         ],
         text: 'Getting cited in the answers engines write rather than the lists they used to return: entity and schema work, content built to be quoted, and a monthly report of where you are named and where you are not.',
         action: { label: 'Learn more', href: '/en/services/ai-search' },
+      },
+      {
+        id: 'machine-learning',
+        title: 'Machine learning & data science',
+        image: '/images/services-view.webp',
+        tags: [
+          'Demand forecasting',
+          'Lead and churn scoring',
+          'Store recommendations',
+          'Hebrew document classification',
+          'Anomaly detection',
+          'Dashboards and BI',
+        ],
+        text: 'Models built on your own business data - forecasting, scoring, recommendations and anomaly detection - tested against the method you use today and wired into the systems where decisions are made.',
+        action: { label: 'Learn more', href: '/en/services/machine-learning' },
+      },
+      {
+        id: 'computer-vision',
+        title: 'Computer vision',
+        image: '/images/service-platform.webp',
+        tags: [
+          'Hebrew invoice OCR',
+          'Object detection',
+          'Quality inspection',
+          'People and vehicle counting',
+          'Face blurring',
+          'Product image tagging',
+        ],
+        text: 'Recognition in images, scans and video - from Hebrew invoices and documents to defects on a production line - tested on your own images and feeding results into your systems.',
+        action: { label: 'Learn more', href: '/en/services/computer-vision' },
       },
     ],
   },

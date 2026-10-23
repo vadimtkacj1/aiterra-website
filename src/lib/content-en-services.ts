@@ -1772,4 +1772,296 @@ export const servicePagesEn: Record<string, ServicePage> = {
       },
     ],
   },
+  'machine-learning': {
+    id: 'machine-learning',
+    crumb: 'Machine learning & data science',
+    eyebrow: 'Machine learning & data science',
+    heading: ['Machine learning & data science', 'models built on your own data'],
+    subhead: 'Our data science service',
+    lede: 'Demand and sales forecasting, lead scoring and churn risk, product recommendations for online stores, Hebrew document and text classification, anomaly detection - a model built on your business data, tested against reality and connected to the systems you already run.',
+    image: '/images/services-view.webp',
+    action: { label: 'Request a data review', href: '/en/contact' },
+    metaTitle: 'Machine Learning & Data Science for Business - Forecasting, Scoring and BI',
+    metaDescription:
+      'Machine learning for Israeli businesses: demand and sales forecasting, lead and churn scoring, store recommendations, Hebrew document classification, anomaly detection and dashboards. We start with a data review.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our data science work'],
+      lede: 'You get a model you can check: a success metric agreed in advance, a comparison against the method you use today, and a connection to the system where the decision is actually made.',
+      outro: 'Want to know whether your data is enough for a model?',
+      action: { label: 'Request a data review', href: '/en/contact' },
+      roles: [
+        {
+          id: 'baseline',
+          title: 'A baseline before a model',
+          art: '/images/service-page1.webp',
+          text: 'Before building anything we measure how well the current method works - last year\'s average, the sales manager\'s rule of thumb, a spreadsheet. A model that does not beat that baseline does not go live, and you see the comparison in writing.',
+        },
+        {
+          id: 'data-first',
+          title: 'A data review before commitment',
+          art: '/images/service-page2.webp',
+          text: 'The first stage reviews the data you already hold: how much history, how many gaps, where fields are inconsistent. Sometimes the answer is that there is not enough data yet, and then we say so and suggest what to start collecting.',
+        },
+        {
+          id: 'hebrew',
+          title: 'Hebrew text and documents',
+          art: '/images/service-page3.webp',
+          text: 'Enquiry classification, field extraction and topic detection are tested on real Hebrew text from your business - spelling without vowels, acronyms, Latin-script terms - not on English samples translated at the end.',
+        },
+        {
+          id: 'production',
+          title: 'A model inside the system, not in a notebook',
+          art: '/images/service-page4.webp',
+          text: 'The prediction lands where decisions are made: a lead score in the CRM, a reorder suggestion in inventory, an alert on WhatsApp. After launch the model is monitored, and when its accuracy drops you get an alert and a retraining plan.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What we build',
+      heading: ['What machine learning does in your business'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'forecast',
+          icon: 'sales',
+          title: 'Demand and sales forecasting',
+          text: 'Forecasts by product, branch and week that account for seasonality, holidays and promotions, so stock and shifts follow expected demand rather than instinct.',
+        },
+        {
+          id: 'scoring',
+          icon: 'club',
+          title: 'Lead scoring and churn risk',
+          text: 'A score for every lead by its chance of closing, and for every existing customer by the risk of leaving - so the team calls first where it actually changes the outcome.',
+        },
+        {
+          id: 'recommend',
+          icon: 'catalog',
+          title: 'Recommendations for online stores',
+          text: 'Complementary products in the cart, "customers also bought" and catalogue ordering by purchase history, connected to the existing store and measured in a test against a version without them.',
+        },
+        {
+          id: 'documents',
+          icon: 'orders',
+          title: 'Documents, text and anomalies',
+          text: 'Classifying Hebrew enquiries and emails, extracting data from invoices and forms, and flagging anomalies in transactions, orders or sensor readings before they turn into damage.',
+        },
+        {
+          id: 'bi',
+          icon: 'analytics',
+          title: 'Data pipelines and dashboards',
+          text: 'Bringing data from the CRM, the store, accounting and campaigns into one place, with a BI dashboard that shows everyone who decides the same numbers.',
+        },
+      ],
+      action: { label: 'Request a data review', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How a project runs. Simply.'],
+      lede: 'Every stage ends with your decision whether to continue, so nothing is built before you know there is something to build on.',
+      steps: [
+        {
+          id: 'audit',
+          title: 'Data audit and goal',
+          text: 'We map which data exists, at what quality and over what period, and define one business question and one success metric. The stage ends with a report: feasible, feasible with conditions, or not yet.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'poc',
+          title: 'Proof of concept',
+          text: 'We build a first model on historical data and test it on a period it has not seen, against your baseline. If it does not beat it by a margin that justifies the work, we stop here.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'production',
+          title: 'Production and monitoring',
+          text: 'We connect the model to the system where the decision is made, set up retraining and monitor accuracy over time, because customer behaviour and markets change and the model has to change with them.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want to know what you could predict from the data you already have?',
+      action: { label: 'Request a data review', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about machine learning and data science'],
+    faqEntries: [
+      {
+        question: 'How is machine learning different from an AI agent or ChatGPT?',
+        answer:
+          'A language model such as ChatGPT writes text and answers questions, and an AI agent is built on top of one to hold a conversation and take actions. Machine learning in the sense of this service answers a different question: predicting a number or classifying a record from the business\'s own historical data - how many units will sell next week, which lead will close, which transaction is unusual. These models are usually smaller, cheaper to run and easier to verify, because every prediction can be compared with what actually happened. Many projects combine both kinds.',
+      },
+      {
+        question: 'What data do we need to start?',
+        answer:
+          'It depends on the question. Sales forecasting needs a history of orders or sales by date and product, ideally two years or more so seasonality and holidays show up. Lead scoring needs past leads with a known outcome - closed or not. Document classification needs examples that were already sorted by hand. The data does not have to be tidy: an export from the CRM, the store or a spreadsheet is enough for a first review. What really blocks a project is data that was never recorded, such as a cancellation reason nobody logs. In that case the review ends with a recommendation of what to start collecting.',
+      },
+      {
+        question: 'Does a small or mid-size business even need machine learning?',
+        answer:
+          'Not always, and the data review is where we say so. With a hundred customers and one product, a good dashboard and a few simple rules will deliver almost all of the value. Machine learning starts paying off when there are many repeated decisions over many items - hundreds of products in stock, thousands of leads a year, a steady stream of documents - and no person can look at each one. Even then we start with one question and a clear metric rather than a platform. Often the first and most useful step is a data pipeline and a dashboard, with the model coming after it.',
+      },
+      {
+        question: 'How do we know the model actually works?',
+        answer:
+          'We test it on data it has not seen. In the proof of concept we hold back the most recent period, for example the last three months, train on what came before and compare the predictions with what really happened. The same comparison is made for the method you use today, so you see a real gap rather than an accuracy percentage without context. After launch the check continues: every prediction is logged and compared with the outcome, and a periodic report shows whether accuracy is holding. When it drops, for example after a price change or a new audience, we retrain on current data.',
+      },
+      {
+        question: 'What about privacy and Amendment 13 to the Privacy Protection Law?',
+        answer:
+          'Amendment 13 to Israel\'s Privacy Protection Law broadened the obligations of businesses that hold personal data, so privacy is part of the specification rather than an appendix. In practice we work on data minimisation: a sales forecasting model does not need names or phone numbers, and identifiers are replaced with codes before data leaves your systems. Data stays in an environment you control, access is logged, and working copies are deleted at the end of the project. We do not give legal advice; if your database needs a privacy adviser\'s review, we prepare an exact description of what is collected, where it is stored and why.',
+      },
+      {
+        question: 'What do we get at the end of the project?',
+        answer:
+          'A model running inside your systems, not a file that stays with us. That usually includes the data pipeline that feeds it, the code for the model and for retraining, a connection to wherever the prediction is used - CRM, inventory, store or dashboard - and a document explaining which data goes in, what comes out and how to read the result. You also get the proof-of-concept report with the baseline comparison. The code and the model belong to you. After launch you can leave monitoring and retraining with us, or take a handover session and run it yourselves.',
+      },
+    ],
+  },
+  'computer-vision': {
+    id: 'computer-vision',
+    crumb: 'Computer vision',
+    eyebrow: 'Computer vision',
+    heading: ['Computer vision for business', 'image and video recognition wired into the workflow'],
+    subhead: 'Our computer vision service',
+    lede: 'Object detection in images and video, OCR for Hebrew documents and invoices, quality inspection on a production line, people and vehicle counting, face blurring for privacy and automatic tagging of product images for online stores - tested on your own images and connected to your existing systems.',
+    image: '/images/service-platform.webp',
+    action: { label: 'Request a feasibility check', href: '/en/contact' },
+    metaTitle: 'Computer Vision for Business - Image Recognition, Hebrew OCR and Quality Inspection',
+    metaDescription:
+      'Computer vision for Israeli businesses: object detection, OCR for Hebrew invoices and documents, quality inspection, people and vehicle counting, face blurring and product image tagging.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about the computer vision we build'],
+      lede: 'A vision model is measured in your conditions: the lighting, the angle, the camera and the documents that really arrive - not on a sample image set.',
+      outro: 'Want to check whether your cameras or scans are good enough?',
+      action: { label: 'Request a feasibility check', href: '/en/contact' },
+      roles: [
+        {
+          id: 'real-images',
+          title: 'Tested on your images',
+          art: '/images/service-page1.webp',
+          text: 'Before building we collect a sample of images, scans or video from the field, including the hard cases: night, glare, a crumpled document, a product at an angle. That shows in advance where recognition will struggle, not after installation.',
+        },
+        {
+          id: 'hebrew-ocr',
+          title: 'OCR that understands Hebrew',
+          art: '/images/service-page2.webp',
+          text: 'Hebrew invoices, delivery notes and forms mix right-to-left text with left-to-right numbers and tables. Extraction is tested on your suppliers\' documents, and any field the system is unsure about is flagged for a person to review.',
+        },
+        {
+          id: 'privacy',
+          title: 'Privacy by design',
+          art: '/images/service-page3.webp',
+          text: 'Where possible, processing happens on the camera or a local server and only the count or the alert leaves it. Faces and licence plates are blurred before storage, and the retention period is set in the specification rather than left at a default.',
+        },
+        {
+          id: 'integration',
+          title: 'Results that land in a system',
+          art: '/images/service-page4.webp',
+          text: 'A detection nobody sees is worth nothing. The invoice goes into accounting, the defect opens an alert for the shift manager, and the tags are written straight into the store catalogue.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What we build',
+      heading: ['What computer vision does in your business'],
+      art: '/images/service-dev-hero.webp',
+      features: [
+        {
+          id: 'ocr',
+          icon: 'orders',
+          title: 'OCR for documents and invoices',
+          text: 'Extracting supplier, date, totals and line items from Hebrew invoices, delivery notes and forms, straight into your accounting system or ERP.',
+        },
+        {
+          id: 'quality',
+          icon: 'analytics',
+          title: 'Quality inspection and defect detection',
+          text: 'A camera over the production or packing line that spots a defect, a missing item or a wrong label and alerts in real time, with an image recorded for every case.',
+        },
+        {
+          id: 'counting',
+          icon: 'club',
+          title: 'People and vehicle counting',
+          text: 'Visitor counts in a store, car park occupancy or traffic at an entrance, as aggregate figures without storing identities, comparable across hours, days and branches.',
+        },
+        {
+          id: 'detection',
+          icon: 'catalog',
+          title: 'Object detection and inventory',
+          text: 'Recognising products on a shelf, pallets in a warehouse or equipment on site, and checking that what the image shows matches what the system records.',
+        },
+        {
+          id: 'tagging',
+          icon: 'sales',
+          title: 'Product image tagging and face blurring',
+          text: 'Tagging colour, type and category on store product images, alongside automatic blurring of faces and licence plates in photos and video before they are published or stored.',
+        },
+      ],
+      action: { label: 'Request a feasibility check', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How a project runs. Simply.'],
+      lede: 'We start from the images you already have, because they decide how well recognition will work.',
+      steps: [
+        {
+          id: 'sample',
+          title: 'Sample and goal',
+          text: 'We collect images, scans or video from the field, define exactly what needs to be recognised and which mistake costs more - a miss or a false alarm.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'poc',
+          title: 'Proof of concept',
+          text: 'We start from an existing model, adapt it to your images and test it on a sample it has not seen. The output is a report with examples of successes and failures, not just a number.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'deploy',
+          title: 'Deployment and monitoring',
+          text: 'We connect to the cameras, the scanner or the mailbox, feed the results into your system and monitor them. Cases the model was unsure about are collected and used for the next improvement.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want to check what could be recognised in the images you already have?',
+      action: { label: 'Request a feasibility check', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about computer vision'],
+    faqEntries: [
+      {
+        question: 'What is computer vision and how is it different from ordinary OCR?',
+        answer:
+          'Computer vision is the field in which a computer understands what appears in an image or video: which objects are there, where they are, how many and in what condition. OCR is one case of it - recognising text. Ordinary OCR returns all the text on a page as a single stream, whereas an invoice solution also has to understand the layout: which number is the amount due, which is VAT and which is the supplier number. So we combine text recognition with document layout understanding, and check the result against simple rules, such as the line items adding up to the total.',
+      },
+      {
+        question: 'Does OCR work well on Hebrew invoices and documents?',
+        answer:
+          'On printed documents and reasonable scans, yes, but Hebrew raises challenges worth testing up front: right-to-left text beside left-to-right numbers and dates, tables with reversed columns, stamps, and handwriting on a printed form. That is why the proof of concept runs on real documents from your suppliers. Every extracted field gets a confidence level, and a field below the threshold goes to a person for review instead of going straight into accounting. People then check only the few uncertain cases rather than retyping everything by hand.',
+      },
+      {
+        question: 'Do we need to buy new cameras or hardware?',
+        answer:
+          'Not necessarily. Existing security cameras are often enough for counting people or vehicles, and an office scanner or a phone is enough for documents. Quality inspection on a production line is the case that usually needs a dedicated camera and fixed lighting, because a small defect disappears in a blurred image or a shifting shadow. In the sample stage we test images from your current equipment, and if they are not sufficient we say exactly what is missing: resolution, angle, lighting or frame rate. Processing can run in the cloud, on a local server or on a small device next to the camera.',
+      },
+      {
+        question: 'How do you protect privacy when filming people?',
+        answer:
+          'The principle is not to keep what is not needed. Counting visitors does not require knowing who came in, so processing can run close to the camera and only the number leaves it. When images or video are stored, faces and licence plates are blurred automatically before storage, and the retention period is set in advance. Amendment 13 to Israel\'s Privacy Protection Law broadened the obligations of anyone holding personal data, and footage of people may count as such. We do not give legal advice, but we will give your privacy adviser a full description of what is filmed, what is kept, where and why.',
+      },
+      {
+        question: 'How many images does it take to train a model?',
+        answer:
+          'Fewer than people expect, because we rarely train from scratch. We start from a model that already recognises thousands of object types and adapt it to yours, so a first test can sometimes work with hundreds of labelled images rather than tens of thousands. Variety matters more than volume: images from every shift, lighting condition, angle and product type, plus enough examples of the rare case you want to catch, such as a defect. When defects really are rare, we collect them over time or add anomaly detection. Labelling is done together with you, because only you know what counts as a defect.',
+      },
+      {
+        question: 'What happens when the model gets it wrong?',
+        answer:
+          'It will, so the design starts with which mistake costs more. In quality inspection a missed defect costs more than a false alarm, so the threshold is tuned accordingly; in product tagging it is the other way round. Every detection carries a confidence level, and borderline cases go to a person instead of triggering an action on their own. Every error that is found is kept with its image and goes into the next training round, so the model improves on exactly the cases that occur in your business. A periodic report shows how many detections there were, how many were corrected by hand and where the model struggles.',
+      },
+    ],
+  },
 }

@@ -13,6 +13,8 @@ const SERVICE_KEYWORDS: Record<string, string[]> = {
   maintenance: ['תחזוק', 'אחזק', 'אבטח', 'גיבוי', 'עדכונ', 'אחסון', 'דומיין', 'תמיכה', 'ssl', 'תקלה'],
   'ai-agents': ['בוט', 'סוכן', 'סוכני', 'וואטסאפ', 'whatsapp', 'צ׳אט', "צ'אט", 'chatbot', 'agent'],
   'ai-search': ['geo', 'aeo', 'chatgpt', 'gemini', 'perplexity', 'בינה מלאכותית', 'ai overview', 'תשובות ai'],
+  'machine-learning': ['למידת מכונה', 'machine learning', 'data science', 'דאטה', 'נתונים', 'חיזוי', 'תחזית', 'דשבורד', 'נטישה'],
+  'computer-vision': ['ראייה ממוחשבת', 'computer vision', 'ocr', 'זיהוי תמונה', 'זיהוי תמונות', 'מצלמ', 'סריקת מסמכים', 'בקרת איכות'],
 }
 
 export type RelatedServiceItem = { slug: string; label: string; blurb: string }
