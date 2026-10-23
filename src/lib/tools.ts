@@ -17,6 +17,7 @@ export type ToolIconName =
   | 'scroll'
   | 'search'
   | 'shield'
+  | 'signature'
   | 'type'
   | 'wrench'
 
@@ -264,6 +265,13 @@ export const tools: ToolEntry[] = [
     description: 'אישור העסקה לבנק, למשכנתא, לשכירות, לגן או לשגרירות, בעברית או באנגלית, מוכן להדפסה או ל-PDF.',
     category: 'legal',
     icon: 'file',
+  },
+  {
+    path: '/tools/signature-generator',
+    title: 'יצירת חתימה אונליין',
+    description: 'חתימה בכתב יד כקובץ PNG שקוף: מציירים עם העכבר, האצבע או עט, או מקלידים שם, ומוסיפים למסמך Word או PDF.',
+    category: 'legal',
+    icon: 'signature',
   },
   {
     path: '/tools/nda-generator',

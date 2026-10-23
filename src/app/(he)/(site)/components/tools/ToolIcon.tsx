@@ -17,6 +17,7 @@ import {
   ScrollText,
   Search,
   ShieldCheck,
+  Signature,
   Type,
   Wrench,
   type LucideIcon,
@@ -42,6 +43,7 @@ const icons: Record<ToolIconName, LucideIcon> = {
   scroll: ScrollText,
   search: Search,
   shield: ShieldCheck,
+  signature: Signature,
   type: Type,
   wrench: Wrench,
 }
