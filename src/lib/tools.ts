@@ -323,6 +323,13 @@ export const tools: ToolEntry[] = [
     icon: 'calendar',
   },
   {
+    path: '/tools/shift-schedule-maker',
+    title: 'סידור עבודה שבועי למשמרות',
+    description: 'בונים סידור משמרות לשבוע עם אילוצים ומילוי אוטומטי, מדפיסים, מורידים לאקסל ושולחים לעובדים בוואטסאפ.',
+    category: 'dates',
+    icon: 'calendarRange',
+  },
+  {
     path: '/tools/monthly-timesheet',
     title: 'דוח שעות עבודה חודשי להדפסה',
     description: 'טופס נוכחות חודשי עם שבתות וחגים מסומנים, להדפסה ריק או עם שעות, עם שעות נוספות 125% ו-150% וקובץ ל-Excel.',
