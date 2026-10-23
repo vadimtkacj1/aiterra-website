@@ -674,7 +674,7 @@ export const tools: ToolEntry[] = [
   {
     path: '/tools/flight-time-from-israel',
     title: 'כמה זמן טיסה מישראל',
-    description: 'זמן טיסה משוער מנתב״ג ל-72 יעדים, ישירה או עם עצירה, מרחק והפרש שעות, ומחשבון זמן טיסה לפי מרחק.',
+    description: 'זמן טיסה משוער מנתב״ג ל-70 יעדים, ישירה או עם עצירה, מרחק והפרש שעות, ומחשבון זמן טיסה לפי מרחק.',
     category: 'home',
     reviewed: '2026-10-23',
     icon: 'calendarRange',

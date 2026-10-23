@@ -15,7 +15,7 @@ import styles from '../../components/tools/TimeDifference.module.css'
 const TITLE = 'הפרש שעות: מה השעה עכשיו ביעד?'
 const META_TITLE = 'הפרש שעות ישראל: מה השעה עכשיו ביעד?'
 const DESCRIPTION =
-  'הפרש שעות בין ישראל ל-60 ערים בעולם: שעון חי של היעד, ההפרש בקיץ ובחורף, ומתי שעון קיץ משנה אותו. כולל תכנון פגישה לפי שעות עבודה.'
+  'הפרש שעות בין ישראל ל-62 ערים בעולם: שעון חי של היעד, ההפרש בקיץ ובחורף, ומתי שעון קיץ משנה אותו. כולל תכנון פגישה לפי שעות עבודה.'
 
 const cityRows = cityDifferences()
 
@@ -89,7 +89,7 @@ export default function TimeDifferencePage() {
       metaTitle={META_TITLE}
       description={DESCRIPTION}
       lede="ההפרש בין ישראל לניו יורק הוא 7 שעות רוב השנה, ובין ישראל ללונדון 2 שעות, אבל הוא משתנה כשאחד הצדדים עובר לשעון קיץ. בחרו עיר וראו שעון חי של הצד השני, ההפרש היום וההפרש בעוד חצי שנה, ומצאו שעה שנוחה לשני הצדדים."
-      chips={['60 ערים', 'מתעדכן לבד לפי שעון קיץ', `נבדק ב-${TIME_DIFFERENCE_CHECKED}`]}
+      chips={['62 ערים', 'מתעדכן לבד לפי שעון קיץ', `נבדק ב-${TIME_DIFFERENCE_CHECKED}`]}
       tool={<TimeDifference />}
       faq={faq}
       cta={{
@@ -146,7 +146,7 @@ export default function TimeDifferencePage() {
       </div>
 
       <h2 id="table" className={styles.anchor}>
-        טבלת הפרשי שעות מישראל ל-60 ערים
+        טבלת הפרשי שעות מישראל ל-62 ערים
       </h2>
       <p>
         המספר חיובי כשהיעד מקדים את ישראל, ושלילי כשהוא מאחר אחריה. העמודות מראות את ההפרש בחורף (ינואר) ובקיץ

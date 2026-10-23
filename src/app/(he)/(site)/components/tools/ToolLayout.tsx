@@ -15,6 +15,7 @@ import { pageMetadata } from '@/lib/metadata'
 import { ORG_ID, breadcrumbList, faqPage, webPage } from '@/lib/schema'
 import { SITE_URL } from '@/lib/seo'
 import { TOOLS_HUB_PATH, embeddableTool, otherTools, toolReviewed } from '@/lib/tools'
+import { hasEnTool } from '@/lib/tools-en'
 import crumbStyles from '../PageCrumbs.module.css'
 import indexStyles from './ToolsIndex.module.css'
 import styles from './ToolLayout.module.css'
@@ -45,7 +46,12 @@ export function toolMetadata({
   metaTitle: string
   description: string
 }): Metadata {
-  return pageMetadata({ title: metaTitle, description, path })
+  return pageMetadata({
+    title: metaTitle,
+    description,
+    path,
+    ...(hasEnTool(path) ? { altPath: `/en${path}` } : {}),
+  })
 }
 
 export function ToolHero({

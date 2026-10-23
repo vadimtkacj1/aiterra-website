@@ -5,6 +5,7 @@ import { getAllPortfolioProjects } from '@/lib/portfolio-server'
 import { getV2Content } from '@/lib/v2-content-server'
 import { SITE_URL } from '@/lib/seo'
 import { TOOLS_HUB_PATH, toolReviewed, tools } from '@/lib/tools'
+import { EN_TOOLS_HUB_PATH, EN_TOOL_SLUGS, enToolPath } from '@/lib/tools-en'
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
 import { getAllPostsEn } from '@/lib/content-en-blog'
 import { hasCounterpart, toEnglishPath, toHebrewPath } from '@/lib/locale-path'
@@ -97,6 +98,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/en/blog', priority: 0.8 },
     ...getAllPostsEn().map((post) => ({ path: `/en/blog/${post.slug}`, priority: 0.6 })),
     ...getAllAuthors().map((a) => ({ path: `/en/blog/author/${a.id}`, priority: 0.5 })),
+    { path: EN_TOOLS_HUB_PATH, priority: 0.7 },
+    ...EN_TOOL_SLUGS.map((slug) => ({ path: enToolPath(slug), priority: 0.7 })),
     { path: '/en/about', priority: 0.6 },
     { path: '/en/contact', priority: 0.6 },
     { path: '/en/privacy-policy', priority: 0.3 },

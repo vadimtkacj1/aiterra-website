@@ -1,0 +1,26 @@
+export const englishBankNames: Record<number, string> = {
+  1: 'Isracard',
+  3: 'Bank Esh Israel',
+  4: 'Bank Yahav',
+  6: 'Max It Finance',
+  10: 'Bank Leumi',
+  11: 'Israel Discount Bank',
+  12: 'Bank Hapoalim',
+  14: 'Bank Otsar Ha-Hayal',
+  17: 'Mercantile Discount Bank',
+  18: 'One Zero Digital Bank',
+  20: 'Mizrahi Tefahot Bank',
+  22: 'Citibank',
+  23: 'HSBC',
+  26: 'U-Bank',
+  31: 'First International Bank of Israel',
+  39: 'SBI State Bank of India',
+  46: 'Bank Massad',
+  50: 'Bank Clearing Center (Masav)',
+  52: 'Poalei Agudat Israel Bank',
+  54: 'Bank of Jerusalem',
+  59: 'Automated Bank Services (SHVA)',
+  99: 'Bank of Israel',
+}
+
+export const englishBankName = (code: number) => englishBankNames[code] ?? null

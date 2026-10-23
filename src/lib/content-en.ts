@@ -750,6 +750,7 @@ export const contentEn: Partial<V2Content> = {
         links: [
           { label: 'About the agency', href: '/en/about' },
           { label: 'Our work', href: '/en/projects' },
+          { label: 'Free tools', href: '/en/tools' },
           { label: 'Contact', href: '/en/contact' },
           { label: 'Hebrew site', href: '/' },
         ],

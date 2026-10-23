@@ -14,7 +14,12 @@ import styles from './page.module.css'
 const DESCRIPTION =
   'כלים חינמיים לבעלי עסקים ולמנהלי אתרים: מחוללים, מחשבונים ובדיקות בעברית, בלי הרשמה. הפרטים שתמלאו נשארים בדפדפן שלכם.'
 
-export const metadata = pageMetadata({ title: HUB_TITLE, description: DESCRIPTION, path: TOOLS_HUB_PATH })
+export const metadata = pageMetadata({
+  title: HUB_TITLE,
+  description: DESCRIPTION,
+path: TOOLS_HUB_PATH,
+  altPath: '/en/tools',
+})
 
 export default function ToolsHubPage() {
   return (
