@@ -217,6 +217,13 @@ export const tools: ToolEntry[] = [
     icon: 'receipt',
   },
   {
+    path: '/tools/company-lookup',
+    title: 'בדיקת חברה לפי ח.פ. או שם',
+    description: 'בודקים לפי ח.פ. או לפי שם אם חברה פעילה, מחוקה, בפירוק או מפרת חוק, ממאגר רשם החברות שמתעדכן כל יום.',
+    category: 'money',
+    icon: 'search',
+  },
+  {
     path: '/tools/id-number-check',
     title: 'בדיקת תעודת זהות וספרת ביקורת',
     description: 'בודקים אם מספר תעודת זהות, ח.פ. או עוסק מורשה תקין לפי ספרת הביקורת, מחשבים ספרת ביקורת ומקבלים נוסחה לאקסל.',

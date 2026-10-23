@@ -16,6 +16,7 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/allocation-number': ['חשבונית', 'הנהלת חשבונות', 'icount', 'חשבשבת', 'רואי חשבון'],
   '/tools/vat-calculator': ['מחירים', 'חשבונית', 'הנהלת חשבונות', 'כמה עולה'],
   '/tools/amount-in-words': ['קבלה', 'צ׳ק', "צ'ק", 'הנהלת חשבונות'],
+  '/tools/company-lookup': ['ח.פ', 'רשם החברות', 'בחירת ספק', 'ספקים', 'בדיקת חברה'],
   '/tools/id-number-check': ['תעודת זהות', 'טפסים', 'טופס', 'פורטל לקוחות'],
   '/tools/israeli-phone-format': ['טלפון', 'אנשי קשר', 'רשימת לקוחות', 'crm', 'דיוור'],
   '/tools/image-to-text': ['מסמכים', 'סריקה', 'הקלדה ידנית', 'ידני'],

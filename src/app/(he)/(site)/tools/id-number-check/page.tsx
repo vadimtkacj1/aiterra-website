@@ -235,7 +235,8 @@ export default function IdNumberCheckPage() {
         שהיא נגנבה מבקש תעודה חדשה ברשות האוכלוסין וההגירה, כמו שמוסבר ב<a href={KOLZCHUT_ID} rel="noopener" target="_blank">
           כל זכות
         </a>
-        . חברה, שותפות או עמותה מחפשים לפי המספר ב<a href={ICA_SEARCH} rel="noopener" target="_blank">
+        . חברה בודקים לפי ח.פ. או לפי שם ב<Link href="/tools/company-lookup">בדיקת חברה לפי ח.פ.</Link>, וחברה,
+        שותפות או עמותה אפשר לחפש גם ב<a href={ICA_SEARCH} rel="noopener" target="_blank">
           איתור תאגיד של רשם התאגידים
         </a>
         , ועוסק מורשה בודקים ב<a href={VAT_DEALER_LOOKUP} rel="noopener" target="_blank">
