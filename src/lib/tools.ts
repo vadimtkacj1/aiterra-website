@@ -590,6 +590,30 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-10-23',
     icon: 'search',
   },
+  {
+    path: '/tools/photo-consent-form',
+    title: 'טופס הסכמה לצילום ולפרסום תמונות',
+    description: 'טופס הסכמה לצילום ולפרסום תמונות ללקוחות ולעובדים, גם לקטינים עם חתימת הורה, מוכן להדפסה ב-A4.',
+    category: 'legal',
+    reviewed: '2026-10-23',
+    icon: 'file',
+  },
+  {
+    path: '/tools/ai-tools-hebrew',
+    title: 'כלי AI בעברית',
+    description: '25 כלי AI לצ׳אט, תרגום, תמונות, וידאו, תמלול, מצגות ואוטומציה, ומה כל יצרן מתעד על עברית, עם תאריך בדיקה.',
+    category: 'marketing',
+    reviewed: '2026-10-23',
+    icon: 'search',
+  },
+  {
+    path: '/tools/chatgpt-whatsapp',
+    title: 'צ׳אט GPT בוואטסאפ',
+    description: 'למה ChatGPT בוואטסאפ הפסיק לעבוד בישראל ב-15 בינואר 2026, מה עדיין עובד, ומה מותר לעסק ולמשתמש פרטי.',
+    category: 'marketing',
+    reviewed: '2026-10-23',
+    icon: 'message',
+  },
 ]
 
 export const otherTools = (path: string) => {

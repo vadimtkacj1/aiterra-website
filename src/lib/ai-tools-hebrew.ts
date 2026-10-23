@@ -1,0 +1,392 @@
+export const AI_TOOLS_CHECKED = '23 באוקטובר 2026'
+export const AI_TOOLS_CHECKED_ISO = '2026-10-23'
+
+export type AiToolCategory =
+  | 'chat'
+  | 'writing'
+  | 'image'
+  | 'video'
+  | 'transcription'
+  | 'presentations'
+  | 'code'
+  | 'automation'
+
+export type HebrewUi = 'yes' | 'no' | 'unknown'
+export type FreeTier = 'yes' | 'trial' | 'no' | 'unknown'
+
+export type AiTool = {
+  id: string
+  name: string
+  category: AiToolCategory
+  url: string
+  hebrewUi: HebrewUi
+  hebrew: string
+  source: string
+  free: FreeTier
+  freeNote: string
+  pricing: string
+  use: string
+}
+
+export const aiToolCategories: { id: AiToolCategory; label: string }[] = [
+  { id: 'chat', label: 'צ׳אט' },
+  { id: 'writing', label: 'כתיבה ותרגום' },
+  { id: 'image', label: 'תמונות' },
+  { id: 'video', label: 'וידאו וקול' },
+  { id: 'transcription', label: 'תמלול' },
+  { id: 'presentations', label: 'מצגות' },
+  { id: 'code', label: 'קוד' },
+  { id: 'automation', label: 'אוטומציה' },
+]
+
+export const hebrewUiLabels: Record<HebrewUi, string> = {
+  yes: 'כן',
+  no: 'לא',
+  unknown: 'לא מצאנו רשימה',
+}
+
+export const freeLabels: Record<FreeTier, string> = {
+  yes: 'יש',
+  trial: 'ניסיון',
+  no: 'אין',
+  unknown: 'לא בדקנו',
+}
+
+const MS_COPILOT_LANGUAGES =
+  'https://support.microsoft.com/en-us/topic/supported-languages-for-microsoft-365-copilot-94518d61-644b-4118-9492-617eea4801d8'
+
+export const aiTools: AiTool[] = [
+  {
+    id: 'chatgpt',
+    name: 'ChatGPT',
+    category: 'chat',
+    url: 'https://chatgpt.com/',
+    hebrewUi: 'yes',
+    hebrew: 'עברית מופיעה ברשימת השפות של OpenAI, ואפשר לבחור בה בהגדרות השפה.',
+    source: 'https://help.openai.com/en/articles/8357869-chatgpt-supported-languages',
+    free: 'yes',
+    freeNote: 'תוכנית Free',
+    pricing: 'https://chatgpt.com/pricing',
+    use: 'טיוטות למיילים ללקוחות, סיכום מסמכים ורעיונות לפוסטים.',
+  },
+  {
+    id: 'claude',
+    name: 'Claude',
+    category: 'chat',
+    url: 'https://claude.ai/',
+    hebrewUi: 'no',
+    hebrew: 'הממשק זמין ב-11 שפות בלי עברית. לפי Anthropic אפשר לכתוב לו בכל שפה, והוא עונה בשפה שבה כותבים.',
+    source: 'https://support.claude.com/en/articles/10769299-what-languages-does-claude-support',
+    free: 'yes',
+    freeNote: 'תוכנית Free ב-0$',
+    pricing: 'https://claude.com/pricing',
+    use: 'עבודה על מסמכים ארוכים, חוזים ודוחות, וכתיבה בטון מוקפד.',
+  },
+  {
+    id: 'gemini',
+    name: 'Gemini',
+    category: 'chat',
+    url: 'https://gemini.google.com/',
+    hebrewUi: 'yes',
+    hebrew: 'עברית ברשימת השפות הנתמכות של אפליקציית Gemini.',
+    source: 'https://support.google.com/gemini/answer/13575153?hl=en',
+    free: 'yes',
+    freeNote: '0$ עם חשבון Google',
+    pricing: 'https://gemini.google/subscriptions/',
+    use: 'עבודה צמודה ל-Gmail, ל-Docs ול-Drive של העסק.',
+  },
+  {
+    id: 'copilot',
+    name: 'Microsoft Copilot',
+    category: 'chat',
+    url: 'https://copilot.microsoft.com/',
+    hebrewUi: 'unknown',
+    hebrew: 'עברית ברשימת השפות הנתמכות לבקשות ולתשובות, בחשבון אישי ובחשבון עבודה.',
+    source: MS_COPILOT_LANGUAGES,
+    free: 'unknown',
+    freeNote: '',
+    pricing: 'https://www.microsoft.com/en-us/microsoft-365/copilot/pricing',
+    use: 'שאלות וטיוטות למי שכבר עובד בסביבת Microsoft.',
+  },
+  {
+    id: 'meta-ai',
+    name: 'Meta AI',
+    category: 'chat',
+    url: 'https://www.meta.ai/',
+    hebrewUi: 'unknown',
+    hebrew: 'לפי WhatsApp אפשר לכתוב ל-Meta AI בכל שפה, אבל הוא זמין רק בחלק מהמדינות, ולא תמיד לכל המשתמשים בהן.',
+    source: 'https://faq.whatsapp.com/2257017191175152',
+    free: 'unknown',
+    freeNote: '',
+    pricing: 'https://faq.whatsapp.com/2257017191175152',
+    use: 'שאלה מהירה בתוך WhatsApp, אם השירות פתוח אצלכם.',
+  },
+  {
+    id: 'perplexity',
+    name: 'Perplexity',
+    category: 'chat',
+    url: 'https://www.perplexity.ai/',
+    hebrewUi: 'unknown',
+    hebrew: 'לא מצאנו תיעוד של היצרן לגבי עברית.',
+    source: 'https://www.perplexity.ai/help-center/en/articles/10352990-account-settings',
+    free: 'unknown',
+    freeNote: '',
+    pricing: 'https://www.perplexity.ai/pro',
+    use: 'חיפוש עם מקורות, למשל בדיקה מהירה של מתחרים או של ספק.',
+  },
+  {
+    id: 'deepl',
+    name: 'DeepL',
+    category: 'writing',
+    url: 'https://www.deepl.com/',
+    hebrewUi: 'unknown',
+    hebrew: 'תרגום לעברית ומעברית נוסף ביוני 2025, כולל תרגום מסמכים מימין לשמאל.',
+    source: 'https://www.deepl.com/en/blog/vietnamese-thai-hebrew-launch',
+    free: 'yes',
+    freeNote: 'גרסה חינמית עם מגבלת תווים',
+    pricing: 'https://www.deepl.com/en/pro',
+    use: 'תרגום הצעות מחיר, אתר ומיילים לאנגלית וממנה.',
+  },
+  {
+    id: 'google-translate',
+    name: 'Google Translate',
+    category: 'writing',
+    url: 'https://translate.google.com/',
+    hebrewUi: 'unknown',
+    hebrew: 'עברית בטבלת השפות הנתמכות של Cloud Translation, בקודים he ו-iw.',
+    source: 'https://cloud.google.com/translate/docs/languages',
+    free: 'unknown',
+    freeNote: '',
+    pricing: 'https://cloud.google.com/translate/pricing',
+    use: 'תרגום מהיר של הודעה מלקוח או מספק.',
+  },
+  {
+    id: 'notion-ai',
+    name: 'Notion AI',
+    category: 'writing',
+    url: 'https://www.notion.com/',
+    hebrewUi: 'yes',
+    hebrew: 'עברית היא שפת תצוגה, והממשק מתהפך לימין לשמאל באפליקציה למחשב ולנייד.',
+    source: 'https://www.notion.com/help/change-your-language',
+    free: 'trial',
+    freeNote: 'תוכנית Free עם ניסיון של Notion AI',
+    pricing: 'https://www.notion.com/pricing',
+    use: 'נהלי עבודה, פרוטוקולים ומאגר ידע של העסק במקום אחד.',
+  },
+  {
+    id: 'midjourney',
+    name: 'Midjourney',
+    category: 'image',
+    url: 'https://www.midjourney.com/',
+    hebrewUi: 'unknown',
+    hebrew: 'לפי התיעוד, טקסט בתוך תמונה עובד הכי טוב באותיות לטיניות. כותרת בעברית מוסיפים בעורך גרפי.',
+    source: 'https://docs.midjourney.com/hc/en-us/articles/32502277092109-Text-Generation',
+    free: 'no',
+    freeNote: 'כל התוכניות במנוי',
+    pricing: 'https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans',
+    use: 'תמונות אווירה ורקעים לקמפיין, בלי טקסט בתמונה.',
+  },
+  {
+    id: 'firefly',
+    name: 'Adobe Firefly',
+    category: 'image',
+    url: 'https://firefly.adobe.com/',
+    hebrewUi: 'no',
+    hebrew: 'עברית לא ברשימת שפות הממשק. Adobe כותבת שאפשר לכתוב פרומפט במגוון שפות, בלי לפרט אילו.',
+    source: 'https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/technical-requirements.html',
+    free: 'yes',
+    freeNote: 'מספר יצירות יומי מוגבל',
+    pricing: 'https://www.adobe.com/products/firefly/plans.html',
+    use: 'הרחבה והחלפת רקע בתמונות מוצר.',
+  },
+  {
+    id: 'canva',
+    name: 'Canva',
+    category: 'image',
+    url: 'https://www.canva.com/',
+    hebrewUi: 'unknown',
+    hebrew: 'עברית ברשימת השפות של כלי התרגום של Canva לעיצובים.',
+    source: 'https://www.canva.com/help/language-settings/',
+    free: 'yes',
+    freeNote: 'תוכנית Free',
+    pricing: 'https://www.canva.com/pricing/',
+    use: 'פוסטים, סטוריז ומודעות עם טקסט בעברית.',
+  },
+  {
+    id: 'heygen',
+    name: 'HeyGen',
+    category: 'video',
+    url: 'https://www.heygen.com/',
+    hebrewUi: 'unknown',
+    hebrew: 'תרגום ודיבוב של סרטונים לעברית, לפי HeyGen בתוכנית Creator.',
+    source: 'https://www.heygen.com/translate/english-to-hebrew',
+    free: 'yes',
+    freeNote: 'תוכנית Free לניסיון',
+    pricing: 'https://www.heygen.com/pricing',
+    use: 'גרסה בעברית לסרטון הדרכה או למודעה שצולמו באנגלית.',
+  },
+  {
+    id: 'synthesia',
+    name: 'Synthesia',
+    category: 'video',
+    url: 'https://www.synthesia.io/',
+    hebrewUi: 'unknown',
+    hebrew: 'עברית (IW) ברשימת השפות של הקולות.',
+    source: 'https://www.synthesia.io/features/languages',
+    free: 'yes',
+    freeNote: 'מכסה חינמית של דקות וידאו',
+    pricing: 'https://www.synthesia.io/pricing',
+    use: 'סרטוני הדרכה לעובדים עם מגיש וירטואלי.',
+  },
+  {
+    id: 'capcut',
+    name: 'CapCut',
+    category: 'video',
+    url: 'https://www.capcut.com/',
+    hebrewUi: 'unknown',
+    hebrew: 'לא מצאנו תיעוד של היצרן לגבי עברית בכתוביות האוטומטיות.',
+    source: 'https://www.capcut.com/tools/auto-caption-generator',
+    free: 'unknown',
+    freeNote: '',
+    pricing: 'https://www.capcut.com/pricing',
+    use: 'עריכת רילס וטיקטוק בטלפון.',
+  },
+  {
+    id: 'elevenlabs',
+    name: 'ElevenLabs',
+    category: 'video',
+    url: 'https://elevenlabs.io/',
+    hebrewUi: 'unknown',
+    hebrew: 'בתמלול, עברית מסווגת אצל היצרן ברמת דיוק ״Good״: שיעור שגיאות מילים של 10% עד 20%.',
+    source: 'https://elevenlabs.io/docs/capabilities/speech-to-text',
+    free: 'yes',
+    freeNote: 'תוכנית Free ב-0$',
+    pricing: 'https://elevenlabs.io/pricing',
+    use: 'קריינות לסרטון, ותמלול הקלטה של שיחה.',
+  },
+  {
+    id: 'ivrit-ai',
+    name: 'ivrit.ai',
+    category: 'transcription',
+    url: 'https://www.ivrit.ai/',
+    hebrewUi: 'yes',
+    hebrew: 'מיזם ללא מטרות רווח שמתמחה בעברית בלבד: מאגר של יותר מ-22,000 שעות דיבור, ומודלי Whisper שאומנו על עברית ברישיון Apache-2.0.',
+    source: 'https://huggingface.co/ivrit-ai/whisper-large-v3-turbo',
+    free: 'yes',
+    freeNote: 'כלי תמלול חינמי ומודלים פתוחים',
+    pricing: 'https://transcribe.ivrit.ai/',
+    use: 'תמלול פגישות, הקלטות שיחה ופודקאסטים בעברית.',
+  },
+  {
+    id: 'whisper',
+    name: 'OpenAI Whisper',
+    category: 'transcription',
+    url: 'https://github.com/openai/whisper',
+    hebrewUi: 'unknown',
+    hebrew: 'עברית היא אחת השפות של המודל. OpenAI כותבת שהביצועים משתנים מאוד בין שפות.',
+    source: 'https://github.com/openai/whisper',
+    free: 'yes',
+    freeNote: 'קוד פתוח, רישיון MIT',
+    pricing: 'https://github.com/openai/whisper',
+    use: 'תמלול על מחשב של העסק, בלי להעלות קבצים לשירות חיצוני.',
+  },
+  {
+    id: 'otter',
+    name: 'Otter.ai',
+    category: 'transcription',
+    url: 'https://otter.ai/',
+    hebrewUi: 'unknown',
+    hebrew: 'לא מתמלל עברית. לפי Otter, השפות הנתמכות הן אנגלית, ספרדית, צרפתית, גרמנית, יפנית וסינית.',
+    source: 'https://help.otter.ai/hc/en-us/articles/360047247414-Supported-languages',
+    free: 'yes',
+    freeNote: 'תוכנית Basic',
+    pricing: 'https://otter.ai/pricing',
+    use: 'רק לפגישות באנגלית.',
+  },
+  {
+    id: 'gamma',
+    name: 'Gamma',
+    category: 'presentations',
+    url: 'https://gamma.app/',
+    hebrewUi: 'unknown',
+    hebrew: 'יצירה ועריכה של מצגות בשפות מימין לשמאל, ועברית מופיעה ברשימה.',
+    source: 'https://help.gamma.app/en/articles/11016519-does-gamma-support-right-to-left-languages',
+    free: 'yes',
+    freeNote: 'תוכנית Free ב-0$',
+    pricing: 'https://gamma.app/pricing',
+    use: 'מצגת למשקיע, ללקוח או להדרכה מתוך כמה שורות.',
+  },
+  {
+    id: 'm365-copilot',
+    name: 'Microsoft 365 Copilot',
+    category: 'presentations',
+    url: 'https://www.microsoft.com/en-us/microsoft-365/copilot',
+    hebrewUi: 'unknown',
+    hebrew: 'עברית ברשימת השפות הנתמכות של Copilot. בעמוד יש חריגים ל-Excel ול-Planner, ושם עברית לא מופיעה.',
+    source: MS_COPILOT_LANGUAGES,
+    free: 'unknown',
+    freeNote: '',
+    pricing: 'https://www.microsoft.com/en-us/microsoft-365/copilot/pricing',
+    use: 'מצגת ב-PowerPoint מתוך מסמך Word קיים.',
+  },
+  {
+    id: 'github-copilot',
+    name: 'GitHub Copilot',
+    category: 'code',
+    url: 'https://github.com/features/copilot',
+    hebrewUi: 'unknown',
+    hebrew: 'לא מצאנו תיעוד של היצרן לגבי עברית.',
+    source: 'https://docs.github.com/en/copilot/get-started/plans',
+    free: 'yes',
+    freeNote: 'Copilot Free',
+    pricing: 'https://docs.github.com/en/copilot/get-started/plans',
+    use: 'עזרה בכתיבת קוד ובתיקון באגים למי שמתכנת.',
+  },
+  {
+    id: 'zapier',
+    name: 'Zapier',
+    category: 'automation',
+    url: 'https://zapier.com/',
+    hebrewUi: 'unknown',
+    hebrew: 'לא מצאנו תיעוד של היצרן לגבי עברית.',
+    source: 'https://zapier.com/pricing',
+    free: 'unknown',
+    freeNote: '',
+    pricing: 'https://zapier.com/pricing',
+    use: 'ליד מטופס באתר שנכנס לגיליון ול-CRM.',
+  },
+  {
+    id: 'make',
+    name: 'Make',
+    category: 'automation',
+    url: 'https://www.make.com/',
+    hebrewUi: 'unknown',
+    hebrew: 'לא מצאנו תיעוד של היצרן לגבי עברית.',
+    source: 'https://www.make.com/en/pricing',
+    free: 'yes',
+    freeNote: '1,000 קרדיטים בחודש',
+    pricing: 'https://www.make.com/en/pricing',
+    use: 'תהליכים עם כמה שלבים, למשל הזמנה, חשבונית והודעה ללקוח.',
+  },
+  {
+    id: 'n8n',
+    name: 'n8n',
+    category: 'automation',
+    url: 'https://n8n.io/',
+    hebrewUi: 'unknown',
+    hebrew: 'לא מצאנו תיעוד של היצרן לגבי עברית.',
+    source: 'https://n8n.io/pricing/',
+    free: 'trial',
+    freeNote: 'ניסיון בענן',
+    pricing: 'https://n8n.io/pricing/',
+    use: 'אוטומציות וסוכני AI למי שמוכן לתחזק אותם בעצמו.',
+  },
+]
+
+export const toolsInCategory = (category: AiToolCategory | 'all') =>
+  category === 'all' ? aiTools : aiTools.filter((tool) => tool.category === category)
+
+export const categoryLabel = (category: AiToolCategory) =>
+  aiToolCategories.find((item) => item.id === category)?.label ?? ''
+
+export const countHebrewUi = () => aiTools.filter((tool) => tool.hebrewUi === 'yes').length

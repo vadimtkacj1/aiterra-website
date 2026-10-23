@@ -63,6 +63,9 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/hebrew-calendar-2027': ['לוח שנה', 'חגים', 'תאריך עברי'],
   '/tools/gematria-calculator': ['גימטריה', 'שם העסק', 'מיתוג'],
   '/tools/word-search-maker': ['תפזורת', 'חינוך', 'הדפסה'],
+  '/tools/photo-consent-form': ['צילום', 'תמונות', 'אינסטגרם', 'רשתות', 'פרטיות'],
+  '/tools/ai-tools-hebrew': ['בינה מלאכותית', 'כלי ai', 'chatgpt', 'אוטומציות ai'],
+  '/tools/chatgpt-whatsapp': ['וואטסאפ', 'whatsapp', 'chatgpt', 'בוט'],
 }
 
 const MAX_TOOLS = 3

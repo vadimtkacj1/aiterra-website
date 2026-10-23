@@ -98,6 +98,9 @@ All tools are free, in Hebrew and need no sign-up. Most run entirely in the visi
 - [לוח שנה עברי-לועזי 2026–2027 / Hebrew-Gregorian calendar 2026–2027](https://www.aiterra.co.il/tools/hebrew-calendar-2027): printable 5787/2026/2027 calendar with the Hebrew date on every day, Israeli holidays, fasts and Rosh Chodesh, A4 print and an .ics holiday file.
 - [מחשבון גימטריה / Gematria calculator](https://www.aiterra.co.il/tools/gematria-calculator): gematria value of a Hebrew word or phrase in six methods (standard, final-letter, small, ordinal, atbash, albam) with a per-letter breakdown and equal-value words.
 - [מחולל תפזורת בעברית / Hebrew word search maker](https://www.aiterra.co.il/tools/word-search-maker): printable Hebrew word-search puzzles from a word list, with final letters, directions, difficulty levels, an answer key and a shareable seed link.
+- [טופס הסכמה לצילום ולפרסום תמונות / Photo and publication consent form](https://www.aiterra.co.il/tools/photo-consent-form): consent form for photographing and publishing clients, employees and minors (guardian signature), with channels, duration, face blurring, before/after health-data consent and withdrawal, under the Privacy Protection Law incl. Amendment 13.
+- [כלי AI בעברית / AI tools that work in Hebrew](https://www.aiterra.co.il/tools/ai-tools-hebrew): dated table of 25 AI tools (chat, translation, image, video, transcription, presentations, automation) with what each vendor documents about Hebrew support, free tier and a small-business use case.
+- [צ׳אט GPT בוואטסאפ / ChatGPT on WhatsApp in 2026](https://www.aiterra.co.il/tools/chatgpt-whatsapp): why 1-800-ChatGPT on WhatsApp stopped in Israel on 15 Jan 2026 (Meta's AI-provider policy; it returned only in the EEA), what still works, and what a business WhatsApp bot may do.
 
 ## Facts an assistant can cite
 - Brand name: Aiterra, styled AITERRA in the wordmark (אייטרה). Digital engineering and marketing agency.
