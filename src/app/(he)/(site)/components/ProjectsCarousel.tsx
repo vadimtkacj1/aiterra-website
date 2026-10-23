@@ -7,6 +7,7 @@ import GridRule from './GridRule'
 import { ExpandIcon } from './icons'
 import TagList from './TagList'
 import useAutoplay from './useAutoplay'
+import useHydrated from './useHydrated'
 import styles from './ProjectsCarousel.module.css'
 
 export type CarouselMetric = {
@@ -144,11 +145,15 @@ export default function ProjectsCarousel({
     return () => window.removeEventListener('keydown', onKey)
   }, [zoomed])
 
+  const hydrated = useHydrated()
   const looped = items.length > 1
 
   const loop = useMemo(
-    () => (looped ? [0, 1, 2] : [0]).flatMap((copy) => items.map((item) => ({ item, copy }))),
-    [items, looped],
+    () =>
+      (looped ? (hydrated ? [0, 1, 2] : [1]) : [0]).flatMap((copy) =>
+        items.map((item) => ({ item, copy })),
+      ),
+    [items, looped, hydrated],
   )
 
   const restartAutoplay = useAutoplay(
@@ -171,6 +176,8 @@ export default function ProjectsCarousel({
       setActiveIndex(0)
       return
     }
+
+    if (!hydrated) return
 
     const sign = getComputedStyle(track).direction === 'rtl' ? -1 : 1
     const copyWidth = () => items.length * cardStride(track)
@@ -206,7 +213,7 @@ export default function ProjectsCarousel({
       track.removeEventListener('scroll', onScroll)
       if (frame) cancelAnimationFrame(frame)
     }
-  }, [items, looped])
+  }, [items, looped, hydrated])
 
   const step = (direction: 'prev' | 'next') => {
     const track = trackRef.current

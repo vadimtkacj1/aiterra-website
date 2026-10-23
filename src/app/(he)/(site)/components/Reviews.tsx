@@ -7,12 +7,14 @@ import CircleButton from './CircleButton'
 import GridRule from './GridRule'
 import ReviewCard from './ReviewCard'
 import useAutoplay from './useAutoplay'
+import useHydrated from './useHydrated'
 import { reviewItems as reviewItemsDefaults, reviews as reviewsDefaults } from '../content'
 import { useV2 } from '../V2ContentProvider'
 import type { ReviewItem } from '../content'
 import styles from './Reviews.module.css'
 
 const COPIES = [0, 1, 2]
+const SERVER_COPIES = [1]
 
 type ReviewsProps = {
   eyebrow?: string
@@ -48,14 +50,19 @@ export default function Reviews(props: ReviewsProps) {
   } = props
   const headingId = useId()
   const trackRef = useRef<HTMLDivElement>(null)
+  const hydrated = useHydrated()
   const count = items.length
   const [activeIndex, setActiveIndex] = useState(count + Math.floor(count / 2))
   const activeRef = useRef(activeIndex)
   activeRef.current = activeIndex
+  const loopOffset = hydrated ? 0 : count
 
   const loop = useMemo(
-    () => COPIES.flatMap((copy) => items.map((item) => ({ item, copy }))),
-    [items],
+    () =>
+      (hydrated ? COPIES : SERVER_COPIES).flatMap((copy) =>
+        items.map((item) => ({ item, copy })),
+      ),
+    [items, hydrated],
   )
 
   const centre = (index: number, behavior: ScrollBehavior) => {
@@ -88,7 +95,7 @@ export default function Reviews(props: ReviewsProps) {
 
   useEffect(() => {
     const track = trackRef.current
-    if (!track || count === 0) return
+    if (!track || count === 0 || !hydrated) return
 
     let frame = 0
     const observer = new ResizeObserver(() => {
@@ -104,11 +111,11 @@ export default function Reviews(props: ReviewsProps) {
       observer.disconnect()
       if (frame) cancelAnimationFrame(frame)
     }
-  }, [count])
+  }, [count, hydrated])
 
   useEffect(() => {
     const track = trackRef.current
-    if (!track || count === 0) return
+    if (!track || count === 0 || !hydrated) return
 
     const sign = getComputedStyle(track).direction === 'rtl' ? -1 : 1
     let frame = 0
@@ -143,7 +150,7 @@ export default function Reviews(props: ReviewsProps) {
       track.removeEventListener('scroll', onScroll)
       if (frame) cancelAnimationFrame(frame)
     }
-  }, [count])
+  }, [count, hydrated])
 
   return (
     <section className={styles.reviews} aria-labelledby={headingId}>
@@ -177,7 +184,7 @@ export default function Reviews(props: ReviewsProps) {
               key={`${item.id}-${copy}`}
               review={item}
               ratingLabel={ratingLabel.replace('{value}', String(item.rating))}
-              active={index === activeIndex}
+              active={index + loopOffset === activeIndex}
               className={styles.card}
               aria-hidden={copy !== 1}
             />

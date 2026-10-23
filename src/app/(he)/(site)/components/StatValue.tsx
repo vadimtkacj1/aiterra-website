@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
+import useHydrated from './useHydrated'
 import styles from './StatValue.module.css'
 
 type StatValueProps = {
@@ -14,6 +15,7 @@ const DIGITS = '0123456789'.split('')
 const ROUNDS = 3
 const COLUMN_STAGGER = 120
 const STRIP = Array.from({ length: ROUNDS + 1 }, () => DIGITS).flat()
+const SERVER_STRIP = STRIP.slice(0, 1)
 const SPARKS = [-150, -110, -70, -30, 30, 70, 110, 150]
 
 const parse = (value: string) => {
@@ -29,10 +31,11 @@ export default function StatValue({ value, delay = 0, duration = 2000, className
   const ref = useRef<HTMLParagraphElement>(null)
   const stripsRef = useRef<Array<HTMLSpanElement | null>>([])
   const [phase, setPhase] = useState<'idle' | 'run' | 'done'>('idle')
+  const hydrated = useHydrated()
 
   useEffect(() => {
     const element = ref.current
-    if (!element || !parts) return
+    if (!element || !parts || !hydrated) return
 
     const strips = stripsRef.current.filter(Boolean) as HTMLSpanElement[]
     const count = strips.length
@@ -89,7 +92,7 @@ export default function StatValue({ value, delay = 0, duration = 2000, className
       clearTimeout(timer)
       cancelAnimationFrame(frame)
     }
-  }, [parts, delay, duration])
+  }, [parts, delay, duration, hydrated])
 
   if (!parts) {
     return <p className={className}>{value}</p>
@@ -107,7 +110,7 @@ export default function StatValue({ value, delay = 0, duration = 2000, className
               }}
               className={styles.strip}
             >
-              {STRIP.map((glyph, index) => (
+              {(hydrated ? STRIP : SERVER_STRIP).map((glyph, index) => (
                 <span key={index} className={styles.glyph}>
                   {glyph}
                 </span>
