@@ -232,6 +232,13 @@ export const tools: ToolEntry[] = [
     icon: 'shield',
   },
   {
+    path: '/tools/minimum-wage-2026',
+    title: 'שכר מינימום 2026',
+    description: 'שכר המינימום מ-1.4.2026: 6,443.85 ₪ לחודש ו-35.40 ₪ לשעה, לנוער לפי גיל ולמשרה חלקית, ובדיקה אם השכר עומד במינימום.',
+    category: 'money',
+    icon: 'calculator',
+  },
+  {
     path: '/tools/self-employed-tax-calculator',
     title: 'מחשבון מס הכנסה לעצמאי 2026',
     description: 'מס הכנסה, ביטוח לאומי ודמי בריאות לעצמאי לפי מדרגות 2026, עם נטו לחודש ולשנה ומקדמה משוערת.',
@@ -307,6 +314,20 @@ export const tools: ToolEntry[] = [
     description: 'ממירים תאריך עברי ללועזי ולהפך, כולל אחרי השקיעה ואדר א׳ וב׳, עם גיל עברי ותאריך בר ובת מצווה.',
     category: 'dates',
     icon: 'calendarRange',
+  },
+  {
+    path: '/tools/vacation-days-calculator',
+    title: 'מחשבון ימי חופשה לפי ותק',
+    description: 'כמה ימי חופשה מגיעים לפי ותק, לפי החוק וצו ההרחבה, בשבוע של 5 או 6 ימים, כולל חלק יחסי לשנה חלקית.',
+    category: 'dates',
+    icon: 'calendarRange',
+  },
+  {
+    path: '/tools/maternity-leave-calculator',
+    title: 'מחשבון חופשת לידה',
+    description: 'תאריך סיום חופשת הלידה ויום החזרה לעבודה, 26 או 15 שבועות, שבועות בתשלום מביטוח לאומי והגנה מפיטורים.',
+    category: 'dates',
+    icon: 'calendar',
   },
   {
     path: '/tools/retirement-age-calculator',
