@@ -16,7 +16,7 @@ export const SOCIAL_PROFILES = {
   linkedin: '',
   instagram: 'https://www.instagram.com/aiterra.il/',
   tiktok: 'https://www.tiktok.com/@aiterra.il',
-  facebook: '',
+  facebook: 'https://www.facebook.com/profile.php?id=61595777100656',
   x: 'https://x.com/aiterra_il',
   threads: 'https://www.threads.com/@aiterra.il',
 }
