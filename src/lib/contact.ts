@@ -17,6 +17,8 @@ export const SOCIAL_PROFILES = {
   instagram: 'https://www.instagram.com/aiterra.il/',
   tiktok: 'https://www.tiktok.com/@aiterra.il',
   facebook: '',
+  x: 'https://x.com/aiterra_il',
+  threads: 'https://www.threads.com/@aiterra.il',
 }
 
 export const GOOGLE_BUSINESS_PROFILE_URL = 'https://maps.google.com/?cid=13840747656603668464'
