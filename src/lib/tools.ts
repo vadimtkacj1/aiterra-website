@@ -638,6 +638,30 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-10-23',
     icon: 'scroll',
   },
+  {
+    path: '/tools/flight-time-from-israel',
+    title: 'כמה זמן טיסה מישראל',
+    description: 'זמן טיסה משוער מנתב״ג ל-72 יעדים, ישירה או עם עצירה, מרחק והפרש שעות, ומחשבון זמן טיסה לפי מרחק.',
+    category: 'dates',
+    reviewed: '2026-10-23',
+    icon: 'calendarRange',
+  },
+  {
+    path: '/tools/time-difference-israel',
+    title: 'הפרש שעות מישראל',
+    description: 'מה השעה עכשיו ביעד: הפרש שעות בין ישראל ל-62 ערים עם שעון קיץ, טבלת חורף וקיץ ומתכנן פגישות.',
+    category: 'dates',
+    reviewed: '2026-10-23',
+    icon: 'clock',
+  },
+  {
+    path: '/tools/hebrew-name-to-english',
+    title: 'איך כותבים שם באנגלית',
+    description: '380 שמות פרטיים ומשפחה עבריים עם האיות המקובל באנגלית, תעתיק לשמות אחרים וכתיב בסגנון דרכון.',
+    category: 'marketing',
+    reviewed: '2026-10-23',
+    icon: 'type',
+  },
 ]
 
 export const otherTools = (path: string) => {

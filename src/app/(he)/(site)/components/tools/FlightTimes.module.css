@@ -1,0 +1,276 @@
+.pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.error {
+  margin: 0;
+  font-size: 14px;
+  color: #8c2318;
+}
+
+.headline {
+  margin: 0 0 14px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--v2-paper-ink);
+}
+
+.facts {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 8px;
+}
+
+.facts div {
+  padding: 12px 14px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.facts dt {
+  font-size: 13px;
+  color: var(--v2-paper-ink-muted);
+}
+
+.facts dd {
+  margin: 2px 0 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.formula {
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+  text-align: start;
+}
+
+.tableCard {
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding: 28px 44px 32px;
+  border-radius: 32px;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 1px rgba(14, 23, 48, 0.06),
+    0 40px 90px -50px rgba(6, 11, 34, 0.55);
+}
+
+.tableHeading {
+  margin: 0 0 16px;
+  font-family: var(--v2-font-display);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)) auto;
+  gap: 14px;
+  align-items: end;
+  margin-bottom: 10px;
+}
+
+.direct {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 50px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.direct input {
+  width: 20px;
+  height: 20px;
+  accent-color: #2447d6;
+}
+
+.scroll {
+  overflow-x: auto;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 16px;
+}
+
+.scroll:focus-visible {
+  outline: 2px solid var(--v2-blue);
+  outline-offset: 3px;
+}
+
+.table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+}
+
+.caption {
+  padding: 12px 14px 8px;
+  font-weight: 600;
+  text-align: start;
+  color: var(--v2-paper-ink);
+}
+
+.table th,
+.table td {
+  padding: 10px 14px;
+  border-top: 1px solid #ece7e0;
+  text-align: start;
+  vertical-align: top;
+}
+
+.table thead th {
+  background: #f6f4f0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--v2-paper-ink-muted);
+}
+
+.row {
+  scroll-margin-top: calc(var(--v2-bar-height) + 24px);
+}
+
+.row:target {
+  background: #eef2fd;
+}
+
+.row th {
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.anchorLink {
+  display: inline-block;
+  color: var(--v2-paper-ink);
+  text-decoration: none;
+}
+
+.anchorLink:hover {
+  text-decoration: underline;
+}
+
+.anchorLink:focus-visible {
+  outline: 2px solid var(--v2-blue);
+  outline-offset: 2px;
+}
+
+.country {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--v2-paper-ink-muted);
+}
+
+.duration {
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.none {
+  color: #8c2318;
+}
+
+.number {
+  white-space: nowrap;
+}
+
+.empty {
+  margin: 14px 0 0;
+  color: var(--v2-paper-ink-muted);
+}
+
+.anchor {
+  scroll-margin-top: calc(var(--v2-bar-height) + 32px);
+}
+
+.tableWrap {
+  margin: 8px 0 20px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.plain {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.plain caption {
+  padding: 14px 16px 8px;
+  font-weight: 600;
+  text-align: start;
+  color: var(--v2-paper-ink);
+}
+
+.plain th,
+.plain td {
+  padding: 9px 14px;
+  border-top: 1px solid #ece7e0;
+  text-align: start;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.plain thead th {
+  background: #f6f4f0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--v2-paper-ink-muted);
+}
+
+.caveat {
+  margin-top: 20px;
+  padding: 12px 16px;
+  border-inline-start: 3px solid var(--v2-blue);
+  border-start-end-radius: 12px;
+  border-end-end-radius: 12px;
+  background: #ffffff;
+  font-size: 15px;
+}
+
+.reviewed {
+  font-size: 14px;
+  color: var(--v2-paper-ink-muted);
+}
+
+@media (max-width: 1023px) {
+  .tableCard {
+    padding: 24px 20px 28px;
+  }
+
+  .filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .tableCard {
+    padding: 22px 14px 24px;
+    border-radius: 24px;
+  }
+
+  .filters,
+  .pair {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .headline {
+    font-size: 24px;
+  }
+
+  .table th,
+  .table td {
+    padding: 9px 10px;
+  }
+}

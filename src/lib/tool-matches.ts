@@ -69,6 +69,9 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/fridge-storage-times': ['מסעדה', 'מזון', 'קייטרינג'],
   '/tools/shoe-size-chart': ['חנות', 'אופנה', 'איקומרס'],
   '/tools/death-notice-generator': ['הודעה', 'נוסח'],
+  '/tools/flight-time-from-israel': ['טיסה', 'חו״ל', 'תיירות'],
+  '/tools/time-difference-israel': ['חו״ל', 'לקוחות בחו״ל', 'שעות'],
+  '/tools/hebrew-name-to-english': ['שם העסק', 'דומיין', 'אנגלית'],
 }
 
 const MAX_TOOLS = 3

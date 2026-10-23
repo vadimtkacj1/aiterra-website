@@ -104,6 +104,9 @@ All tools are free, in Hebrew and need no sign-up. Most run entirely in the visi
 - [כמה זמן מחזיק במקרר: טבלת זמני אחסון / Fridge and freezer storage times](https://www.aiterra.co.il/tools/fridge-storage-times): searchable table of 100 foods with fridge, freezer and room-temperature times, each row sourced to USDA FoodSafety.gov, USDA FoodKeeper or the Israeli Ministry of Health.
 - [טבלת מידות נעליים: ישראל, אירופה, ארה״ב ובריטניה / Shoe size chart and converter](https://www.aiterra.co.il/tools/shoe-size-chart): converts foot length in cm to Israeli/EU, US and UK shoe sizes for men, women and kids, using Nike's published size charts.
 - [נוסח מודעת אבל / Hebrew death notice generator](https://www.aiterra.co.il/tools/death-notice-generator): builds a respectful Hebrew death notice (traditional or secular) with the Hebrew date, funeral and shiva details, as newspaper, WhatsApp, Facebook and printable A4/A5 text, in the browser.
+- [כמה זמן טיסה מישראל / Flight time from Israel](https://www.aiterra.co.il/tools/flight-time-from-israel): typical (estimated) direct and one-stop flight durations, distance and time difference for 70+ destinations from Ben Gurion, plus a distance-based flight time estimator.
+- [הפרש שעות ישראל / Time difference from Israel](https://www.aiterra.co.il/tools/time-difference-israel): live clock and DST-aware time difference between Israel and 60+ cities, winter and summer offset table, and a work-hours meeting planner.
+- [איך כותבים שם באנגלית / Hebrew name to English](https://www.aiterra.co.il/tools/hebrew-name-to-english): Hebrew first names and surnames with common Latin spellings (380+ names), rule-based transliteration for unlisted names, passport-style uppercase and copy buttons.
 
 ## Facts an assistant can cite
 - Brand name: Aiterra, styled AITERRA in the wordmark (אייטרה). Digital engineering and marketing agency.
