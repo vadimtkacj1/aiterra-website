@@ -85,6 +85,8 @@ All tools are free, in Hebrew and need no sign-up. Most run entirely in the visi
 - [ספירת מילים ותווים בעברית / Hebrew word and character counter](https://www.aiterra.co.il/tools/word-counter): counts Hebrew and English words and characters with Hebrew-aware rules, estimates reading time, checks 15 sourced platform limits (X, SMS, Instagram, Google Ads) and removes niqqud, all in the browser.
 - [מחולל פרומפטים בעברית / Hebrew prompt generator](https://www.aiterra.co.il/tools/prompt-generator): builds structured Hebrew prompts for ChatGPT, Claude and Gemini for 12 small-business tasks in three variants, plus a library of 37 ready-to-use prompts.
 - [מילון מונחי בינה מלאכותית / Hebrew AI glossary](https://www.aiterra.co.il/tools/ai-glossary): 90 AI terms explained in plain Hebrew with business examples (tokens, LLMs, RAG, MCP, AI agents, GEO), plus a measurement of Hebrew vs English token counts (about 1.3× on current OpenAI tokenizers).
+- [כמה עולה ChatGPT בשקלים / AI subscription prices in ILS](https://www.aiterra.co.il/tools/ai-subscription-prices): ChatGPT, Claude, Gemini, Copilot and Perplexity plan prices in USD and ILS as of 23 Oct 2026 (ChatGPT in Israel: Go ₪25, Plus ₪70, Business ₪78/seat), monthly vs annual, team cost calculator.
+- [מחשבון טוקנים ועלות API / AI token and API cost calculator](https://www.aiterra.co.il/tools/ai-token-calculator): estimated token count for Hebrew/English text (Hebrew ≈1.29× English tokens on o200k), official per-1M-token API prices for OpenAI, Anthropic and Google as of 23 Oct 2026, monthly cost in USD and ILS.
 
 ## Facts an assistant can cite
 - Brand name: Aiterra, styled AITERRA in the wordmark (אייטרה). Digital engineering and marketing agency.

@@ -455,6 +455,20 @@ export const tools: ToolEntry[] = [
     category: 'marketing',
     icon: 'search',
   },
+  {
+    path: '/tools/ai-subscription-prices',
+    title: 'כמה עולה ChatGPT בשקלים',
+    description: 'מחירי ChatGPT, Claude, Gemini, Copilot ו-Perplexity בשקלים: Plus ב-70 ₪ בישראל, חיוב חודשי או שנתי ועלות לצוות.',
+    category: 'marketing',
+    icon: 'receipt',
+  },
+  {
+    path: '/tools/ai-token-calculator',
+    title: 'מחשבון טוקנים ועלות API',
+    description: 'כמה טוקנים יש בטקסט בעברית וכמה זה עולה ב-GPT, Claude ו-Gemini: מחירים למיליון טוקנים ועלות חודשית בשקלים.',
+    category: 'marketing',
+    icon: 'calculator',
+  },
 ]
 
 export const otherTools = (path: string) => {
