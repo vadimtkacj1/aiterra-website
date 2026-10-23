@@ -694,6 +694,30 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-10-23',
     icon: 'mail',
   },
+  {
+    path: '/tools/gpa-calculator',
+    title: 'מחשבון ממוצע ציונים משוקלל',
+    description: 'ממוצע אקדמי משוקלל לפי נקודות זכות: מוסיפים קורסים, מסמנים עובר/נכשל ורואים איזה ציון צריך כדי להגיע ליעד.',
+    category: 'money',
+    reviewed: '2026-10-23',
+    icon: 'calculator',
+  },
+  {
+    path: '/tools/color-code-converter',
+    title: 'ממיר קודי צבע HEX, RGB, HSL',
+    description: 'המרה בין HEX, RGB ו-HSL עם בוחר צבעים, בדיקת ניגודיות מול לבן ושחור לפי WCAG והעתקת CSS.',
+    category: 'marketing',
+    reviewed: '2026-10-23',
+    icon: 'wrench',
+  },
+  {
+    path: '/tools/roman-numerals-converter',
+    title: 'ממיר מספרים רומיים',
+    description: 'מספר רגיל לרומי ורומי למספר, מ-1 עד 3999, עם בדיקת תקינות וטבלת מספרים רומיים.',
+    category: 'marketing',
+    reviewed: '2026-10-23',
+    icon: 'calculator',
+  },
 ]
 
 export const otherTools = (path: string) => {

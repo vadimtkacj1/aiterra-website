@@ -76,6 +76,9 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/idf-ranks-chart': ['צבא', 'מילואים'],
   '/tools/cooking-times-chart': ['מסעדה', 'מזון', 'קייטרינג'],
   '/tools/english-address-generator': ['משלוח', 'חו״ל', 'איקומרס', 'חנות'],
+  '/tools/gpa-calculator': ['לימודים', 'ממוצע'],
+  '/tools/color-code-converter': ['עיצוב', 'מיתוג', 'צבע', 'נגישות', 'ux'],
+  '/tools/roman-numerals-converter': ['מספרים'],
 }
 
 const MAX_TOOLS = 3

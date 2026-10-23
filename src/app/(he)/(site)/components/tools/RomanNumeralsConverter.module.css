@@ -1,0 +1,40 @@
+.inner {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 820px;
+}
+
+.error {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #a31d1d;
+}
+
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 72px;
+  padding: 12px 18px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 14px;
+  background: #f4f0ea;
+}
+
+.resultText {
+  margin: 0;
+  font-family: var(--v2-font-display);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--v2-blue);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .resultText {
+    font-size: 28px;
+  }
+}
