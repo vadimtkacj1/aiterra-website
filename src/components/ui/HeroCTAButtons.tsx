@@ -8,7 +8,7 @@ interface HeroCTAButtonsProps {
 }
 
 export default function HeroCTAButtons({ className = 'flex gap-4 justify-center' }: HeroCTAButtonsProps) {
-  ReactDOM.preload('/fonts/GoogleSans/GoogleSans-VariableFont_wght.woff2', {
+  ReactDOM.preload('/fonts/GoogleSans/GoogleSans-Variable-HeLatin.woff2', {
     as: 'font',
     type: 'font/woff2',
     crossOrigin: 'anonymous',

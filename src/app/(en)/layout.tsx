@@ -54,10 +54,7 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" dir="ltr">
       <head>
-        <link rel="preload" as="font" type="font/woff2" href="/fonts/GoogleSans/GoogleSans-VariableFont_wght.woff2" crossOrigin="anonymous" />
-        <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-BrutalistBold.woff2" crossOrigin="anonymous" />
-        <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-ModernistRegular.woff2" crossOrigin="anonymous" />
-        <link rel="preload" as="font" type="font/woff2" href="/fonts/TelAviv-ModernistBold.woff2" crossOrigin="anonymous" />
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/GoogleSans/GoogleSans-Variable-HeLatin.woff2" crossOrigin="anonymous" />
       </head>
       <body>
         <div

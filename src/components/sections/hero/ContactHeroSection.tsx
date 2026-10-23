@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 import HeroVideoBackdrop from '@/components/ui/HeroVideoBackdrop'
 
 export default function ContactHeroSection() {
-  ReactDOM.preload('/fonts/GoogleSans/GoogleSans-VariableFont_wght.woff2', {
+  ReactDOM.preload('/fonts/GoogleSans/GoogleSans-Variable-HeLatin.woff2', {
     as: 'font',
     type: 'font/woff2',
     crossOrigin: 'anonymous',
