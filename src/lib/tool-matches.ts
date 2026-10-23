@@ -29,6 +29,7 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/accessibility-statement-generator': ['נגישות', '5568', 'wcag', 'הנגשה'],
   '/tools/website-terms-generator': ['תקנון', 'חנות', 'איקומרס', 'woocommerce', 'shopify'],
   '/tools/work-days-calculator': ['ימי עבודה', 'כמה זמן', 'לוח זמנים', 'התהליך'],
+  '/tools/monthly-timesheet': ['שעות עבודה', 'נוכחות', 'עובדים', 'שעות נוספות'],
   '/tools/work-hours-calculator': ['שעות עבודה', 'חיסכון בזמן', 'יעילות', 'משרה'],
 }
 

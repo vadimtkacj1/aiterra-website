@@ -308,6 +308,13 @@ export const tools: ToolEntry[] = [
     icon: 'calendar',
   },
   {
+    path: '/tools/monthly-timesheet',
+    title: 'דוח שעות עבודה חודשי להדפסה',
+    description: 'טופס נוכחות חודשי עם שבתות וחגים מסומנים, להדפסה ריק או עם שעות, עם שעות נוספות 125% ו-150% וקובץ ל-Excel.',
+    category: 'dates',
+    icon: 'calendar',
+  },
+  {
     path: '/tools/work-hours-calculator',
     title: 'מחשבון שעות עבודה',
     description: 'כמה שעות עבדתם, גם במשמרת לילה, בשעות ודקות ובשבר עשרוני, ודוח חודשי עם שעות נוספות ושכר.',
