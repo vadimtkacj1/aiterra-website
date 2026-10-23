@@ -123,6 +123,12 @@ All tools are free, in Hebrew and need no sign-up. Most run entirely in the visi
 - [ראשי תיבות: פירוש קיצורים בעברית / Hebrew acronyms dictionary](https://www.aiterra.co.il/tools/hebrew-acronyms): searchable list of 418 common Hebrew acronyms with expansion and category; handles ״ / " / ' variants and prefix letters.
 - [המרת כוסות לגרמים / Cups to grams baking converter](https://www.aiterra.co.il/tools/baking-converter): converts cups, tablespoons and teaspoons to grams for 18 ingredients with Israeli (240 ml, 250 ml) and US cups, plus °F/°C and gas marks; weights from King Arthur Baking.
 - [כתב סתרים: מחולל קוד סודי לילדים / Hebrew secret code maker](https://www.aiterra.co.il/tools/secret-code-maker): Hebrew ciphers for kids (atbash, Caesar shift, number code, mirror, SVG pigpen symbols), encode and decode, printable worksheet with key table.
+- [גודל A4 בסנטימטר ובפיקסלים](https://www.aiterra.co.il/tools/a4-size-converter): A4 and ISO 216 paper sizes in cm, mm, inches and pixels at 72/96/150/300 DPI.
+- [מידות מיטה ומזרן](https://www.aiterra.co.il/tools/bed-mattress-size-chart): common Israeli, European and US bed and mattress sizes with a room-fit check.
+- [מחשבון שברים עם שלבים](https://www.aiterra.co.il/tools/fractions-calculator): adds, subtracts, multiplies and divides fractions and mixed numbers with Hebrew step-by-step working.
+- [מזל סיני לפי תאריך לידה](https://www.aiterra.co.il/tools/chinese-zodiac-finder): Chinese zodiac animal and element by exact birth date (lunar new year dates 1924–2044).
+- [נורות אזהרה ברכב](https://www.aiterra.co.il/tools/car-warning-lights-guide): 17 dashboard warning lights drawn as SVG with meaning, colour urgency and what to do.
+- [שמות לכלבים](https://www.aiterra.co.il/tools/dog-name-generator): 212 Hebrew and English dog names filtered by gender, size and style, with random pick and favourites.
 
 ## Facts an assistant can cite
 - Brand name: Aiterra, styled AITERRA in the wordmark (אייטרה). Digital engineering and marketing agency.

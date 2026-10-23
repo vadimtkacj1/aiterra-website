@@ -88,6 +88,12 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/hebrew-acronyms': ['קיצורים', 'ראשי תיבות'],
   '/tools/baking-converter': ['מתכונים', 'מזון', 'קייטרינג'],
   '/tools/secret-code-maker': ['ילדים', 'חינוך', 'הדפסה'],
+  '/tools/a4-size-converter': ['הדפסה', 'עיצוב', 'דפוס'],
+  '/tools/bed-mattress-size-chart': ['מיטה', 'מזרן'],
+  '/tools/fractions-calculator': ['מתמטיקה', 'לימודים'],
+  '/tools/chinese-zodiac-finder': ['מזל'],
+  '/tools/car-warning-lights-guide': ['רכב', 'מוסך'],
+  '/tools/dog-name-generator': ['כלב', 'חיות מחמד'],
 }
 
 const MAX_TOOLS = 3
