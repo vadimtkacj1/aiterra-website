@@ -14,6 +14,15 @@ export default function Hero({ locale }: { locale?: Locale } = {}) {
       <link rel="preload" as="image" href="/videos/v2-hero-poster.webp" fetchPriority="high" />
       <section className={styles.hero}>
       <div className={styles.media}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          className={styles.mediaImage}
+          src="/videos/v2-hero-poster.webp"
+          alt=""
+          fetchPriority="high"
+          decoding="async"
+          aria-hidden="true"
+        />
         <video
           className={styles.mediaImage}
           src="/videos/v2-hero.mp4?v=2"
