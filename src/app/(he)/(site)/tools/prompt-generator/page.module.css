@@ -1,0 +1,69 @@
+.libraryGroup .libraryList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.libraryList .libraryItem {
+  min-width: 0;
+  margin: 0;
+  padding: 18px 20px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 16px;
+  background: #ffffff;
+  scroll-margin-top: calc(var(--v2-bar-height) + 24px);
+}
+
+.libraryTitle {
+  margin: 0 0 4px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--v2-paper-ink);
+}
+
+.libraryItem .when {
+  margin: 0 0 10px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--v2-paper-ink-muted);
+}
+
+.when strong {
+  color: var(--v2-paper-ink);
+}
+
+.libraryText {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #f6f4f0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #2b3148;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.libraryGroup .groupNote {
+  margin: 12px 0 0;
+  font-size: 15px;
+}
+
+.reviewed {
+  font-size: 14px;
+  color: var(--v2-paper-ink-muted);
+}
+
+@media (max-width: 640px) {
+  .libraryList .libraryItem {
+    padding: 16px 14px;
+  }
+
+  .libraryText {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

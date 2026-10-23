@@ -37,6 +37,19 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/shift-schedule-maker': ['משמרות', 'סידור עבודה', 'עובדים', 'שיבוץ', 'מסעדה'],
   '/tools/monthly-timesheet': ['שעות עבודה', 'נוכחות', 'עובדים', 'שעות נוספות'],
   '/tools/work-hours-calculator': ['שעות עבודה', 'חיסכון בזמן', 'יעילות', 'משרה'],
+  '/tools/sick-days-calculator': ['ימי מחלה', 'דמי מחלה', 'עובדים', 'משאבי אנוש'],
+  '/tools/notice-period-calculator': ['הודעה מוקדמת', 'פיטורים', 'התפטרות', 'עובדים'],
+  '/tools/recuperation-pay-calculator': ['דמי הבראה', 'עובדים', 'תלוש', 'משאבי אנוש'],
+  '/tools/exchange-rate-invoice': ['שער יציג', 'מטבע חוץ', 'דולר', 'חשבונית', 'ייבוא'],
+  '/tools/days-between-dates': ['כמה זמן', 'לוח זמנים', 'תאריך', 'דדליין'],
+  '/tools/cpi-indexation-calculator': ['מדד', 'הצמדה', 'שכר דירה', 'מחירון'],
+  '/tools/cancel-transaction-checker': ['ביטול עסקה', 'החזרות', 'חנות', 'איקומרס', 'תקנון'],
+  '/tools/whatsapp-api-cost-calculator': ['וואטסאפ', 'whatsapp', 'בוט', 'הודעות'],
+  '/tools/ai-readiness-checker': ['geo', 'chatgpt', 'ai overviews', 'בינה מלאכותית', 'נראות'],
+  '/tools/social-image-resizer': ['אינסטגרם', 'פייסבוק', 'סטורי', 'רשתות', 'וידאו קצר'],
+  '/tools/word-counter': ['תוכן', 'בלוג', 'קופירייטינג', 'מילות מפתח'],
+  '/tools/prompt-generator': ['בינה מלאכותית', 'chatgpt', 'סוכן', 'סוכני ai', 'אוטומציות ai'],
+  '/tools/ai-glossary': ['בינה מלאכותית', 'סוכני ai', 'geo', 'chatgpt', 'ai overviews'],
 }
 
 const MAX_TOOLS = 3
