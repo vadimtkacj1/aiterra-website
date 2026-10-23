@@ -54,6 +54,9 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/ai-token-calculator': ['סוכן', 'בוט', 'api', 'סוכני ai'],
   '/tools/payment-demand-letter': ['חשבונית', 'גבייה', 'תשלום', 'לקוחות', 'הנהלת חשבונות'],
   '/tools/ai-policy-generator': ['בינה מלאכותית', 'סוכני ai', 'פרטיות', 'chatgpt', 'עובדים'],
+  '/tools/freelancer-hourly-rate': ['פרילנסר', 'עצמאי', 'תמחור', 'הצעת מחיר'],
+  '/tools/profit-margin-calculator': ['תמחור', 'רווח', 'חנות', 'מוצרים', 'איקומרס'],
+  '/tools/iban-calculator': ['iban', 'העברה בנקאית', 'סליקה', 'תשלומים'],
 }
 
 const MAX_TOOLS = 3

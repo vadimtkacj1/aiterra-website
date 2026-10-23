@@ -483,6 +483,27 @@ export const tools: ToolEntry[] = [
     category: 'legal',
     icon: 'shield',
   },
+  {
+    path: '/tools/freelancer-hourly-rate',
+    title: 'מחשבון תעריף שעתי לפרילנסר',
+    description: 'כמה לגבות לשעה כעצמאי: תעריף לפי נטו רצוי, הוצאות, שעות לחיוב, מס 2026 ומע״מ לעוסק מורשה או פטור.',
+    category: 'money',
+    icon: 'clock',
+  },
+  {
+    path: '/tools/profit-margin-calculator',
+    title: 'מחשבון רווח גולמי ותמחור מוצר',
+    description: 'מחיר מכירה לפי מרווח או תוספת על העלות, לפני ואחרי מע״מ, ונקודת איזון לפי הוצאות קבועות.',
+    category: 'money',
+    icon: 'percent',
+  },
+  {
+    path: '/tools/iban-calculator',
+    title: 'מחשבון IBAN ישראלי',
+    description: 'IBAN לכל בנק בישראל מקוד בנק, סניף וחשבון, לפי נוסחת בנק ישראל, ובדיקה אם IBAN קיים תקין.',
+    category: 'money',
+    icon: 'landmark',
+  },
 ]
 
 export const otherTools = (path: string) => {
