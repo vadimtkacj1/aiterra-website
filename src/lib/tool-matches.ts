@@ -52,6 +52,8 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/ai-glossary': ['בינה מלאכותית', 'סוכני ai', 'geo', 'chatgpt', 'ai overviews'],
   '/tools/ai-subscription-prices': ['chatgpt', 'בינה מלאכותית', 'כמה עולה', 'סוכני ai'],
   '/tools/ai-token-calculator': ['סוכן', 'בוט', 'api', 'סוכני ai'],
+  '/tools/payment-demand-letter': ['חשבונית', 'גבייה', 'תשלום', 'לקוחות', 'הנהלת חשבונות'],
+  '/tools/ai-policy-generator': ['בינה מלאכותית', 'סוכני ai', 'פרטיות', 'chatgpt', 'עובדים'],
 }
 
 const MAX_TOOLS = 3

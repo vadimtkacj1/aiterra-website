@@ -469,6 +469,20 @@ export const tools: ToolEntry[] = [
     category: 'marketing',
     icon: 'calculator',
   },
+  {
+    path: '/tools/payment-demand-letter',
+    title: 'מכתב התראה ללקוח שלא משלם',
+    description: 'תזכורת תשלום, דרישה רשמית או מכתב התראה לפני תביעה, עם טבלת חשבוניות, מועד תשלום והודעה לוואטסאפ.',
+    category: 'legal',
+    icon: 'receipt',
+  },
+  {
+    path: '/tools/ai-policy-generator',
+    title: 'מדיניות שימוש בבינה מלאכותית',
+    description: 'נוהל AI לעובדים בעברית: כלים מאושרים, מידע אסור לפי חוק הגנת הפרטיות ותיקון 13, בדיקת תוצרים והצהרת עובד.',
+    category: 'legal',
+    icon: 'shield',
+  },
 ]
 
 export const otherTools = (path: string) => {
