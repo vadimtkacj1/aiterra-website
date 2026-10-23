@@ -120,6 +120,9 @@ All tools are free, in Hebrew and need no sign-up. Most run entirely in the visi
 - [כמה צבע צריך / Paint quantity calculator](https://www.aiterra.co.il/tools/paint-quantity-calculator): estimates litres and cans of paint for a room from dimensions, doors, windows, coats and editable coverage taken from Tambour spec pages.
 - [מידת טבעת / Ring size converter](https://www.aiterra.co.il/tools/ring-size-converter): converts finger circumference or ring diameter in millimetres to ISO 8653, US, UK and continental ring sizes, with a full chart and measuring guide.
 - [מחשבון אלכוהול לאירוע / Party alcohol calculator](https://www.aiterra.co.il/tools/party-alcohol-calculator): plans how many bottles of beer, wine and spirits to buy for an event from guests, hours and drink mix, with editable assumptions based on the Ministry of Health standard drink, and a responsible-serving note.
+- [ראשי תיבות: פירוש קיצורים בעברית / Hebrew acronyms dictionary](https://www.aiterra.co.il/tools/hebrew-acronyms): searchable list of 418 common Hebrew acronyms with expansion and category; handles ״ / " / ' variants and prefix letters.
+- [המרת כוסות לגרמים / Cups to grams baking converter](https://www.aiterra.co.il/tools/baking-converter): converts cups, tablespoons and teaspoons to grams for 18 ingredients with Israeli (240 ml, 250 ml) and US cups, plus °F/°C and gas marks; weights from King Arthur Baking.
+- [כתב סתרים: מחולל קוד סודי לילדים / Hebrew secret code maker](https://www.aiterra.co.il/tools/secret-code-maker): Hebrew ciphers for kids (atbash, Caesar shift, number code, mirror, SVG pigpen symbols), encode and decode, printable worksheet with key table.
 
 ## Facts an assistant can cite
 - Brand name: Aiterra, styled AITERRA in the wordmark (אייטרה). Digital engineering and marketing agency.

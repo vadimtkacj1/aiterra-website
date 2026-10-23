@@ -85,6 +85,9 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/paint-quantity-calculator': ['שיפוץ', 'צבע'],
   '/tools/ring-size-converter': ['תכשיטים', 'חנות'],
   '/tools/party-alcohol-calculator': ['אירוע', 'מסעדה', 'קייטרינג'],
+  '/tools/hebrew-acronyms': ['קיצורים', 'ראשי תיבות'],
+  '/tools/baking-converter': ['מתכונים', 'מזון', 'קייטרינג'],
+  '/tools/secret-code-maker': ['ילדים', 'חינוך', 'הדפסה'],
 }
 
 const MAX_TOOLS = 3

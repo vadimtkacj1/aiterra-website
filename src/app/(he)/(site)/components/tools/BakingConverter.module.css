@@ -1,0 +1,140 @@
+.panel {
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding: 28px 36px 32px;
+  border-radius: 32px;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 1px rgba(14, 23, 48, 0.06),
+    0 40px 90px -50px rgba(6, 11, 34, 0.55);
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.result {
+  min-height: 72px;
+  margin-top: 16px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background: #f4f0ea;
+}
+
+.big {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--v2-paper-ink);
+}
+
+.heading {
+  margin: 32px 0 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.tableWrap {
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.table caption {
+  padding: 14px 16px 8px;
+  font-weight: 600;
+  text-align: start;
+  color: var(--v2-paper-ink);
+}
+
+.table thead th {
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: start;
+  color: var(--v2-paper-ink-muted);
+  background: #f6f4f0;
+}
+
+.table th,
+.table td {
+  padding: 9px 14px;
+  border-top: 1px solid #ece7e0;
+  text-align: start;
+  vertical-align: top;
+  color: var(--v2-paper-ink);
+}
+
+.food {
+  font-weight: 500;
+}
+
+@media (max-width: 1023px) {
+  .panel {
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel {
+    padding: 20px 14px 24px;
+    border-radius: 24px;
+  }
+
+  .controls,
+  .inputs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table th,
+  .table td {
+    display: block;
+  }
+
+  .table tbody tr {
+    padding: 10px 12px;
+    border-top: 1px solid #ece7e0;
+  }
+
+  .table th,
+  .table td {
+    padding: 2px 0;
+    border-top: 0;
+  }
+
+  .table td[data-label]::before {
+    content: attr(data-label) ': ';
+    font-weight: 600;
+    color: var(--v2-paper-ink-muted);
+  }
+}

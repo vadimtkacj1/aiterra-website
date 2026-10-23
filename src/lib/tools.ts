@@ -766,6 +766,30 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-10-23',
     icon: 'calculator',
   },
+  {
+    path: '/tools/hebrew-acronyms',
+    title: 'ראשי תיבות: פירוש קיצורים',
+    description: 'מילון של 418 ראשי תיבות וקיצורים נפוצים בעברית עם פירוש וקטגוריה, וחיפוש שמבין גרשיים, מירכאות ואותיות שימוש.',
+    category: 'marketing',
+    reviewed: '2026-10-23',
+    icon: 'search',
+  },
+  {
+    path: '/tools/baking-converter',
+    title: 'המרת כוסות לגרמים',
+    description: 'המרת כוסות, כפות וכפיות לגרמים ל-18 מצרכים, כוס ישראלית ואמריקאית, ומעלות פרנהייט לצלזיוס לתנור.',
+    category: 'dates',
+    reviewed: '2026-10-23',
+    icon: 'calculator',
+  },
+  {
+    path: '/tools/secret-code-maker',
+    title: 'כתב סתרים: מחולל קוד סודי',
+    description: 'כתב סתרים בעברית לילדים: אתב״ש, הזזה, קוד מספרים, מראה וסימני דיר החזירים, הצפנה, פענוח ודף עבודה להדפסה.',
+    category: 'marketing',
+    reviewed: '2026-10-23',
+    icon: 'lock',
+  },
 ]
 
 export const otherTools = (path: string) => {
