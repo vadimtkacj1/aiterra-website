@@ -135,6 +135,7 @@ All tools are free, in Hebrew and need no sign-up. Most run entirely in the visi
 - [ברכה לחתונה](https://www.aiterra.co.il/tools/wedding-blessing-generator): original Hebrew wedding blessings by closeness and tone with the couple's names, a card line and WhatsApp sending.
 - [ברכה לבר מצווה ולבת מצווה](https://www.aiterra.co.il/tools/bar-mitzvah-blessing-generator): original Hebrew bar and bat mitzvah blessings in four tones with gendered grammar and a parents' speech skeleton.
 - [ברכה ליום הולדת](https://www.aiterra.co.il/tools/birthday-blessing-generator): original Hebrew birthday blessings by closeness, age, gender and tone, with a card line and WhatsApp sending.
+- [מחשבון צריכת חשמל / Electricity cost calculator](https://www.aiterra.co.il/tools/electricity-cost-calculator): appliance watts × hours × price per kWh with the Israeli household tariff 53.83 agorot (63.52 incl. VAT) from 1.7.2026 per the Electricity Authority tariff book, monthly, bimonthly and yearly cost.
 
 ## Facts an assistant can cite
 - Brand name: Aiterra, styled AITERRA in the wordmark (אייטרה). Digital engineering and marketing agency.

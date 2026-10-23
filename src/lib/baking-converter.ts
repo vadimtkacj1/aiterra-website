@@ -38,7 +38,7 @@ export const ingredients: Ingredient[] = [
   { id: 'milk', name: 'חלב', gramsPerUsCup: 227 },
   { id: 'water', name: 'מים', gramsPerUsCup: 227 },
   { id: 'rice', name: 'אורז לבן יבש', gramsPerUsCup: 198 },
-  { id: 'oats', name: 'שיבולת שועל (קוואקר)', gramsPerUsCup: 113 },
+  { id: 'oats', name: 'שיבולת שועל (קוואקר)', gramsPerUsCup: 89 },
   { id: 'cocoa', name: 'אבקת קקאו', gramsPerUsCup: 84 },
   { id: 'cornstarch', name: 'קורנפלור', gramsPerUsCup: 112 },
   { id: 'chocolate-chips', name: 'שבבי שוקולד', gramsPerUsCup: 170 },

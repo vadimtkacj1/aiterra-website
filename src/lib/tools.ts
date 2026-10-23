@@ -919,6 +919,14 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-10-23',
     icon: 'message',
   },
+  {
+    path: '/tools/electricity-cost-calculator',
+    title: 'מחשבון צריכת חשמל',
+    description: 'מחשבון צריכת חשמל לפי מכשיר: הספק בוואט, שעות ביום ומחיר קוט״ש לפי תעריף משק הבית העדכני. מחשב עלות חודשית ודו־חודשית ומראה מה הכי יקר.',
+    category: 'home',
+    reviewed: '2026-10-23',
+    icon: 'calculator',
+  },
 ]
 
 export const otherTools = (path: string) => {
@@ -935,3 +943,21 @@ export const toolReviewed = (path: string) =>
   tools.find((tool) => tool.path === path)?.reviewed ?? TOOLS_REVIEWED
 
 export const toolsIn = (category: ToolCategory) => tools.filter((tool) => tool.category === category)
+
+export type EmbeddableTool = { slug: string; height: number }
+
+export const EMBEDDABLE_TOOLS: EmbeddableTool[] = [
+  { slug: 'vat-calculator', height: 1300 },
+  { slug: 'percentage-calculator', height: 960 },
+  { slug: 'loan-calculator', height: 2120 },
+  { slug: 'minimum-wage-2026', height: 1550 },
+  { slug: 'hebrew-date-converter', height: 1450 },
+  { slug: 'days-between-dates', height: 1210 },
+  { slug: 'work-days-calculator', height: 1550 },
+  { slug: 'cpi-indexation-calculator', height: 1170 },
+  { slug: 'amount-in-words', height: 1080 },
+  { slug: 'word-counter', height: 2320 },
+]
+
+export const embeddableTool = (path: string) =>
+  EMBEDDABLE_TOOLS.find((tool) => `${TOOLS_HUB_PATH}/${tool.slug}` === path)

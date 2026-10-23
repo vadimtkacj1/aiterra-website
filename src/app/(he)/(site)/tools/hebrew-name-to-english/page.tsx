@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import NameTransliterator from '../../components/tools/NameTransliterator'
 import {
@@ -6,7 +7,10 @@ import {
   dictionarySize,
   firstNames,
   lastNames,
+  lookup,
   nameSources,
+  passportStyle,
+  transliterateName,
   type NameEntry,
 } from '@/lib/name-transliteration'
 import styles from '../../components/tools/NameTransliterator.module.css'
@@ -32,6 +36,15 @@ const letterRows = [
   ['ת', 'T', 'Tamar, Tom'],
   ['פ, ף', 'P, ובסוף מילה F', 'Pini, Yosef'],
 ] as const
+
+const pickEntries = (words: string[]) =>
+  words.map((word) => lookup(word)).filter((entry): entry is NameEntry => Boolean(entry))
+
+const popularFirst = pickEntries(['גיא', 'איתי', 'יובל', 'יעל', 'יהונתן', 'נועה', 'שרה', 'רבקה'])
+const popularLast = pickEntries(['כהן', 'לוי', 'מזרחי', 'פרץ', 'ביטון', 'דהן'])
+const unlisted = ['הודיה', 'שחף', 'אליה'].map((word) => transliterateName(word)[0])
+const compound = transliterateName('מיכל בן דוד')
+const passportSample = passportStyle("Yael Cohen-Levi")
 
 const faq: ToolFaqEntry[] = [
   {
@@ -63,6 +76,18 @@ const faq: ToolFaqEntry[] = [
     question: 'איך כותבים צ באנגלית: Tz, Ts או Z?',
     answer:
       'באנגלית נפוץ Tz, למשל Tzvi, Nitzan ו-Tzipi. Ts קיים בשמות כמו Yitzhak או Ben-Tsion, ו-Z משמש בשמות שהתקבעו כך, כמו Zvi או Zur. כולם מייצגים את אותו צליל. אם השם שלכם כבר מופיע בדרכון, לא משנים איות, כי אי התאמה בין כרטיס הטיסה לדרכון עלולה למנוע עלייה למטוס.',
+  },
+  {
+    id: 'name-faq-unlisted',
+    question: 'איך כותבים באנגלית שם שלא מופיע ברשימה, כמו הודיה או שחף?',
+    answer:
+      'שמות שאינם ברשימה הכלי מתעתק לפי כללי אותיות, והתוצאה היא הערכה בלבד. בשמות עם אותיות שקטות או תנועות לא כתובות, כמו הודיה ושחף, ההצעות האוטומטיות לא תמיד נראות כמו האיות שמקובל. במקרה כזה בחרו איות לפי ההגייה, בדקו איך כותבים אותו קרובי משפחה או בני אותו שם, ושמרו עליו בעקביות.',
+  },
+  {
+    id: 'name-faq-two-words',
+    question: 'איך כותבים באנגלית שם משפחה בן שתי מילים, כמו בן דוד?',
+    answer:
+      'בן דוד מופיע ברשימה של הכלי כשם משפחה אחד, והוא נכתב בשתי מילים, Ben David. בטופס שמבקש שם משפחה בשדה אחד, אפשר לכתוב אותו עם רווח או עם מקף, אבל כדאי להתאים לדרכון. הכלי בגרסת הדרכון מסיר מקפים וגרשיים, כך ש-Yael Cohen-Levi הופך ל-YAEL COHENLEVI, ולכן בדקו את התוצאה מול המסמך.',
   },
   {
     id: 'name-faq-versions',
@@ -152,6 +177,49 @@ export default function HebrewNameToEnglishPage() {
         לפי {externalLink(nameSources.calcalist.href, 'דיווח בכלכליסט')}, ולכן ההצעה בכלי היא נקודת התחלה בלבד. לשינוי
         בשם עצמו יש הליך נפרד במרשם האוכלוסין, כפי שמופיע ב
         {externalLink(nameSources.kolzchut.href, 'כל זכות')} וב{externalLink(nameSources.gov.href, 'gov.il')}.
+      </p>
+
+      <h2>איך כותבים באנגלית שמות נפוצים</h2>
+      <p>
+        אלה שמות מהרשימה, והאיות הראשון הוא הנפוץ ביותר. גיא, יעל ויובל נכתבים בצורה אחת בלבד, ואילו איתי יכול להיות
+        Itay או Itai, ונועה Noa או Noah.
+      </p>
+      <NameList entries={popularFirst} />
+      <p>
+        לשמות משפחה נפוצים יש בדרך כלל שני איותים. כהן הוא Cohen או Kohen, ולוי הוא Levi או Levy. פרץ יכול להיות
+        Peretz או Perez, ומזרחי Mizrahi או Mizrachi.
+      </p>
+      <NameList entries={popularLast} />
+
+      <h2>איך כותבים באנגלית שם שלא ברשימה</h2>
+      <p>
+        שמות פרטיים רבים לא מופיעים ברשימה, למשל {unlisted.map((item) => item.word).join(', ')}. עבורם הכלי מציע
+        הערכה לפי כללי האותיות. כך, ההצעות הראשונות לשם {unlisted[0].word} הן{' '}
+        <bdi>{unlisted[0].variants.join(', ')}</bdi>, ולשם {unlisted[1].word} הן <bdi>{unlisted[1].variants.join(', ')}</bdi>.
+        כמה מההצעות האלה אינן איות שמקובל, כי בעברית בלי ניקוד אי אפשר לדעת אילו תנועות נאמרות. לכן בשם כזה בחרו את
+        האיות לפי ההגייה, ושמרו עליו באותה צורה בכל המסמכים.
+      </p>
+      <p>
+        אפשר גם לבנות את האיות בעצמכם מטבלת האותיות שלמעלה. בשם שחף, האות ש היא SH, האות ח היא CH, H או KH, והאות ף
+        בסוף מילה היא F. מכאן אפשר להרכיב איות כמו Shahaf, Shachaf או Shakhaf, ולבחור את הצורה שנראית לכם הקרובה
+        להגייה. אחרי שבחרתם, כתבו את אותו איות בכל טופס, כי אי התאמה בין מסמכים יוצרת בלבול בבדיקות זהות.
+      </p>
+
+      <h2>שם מלא ושם משפחה בן שתי מילים</h2>
+      <p>
+        כשמקלידים שם מלא, הכלי מתעתק כל מילה בנפרד. הקלדת {compound.map((item) => item.word).join(' ')} מחזירה את{' '}
+        <bdi>{compound.map((item) => item.variants[0]).join(' ')}</bdi>, כי בן דוד מופיע ברשימה כשם משפחה אחד. בגרסת
+        הדרכון הכלי כותב הכול באותיות גדולות ומסיר מקפים וגרשיים: {passportSample} במקום Yael Cohen-Levi. האיות
+        הסופי נקבע במסמכי הזיהוי שלכם, ולא בכלי.
+      </p>
+
+      <h2>איפה עוד צריך לכתוב את השם באנגלית</h2>
+      <p>
+        אותו איות נדרש בכרטיסי טיסה, ולכן לפני שמזמינים בודקים אותו מול הדרכון, והכי בטוח להעתיק אותו אות באות מעמוד הפרטים של הדרכון ולא להקליד מהזיכרון. את משך הטיסה ליעד אפשר לבדוק ב
+        <Link href="/tools/flight-time-from-israel">כלי זמני הטיסה מישראל</Link>. גם בכתובת למשלוח שם הנמען נכתב כמו
+        בדרכון, וכתובת שלמה באנגלית אפשר לבנות ב<Link href="/tools/english-address-generator">מחולל הכתובת באנגלית</Link>.
+        מי שהקליד את השם בטעות עם מקלדת בשפה הלא נכונה, ימצא תיקון ב
+        <Link href="/tools/keyboard-language-fix">כלי תיקון שפת המקלדת</Link>.
       </p>
 
       <h2 id="first-names" className={styles.anchor}>

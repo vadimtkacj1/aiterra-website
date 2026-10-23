@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import DogNameGenerator from '../../components/tools/DogNameGenerator'
-import { dogNames } from '@/lib/dog-name-generator'
+import { dogNames, filterNames, type Filters } from '@/lib/dog-name-generator'
 import styles from './page.module.css'
 
 const PATH = '/tools/dog-name-generator'
@@ -8,6 +9,14 @@ const TITLE = 'שמות לכלבים'
 const META_TITLE = 'שמות לכלבים: מחולל ורשימה לפי מין, גודל וסגנון'
 const DESCRIPTION =
   'שמות לכלבים ולכלבות בעברית ובאנגלית: סינון לפי זכר או נקבה, כלב קטן או גדול וסגנון, הגרלת שם בלחיצה ורשימת מועדפים שנשמרת אצלכם.'
+
+const namesOf = (filters: Partial<Filters>): string =>
+  filterNames({ gender: 'all', size: 'all', style: 'all', ...filters })
+    .map((item) => item.name)
+    .join(', ')
+
+const countOf = (filters: Partial<Filters>): number =>
+  filterNames({ gender: 'all', size: 'all', style: 'all', ...filters }).length
 
 const faq: ToolFaqEntry[] = [
   {
@@ -45,6 +54,16 @@ const faq: ToolFaqEntry[] = [
     question: 'מאיפה הרשימה של השמות?',
     answer:
       `הרשימה נאספה ונערכה על ידינו, ואינה מועתקת ממאגר חיצוני. יש בה ${dogNames.length} שמות בארבעה סגנונות: עברי, אנגלי, אוכל ומצחיק. חלק מהשמות מתאימים לשני המינים, ולכן הם מופיעים בשני הסינונים. תיוג הגודל הוא הצעה לטעם, ולא כלל: כל שם מתאים לכל כלב.`,
+  },
+  {
+    id: 'dog-faq-small-female',
+    question: 'איזה שם מתאים לכלבה קטנה, למשל פודל טוי?',
+    answer: `בצד הקטן של הרשימה יש ${countOf({ gender: 'f', size: 's' })} שמות לכלבה, ביניהם ${namesOf({ gender: 'f', size: 's', style: 'hebrew' })} בעברית, ו-${namesOf({ gender: 'f', size: 's', style: 'english' })} באנגלית. הגודל כאן הוא הצעה לטעם בלבד, ושם קטן יכול להתאים גם לכלבה גדולה. סננו לפי נקבה וכלב קטן, והגרילו כמה פעמים.`,
+  },
+  {
+    id: 'dog-faq-large-male',
+    question: 'איזה שם מתאים לכלב זכר גדול?',
+    answer: `בצד הגדול של הרשימה יש ${countOf({ gender: 'm', size: 'l' })} שמות לזכר, למשל ${namesOf({ gender: 'm', size: 'l', style: 'hebrew' })} בעברית ו-${namesOf({ gender: 'm', size: 'l', style: 'english' })} באנגלית. רבים מהם שמות של בעלי חיים חזקים או של דמויות מהמיתולוגיה. מי שמעדיף הומור יכול לבחור ממקבץ המצחיקים, כמו ${namesOf({ gender: 'm', size: 'l', style: 'funny' })}.`,
   },
 ]
 
@@ -86,6 +105,89 @@ export default function DogNameGeneratorPage() {
           <strong>גם לחתולים:</strong> רבים מהשמות שברשימה מתאימים גם לחתול, אבל הכלי מתמקד בכלבים.
         </li>
       </ul>
+
+      <h2>שמות לכלבות</h2>
+      <p>
+        ברשימה {countOf({ gender: 'f' })} שמות שמתאימים לכלבה, כולל שמות שמתאימים לשני המינים. שמות עבריים אהובים לכלבות הם
+        {' '}{namesOf({ gender: 'f', style: 'hebrew' })}. בין השמות האנגליים יש {namesOf({ gender: 'f', style: 'english' })}.
+        אם אתם רוצים שם מתוק או מצחיק, סננו לפי סגנון אוכל או מצחיק.
+      </p>
+
+      <h2>שמות לכלבים זכרים</h2>
+      <p>
+        לזכרים יש {countOf({ gender: 'm' })} שמות ברשימה. בעברית אפשר לבחור, למשל, {namesOf({ gender: 'm', size: 'a', style: 'hebrew' })},
+        ובאנגלית {namesOf({ gender: 'm', size: 'a', style: 'english' })}. שמות אנגליים קצרים, כמו אלה, הם בדרך כלל קלים
+        לצעקה בגינה.
+      </p>
+
+      <h2>שמות לכלבים קטנים וגדולים</h2>
+      <p>
+        גודל הכלב לא קובע את השם, אבל הרבה בעלים אוהבים התאמה בין השם לגודל. לכלבים קטנים מתאימים שמות רכים או חמודים,
+        כמו {namesOf({ size: 's', style: 'hebrew' })}. לכלבים גדולים מתאימים שמות של כוח, כמו {namesOf({ size: 'l', style: 'hebrew' })}.
+        שם שאינו מתויג לגודל מופיע בשני הסינונים.
+      </p>
+
+      <h2>כמה שמות יש בכל קבוצה</h2>
+      <p>הטבלה מונה את השמות שהכלי מציג בכל שילוב של מין וגודל. שם שמתאים לשני המינים נספר בשתי השורות.</p>
+      <div className={styles.tableWrap}>
+        <table className={styles.table}>
+          <caption>מספר שמות לפי מין וגודל</caption>
+          <thead>
+            <tr>
+              <th scope="col">מין</th>
+              <th scope="col">כל הגדלים</th>
+              <th scope="col">כלב קטן</th>
+              <th scope="col">כלב גדול</th>
+            </tr>
+          </thead>
+          <tbody>
+            {(
+              [
+                { label: 'זכר', gender: 'm' },
+                { label: 'נקבה', gender: 'f' },
+              ] as const
+            ).map((row) => (
+              <tr key={row.gender}>
+                <th scope="row">{row.label}</th>
+                <td>{countOf({ gender: row.gender })}</td>
+                <td>{countOf({ gender: row.gender, size: 's' })}</td>
+                <td>{countOf({ gender: row.gender, size: 'l' })}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>שמות לכלבים לפי סגנון</h2>
+      <p>
+        ארבעת הסגנונות נבדלים בסוג השם. עבריים: {countOf({ style: 'hebrew' })} שמות, למשל {namesOf({ gender: 'u', style: 'hebrew' })}.
+        אנגליים: {countOf({ style: 'english' })} שמות. אוכל: {countOf({ style: 'food' })} שמות, כמו {namesOf({ size: 's', style: 'food' })} לכלבים קטנים.
+        מצחיקים: {countOf({ style: 'funny' })} שמות, כמו {namesOf({ gender: 'u', style: 'funny' })}. שמות מצחיקים מתאימים למי שמוכן
+        לצעוק אותם בציבור, ושמות אוכל נעימים לאוזן אבל כדאי לבדוק שהם לא נשמעים כמו פקודה או כמו שם של אדם בבית.
+      </p>
+
+      <h2>שמות לכלבים לפי צבע</h2>
+      <p>
+        הרשימה לא מתויגת לפי צבע פרווה, אבל יש בה שמות שמתחברים לצבעים. לכלב חום אפשר לבחור קפה, מוקה, אספרסו,
+        שוקולדה או קינמון. לכלב לבן יש שלג, ענן, וניל ומרשמלו. לכלב שחור מתאימים זיתים, פלפל או סלע. אלה אסוציאציות
+        ולא כלל, ושם טוב הוא שם שאתם אוהבים לומר.
+      </p>
+
+      <h2>איך מרגילים את הכלב לשם החדש</h2>
+      <p>
+        אחרי הבחירה כדאי להתחיל בבית, במקום שקט. אומרים את השם פעם אחת בקול רגוע, ומיד כשהכלב מסובב את הראש נותנים לו
+        חטיף או מחמאה. חוזרים על זה כמה פעמים ביום, בחדרים שונים, ורק אחר כך עוברים לחצר ולרחוב. כדאי להשתמש בשם רק
+        כשקורה משהו טוב, ולא כשכועסים, כדי שהכלב לא יקשר אותו לחוויה לא נעימה. כל בני הבית צריכים לומר את אותו שם
+        באותה צורה, בלי לשנות כינויים בכל יום.
+      </p>
+
+      <h2>איך מחליטים בין כמה מועדפים</h2>
+      <p>
+        אחרי ששמרתם כמה שמות, אל תבחרו מיד. כתבו אותם בהודעה לכל המשפחה, צעקו כל אחד מהם פעם אחת בחוץ, ובדקו אם
+        יש חרוז מביך שכדאי להימנע ממנו, ב<Link href="/tools/hebrew-rhyme-finder">מוצא חרוזים בעברית</Link>.
+        אם אי אפשר להכריע, הגרילו בין המועדפים ב<Link href="/tools/random-wheel-picker">גלגל ההגרלות</Link>. ואם
+        צריך לרשום את השם באנגלית, למשל בטופס של וטרינר, <Link href="/tools/hebrew-name-to-english">כלי התעתיק</Link> יעזור.
+      </p>
 
       <h2>מקורות</h2>
       <p className={styles.reviewed}>

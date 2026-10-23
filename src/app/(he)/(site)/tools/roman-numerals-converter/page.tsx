@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import RomanNumeralsConverter from '../../components/tools/RomanNumeralsConverter'
 import { keyLetters, tableValues, toRoman } from '@/lib/roman-numerals'
@@ -9,6 +10,16 @@ const META_TITLE = 'ממיר מספרים רומיים: מספר לרומי ור
 const DESCRIPTION =
   'ממיר מספרים רומיים לשני הכיוונים, מ-1 עד 3999, עם בדיקת תקינות שאומרת מה הכתיב הנכון, וטבלה של מספרים רומיים מ-1 עד 20 ועד 3000.'
 const CHECKED = '2026-10-23'
+
+const tensToHundred = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+const notableYears = [1948, 1967, 1973, 1990, 2000, 2026]
+const decompositionNumbers = [444, 1994, 2026, 3888]
+
+const decompose = (value: number) =>
+  String(value)
+    .split('')
+    .map((digit, index, digits) => Number(digit) * 10 ** (digits.length - 1 - index))
+    .filter((part) => part > 0)
 
 const faq: ToolFaqEntry[] = [
   {
@@ -46,6 +57,12 @@ const faq: ToolFaqEntry[] = [
     question: 'איך כותבים שנה ברומית, למשל 2026?',
     answer:
       'כותבים את השנה כמו כל מספר: 2000 הוא MM, 20 הוא XX ו-6 הוא VI, ויחד MMXXVI. נהוג לראות שנים בספרות רומיות על בניינים, על מצבות ובסוף סרטים. מקלידים את השנה בכלי, והכתיב התקני מופיע ואפשר להעתיק אותו בלחיצה, למשל להדבקה בכותרת או בהזמנה.',
+  },
+  {
+    id: 'roman-faq-1900s',
+    question: 'איך כותבים שנה מהמאה ה-20, כמו 1912?',
+    answer:
+      'MCM הוא 1000 ועוד 1000 פחות 100, כלומר 1900, ולכן 1912 נכתב MCMXII. שנה מהמאה ה-21 מתחילה ב-MM, ולכן 2026 היא MMXXVI. הטעות הנפוצה היא לכתוב MDCCCCXII, שהוא כתיב ארוך ולא תקני. מקלידים את השנה בכלי ומקבלים את הכתיב הקצר והנכון.',
   },
 ]
 
@@ -135,6 +152,135 @@ export default function RomanNumeralsConverterPage() {
         כמו Rocky II ובמספור של הסופר בול. כשצריך לכתוב שנה או מספר סידורי כזה, הכלי נותן את הכתיב התקני.
       </p>
 
+      <h2>מספרים רומיים עד 10, עד 20 ועד 100</h2>
+      <p>
+        עד 10 מספיקות שלוש אותיות: I, V ו-X. מ-11 עד 20 מוסיפים אחרי X את הספרה: XI, XII ועד XX. מ-20 עד 100 כותבים
+        קודם את העשרות ואחריהן את האחדות, למשל 47 הוא XLVII, כלומר XL ועוד VII. הטבלה מציגה את העשרות עד 100,
+        ואחריה אפשר לחבר כל ספרה בסוף.
+      </p>
+      <div className={styles.tableWrap}>
+        <table className={styles.table}>
+          <caption>עשרות במספרים רומיים עד 100</caption>
+          <thead>
+            <tr>
+              <th scope="col">מספר</th>
+              <th scope="col">רומי</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tensToHundred.map((value) => (
+              <tr key={value}>
+                <th scope="row">{value}</th>
+                <td dir="ltr" className={styles.code}>
+                  {toRoman(value)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p>
+        מאה היא C, ו-1000 היא M. אחרי 100 ממשיכים באותו עיקרון: מאות, ואז עשרות, ואז אחדות. 144 הוא <span dir="ltr">{toRoman(144)}</span>, כלומר
+        C ועוד XL ועוד IV.
+      </p>
+
+      <h2>איך מפרקים מספר לרומית צעד אחר צעד</h2>
+      <p>
+        הדרך הבטוחה היא לפרק את המספר לפי מקומות ולכתוב כל חלק בנפרד. הטבלה מראה את הפירוק של ארבעה מספרים, כולל
+        3888, המספר שנכתב בהכי הרבה אותיות בטווח 1 עד 3999.
+      </p>
+      <div className={styles.tableWrap}>
+        <table className={styles.table}>
+          <caption>פירוק מספרים לפי מקומות</caption>
+          <thead>
+            <tr>
+              <th scope="col">מספר</th>
+              <th scope="col">פירוק</th>
+              <th scope="col">רומי</th>
+            </tr>
+          </thead>
+          <tbody>
+            {decompositionNumbers.map((value) => (
+              <tr key={value}>
+                <th scope="row">{value.toLocaleString('he-IL')}</th>
+                <td dir="ltr" className={styles.code}>
+                  {decompose(value)
+                    .map((part) => toRoman(part))
+                    .join(' + ')}
+                </td>
+                <td dir="ltr" className={styles.code}>
+                  {toRoman(value)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>שנים ותאריכים במספרים רומיים</h2>
+      <p>
+        שנה נכתבת כמו כל מספר. אלה כמה שנים מוכרות, כפי שהכלי כותב אותן:
+      </p>
+      <ul>
+        {notableYears.map((year) => (
+          <li key={year}>
+            <strong>{year}:</strong> <span dir="ltr">{toRoman(year)}</span>
+          </li>
+        ))}
+      </ul>
+      <p>
+        בתאריך שלם כותבים כל חלק בנפרד, ולכן 23.10.2026 הוא <span dir="ltr">{toRoman(23)}.{toRoman(10)}.{toRoman(2026)}</span>.
+        כדי לדעת כמה ימים עברו בין שני תאריכים כאלה, ממירים אותם חזרה למספרים ומשתמשים ב<Link href="/tools/days-between-dates">חישוב ימים בין שני תאריכים</Link>.
+        לתאריך עברי של אותו יום יש <Link href="/tools/hebrew-date-converter">ממיר תאריך עברי</Link>.
+      </p>
+
+      <h2>מספרים רומיים להעתקה, בקעקוע ובעיצוב</h2>
+      <p>
+        מי שכותב מספר רומי לקעקוע, לחריטה או להדפסה בדרך כלל לא יכול לתקן אחר כך. הטעויות הנפוצות הן IIII במקום IV,
+        IC במקום XCIX ו-IL במקום XLIX, וכולן לא תקניות. הקלידו את המספר בכלי, העתיקו את התוצאה והשוו אותה לתוכנית
+        שלכם אות אחרי אות. אם אתם מחפשים חישוב דומה בעולם האותיות העבריות, כל אות עברית היא גם מספר, וה<Link href="/tools/gematria-calculator">מחשבון גימטריה</Link> מחשב את ערך המילה.
+      </p>
+
+      <h2>איך קוראים מספר רומי</h2>
+      <p>
+        קוראים משמאל לימין ובודקים כל אות מול האות שאחריה. אם האות הבאה גדולה יותר, מחסירים את הנוכחית. אחרת מוסיפים
+        אותה. ב-<span dir="ltr">{toRoman(1994)}</span> האות M נותנת 1000, ואחריה CM שנותנת 900, אחריה XC שנותנת 90 ובסוף
+        IV שנותנת 4. הסכום הוא 1994. אם יצא לכם רצף שלא תואם את הכללים, הדביקו אותו בכלי, והוא יסביר מה לא תקין.
+      </p>
+
+      <h2>איך בודקים שמספר רומי תקין</h2>
+      <p>
+        בכתיב התקני לא כותבים יותר משלוש אותיות זהות ברצף, והאותיות V, L ו-D לא חוזרות בתוך אותו חלק של המספר. אות
+        קטנה לפני גדולה מותרת רק בשש הצורות שפירטנו למעלה, ולכן IIX אינו 8 (הכתיב הנכון הוא VIII), VX אינו 5 ו-MMMM אינו 4000, כי
+        הכתיב הסטנדרטי מסתיים ב-3999. הכלי בודק את כל אלה ומציין מה הכתיב הנכון.
+      </p>
+
+      <h2>מאות ואלפים</h2>
+      <p>
+        אחרי 100 האותיות C, D ו-M נותנות את המאות והאלפים: 200 הוא <span dir="ltr">{toRoman(200)}</span>, 400 הוא{' '}
+        <span dir="ltr">{toRoman(400)}</span>, 500 הוא <span dir="ltr">{toRoman(500)}</span>, 900 הוא{' '}
+        <span dir="ltr">{toRoman(900)}</span>, ו-2000 הוא <span dir="ltr">{toRoman(2000)}</span>. עד 1000 כותבים M אחת,
+        ואחריה אפשר להוסיף עוד שתיים בלבד, ולכן 3999 הוא הגבול העליון.
+      </p>
+
+      <h2>כמה ארוך כתיב רומי</h2>
+      <p>
+        הכתיב הרומי מתארך מהר: 888 נכתב <span dir="ltr">{toRoman(888)}</span>, כלומר {toRoman(888).length} אותיות, ו-3888
+        נכתב <span dir="ltr">{toRoman(3888)}</span>, כלומר {toRoman(3888).length} אותיות, והוא הארוך ביותר בטווח. לכן
+        בכותרות ובמספור פרקים מקובל להשתמש בו למספרים קטנים, שקל לקרוא במבט אחד.
+      </p>
+
+      <h2>למה עדיין רואים מספרים רומיים</h2>
+      <p>
+        ספרות רגילות החליפו את המערכת הרומית בהדרגה, אבל היא נשארה בשימוש בהקשרים מסוימים. לפי ויקיפדיה, אלה למשל
+        לוחות שעון, שנים על אנדרטאות ובניינים ותאריכי זכויות יוצרים. בשעון של ביג בן, שתוכנן ב-1852, השעות מ-1 עד 12
+        כתובות I עד XII.
+      </p>
+      <p>
+        כדי לחשב כמה זמן עבר בין שתי שנים שכתובות ברומית, ממירים אותן חזרה למספרים ומחסרים. 2026 פחות 1994 הוא 32
+        שנים.
+      </p>
+
       <h2>מקורות</h2>
       <ul className={styles.sources}>
         <li>
@@ -144,7 +290,7 @@ export default function RomanNumeralsConverterPage() {
         </li>
       </ul>
       <p className={styles.reviewed}>
-        הכללים נבדקו מול המקור ב-<time dateTime={CHECKED}>23.10.2026</time>.
+        הכללים נבדקו מול המקור ב-<time dateTime={CHECKED}>23.10.2026</time>. מאותו עמוד לקוחות גם שעון ביג בן שתוכנן ב-1852, תאריכי זכויות יוצרים בסרטים, חישוב MCM כ-1900, מילת nulla לאפס מימי הביניים ופונקציית ROMAN באקסל.
       </p>
     </ToolLayout>
   )

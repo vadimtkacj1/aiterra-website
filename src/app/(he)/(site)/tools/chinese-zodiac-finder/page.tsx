@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import ChineseZodiacFinder from '../../components/tools/ChineseZodiacFinder'
 import {
@@ -6,7 +7,9 @@ import {
   animalOf,
   animals,
   elementOf,
+  findZodiac,
   formatDate,
+  polarityOf,
   newYearIso,
   recentYearsOf,
   years,
@@ -51,6 +54,18 @@ const faq: ToolFaqEntry[] = [
       'הכלי מכסה תאריכי לידה מ-5 בפברואר 1924 עד 29 בינואר 2044, כלומר 120 שנים סיניות, וכולן מופיעות בטבלה למטה. תאריכי ראש השנה הסיני נלקחו מטבלה של ויקיפדיה, ונבדקו בה ב-23 באוקטובר 2026. לגבי שנים מחוץ לטווח, אפשר להוסיף או להחסיר 12 לשנה ולמצוא את אותה חיה.',
   },
   {
+    id: 'zodiac-faq-2000',
+    question: 'נולדתי בשנת 2000. האם אני דרקון?',
+    answer:
+      'תלוי בתאריך. ראש השנה הסיני של 2000 היה ב-5 בפברואר, ומי שנולד מיום זה ואילך הוא דרקון מתכת. מי שנולד ב-1 בינואר 2000, או בכל יום עד 4 בפברואר, שייך לשנה הסינית הקודמת והוא ארנב אדמה. הכלי בודק את התאריך המלא, ולכן שנת הלידה לבדה אינה מספיקה.',
+  },
+  {
+    id: 'zodiac-faq-2026-2027',
+    question: 'מה המזל הסיני של 2026 ושל 2027?',
+    answer:
+      'שנת 2026 היא שנת הסוס, יסוד אש ויאנג, והיא מתחילה ב-17 בפברואר 2026. שנת 2027 היא שנת העז, גם היא יסוד אש אבל יין, והיא מתחילה ב-6 בפברואר 2027. מי שנולד ב-2026 לפני 17 בפברואר הוא נחש עץ, ומי שנולד ב-2027 לפני 6 בפברואר הוא סוס אש.',
+  },
+  {
     id: 'zodiac-faq-fun',
     question: 'האם יש משמעות אמיתית למזל הסיני?',
     answer:
@@ -61,6 +76,22 @@ const faq: ToolFaqEntry[] = [
 export const metadata = toolMetadata({ path: PATH, metaTitle: META_TITLE, description: DESCRIPTION })
 
 const recent = years(2015, 2026).reverse()
+const popularYears = years(1990, 2005)
+const borderDates = ['2000-02-04', '2000-02-05', '2026-01-15', '2026-02-17', '2027-02-05', '2027-02-06']
+  .map((date) => ({ date, result: findZodiac(date) }))
+  .flatMap(({ date, result }) =>
+    result.kind === 'ok'
+      ? [
+          {
+            date,
+            animal: result.animal.he,
+            element: result.element,
+            zodiacYear: result.zodiacYear,
+            beforeNewYear: result.beforeNewYear,
+          },
+        ]
+      : [],
+  )
 
 export default function ChineseZodiacFinderPage() {
   return (
@@ -172,6 +203,77 @@ export default function ChineseZodiacFinderPage() {
           </div>
         </div>
       </details>
+
+      <h2>מזל סיני לפי שנת לידה: 1990 עד 2005</h2>
+      <p>
+        רוב מי שמחפש מזל סיני מחפש לפי שנה. הטבלה מראה לכל שנה את החיה, היסוד ואת תאריך ראש השנה הסיני. מי שנולד
+        לפני התאריך שבשורה שייך לחיה של השורה שלמעלה, ולכן בשנים שבהן ראש השנה מאוחר, כמו 1996 ו-2007, נולדים הרבה
+        אנשים מינואר ועד אמצע פברואר שהם עדיין בשנה הקודמת.
+      </p>
+      <div className={styles.tableWrap}>
+        <div className={styles.scroll} tabIndex={0} role="region" aria-label="מזל סיני לפי שנת לידה 1990 עד 2005">
+          <table className={styles.table}>
+            <caption>החיה והיסוד לפי שנה, 1990 עד 2005</caption>
+            <thead>
+              <tr>
+                <th scope="col">שנה</th>
+                <th scope="col">ראש השנה הסיני</th>
+                <th scope="col">חיה</th>
+                <th scope="col">יסוד</th>
+                <th scope="col">יין או יאנג</th>
+              </tr>
+            </thead>
+            <tbody>
+              {popularYears.map((year) => (
+                <tr key={year}>
+                  <th scope="row">{year}</th>
+                  <td dir="ltr" className={styles.num}>
+                    {formatDate(newYearIso(year))}
+                  </td>
+                  <td>{animalOf(year).he}</td>
+                  <td>{elementOf(year)}</td>
+                  <td>{polarityOf(year)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2>מזל סיני 2026, 2027 ו-2028</h2>
+      <p>
+        שנת הסוס, 2026, מתחילה ב-{formatDate(newYearIso(2026))} והיא סוס אש יאנג. שנת העז, 2027, מתחילה ב-
+        {formatDate(newYearIso(2027))} והיא עז אש יין. שנת הקוף, 2028, מתחילה ב-{formatDate(newYearIso(2028))} והיא קוף
+        אדמה יאנג. לכן ילד שנולד בינואר 2027 הוא סוס ולא עז, וילד שנולד ב-1 בפברואר 2026 הוא נחש. תאריכי
+        הלידה בכלי הם תאריכים לועזיים. לתאריך העברי המקביל יש{' '}
+        <Link href="/tools/hebrew-date-converter">ממיר תאריך עברי ללועזי</Link>, ולמי שמתכנן אירוע לפי שני הלוחות יש גם{' '}
+        <Link href="/tools/hebrew-calendar-2027">לוח שנה עברי-לועזי 2026 עד 2027</Link>.
+      </p>
+
+      <h2>תאריכים על הגבול: ימים שבהם השנה מתחלפת</h2>
+      <p>המקרים הבעייתיים הם תאריכים סמוך לראש השנה הסיני. כך הכלי מחשב כמה דוגמאות:</p>
+      <ul>
+        {borderDates.map((item) => (
+          <li key={item.date}>
+            <strong dir="ltr">{formatDate(item.date)}</strong>: {item.animal} {item.element}, שנה סינית {item.zodiacYear}
+            {item.beforeNewYear ? ' (לפני ראש השנה הסיני של שנת הלידה הלועזית)' : ''}
+          </li>
+        ))}
+      </ul>
+
+      <h2>איך מחשבים מזל סיני בלי הכלי</h2>
+      <p>
+        אחרי שקובעים לפי ראש השנה הסיני איזו שנה סינית חלה, החישוב פשוט. מחסירים 4 מהשנה ומחלקים ב-12: השארית
+        קובעת את החיה לפי הסדר חולדה, שור, נמר, ארנב, דרקון, נחש, סוס, עז, קוף, תרנגול, כלב וחזיר, כשהחולדה היא 0.
+        לשנת 1992, 1988 חלקי 12 נותן שארית 8, והחיה השמינית אחרי החולדה היא קוף. את היסוד מחשבים באופן דומה:
+        מחסירים 4, לוקחים את השארית בחלוקה ב-10 ומחלקים ב-2 בלי שארית, והתוצאה היא מקום ברשימה עץ, אש, אדמה, מתכת
+        ומים. ב-1992 השארית היא 8, חצי הוא 4, ולכן היסוד הוא מים. שנה זוגית היא יאנג ושנה אי זוגית היא יין.
+      </p>
+      <p>
+        מחזור של 12 חיות וחמישה יסודות חוזר אחרי 60 שנה, כך שלכל שילוב של חיה ויסוד יש שנה אחת בכל מחזור. הכלי
+        מכסה 120 שנים, כלומר שני מחזורים שלמים. כדי לחשב כמה זמן עבר מתאריך לידה ועד היום, אפשר להשתמש ב
+        <Link href="/tools/days-between-dates">מחשבון הימים בין תאריכים</Link>.
+      </p>
 
       <h2>מקורות</h2>
       <ul className={styles.sources}>

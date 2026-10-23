@@ -100,6 +100,7 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/wedding-blessing-generator': ['חתונה', 'ברכ'],
   '/tools/bar-mitzvah-blessing-generator': ['בר מצווה', 'ברכ'],
   '/tools/birthday-blessing-generator': ['יום הולדת', 'ברכ'],
+  '/tools/electricity-cost-calculator': ['חשמל', 'מזגן'],
 }
 
 const MAX_TOOLS = 3

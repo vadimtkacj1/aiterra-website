@@ -1,12 +1,48 @@
+import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import CookingTimesChart from '../../components/tools/CookingTimesChart'
-import { COOKING_REVIEWED, COOKING_REVIEWED_LABEL, SAFE_SOURCES, cookingItems, safeTemps } from '@/lib/cooking-times'
+import {
+  COOKING_REVIEWED,
+  COOKING_REVIEWED_LABEL,
+  SAFE_SOURCES,
+  cookingItems,
+  formatMinutes,
+  safeTemps,
+} from '@/lib/cooking-times'
 import styles from '../word-counter/page.module.css'
 
 const PATH = '/tools/cooking-times-chart'
 const TITLE = 'כמה זמן לבשל? טבלת זמני בישול וטיימר'
 const META_TITLE = 'כמה זמן לבשל? טבלת זמני בישול וטיימר'
 const DESCRIPTION = `כמה זמן לבשל אורז, ביצה, פסטה, עדשים, ירקות, עוף ובשר? ${cookingItems.length} מאכלים עם שיטה וזמן, טמפרטורות בטוחות לפי USDA וטיימר מובנה לכמה סירים.`
+
+const pick = (ids: string[]) => cookingItems.filter((entry) => ids.includes(entry.id))
+
+function ItemsTable({ ids, caption }: { ids: string[]; caption: string }) {
+  return (
+    <div className={styles.tableWrap}>
+      <table className={styles.table}>
+        <caption>{caption}</caption>
+        <thead>
+          <tr>
+            <th scope="col">מאכל</th>
+            <th scope="col">שיטה</th>
+            <th scope="col">זמן</th>
+          </tr>
+        </thead>
+        <tbody>
+          {pick(ids).map((entry) => (
+            <tr key={entry.id}>
+              <th scope="row">{entry.name}</th>
+              <td>{entry.method}</td>
+              <td>{formatMinutes(entry.min, entry.max)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
 
 const faq: ToolFaqEntry[] = [
   {
@@ -42,6 +78,18 @@ const faq: ToolFaqEntry[] = [
     question: 'עד כמה הזמנים בטבלה מדויקים?',
     answer:
       'הזמנים הם טווחים משוערים לפי טווחים נפוצים במטבח הביתי, והם משתנים לפי גודל הסיר, עוצמת האש, עובי החתיכה והגובה שבו אתם גרים. תמיד כדאי לטעום או למדוד. הטמפרטורות הבטוחות לעוף, בשר, דגים וביצים הן היחידות בטבלה שמגיעות ממקור רשמי, והמקורות מופיעים בסוף העמוד.',
+  },
+  {
+    id: 'cook-faq-corn',
+    question: 'כמה זמן מבשלים תירס בקלח?',
+    answer:
+      'קלח תירס במים רותחים מוכן אחרי 8 עד 10 דקות. מכניסים אותו למים שכבר רותחים, ובדרך כלל לא מוסיפים מלח בתחילת הבישול. כדאי לטעום גרעין אחד אחרי שמונה דקות ולהחליט אם להמשיך.',
+  },
+  {
+    id: 'cook-faq-lentils-black',
+    question: 'כמה זמן מבשלים עדשים שחורות וירוקות?',
+    answer:
+      'עדשים שחורות מתבשלות 20 עד 25 דקות ושומרות על צורתן. עדשים ירוקות לוקחות 25 עד 30 דקות. שתיהן לא צריכות השריה, ומוסיפים להן מלח לקראת הסוף. עדשים כתומות מוכנות כבר אחרי 10 עד 15 דקות ומתפרקות, ולכן הן מתאימות יותר למרק ולמחית מאשר לסלט.',
   },
 ]
 
@@ -95,6 +143,90 @@ export default function CookingTimesChartPage() {
         <li>עובי החתיכה: חזה עוף עבה ושניצל דק אינם זהים, גם כשהמשקל דומה.</li>
         <li>סוג האריזה: מה שכתוב על אריזת הפסטה או האורז גובר על הטבלה.</li>
       </ul>
+
+      <h2>כמה זמן לבשל תירס</h2>
+      <p>
+        קלח תירס מתבשל 8 עד 10 דקות במים רותחים. מכניסים אותו כשהמים כבר רותחים ובודקים בקצה סכין או בטעימה. מי שמבשל
+        הרבה קלחים יכול להפעיל טיימר אחד ולבדוק בכל פעם קלח אחד, במקום להוציא את כולם.
+      </p>
+
+      <h2>כמה זמן לבשל ביצה קשה, רכה וחצי רכה</h2>
+      <p>
+        הזמן תלוי בעשייה שאתם רוצים, ולא רק בביצה. הטבלה מציגה את הזמנים מרגע שהמים חוזרים לרתיחה, עם ביצה שיוצאת
+        מהמקרר.
+      </p>
+      <ItemsTable ids={['egg-soft', 'egg-medium', 'egg-hard', 'egg-poached', 'egg-fried', 'egg-scrambled']} caption="זמני בישול של ביצים" />
+      <p>
+        ביצה קשה שמתקררת מיד במים קרים נקלפת בקלות רבה יותר. מנות ביצים, כמו ביצה קשה ומקושקשת, צריכות להגיע ל-
+        {safeTemps.egg.celsius} מעלות לפי USDA. ביצה רכה עם חלמון נוזלי אינה מגיעה לטמפרטורה הזאת, ולכן אכילתה היא בחירה של מי
+        שאוכל אותה. עוד על שמירה של ביצים ושאריות אפשר לקרוא בטבלת{' '}
+        <Link href="/tools/fridge-storage-times">זמני שמירה במקרר</Link>.
+      </p>
+
+      <h2>כמה זמן לבשל אורז, לפי סוג</h2>
+      <p>
+        סוג האורז קובע גם את הזמן וגם את כמות המים. ביחס שבטבלה האורז מבושל מכוסה, ובסוף הוא עומד בסיר כמה דקות.
+      </p>
+      <ItemsTable ids={['rice-white', 'rice-basmati', 'rice-jasmine', 'rice-brown', 'quinoa', 'ptitim']} caption="זמני בישול של אורז ודגנים" />
+      <p>
+        כדי למדוד כמות מים, השתמשו באותה כוסית לאורז ולמים. אם אתם מחלקים מתכון לחצי או מכפילים אותו, מחשבון{' '}
+        <Link href="/tools/fractions-calculator">שברים</Link> עוזר לחשב כוסות וחצאי כוסות, ו<Link href="/tools/baking-converter">ממיר האפייה</Link>{' '}
+        מתרגם כוסות לגרמים.
+      </p>
+
+      <h2>כמה זמן לבשל עדשים</h2>
+      <p>עדשים לא צריכות השריה, אבל הזמן משתנה מאוד בין הסוגים.</p>
+      <ItemsTable ids={['lentils-orange', 'lentils-black', 'lentils-green', 'split-peas']} caption="זמני בישול של עדשים ואפונה מפוצלת" />
+
+      <h2>כמה זמן לבשל ירקות</h2>
+      <p>
+        ירקות ירוקים מתבשלים דקות ספורות, וירקות שורש לוקחים הרבה יותר. ירק שמתבשל יותר מדי נעשה רך מדי, ולכן בודקים
+        אותו בסכין כבר בתחילת הטווח. בשעועית ירוקה, בברוקולי ובתרד מקררים או מוציאים מיד כדי לעצור את הבישול.
+      </p>
+      <ItemsTable ids={['potato-cubes', 'carrot', 'cauliflower', 'broccoli', 'green-beans', 'spinach']} caption="זמני בישול של ירקות נפוצים" />
+
+      <h2>כמה זמן לבשל עוף, בשר ודג</h2>
+      <p>
+        בבשר ובעוף הזמן הוא רק כיוון. הטבלה מציגה כמה מהמנות הנפוצות, ולצידן הטמפרטורה הפנימית שצריך לוודא במדחום.
+      </p>
+      <div className={styles.tableWrap}>
+        <table className={styles.table}>
+          <caption>זמנים וטמפרטורה פנימית מינימלית לפי USDA</caption>
+          <thead>
+            <tr>
+              <th scope="col">מנה</th>
+              <th scope="col">שיטה</th>
+              <th scope="col">זמן</th>
+              <th scope="col">טמפרטורה פנימית</th>
+            </tr>
+          </thead>
+          <tbody>
+            {pick(['chicken-breast-oven', 'chicken-thighs', 'chicken-drumsticks', 'hamburger', 'steak', 'salmon']).map((entry) => (
+              <tr key={entry.id}>
+                <th scope="row">{entry.name}</th>
+                <td>{entry.method}</td>
+                <td>{formatMinutes(entry.min, entry.max)}</td>
+                <td>{entry.safe ? `${safeTemps[entry.safe].celsius} מעלות` : ''}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>דוגמה: ארוחת ערב שמסתיימת בבת אחת</h2>
+      <p>
+        אתם מכינים ירכיים בלי עצם, אורז לבן וברוקולי. לפי הטבלה, הירכיים לוקחות עד 30 דקות, האורז עד 18 דקות ועוד
+        חמש דקות מנוחה, והברוקולי עד 5 דקות. אם רוצים שהכול יהיה מוכן באותו רגע, מחשבים מהסוף אחורה:
+      </p>
+      <ul>
+        <li>בדקה 0 מכניסים את הירכיים לתנור.</li>
+        <li>בדקה 7 מתחילים לבשל את האורז, כי 18 דקות בישול ועוד 5 דקות מנוחה הן 23 דקות.</li>
+        <li>בדקה 25 מכניסים את הברוקולי, כי הוא צריך עד 5 דקות.</li>
+        <li>בדקה 30 מודדים את הירכיים במדחום, ומוציאים רק אם הגיעו ל-{safeTemps.poultry.celsius} מעלות.</li>
+      </ul>
+      <p>
+        מפעילים שלושה טיימרים בטבלה, אחד לכל מנה, ולא מסתמכים על זיכרון.
+      </p>
 
       <h2>מקורות</h2>
       <ul className={styles.sources}>

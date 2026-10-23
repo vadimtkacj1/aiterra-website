@@ -8,11 +8,13 @@ import Faq from '../Faq'
 import Eyebrow from '../Eyebrow'
 import { ChevronPrevIcon } from '../icons'
 import ToolIcon from './ToolIcon'
+import ToolShareBar from './ToolShareBar'
+import ToolEmbedBox from './ToolEmbedBox'
 import JsonLd from '@/components/seo/JsonLd'
 import { pageMetadata } from '@/lib/metadata'
 import { ORG_ID, breadcrumbList, faqPage, webPage } from '@/lib/schema'
 import { SITE_URL } from '@/lib/seo'
-import { TOOLS_HUB_PATH, otherTools, toolReviewed } from '@/lib/tools'
+import { TOOLS_HUB_PATH, embeddableTool, otherTools, toolReviewed } from '@/lib/tools'
 import crumbStyles from '../PageCrumbs.module.css'
 import indexStyles from './ToolsIndex.module.css'
 import styles from './ToolLayout.module.css'
@@ -152,6 +154,7 @@ export default function ToolLayout({
 }: ToolLayoutProps) {
   const faqJsonLd = faqPage({ path, entries: faq.map(({ question, answer }) => ({ question, answer })) })
   const related = otherTools(path).slice(0, 6)
+  const embed = embeddableTool(path)
 
   return (
     <>
@@ -193,6 +196,8 @@ export default function ToolLayout({
         />
 
         {tool}
+        <ToolShareBar path={path} title={title} />
+        {embed ? <ToolEmbedBox slug={embed.slug} title={title} height={embed.height} /> : null}
 
         <article className={styles.guide}>
           {children}

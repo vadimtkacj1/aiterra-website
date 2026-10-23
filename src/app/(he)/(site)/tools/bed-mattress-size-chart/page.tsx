@@ -1,6 +1,16 @@
+import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import BedMattressSizeChart from '../../components/tools/BedMattressSizeChart'
-import { BED_REVIEWED, bedSizes } from '@/lib/bed-mattress-size-chart'
+import {
+  BED_REVIEWED,
+  DEFAULT_FRAME_CM,
+  DEFAULT_MATTRESS_HEIGHT_CM,
+  DEFAULT_WALKWAY_CM,
+  bedSizes,
+  checkRoom,
+  findBed,
+  pocketDepthCm,
+} from '@/lib/bed-mattress-size-chart'
 import styles from './page.module.css'
 
 const PATH = '/tools/bed-mattress-size-chart'
@@ -45,6 +55,17 @@ const faq: ToolFaqEntry[] = [
     question: 'כמה מקום צריך מסביב למיטה?',
     answer:
       'ככלל אצבע, רצוי מעבר של כ-70 סנטימטרים בצד המיטה שבו עולים עליה ובסוף המיטה. זה מספר שאנחנו משתמשים בו בכלי, ואפשר לשנות אותו. קחו בחשבון גם את הדלת, ארון עם דלתות נפתחות וחלון, כי הכלי מחשב רק את שטח הרצפה.',
+  },
+  {
+    id: 'bed-faq-one-and-half',
+    question: 'האם מיטה וחצי מתאימה לשני אנשים?',
+    answer:
+      'מיטה וחצי ברוחב 120 סנטימטרים משאירה 60 סנטימטרים לכל אחד מהשניים, פחות ממיטת יחיד ברוחב 90. היא מתאימה בעיקר לאדם אחד שרוצה מקום, או לחדר קטן. לשני מבוגרים שישנים יחד לאורך זמן, המידות הנפוצות הן זוגית ברוחב 140 לפחות, ובדרך כלל 160 או 180.',
+  },
+  {
+    id: 'bed-faq-fit',
+    question: 'איך יודעים אם מיטה נכנסת לחדר?',
+    answer: `מוסיפים למידות המזרן את המסגרת, ${DEFAULT_FRAME_CM} סנטימטרים בכל צד בחישוב שלנו, ומשאירים מעבר של ${DEFAULT_WALKWAY_CM} סנטימטרים בצד שעולים ממנו ובסוף המיטה. אחר כך בודקים אם החדר מספיק, כשהמיטה עומדת ישר וגם כשהיא מסובבת. הכלי למעלה עושה את שתי הבדיקות, ובפסקת הדוגמה למטה מפורט חישוב מלא.`,
   },
 ]
 
@@ -124,6 +145,99 @@ export default function BedMattressSizeChartPage() {
           הגדלה.
         </li>
       </ul>
+
+      <h2>מידות מיטה וחצי</h2>
+      <p>
+        מיטה וחצי נמכרת בדרך כלל ב-{findBed('one-and-half').options}. ברוחב 120 סנטימטרים היא רחבה ב-30 סנטימטרים
+        ממזרן יחיד של 90, אבל צרה ב-20 סנטימטרים מזוגית של 140. באירופה המידה הקרובה אליה נקראת {findBed('one-and-half').eu},
+        בבריטניה {findBed('one-and-half').uk}, ובארה״ב אין מידה קרובה. לכן מזרן שמזמינים מחו״ל לא יתאים למיטה וחצי
+        ישראלית בלי בדיקה.
+      </p>
+
+      <h2>מידות מיטה זוגית סטנדרטית</h2>
+      <p>
+        זוגית סטנדרטית היא {findBed('double').options}. המידה האמריקאית הקרובה היא {findBed('double').us} והבריטית
+        היא {findBed('double').uk}, כלומר הפרש של 3 עד 4 סנטימטרים ברוחב ושל סנטימטר באורך. ברוחב 140, כל אחד מהשניים מקבל 70
+        סנטימטרים, פחות מרוחב של יחיד. מיטה זוגית רחבה ברוחב 160 מוסיפה 10 סנטימטרים לכל אחד, וקינג ברוחב 180
+        מוסיף 20.
+      </p>
+
+      <h2>מידות מיטה יחיד סטנדרטית</h2>
+      <p>
+        מזרן יחיד נמכר ב-{findBed('single').options}. ההבדל בין 80 ל-90 הוא 10 סנטימטרים של רוחב, וההבדל בין 190 ל-200
+        הוא 10 סנטימטרים של אורך. מי שרוצה יותר אורך יכול לבחור 200, בתנאי שהמסגרת נמכרת באותה מידה.
+      </p>
+
+      <h2>כמה מקום צריך בחדר לכל מידה</h2>
+      <p>
+        הטבלה מחשבת את הרוחב והאורך המינימליים של חדר, לפי הנחות הכלי: מסגרת של {DEFAULT_FRAME_CM} סנטימטרים בכל צד
+        ומעבר של {DEFAULT_WALKWAY_CM} סנטימטרים. בעמודה הראשונה יש מעבר בצד אחד בלבד, למשל כשהמיטה צמודה לקיר, ובשנייה
+        בשני הצדדים.
+      </p>
+      <div className={styles.tableWrap}>
+        <div className={styles.scroll} tabIndex={0} role="region" aria-label="טבלת שטח נדרש בחדר לכל מידת מיטה">
+          <table className={styles.table}>
+            <caption>רוחב ואורך חדר מינימליים בסנטימטרים</caption>
+            <thead>
+              <tr>
+                <th scope="col">מידה</th>
+                <th scope="col">מזרן</th>
+                <th scope="col">רוחב לאדם</th>
+                <th scope="col">חדר, מעבר בצד אחד</th>
+                <th scope="col">חדר, מעבר בשני צדדים</th>
+              </tr>
+            </thead>
+            <tbody>
+              {bedSizes.map((size) => {
+                const room = { widthCm: 0, lengthCm: 0, walkwayCm: DEFAULT_WALKWAY_CM, frameCm: DEFAULT_FRAME_CM }
+                const one = checkRoom({ ...room, bothSides: false }, size)
+                const both = checkRoom({ ...room, bothSides: true }, size)
+                return (
+                  <tr key={size.id}>
+                    <th scope="row">{size.name}</th>
+                    <td dir="ltr" className={styles.num}>
+                      {size.widthCm}×{size.lengthCm}
+                    </td>
+                    <td className={styles.num}>{size.widthCm / 2}</td>
+                    <td dir="ltr" className={styles.num}>
+                      {one.neededWidthCm}×{one.neededLengthCm}
+                    </td>
+                    <td dir="ltr" className={styles.num}>
+                      {both.neededWidthCm}×{both.neededLengthCm}
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2>דוגמה: קינג בחדר של 3 על 3.5 מטר</h2>
+      <p>
+        מזרן קינג הוא 180×200. עם מסגרת של 5 סנטימטרים בכל צד המיטה היא 190×210, ועם מעבר של 70 סנטימטרים משני הצדדים
+        צריך רוחב של 330 סנטימטרים ואורך של 280. חדר של 300 על 350 לא מספיק כשהמיטה עומדת לאורך החדר, כי חסרים 30
+        סנטימטרים של רוחב. אם מסובבים אותה, כך שהאורך שלה לאורך הצלע של 350, הכול נכנס: 330 מתוך 350, ו-280 מתוך 300.
+        אם מוותרים על מעבר באחד הצדדים, צריך רק 260 סנטימטרים של רוחב והמיטה נכנסת גם בלי לסובב. הקלידו את מידות
+        החדר שלכם בכלי כדי לבדוק את המקרה שלכם. הבדיקה לא כוללת דלתות, ארונות וחלונות, ולכן מדדו אותם בנפרד.
+      </p>
+      <p>
+        אם אתם משפצים או צובעים את החדר לפני שמכניסים את המיטה, אפשר לחשב כמה צבע צריך ב<Link href="/tools/paint-quantity-calculator">מחשבון
+        כמות הצבע</Link>.
+      </p>
+
+      <h2>איזה סדין עם גומי מתאים למזרן</h2>
+      <p>
+        עומק הכיס של הסדין צריך להיות גבוה מהמזרן בכמה סנטימטרים. בחישוב שלנו התוספת היא 5 סנטימטרים: מזרן בגובה{' '}
+        {DEFAULT_MATTRESS_HEIGHT_CM} סנטימטרים דורש כיס של {pocketDepthCm(DEFAULT_MATTRESS_HEIGHT_CM)}, ומזרן בגובה 32
+        דורש כיס של {pocketDepthCm(32)}. כשיש גם מגן מזרן או כרית עליונה, מוסיפים את הגובה שלהם.
+      </p>
+
+      <h2>אחרי שבחרתם מיטה: שעות שינה</h2>
+      <p>
+        המידה היא רק חלק מהבחירה. אחרי שבחרתם מזרן, תכננו גם את שעות השינה עצמן. מחשבון{' '}
+        <Link href="/tools/sleep-cycle-calculator">מחזורי שינה</Link> מציע שעות שינה והשכמה לפי מחזורים של כ-90 דקות.
+      </p>
 
       <h2>מקורות</h2>
       <ul className={styles.sources}>
