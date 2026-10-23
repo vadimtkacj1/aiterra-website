@@ -1621,6 +1621,444 @@ export const servicePagesEn: Record<string, ServicePage> = {
       },
     ],
   },
+  'llm-integration': {
+    id: 'llm-integration',
+    crumb: 'LLM integration & RAG',
+    eyebrow: 'LLM integration & RAG',
+    heading: ['LLM integration & RAG', 'GPT, Claude and Gemini answering from your own documents'],
+    subhead: 'Our language model integration service',
+    lede: 'We connect a language model such as GPT, Claude or Gemini to your internal information: chat over company documents, a knowledge assistant for your team, search across Hebrew files, extraction and summaries for contracts and invoices, and a custom assistant that answers only from your sources. It suits businesses with a lot of written knowledge and too little time to search through it.',
+    image: '/images/services-view.webp',
+    action: { label: 'Request a feasibility check', href: '/en/contact' },
+    metaTitle: 'LLM Integration & RAG for Business - Chat Over Documents and Knowledge Assistants',
+    metaDescription:
+      'Connect GPT, Claude and Gemini to your business data: chat over documents, an internal knowledge assistant, RAG over Hebrew files, extraction and summaries, and private deployment with data privacy in mind. We start with a feasibility check.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our LLM integrations'],
+      lede: 'A language model on its own invents answers with complete confidence. We build the system around it that fetches the right source, shows you where each answer came from, and knows how to say "I could not find it".',
+      outro: 'Want to find out whether your documents can answer questions?',
+      action: { label: 'Request a feasibility check', href: '/en/contact' },
+      roles: [
+        {
+          id: 'sources',
+          title: 'Every answer with its source',
+          art: '/images/service-page1.webp',
+          text: 'Each answer arrives with the passages it was taken from, so you can click through and check the original document. When the information is not there, the assistant says so instead of filling the gap from imagination.',
+        },
+        {
+          id: 'hebrew',
+          title: 'Real business Hebrew',
+          art: '/images/service-page2.webp',
+          text: 'Retrieval is tested on Hebrew documents as they really are: scans, tables, acronyms, trade terms and a mix of Hebrew and English. Not only on a clean file picked for the demo.',
+        },
+        {
+          id: 'model-choice',
+          title: 'A model chosen for the task',
+          art: '/images/service-page3.webp',
+          text: 'We are not tied to one vendor. The same questions run against several models and we choose by quality, speed and running cost, so the model can be swapped later without rebuilding the system.',
+        },
+        {
+          id: 'privacy',
+          title: 'Privacy inside the specification',
+          art: '/images/service-page4.webp',
+          text: 'From the start we decide what data is sent to a model at all, who may see which document, and whether a private deployment makes sense. It is an early decision, not a last-minute add-on.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What we build',
+      heading: ['What a language model does with your data'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'chat',
+          icon: 'orders',
+          title: 'Chat over company documents',
+          text: 'Ask in plain language about procedures, quotes, contracts or product guides and get a short answer with a link to the original passage.',
+        },
+        {
+          id: 'assistant',
+          icon: 'club',
+          title: 'An internal knowledge assistant',
+          text: 'Support, sales or training teams answer customers and new hires from a single knowledge base, instead of digging through folders and asking whoever already knows.',
+        },
+        {
+          id: 'rag',
+          icon: 'catalog',
+          title: 'RAG over Hebrew documents',
+          text: 'Document preparation, splitting into passages, a semantic search index and testing on real questions, so the model receives the right passage before it answers.',
+        },
+        {
+          id: 'extraction',
+          icon: 'analytics',
+          title: 'Extraction and summarisation',
+          text: 'Pulling fields from invoices, contracts and forms into a table, and summarising long documents and email threads, with anything uncertain flagged for human review.',
+        },
+        {
+          id: 'private',
+          icon: 'sales',
+          title: 'Custom assistants and private deployment',
+          text: 'A GPT-style assistant tuned to your field and tone of voice, in your own cloud or on a self-hosted open model when the data cannot leave the organisation.',
+        },
+      ],
+      action: { label: 'Request a feasibility check', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How a project runs. Simply.'],
+      lede: 'We start small, with one set of documents and real questions, and widen the scope only once the answers are right.',
+      steps: [
+        {
+          id: 'scope',
+          title: 'Mapping sources and questions',
+          text: 'Together we collect the documents and the questions your team really asks, check what is sensitive, and define what a good answer looks like. From that we build a fixed test set.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'prototype',
+          title: 'Prototype and quality testing',
+          text: 'We build an assistant over part of the material and run the test set against it. We measure how many answers are correct, how many lack a source and how many were invented, then improve until you accept the result.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'launch',
+          title: 'Rollout, permissions and upkeep',
+          text: 'We connect it to the channel your team already uses - your site, WhatsApp, Slack or an internal system - set permissions and automatic document updates, and review failed questions to keep improving.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want your team to get answers straight from your business documents?',
+      action: { label: 'Request a feasibility check', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about LLM integration and RAG'],
+    faqEntries: [
+      {
+        question: 'What is RAG, and why is plain ChatGPT not enough?',
+        answer:
+          'RAG combines search with a language model: before the model answers, the system finds the relevant passages in your documents and hands them over together with the question. Ordinary ChatGPT does not know your procedures, price lists or contracts, so it will guess or answer in generalities. With RAG the answer is grounded in a source, you can see where it came from, and knowledge is updated by replacing a document rather than retraining a model. It is the most common way to connect a language model to organisational information. The first build is relatively quick; the steady improvement afterwards is what separates a demo from a working tool.',
+      },
+      {
+        question: 'Does it work on Hebrew documents?',
+        answer:
+          'Yes, but Hebrew has to be tested rather than assumed. The large language models understand Hebrew well, yet the search step that finds the right passage for them is sensitive to spelling, acronyms, poor scans and tables. So we choose the search method and the model only after running real questions against your documents, including questions phrased in different ways. If some files are scanned images we add a text recognition step, and we flag in advance any documents that cannot be read at acceptable quality. The feasibility check shows you how the system handles your most awkward files before you commit to anything larger, so surprises come early and cheaply.',
+      },
+      {
+        question: 'How do you stop the model inventing answers?',
+        answer:
+          'Zero errors cannot be promised, but they can be reduced a great deal and made visible. The assistant is instructed to answer only from the passages it retrieved, shows the source with each answer, and says it found nothing when the information is missing. Before launch we run a fixed set of questions and review the results by hand, including questions whose answer is not in the documents at all. After launch, failed questions are saved and used to improve the system. For sensitive topics a human can approve the answer before it reaches a customer. The aim is an assistant you can rely on, one that is honest about the limits of what it knows and hands over to a person when it should.',
+      },
+      {
+        question: 'Is our data sent to companies like OpenAI or Google?',
+        answer:
+          'That is decided in the specification. One option is a business-grade API from a major provider, where the terms of use state whether data is used for training, and where only the passages needed for a question are sent rather than the whole archive. When data cannot leave the organisation, an open model runs on a server you control. Each option is chosen by how sensitive the data is, and for personal data the provider\'s terms must be checked. We prepare a written description of the data flow that you can pass to your privacy adviser. That lets you decide from a clear document rather than from a vendor\'s general promises, and your adviser can review the same description.',
+      },
+      {
+        question: 'What about privacy and Amendment 13 to the Privacy Protection Law?',
+        answer:
+          'Amendment 13 to Israel\'s Privacy Protection Law broadened the obligations of bodies that hold personal data, so privacy enters the specification from day one. In practice we work on data minimisation: we do not load documents into the assistant that it does not need, we limit access by role, we log usage, and a document can be removed from the index. We do not give legal advice. If your database is sensitive, we describe exactly what is collected, where it is stored and who can reach it, so your adviser can decide whether more steps are needed. The topic is worked through with you at the start of the project and is not left for the launch stage, when changing course is harder.',
+      },
+      {
+        question: 'How long does a first assistant take, and what do we get at the end?',
+        answer:
+          'A prototype over one set of documents and real questions can usually be shown within a few weeks, depending on the quality of the documents and the number of systems it connects to. At the end you receive an assistant working in the channel your team already uses, the code for the connection and the index, a test set that shows the accuracy level, and a document explaining how to add and update documents. The code belongs to you. After launch you can leave monitoring and ongoing improvement with us, or take a handover session and run it yourselves. In the first conversation we will check together how likely it is that your documents suit this approach, and say plainly if they do not.',
+      },
+    ],
+  },
+  'data-analytics': {
+    id: 'data-analytics',
+    crumb: 'Data analytics & dashboards',
+    eyebrow: 'Data analytics & dashboards',
+    heading: ['Data analytics & BI dashboards', 'every number in one place, updated on its own'],
+    subhead: 'Our data analytics service',
+    lede: 'Connecting your CRM, store, Google and Meta campaigns, GA4 and accounting system into one dataset, defining the metrics everyone agrees on, building Looker Studio or Power BI dashboards and sending automated reports to WhatsApp and email - so owners and managers see what is happening without waiting for the month-end spreadsheet.',
+    image: '/images/services-view.webp',
+    action: { label: 'Request a data source review', href: '/en/contact' },
+    metaTitle: 'Data Analytics & BI Dashboards for Business - Looker Studio, Power BI and Automated Reports',
+    metaDescription:
+      'Dashboards and reporting for Israeli businesses: connecting CRM, Shopify and WooCommerce, Google and Meta ads, GA4 and accounting software such as Priority and iCount, data warehouse, data cleaning and automated WhatsApp reports.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our data analytics work'],
+      lede: 'A good dashboard is judged by one question: does anyone open it and make a decision. So we start from the questions your business asks, and only then from the tools.',
+      outro: 'Want to see where your business numbers scatter today?',
+      action: { label: 'Request a data source review', href: '/en/contact' },
+      roles: [
+        {
+          id: 'kpi-first',
+          title: 'Metrics first, charts second',
+          art: '/images/service-page1.webp',
+          text: 'Before connecting anything we sit down with you and define what counts as a lead, what counts as a sale and how profitability is calculated. The definitions are written in one document, so marketing, sales and management stop arguing about whose number is right.',
+        },
+        {
+          id: 'israeli-stack',
+          title: 'Systems used in Israel',
+          art: '/images/service-page2.webp',
+          text: 'We know what businesses here actually run: Priority, iCount, Green Invoice, Rivhit, plus local CRM systems and store platforms. When no ready-made connector exists, we build one through an API or a scheduled export.',
+        },
+        {
+          id: 'clean-data',
+          title: 'Data cleaning without hiding gaps',
+          art: '/images/service-page3.webp',
+          text: 'Duplicates, empty fields, lead sources typed three different ways - we fix what can be fixed and flag what cannot. Missing data is shown as missing instead of disappearing into an average.',
+        },
+        {
+          id: 'ownership',
+          title: 'The dashboard and the data are yours',
+          art: '/images/service-page4.webp',
+          text: 'Accounts, the data store and the dashboards are opened in the business\'s name, and you manage access. If you later want to continue alone or with another provider, you will not have to rebuild everything.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What we build',
+      heading: ['What data analytics gives your business'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'connect',
+          icon: 'analytics',
+          title: 'Connecting data sources',
+          text: 'CRM, Shopify and WooCommerce, Google Ads, Meta Ads, GA4, the accounting system and spreadsheets - pulled automatically and refreshed at a rhythm that suits the business.',
+        },
+        {
+          id: 'warehouse',
+          icon: 'catalog',
+          title: 'Data warehouse and ETL',
+          text: 'When data grows or comes from many systems, we set up a central store with collection and transformation jobs, so the dashboard does not depend on a manual export that breaks whenever a column changes.',
+        },
+        {
+          id: 'dashboards',
+          icon: 'sales',
+          title: 'Looker Studio and Power BI dashboards',
+          text: 'A management view, a marketing view and a sales view, filterable by period, source and team. The choice between the tools follows your budget, your team and the systems already in use.',
+        },
+        {
+          id: 'reports',
+          icon: 'orders',
+          title: 'Automated reports to WhatsApp and email',
+          text: 'A daily or weekly summary that reaches owners and managers on schedule, plus an instant alert when a metric moves out of range - for example a cost per lead that jumped or a store whose sales dropped.',
+        },
+        {
+          id: 'attribution',
+          icon: 'club',
+          title: 'Marketing and profitability measurement',
+          text: 'Tying campaign spend to the revenue that was actually closed, to see which channel brings paying customers and not just clicks, and to calculate acquisition cost and profitability by customer or product.',
+        },
+      ],
+      action: { label: 'Request a data source review', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How a project runs. Simply.'],
+      lede: 'We begin with one screen that answers one question, and expand only after the numbers prove correct and people actually use them.',
+      steps: [
+        {
+          id: 'mapping',
+          title: 'Mapping sources and metrics',
+          text: 'We go through every system that holds data, define the metrics that matter and decide who needs to see what. The stage ends with a list of connections, metric definitions and an order of work.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'pipeline',
+          title: 'Connecting and cleaning',
+          text: 'We connect the sources, clean duplicates and inconsistent fields, and compare the totals in the dashboard with the original reports. A number that does not reconcile with the accounting system does not move forward.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'dashboard',
+          title: 'Dashboard, reports and training',
+          text: 'We build the screens, set up automated reports and alerts, and train the team to read and adjust them. After launch, sources and screens can be added as needed.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want to see all your business numbers on one screen?',
+      action: { label: 'Request a data source review', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about data analytics and dashboards'],
+    faqEntries: [
+      {
+        question: 'How is a BI dashboard different from machine learning?',
+        answer:
+          'A dashboard shows what happened and what is happening now: sales by month, cost per lead by channel, open invoices. Machine learning tries to predict what will happen or to classify records, and suits cases with many repeated decisions. For most businesses the first and most worthwhile step is the dashboard, because it reveals which data exists and in what quality. If a question later justifies a forecasting model, the pipeline already built feeds it, and there is no need to start again. That second part is handled under our machine learning service. The decision on what to build first follows the most urgent business question you have.',
+      },
+      {
+        question: 'Which systems can a dashboard connect to?',
+        answer:
+          'Almost any system that lets you reach its data: an API, a scheduled export or access to the database. In practice we connect CRMs, Shopify and WooCommerce stores, Google Ads, Meta Ads, GA4, Google Sheets and accounting software such as Priority, iCount, Green Invoice and Rivhit. If an older system has no interface, we check for an automatic export to email or a folder. The mapping stage gives you a clear list of what connects directly, what needs a workaround and what may be worth replacing. If one system matters especially to you, mention it in the first enquiry and we will test it before committing to a work plan.',
+      },
+      {
+        question: 'Which is better, Looker Studio or Power BI?',
+        answer:
+          'Looker Studio is free, runs in the browser and connects easily to Google tools, so it suits most small and mid-size businesses and marketing teams. Power BI is stronger for complex models, advanced calculations and integration with the Microsoft environment, and it makes sense for organisations already on Office 365 or with large data volumes. We are not tied to one tool, and during mapping we recommend based on your team, your budget and who needs access. You can also start with one and move to the other later if the data sits in a separate store. The recommendation is given in writing with the reasoning, and you decide whether to follow it or choose differently.',
+      },
+      {
+        question: 'Can we receive reports on WhatsApp?',
+        answer:
+          'Yes. We can send owners or managers a regular summary at a set time, for example yesterday\'s sales, new leads and cost per lead, and add an instant alert when a metric leaves the range you defined. Sending goes through the official WhatsApp Business interface and follows its template policy, and alongside or instead of it we can send an email with a PDF or a link to the dashboard. What is sent, to whom and how often is agreed with you, so the messages stay useful and do not become noise that people ignore. In every case messages go only to recipients you approved, and you can stop or change them at any moment.',
+      },
+      {
+        question: 'What if our data is messy?',
+        answer:
+          'It almost always is, and that does not stop a project from starting. During the connection stage we check for duplicates, empty fields, different names for the same channel and gaps between systems, and we fix whatever can be enforced by automatic rules. What cannot be repaired is flagged in the dashboard rather than hidden. We also suggest small changes at the point of entry, such as a required field in a form, so the problem does not return. Before launch we compare totals with the original reports, so you know which numbers you can rely on. Such fixes usually come down to small configuration changes, not to replacing systems or repeating manual work every month.',
+      },
+      {
+        question: 'What do we get at the end of the project?',
+        answer:
+          'Dashboards that work and refresh on their own, the data connections and the data store if one was built, scheduled reports and alerts, and a document defining every metric: where it comes from, how it is calculated and what it leaves out. Accounts and access are registered in the business\'s name. You also get team training and a question session after launch. Afterwards you can continue with us for maintenance and new screens, or run everything yourselves, and the connections give you exactly the same ability in both cases. Training includes short written documentation, so a new employee can also understand how the dashboard is built.',
+      },
+    ],
+  },
+  'ai-consulting': {
+    id: 'ai-consulting',
+    crumb: 'AI consulting & implementation',
+    eyebrow: 'AI consulting & implementation',
+    heading: ['AI consulting & implementation', 'from readiness check to daily use across the team'],
+    subhead: 'Our AI consulting service',
+    lede: 'AI consulting and implementation is the process of mapping where artificial intelligence actually saves time in your business, choosing the right tool and model (ChatGPT, Claude, Gemini or Copilot), setting a usage policy and security rules, training the team in Hebrew, and running a measured pilot before rolling it out company-wide.',
+    image: '/images/services-view.webp',
+    action: { label: 'Request an AI readiness review', href: '/en/contact' },
+    metaTitle: 'AI Consulting & Implementation for Business - Readiness, Policy and Team Training',
+    metaDescription:
+      'AI consulting for Israeli businesses: a readiness review, mapping the processes where AI pays off, choosing tools (ChatGPT, Claude, Gemini, Copilot), usage policy and data security, Hebrew team training and a pilot with ROI measurement.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our AI consulting'],
+      lede: 'You get recommendations you can act on: a list of processes ranked by benefit, a tool chosen after a trial on your own work, and a team that knows how to use it.',
+      outro: 'Want to know where AI would save you the most time?',
+      action: { label: 'Request an AI readiness review', href: '/en/contact' },
+      roles: [
+        {
+          id: 'process-first',
+          title: 'The process first, the tool second',
+          art: '/images/service-page1.webp',
+          text: 'We do not start from a fashionable model but from what the team actually does in a week: who types the same data twice, who answers the same questions, where people wait for approval. Only after that mapping do we decide where AI fits.',
+        },
+        {
+          id: 'no-vendor',
+          title: 'Advice with no vendor loyalty',
+          art: '/images/service-page2.webp',
+          text: 'We do not represent a single vendor. ChatGPT, Claude, Gemini and Copilot are tested on real tasks from your business, Hebrew included, and the recommendation comes with reasoning - sometimes including a recommendation not to buy licences at all.',
+        },
+        {
+          id: 'hebrew-training',
+          title: 'Hebrew training on your own work',
+          art: '/images/service-page3.webp',
+          text: 'Workshops where employees write prompts on the documents, emails and data of their own role rather than generic examples. Every participant leaves with working templates they can use the next day.',
+        },
+        {
+          id: 'safe-by-default',
+          title: 'Security and privacy from day one',
+          art: '/images/service-page4.webp',
+          text: 'We define what may be uploaded to a tool and what may not, which business plans retain data and which do not, and who approves a new use. That way team adoption does not turn into exposure of customer information.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What is included',
+      heading: ['What you get with AI guidance'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'readiness',
+          icon: 'analytics',
+          title: 'Readiness review and process mapping',
+          text: 'A review of the processes, tools and data in the business, and a ranked list of where AI pays off: customer service, quotes, meeting summaries, reports, content writing and document checks.',
+        },
+        {
+          id: 'tools',
+          icon: 'catalog',
+          title: 'Choosing tools and models',
+          text: 'ChatGPT Team or Enterprise, Claude, Gemini and Copilot compared against your tasks - on Hebrew quality, integration with Google Workspace or Microsoft 365, user management and privacy terms.',
+        },
+        {
+          id: 'policy',
+          icon: 'orders',
+          title: 'A company AI usage policy',
+          text: 'A short, clear document for employees: which data must never be entered, when human review is required, how to label AI-generated content and who owns a new tool. You can start from the draft in /tools/ai-policy-generator.',
+        },
+        {
+          id: 'training',
+          icon: 'club',
+          title: 'Team training and workshops',
+          text: 'Hebrew workshops by role - sales, service, finance, marketing, management - with practice on real material, a short internal guide and a follow-up session a few weeks later.',
+        },
+        {
+          id: 'pilot',
+          icon: 'sales',
+          title: 'Pilot, rollout and ROI',
+          text: 'A pilot with a small group and one metric before expanding: hours saved, response time, error rate. The decision to expand or stop rests on numbers from your own business.',
+        },
+      ],
+      action: { label: 'Request an AI readiness review', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How the engagement runs. Simply.'],
+      lede: 'Every stage ends with your decision whether to continue, so you never pay for rollout before it is clear that it makes business sense.',
+      steps: [
+        {
+          id: 'audit',
+          title: 'Readiness review and mapping',
+          text: 'Conversations with the people who own each role, a review of existing tools and data, and a short report: which three to five processes to start with, the risk in each and what must be settled first.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'pilot',
+          title: 'Pilot and policy',
+          text: 'We choose a tool, set the usage policy and run a pilot with a small group on one process, against a metric agreed in advance. If the result does not justify going further, we stop here.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'rollout',
+          title: 'Team rollout and measurement',
+          text: 'We extend to the rest of the team with training and working templates, and keep measuring. Where an off-the-shelf tool is not enough, the next step is automation or a custom AI agent, covered by our separate services.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want to start using AI in your business without the risk and without guessing?',
+      action: { label: 'Request an AI readiness review', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about AI consulting and implementation'],
+    faqEntries: [
+      {
+        question: 'How is AI consulting different from building an AI agent or system?',
+        answer:
+          'Consulting answers the question of what you should do: which processes AI pays off in, which tool fits, what rules are needed and how to train the team. Building an agent, a prediction model or an automation is the execution stage, and it is handled by our separate services. The split matters because much of the value comes from off-the-shelf tools that already exist, and sometimes the honest answer is that nothing needs to be developed. If the mapping shows that a custom solution is worth building, you receive an initial specification that you can take to another supplier as well.',
+      },
+      {
+        question: 'How do we know whether our business is ready for AI?',
+        answer:
+          'Readiness comes down to four things: whether processes are repeatable and written down, whether data is accessible rather than scattered across WhatsApp messages, whether one person owns the subject, and whether management is willing to try something small first. You do not need an IT department or a huge dataset. In the readiness review we score each area and say what is missing, and sometimes the first recommendation is to tidy documents or name an owner for a process, and only then pick a tool. You can get a first picture at no cost with the /tools/ai-readiness-checker tool on our site.',
+      },
+      {
+        question: 'Which tool should we choose: ChatGPT, Claude, Gemini or Copilot?',
+        answer:
+          'No single tool wins every task, and the choice depends on your working environment and the kind of work. An organisation living in Microsoft 365 gets value from Copilot, one on Google Workspace from Gemini, and teams that write and analyse a lot of Hebrew text should test ChatGPT and Claude closely. So we do not recommend from online rankings. We run the same five to ten of your real tasks through each tool and compare quality, speed, user management and privacy terms. The result is a reasoned recommendation, and quite often a combination of two tools rather than one.',
+      },
+      {
+        question: 'Is a company AI usage policy really necessary?',
+        answer:
+          'Yes, even for a small business, because without one each employee decides alone what to paste into an external tool: a contract, a client list, payroll data. A good policy is short and practical, usually a page or two: which tools are approved, which types of information must never be entered, when human review is mandatory before something goes to a client, and who to ask when in doubt. It also helps when a business customer or a public body asks how you use AI. We draft it with you and fit it to the tools you chose; binding legal advice should come from a lawyer.',
+      },
+      {
+        question: 'How do you measure the return on an AI rollout?',
+        answer:
+          'Before the pilot we pick a single metric and measure it as it stands today: how long a quote takes, how many enquiries are answered per day, how many errors are caught in review. After a few weeks we compare against the same metric. We do not rely on impressions such as "it feels easier", because those do not justify licences. The calculation also includes costs that are easy to forget: the time spent on human review, licences and training, so the saving is not one that exists only on paper. If the gap is too small, we will tell you to stop or try a different process.',
+      },
+      {
+        question: 'Is it safe to enter business and customer information into AI tools?',
+        answer:
+          'It depends on the tool and the plan. On business plans such as ChatGPT Team or Enterprise, Claude for Work or Gemini inside Workspace, vendors generally commit not to train their models on your data, but that is not the case for free personal accounts. So the policy requires company accounts only, removal or coding of sensitive details, and a list of information types that must never be entered at all. On Amendment 13 to the Israeli Privacy Protection Law we document what is entered and where it goes, and in sensitive cases we refer you to a privacy adviser.',
+      },
+    ],
+  },
   'ai-search': {
     id: 'ai-search',
     crumb: 'AI search',

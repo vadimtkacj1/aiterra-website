@@ -15,6 +15,9 @@ const SERVICE_KEYWORDS: Record<string, string[]> = {
   'ai-search': ['geo', 'aeo', 'chatgpt', 'gemini', 'perplexity', 'בינה מלאכותית', 'ai overview', 'תשובות ai'],
   'machine-learning': ['למידת מכונה', 'machine learning', 'data science', 'דאטה', 'נתונים', 'חיזוי', 'תחזית', 'דשבורד', 'נטישה'],
   'computer-vision': ['ראייה ממוחשבת', 'computer vision', 'ocr', 'זיהוי תמונה', 'זיהוי תמונות', 'מצלמ', 'סריקת מסמכים', 'בקרת איכות'],
+  'llm-integration': ['llm', 'rag', 'gpt', 'claude', 'מודל שפה', 'מודלי שפה', 'מסמכים', 'בסיס ידע', 'עוזר ידע'],
+  'data-analytics': ['דשבורד', 'דשבורדים', 'bi', 'power bi', 'looker', 'ניתוח נתונים', 'דוחות', 'kpi', 'אנליטיקס'],
+  'ai-consulting': ['ייעוץ ai', 'הטמעת ai', 'הטמעה', 'הדרכה', 'מדיניות ai', 'chatgpt לעסק', 'copilot', 'מוכנות'],
 }
 
 export type RelatedServiceItem = { slug: string; label: string; blurb: string }
