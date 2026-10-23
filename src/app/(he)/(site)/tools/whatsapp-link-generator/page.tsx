@@ -50,7 +50,7 @@ export default function WhatsAppLinkGeneratorPage() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="מקלידים מספר טלפון ומקבלים קישור שפותח צ׳אט איתכם בוואטסאפ, עם הודעה מוכנה אם רוצים, קוד QR וקוד לכפתור באתר. חינם, בלי הרשמה, והמספר לא נשלח לשום מקום."
+      lede="קישור לוואטסאפ הוא https://wa.me/ ואחריו המספר בפורמט בינלאומי, בלי 0 ובלי +, למשל wa.me/972501234567. כאן מקלידים מספר ומקבלים קישור עם הודעה מוכנה, קוד QR וקוד לכפתור באתר."
       chips={['הודעה מוכנה', 'קוד QR להורדה', 'בלי הרשמה', 'המספר לא נשלח לשום מקום']}
       tool={<WhatsAppLinkGenerator />}
       faq={faq}
@@ -158,6 +158,16 @@ export default function WhatsAppLinkGeneratorPage() {
         <Link href="/blog/whatsapp-bot-for-business">בוט וואטסאפ לעסקים</Link> ו
         <Link href="/blog/whatsapp-business-api-crm-integration">חיבור WhatsApp Business API ל-CRM</Link>.
       </p>
+
+      <h2>מקורות</h2>
+      <ul>
+        <li>
+          <a href="https://faq.whatsapp.com/5913398998672934" rel="noopener" target="_blank" lang="en">
+            WhatsApp Help Center: How to use click to chat
+          </a>
+          : מבנה הקישור wa.me
+        </li>
+      </ul>
     </ToolLayout>
   )
 }

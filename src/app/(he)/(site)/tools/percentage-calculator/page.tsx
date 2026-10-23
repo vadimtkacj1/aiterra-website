@@ -74,7 +74,7 @@ export default function PercentageCalculatorPage() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="בוחרים חישוב ומקבלים תשובה מיד, במשפט ברור ועם הנוסחה. כולל מחשבון הנחה ואחוז רווח."
+      lede="כדי לחשב אחוז ממספר מכפילים את המספר באחוז ומחלקים ב-100: 15% מ-240 הם 36. כאן בוחרים חישוב, כולל הנחה, שינוי באחוזים ואחוז רווח, ומקבלים תשובה מיד עם הנוסחה."
       chips={['מיידי', 'עם נוסחה', 'בלי הרשמה']}
       tool={<PercentageCalculator />}
       faq={faq}

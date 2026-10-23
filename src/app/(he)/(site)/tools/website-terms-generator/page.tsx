@@ -50,7 +50,7 @@ export default function WebsiteTermsGeneratorPage() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="בוחרים את סוג האתר, ממלאים את פרטי העסק ומקבלים תקנון מסודר להעתקה, עם סעיפי ביטול עסקה לפי חוק הגנת הצרכן. חינם, בלי הרשמה, והפרטים לא נשלחים לשום מקום."
+      lede="בקנייה באינטרנט הלקוח רשאי לבטל עד 14 ימים מקבלת המוצר, ודמי הביטול מוגבלים ל-5% או 100 ש״ח, לפי הנמוך. כאן בוחרים סוג אתר, ממלאים את פרטי העסק ומקבלים תקנון עם סעיפי ביטול לפי חוק הגנת הצרכן."
       tool={<TermsGenerator />}
       faq={faq}
       cta={{
@@ -196,6 +196,22 @@ export default function WebsiteTermsGeneratorPage() {
         מתחילים, ריכזנו את השלבים בהקמת חנות במדריך{' '}
         <Link href="/blog/ecommerce-store-that-sells">הקמת חנות אינטרנטית שמוכרת</Link>.
       </p>
+
+      <h2>מקורות</h2>
+      <ul>
+        <li>
+          <a href="https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%92%D7%A0%D7%AA_%D7%94%D7%A6%D7%A8%D7%9B%D7%9F" rel="noopener" target="_blank">
+            חוק הגנת הצרכן, התשמ״א-1981
+          </a>
+          : סעיפים 14ג, 14ג1, 14ה ו-14ט
+        </li>
+        <li>
+          <a href="https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%92%D7%A0%D7%AA_%D7%94%D7%A6%D7%A8%D7%9B%D7%9F_(%D7%91%D7%99%D7%98%D7%95%D7%9C_%D7%A2%D7%A1%D7%A7%D7%94)" rel="noopener" target="_blank">
+            תקנות הגנת הצרכן (ביטול עסקה), התשע״א-2010
+          </a>
+          : דמי ביטול והחזר כספי
+        </li>
+      </ul>
     </ToolLayout>
   )
 }

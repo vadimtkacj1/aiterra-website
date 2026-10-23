@@ -6,7 +6,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/signature-generator'
 const TITLE = 'יצירת חתימה אונליין'
-const META_TITLE = 'יצירת חתימה אונליין: חתימה בכתב יד ב-PNG שקוף, בחינם'
+const META_TITLE = 'יצירת חתימה אונליין בחינם: כתב יד ב-PNG שקוף'
 const DESCRIPTION =
   'חתימה בכתב יד אונליין: מציירים עם העכבר, האצבע או עט, או מקלידים שם, ומורידים PNG שקוף למסמך Word או PDF. בחינם, והחתימה לא יוצאת מהמכשיר.'
 

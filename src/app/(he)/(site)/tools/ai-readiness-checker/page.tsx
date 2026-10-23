@@ -170,7 +170,7 @@ export default function AiReadinessCheckerPage() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="הכלי בודק אם ChatGPT, Gemini, Perplexity, Claude וגוגל יכולים להגיע לאתר שלכם ולצטט אותו: מה robots.txt מתיר לכל בוט, אם השרת או Cloudflare חוסמים בוטים של AI, ואם הטקסט נמצא ב-HTML בלי JavaScript. מקלידים כתובת ומקבלים רשימה של מה תקין, מה כדאי לבדוק ומה חוסם, עם תיקון לכל שורה."
+      lede="כדי להופיע בתשובות החיפוש של ChatGPT, האתר צריך להיות פתוח לבוט OAI-SearchBot, וחסימת GPTBot מונעת רק אימון. כאן מקלידים כתובת ובודקים מה robots.txt, השרת ו-Cloudflare מתירים לכל בוט, ואם הטקסט נמצא ב-HTML."
       chips={['robots.txt לכל בוט AI', 'חסימה ב-Cloudflare ו-noindex', 'טקסט בלי JavaScript וסכמה', 'בחינם ובלי הרשמה']}
       tool={<AiReadinessChecker />}
       faq={faq}

@@ -15,7 +15,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/maternity-leave-calculator'
 const TITLE = 'מחשבון חופשת לידה'
-const META_TITLE = 'מחשבון חופשת לידה: 26 או 15 שבועות ותאריך חזרה לעבודה'
+const META_TITLE = 'מחשבון חופשת לידה: 26 או 15 שבועות ותאריך חזרה'
 const DESCRIPTION =
   'מחשבון חופשת לידה לפי חוק עבודת נשים: 26 שבועות, או 15 בוותק של פחות משנה, תאריך החזרה לעבודה, שבועות בתשלום מביטוח לאומי והגנה מפיטורים.'
 

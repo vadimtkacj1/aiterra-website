@@ -89,7 +89,7 @@ export default function QrCodeGeneratorPage() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="יוצרים קוד QR לאתר, לוואטסאפ, לביקורת בגוגל, לרשת ה-Wi-Fi או לכרטיס ביקור, ומורידים אותו ב-PNG או ב-SVG. הקוד סטטי ולא פג, וכל הפרטים נשארים בדפדפן שלכם."
+      lede="קוד QR סטטי לא פג תוקף: הקישור או הפרטים נמצאים בתוך הקוד עצמו, בלי שרת באמצע. כאן יוצרים קוד לאתר, לוואטסאפ, לביקורת בגוגל, ל-Wi-Fi או לכרטיס ביקור, ומורידים PNG או SVG."
       chips={['קוד סטטי שלא פג', 'PNG ו-SVG להדפסה', 'בלי הרשמה', 'הפרטים לא נשלחים לשום מקום']}
       tool={<QrCodeGenerator />}
       faq={faq}

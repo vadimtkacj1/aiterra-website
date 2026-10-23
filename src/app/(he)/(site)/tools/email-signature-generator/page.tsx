@@ -49,7 +49,7 @@ export default function EmailSignatureGeneratorPage() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="ממלאים את הפרטים, בוחרים תבנית ומעתיקים חתימה מעוצבת ל-Gmail, ל-Outlook או ל-Apple Mail. חינם, בלי הרשמה, והפרטים לא נשלחים לשום מקום."
+      lede="חתימה מעוצבת מדביקים בהגדרות של Gmail, Outlook או Apple Mail, אבל באפליקציית Mail של האייפון חתימה יכולה להכיל טקסט בלבד. כאן ממלאים פרטים, בוחרים תבנית ומעתיקים חתימה בעברית או באנגלית."
       tool={<EmailSignatureGenerator />}
       faq={faq}
       cta={{
@@ -155,6 +155,22 @@ export default function EmailSignatureGeneratorPage() {
         <li>
           Google ממליצה ב-Gmail על תמונת חתימה בגובה 70 עד 100 פיקסלים וברוחב 300 עד 400 פיקסלים. הגודל המרבי לפי
           Google הוא 100 פיקסלים בגובה ו-1,000 פיקסלים ברוחב.
+        </li>
+      </ul>
+
+      <h2>מקורות</h2>
+      <ul>
+        <li>
+          <a href="https://support.google.com/mail/answer/8395?hl=iw" rel="noopener" target="_blank">
+            מרכז העזרה של Gmail: יצירת חתימה ב-Gmail
+          </a>
+          : חתימה במחשב ובאפליקציה
+        </li>
+        <li>
+          <a href="https://support.microsoft.com/he-il/office/8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2" rel="noopener" target="_blank">
+            התמיכה של Microsoft: יצירה ושינוי של חתימת דואר אלקטרוני ב-Outlook
+          </a>
+          : חתימה ב-Outlook
         </li>
       </ul>
     </ToolLayout>

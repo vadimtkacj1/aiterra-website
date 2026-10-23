@@ -51,7 +51,7 @@ export default function VatCalculatorPage() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="מקלידים סכום ומקבלים מיד את הסכום לפני מע״מ, את המע״מ ואת הסכום הכולל, לפי שיעור של 18%. המחשבון עובד בשני הכיוונים, גם לכמה סכומים יחד."
+      lede="שיעור המע״מ בישראל הוא 18% מ-1 בינואר 2025: מוסיפים מע״מ בכפל ב-1.18, ומחלצים אותו בחלוקה ב-1.18. כאן מקלידים סכום ומקבלים את הסכום לפני מע״מ, את המע״מ ואת הסכום הכולל, גם לכמה סכומים יחד."
       tool={<VatCalculator />}
       faq={faq}
       cta={{
@@ -155,6 +155,22 @@ export default function VatCalculatorPage() {
         עוברים אליה בלי הקלדה ידנית. כתבנו על זה במאמר{' '}
         <Link href="/blog/crm-israeli-invoicing-integration">חיבור CRM לחשבונית ירוקה, חשבשבת ו-iCount</Link>.
       </p>
+
+      <h2>מקורות</h2>
+      <ul>
+        <li>
+          <a href="https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3" rel="noopener" target="_blank">
+            חוק מס ערך מוסף, התשל״ו-1975
+          </a>
+          : סעיפים 31, 38 ו-47
+        </li>
+        <li>
+          <a href="https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%90%D7%96%D7%95%D7%A8_%D7%A1%D7%97%D7%A8_%D7%97%D7%95%D7%A4%D7%A9%D7%99_%D7%91%D7%90%D7%99%D7%9C%D7%AA_(%D7%A4%D7%98%D7%95%D7%A8%D7%99%D7%9D_%D7%95%D7%94%D7%A0%D7%97%D7%95%D7%AA_%D7%9E%D7%9E%D7%A1%D7%99%D7%9D)" rel="noopener" target="_blank">
+            חוק אזור סחר חופשי באילת (פטורים והנחות ממסים), התשמ״ה-1985
+          </a>
+          : סעיף 5
+        </li>
+      </ul>
     </ToolLayout>
   )
 }
