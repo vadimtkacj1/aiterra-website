@@ -104,6 +104,14 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
                 wait_for_update: 500,
               });
             `}</Script>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="lazyOnload"
+            />
+            <Script id="ga-init" strategy="lazyOnload">{`
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}', { anonymize_ip: true });
+            `}</Script>
           </>
         )}
         <OrganizationSchema />
@@ -115,7 +123,7 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
         <CookieConsent locale="en" />
         <WhatsAppButton locale="en" />
         <A11yWidgetTweaks locale="en" />
-        <DeferredThirdParty gaId={GA_ID} />
+        <DeferredThirdParty />
       </body>
     </html>
   )
