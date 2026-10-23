@@ -47,7 +47,7 @@ export default function AboutRoles({ roles, href }: AboutRolesProps) {
 
             <div className={styles.cardArt}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={role.art} alt="" className={styles.cardArtImage} />
+              <img src={role.art} alt="" className={styles.cardArtImage} loading="lazy" decoding="async" />
             </div>
 
             <h3 className={styles.cardTitle}>

@@ -232,7 +232,7 @@ export default function ProjectsCarousel({
               .join(' ')}>
               <div className={styles.shotFrame}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={item.shot} alt="" className={styles.shotImage} />
+                <img src={item.shot} alt="" className={styles.shotImage} loading="lazy" decoding="async" />
 
                 {zoomable ? (
                   <button

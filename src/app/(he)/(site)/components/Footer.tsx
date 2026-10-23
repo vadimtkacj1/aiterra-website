@@ -78,6 +78,8 @@ export default function Footer({
                 width={283}
                 height={64}
                 className={styles.logoMark}
+                loading="lazy"
+                decoding="async"
               />
             </Link>
           </div>

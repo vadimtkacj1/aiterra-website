@@ -13,6 +13,7 @@ function Row({ logos, clone = false }: { logos: PartnerLogo[]; clone?: boolean }
             alt={clone ? '' : logo.name}
             className={styles.logo}
             style={{ height: `calc(var(--partner-logo-h) * ${logo.scale ?? 1})` }}
+            loading="lazy"
             decoding="async"
           />
           {!logo.hideName && <span className={styles.name}>{logo.name}</span>}

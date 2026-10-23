@@ -87,7 +87,7 @@ export default function AllIn() {
 
       <div ref={cardRef} className={styles.card}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/all-in-bg.webp" alt="" className={styles.bg} />
+        <img src="/images/all-in-bg.webp" alt="" className={styles.bg} loading="lazy" decoding="async" />
 
         <div className={styles.rings} aria-hidden="true">
           {RINGS.map((ring) => (
@@ -103,6 +103,8 @@ export default function AllIn() {
           alt=""
           className={styles.wordmark}
           aria-hidden="true"
+          loading="lazy"
+          decoding="async"
         />
 
         <ul className={styles.nodes}>

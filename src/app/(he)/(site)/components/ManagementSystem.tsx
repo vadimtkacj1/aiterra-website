@@ -91,7 +91,7 @@ export default function ManagementSystem({
 
           <figure className={styles.art} data-reveal-item>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={system.art} alt="" className={styles.artImage} />
+            <img src={system.art} alt="" className={styles.artImage} loading="lazy" decoding="async" />
           </figure>
         </div>
 

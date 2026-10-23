@@ -31,11 +31,11 @@ export default function Stats({
               className={styles.mediaImage}
               src="/videos/v2-stats.mp4"
               poster="/videos/v2-stats-poster.webp"
-              autoPlay
+              data-autoplay=""
               muted
               loop
               playsInline
-              preload="metadata"
+              preload="none"
               aria-hidden="true"
             />
           </div>

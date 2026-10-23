@@ -136,7 +136,7 @@ export default function HowItWorks({
 
               <figure className={styles.stepArt}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={step.art} alt="" className={styles.stepArtImage} />
+                <img src={step.art} alt="" className={styles.stepArtImage} loading="lazy" decoding="async" />
               </figure>
             </li>
           ))}

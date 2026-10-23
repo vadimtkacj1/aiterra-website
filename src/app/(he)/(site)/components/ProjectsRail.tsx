@@ -32,7 +32,7 @@ export default function ProjectsRail() {
           >
             <span className={styles.surface} style={{ background: project.surface }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={project.shot} alt={project.label} className={styles.shot} />
+              <img src={project.shot} alt={project.label} className={styles.shot} loading="lazy" decoding="async" />
             </span>
           </Link>
         ))}

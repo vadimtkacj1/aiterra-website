@@ -54,7 +54,7 @@ export default function ReviewCard({
         >
           {review.avatar ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={review.avatar} alt="" className={styles.avatarImage} />
+            <img src={review.avatar} alt="" className={styles.avatarImage} loading="lazy" decoding="async" />
           ) : (
             review.author.slice(0, 1)
           )}
