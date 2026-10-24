@@ -101,6 +101,16 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/bar-mitzvah-blessing-generator': ['בר מצווה', 'ברכ'],
   '/tools/birthday-blessing-generator': ['יום הולדת', 'ברכ'],
   '/tools/electricity-cost-calculator': ['חשמל', 'מזגן'],
+  '/tools/pregnancy-due-date-calculator': ['הריון', 'לידה', 'שבוע הריון', 'תאריך לידה', 'מעקב הריון', 'וסת'],
+  '/tools/bmi-calculator': ['BMI', 'משקל', 'דיאטה', 'השמנה', 'משקל תקין', 'ירידה במשקל'],
+  '/tools/severance-pay-calculator': ['פיצויי פיטורים', 'פיטורים', 'סיום העסקה', 'סעיף 14', 'עובדים', 'משאבי אנוש'],
+  '/tools/overtime-pay-calculator': ['שעות נוספות', 'שכר שעתי', 'עבודה בשבת', 'נוכחות', 'עובדים', 'שכר'],
+  '/tools/international-dialing-codes': ['קידומות בינלאומיות', 'קידומת לחו"ל', 'קידומות של מדינות', 'קידומת', 'איך מחייגים לחו"ל', '972'],
+  '/tools/police-ranks-chart': ['דרגות במשטרה', 'משטרת ישראל', 'דרגות משטרה', 'שב"ס', 'כבאות והצלה', 'דרגות'],
+  '/tools/bill-split-tip-calculator': ['מסעדה', 'טיפ', 'חלוקת חשבון', 'סועדים', 'חשבון', 'שירות'],
+  '/tools/unit-price-calculator': ['מחיר ליחידה', 'מבצע', 'השוואת מחירים', 'סופרמרקט', 'הנחה', 'קניות'],
+  '/tools/purchase-tax-calculator': ['מס רכישה', 'דירה יחידה', 'דירה שנייה', 'רכישת דירה', 'נדל"ן', 'משכנתא'],
+  '/tools/tax-credit-points-calculator': ['נקודות זיכוי', 'מס הכנסה', 'תלוש שכר', 'החזר מס', 'עולה חדש', 'חייל משוחרר'],
 }
 
 const MAX_TOOLS = 3

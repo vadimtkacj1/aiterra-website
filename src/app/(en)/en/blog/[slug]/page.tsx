@@ -12,7 +12,7 @@ import ContactForm from '../../../../(he)/(site)/components/ContactForm'
 import Footer from '../../../../(he)/(site)/components/Footer'
 import type { BlogCard } from '../../../../(he)/(site)/components/BlogIndex'
 import { ChevronPrevIcon } from '../../../../(he)/(site)/components/icons'
-import { getAllPostsEn, getPostEnBySlug } from '@/lib/content-en-blog'
+import { getAllPostsEn, getPostEnBySlug, isTranslated } from '@/lib/content-en-blog'
 import type { AdminPost } from '@/lib/blog-server'
 import { getAuthorById } from '@/lib/authors-server'
 import { applyAuthorEn } from '@/lib/content-en-authors'
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description: post.seoDescription || post.excerpt,
     path: `/en/blog/${slug}`,
     locale: 'en',
-    altPath: `/blog/${slug}`,
+    ...(isTranslated(slug) ? { altPath: `/blog/${slug}` } : {}),
     image: post.images?.[0] || undefined,
     imageAlt: post.title,
     type: 'article',
