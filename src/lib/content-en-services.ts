@@ -3,16 +3,16 @@ import type { ServicePage } from '@/app/(he)/(site)/content'
 export const servicePagesEn: Record<string, ServicePage> = {
   'web-development': {
     id: 'web-development',
-    crumb: 'Web development',
-    eyebrow: 'Custom web development',
-    heading: ['Custom web development', 'for teams past templates'],
-    subhead: 'Our custom web development practice',
-    lede: 'Discovery, design and full-code engineering - a fast, accessible site structured for organic search from the first commit, delivered with full ownership of the repository.',
+    crumb: 'Web design & development',
+    eyebrow: 'Web design company in Israel',
+    heading: ['Web design and development company in Israel', 'custom-built, in Hebrew and English'],
+    subhead: 'Our web design and development practice',
+    lede: 'Aiterra is a web design and development company based in Bat Yam, Israel. We plan, design and build custom websites in Hebrew (RTL) and English - fast, accessible to IS 5568 and structured for Google and AI search from the first commit - and you own the code.',
     image: '/images/service-dev.webp',
     action: { label: 'Book a scoping call', href: '/en/contact' },
-    metaTitle: 'Custom Web Development Agency - Full-Stack Builds',
+    metaTitle: 'Web Design & Development Company in Israel | Hebrew + English',
     metaDescription:
-      'Custom web development in Next.js, React and TypeScript: discovery, UX/UI, integrations and Core Web Vitals handled in code. You own the repository.',
+      'Web design and development company in Israel: custom Hebrew/English websites in Next.js, IS 5568 accessibility, SEO and GEO built in, and full code ownership.',
     advantages: {
       eyebrow: 'OUR ADVANTAGES',
       heading: ['What sets our engineering apart'],
