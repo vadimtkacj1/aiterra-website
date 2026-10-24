@@ -16,9 +16,9 @@ import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
 import { faqPage, webPage } from '@/lib/schema'
 
-const HOME_TITLE = 'AITERRA | Custom Web Development and SEO Agency in Israel'
+const HOME_TITLE = 'AITERRA | Software & Digital Agency in Israel: Web, Apps, AI'
 const HOME_DESCRIPTION =
-  'Aiterra builds custom websites and web platforms in code, then ranks them. Full-stack engineering, SEO and website promotion from one in-house team.'
+  'Software and digital agency in Israel: websites and online stores, mobile and desktop apps in any stack, automation, AI agents and ML, DevOps, SEO/GEO and paid ads, from one in-house team.'
 
 export const metadata: Metadata = pageMetadata({
   title: HOME_TITLE,

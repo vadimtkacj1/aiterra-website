@@ -2492,6 +2492,444 @@ export const servicePagesEn: Record<string, ServicePage> = {
       },
     ],
   },
+  'mobile-app-development': {
+    id: 'mobile-app-development',
+    crumb: 'Mobile app development',
+    eyebrow: 'Mobile app development',
+    heading: ['Mobile app development for iOS and Android', 'from MVP to a product serving thousands of users'],
+    subhead: 'Our mobile app development service',
+    lede: 'iOS and Android apps, native in Swift and Kotlin or cross-platform in React Native and Flutter - we pick whichever stack the project needs. Including the backend and API, push notifications, payments, a Hebrew right-to-left interface, App Store and Google Play publishing and maintenance after launch.',
+    image: '/images/services-view.webp',
+    action: { label: 'Request an app scoping', href: '/en/contact' },
+    metaTitle: 'Mobile App Development Company in Israel - iOS, Android and MVP',
+    metaDescription:
+      'Mobile app development for Israeli businesses: iOS and Android, native or React Native and Flutter, backend and API, push notifications, payments, Hebrew RTL interface, store publishing and maintenance. You own the code.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our app development'],
+      lede: 'You get an app that passes store review, works properly in Hebrew, and whose code you own - built on a technology chosen for the need, not for what is convenient for us.',
+      outro: 'Want to know which approach fits your app?',
+      action: { label: 'Request an app scoping', href: '/en/contact' },
+      roles: [
+        {
+          id: 'any-stack',
+          title: 'The stack follows the project',
+          art: '/images/service-page1.webp',
+          text: 'Swift and Kotlin when the app needs deep access to the camera, sensors or performance, and React Native or Flutter when you want one codebase for both platforms. We work in whatever language and environment the project requires, and explain the trade-offs before you commit.',
+        },
+        {
+          id: 'mvp-first',
+          title: 'From MVP to a version that scales',
+          art: '/images/service-page2.webp',
+          text: 'We start with a first version built around one core action, put it in front of real users and learn from them what to add. The architecture is set up so that moving from an MVP to a product with thousands of users does not require a rewrite.',
+        },
+        {
+          id: 'hebrew-ui',
+          title: 'Hebrew, RTL and accessibility as a base',
+          art: '/images/service-page3.webp',
+          text: 'An interface built right-to-left from day one, with mirrored icons, suitable keyboards and fields, and mixed Hebrew and English text handled properly. Screen reader support, large font sizes and sufficient contrast are tested on real devices.',
+        },
+        {
+          id: 'ownership',
+          title: 'Your code, and the stores in your name',
+          art: '/images/service-page4.webp',
+          text: 'The Apple and Google developer accounts are opened in the business\'s name, and the code is delivered in a repository you control. You do not depend on us to update, switch vendors or carry on yourselves, and you can still leave maintenance with us if you prefer.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What we build',
+      heading: ['What is included in an app we build'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'commerce',
+          icon: 'sales',
+          title: 'Payments and in-app purchases',
+          text: 'Card payment through acquirers and payment processors common in Israel, digital wallets, and in-app purchases that follow Apple and Google rules, with an order confirmation and an automatic invoice.',
+        },
+        {
+          id: 'orders',
+          icon: 'orders',
+          title: 'Backend, API and admin panel',
+          text: 'A server side that manages users, orders and content, a documented API and an admin panel for your team, so products, messages and prices can change without releasing a new version to the store.',
+        },
+        {
+          id: 'club',
+          icon: 'club',
+          title: 'Accounts, loyalty and push notifications',
+          text: 'Sign-up and login by phone, email or an Apple or Google account, a profile and loyalty club, and push notifications driven by actions and preferences - with the permission request shown at the right moment rather than on first launch.',
+        },
+        {
+          id: 'catalog',
+          icon: 'catalog',
+          title: 'Offline mode',
+          text: 'A catalogue, forms and lists stored on the device that sync when the connection returns, for apps used in the field, in a warehouse or where reception is weak, including handling of conflicts between updates.',
+        },
+        {
+          id: 'analytics',
+          icon: 'analytics',
+          title: 'Analytics and crash reporting',
+          text: 'Measuring installs, screens and key actions, real-time crash reporting and A/B tests, so decisions about the next version rest on what users actually do rather than on a guess.',
+        },
+      ],
+      action: { label: 'Request an app scoping', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How a project runs. Simply.'],
+      lede: 'Every stage ends with something you can see and hold, so you decide whether to continue based on what was built rather than on promises.',
+      steps: [
+        {
+          id: 'scope',
+          title: 'Scoping and prototype',
+          text: 'We define the core action, the users and the supported devices, choose the technology and deliver a tappable prototype with Hebrew screens. At the end it is clear what goes into the first version and what waits.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'build',
+          title: 'Development and test builds',
+          text: 'We work in short cycles and deliver a build to your own phone through TestFlight and internal testing on Google Play. Each cycle is tested on real iPhone and Android devices and on different screen sizes.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'launch',
+          title: 'Store publishing and maintenance',
+          text: 'We prepare the store listing, privacy policy and data declarations, submit to the App Store and Google Play and handle reviewer comments. After launch we update for new operating system versions and fix issues.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Have an app idea and want to know what it takes to ship it?',
+      action: { label: 'Request an app scoping', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about mobile app development'],
+    faqEntries: [
+      {
+        question: 'Native or cross-platform: which should we choose?',
+        answer:
+          'For most business apps - orders, loyalty, forms, tracking - React Native or Flutter gives one codebase for iPhone and Android, which makes development and maintenance faster. Native development in Swift and Kotlin fits when the app relies on the camera, Bluetooth, sensors, heavy graphics or deep operating system behaviour. No single technology is right every time, and we are not tied to one: we map the requirements, set out the trade-offs in writing and choose together, before a line of code is written. If the first version proves the idea, the choice can still be revisited later. Many projects start cross-platform and move only specific screens to native code where it is truly needed.',
+      },
+      {
+        question: 'What do we need to publish on the App Store and Google Play?',
+        answer:
+          'A developer account with Apple and with Google in the business\'s name, a store listing with a description and screenshots, a privacy policy and a data collection declaration. If users can register, Apple also requires a way to delete the account from inside the app, and digital purchases must go through the store\'s payment system. Apple review usually takes a day to a few days, and a first rejection is not unusual. We prepare everything in advance and handle the reviewers\' comments, so a first rejection does not stall the launch. The most common rejections, such as a missing test account for reviewers, are quick to fix and resubmit.',
+      },
+      {
+        question: 'Will the app work properly in Hebrew?',
+        answer:
+          'Yes, and Hebrew is built in from the first stage rather than added at the end. The interface mirrors right-to-left, including navigation, arrows and animations, input fields and keyboards behave correctly, and lines that mix Hebrew with numbers, email addresses or English names do not scramble. We also test dates, shekel currency, large font sizes and screen readers such as TalkBack and VoiceOver. If you need another language, such as English or Russian, the structure lets it be added without changing the code, so the same app can serve olim and tourists as well. We also check different screen sizes and Hebrew keyboard layouts so the experience stays consistent on every supported device.',
+      },
+      {
+        question: 'How are payments and push notifications connected?',
+        answer:
+          'For card payments we connect an acquirer or payment processor you already work with, and the charge goes through the server rather than being stored on the device, so card details are never kept inside the app. Selling digital content inside the app is subject to store rules. Push notifications are sent through Apple and Google services and triggered by events or campaigns. The important part is asking for permission at a moment when the reason is clear, and giving users control over the types of messages, because a user who turns notifications off rarely turns them back on. Together we decide which data is stored on the server, for how long and who can access it, and this is written into the privacy policy.',
+      },
+      {
+        question: 'What happens after launch?',
+        answer:
+          'An app is not a project that ends: every year new versions of iOS and Android ship, the stores change their requirements and third-party services update. After launch we watch crashes and ratings, fix issues, update for new system versions and release improvements based on what the analytics show. Maintenance can be a monthly plan with written response times, or it can be handed to an in-house team. Without it, an app usually stops meeting store requirements within a year or two, and the store may remove it or stop accepting updates. It is worth agreeing the expected scope of maintenance in advance, so a new system release does not catch you by surprise.',
+      },
+      {
+        question: 'Who owns the code, and what do we get at the end?',
+        answer:
+          'The code, the design and the developer accounts belong to you. At the end of the project you receive the app code and the backend in a repository you control, a document explaining the structure and how to build and publish a release, the design files, and access to the Apple, Google, analytics and server accounts. That lets you switch vendors, hire an in-house developer or stay with us, without dependence. Every third-party library used in the project is recorded together with its licence, so there are no surprises in due diligence or if the business is sold. If you wish, we also give your team a short handover on building, publishing and managing releases so the next steps are simple.',
+      },
+    ],
+  },
+  'desktop-app-development': {
+    id: 'desktop-app-development',
+    crumb: 'Desktop application development',
+    eyebrow: 'Desktop application development',
+    heading: ['Desktop application development', 'for Windows, macOS and Linux'],
+    subhead: 'Our desktop software service',
+    lede: 'Internal tools for your team, software that keeps working without internet, connections to printers, scanners, scales and POS terminals, installers with automatic updates, and migration of old VB6, Access or legacy .NET software to a modern stack - in whatever language and framework the project needs, with the code owned by you.',
+    image: '/images/services-view.webp',
+    action: { label: 'Book a scoping call', href: '/en/contact' },
+    metaTitle: 'Desktop Application Development in Israel - Windows, macOS and Linux',
+    metaDescription:
+      'Desktop software development for Israeli businesses: internal tools, offline-first apps, printer, scanner, scale and POS integrations, installers and auto-update, code signing, and migration of legacy VB6 and Access software.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our desktop development'],
+      lede: 'Desktop software is the right choice when the work happens next to hardware, without a reliable network, or on a machine the team opens every morning. We pick the technology for the need, not for what is convenient for us to write.',
+      outro: 'Have an old program or an idea for an internal tool?',
+      action: { label: 'Book a scoping call', href: '/en/contact' },
+      roles: [
+        {
+          id: 'stack',
+          title: 'The stack follows the project',
+          art: '/images/service-page1.webp',
+          text: 'Electron or Tauri when the team knows the web, .NET and WPF for a corporate Windows environment, C++ and Qt when performance or hardware access matters, Python for working tools and data. The choice is justified in writing before we build.',
+        },
+        {
+          id: 'hardware',
+          title: 'Connected to the equipment you already have',
+          art: '/images/service-page2.webp',
+          text: 'Label and receipt printers, barcode and document scanners, scales, POS terminals and sensors are tested on the real models in use. When needed we wait for the device and test against it directly, not against a simulation.',
+        },
+        {
+          id: 'offline',
+          title: 'Works when the internet goes down',
+          art: '/images/service-page3.webp',
+          text: 'The software stores data locally, keeps working without a connection and syncs to the server when the network returns. Rules for conflicts between workstations are defined in the specification, so no order or record disappears silently.',
+        },
+        {
+          id: 'ownership',
+          title: 'The code and the licence are yours',
+          art: '/images/service-page4.webp',
+          text: 'You receive the source code, the signing certificate in your name, and installation and build documentation. You can keep us for maintenance, move to an in-house team or another vendor, and still release a new version without depending on us.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What we build',
+      heading: ['What we can build for the desktop'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'internal-tools',
+          icon: 'orders',
+          title: 'Internal tools for your team',
+          text: 'Order entry, inventory management, document generation or database work, in a fast interface built around what the employee does all day, with keyboard shortcuts and support for several screens.',
+        },
+        {
+          id: 'devices',
+          icon: 'catalog',
+          title: 'Printers, scanners, scales and POS',
+          text: 'Printing labels and receipts, reading barcodes, taking weight from a scale and connecting to POS terminals over USB, serial or network, with error handling for when a device is disconnected.',
+        },
+        {
+          id: 'offline-sync',
+          icon: 'sales',
+          title: 'Offline work and sync',
+          text: 'A local database, a queue of actions waiting for the network, and sync with the server or your existing management system - for businesses with branches, warehouses, trucks or sites without stable reception.',
+        },
+        {
+          id: 'migration',
+          icon: 'analytics',
+          title: 'Migrating old software to a modern stack',
+          text: 'VB6, Access and legacy .NET programs move to a modern version or to the web, with data migration and a parallel run of both systems, so daily work does not stop on cut-over day.',
+        },
+        {
+          id: 'distribution',
+          icon: 'club',
+          title: 'Installers, updates and licensing',
+          text: 'An installer package, automatic updates that do not interrupt the user, code signing that prevents Windows and macOS warnings, and licensing per seat or per customer when the software is sold on.',
+        },
+      ],
+      action: { label: 'Book a scoping call', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How a project runs. Simply.'],
+      lede: 'Every stage ends with something you can run and test on a real computer, so you see progress before we continue.',
+      steps: [
+        {
+          id: 'scoping',
+          title: 'Scoping and choice of stack',
+          text: 'We document who uses the software, on which computers and equipment, what must work without a network, and which data already exists. The stage ends with a written specification, a justified technology choice and a milestone plan.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'build',
+          title: 'Development and test builds',
+          text: 'At every milestone you get an installable build and test it on a real workstation with the real equipment. Fixes go into the next build, and the software is tested on the operating system versions you actually use.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'rollout',
+          title: 'Rollout, updates and maintenance',
+          text: 'We install on the workstations, migrate data from the old system, set up automatic updates and code signing and train the users. After launch you can continue with monthly maintenance or take a handover and run it yourselves.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want desktop software that works with your equipment and your process?',
+      action: { label: 'Book a scoping call', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about desktop application development'],
+    faqEntries: [
+      {
+        question: 'When is desktop software better than a website or web app?',
+        answer:
+          'Desktop fits when the software has to talk to hardware such as a printer, scanner or scale, when it must work without a reliable internet connection, when it processes large files locally, or when a team uses the same tool all day and wants speed and keyboard shortcuts. If every user is online and there is no special hardware, a web app is usually simpler and cheaper to maintain, because nothing has to be installed on each workstation. In the scoping call we tell you honestly which of the two suits you, and sometimes the right answer is a combination of both. That way the decision rests on what you need, not on what is easiest for us to build.',
+      },
+      {
+        question: 'Which technology will you use to build it?',
+        answer:
+          'It depends on the project. Electron or Tauri suit a modern interface and one codebase for several operating systems. .NET and WPF suit an organisation that runs on Windows and uses Active Directory and Microsoft tooling. C++ and Qt are chosen when performance is critical or the hardware connection is deep, and Python suits working tools, data processing and automation. If you have a team that will maintain the code after the project, we also take into account what it already knows. The recommendation is given in writing, with the reasoning behind it. That way you avoid a tool that looks modern today and that nobody can maintain in two years.',
+      },
+      {
+        question: 'Can you migrate old VB6, Access or legacy .NET software?',
+        answer:
+          'Yes, and it is one of the most common projects for businesses whose software has worked for years and nobody dares touch it. We start by reviewing what the program really does, including rules that were never documented, and then choose between a full rewrite, a gradual migration module by module, or a move to the web. The data moves to a modern database, and the new system runs in parallel with the old one for a defined period, so results can be compared and you can go back if needed. That keeps the interruption to daily work as small as possible. Throughout, the old system stays in place until the new one has proven itself in real use.',
+      },
+      {
+        question: 'How do you connect printers, scanners, scales and POS terminals?',
+        answer:
+          'It depends on the device. Some appear as a normal operating system printer, some speak a serial, USB or network protocol, and some come with a manufacturer library. During scoping we ask for the exact models and the manufacturer documentation, and we test on a real device rather than a simulation. The software handles a disconnected device, an empty paper roll or a bad read, and shows the user a clear message instead of freezing. If your model is unusual, we check in advance whether there is a reliable way to connect it. That way you know at the start what is possible, before any development money is spent.',
+      },
+      {
+        question: 'How is the software distributed and updated?',
+        answer:
+          'The software is packaged as an installer for each operating system, signed with a code-signing certificate in your name so Windows and macOS do not show a frightening warning on launch. An automatic update mechanism checks for a new version, downloads it in the background and installs it at a moment that suits the user, with a way to roll back if something breaks. In an organisation with many workstations, versions can be released in stages, first to a test group and only then to everyone. If the software is sold to customers, licensing can be added as well. The update and signing setup is documented as well, so you can run it yourselves if you prefer.',
+      },
+      {
+        question: 'Who owns the code, and what happens after launch?',
+        answer:
+          'The code, the licence and the signing certificate belong to you. At the end of the project you receive the full repository, build and installation instructions, and documentation of the hardware connections, so any qualified developer can carry on. After launch there are three options: monthly maintenance with us, covering fixes and operating system updates; development hours as needed for new features; or a full handover to your own team with training. There is no commitment to stay with us, and you can move between the options over time. This documentation is handed over at each milestone, not only at the end.',
+      },
+    ],
+  },
+  'devops-cloud': {
+    id: 'devops-cloud',
+    crumb: 'DevOps & cloud',
+    eyebrow: 'DevOps & cloud',
+    heading: ['DevOps & cloud for startups and SMBs', 'stable infrastructure, uneventful deployments'],
+    subhead: 'Our DevOps and cloud service',
+    lede: 'CI/CD pipelines, Docker and Kubernetes, infrastructure as code with Terraform, monitoring and alerting, backups and disaster recovery, security hardening, cloud bill optimisation and migration from shared hosting or a VPS to AWS, GCP, Azure or Hetzner - for any language and any stack.',
+    image: '/images/services-view.webp',
+    action: { label: 'Request an infrastructure review', href: '/en/contact' },
+    metaTitle: 'DevOps & Cloud Services in Israel - CI/CD, Kubernetes, Backups and Monitoring',
+    metaDescription:
+      'DevOps and cloud services for Israeli startups and SMBs: CI/CD pipelines, Docker and Kubernetes, Terraform, monitoring and alerting, backups and disaster recovery, security hardening, cost optimisation and cloud migration. We start with an infrastructure review.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our DevOps work'],
+      lede: 'Good infrastructure is the kind you do not notice: a deployment is one button, a failure reaches you as an alert rather than a phone call from a customer, and everything we set up is documented and belongs to you.',
+      outro: 'Want to know what happens to your service the day the server goes down?',
+      action: { label: 'Request an infrastructure review', href: '/en/contact' },
+      roles: [
+        {
+          id: 'review',
+          title: 'A review before any change',
+          art: '/images/service-page1.webp',
+          text: 'Before touching a server we map what runs where, who has access, what is backed up and when a restore was last tested. You get a list ordered by risk, and together we decide what is urgent and what can wait.',
+        },
+        {
+          id: 'as-code',
+          title: 'Everything written down, nothing by hand',
+          art: '/images/service-page2.webp',
+          text: 'Servers, networks and permissions are defined in code and kept in your repository, so a whole environment can be rebuilt from scratch, a change can be reviewed before it is applied, and you can see who changed what and when.',
+        },
+        {
+          id: 'any-stack',
+          title: 'Any language, any stack',
+          art: '/images/service-page3.webp',
+          text: 'Node, Python, PHP, Java, .NET or Go, one database or several - we fit the infrastructure to the application you have rather than forcing a rewrite to fit a template.',
+        },
+        {
+          id: 'handover',
+          title: 'Transparency and full ownership',
+          art: '/images/service-page4.webp',
+          text: 'Cloud accounts are registered in your name, the credentials stay with you, and the documentation includes run and restore instructions. You can continue with us, hand it to your in-house team or work in a mixed model, with no lock-in.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What we build',
+      heading: ['What a DevOps and cloud service covers'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'pipelines',
+          icon: 'orders',
+          title: 'CI/CD and containers',
+          text: 'Automated tests, builds and deployments on every push using Docker, GitHub Actions or GitLab CI, with a separate staging environment and a one-click rollback when something goes wrong.',
+        },
+        {
+          id: 'cloud',
+          icon: 'catalog',
+          title: 'Cloud, Kubernetes and infrastructure as code',
+          text: 'Setup and migration on AWS, GCP, Azure or Hetzner, with Terraform and Kubernetes where they are really needed - and a single well-kept server where that is enough.',
+        },
+        {
+          id: 'monitoring',
+          icon: 'analytics',
+          title: 'Monitoring, logs and alerting',
+          text: 'Server and application metrics, uptime checks, centralised logs and alerts to WhatsApp, Slack or email by severity, so you find a failure before your customers do and know where to look.',
+        },
+        {
+          id: 'backup',
+          icon: 'club',
+          title: 'Backups, recovery and security hardening',
+          text: 'Automated off-server backups with restores that are actually tested, a disaster recovery plan with defined time targets, and tightened access, firewalls, secrets handling and security updates.',
+        },
+        {
+          id: 'cost',
+          icon: 'sales',
+          title: 'Cloud bill optimisation',
+          text: 'Finding forgotten resources, oversized servers and duplicated services, matching the type of infrastructure to the real load and showing costs per environment, so the monthly bill is a number you understand rather than a surprise.',
+        },
+      ],
+      action: { label: 'Request an infrastructure review', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How a project runs. Simply.'],
+      lede: 'Every stage ends with a document and a decision from you, and migrations are done so that the site or application keeps running throughout.',
+      steps: [
+        {
+          id: 'audit',
+          title: 'Infrastructure review and plan',
+          text: 'We get read-only access, map servers, databases, domains, backups and permissions, and deliver a report: what is sound, what is risky and what costs too much, with a work plan in priority order.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'build',
+          title: 'Build and migrate',
+          text: 'We build the new environment in code, run it alongside the old one, test performance and restores, and only then move traffic in an agreed time window, with the way back left open.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'operate',
+          title: 'Monitoring and ongoing support',
+          text: 'After the move you can leave monitoring, updates and incident response with us under a service level agreed in writing, or take a handover and run operations with your own team.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want infrastructure you can rely on even when nobody is watching?',
+      action: { label: 'Request an infrastructure review', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about DevOps and cloud'],
+    faqEntries: [
+      {
+        question: 'Does a small business or an early-stage startup really need DevOps?',
+        answer:
+          'Usually not a whole team, but yes to the basics: automated deployment, a backup that is actually tested and monitoring that alerts someone. Without them every release is a risk and every outage is discovered by customers. So we start with a short review and propose the sensible minimum for the stage you are at. In most cases that is one well-kept server or a managed cloud service, not a cluster. As load and team size grow, the same foundation can be extended without starting over, and you pay only for what you need today. We also avoid long commitments up front: you start with a small step that shows value, then decide together whether to continue, and nothing is installed that your team could not maintain.',
+      },
+      {
+        question: 'Do we need Kubernetes, or is Docker on one server enough?',
+        answer:
+          'For a single service or a few small ones, Docker Compose on one server or a managed container service is usually enough, and it is simpler to operate and cheaper. Kubernetes starts to justify itself when there are many services, a need to scale automatically with load, several teams deploying in parallel or a high-availability requirement. We recommend the simplest tool that meets the need, say plainly when a cluster is not worth it, and build things so that moving to one later is possible without a rewrite. Our review states in writing which parts of the infrastructure truly justify the complexity and which are better left simple, so you do not pay for tooling that your team neither needs nor will be able to maintain.',
+      },
+      {
+        question: 'How do you move a site or system from shared hosting or a VPS to the cloud without downtime?',
+        answer:
+          'We build the new environment in parallel, copy the data and files, and run it on a test address until everything is verified. Before the move we lower the DNS record lifetimes, and in a quiet window we sync the last changes and redirect traffic. The old server stays up for a few days as a fallback, so rolling back takes minutes. Large databases are moved with continuous replication, and the domain, email and certificates are checked in advance so nothing breaks along the way. Before the move we also write a rollback plan so every step is reversible, and your team knows exactly what to do if something does not behave as expected on the day.',
+      },
+      {
+        question: 'How do you reduce a cloud bill?',
+        answer:
+          'We start by measuring: the bill is broken down by service and environment to find what is paid for but not used. Typically that turns up servers left over from an old project, disks with no server attached, machines larger than their load, test environments running through nights and weekends, and expensive data transfer between regions. After the cleanup we look at long-term commitments, moving to a cheaper provider such as Hetzner where it fits, and budget alerts. That keeps the bill predictable even as usage grows. We report every change and its effect before and after. At the end you get a short report explaining each change, its effect on performance and anything still open, so the savings can be kept over time rather than creeping back.',
+      },
+      {
+        question: 'What happens if something goes down in the middle of the night?',
+        answer:
+          'It depends on the service level you choose. In the basic model monitoring sends an alert to your team and we handle the incident during working hours, within response times agreed in writing. In an extended model you can define out-of-hours on-call, with a high-priority alert and a faster response. In both cases there is a written runbook and a tested backup, so even a non-specialist knows what to do. Response times and on-call terms are set in advance and in writing, according to what your business actually needs. If your business depends on the service being up all the time, we can also add redundancy, so that a failure of one server does not take the whole service down with it.',
+      },
+      {
+        question: 'What do we get at the end, and who owns the accounts and the code?',
+        answer:
+          'Everything is yours. Cloud accounts and domains are registered in your name, and we work through permissions that you can revoke at any moment. You receive the infrastructure code in your own repository, the pipeline and monitoring configuration, and an operations document explaining how to deploy, how to restore a backup and how to respond to an alert. There is no lock-in: if you decide to work with someone else or move operations to an in-house team, you can do it with what you already hold, and we hand the knowledge over in a handover session. If you already have a development team, we fit into its workflow rather than replacing it, and we leave everything documented and readable for whoever takes over next.',
+      },
+    ],
+  },
   'ai-search': {
     id: 'ai-search',
     crumb: 'AI search',
