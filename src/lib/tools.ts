@@ -1007,6 +1007,38 @@ export const tools: ToolEntry[] = [
     icon: 'calculator',
     reviewed: '2026-10-24',
   },
+  {
+    path: '/tools/vehicle-lookup',
+    title: 'בדיקת רכב לפי מספר רישוי',
+    description: 'מקלידים מספר רישוי ורואים יצרן, דגם, שנה, צבע, סוג דלק, בעלות, טסט אחרון ותוקף הטסט, ממאגרי משרד התחבורה, בלי שם בעלים.',
+    category: 'home',
+    icon: 'search',
+    reviewed: '2026-10-24',
+  },
+  {
+    path: '/tools/bank-branch-lookup',
+    title: 'חיפוש סניף בנק',
+    description: 'מחפשים סניף בנק לפי בנק ומספר סניף או לפי עיר ורחוב, ורואים כתובת, טלפון, קוד בנק, נגישות ויום סגור, ממאגר בנק ישראל.',
+    category: 'money',
+    icon: 'landmark',
+    reviewed: '2026-10-24',
+  },
+  {
+    path: '/tools/clothing-size-chart',
+    title: 'טבלת מידות בגדים',
+    description: 'המרת מידות בגדים לנשים, לגברים ולילדים בין אירופה, איטליה, צרפת, בריטניה, ארה״ב ו-XS עד XXL, לפי מידות גוף בס״מ, כולל חזיות וג׳ינס.',
+    category: 'home',
+    icon: 'calculator',
+    reviewed: '2026-10-24',
+  },
+  {
+    path: '/tools/hebrew-words-in-english',
+    title: 'שמות ערים בישראל באנגלית',
+    description: '131 ערים ויישובים עם האיות הרשמי ברשם רשות האוכלוסין וההגירה והאיות המקובל באנגלית, וחיפוש בעברית ובאנגלית.',
+    category: 'home',
+    icon: 'search',
+    reviewed: '2026-10-24',
+  },
 ]
 
 export const otherTools = (path: string) => {

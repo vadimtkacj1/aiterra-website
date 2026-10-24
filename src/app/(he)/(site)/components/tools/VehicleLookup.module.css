@@ -1,0 +1,14 @@
+.plate {
+  display: inline-block;
+  margin: 8px 0 14px;
+  padding: 4px 16px;
+  border: 2px solid #1c2233;
+  border-radius: 8px;
+  background: #ffd83d;
+  color: #1c2233;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+  unicode-bidi: isolate;
+}
