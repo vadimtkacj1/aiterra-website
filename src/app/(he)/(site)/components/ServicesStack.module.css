@@ -88,7 +88,7 @@
   --runway: 420px;
   --peek: 26px;
   --shrink: 0.016;
-  --fan: calc((var(--count) - 1) * var(--peek));
+  --fan: calc(min(var(--count) - 1, 3) * var(--peek));
   --p: 0;
 
   position: relative;
@@ -115,11 +115,12 @@
 }
 
 .item {
-  --depth: clamp(0, calc(var(--index) - var(--p)), calc(var(--count) - 1));
+  --depth: clamp(0, calc(var(--index) - var(--p)), 3);
   --gone: clamp(0, calc(var(--p) - var(--index)), 1);
 
   grid-area: 1 / 1;
   z-index: calc(var(--count) - var(--index));
+  opacity: clamp(0, calc(4 - var(--index) + var(--p)), 1);
   transform-origin: 50% 0;
   transform:
     translateY(calc(var(--depth) * var(--peek) * -1 - var(--gone) * 132%))

@@ -49,18 +49,23 @@ export default function ServicesStack() {
       cardHeight = items[0].getBoundingClientRect().height
       stackTop = stack.getBoundingClientRect().top + window.scrollY
       if (!sticky) {
-        for (const item of items) item.style.transform = ''
+        for (const item of items) {
+          item.style.transform = ''
+          item.style.opacity = ''
+        }
       }
     }
 
     const paint = () => {
       for (let i = 0; i <= last; i += 1) {
-        const depth = Math.min(Math.max(i - current, 0), last)
+        const rawDepth = Math.max(i - current, 0)
+        const depth = Math.min(rawDepth, 3)
         const leaving = Math.min(Math.max(current - i, 0), 1)
         const eased = leaving * leaving * (3 - 2 * leaving)
         const y = -depth * peek - eased * cardHeight * 1.32
         items[i].style.transform =
           `translate3d(0,${y.toFixed(1)}px,0) scale(${(1 - depth * shrink).toFixed(4)})`
+        items[i].style.opacity = rawDepth > 3 ? '0' : '1'
       }
     }
 
