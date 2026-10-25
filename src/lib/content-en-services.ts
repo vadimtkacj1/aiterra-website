@@ -2930,6 +2930,152 @@ export const servicePagesEn: Record<string, ServicePage> = {
       },
     ],
   },
+  'ai-website-integration': {
+    id: 'ai-website-integration',
+    crumb: 'AI integration for websites',
+    eyebrow: 'AI integration for websites',
+    heading: ['AI integration for websites and apps', 'AI capabilities that work inside the site you already have'],
+    subhead: 'Our AI integration service',
+    lede: 'A chat assistant that answers from your site content, smart search, recommendations and personalization, product descriptions and image editing from inside the admin, translation and localization, lead qualification - added to an existing or new website or app, on any platform, with full Hebrew support and cost control.',
+    image: '/images/services-view.webp',
+    action: { label: 'Request a fit review', href: '/en/contact' },
+    metaTitle: 'AI Integration for Websites in Israel - Chat, Smart Search and Recommendations',
+    metaDescription:
+      'AI integration for websites and apps in Israel: a chat assistant trained on your site content, smart search, product recommendations, content and image generation in the admin, translation and lead qualification. Works with OpenAI, Claude and Gemini on any platform.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our AI integration'],
+      lede: 'We do not paste a generic widget onto the site. Each capability is built around one business goal, connected to the content and data of the site, and delivered with written limits and a cost ceiling.',
+      outro: 'Want to know which AI capability fits your site?',
+      action: { label: 'Request a fit review', href: '/en/contact' },
+      roles: [
+        {
+          id: 'any-platform',
+          title: 'Works on any platform',
+          art: '/images/service-page1.webp',
+          text: 'WordPress, Shopify, WooCommerce, Wix through an embed, a custom-coded site or a mobile app - the capability connects through a plugin, an API or an embed script, so the site does not have to be rebuilt.',
+        },
+        {
+          id: 'own-content',
+          title: 'Answers from your own content',
+          art: '/images/service-page2.webp',
+          text: 'The assistant answers only from the site pages, the catalogue and documents you approved. When it has no answer it says so and hands the visitor to a person, instead of inventing a price or a policy.',
+        },
+        {
+          id: 'hebrew',
+          title: 'Real Hebrew and RTL',
+          art: '/images/service-page3.webp',
+          text: 'It is tested on Hebrew the way customers actually write it - spelling mistakes, slang, switching to English mid-sentence - and the interface is built right-to-left from the start, including the chat window and suggestions.',
+        },
+        {
+          id: 'cost-control',
+          title: 'Predictable cost and privacy',
+          art: '/images/service-page4.webp',
+          text: 'A usage limit per visitor, caching for repeated questions and the cheapest model that is good enough for the task. Personal data is not sent unless it is needed, in line with the principles of Amendment 13 to the Privacy Protection Law.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What we build',
+      heading: ['What you can add to a website with AI'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'assistant',
+          icon: 'sales',
+          title: 'Chat assistant and lead qualification',
+          text: 'A chat on the site that answers from your content, asks clarifying questions, filters enquiries by purchase intent and hands the team a clean lead with the whole conversation attached.',
+        },
+        {
+          id: 'search',
+          icon: 'catalog',
+          title: 'Smart site search',
+          text: 'Search that understands meaning and not only words, finds a product even when it was typed differently, copes with Hebrew spelling mistakes and returns results ranked by relevance.',
+        },
+        {
+          id: 'personalization',
+          icon: 'club',
+          title: 'Recommendations and personalization',
+          text: 'Complementary products, content based on what the visitor has already seen and messages matched to their stage, measured in a test against a version without personalization.',
+        },
+        {
+          id: 'content',
+          icon: 'orders',
+          title: 'Content, images and translation in the admin',
+          text: 'A button in the admin that drafts a product description, translates a page, creates image variations or removes a background for the catalogue - and an editor approves it before it goes live.',
+        },
+        {
+          id: 'insights',
+          icon: 'analytics',
+          title: 'Visitor questions, voice and measurement',
+          text: 'A report on what visitors ask and cannot find, voice transcription and spoken questions in the app, and measurement of what improved after the AI was added.',
+        },
+      ],
+      action: { label: 'Request a fit review', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How a project runs. Simply.'],
+      lede: 'We start with one capability connected to the live site, measure it, and only then expand.',
+      steps: [
+        {
+          id: 'scope',
+          title: 'Choosing the capability and sources',
+          text: 'We pick one capability with a clear value, define what the assistant may and may not answer, and specify which content and data connect to it and which stay out of scope.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'build',
+          title: 'Build and connect to the site',
+          text: 'We connect the language model to the site or app through an API, build the interface in Hebrew, and test it on real questions from your business before any visitor sees it.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'launch',
+          title: 'Launch, measure and tune',
+          text: 'We release to part of the traffic, track questions, cost and satisfaction, and adjust the sources and rules according to what actually happens. Only then do we roll it out to the whole site.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want to add an AI capability to your site that you can measure?',
+      action: { label: 'Request a fit review', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about AI integration for websites'],
+    faqEntries: [
+      {
+        question: 'Can AI be added to an existing website without rebuilding it?',
+        answer:
+          'In most cases, yes. The capability connects to the existing site through a plugin, an embed script or an API call to our server, so there is no need to replace the platform. On WordPress or WooCommerce it is usually a plugin plus a server layer, on Shopify an app or a theme embed, and on Wix an embedded external component. On a custom-coded site or an app we integrate directly. Some platforms limit custom code, and we check that in the first conversation, before committing to a particular solution. Which route is right depends on the version of the site, the plugins already installed on it and the capability you want to add, and we confirm it in writing.',
+      },
+      {
+        question: 'How do you stop the chat from inventing answers about prices and terms?',
+        answer:
+          'The assistant gets access only to content you approved: site pages, the catalogue, terms documents and frequently asked questions. Every answer relies on a passage found there, and if no suitable passage exists it says it has no information and offers to take contact details or connect the visitor to a person. We add written rules for sensitive topics such as discounts and commitments, and test it beforehand on dozens of questions from your business. After launch we read sample conversations and fix the sources whenever a gap shows up. The rules and sources can be updated at any stage without touching code, and your team can see which questions were asked and which were left without an answer.',
+      },
+      {
+        question: 'Which models do you work with, and is our data used for training?',
+        answer:
+          'We connect OpenAI, Claude and Gemini through their APIs and choose by task: a fast, inexpensive model for classification and search, a stronger one for complex conversations. Each provider publishes its terms on data retention and training for API use, and we review them and show them to you before we start. You can also configure the system so that identifying details are never sent at all. The API keys belong to your own account, so costs and data stay under your control. For each capability we also define which fields may be sent to the provider and which stay with you, and we document it in writing so customers and staff know exactly what happens to their data.',
+      },
+      {
+        question: 'What will it cost to run, and how do you prevent overruns?',
+        answer:
+          'Running cost depends on usage volume, because providers charge by the amount of text processed. To avoid surprises we set a monthly usage ceiling with an alert as it approaches, a message limit per visitor, caching for repeated questions, and the smallest model that is good enough for each task. A dashboard shows what each capability cost and how many conversations it handled, so you can decide whether to expand or stop. Provider prices change, so you receive the current figures in the quotation rather than from a page like this one. Provider costs are also checked against real site traffic, so you know in advance what will happen in a peak season or after a large paid campaign, and the ceiling protects you either way.',
+      },
+      {
+        question: 'What about privacy and Amendment 13 to the Privacy Protection Law?',
+        answer:
+          'Amendment 13 broadened the obligations of businesses that hold personal data, so privacy is part of the specification. In practice we work on data minimisation: anything not needed for an answer is not sent to the model, identifying details in a conversation are removed or replaced where possible, and the visitor sees a notice that they are talking to an automated system. Conversations are stored in an environment you control for a period you set, and access is logged. We do not give legal advice; if you need a privacy adviser to review it, we prepare an exact description of the data flow. Where the site serves a wide audience we also add a link to the privacy policy and a way to leave the conversation and ask for deletion of whatever was stored about it.',
+      },
+      {
+        question: 'How is this different from connecting a language model to documents, or from an AI agent?',
+        answer:
+          'AI integration for websites is the customer-facing implementation: what the visitor sees, where they meet the capability and how it fits into browsing, the catalogue and the admin. Language model and RAG integration deals with the knowledge and document layer behind the answers, and an AI agent carries out actions in your business systems. In a single project we often combine several of them. If all you need is a chat over internal documents for staff, or a WhatsApp agent with no website, we point you to the matching service and do not sell more than is needed. The choice depends on the business goal: what matters most to you on the site, and which of your existing systems should receive the result of each conversation.',
+      },
+    ],
+  },
   'ai-search': {
     id: 'ai-search',
     crumb: 'AI search',

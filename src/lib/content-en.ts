@@ -17,6 +17,7 @@ export const EN_SERVICE_SLUGS = [
   'llm-integration',
   'data-analytics',
   'ai-consulting',
+  'ai-website-integration',
   'mobile-app-development',
   'desktop-app-development',
   'devops-cloud',
@@ -422,6 +423,24 @@ export const contentEn: Partial<V2Content> = {
       action: { label: 'Computer vision', href: '/en/services/computer-vision' },
     },
     {
+      id: 'ai-website-integration',
+      label: 'AI website integration',
+      tags: [
+        'Chat from your site content',
+        'Smart search',
+        'Recommendations and personalization',
+        'Content and images in the admin',
+        'Translation and localization',
+        'Lead qualification',
+      ],
+      question: 'What is different about our AI website integration?',
+      paragraphs: [
+        'We start with one capability connected to the live site, answering only from content you approved, with written limits, a cost ceiling and real Hebrew support.',
+        'It works on any platform, from WordPress and Shopify to custom code and mobile apps, is measured after launch, and only then expanded.',
+      ],
+      action: { label: 'AI website integration', href: '/en/services/ai-website-integration' },
+    },
+      {
       id: 'mobile-app-development',
       label: 'Mobile app development',
       tags: [
@@ -801,6 +820,7 @@ export const contentEn: Partial<V2Content> = {
           { label: 'Mobile app development', href: '/en/services/mobile-app-development' },
           { label: 'Desktop applications', href: '/en/services/desktop-app-development' },
           { label: 'DevOps & cloud', href: '/en/services/devops-cloud' },
+          { label: 'AI website integration', href: '/en/services/ai-website-integration' },
           { label: 'All services', href: '/en/services' },
         ],
       },
@@ -1422,6 +1442,21 @@ export const contentEn: Partial<V2Content> = {
         ],
         text: 'Recognition in images, scans and video - from Hebrew invoices and documents to defects on a production line - tested on your own images and feeding results into your systems.',
         action: { label: 'Learn more', href: '/en/services/computer-vision' },
+      },
+      {
+        id: 'ai-website-integration',
+        title: 'AI website integration',
+        image: '/images/services-view.webp',
+        tags: [
+          'Chat from your site content',
+          'Smart search',
+          'Recommendations and personalization',
+          'Content and images in the admin',
+          'Translation and localization',
+          'Lead qualification',
+        ],
+        text: 'OpenAI, Claude, Gemini, WordPress, Shopify, WooCommerce, Wix, Next.js, mobile apps',
+        action: { label: 'Learn more', href: '/en/services/ai-website-integration' },
       },
       {
         id: 'mobile-app-development',
