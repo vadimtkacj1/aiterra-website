@@ -347,7 +347,7 @@ export const contentEn: Partial<V2Content> = {
       ],
       question: 'What does maintenance cover?',
       paragraphs: [
-        'Monthly plans with published pricing and response times written into the agreement rather than promised, including for sites we did not build ourselves.',
+        'Monthly plans quoted upfront in writing, with response times written into the agreement rather than promised, including for sites we did not build ourselves.',
         'Payment and invoicing connections are checked continuously, because when one breaks nothing on the site looks wrong: orders keep arriving and invoices simply stop being created.',
       ],
       action: { label: 'Website maintenance', href: '/en/services/maintenance' },
@@ -767,7 +767,7 @@ export const contentEn: Partial<V2Content> = {
       id: 'support',
       question: 'What happens after launch?',
       answer:
-        'Launch is the start of the engagement, not the end of it. We monitor performance and uptime, ship security and dependency updates, run daily off-server backups, keep improving the pages that carry commercial weight, and track behaviour in GA4 and Google Search Console. The first few weeks almost always surface refinements that only real use exposes - a form that should be shorter, a message that is not landing, a missing field - and those are handled as part of the engagement rather than reopened as a new project. You get a clear monthly report and one named point of contact who knows the build. Ongoing maintenance is available as a monthly plan with published pricing and a response time written into the agreement.',
+        'Launch is the start of the engagement, not the end of it. We monitor performance and uptime, ship security and dependency updates, run daily off-server backups, keep improving the pages that carry commercial weight, and track behaviour in GA4 and Google Search Console. The first few weeks almost always surface refinements that only real use exposes - a form that should be shorter, a message that is not landing, a missing field - and those are handled as part of the engagement rather than reopened as a new project. You get a clear monthly report and one named point of contact who knows the build. Ongoing maintenance is available as a monthly plan quoted upfront in writing, with a response time written into the agreement.',
     },
   ],
 
@@ -1413,14 +1413,14 @@ export const contentEn: Partial<V2Content> = {
         title: 'Website maintenance',
         image: '/images/services-view-bg.webp',
         tags: [
-          'Published pricing',
+          'Upfront quote',
           'Written SLA',
           'Security updates',
           'Backups and monitoring',
           'IS 5568 checks',
           'Israeli integrations',
         ],
-        text: 'Monthly maintenance with published prices and response times written into the agreement - including for sites we did not build.',
+        text: 'Monthly maintenance quoted upfront in writing, with response times written into the agreement - including for sites we did not build.',
         action: { label: 'Learn more', href: '/en/services/maintenance' },
       },
       {
@@ -1683,7 +1683,7 @@ export const contentEn: Partial<V2Content> = {
     lede: 'From technical foundations through to paying customers - we would like to hear about your business. Leave your details and we will come back with a tailored plan of action.',
     metaTitle: 'Contact Aiterra - Free Initial Consultation',
     metaDescription:
-      'Planning a custom website, a web platform or an SEO programme? Leave your details and we will respond with a tailored plan and transparent pricing.',
+      'Planning a custom website, a web platform or an SEO programme? Leave your details and we will respond with a tailored plan and a clear written quote.',
     faqHeading: ['Frequently asked questions', 'before you get in touch'],
     details: {
       heading: 'Contact details',
