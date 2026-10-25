@@ -606,4 +606,383 @@ Look for a team that asks about your business before it talks about technology, 
       ],
     },
   },
+  'best-business-messaging-apps-small-business-israel': {
+    title: 'Best Business Messaging Apps for Small Businesses in Israel: Affordable Options Compared',
+    seoTitle: 'Best Business Messaging Apps for Small Business in Israel (Cheap Options)',
+    seoDescription:
+      'WhatsApp Business app, WhatsApp Business Platform, Slack, Google Chat and more compared for Israeli small businesses: what is free, what is paid, and when to upgrade.',
+    excerpt:
+      'Which messaging tools actually fit a small business in Israel: WhatsApp Business app versus the API, internal chat tools, free tiers and a checklist for choosing without overpaying.',
+    tags: ['WhatsApp', 'Messaging', 'Small business', 'Israel', 'Communication'],
+    datePublished: '2026-10-25',
+    content: `**Short answer:** For customer conversations, most small businesses in Israel should start with the free WhatsApp Business app, because Israeli customers already use WhatsApp every day. Move to the WhatsApp Business Platform (the API, bought through an authorised provider) only when several people need to answer from one number, or when you want automation and CRM sync. For internal team chat, the free tiers of Slack or Google Chat are enough for a small team. The cheapest setup is usually one customer channel plus one internal tool, not five overlapping apps.
+
+"Messaging app for business" covers two different jobs, and mixing them up is how small businesses overspend. One job is **talking to customers**. The other is **talking to your own team**. This guide separates them, names the tools most Israeli businesses actually consider, and ends with a checklist.
+
+## Customer-facing messaging
+
+| Option | Best for | Cost model | Main limit |
+|---|---|---|---|
+| WhatsApp Business app | Owner-operated and very small teams | Free app | Built for one phone number and a handful of linked devices; limited automation |
+| WhatsApp Business Platform (API) | Teams, automation, CRM sync | Per-message pricing set by Meta, plus a provider fee | Needs an authorised provider, a dedicated number and business verification |
+| Facebook Messenger and Instagram DMs | Businesses that get enquiries from social | Free to receive and reply | Separate inboxes; hard to track without a tool |
+| SMS | Reminders and one-way alerts | Per message, through a provider | No rich media, low reply rates for conversations |
+| Telegram | Niche audiences and communities | Free | Much lower reach among Israeli consumers than WhatsApp |
+
+### Why WhatsApp first
+
+WhatsApp is the default channel for most Israeli customers, so it is where enquiries arrive whether you plan for it or not. The free Business app adds a business profile, a catalogue, labels, quick replies and away messages, which is often all a plumber, clinic or small shop needs.
+
+### When the free app stops being enough
+
+You will notice it when two employees need the same number, when messages arrive after hours and nobody owns them, or when leads vanish because they live in one person's phone. At that point the WhatsApp Business Platform becomes worth the cost. According to [Meta's pricing page](https://whatsappbusiness.com/products/platform-pricing/), it charges per delivered message, by category: marketing, utility, authentication and service. Replies inside the 24-hour customer service window are free, and conversations that start from a click-to-WhatsApp ad or a Facebook Page button are free for 72 hours. Israel appears as a selectable market in Meta's rate calculator; check the current Israeli rates there rather than relying on a blog post, including ours.
+
+If you go this route, connect it to a CRM so every chat becomes a tracked lead. Our step-by-step guide to the [WhatsApp Business API and CRM integration](/en/blog/whatsapp-business-api-crm-integration) covers the setup, and [WhatsApp, CRM and automation for small businesses](/en/blog/business-automation-crm-whatsapp) shows what can be automated safely.
+
+## Internal team messaging
+
+| Tool | Free tier | Paid entry point (checked October 2026) | Fits |
+|---|---|---|---|
+| Slack | Yes: 90-day message history, up to 10 app integrations, 1:1 huddles only | Pro from about €6.75 per user per month on annual billing, as shown in euros on slack.com | Teams that live in many integrations |
+| Google Chat (in Google Workspace) | Free with a personal Google account | Workspace Business Starter lists at about €6.80 per user per month and includes Meet and Chat | Businesses already on Gmail and Google Calendar |
+| Microsoft Teams | Bundled with Microsoft 365 plans | Depends on the Microsoft 365 plan; check microsoft.com | Businesses already on Outlook and Office |
+| A WhatsApp group | Free | None | Very small teams; weak for history, permissions and leaving staff |
+
+Prices on vendor sites change and may differ by region and currency, so confirm on the vendor page before you buy. The practical point: if you already pay for Google Workspace or Microsoft 365, you probably already own a team chat tool.
+
+## How to choose without overpaying
+
+1. **Count the people who answer customers.** One or two: the free WhatsApp Business app. Three or more on one number: the API through a provider.
+2. **Decide where leads must end up.** If the answer is "a CRM or a spreadsheet the whole team sees", plan for a connection, not copy and paste.
+3. **Check the real cost, not the headline.** For the API, add provider fees to Meta's per-message charges; for team chat, multiply the per-user price by headcount.
+4. **Keep one inbox per channel type.** Duplicated tools are the most common hidden cost.
+5. **Respect consent.** Marketing messages need clear opt-in; keep records of it.
+6. **Plan for staff turnover.** Business numbers and groups should belong to the company, not to an employee's personal account.
+
+## What about AI replies and custom builds?
+
+Once you have a clean WhatsApp flow, the next step is often a bot that answers common questions and hands over to a person. Off-the-shelf chatbot tools are fine for FAQs. If you need replies that read your stock, bookings or customer records, that is a custom integration. Aiterra, the company that publishes this guide, builds those as [business automations](/en/services/automation) and [AI agents](/en/services/ai-agents); it is one option among several, and the questions above apply to any provider. If you are weighing a provider, check that it is a registered Israeli business with our [company lookup tool](/en/tools/company-lookup).
+
+## The bottom line
+
+Start free, add structure when the pain is visible, and pay for the API only when volume or team size demands it. The cheapest messaging stack is the one that keeps every customer conversation in a place your whole team can see.`,
+    faq: {
+      title: 'Frequently asked questions about business messaging apps in Israel',
+      items: [
+        {
+          q: 'What is the cheapest way for a small business in Israel to message customers?',
+          a: 'The free WhatsApp Business app. It costs nothing, Israeli customers already use WhatsApp, and it includes a business profile, labels, quick replies and away messages. Its limits are one main number and little automation, so it suits owner-operated businesses and very small teams.',
+        },
+        {
+          q: 'Is the WhatsApp Business API free?',
+          a: 'No. Meta charges per delivered message by category (marketing, utility, authentication, service), and an authorised provider usually adds a platform fee. Service replies within the 24-hour customer window are free, and conversations from click-to-WhatsApp ads or Facebook Page buttons are free for 72 hours. Check the rate calculator on Meta pricing page for Israel before budgeting.',
+        },
+        {
+          q: 'Can several employees use one WhatsApp Business number?',
+          a: 'The Business app supports a limited number of linked devices, which can work for two or three people. For a real shared inbox with assignment, history and automation, you need the WhatsApp Business Platform through a provider.',
+        },
+        {
+          q: 'Do I need a separate tool for internal team chat?',
+          a: 'Usually not at the start. If you already pay for Google Workspace or Microsoft 365, you already have Chat or Teams. Slack has a free tier, but it keeps only 90 days of history and limits integrations, so a team that depends on searchable history should plan to pay.',
+        },
+        {
+          q: 'Is it legal to send marketing messages to customers on WhatsApp in Israel?',
+          a: 'Marketing messages require recipient consent, and Israeli rules on unsolicited commercial messages are strict. Collect and record opt-in, offer an easy way to stop, and take advice from a lawyer on your specific campaign. This article is general information, not legal advice.',
+        },
+      ],
+    },
+  },
+  'small-business-management-software-israel': {
+    title: 'Best Small Business Management Software in Israel: Invoicing, CRM and ERP Compared',
+    seoTitle: 'Best Small Business Management Software in Israel: Invoicing, CRM, ERP',
+    seoDescription:
+      'Morning (Green Invoice), iCount, Fireberry, monday CRM and Priority compared for Israeli small businesses: what each does, published pricing and how to choose.',
+    excerpt:
+      'Israeli small businesses usually need three layers: invoicing that meets tax rules, a CRM, and sometimes an ERP. Here is what the popular tools do, what they cost today and how to avoid buying too much.',
+    tags: ['Business software', 'Invoicing', 'CRM', 'ERP', 'Israel'],
+    datePublished: '2026-10-25',
+    content: `**Short answer:** Most Israeli small businesses should start with invoicing software that issues compliant tax documents, such as Morning (formerly Green Invoice) or iCount, add a CRM like Fireberry or monday CRM when leads and follow-up become messy, and consider an ERP such as Priority only when inventory, production or multi-branch operations make spreadsheets unmanageable. Buy in that order, make sure each tool can pass data to the next, and avoid paying for a full system you will use at ten percent.
+
+"Management software" is a broad label. The tools below solve different problems, which is why the best answer depends on what your business does all day.
+
+## The three layers
+
+| Layer | Problem it solves | Typical tools in Israel | When you need it |
+|---|---|---|---|
+| Invoicing and accounting documents | Issue tax invoices, receipts and quotes that meet Israeli requirements, share with your accountant | Morning (Green Invoice), iCount, Rivhit, Hashavshevet | From the first customer |
+| CRM | Track leads, deals, follow-up and customer history | Fireberry, monday CRM, HubSpot, Zoho | When leads arrive through several channels |
+| ERP | Inventory, purchasing, production, multiple branches, finance in one system | Priority, SAP Business One and similar | When operations, not sales, are the bottleneck |
+
+## Invoicing: what the vendors publish
+
+Prices below were read from the vendor pages in October 2026, are in shekels excluding VAT, and can change.
+
+| Product | Entry plans | Notes |
+|---|---|---|
+| Morning (formerly Green Invoice) | Pricing page listed Basic at ₪29 per month on annual payment (20 documents a month), Best at ₪45 (50 documents, API and webhook integrations, online card payments), Extra at ₪74 and Prime at ₪129 | Read on the greeninvoice.co.il pricing page; confirm current plans on the Morning site |
+| iCount | Express at ₪276 per year; Advanced from ₪32 per month with usage-based document pricing; Master from ₪111 per month, which adds tax-authority representation | Add-ons are priced separately, for example a CRM add-on at ₪69 per month and basic inventory at ₪25 per month; 45-day free trial |
+
+Both fit a freelancer or small company. The deciding factors are usually your accountant's preference and which integrations you need. Ask your accountant first: the best invoicing tool is the one that exports cleanly to their system. Two related tools on this site, the [VAT calculator](/en/tools/vat-calculator) and the [exchange rate for invoices](/en/tools/exchange-rate-invoice) tool, help with the numbers, not the documents.
+
+## CRM: Israeli and global options
+
+Fireberry (formerly Powerlink) is an Israeli CRM. Its Hebrew pricing page lists Growth at ₪120, Premium at ₪150 and Unlimited at ₪200 per user per month plus VAT, with a three-user minimum, and its feature list includes issuing accounting documents and exporting to Hashavshevet. It also has a free English-language Sales plan. monday CRM, per monday.com, starts at €12 per seat per month on annual billing (Basic, with limits on contacts and columns), with plans starting from three users. For a head-to-head comparison including HubSpot and Zoho, read our [best CRM for small business in Israel](/en/blog/best-crm-small-business-israel) guide.
+
+The detail that decides most CRM purchases is the invoicing link. A deal that closes in the CRM should create the invoice without retyping; our guide to [CRM and Israeli invoicing integration](/en/blog/crm-israeli-invoicing-integration) explains how that bridge works.
+
+## ERP: Priority and when to move up
+
+Priority Software offers cloud ERP and positions it for small and mid-sized companies across manufacturing, wholesale, retail and services. It does not publish prices on its homepage, so budget for a quote and an implementation project, not a monthly card charge. An ERP is justified when you manage stock across locations, bills of materials or purchasing approvals. If you only need to send invoices and track leads, an ERP is overkill and the implementation time alone can exceed the benefit.
+
+## Where custom software fits
+
+Sometimes none of the packaged tools matches your process: a unique quoting flow, a customer portal, or a connection between your shop, your warehouse and your accountant. That is when a custom system or an automation layer on top of existing tools can cost less than forcing the business to adapt. Aiterra builds [custom software](/en/services/development) and [automations](/en/services/automation) for Israeli businesses; we are one option, and the checklist below applies to any vendor, including us.
+
+## Checklist: choosing business management software
+
+1. List your top five weekly tasks. Buy for those, not for the feature list.
+2. Ask your accountant which invoicing tools they work with.
+3. Confirm Hebrew and right-to-left support in the screens your staff will use daily.
+4. Check for an API, webhooks or a native link between the invoicing tool and the CRM.
+5. Ask what is included in the monthly price and what is an add-on, as iCount does with CRM and inventory.
+6. Read the data export terms. You should be able to leave with your records.
+7. Run a free trial with real documents before committing to annual payment.
+8. Count the true cost: licences, setup, training and time spent migrating.
+
+## The bottom line
+
+Build up in layers. Compliant invoicing first, CRM when follow-up hurts, ERP only when operations demand it. Pay for what you use this year, and choose tools that connect, so that moving up later does not mean starting over.`,
+    faq: {
+      title: 'Frequently asked questions about small business software in Israel',
+      items: [
+        {
+          q: 'What software does an Israeli small business need first?',
+          a: 'Invoicing software that issues tax invoices and receipts that comply with Israeli requirements, and that your accountant can work with. Morning (formerly Green Invoice) and iCount are two widely used options. A CRM and an ERP can wait until lead volume or operations justify them.',
+        },
+        {
+          q: 'Is Green Invoice the same as Morning?',
+          a: 'Green Invoice was rebranded as Morning. Some pages and search results still use the old name, so check the current plans on the vendor site before you buy.',
+        },
+        {
+          q: 'How much do Israeli invoicing tools cost?',
+          a: 'At the time of checking, Morning plans on the pricing page started at ₪29 per month on annual payment, and iCount offered an annual Express plan at ₪276 and usage-based plans from ₪32 per month, all excluding VAT. Prices change, so confirm on the vendor pages.',
+        },
+        {
+          q: 'Do I need an ERP like Priority as a small business?',
+          a: 'Only if you manage inventory, purchasing, production or several branches and spreadsheets have stopped scaling. For service businesses and small shops, invoicing software plus a CRM is usually enough. Priority does not publish prices on its homepage, so expect to request a quote.',
+        },
+        {
+          q: 'Can these systems talk to each other?',
+          a: 'Often yes, through native links, APIs, webhooks or middleware, but depth varies. Fireberry lists accounting document features and export to Hashavshevet, and Morning lists API and webhook integrations on its Best plan. Always test the exact flow you need during a trial.',
+        },
+      ],
+    },
+  },
+  'ecommerce-crm-inventory-integration-israel': {
+    title: 'Affordable E-commerce CRM with Order and Inventory Integration in Israel',
+    seoTitle: 'Affordable E-commerce CRM With Order and Inventory Integration in Israel',
+    seoDescription:
+      'How Israeli online stores connect orders, inventory, CRM and invoicing: Shopify, WooCommerce, iCount, Fireberry and monday compared, with a checklist and custom-build option.',
+    excerpt:
+      'Orders in the store, stock in a spreadsheet, customers in a CRM and invoices in a fourth tool. How an Israeli online store can connect them affordably, and where a custom integration pays off.',
+    tags: ['E-commerce', 'CRM', 'Inventory', 'Integration', 'Israel'],
+    datePublished: '2026-10-25',
+    content: `**Short answer:** An affordable e-commerce setup in Israel connects four things: the store (Shopify or WooCommerce), an inventory source of truth, a CRM that sees every order and customer, and Israeli invoicing software that issues tax documents. Start with the integrations that already exist between your store platform and your invoicing tool, because they remove the most manual work for the least money. Add a CRM when repeat customers and follow-up matter. Build a custom integration only when stock, pricing or fulfilment rules are too specific for off-the-shelf connectors.
+
+Most small online stores do not fail for lack of software. They fail at the seams between tools: an order arrives in the store, someone retypes it into an invoice, stock is updated by hand, and the customer is never added to any list. This guide shows where the seams are and how to close them without a large budget.
+
+## The four systems and what each one owns
+
+| System | Owns | Examples |
+|---|---|---|
+| Store platform | Catalogue, cart, payment, order creation | Shopify, WooCommerce, Wix |
+| Inventory | How many units exist, per location | The store itself, an iCount inventory add-on, or an ERP |
+| CRM | Customer history, segments, follow-up, support | Fireberry, monday CRM, HubSpot, Zoho |
+| Invoicing | Compliant tax invoices, receipts, credit notes | Morning (formerly Green Invoice), iCount |
+
+The rule that prevents most errors: **each fact lives in one system and flows to the others.** Stock is owned by one place. Customer contact details are owned by one place. Everything else is a copy.
+
+## What the vendors actually offer
+
+Pricing and features change, so treat this as a snapshot from October 2026 and confirm on each vendor page.
+
+- **Shopify** lists Basic at €19 per month on yearly payment and €27 on monthly payment, Grow at €56 or €74, and Advanced at €289 or €384, as displayed in euros on shopify.com. Basic, Grow and Advanced each include 10 inventory locations.
+- **WooCommerce** is a plugin for WordPress. The plugin itself is free to install, but you pay for hosting, a payment provider and often paid extensions, which is why total cost varies widely.
+- **iCount** sells e-commerce connection as a ₪20 per month add-on for Wix, Shopify, Etsy and WooCommerce, basic inventory and price lists at ₪25 per month, advanced inventory at ₪100 per month, and a CRM add-on at ₪69 per month, all excluding VAT. A 45-day trial is included.
+- **Morning (formerly Green Invoice)** listed API and webhook integrations and online card payments on its Best plan at ₪45 per month on annual payment, excluding VAT.
+- **Fireberry** lists Hebrew plans at ₪120, ₪150 and ₪200 per user per month with a three-user minimum, and includes accounting-document features.
+- **monday CRM** starts at €12 per seat per month on annual billing, with limits on contacts and columns on the Basic tier.
+
+A store on Shopify Basic, iCount with the e-commerce and inventory add-ons, and a small CRM can be assembled for a modest monthly outlay, but the sum depends on user count, document volume and extra apps, so we deliberately do not promise a single total.
+
+## Three integration patterns
+
+| Pattern | How it works | Good for | Weak spot |
+|---|---|---|---|
+| Native connector | The invoicing or inventory vendor offers a ready link to your store | Standard shops with one warehouse | Limited to the fields the vendor chose |
+| Automation platform | Zapier, Make or similar moves data between tools using triggers | Stores that need a few custom steps | Per-task fees grow with order volume; errors can be silent |
+| Custom integration | Code that reads orders and writes to your CRM, stock and invoicing via their APIs | Special pricing, bundles, multiple suppliers, B2B accounts | Needs a developer and maintenance |
+
+If you are choosing a platform, our [e-commerce store guide](/en/blog/ecommerce-store-that-sells) compares Shopify, WooCommerce and custom builds, and the [CRM and invoicing integration guide](/en/blog/crm-israeli-invoicing-integration) explains the bridge from deal to tax invoice in more detail.
+
+## What a well-integrated order looks like
+
+1. A customer pays in the store.
+2. The order is created and stock is reduced once, in the system that owns inventory.
+3. The invoicing tool receives the order and issues a compliant tax invoice or receipt.
+4. The CRM creates or updates the customer, attaches the order and tags the segment, for example first purchase or repeat buyer.
+5. A confirmation goes out by email or WhatsApp. For the WhatsApp side, see the [WhatsApp Business API and CRM integration](/en/blog/whatsapp-business-api-crm-integration) guide.
+6. Returns and credit notes flow back through the same path.
+
+## Israeli details that off-the-shelf tools sometimes miss
+
+- **Tax documents.** Every sale needs the right document type. Test refunds and partial credits, not only the happy path.
+- **VAT handling.** Check how prices are displayed and rounded; our [VAT calculator](/en/tools/vat-calculator) is handy for sanity checks.
+- **Hebrew and right-to-left.** Customer-facing emails, invoices and the admin screens your team uses should render properly.
+- **Foreign currency.** If you sell abroad, see how the invoice is issued; the [exchange rate for invoices](/en/tools/exchange-rate-invoice) tool shows the rate logic.
+- **Local couriers and pickup points.** Many connectors target international carriers first. Ask before you assume.
+
+## When a custom integration pays off
+
+Off-the-shelf connectors win until your rules get unusual: stock shared between a physical store and the website, supplier drop-shipping with different lead times, customer-specific price lists, bundles that deduct several SKUs, or reporting that no vendor dashboard provides. At that point a thin custom layer between the store, the CRM, the stock source and the invoicing API is often cheaper than switching to a heavy ERP. Aiterra builds [e-commerce stores and integrations](/en/services/ecommerce) and [business automations](/en/services/automation) in Israel; we are one option, and the checklist below is meant to help you judge any supplier, including us.
+
+## Checklist: e-commerce CRM and inventory integration
+
+1. Name the single source of truth for stock, customers and prices.
+2. List every document type you issue, including refunds.
+3. Check each vendor for an API or webhook, not only a marketing page about integrations.
+4. Test with ten real orders in a trial before paying annually.
+5. Confirm what happens when a sync fails: alert, retry or silent loss.
+6. Ask who owns the connector and who pays to fix it when a platform updates.
+7. Make sure you can export customers, orders and stock if you leave.
+8. Put the cost of manual work you are removing on paper, and compare.
+
+## The bottom line
+
+Close the seams in the order of pain: orders to invoices first, stock second, customers to CRM third. Use native connectors until they stop fitting, and write custom code only for the rules that make your store different.`,
+    faq: {
+      title: 'Frequently asked questions about e-commerce CRM and inventory in Israel',
+      items: [
+        {
+          q: 'What is the cheapest way to connect an online store to Israeli invoicing?',
+          a: 'Use the native connector from the invoicing vendor. For example, iCount sells an e-commerce connection for Wix, Shopify, Etsy and WooCommerce as a ₪20 per month add-on, excluding VAT. Check the vendor page for current prices and test refunds before relying on it.',
+        },
+        {
+          q: 'Do I need a CRM if I already have Shopify or WooCommerce?',
+          a: 'Not on day one. Store platforms keep customer and order records, but a CRM becomes useful when you want segmentation, sales follow-up, B2B accounts, support history or a single view across channels such as WhatsApp, phone and the website.',
+        },
+        {
+          q: 'Where should inventory live?',
+          a: 'In exactly one system. For a single-warehouse store that is usually the store platform. If you also sell in a physical shop or through suppliers, use a dedicated inventory add-on or ERP and let the store read from it.',
+        },
+        {
+          q: 'Is Zapier or Make enough for order automation?',
+          a: 'For low and medium volumes and a handful of steps, often yes. Costs grow with the number of tasks, and failures can pass unnoticed unless you add alerts. Complex stock logic or B2B pricing usually outgrows them.',
+        },
+        {
+          q: 'When should an Israeli online store build a custom integration?',
+          a: 'When your rules are too specific for connectors, such as shared stock across locations, bundles, customer-specific prices or unusual fulfilment, and the manual work costs more each month than the build and maintenance. Get a fixed scope and make sure you own the code.',
+        },
+      ],
+    },
+  },
+  'marketing-services-prices-israel-2026': {
+    title: 'Marketing Services Prices in Israel 2026: Branding, Web Design, Social Media and Google Ads',
+    seoTitle: 'Marketing Services Prices in Israel 2026: Branding, Web Design, Social, Ads',
+    seoDescription:
+      'What branding, web design, SEO, social media management and Google Ads cost in Israel in 2026: ranges we can source, what we cannot, and how to compare quotes.',
+    excerpt:
+      'Honest ranges for the main marketing services in Israel, separating published figures from estimates, plus what drives each price and a checklist for comparing quotes.',
+    tags: ['Pricing', 'Marketing', 'Branding', 'Web design', 'Google Ads', 'Israel'],
+    datePublished: '2026-10-25',
+    content: `**Short answer:** Marketing prices in Israel vary too much for one number to be honest. The ranges we can stand behind come from our own published cost guides: a landing page ₪1,500-3,500, a brochure website ₪4,000-12,000, SEO ₪1,500-8,000 a month, and a realistic paid media budget of roughly ₪2,000-4,000 a month before management fees. For branding and social media management we do not publish a shekel range, because we could not source one reliably; ask three agencies to quote the same written brief instead. Price depends on scope, competition and who does the work, so compare deliverables, not totals.
+
+Searches such as "average prices for branding, web design, social media management and Google Ads in Israel" return mostly US agency pricing guides in dollars. Those are not a good proxy for the Israeli market. Below, each figure is labelled by where it comes from, so you can judge how much weight to give it.
+
+## Price overview by service
+
+| Service | Range | Source and confidence |
+|---|---|---|
+| Landing page | ₪1,500-3,500 | Aiterra published estimate for 2026; see our guide on website cost |
+| Brochure website | ₪4,000-12,000 | Aiterra published estimate for 2026 |
+| Online store | ₪12,000-30,000 | Aiterra published estimate for 2026 |
+| SEO, ongoing | ₪1,500-8,000 per month | Aiterra published estimate; competitive and nationwide work can cost more |
+| Paid media budget (Google or Meta) | About ₪2,000-4,000 per month minimum | Aiterra published estimate; this is ad spend, not agency fees |
+| Campaign management fee | Not stated here | Varies by agency; ask whether it is flat or a share of spend |
+| Branding and visual identity | No range published | Scope varies from a logo to a full brand system |
+| Social media management | No range published | Depends on channels, posts per month and paid support |
+
+These are our own estimates, written by a vendor that sells some of these services. We say so plainly. Use them as a sanity check, then collect real quotes. The detailed reasoning is in our Hebrew cost guides, [website cost in Israel 2026](/blog/website-cost-israel-2026), [monthly SEO cost](/blog/seo-cost-monthly-israel) and [minimum PPC budget](/blog/ppc-minimum-budget-israel); the English versions are [website cost](/en/blog/website-cost-israel-2026), [SEO cost](/en/blog/seo-cost-monthly-israel) and [PPC budget](/en/blog/ppc-minimum-budget-israel).
+
+## Branding
+
+Branding ranges from a freelance logo to a full identity system with strategy, naming, guidelines and templates. The honest answer to "how much" is "what is included". Ask for a list of deliverables: logo variants, colour and type system, brand voice, social templates, a guidelines document and file formats. Our [digital branding guide](/en/blog/digital-branding-guide) explains the difference between a logo and a brand, and the [branding service](/en/services/branding) page shows how we scope it.
+
+## Web design and development
+
+The biggest price drivers are the number of unique page layouts, the level of custom design, integrations, languages, and whether the site is built for search and accessibility from the start. A cheap template can look finished and still be slow, hard to edit and impossible to rank. Read about [hidden costs of cheap websites](/en/blog/cheap-website-hidden-costs) before accepting the lowest quote, and see our [brochure website](/en/services/brochure) and [web development](/en/services/web-development) pages for what a standard scope includes. Remember the yearly costs after launch: domain, hosting and maintenance.
+
+## Social media management
+
+Social retainers usually bundle strategy, content creation, publishing, community replies and reporting. They vary in how many channels, how many posts, whether video is included and whether paid promotion is separate. One published US guide puts typical professional management between roughly $500 and $5,000 a month, but that is a US-wide survey, not Israeli pricing, and we do not offer it as a local benchmark. Ask Israeli providers for a monthly deliverables list and a minimum term.
+
+## Google Ads and paid social
+
+Two costs are mixed together in most quotes: the **media budget** paid to Google or Meta and the **management fee** paid to whoever runs the account. The media budget decides how much traffic you can buy. According to WordStream and LocaliQ benchmarks for 2026, the average Google Ads search cost per click is about $5.42 across industries, based on US campaign data; Israeli costs vary by sector and city. For Meta, the Superads benchmark tool reports an average Facebook Ads cost per click in Israel of about $0.58 for the data it holds. These are benchmarks, not promises; your sector can be far above or below them.
+
+Learn how the platforms differ in our [Google Ads guide](/en/blog/google-ads-campaigns) and [Facebook and Instagram ads guide](/en/blog/facebook-instagram-ads). If you want to run ads yourself, a campaign that cannot afford enough clicks to learn is the most common reason small budgets fail.
+
+## How to compare quotes
+
+| Check | Why it matters |
+|---|---|
+| Written scope and deliverables | Prevents quotes that look cheap by leaving things out |
+| Ownership of accounts | Ad accounts, analytics, domain and files must be in your name |
+| Term and exit | Minimum contract, notice period, handover |
+| Reporting | What you will see monthly and who explains it |
+| Who does the work | The senior person from the pitch, or a junior |
+| Media and fees separated | You should see ad spend and management fee as two lines |
+
+## Checklist before you hire
+
+1. Write a one-page brief with goals, audience, languages and channels.
+2. Ask three suppliers of different types to quote against the same brief.
+3. Request examples from similar businesses and, if possible, a reference call.
+4. Confirm you own every account and file from day one.
+5. Agree success measures, such as leads or sales, not only impressions.
+6. Set a budget for media separately from fees.
+7. Verify the supplier is a registered Israeli business with our [company lookup tool](/en/tools/company-lookup).
+8. Review results after 60 to 90 days before expanding.
+
+Aiterra offers [marketing](/en/services/marketing), [SEO](/en/services/seo) and web services; we are one option among many, and the questions above apply to us too.
+
+## The bottom line
+
+Use published numbers as a guardrail and real quotes as the decision. If a price looks far below the ranges here, find out what is missing. If it is far above, ask what you are getting that others do not offer.`,
+    faq: {
+      title: 'Frequently asked questions about marketing prices in Israel',
+      items: [
+        {
+          q: 'How much does a website cost in Israel in 2026?',
+          a: 'According to Aiterra published estimates, a landing page costs about ₪1,500-3,500, a brochure site about ₪4,000-12,000 and an online store about ₪12,000-30,000. These are estimates from a vendor, so collect real quotes against a written brief.',
+        },
+        {
+          q: 'How much does SEO cost per month in Israel?',
+          a: 'Aiterra estimates ₪1,500-8,000 a month for most small and mid-sized businesses, with competitive or nationwide projects costing more. SEO is slow, so agree on a minimum of several months and clear deliverables.',
+        },
+        {
+          q: 'What is a realistic Google Ads budget for a small Israeli business?',
+          a: 'Our published estimate is roughly ₪2,000-4,000 a month in media, on top of management fees. For context, the 2026 WordStream and LocaliQ benchmark shows an average Google Ads search cost per click of about $5.42 across US industries, so a small budget buys few clicks in competitive sectors.',
+        },
+        {
+          q: 'What does social media management cost in Israel?',
+          a: 'We could not source a reliable Israeli range, so we do not publish one. Prices depend on channels, posts per month, video and paid promotion. Ask providers for a monthly deliverables list and compare at least three.',
+        },
+        {
+          q: 'Are the management fee and the ad budget the same thing?',
+          a: 'No. The ad budget is paid to Google or Meta and buys the traffic. The management fee is paid to the person or agency who builds and optimises campaigns. A good quote shows them as separate lines and confirms that the ad account belongs to you.',
+        },
+      ],
+    },
+  },
 }

@@ -1320,12 +1320,12 @@ export const servicePagesEn: Record<string, ServicePage> = {
     eyebrow: 'Business automation',
     heading: ['Business automation', 'that connects your systems and ends the re-keying'],
     subhead: 'Our automation and AI workflow service',
-    lede: 'Automation that joins your website, WhatsApp, CRM and invoicing into one flow: a lead arrives, gets answered, recorded and scheduled without anyone copying details by hand - with AI used only where a fixed rule is not enough.',
+    lede: 'Business automation that joins your website, WhatsApp, CRM and invoicing into one flow: a lead arrives, gets answered, recorded and scheduled without anyone copying details by hand - with AI used only where a fixed rule is not enough.',
     image: '/images/service-platform.webp',
     action: { label: 'Book a process-mapping call', href: '/en/contact' },
-    metaTitle: 'Business Automation Services in Israel - CRM, WhatsApp and AI Workflows',
+    metaTitle: 'Business Automation in Israel: CRM, WhatsApp, Invoicing',
     metaDescription:
-      'Business automation for Israeli companies: leads routed into your CRM, WhatsApp bots, Green Invoice and iCount links, order sync and automated reports.',
+      'Business automation in Israel: leads into your CRM, WhatsApp bots, Green Invoice and iCount links, order sync and reports, with AI where it helps.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What business automation services include'],
@@ -1434,9 +1434,9 @@ export const servicePagesEn: Record<string, ServicePage> = {
           'Business automation connects the systems you already run so that an event in one of them triggers the next step by itself: a lead from the website is opened in the CRM and gets a first reply, a closed deal produces an invoice, a store order creates a shipment. The processes worth automating first are the ones that repeat every day and involve copying data by hand: lead intake, first response on WhatsApp, quotes and invoices, payment reminders, inventory sync and reporting. During mapping we measure how many hours a month each process consumes and start with the one that saves the most. Nothing is automated on a hunch; the saving is counted before the build begins.',
       },
       {
-        question: 'How much does automation cost for a small business?',
+        question: 'What do business automation services for a small business include, and what drives the cost?',
         answer:
-          'Setup is priced by the number of systems connected and the number of scenarios, not by company size. A WhatsApp bot with automatic replies and a CRM connection is usually a project of a few thousand shekels; a full lead flow with quotes sits in the middle; automation that also links accounting, inventory and shipping costs more. Our cost guide in the blog sets out the structure, and the exact figure for your business follows the process mapping. Alongside the one-off build there is a monthly cost for the tools themselves - the CRM, the WhatsApp messaging provider and the automation platform - which depends on usage volume, plus ongoing upkeep of the connections.',
+          'Business automation services for a small business include mapping the repeating processes, connecting the systems, defining the checking rules and maintaining everything after launch. The setup cost depends on how many systems are connected and how many scenarios are built, not on the size of the company: a WhatsApp bot linked to a CRM is a much smaller project than automation that also joins bookkeeping, inventory and shipping. We detailed the cost structure in our cost guide on the blog, and the proposal for your business comes after the process mapping. Alongside setup there is a monthly cost for the tools themselves, such as the CRM and the WhatsApp message provider, which depends on usage volume.',
       },
       {
         question: 'What is the difference between plain automation and automation with AI?',
@@ -1444,9 +1444,9 @@ export const servicePagesEn: Record<string, ServicePage> = {
           'Plain automation follows a fixed rule: if a form is submitted, open a lead; if a deal closes, issue an invoice. It is cheap, fast and predictable, which is why it is the foundation of most processes. AI comes in when the input is free text that a rule cannot interpret: classifying a WhatsApp enquiry, summarising a call into a CRM note, extracting an amount and date from a scanned invoice or drafting a first reply in Hebrew. In our builds every AI output passes a validation rule before it changes a record, and when confidence is low the item goes to a person. You get the flexibility without letting the model invent anything.',
       },
       {
-        question: 'Which systems do you connect to?',
+        question: 'Which systems do your business automation solutions connect to in Israel?',
         answer:
-          'The ones you already run, and in particular the Israeli ones an international integration does not know: Green Invoice (Morning), iCount, Rivhit, Hashavshevet and Priority on the accounting side, including allocation numbers and VAT; Fireberry, Powerlink, Monday, HubSpot and Zoho on the CRM side; WhatsApp Business API, Israeli card clearing, courier companies, Shopify and WooCommerce, Google Sheets and calendars. Where a system has no open API we work through scheduled file export and import. Every connection has a field mapping and a defined failure path, so a record is written once and lands in the right place.',
+          'Business automation solutions connect to the systems you already run, above all those that an international integration does not know: Green Invoice (Morning), iCount, Rivhit, Hashavshevet and Priority on the accounting side, including the allocation number and VAT; Fireberry, Powerlink, Monday, HubSpot and Zoho on the CRM side; the WhatsApp Business API, Israeli payment gateways, shipping companies, Shopify and WooCommerce, Google Sheets and calendars. When a system has no open API we work through a scheduled file export and import. Every connection gets a field mapping and failure handling, so that a piece of data is recorded once and in the right place.',
       },
       {
         question: 'Which tools do you use: Make, n8n, Zapier or code?',
@@ -2063,14 +2063,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'voice-agents',
     crumb: 'Voice AI agents & phone bots',
     eyebrow: 'Voice AI agents & phone bots',
-    heading: ['Hebrew voice AI agents for business', 'phone answering wired into your systems'],
+    heading: ['AI voice agent in Hebrew for business', 'phone answering wired into your systems'],
     subhead: 'Our voice agent service',
-    lede: 'Answering incoming calls, an after-hours line, appointment booking by phone, outbound reminder calls and a summary of every call written straight into the CRM - a voice agent that speaks Hebrew, runs on top of your existing phone system and hands over to a person the moment it should.',
+    lede: 'An AI voice agent in Hebrew that answers incoming calls, runs an after-hours line, books appointments by phone, makes outbound reminder calls and writes a summary of every call straight into the CRM. It runs on top of your existing phone system and hands over to a person the moment it should.',
     image: '/images/services-view.webp',
     action: { label: 'Request a voice agent scoping', href: '/en/contact' },
-    metaTitle: 'Hebrew Voice AI Agents for Business - Phone Answering, Booking and Reminder Calls',
+    metaTitle: 'AI Voice Agent in Hebrew for Business - Phone Answering',
     metaDescription:
-      'Hebrew voice AI agents for Israeli businesses: answering incoming calls, an after-hours line, appointment booking by phone, reminder calls, call summaries into the CRM and handoff to a person. We start with scoping and a voice quality test.',
+      'AI voice agent in Hebrew for Israeli businesses: answers incoming calls, books appointments, makes reminder calls and logs every call to your CRM.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our voice agents'],
@@ -2174,14 +2174,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     faqHeading: ['Frequently asked questions', 'about voice agents and phone bots'],
     faqEntries: [
       {
-        question: 'How is a voice agent different from a WhatsApp or chat AI agent?',
+        question: 'How is an AI voice agent in Hebrew different from a WhatsApp or chat AI agent for business?',
         answer:
-          'The principle is similar, but the channel changes everything. In chat the customer reads and types at their own pace; on the phone they expect an answer within a fraction of a second, interrupt the agent mid-sentence and speak over background noise. So a voice agent needs speech recognition, speech synthesis and turn-taking, and a shorter script. Our chat and WhatsApp agents are described on the AI agents page, and in many projects both channels share the same knowledge base and the same CRM connection. That also drives the architecture: a short response time matters more than a detailed phrasing. That difference shapes the script as well.',
+          'The principle is similar, but the channel changes everything. In chat the customer reads and types at their own pace; on the phone they expect an answer within a fraction of a second, interrupt the agent mid-sentence and speak over background noise. So an AI voice agent in Hebrew needs speech recognition, speech synthesis and turn-taking, and a shorter script than a chat agent. Our chat and WhatsApp agents are described on the AI agents page, and in many projects both channels share the same knowledge base and the same CRM connection. A short response time matters more than detailed phrasing, and that is what shapes the architecture.',
       },
       {
-        question: 'How good and accurate is the Hebrew on a call?',
+        question: 'How accurate is an AI voice agent in Hebrew on a real call?',
         answer:
-          'Hebrew speech recognition and synthesis have improved a great deal, but they are still less accurate than English. Common difficulties are personal and street names, phone and ID numbers, different accents, calls from a car or the street, and switching between Hebrew and English terms. So we test the engine on recordings from your business, ask the caller to confirm critical details, and hand over to a person when recognition is uncertain. We do not promise an accuracy figure before we have measured it. Every engine is tested on real recordings, and if it does not reach the bar agreed in advance, we swap it or narrow the range of topics the agent handles.',
+          'Hebrew speech recognition and synthesis have improved a great deal, but they are still less accurate than English. The common difficulties are personal names and street names, phone and ID numbers, different accents, a call from a car or the street, and switching between Hebrew and English terms. So we test the engine on recordings from your own business, ask for confirmation of critical details, and hand over to a person when recognition is uncertain. We do not promise an accuracy percentage before measuring: an engine that does not meet the agreed bar is replaced, or the range of topics the agent handles is narrowed.',
       },
       {
         question: 'Are we allowed to record calls handled by a voice agent?',
@@ -2934,14 +2934,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'ai-website-integration',
     crumb: 'AI integration for websites',
     eyebrow: 'AI integration for websites',
-    heading: ['AI integration for websites and apps', 'AI capabilities that work inside the site you already have'],
+    heading: ['AI chatbot and AI integration for websites', 'AI capabilities that work inside the site you already have'],
     subhead: 'Our AI integration service',
-    lede: 'A chat assistant that answers from your site content, smart search, recommendations and personalization, product descriptions and image editing from inside the admin, translation and localization, lead qualification - added to an existing or new website or app, on any platform, with full Hebrew support and cost control.',
+    lede: 'An AI chatbot for your website that answers from your site content, plus smart search, recommendations and personalization, product descriptions and image editing from inside the admin, translation and localization, and lead qualification - added to an existing or new website or app, on any platform, with full Hebrew support and cost control.',
     image: '/images/services-view.webp',
     action: { label: 'Request a fit review', href: '/en/contact' },
-    metaTitle: 'AI Integration for Websites in Israel - Chat, Smart Search and Recommendations',
+    metaTitle: 'AI Chatbot for Websites in Israel - Hebrew Chat and Search',
     metaDescription:
-      'AI integration for websites and apps in Israel: a chat assistant trained on your site content, smart search, product recommendations, content and image generation in the admin, translation and lead qualification. Works with OpenAI, Claude and Gemini on any platform.',
+      'AI chatbot for your website: answers from your own content in Hebrew, qualifies leads and hands over to a person. OpenAI, Claude and Gemini, any platform.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our AI integration'],
@@ -3045,14 +3045,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     faqHeading: ['Frequently asked questions', 'about AI integration for websites'],
     faqEntries: [
       {
-        question: 'Can AI be added to an existing website without rebuilding it?',
+        question: 'Can an AI chatbot be added to an existing website without rebuilding it?',
         answer:
-          'In most cases, yes. The capability connects to the existing site through a plugin, an embed script or an API call to our server, so there is no need to replace the platform. On WordPress or WooCommerce it is usually a plugin plus a server layer, on Shopify an app or a theme embed, and on Wix an embedded external component. On a custom-coded site or an app we integrate directly. Some platforms limit custom code, and we check that in the first conversation, before committing to a particular solution. Which route is right depends on the version of the site, the plugins already installed on it and the capability you want to add, and we confirm it in writing.',
+          'In most cases yes. An AI chatbot for a website connects to the existing site through a plugin, an embed script or an API call to our server, so there is no need to replace the platform. On a WordPress or WooCommerce site that is usually a plugin plus a server layer, on Shopify an app or a theme embed, and on Wix an external component embed. On a custom-code site or an app we connect directly. Some platforms limit custom code, and we check that in the first conversation before committing to a particular solution. The right route depends on the site version, the plugins already installed and the capability you want to add.',
       },
       {
-        question: 'How do you stop the chat from inventing answers about prices and terms?',
+        question: 'How do you stop a website AI chatbot from inventing answers about prices and terms?',
         answer:
-          'The assistant gets access only to content you approved: site pages, the catalogue, terms documents and frequently asked questions. Every answer relies on a passage found there, and if no suitable passage exists it says it has no information and offers to take contact details or connect the visitor to a person. We add written rules for sensitive topics such as discounts and commitments, and test it beforehand on dozens of questions from your business. After launch we read sample conversations and fix the sources whenever a gap shows up. The rules and sources can be updated at any stage without touching code, and your team can see which questions were asked and which were left without an answer.',
+          'The assistant gets access only to content you approved: the site pages, the catalogue, terms documents and frequently asked questions. Every answer rests on a passage found in them, and if no suitable passage exists it says it has no information and offers to take contact details or hand over to a person. We add written rules for sensitive subjects, such as discounts and commitments, and test it beforehand on dozens of questions from your business. After launch we read sample conversations and fix the sources when a gap appears. The rules and sources can be updated at any time without touching code, and your team sees which questions were asked and which went unanswered.',
       },
       {
         question: 'Which models do you work with, and is our data used for training?',
@@ -3076,18 +3076,164 @@ export const servicePagesEn: Record<string, ServicePage> = {
       },
     ],
   },
+  'privacy-compliance': {
+    id: 'privacy-compliance',
+    crumb: 'Website privacy compliance',
+    eyebrow: 'Website privacy compliance',
+    heading: ['Website privacy compliance (Amendment 13)', 'privacy implemented in code and forms'],
+    subhead: 'Our technical compliance service',
+    lede: 'A review of the forms and data your site collects, a cookie banner that blocks trackers until consent, privacy and cookie policy pages, fewer fields in forms, secure storage, tidy CRM and mailing integrations, and a flow for access and deletion requests. This is technical work on the website, alongside your lawyer and not instead of one. To start at no cost, use our free Amendment 13 website checklist and cookie policy generator.',
+    image: '/images/services-view.webp',
+    action: { label: 'Request a site privacy review', href: '/en/contact' },
+    metaTitle: 'Website Privacy Compliance in Israel (Amendment 13) - Cookie Banner, Forms and Policies',
+    metaDescription:
+      'Technical website compliance for Amendment 13 to Israel\'s Privacy Protection Law: form review, a cookie banner that blocks tracking until consent, privacy and cookie policies, security, CRM integration and request handling. Not legal advice.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our technical compliance work'],
+      lede: 'We implement on the site what you agreed with your legal adviser, and we check in the browser that it really happens, not only that the text appears on a page.',
+      outro: 'Want to know what your site collects and who receives it?',
+      action: { label: 'Request a site privacy review', href: '/en/contact' },
+      roles: [
+        {
+          id: 'not-legal',
+          title: 'Technical implementation, not legal advice',
+          art: '/images/service-page1.webp',
+          text: 'We do not decide what the law requires of your business. That is settled with a lawyer or privacy consultant, and we turn their decisions into forms, code and settings, and prepare an exact description of what the site does for them to review.',
+        },
+        {
+          id: 'verified',
+          title: 'Verified in the browser, not assumed',
+          art: '/images/service-page2.webp',
+          text: 'A banner that shows a choice while analytics load straight away does not do the job. After every change we open the developer tools, check the Network tab for what loads before consent and after it, and keep the result.',
+        },
+        {
+          id: 'minimal',
+          title: 'Less data, less risk',
+          art: '/images/service-page3.webp',
+          text: 'Data that is never collected cannot leak. We go through every field in every form and ask what happens without it, and separate a service enquiry from a newsletter sign-up, so data is used only for the purpose the person was told.',
+        },
+        {
+          id: 'documented',
+          title: 'Documentation you can hand over',
+          art: '/images/service-page4.webp',
+          text: 'You end up with a document listing the forms and tools on the site, where data flows, who the vendors are and what was configured. It is what a lawyer, an insurer or a large business customer will ask to see.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What we build',
+      heading: ['What the site compliance process covers'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'audit',
+          icon: 'analytics',
+          title: 'Form and data review',
+          text: 'A map of every form, checkout field, tracking tool and inbox that receives enquiries: what data is collected, for what purpose, where it is sent and where it is stored.',
+        },
+        {
+          id: 'consent',
+          icon: 'club',
+          title: 'A cookie banner that blocks tracking',
+          text: 'Google Tag Manager with Consent Mode, so measurement and advertising tools do not load before consent. A reject button as prominent as accept, and a footer link to change the choice.',
+        },
+        {
+          id: 'policies',
+          icon: 'catalog',
+          title: 'Privacy and cookie policies',
+          text: 'Pages that describe what the site actually does, with an update date, a short notice next to each form and a link from every page footer. The legal wording is approved by your lawyer.',
+        },
+        {
+          id: 'storage',
+          icon: 'orders',
+          title: 'Storage, access control and logging',
+          text: 'HTTPS across the whole site, a personal account for every admin user, two-step verification, role-based permissions, a backup that is tested and a record of who accessed the data.',
+        },
+        {
+          id: 'requests',
+          icon: 'sales',
+          title: 'Vendors and people\'s requests',
+          text: 'Tidy connections to the CRM and mailing tools, a list of vendors that process data, and a flow for access, correction and deletion requests with identity checks and a recorded date.',
+        },
+      ],
+      action: { label: 'Request a site privacy review', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How a project runs. Simply.'],
+      lede: 'Every stage ends with a document or a check you can be shown, so you and your legal adviser see exactly what changed on the site.',
+      steps: [
+        {
+          id: 'audit',
+          title: 'Review and mapping',
+          text: 'We go through the site and the tools connected to it and prepare a report: what data is collected, who receives it, what loads before consent and which gaps were found. The report can go straight to your lawyer.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'implement',
+          title: 'Implementation on the site',
+          text: 'We fix the forms, install the banner and the tracking block, publish the policy pages in the approved wording, harden security and connect the CRM and mailing tools properly.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'verify',
+          title: 'Verification and documentation',
+          text: 'We check in the browser that everything behaves as designed, run a sample access request from start to finish, and hand over a document that is updated whenever a new form or tool is added.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Want to know what your site collects and what loads before a visitor consents?',
+      action: { label: 'Request a site privacy review', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about website compliance with Amendment 13'],
+    faqEntries: [
+      {
+        question: 'Is this legal advice?',
+        answer:
+          'No. We do the technical work on the website: forms, the cookie banner, blocking tracking tools, security and connections to other systems. What the law requires of your business, which legal wording is right for the privacy policy, and whether you have to register a database or appoint an officer are settled with a lawyer or privacy consultant. We work alongside them: we prepare an exact description of what the site collects and who the vendors are, and implement their decisions. For a first check of your site you can use our free tool at /tools/amendment-13-website-checklist. If your lawyer asks for a change, it goes into the site without rebuilding everything from scratch.',
+      },
+      {
+        question: 'What changed in Amendment 13, and why does it touch the website?',
+        answer:
+          'Amendment 13 to the Privacy Protection Law was approved on 5 August 2024 and came into effect on 14 August 2025. Since then an online identifier counts as personal information, so measurement and advertising tools on a site are part of the picture, not only forms. Consent under the law is informed consent, and a notice next to a form should say why the details are requested and to whom they will be passed. The website is usually where data is first collected, which is why work starts there. For what applies to you, ask a lawyer. That date is the reason a policy written before it deserves a fresh check against what the site does today, rather than being assumed to be fine.',
+      },
+      {
+        question: 'Does a cookie banner actually block tracking?',
+        answer:
+          'Only if it is wired correctly. Many sites show a banner while Google Analytics and other pixels load on arrival. We configure the tools in Google Tag Manager with Consent Mode, so nothing loads before consent, and the reject button is as prominent as accept. We do not stop at the configuration: we open the browser, check the Network tab for what is sent before the click and after it, and keep a screenshot. The check is repeated whenever a new tool is added to the site. If an advertising agency adds pixels on your behalf, you should know about it, because every such pixel goes on the list.',
+      },
+      {
+        question: 'Can we prepare privacy and cookie policies without a lawyer?',
+        answer:
+          'You can prepare a good draft, but you should not skip legal review if you hold a significant database. In our free cookie policy generator, at /tools/cookie-policy-generator, you enter the tools on your site and get a detailed text. In the service itself we adapt the wording to what the site really does, including the forms and the vendors, and publish it on the right pages with the right links. The final wording should be reviewed by your lawyer, especially if you hold sensitive information. The generator does not replace advice, but it saves valuable time describing the tools and leaves only the polishing to your lawyer.',
+      },
+      {
+        question: 'How are access and deletion requests handled?',
+        answer:
+          'We set up a dedicated email address or form and name the person who handles requests. Each request is logged with its date, the requester\'s identity is verified, and we show where your systems hold data about that person: the site, the CRM, the mailing tool and email. Under the regulations, access must be allowed within 30 days, so the process should be ready in advance. We build the technical route and test it with a sample request. Whether particular data is deleted or kept, for example because of legal retention duties, is decided with your adviser. If a person asks to correct a wrong detail, it is corrected everywhere it is held, not in just one place.',
+      },
+      {
+        question: 'What do we do about vendors such as a CRM or mailing tool?',
+        answer:
+          'We start with a list: which vendor receives which data, for what purpose and where in the world it is stored. Then we connect only the fields that are needed, limit permissions by role and revoke access when a vendor or an employee leaves. An agreement with a vendor that processes data on your behalf is something you settle with your legal adviser, and we prepare the technical details for it. If vendors are outside Israel, this is stated in the privacy policy and checked against the requirements. The vendor list is updated whenever a tool is added. This way every new party that connects to the site is reviewed before it is connected rather than afterwards, and data does not spread unnoticed.',
+      },
+    ],
+  },
   'ai-search': {
     id: 'ai-search',
     crumb: 'AI search',
     eyebrow: 'AI search',
-    heading: ['Visibility in the answers', 'ChatGPT, Gemini and Google write'],
+    heading: ['ChatGPT and AI search visibility', 'in the answers ChatGPT, Gemini and Google write'],
     subhead: 'Our GEO service',
-    lede: 'More searches now end in a written answer rather than a list of links. This service asks a different question from organic SEO: not where you sit in the list, but whether the engine mentions you at all.',
+    lede: 'GEO, or promotion in ChatGPT and other AI engines, starts from a simple fact: more searches now end in a written answer rather than a list of links. This service asks a different question from organic SEO: not where you sit in the list, but whether the engine mentions you at all.',
     image: '/images/service-ai-search-hero.webp',
     action: { label: 'Request an AI visibility check', href: '/en/contact' },
-    metaTitle: 'GEO and AI Search Visibility — ChatGPT, Gemini, AI Overviews',
+    metaTitle: 'ChatGPT Visibility and GEO Services for Israeli Business',
     metaDescription:
-      'GEO and AEO services: making your business a defined entity that AI engines cite, with schema, quotable content, source presence and a visibility report.',
+      'GEO and AEO services that get your business cited by ChatGPT, Gemini and AI Overviews: entity and schema work, quotable content and a visibility report.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our AI search work'],
@@ -3191,14 +3337,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     faqHeading: ['Frequently asked questions', 'about AI search visibility'],
     faqEntries: [
       {
-        question: 'What is GEO, and how does it differ from ordinary SEO?',
+        question: 'What is GEO (promotion in ChatGPT and AI search), and how does it differ from ordinary SEO?',
         answer:
-          'Organic SEO competes for a position in a list of results. GEO, also called AEO, is about what happens when there is no list but a single written answer - in Google AI Overviews, in ChatGPT or in Gemini. There is no first or second place there; there is a source that was cited and a source that was not. A good deal of the technical groundwork is shared: a fast site, a clear structure and correct schema help both. The difference is emphasis - an engine composing an answer is looking for a discrete fact with a source behind it, not a page tuned to a keyword.',
+          'Organic SEO fights for a place in a list of results. GEO, also called AEO, deals with what happens when there is no list but a single written answer: in Google AI Overviews, in ChatGPT or in Gemini. There is no first place and no second place there, only a source that was quoted and a source that was not. A large part of the technical work is shared by the two worlds: a fast site, a clear structure and valid schema help both. The difference is in emphasis. An engine composing an answer looks for a discrete fact with a source, not a page tuned to a keyword, so GEO builds a clear entity and content that is easy to quote.',
       },
       {
-        question: 'Can you actually influence what ChatGPT says?',
+        question: 'How does promotion in ChatGPT work, and can you actually influence what it says?',
         answer:
-          'You cannot control the answer, and anyone claiming otherwise is overstating it. You can influence what the engine finds about you, and that part is genuinely in your hands: how clearly you are identified, whether your business details match everywhere, whether a page answers the question directly, and whether external sources corroborate what you claim. An engine composing an answer avoids a source it is not confident in. The practical leverage is therefore on the engine confidence in you rather than on its phrasing - and that is exactly where the difference between being named and being left out sits.',
+          'Promotion in ChatGPT is not control over the answer, and anyone who says otherwise is not being accurate. You can influence what the engine finds about you, and that is within your control: how clearly it is established who you are, whether your business details are identical everywhere, whether you have a page that answers the question directly, and whether external sources exist that confirm what you claim. An engine composing an answer avoids a source it is not sure of, so the practical effect is on the engine\'s confidence in you, not on its phrasing. That is exactly the line between being mentioned and disappearing.',
       },
       {
         question: 'How do you measure success when there are no rankings?',

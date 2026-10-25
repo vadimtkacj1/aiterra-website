@@ -342,6 +342,22 @@ export const tools: ToolEntry[] = [
     icon: 'shield',
   },
   {
+    path: '/tools/amendment-13-website-checklist',
+    title: 'האם האתר עומד בתיקון 13?',
+    description: 'צ׳קליסט לבדיקת אתר מול תיקון 13 לחוק הגנת הפרטיות: טפסים, עוגיות, אבטחה וספקים, עם ציון ורשימת תיקונים.',
+    category: 'legal',
+    reviewed: '2026-10-25',
+    icon: 'search',
+  },
+  {
+    path: '/tools/cookie-policy-generator',
+    title: 'מחולל מדיניות עוגיות',
+    description: 'מדיניות עוגיות בעברית לפי הכלים שפועלים באתר, כמו Google Analytics ו-Meta Pixel, להעתקה או להורדה.',
+    category: 'legal',
+    reviewed: '2026-10-25',
+    icon: 'lock',
+  },
+  {
     path: '/tools/accessibility-statement-generator',
     title: 'מחולל הצהרת נגישות',
     description: 'הצהרת נגישות לאתר לפי תקנות הנגישות, בעברית או באנגלית, מוכנה להעתקה.',

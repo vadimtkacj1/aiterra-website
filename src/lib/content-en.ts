@@ -17,6 +17,7 @@ export const EN_SERVICE_SLUGS = [
   'llm-integration',
   'data-analytics',
   'ai-consulting',
+  'privacy-compliance',
   'ai-website-integration',
   'mobile-app-development',
   'desktop-app-development',
@@ -423,6 +424,24 @@ export const contentEn: Partial<V2Content> = {
       action: { label: 'Computer vision', href: '/en/services/computer-vision' },
     },
     {
+      id: 'privacy-compliance',
+      label: 'Privacy compliance',
+      tags: [
+        'Form and data review',
+        'Cookie banner and tracking block',
+        'Privacy policy',
+        'Cookie policy',
+        'Security and access control',
+        'Access and deletion requests',
+      ],
+      question: 'What is different about our technical compliance work?',
+      paragraphs: [
+        'We start by reviewing what the site actually collects: the forms, the measurement tools and the vendors. For the cookie banner we check in the browser that tracking tools really do not load before consent, rather than settling for a banner that merely appears.',
+        'This is technical work done alongside your lawyer and not instead of one: we implement their decisions and hand over tidy documentation of forms, vendors and security.',
+      ],
+      action: { label: 'Privacy compliance', href: '/en/services/privacy-compliance' },
+    },
+      {
       id: 'ai-website-integration',
       label: 'AI website integration',
       tags: [
@@ -821,6 +840,7 @@ export const contentEn: Partial<V2Content> = {
           { label: 'Desktop applications', href: '/en/services/desktop-app-development' },
           { label: 'DevOps & cloud', href: '/en/services/devops-cloud' },
           { label: 'AI website integration', href: '/en/services/ai-website-integration' },
+          { label: 'Privacy compliance', href: '/en/services/privacy-compliance' },
           { label: 'All services', href: '/en/services' },
         ],
       },
@@ -1442,6 +1462,21 @@ export const contentEn: Partial<V2Content> = {
         ],
         text: 'Recognition in images, scans and video - from Hebrew invoices and documents to defects on a production line - tested on your own images and feeding results into your systems.',
         action: { label: 'Learn more', href: '/en/services/computer-vision' },
+      },
+      {
+        id: 'privacy-compliance',
+        title: 'Privacy compliance',
+        image: '/images/services-view.webp',
+        tags: [
+          'Form and data review',
+          'Cookie banner and tracking block',
+          'Privacy policy',
+          'Cookie policy',
+          'Security and access control',
+          'Access and deletion requests',
+        ],
+        text: 'Cookies, forms, policies and security',
+        action: { label: 'Learn more', href: '/en/services/privacy-compliance' },
       },
       {
         id: 'ai-website-integration',

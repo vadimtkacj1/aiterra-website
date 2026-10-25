@@ -17,6 +17,9 @@ type PostOverride = {
 export const postsEn: Record<string, PostOverride> = {
   'best-crm-small-business-israel': {
     title: 'Best CRM for Small Business in Israel: 4 Compared',
+    seoTitle: 'Best CRM Software for Local Israeli Teams: Monday, Fireberry, HubSpot, Zoho',
+    seoDescription:
+      'Compare four CRMs for small teams in Israel: Hebrew support, Green Invoice and Hashavshevet links, per-user pricing and which one fits your business.',
     excerpt:
       'Monday, Fireberry, HubSpot and Zoho compared for Israeli small businesses: pricing, Hebrew support, invoicing links and who each one fits.',
     tags: ['CRM', 'Small business', 'Fireberry', 'Monday', 'Automation'],
@@ -32,8 +35,8 @@ All four answer the same basic need — collecting leads, tracking deals and aut
 
 | System | Entry price (per user, per month) | Hebrew support | Israeli invoicing link |
 |---|---|---|---|
-| Monday CRM | ~$12–15 | Partial | Via integration |
-| Fireberry | ~₪50–150 | Full | Built in (Green Invoice / Hashavshevet) |
+| Monday CRM | From about €12 (Basic, annual billing, per monday.com) | Partial | Via integration |
+| Fireberry | Hebrew plans ₪120–200 plus VAT, 3-user minimum (per fireberry.com) | Full | Accounting documents and Hashavshevet export (verify Green Invoice link with the vendor) |
 | HubSpot | Free – $15+ | Partial | Via integration |
 | Zoho CRM | ~$14–40 | Partial | Via integration |
 
@@ -50,7 +53,7 @@ There is no one-size-fits-all answer. Here is the quick match by type of busines
 
 ## What does a CRM cost a small business, and what does the real price include?
 
-The list price is only part of the picture. Licences run from roughly ₪50 per user per month on Fireberry up to $12–40 per user per month on the global systems, and HubSpot has a free tier to start on. The real cost, though, also covers setup, defining the processes, connecting the systems you already use and training the team. A small business that plans this properly up front saves itself an expensive system migration later on.
+The list price is only part of the picture. Licences run from about ₪120 per user per month on Fireberry's Hebrew plans (plus VAT, three-user minimum) and about €12 per seat per month on monday CRM, up to $14–40 on some global systems, and HubSpot has a free tier to start on. The real cost, though, also covers setup, defining the processes, connecting the systems you already use and training the team. A small business that plans this properly up front saves itself an expensive system migration later on.
 
 ## What matters most when an Israeli business chooses?
 
@@ -88,7 +91,7 @@ We are not the ambassadors of any one platform. We look at your processes and re
         },
         {
           q: 'What does a CRM cost a small business?',
-          a: 'Prices run from about ₪50 per user per month on Fireberry to $12–40 per user per month on the global systems, and HubSpot also has a free tier to start on. Remember that the real cost includes setup, process configuration, integrations and training the team, not only the monthly subscription.',
+          a: 'Prices run from about ₪120 per user per month on the Fireberry Hebrew plans (plus VAT, three-user minimum) and about €12 per seat on monday CRM, up to $14–40 on some global systems, and HubSpot also has a free tier to start on. Remember that the real cost includes setup, process configuration, integrations and training the team, not only the monthly subscription.',
         },
         {
           q: 'Is it worth connecting the CRM to WhatsApp and to the website?',
