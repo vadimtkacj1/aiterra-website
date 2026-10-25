@@ -304,14 +304,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'development',
     crumb: 'Custom software',
     eyebrow: 'Custom platforms',
-    heading: ['Custom software and CRM development', 'built around your workflow'],
+    heading: ['Building a business system', 'a custom system instead of Excel'],
     subhead: 'Our platform engineering practice',
-    lede: 'Portals, dashboards, internal tools and the integrations between them - engineered for the operations that off-the-shelf software cannot cover, and designed to be extended rather than replaced.',
+    lede: 'Building a business system means developing a custom management system, CRM or portal around your own processes, so spreadsheets, forms and scattered messages are replaced by one place with permissions, statuses and reports - engineered for the operations that off-the-shelf software cannot cover, and designed to be extended rather than replaced.',
     image: '/images/service-dev-hero.webp',
     action: { label: 'Discuss your platform', href: '/en/contact' },
-    metaTitle: 'Custom Software and CRM Development in Israel',
+    metaTitle: 'Custom Business System Development - Replace Excel with Your Own System',
     metaDescription:
-      'Custom software and CRM development in Israel: client portals, dashboards, workflow automation and API integrations, built in Next.js, Node and PostgreSQL.',
+      'Building a custom business system in Israel: management systems, CRM and portals that replace Excel and scattered forms, built in Next.js, Node and PostgreSQL.',
     advantages: {
       eyebrow: 'OUR ADVANTAGES',
       heading: ['What sets our platform work apart'],
@@ -415,9 +415,9 @@ export const servicePagesEn: Record<string, ServicePage> = {
     faqHeading: ['Before we start', 'a few things worth knowing.'],
     faqEntries: [
       {
-        question: 'How is a custom platform different from off-the-shelf software?',
+        question: 'What does building a business system involve?',
         answer:
-          'Off-the-shelf software is the right answer whenever the process is standard - accounting, email, payroll - and we will say so rather than sell you a build. A custom platform earns its cost when the process is genuinely specific to how you compete, or when you are already paying several subscriptions plus manual labour to bridge the gaps between them. The clearest signal that the threshold has been crossed is somebody on the team retyping the same record into a second system, or nobody being able to state the status of anything without asking a particular person. Custom means the data model, screens, permissions and automations follow how you work, rather than your process being reshaped to fit a product roadmap you do not control.',
+          'Building a business system means developing a management system, CRM, portal or app around the way your business really works, instead of reshaping the business to fit off-the-shelf software. The data model, screens, permissions and automations follow your current process, and the code is delivered to you at the end. Off-the-shelf software is the right answer whenever the process is standard - accounting, email, payroll - and we say so rather than sell you a build. A custom system earns its cost when you pay for several subscriptions plus manual work to bridge the gaps, or when the process is specific to how you compete.',
       },
       {
         question: 'What integrations can you build?',
@@ -435,9 +435,9 @@ export const servicePagesEn: Record<string, ServicePage> = {
           'Yes. The repository, the infrastructure accounts and every credential are yours, and the deployment pipeline is handed over with them. We also document the architecture, the data model and the deployment process, so another team could pick the system up without reverse-engineering it first - which is what makes the ownership meaningful rather than nominal. Nothing stops working if you stop working with us, and no licence key sits in our name. This matters more with an internal platform than with a website, because a system your operations depend on daily is the worst possible thing to be locked out of, and undocumented custom software is a well-known way for businesses to end up dependent on a single supplier.',
       },
       {
-        question: 'What happens to our existing data?',
+        question: 'How do we move from Excel to a system without disrupting work?',
         answer:
-          'Migration is planned as part of the project rather than treated as an afterthought, because it is where these projects most often go wrong. We map the existing data wherever it lives - a legacy system, a set of spreadsheets, or both - then clean and transform it, resolve duplicates and decide what is worth carrying across at all. Trial migrations run against a staging environment so the count and the content can be verified before anything is committed, and the old system stays available in parallel until the new one has been checked against it. Data that has accumulated for years in spreadsheets is rarely as consistent as anyone expects, and finding that out during a trial run is considerably cheaper than finding it out afterwards.',
+          'We start by mapping the spreadsheets: which columns are really used, who fills them in, which formulas hold the process together and which mistakes keep repeating. We then build a system with the same fields and reports, so the team recognises what it sees, and add the permissions, statuses and alerts a spreadsheet cannot give. Existing data is imported to a staging environment and checked against the original file, and the team moves over gradually while the spreadsheet stays available until everything matches. Data that built up for years in spreadsheets is rarely as consistent as anyone expects, and finding that out in a trial run is far cheaper than finding it out afterwards.',
       },
       {
         question: 'Who maintains it after launch?',
@@ -3219,6 +3219,152 @@ export const servicePagesEn: Record<string, ServicePage> = {
         question: 'What do we do about vendors such as a CRM or mailing tool?',
         answer:
           'We start with a list: which vendor receives which data, for what purpose and where in the world it is stored. Then we connect only the fields that are needed, limit permissions by role and revoke access when a vendor or an employee leaves. An agreement with a vendor that processes data on your behalf is something you settle with your legal adviser, and we prepare the technical details for it. If vendors are outside Israel, this is stated in the privacy policy and checked against the requirements. The vendor list is updated whenever a tool is added. This way every new party that connects to the site is reviewed before it is connected rather than afterwards, and data does not spread unnoticed.',
+      },
+    ],
+  },
+  'ai-built-app-completion': {
+    id: 'ai-built-app-completion',
+    crumb: 'Finish your AI-built app',
+    eyebrow: 'AI-built app completion',
+    heading: ['Finish and launch your AI-built app', 'from a Lovable or Bolt prototype to a product in production'],
+    subhead: 'Our completion and launch service',
+    lede: 'You started a site or app in Lovable, Bolt, v0, Replit, Cursor or Base44 and need a developer to finish it: code review, security, database, payments, deployment to production, performance, Hebrew RTL, accessibility, SEO and maintenance - on any stack, without starting from scratch.',
+    image: '/images/services-view.webp',
+    action: { label: 'Request a project review', href: '/en/contact' },
+    metaTitle: 'Finish Your AI-Built App - Lovable, Bolt, Cursor to Production',
+    metaDescription:
+      'A developer to finish and launch apps built in Lovable, Bolt, v0, Replit, Cursor or Base44: code and security review, database, payments, deployment, Hebrew RTL and SEO.',
+    advantages: {
+      eyebrow: 'Why us',
+      heading: ['What is different about our completion work'],
+      lede: 'AI tools get you fast to a prototype that looks like a product, but between a prototype and a system that serves real customers there is a gap of security, data and operations. We close that gap without throwing away what is already built.',
+      outro: 'Want to know what your project still needs before it can go live?',
+      action: { label: 'Request a project review', href: '/en/contact' },
+      roles: [
+        {
+          id: 'review-first',
+          title: 'A review before any commitment',
+          art: '/images/service-page1.webp',
+          text: 'We read the code, run it and see what works, what is fragile and what has to be rewritten. You get findings ranked by severity and a work plan, and only then decide whether to continue.',
+        },
+        {
+          id: 'any-stack',
+          title: 'Any tool, any stack',
+          art: '/images/service-page2.webp',
+          text: 'A project created in Lovable, Bolt, v0, Replit, Cursor or Base44, on React, Next.js, Supabase, Firebase or your own server. We continue in the technology that exists and replace a component only with a written reason.',
+        },
+        {
+          id: 'production-grade',
+          title: 'A production standard',
+          art: '/images/service-page3.webp',
+          text: 'Secrets kept out of the code, permissions and data access rules, backups, monitoring and a deployment you can roll back. The things an AI tool does not stop to ask about.',
+        },
+        {
+          id: 'hebrew-ready',
+          title: 'Hebrew, accessibility and SEO',
+          art: '/images/service-page4.webp',
+          text: 'Right-to-left layout on every screen, a Hebrew font, Israeli date and currency formats, accessibility under IS 5568 and a structure Google can crawl, so the product is ready for the Israeli market.',
+        },
+      ],
+    },
+    system: {
+      eyebrow: 'What is included',
+      heading: ['What we finish before you go live'],
+      art: '/images/service-cms.webp',
+      features: [
+        {
+          id: 'code-security',
+          icon: 'analytics',
+          title: 'Code and security review',
+          text: 'A check of API keys and secrets, login and permissions, input validation, file uploads and vulnerable dependencies, with findings ranked by severity and each one fixed.',
+        },
+        {
+          id: 'database',
+          icon: 'catalog',
+          title: 'Database and access rules',
+          text: 'A correct table structure, row level security (RLS), backups and data moves between environments, so a user sees only their own data and never loses it.',
+        },
+        {
+          id: 'payments',
+          icon: 'sales',
+          title: 'Payments, invoices and integrations',
+          text: 'Connection to an Israeli or international payment provider with webhooks and server-side payment verification, invoice issuing, and links to your CRM, email and the services you already use.',
+        },
+        {
+          id: 'deploy',
+          icon: 'orders',
+          title: 'Production deployment and performance',
+          text: 'Domain, SSL, staging and live environments, secret variables, automated deployment with rollback, and work on load times and slow queries.',
+        },
+        {
+          id: 'handover',
+          icon: 'club',
+          title: 'Handover and maintenance',
+          text: 'Short documentation, code and domain in your name, monitoring and security updates, and the option to keep building with the same team or on your own with AI tools.',
+        },
+      ],
+      action: { label: 'Request a project review', href: '/en/contact' },
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      heading: ['How a project runs. Simply.'],
+      lede: 'We start by understanding what was built, fix what is critical, and launch in stages.',
+      steps: [
+        {
+          id: 'audit',
+          title: 'Review and priorities',
+          text: 'We get access to the repository and accounts, read and run the code, and return findings with a work plan by importance: what blocks launch, what is worth fixing and what can wait.',
+          art: '/images/howitwork1.webp',
+        },
+        {
+          id: 'harden',
+          title: 'Fix and complete',
+          text: 'We close security, database, payment and integration gaps, add Hebrew and accessibility, and show working versions along the way so direction can be corrected in time.',
+          art: '/images/howitwork2.webp',
+        },
+        {
+          id: 'launch',
+          title: 'Launch and handover',
+          text: 'We deploy to staging first and then to the live site, confirm that everything is measured and monitored, and hand over documentation and access. After launch you can continue with maintenance or stop.',
+          art: '/images/howitwork3.webp',
+        },
+      ],
+    },
+    banner: {
+      heading: 'Is your project almost ready and in need of a developer to finish it?',
+      action: { label: 'Request a project review', href: '/en/contact' },
+    },
+    faqHeading: ['Frequently asked questions', 'about finishing an AI-built app'],
+    faqEntries: [
+      {
+        question: 'Can you finish a project built in Lovable, Bolt or Cursor without rebuilding everything?',
+        answer:
+          'In most cases yes. We start with a code review that checks what already works, what is fragile and what has to be rewritten, and we show you the picture before you commit. Code generated by AI tools is usually a useful base: the screens and the flow exist, but it typically lacks proper user authentication, error handling, tests and a structure that can keep growing. If the base is stable we build on it, and if not we replace only the problem parts. We recommend a full rebuild only when it costs less than repairing what is there, and we say so openly.',
+      },
+      {
+        question: 'What does the code and security review cover for an AI-built app?',
+        answer:
+          'The review covers what puts a real business at risk: API keys and secrets left in the code or on the client side, login and permissions, row level security (RLS) in the database, input validation, file uploads, exposure of personal data and dependencies with known vulnerabilities. You receive findings ranked by severity and a note of what was fixed in each. AI-generated code often leaves a database readable by anyone who knows how to ask for the data, which is why this is the first step. If the app holds personal data we also account for the principles of Amendment 13 to the Privacy Protection Law.',
+      },
+      {
+        question: 'How long does it take to get the project into production?',
+        answer:
+          'The time depends on the size and condition of the code, not on the number of screens. After the review you get a work list in priority order with a schedule for each stage: security and database, payments and login, deployment, performance, Hebrew and accessibility. What stretches a project is third-party accounts that are not yet opened, business decisions not yet made and the number of integrations. We launch in stages, first a staging environment and then the live site, so it is possible to return to an earlier version. A proposal with dates comes after the review, not before it.',
+      },
+      {
+        question: 'Which tools and stacks do you work with?',
+        answer:
+          'We work on any stack and do not require you to move to our technology. Projects that come from Lovable, Bolt, v0, Replit, Cursor or Base44 are usually built on React or Next.js with Supabase or Firebase as the back end, and we continue with them as they are. If there is a good reason to replace a component, for example a database that will not suit growth, we present the reason in writing together with the alternatives and wait for your decision. The code stays in your repository and your accounts, so any other developer can pick it up later.',
+      },
+      {
+        question: 'What about Hebrew, RTL, accessibility and SEO in an AI-generated app?',
+        answer:
+          'AI tools usually produce a left-to-right interface with English fonts and dates. We check every screen right to left, fix the direction of forms, icons and tables, add a Hebrew font and adapt the format of dates, currency and numbers. We also check accessibility under IS 5568 and SEO: headings, descriptions, sitemap, load speed and the share preview. An app built as a single page rendered on the client is not always crawled well by Google, so we also check server-side rendering and fix it where the pages need to appear in search results. Both are easy to miss when the screen looks fine in the browser.',
+      },
+      {
+        question: 'Who owns the code, and what happens after launch?',
+        answer:
+          'The code, the Git repository, the database and the domain stay in your ownership. At the end you receive short documentation, an explanation of the deployment and of the secret variables, and the option to continue with us on maintenance: monitoring, security updates, backups and bug fixes. You can also stop after the handover and carry on alone or with your AI tools, and the code will be tidy enough to do so safely. Building new features is quoted separately after a short specification, so that the scope of each piece of work is clear before it starts. You decide what comes next.',
       },
     ],
   },
