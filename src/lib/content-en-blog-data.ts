@@ -1679,9 +1679,9 @@ This is the great advantage: first leads can arrive within days. But there is a 
   },
 
   'seo-cost-monthly-israel': {
-    title: 'SEO Cost per Month in Israel: 2026 Prices',
+    title: 'SEO Services in Israel: Monthly Cost in 2026',
     excerpt:
-      'What SEO really costs per month in Israel in 2026: real price ranges by business type, what each tier includes, and how long results take.',
+      'SEO services in Israel cost ₪1,500–8,000 a month in 2026. Price ranges by business type, what each tier includes, and how long results take.',
     tags: ['SEO', 'Search marketing', 'Pricing', 'Small business', 'Digital marketing'],
     content: `**In short (TL;DR):** Organic search marketing (SEO) for a small business in Israel typically costs between ₪1,500 and ₪8,000 a month in 2026 — depending on how competitive the field is and how much work is involved. It is an ongoing monthly investment rather than a one-off payment, and meaningful results usually arrive after three to six months.
 

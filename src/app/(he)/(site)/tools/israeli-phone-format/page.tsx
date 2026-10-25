@@ -13,7 +13,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/israeli-phone-format'
 const TITLE = 'קידומת ישראל +972: המרת מספר לפורמט בינלאומי'
-const META_TITLE = 'קידומת ישראל +972 לנייד, לוואטסאפ ולחו״ל'
+const META_TITLE = 'מה הקידומת של ישראל? 972+ לנייד ולוואטסאפ'
 const DESCRIPTION =
   'הקידומת של ישראל היא 972. ממירים מספר לפורמט בינלאומי לוואטסאפ, לחיוג מחו״ל ול-CRM, או מנקים רשימה שלמה מכפילויות לקובץ CSV. חינם ובלי הרשמה.'
 
