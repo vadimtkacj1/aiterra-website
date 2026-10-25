@@ -97,3 +97,11 @@ jobs:
             echo "Deploy done"
             docker compose ps
           EOF
+      - name: Ping IndexNow
+        continue-on-error: true
+        run: |
+          for i in $(seq 1 30); do
+            [ "$(curl -s -o /dev/null -w '%{http_code}' https://www.aiterra.co.il/sitemap.xml)" = 200 ] && break
+            sleep 10
+          done
+          node scripts/indexnow.mjs

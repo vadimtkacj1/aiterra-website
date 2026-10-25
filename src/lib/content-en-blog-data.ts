@@ -25,6 +25,8 @@ export const postsEn: Record<string, PostOverride> = {
     tags: ['CRM', 'Small business', 'Fireberry', 'Monday', 'Automation'],
     content: `**TL;DR:** There is no single best CRM, only the one that fits your business. Monday has a visual interface that is quick to learn; Fireberry, an Israeli platform, leads on Hebrew support and on built-in links to Green Invoice and Hashavshevet; HubSpot suits a business that wants to start free and grow into the paid tiers; Zoho offers the most features per shekel. The right choice depends on your budget, on whether you need Israeli integrations, and on how complex your processes are.
 
+*Last updated: October 2026*
+
 A CRM is the heart of customer management in a business: every lead, conversation and deal held in one place. With dozens of options on the market it is easy to get lost. This guide compares the four systems most Israeli small businesses shortlist, with the emphasis on what actually matters here — Hebrew support and integration with Israeli invoicing software.
 
 ![A business owner comparing CRM systems for a small business in Israel](/images/blog/best-crm-small-business-israel.webp)
@@ -40,7 +42,7 @@ All four answer the same basic need — collecting leads, tracking deals and aut
 | HubSpot | Free – $15+ | Partial | Via integration |
 | Zoho CRM | ~$14–40 | Partial | Via integration |
 
-*Prices are correct for 2026 and vary by plan and by number of users.*
+*Prices are correct for 2026 and vary by plan and by number of users. Fireberry prices are quoted plus VAT; the [VAT calculator](/en/tools/vat-calculator) shows the total with VAT included.*
 
 ## Which system suits which business?
 
@@ -67,7 +69,7 @@ A successful rollout starts by mapping the process you already run: where leads 
 
 ## How we approach CRM at Aiterra
 
-We are not the ambassadors of any one platform. We look at your processes and recommend the CRM that fits the business and the budget, then connect it to WhatsApp, to the website and to your invoicing software so that everything talks automatically. The result is one system working for you and holding every lead, rather than another tool that needs maintenance and manual typing.
+We are not the ambassadors of any one platform. We look at your processes and recommend the CRM that fits the business and the budget, then connect it to WhatsApp, to the [website](/en/services/web-development) and to your invoicing software so that everything talks automatically. Where the connection needs something custom, an [AI agent](/en/services/ai-agents) can take first replies on WhatsApp and pass the lead to the CRM. The result is one system working for you and holding every lead, rather than another tool that needs maintenance and manual typing.
 
 ---
 
@@ -87,15 +89,15 @@ We are not the ambassadors of any one platform. We look at your processes and re
         },
         {
           q: 'Which CRM connects to Green Invoice and Hashavshevet?',
-          a: 'Fireberry and Israeli platforms such as Powerlink offer built-in connections to Green Invoice, Hashavshevet and iCount. On the global systems — Monday, HubSpot and Zoho — the connection is possible through a dedicated integration or a middleware tool, but it usually needs a custom setup before it runs smoothly.',
+          a: 'The CRMs that connect to Green Invoice and Hashavshevet out of the box are Fireberry and Israeli platforms such as Powerlink, which offer built-in connections to Green Invoice, Hashavshevet and iCount. On the global systems — Monday, HubSpot and Zoho — the connection is possible through a dedicated integration or a middleware tool, but it usually needs a custom setup before it runs smoothly.',
         },
         {
           q: 'What does a CRM cost a small business?',
-          a: 'Prices run from about ₪120 per user per month on the Fireberry Hebrew plans (plus VAT, three-user minimum) and about €12 per seat on monday CRM, up to $14–40 on some global systems, and HubSpot also has a free tier to start on. Remember that the real cost includes setup, process configuration, integrations and training the team, not only the monthly subscription.',
+          a: 'A CRM for a small business in Israel costs from about ₪120 per user per month on the Fireberry Hebrew plans (plus VAT, three-user minimum) and about €12 per seat on monday CRM, up to $14–40 on some global systems, and HubSpot also has a free tier to start on. Remember that the real cost includes setup, process configuration, integrations and training the team, not only the monthly subscription.',
         },
         {
           q: 'Is it worth connecting the CRM to WhatsApp and to the website?',
-          a: 'Very much so. When the website form, WhatsApp and the CRM talk to each other automatically, every lead is recorded immediately, with no manual typing and nothing slipping through the cracks. It is one of the highest-return connections a small business can make, because it saves expensive time and prevents lost prospects.',
+          a: 'Connecting the CRM to WhatsApp and to the website is very much worth it. When the website form, WhatsApp and the CRM talk to each other automatically, every lead is recorded immediately, with no manual typing and nothing slipping through the cracks. It is one of the highest-return connections a small business can make, because it saves expensive time and prevents lost prospects.',
         },
         {
           q: 'What is the difference between Fireberry and Monday?',
@@ -1688,6 +1690,8 @@ This is the great advantage: first leads can arrive within days. But there is a 
     tags: ['SEO', 'Search marketing', 'Pricing', 'Small business', 'Digital marketing'],
     content: `**In short (TL;DR):** Organic search marketing (SEO) for a small business in Israel typically costs between ₪1,500 and ₪8,000 a month in 2026 — depending on how competitive the field is and how much work is involved. It is an ongoing monthly investment rather than a one-off payment, and meaningful results usually arrive after three to six months.
 
+*Last updated: October 2026*
+
 SEO for a small business in Israel typically costs between ₪1,500 and ₪8,000 a month in 2026, depending on the level of competition in the field and the scope of the work. A local business in an uncompetitive niche is usually well served by a plan of ₪1,500–3,500 a month; a competitive field, or nationwide coverage, calls for ₪3,500–8,000 and up. SEO is an ongoing investment, not a one-off payment — and results generally arrive after three to six months.
 
 ![An organic traffic growth chart — how much monthly SEO costs for a small business in Israel](/images/blog/seo-cost-monthly-israel.webp)
@@ -1728,8 +1732,9 @@ This is the most important question, and the honest answer is: patience. First s
 
 - **Insist on transparent reporting.** A monthly report with positions, organic traffic and leads — not just a note that somebody worked on the site.
 - **Check that real content is being produced.** SEO without new content is usually SEO that is not moving.
+- **Know what you are paying in total.** Quotes are often given before VAT; the [VAT calculator](/en/tools/vat-calculator) shows the figure with VAT included.
 - **Start with keyword research.** Without knowing what customers are searching for, everything else is guesswork. We went into this in the [keyword research guide](/en/blog/keyword-research-guide).
-- **Think about the next generation of search as well.** Today you are not optimising for Google alone, but also for answers produced by artificial intelligence. We covered that in the [GEO guide](/en/blog/geo-ai-search-optimization).
+- **Think about the next generation of search as well.** Today you are not optimising for Google alone, but also for answers produced by artificial intelligence. We covered that in the [GEO guide](/en/blog/geo-ai-search-optimization), and our [AI search optimisation service](/en/services/ai-search) does the work.
 
 Before choosing an SEO supplier, it is worth reading [the guide to choosing SEO services](/en/blog/seo-services) — it will save you a year of wasted budget.
 
@@ -1751,11 +1756,11 @@ Before choosing an SEO supplier, it is worth reading [the guide to choosing SEO 
         },
         {
           q: 'Why is SEO a monthly payment rather than a one-off?',
-          a: 'Because the work never ends: competitors keep publishing content, the algorithm updates and search intent shifts. SEO that stops erodes gradually — positions won with effort slide as competitors overtake you. The monthly payment holds the rankings you have and keeps building on them, which is why SEO is better understood as building an ongoing asset than as a one-off expense.',
+          a: 'SEO is a monthly payment rather than a one-off because the work never ends: competitors keep publishing content, the algorithm updates and search intent shifts. SEO that stops erodes gradually — positions won with effort slide as competitors overtake you. The monthly payment holds the rankings you have and keeps building on them, which is why SEO is better understood as building an ongoing asset than as a one-off expense.',
         },
         {
           q: 'How long does it take to see results from SEO?',
-          a: 'First signs usually appear within three to four months, and meaningful results within six to twelve. The pace depends on the competition in your field, the age of the domain, and the volume of content and links. Anyone promising first place on Google within a week, or guaranteeing a ranking at all, is selling an illusion — Google itself states that rankings cannot be guaranteed.',
+          a: 'SEO results usually start with first signs within three to four months, and meaningful results arrive within six to twelve. The pace depends on the competition in your field, the age of the domain, and the volume of content and links. Anyone promising first place on Google within a week, or guaranteeing a ranking at all, is selling an illusion — Google itself states that rankings cannot be guaranteed.',
         },
         {
           q: 'What is the difference between SEO and paid advertising?',
@@ -1763,7 +1768,7 @@ Before choosing an SEO supplier, it is worth reading [the guide to choosing SEO 
         },
         {
           q: 'What is included in a monthly SEO plan?',
-          a: 'A typical monthly plan covers technical optimisation of the site, writing content and service pages, building links and authority, and transparent monthly reporting on positions and organic traffic. The larger the budget, the more content can be produced and the more competitive the keywords that can be targeted. The emphasis should be on business results — leads and sales — and not on rankings alone.',
+          a: 'A typical monthly SEO plan covers technical optimisation of the site, writing content and service pages, building links and authority, and transparent monthly reporting on positions and organic traffic. The larger the budget, the more content can be produced and the more competitive the keywords that can be targeted. The emphasis should be on business results — leads and sales — and not on rankings alone.',
         },
       ],
     },
