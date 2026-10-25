@@ -15,6 +15,7 @@ import { applyProjectEn } from '@/lib/content-en-projects'
 import { getV2ContentEn } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
+import { projectMetaTitle } from '@/lib/project-summary'
 import { breadcrumbList, projectSchema } from '@/lib/schema'
 
 type Params = { params: Promise<{ slug: string }> }
@@ -30,11 +31,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const base = getProjectBySlug(slug)
   if (!base) return {}
   const project = applyProjectEn(base)
-  const namedTitle = project.title.includes('—')
-    ? project.title
-    : `${project.title} — ${project.category} case study`
   return pageMetadata({
-    title: project.metaTitle || namedTitle,
+    title: project.metaTitle || projectMetaTitle(project, 'en'),
     description:
       project.metaDescription ||
       project.heroDescription ||
@@ -69,6 +67,8 @@ export default async function EnProjectPage({ params }: Params) {
           tags: project.tags,
           launchedAt: project.launchedAt,
           liveSiteUrl: project.liveSiteUrl || project.externalUrl,
+          technology: project.technology,
+          locale: 'en',
         })}
       />
       <JsonLd

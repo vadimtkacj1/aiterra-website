@@ -139,6 +139,8 @@ export function projectSchema({
   tags,
   launchedAt,
   liveSiteUrl,
+  technology,
+  locale = 'he',
 }: {
   slug: string
   title: string
@@ -148,8 +150,10 @@ export function projectSchema({
   tags?: string[]
   launchedAt?: string
   liveSiteUrl?: string
+  technology?: string
+  locale?: 'he' | 'en'
 }) {
-  const url = `${SITE_URL}/projects/${slug}`
+  const url = `${SITE_URL}${locale === 'en' ? '/en' : ''}/projects/${slug}`
   return {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
@@ -157,11 +161,14 @@ export function projectSchema({
     name: title,
     description: toPlainText(description),
     url,
-    inLanguage: 'he',
+    inLanguage: locale,
+    author: { '@id': ORG_ID },
+    about: { '@id': ORG_ID },
     creator: { '@id': ORG_ID },
     provider: { '@id': ORG_ID },
     ...(image ? { image: abs(image) } : {}),
     ...(category ? { genre: category } : {}),
+    ...(technology ? { abstract: technology } : {}),
     ...(tags?.length ? { keywords: tags.join(', ') } : {}),
     ...(launchedAt ? { datePublished: launchedAt } : {}),
     ...(liveSiteUrl ? { sameAs: [liveSiteUrl] } : {}),

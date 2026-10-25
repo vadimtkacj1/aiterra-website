@@ -4,6 +4,7 @@ import ActionButton from './ActionButton'
 import Eyebrow from './Eyebrow'
 import TagList from './TagList'
 import type { PortfolioItem } from '../content'
+import { projectSummary } from '@/lib/project-summary'
 import styles from './ProjectCase.module.css'
 
 type Copy = {
@@ -113,6 +114,8 @@ export function ProjectIntro({
           </h1>
 
           {tags.length ? <TagList tags={tags} /> : null}
+
+          <p className={styles.lede}>{projectSummary(project, locale)}</p>
 
           {project.heroDescription ? <p className={styles.lede}>{project.heroDescription}</p> : null}
 

@@ -1665,7 +1665,7 @@ export const contentEn: Partial<V2Content> = {
     title: 'About us',
     metaTitle: 'About Aiterra - Engineering and Growth in One Team',
     metaDescription:
-      'Aiterra is a custom web development and SEO agency. Meet the team, the working method and the experience behind hundreds of delivered projects.',
+      'Aiterra is a software and digital agency in Bat Yam, Israel: websites and online stores, apps, automation, AI agents, SEO, GEO and paid ads. Meet the team, the working method and the experience behind hundreds of delivered projects.',
     lede: 'Digital moves fast. We make sure you stay a step ahead of it.',
     eyebrow: 'ABOUT Aiterra',
     heading: ['Technology that builds websites.', 'Strategy that builds businesses.'],
@@ -1678,7 +1678,7 @@ export const contentEn: Partial<V2Content> = {
         id: 'about',
         eyebrow: 'ABOUT Aiterra',
         heading: ['Moving businesses', 'two steps ahead'],
-        text: 'With Aiterra there is no need to chase a different vendor for every stage. Discovery, design, engineering, organic search, paid campaigns and content sit with one team that owns the whole process. The result is a smoother project, direct communication, and a complete digital solution that actually moves the numbers.',
+        text: 'Aiterra is a software and digital agency in Bat Yam, Israel. We build websites and online stores, mobile and desktop apps in any stack, business automation, AI agents and machine learning, AI integration for websites and DevOps, and we grow businesses through SEO, GEO and paid ads. Phone: 052-678-0739, email: info@aiterra.co.il. With Aiterra there is no need to chase a different vendor for every stage. Discovery, design, engineering, organic search, paid campaigns and content sit with one team that owns the whole process. The result is a smoother project, direct communication, and a complete digital solution that actually moves the numbers.',
         image: '/images/about-page1.webp',
       },
       {

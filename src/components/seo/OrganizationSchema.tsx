@@ -62,6 +62,17 @@ export default function OrganizationSchema() {
     // authoritative on (competitors don't expose this as an Organization node).
     knowsAbout: [
       'בניית אתרים',
+      'Web development',
+      'פיתוח אפליקציות למובייל ולדסקטופ',
+      'Mobile and desktop app development',
+      'פיתוח תוכנה בכל סטאק',
+      'למידת מכונה (Machine learning)',
+      'שילוב AI באתרים',
+      'AI integration for websites',
+      'DevOps',
+      'Paid advertising',
+      'SEO and GEO',
+      'Online stores',
       'קידום אתרים אורגני (SEO)',
       'GEO',
       'AEO',

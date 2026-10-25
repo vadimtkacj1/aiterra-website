@@ -11,6 +11,7 @@ import { getAllPortfolioProjects, getProjectBySlug } from '@/lib/portfolio-serve
 import { getV2Content } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
+import { projectMetaTitle } from '@/lib/project-summary'
 import { breadcrumbList, projectSchema } from '@/lib/schema'
 
 type Params = { params: Promise<{ slug: string }> }
@@ -25,9 +26,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params
   const project = getProjectBySlug(slug)
   if (!project) return {}
-  const namedTitle = project.title.includes('—') ? project.title : `${project.title} — ${project.category}`
   return pageMetadata({
-    title: project.metaTitle || namedTitle,
+    title: project.metaTitle || projectMetaTitle(project, 'he'),
     description:
       project.metaDescription ||
       project.heroDescription ||
@@ -59,6 +59,7 @@ export default async function V2ProjectPage({ params }: Params) {
         tags: project.tags,
         launchedAt: project.launchedAt,
         liveSiteUrl: project.liveSiteUrl || project.externalUrl,
+        technology: project.technology,
       })} />
       <JsonLd data={breadcrumbList([
         { name: copy.crumbHome, path: '/' },
