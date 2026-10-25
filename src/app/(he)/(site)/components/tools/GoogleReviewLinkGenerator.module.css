@@ -1,0 +1,133 @@
+.invalid {
+  border-color: #b42318;
+}
+
+.error {
+  min-height: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #b42318;
+}
+
+.error:empty,
+.notice:empty {
+  display: none;
+}
+
+.notice {
+  margin: 0;
+  font-size: 14px;
+  color: #1d6b3a;
+}
+
+.finder {
+  padding: 16px 18px;
+  border: 1px solid #e2ddd6;
+  border-radius: 14px;
+  background: #faf8f5;
+}
+
+.finderTitle {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.steps {
+  margin: 0 0 10px;
+  padding-inline-start: 20px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.steps a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--v2-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.steps svg {
+  width: 13px;
+  height: 13px;
+}
+
+.policy {
+  margin-top: 24px;
+  padding: 16px 18px;
+  border: 1px solid #e8c9a0;
+  border-radius: 14px;
+  background: #fdf1df;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.policy p {
+  margin: 0;
+}
+
+.policy a {
+  color: var(--v2-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.policyTitle {
+  margin-bottom: 6px !important;
+  font-weight: 600;
+  color: #8a4b00;
+}
+
+.empty {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--v2-paper-ink-muted);
+}
+
+.sectionTitle {
+  margin: 20px 0 8px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.linkBox {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.qr {
+  display: block;
+  width: 220px;
+  height: 220px;
+  padding: 8px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.message {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

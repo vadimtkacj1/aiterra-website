@@ -148,6 +148,14 @@ export const tools: ToolEntry[] = [
     icon: 'message',
   },
   {
+    path: '/tools/google-review-link-generator',
+    title: 'קישור לביקורת בגוגל וקוד QR',
+    description: 'קישור ישיר לכתיבת ביקורת בגוגל לפי Place ID, קוד QR להורדה והודעה מוכנה ללקוחות, בלי הטבות ובלי סינון, לפי מדיניות גוגל.',
+    category: 'marketing',
+    reviewed: '2026-10-25',
+    icon: 'qr',
+  },
+  {
     path: '/tools/whatsapp-link-generator',
     title: 'יצירת קישור לוואטסאפ',
     description: 'קישור ישיר לוואטסאפ עם הודעה מוכנה, קוד QR וכפתור לאתר.',
@@ -358,6 +366,14 @@ export const tools: ToolEntry[] = [
     icon: 'lock',
   },
   {
+    path: '/tools/privacy-officer-database-quiz',
+    title: 'האם לרשום מאגר מידע או למנות ממונה פרטיות?',
+    description: 'שאלון לפי חוק הגנת הפרטיות אחרי תיקון 13: חובת רישום מאגר, הודעה לרשות ומינוי ממונה, עם הסעיף שמאחורי כל תוצאה.',
+    category: 'legal',
+    reviewed: '2026-10-25',
+    icon: 'shield',
+  },
+  {
     path: '/tools/accessibility-statement-generator',
     title: 'מחולל הצהרת נגישות',
     description: 'הצהרת נגישות לאתר לפי תקנות הנגישות, בעברית או באנגלית, מוכנה להעתקה.',
@@ -502,6 +518,14 @@ export const tools: ToolEntry[] = [
     category: 'ai',
     reviewed: '2026-10-23',
     icon: 'search',
+  },
+  {
+    path: '/tools/llms-txt-generator',
+    title: 'מחולל llms.txt ו-robots.txt לבוטים של AI',
+    description: 'קובץ llms.txt לפי המפרט ובלוק robots.txt ל-GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended ועוד, עם הבחנה בין חיפוש לאימון.',
+    category: 'ai',
+    reviewed: '2026-10-25',
+    icon: 'file',
   },
   {
     path: '/tools/social-image-resizer',
