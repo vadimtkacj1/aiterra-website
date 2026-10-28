@@ -4,7 +4,7 @@ import { getAllAuthors } from '@/lib/authors-server'
 import { getAllPortfolioProjects } from '@/lib/portfolio-server'
 import { getV2Content } from '@/lib/v2-content-server'
 import { SITE_URL } from '@/lib/seo'
-import { TOOLS_HUB_PATH, toolReviewed, tools } from '@/lib/tools'
+import { TOOLS_HUB_PATH, toolCategories, toolReviewed, tools, topicPath } from '@/lib/tools'
 import { timeInPages, timeInPath } from '@/lib/time-in-cities'
 import { pairPages, pairPath } from '@/lib/unit-converter'
 import { EN_TOOLS_HUB_PATH, EN_TOOL_SLUGS, enToolPath } from '@/lib/tools-en'
@@ -63,6 +63,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date('2026-10-28'),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
+  }))
+
+  const topicEntries: MetadataRoute.Sitemap = toolCategories.map((category) => ({
+    url: `${SITE_URL}${topicPath(category.id)}`,
+    lastModified: new Date('2026-10-28'),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
   }))
 
   const convertEntries: MetadataRoute.Sitemap = pairPages.map((page) => ({
@@ -163,6 +170,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...commercialEntries,
     ...toolEntries,
     ...timeInEntries,
+    ...topicEntries,
     ...convertEntries,
     ...landingEntries,
     ...legalEntries,

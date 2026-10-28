@@ -14,7 +14,7 @@ import JsonLd from '@/components/seo/JsonLd'
 import { pageMetadata } from '@/lib/metadata'
 import { ORG_ID, breadcrumbList, faqPage, webPage } from '@/lib/schema'
 import { SITE_URL } from '@/lib/seo'
-import { TOOLS_HUB_PATH, embeddableTool, otherTools, toolReviewed } from '@/lib/tools'
+import { TOOLS_HUB_PATH, categoryOfTool, embeddableTool, otherTools, toolReviewed, topicPath } from '@/lib/tools'
 import { hasEnTool } from '@/lib/tools-en'
 import crumbStyles from '../PageCrumbs.module.css'
 import indexStyles from './ToolsIndex.module.css'
@@ -161,6 +161,7 @@ export default function ToolLayout({
   const faqJsonLd = faqPage({ path, entries: faq.map(({ question, answer }) => ({ question, answer })) })
   const related = otherTools(path).slice(0, 6)
   const embed = embeddableTool(path)
+  const topic = categoryOfTool(path)
 
   return (
     <>
@@ -169,6 +170,7 @@ export default function ToolLayout({
         data={breadcrumbList([
           { name: 'בית', path: '/' },
           { name: HUB_TITLE, path: TOOLS_HUB_PATH },
+          ...(topic ? [{ name: topic.title, path: topicPath(topic.id) }] : []),
           { name: title, path },
         ])}
       />
@@ -197,6 +199,7 @@ export default function ToolLayout({
           trail={[
             { label: 'בית', href: '/' },
             { label: HUB_TITLE, href: TOOLS_HUB_PATH },
+            ...(topic ? [{ label: topic.title, href: topicPath(topic.id) }] : []),
             { label: title },
           ]}
         />

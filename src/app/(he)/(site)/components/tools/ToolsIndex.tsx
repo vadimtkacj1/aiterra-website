@@ -101,7 +101,7 @@ export default function ToolsIndex({ categories, tools }: { categories: ToolCate
                   {String(position).padStart(2, '0')}
                 </span>
                 <h2 id={`${category.id}-title`} className={styles.title}>
-                  {category.title}
+                  <Link href={`/tools/topic/${category.id}`}>{category.title}</Link>
                 </h2>
                 <p className={styles.description}>{category.description}</p>
                 <p className={styles.count}>{toolWord(items.length)}</p>
