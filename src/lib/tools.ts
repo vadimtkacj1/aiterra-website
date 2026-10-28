@@ -1229,6 +1229,14 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-10-28',
   },
   {
+    path: '/tools/currency',
+    title: 'המרת מטבע לשקלים',
+    description: 'כמה זה בשקלים היום: 24 מטבעות מול השקל, מתעדכנים כל שעה — דולר, יורו, זלוטי, וון, באט, גריבנה, דירהם ועוד.',
+    category: 'money',
+    icon: 'calculator',
+    reviewed: '2026-10-28',
+  },
+  {
     path: '/tools/unit-converter',
     title: 'ממיר יחידות',
     description: 'דונם למ״ר, הקטר ואקר לדונם, אינץ׳ ורגל לס״מ ומטרים, גלון לליטר, אונקיה ופאונד לגרם וקילו, לפי ההגדרות הרשמיות.',
