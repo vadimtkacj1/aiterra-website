@@ -6,6 +6,7 @@ import { getV2Content } from '@/lib/v2-content-server'
 import { SITE_URL } from '@/lib/seo'
 import { TOOLS_HUB_PATH, toolReviewed, tools } from '@/lib/tools'
 import { timeInPages, timeInPath } from '@/lib/time-in-cities'
+import { pairPages, pairPath } from '@/lib/unit-converter'
 import { EN_TOOLS_HUB_PATH, EN_TOOL_SLUGS, enToolPath } from '@/lib/tools-en'
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
 import { getAllPostsEn } from '@/lib/content-en-blog'
@@ -62,6 +63,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date('2026-10-28'),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
+  }))
+
+  const convertEntries: MetadataRoute.Sitemap = pairPages.map((page) => ({
+    url: `${SITE_URL}${pairPath(page.slug)}`,
+    lastModified: new Date('2026-10-28'),
+    changeFrequency: 'yearly' as const,
+    priority: 0.5,
   }))
 
   const landingEntries: MetadataRoute.Sitemap = [
@@ -155,6 +163,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...commercialEntries,
     ...toolEntries,
     ...timeInEntries,
+    ...convertEntries,
     ...landingEntries,
     ...legalEntries,
     ...serviceEntries,

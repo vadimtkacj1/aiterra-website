@@ -1184,6 +1184,22 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-10-24',
   },
   {
+    path: '/tools/disabled-parking-tag-check',
+    title: 'בדיקת תו נכה לפי מספר רכב',
+    description: 'מקלידים מספר רכב ובודקים אם הוא רשום במאגר תגי החניה לנכה של משרד התחבורה, עם תאריך הפקת התג ופרטי הרכב.',
+    category: 'home',
+    icon: 'search',
+    reviewed: '2026-10-28',
+  },
+  {
+    path: '/tools/unit-converter',
+    title: 'ממיר יחידות',
+    description: 'דונם למ״ר, הקטר ואקר לדונם, אינץ׳ ורגל לס״מ ומטרים, גלון לליטר, אונקיה ופאונד לגרם וקילו, לפי ההגדרות הרשמיות.',
+    category: 'home',
+    icon: 'calculator',
+    reviewed: '2026-10-28',
+  },
+  {
     path: '/tools/bank-branch-lookup',
     title: 'חיפוש סניף בנק',
     description: 'מחפשים סניף בנק לפי בנק ומספר סניף או לפי עיר ורחוב, ורואים כתובת, טלפון, קוד בנק, נגישות ויום סגור, ממאגר בנק ישראל.',
