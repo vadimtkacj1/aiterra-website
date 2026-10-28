@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   },
   description: 'סוכנות AITERRA מציעה מערכת 360° לצמיחה עסקית: בניית אתרים מתקדמת, קידום אורגני SEO, פרסום ממומן ואוטומציה עסקית. ייעוץ חינם – השאירו פרטים!',
   applicationName: SITE_NAME,
+  verification: { other: { 'msvalidate.01': '87FFEAF326445BF15B454E7BC633C395' } },
   openGraph: {
     type: 'website',
     locale: 'he_IL',
