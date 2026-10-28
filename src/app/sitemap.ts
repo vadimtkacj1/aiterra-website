@@ -5,6 +5,7 @@ import { getAllPortfolioProjects } from '@/lib/portfolio-server'
 import { getV2Content } from '@/lib/v2-content-server'
 import { SITE_URL } from '@/lib/seo'
 import { TOOLS_HUB_PATH, toolReviewed, tools } from '@/lib/tools'
+import { timeInPages, timeInPath } from '@/lib/time-in-cities'
 import { EN_TOOLS_HUB_PATH, EN_TOOL_SLUGS, enToolPath } from '@/lib/tools-en'
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
 import { getAllPostsEn } from '@/lib/content-en-blog'
@@ -54,6 +55,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(toolReviewed(tool.path)),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
+  }))
+
+  const timeInEntries: MetadataRoute.Sitemap = timeInPages.map((page) => ({
+    url: `${SITE_URL}${timeInPath(page.slug)}`,
+    lastModified: new Date('2026-10-28'),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
   }))
 
   const landingEntries: MetadataRoute.Sitemap = [
@@ -146,6 +154,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [
     ...commercialEntries,
     ...toolEntries,
+    ...timeInEntries,
     ...landingEntries,
     ...legalEntries,
     ...serviceEntries,

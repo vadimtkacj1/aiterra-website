@@ -10,6 +10,7 @@ import {
   gapZones,
   timeDifferenceSources,
 } from '@/lib/time-difference'
+import { timeInPages, timeInPath } from '@/lib/time-in-cities'
 import styles from '../../components/tools/TimeDifference.module.css'
 
 const TITLE = 'מה השעה בישראל עכשיו, והפרש השעות לכל העולם'
@@ -79,6 +80,8 @@ const externalLink = (href: string, label: string) => (
   </a>
 )
 
+export const revalidate = 60
+
 export const metadata = toolMetadata({ path: TIME_DIFFERENCE_PATH, metaTitle: META_TITLE, description: DESCRIPTION })
 
 export default function TimeDifferencePage() {
@@ -90,7 +93,7 @@ export default function TimeDifferencePage() {
       description={DESCRIPTION}
       lede="השעון שלמטה מראה מה השעה בישראל עכשיו. בחורף שעון ישראל הוא UTC+2 ובקיץ UTC+3. ההפרש בין ישראל לניו יורק הוא 7 שעות רוב השנה, ובין ישראל ללונדון 2 שעות, אבל הוא משתנה כשאחד הצדדים עובר לשעון קיץ. בחרו עיר וראו שעון חי של הצד השני, ההפרש היום וההפרש בעוד חצי שנה, ומצאו שעה שנוחה לשני הצדדים."
       chips={['62 ערים', 'מתעדכן לבד לפי שעון קיץ', `נבדק ב-${TIME_DIFFERENCE_CHECKED}`]}
-      tool={<TimeDifference />}
+      tool={<TimeDifference renderedAt={Date.now()} />}
       faq={faq}
       cta={{
         text: 'צריכים כלי חישוב או מערכת פנימית בהתאמה אישית לעסק?',
@@ -195,6 +198,15 @@ export default function TimeDifferencePage() {
         לטיסות לאותם יעדים יש <Link href="/tools/flight-time-from-israel">טבלת זמני טיסה מישראל</Link>, שמציגה גם
         את הפרש השעות לכל יעד.
       </p>
+
+      <h2>מה השעה עכשיו ביעדים מבוקשים</h2>
+      <ul>
+        {timeInPages.map((page) => (
+          <li key={page.slug}>
+            <Link href={timeInPath(page.slug)}>מה השעה {page.inPlace}</Link>
+          </li>
+        ))}
+      </ul>
 
       <h2>מקורות</h2>
       <ul>

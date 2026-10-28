@@ -70,12 +70,12 @@ function HourSelect({
   )
 }
 
-export default function TimeDifference() {
+export default function TimeDifference({ renderedAt }: { renderedAt?: number }) {
   const searchId = useId()
   const cityId = useId()
   const [query, setQuery] = useState('')
   const [selected, setSelected] = useState('new-york')
-  const [now, setNow] = useState<Date | null>(null)
+  const [now, setNow] = useState<Date | null>(renderedAt ? new Date(renderedAt) : null)
   const [israelStart, setIsraelStart] = useState(9)
   const [israelEnd, setIsraelEnd] = useState(18)
   const [destinationStart, setDestinationStart] = useState(9)
