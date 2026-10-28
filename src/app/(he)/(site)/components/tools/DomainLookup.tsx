@@ -234,7 +234,15 @@ export default function DomainLookup() {
     })
   }
 
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+  useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get('domain')
+    const domain = requested ? normalizeDomain(requested) : null
+    if (!requested || !domain) return
+    setValue(requested)
+    run(domain)
+  }, [])
+
+  const onSubmit =(event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const domain = normalizeDomain(value)
     if (!domain) {
