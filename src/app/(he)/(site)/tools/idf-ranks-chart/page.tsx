@@ -5,7 +5,7 @@ import styles from '../word-counter/page.module.css'
 
 const PATH = '/tools/idf-ranks-chart'
 const TITLE = 'דרגות בצה״ל לפי הסדר'
-const META_TITLE = 'דרגות בצה״ל לפי הסדר: טבלה עם ראשי תיבות'
+const META_TITLE = 'דרגות בצה״ל לפי הסדר: טבלה מטוראי עד רב-אלוף + באנגלית'
 const DESCRIPTION =
   'דרגות בצה״ל לפי הסדר, מטוראי עד רב-אלוף: חוגרים, נגדים וקצינים, עם ראשי תיבות, שם באנגלית, קוד נאט״ו, תיאור סימן הדרגה וחיפוש. אתר לא רשמי.'
 

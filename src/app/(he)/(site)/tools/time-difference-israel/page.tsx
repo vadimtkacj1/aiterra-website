@@ -14,7 +14,7 @@ import { timeInPages, timeInPath } from '@/lib/time-in-cities'
 import styles from '../../components/tools/TimeDifference.module.css'
 
 const TITLE = 'מה השעה בישראל עכשיו, והפרש השעות לכל העולם'
-const META_TITLE = 'מה השעה בישראל עכשיו? שעון חי והפרש שעות'
+const META_TITLE = 'מה השעה בישראל עכשיו? שעון חי + הפרש מ-62 ערים'
 const DESCRIPTION =
   'מה השעה בישראל עכשיו: שעון חי לפי שעון ישראל (UTC+2 בחורף, UTC+3 בקיץ), והפרש השעות מול 62 ערים בעולם, בקיץ ובחורף, עם תכנון פגישה.'
 
