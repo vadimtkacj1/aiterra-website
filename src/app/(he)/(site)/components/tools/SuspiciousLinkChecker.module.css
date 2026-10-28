@@ -1,0 +1,165 @@
+.checker .layout {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.text {
+  min-height: 160px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.empty {
+  margin: 0;
+  padding: 22px 24px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 20px;
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--v2-paper-ink);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  padding: 20px 22px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-inline-start-width: 5px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 18px 40px -28px rgba(14, 23, 48, 0.35);
+}
+
+.ok {
+  border-inline-start-color: #1d6b3a;
+}
+
+.suspicious {
+  border-inline-start-color: #a15c00;
+}
+
+.dangerous {
+  border-inline-start-color: #b42318;
+}
+
+.verdict {
+  margin: 0;
+  font-family: var(--v2-font-display);
+  font-size: clamp(26px, 2.2vw, 32px);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.ok .verdict {
+  color: #1d6b3a;
+}
+
+.suspicious .verdict {
+  color: #a15c00;
+}
+
+.dangerous .verdict {
+  color: #b42318;
+}
+
+.host {
+  margin: 8px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: end;
+  color: var(--v2-paper-ink);
+  overflow-wrap: anywhere;
+}
+
+.url {
+  margin: 2px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: end;
+  color: var(--v2-paper-ink-muted);
+  overflow-wrap: anywhere;
+}
+
+.summary {
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #2b3148;
+}
+
+.reasons {
+  margin: 10px 0 0;
+  padding-inline-start: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #2b3148;
+  list-style: disc;
+}
+
+.reasons li + li {
+  margin-top: 4px;
+}
+
+.reasons .strong {
+  font-weight: 600;
+}
+
+.signals {
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-inline-start: 3px solid #a15c00;
+  border-radius: 10px;
+  background: #fbf4ea;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #2b3148;
+}
+
+.signalsTitle {
+  margin: 0 0 4px;
+  font-weight: 600;
+}
+
+.signals ul {
+  margin: 0;
+  padding-inline-start: 20px;
+  list-style: disc;
+}
+
+.report {
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--v2-paper-ink);
+}
+
+.report a {
+  color: var(--v2-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 1023px) {
+  .checker .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .card,
+  .empty {
+    padding: 18px;
+  }
+
+  .verdict {
+    font-size: 24px;
+  }
+}

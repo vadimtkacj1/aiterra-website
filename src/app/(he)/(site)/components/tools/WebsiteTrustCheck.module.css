@@ -1,0 +1,21 @@
+.score {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 6px 18px;
+  border-radius: 14px;
+  background: var(--tone-bg);
+  color: var(--tone);
+}
+
+.score strong {
+  font-family: var(--v2-font-display);
+  font-size: clamp(34px, 4vw, 44px);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.score span {
+  font-size: 15px;
+}
