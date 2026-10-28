@@ -1,0 +1,132 @@
+.choiceGroup .options {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.optionLabel {
+  display: block;
+  font-weight: 500;
+}
+
+.optionHint {
+  display: block;
+  font-size: 13px;
+  color: var(--v2-paper-ink-muted);
+}
+
+.error {
+  margin: 0;
+  font-size: 13px;
+  color: #b42318;
+}
+
+.ledgerRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 8px 24px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 16px;
+  background: #ffffff;
+  font-variant-numeric: tabular-nums;
+}
+
+.summary > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #ece7e0;
+}
+
+.summary > div:first-child {
+  border-top: 0;
+}
+
+.summary dt {
+  color: var(--v2-paper-ink-muted);
+}
+
+.summary dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--v2-paper-ink);
+}
+
+.main dt,
+.main dd {
+  font-size: 22px;
+  color: var(--v2-paper-ink);
+}
+
+.owed dd {
+  color: #9a3412;
+}
+
+.clear dd {
+  color: #1d6b3a;
+}
+
+.ledger {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.ledger li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid #ece7e0;
+}
+
+.ledgerDate {
+  color: var(--v2-paper-ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.ledgerNote {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ledgerAmount {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.remove {
+  min-height: 44px;
+  padding: 0 10px;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 13px;
+  color: var(--v2-blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.remove:focus-visible {
+  outline: 2px solid var(--v2-blue);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .ledgerRow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .summary {
+    padding: 4px 16px;
+  }
+}
