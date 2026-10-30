@@ -18,9 +18,9 @@ import styles from './page.module.css'
 
 const PATH = '/tools/days-between-dates'
 const TITLE = 'מחשבון ימים בין תאריכים'
-const META_TITLE = 'מחשבון ימים בין תאריכים: כולל ימי עבודה ותאריך עברי'
+const META_TITLE = 'כמה זמן עבר מתאריך? מחשבון ימים בין תאריכים ומהיום'
 const DESCRIPTION =
-  'כמה ימים יש בין שני תאריכים, גם בשבועות, בחודשים ובשנים. כמה ימים עברו מתאריך או נשארו עד חג, והוספת ימים או חודשים לתאריך, עם ימי עבודה ותאריך עברי.'
+  'כמה זמן עבר מתאריך מסוים, מה התאריך בעוד 30 או 90 יום מהיום וכמה ימים יש בין שני תאריכים: תוצאה מיידית בימים, שבועות וחודשים, עם ימי עבודה ותאריך עברי.'
 
 const INTERPRETATION_LAW = `https://he.wikisource.org/wiki/${encodeURIComponent('חוק_הפרשנות')}#${encodeURIComponent('סעיף_10')}`
 
