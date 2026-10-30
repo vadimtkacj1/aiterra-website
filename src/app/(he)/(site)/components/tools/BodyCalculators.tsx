@@ -32,18 +32,18 @@ const SEXES: { id: Sex; label: string }[] = [
 
 const whole = (value: number) => Math.round(value).toLocaleString('he-IL')
 
-function useNumber(min: number, max: number) {
+export function useNumber(min: number, max: number) {
   const [text, setText] = useState('')
   const parsed = parseNumber(text)
   const value = parsed !== null && parsed >= min && parsed <= max ? parsed : null
   return { text, setText, value, min, max }
 }
 
-function NumberField({ label, field }: { label: string; field: ReturnType<typeof useNumber> }) {
+export function NumberField({ label, field }: { label: string; field: ReturnType<typeof useNumber> }) {
   const id = useId()
   const hintId = useId()
   return (
-    <Field id={id} label={label} hintId={hintId} hint={`בין ${field.min} ל-${field.max}.`}>
+    <Field id={id} label={label} hintId={hintId} hint={`בין ${field.min.toLocaleString('he-IL')} ל-${field.max.toLocaleString('he-IL')}.`}>
       <input
         id={id}
         type="text"
@@ -57,7 +57,7 @@ function NumberField({ label, field }: { label: string; field: ReturnType<typeof
   )
 }
 
-function Shell({
+export function Shell({
   name,
   inputs,
   prompt,
@@ -86,7 +86,7 @@ function Shell({
   )
 }
 
-function Metric({ label, value, unit, meta }: { label: string; value: string; unit: string; meta?: string }) {
+export function Metric({ label, value, unit, meta }: { label: string; value: string; unit: string; meta?: string }) {
   return (
     <div className={fun.card}>
       <p className={styles.label}>{label}</p>
@@ -101,7 +101,7 @@ function Metric({ label, value, unit, meta }: { label: string; value: string; un
   )
 }
 
-function Rows({ label, rows }: { label: string; rows: [string, string][] }) {
+export function Rows({ label, rows }: { label: string; rows: [string, string][] }) {
   return (
     <ul className={styles.scale} aria-label={label}>
       {rows.map(([title, value]) => (
