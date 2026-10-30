@@ -7,7 +7,6 @@ import { SITE_URL } from '@/lib/seo'
 import { TOOLS_HUB_PATH, toolCategories, toolReviewed, tools, topicPath } from '@/lib/tools'
 import { timeInPages, timeInPath } from '@/lib/time-in-cities'
 import { pairPages, pairPath } from '@/lib/unit-converter'
-import { nutrientPath, nutrients } from '@/lib/nutrients'
 import { currencyPages, currencyPath } from '@/lib/currency-pages'
 import { EN_TOOLS_HUB_PATH, EN_TOOL_SLUGS, enToolPath } from '@/lib/tools-en'
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
@@ -86,13 +85,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date('2026-10-28'),
     changeFrequency: 'yearly' as const,
     priority: 0.5,
-  }))
-
-  const nutrientEntries: MetadataRoute.Sitemap = nutrients.map(({ slug }) => ({
-    url: `${SITE_URL}${nutrientPath(slug)}`,
-    lastModified: new Date('2026-10-30'),
-    changeFrequency: 'yearly' as const,
-    priority: 0.6,
   }))
 
   const landingEntries: MetadataRoute.Sitemap = [
@@ -188,7 +180,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...timeInEntries,
     ...topicEntries,
     ...convertEntries,
-    ...nutrientEntries,
     ...currencyEntries,
     ...landingEntries,
     ...legalEntries,

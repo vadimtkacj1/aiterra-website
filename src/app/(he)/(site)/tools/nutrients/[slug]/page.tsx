@@ -10,9 +10,9 @@ export const generateStaticParams = () => nutrients.map(({ slug }) => ({ slug })
 
 type Params = { params: Promise<{ slug: string }> }
 
-const titleOf = (name: string) => `טבלת ${name} במזון: המזונות העשירים ביותר ל-100 גרם`
+const titleOf = (name: string) => `טבלת ${name} במזון: כמה ${name} יש בכל מזון ל-100 גרם`
 const descriptionOf = (name: string) =>
-  `כמה ${name} יש במזון: טבלה עם חיפוש של המזונות העשירים ביותר, לפי מאגר התזונה הלאומי של משרד הבריאות, בכמות ל-100 גרם.`
+  `כמה ${name} יש במזון: טבלה עם חיפוש לפי שם המזון, לפי מאגר התזונה הלאומי של משרד הבריאות, בכמות ל-100 גרם.`
 
 export async function generateMetadata({ params }: Params) {
   const nutrient = nutrientBySlug((await params).slug)
@@ -50,7 +50,7 @@ export default async function NutrientPage({ params }: Params) {
       title={`טבלת ${name} במזון`}
       metaTitle={titleOf(name)}
       description={descriptionOf(name)}
-      lede={`${name}: ${role}. הטבלה מציגה את המזונות העשירים ביותר, ואפשר לחפש בה מזון מסוים.`}
+      lede={`${name}: ${role}. הטבלה מסודרת מהערך הגבוה לנמוך, ואפשר לחפש בה מזון מסוים.`}
       tool={<NutrientTable foods={foods} name={name} unit={unit} />}
       faq={faq}
       cta={{

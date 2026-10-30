@@ -1,3 +1,5 @@
+import { nutrientPath, nutrients } from './nutrient-list'
+
 export type ToolIconName =
   | 'accessibility'
   | 'calculator'
@@ -21,7 +23,7 @@ export type ToolIconName =
   | 'type'
   | 'wrench'
 
-export type ToolCategory = 'marketing' | 'ai' | 'money' | 'work' | 'legal' | 'dates' | 'home'
+export type ToolCategory = 'marketing' | 'ai' | 'money' | 'work' | 'legal' | 'dates' | 'health' | 'home'
 
 export type ToolEntry = {
   path: string
@@ -140,6 +142,22 @@ export const toolCategories: ToolCategoryInfo[] = [
     service: {
       label: 'פיתוח תוכנה לעסקים',
       text: 'מערכות תורים, נוכחות ולוחות זמנים שמחשבים תאריכים בדיוק.',
+      href: '/services/development',
+    },
+  },
+  {
+    id: 'health',
+    label: 'בריאות ותזונה',
+    title: 'בריאות ותזונה',
+    description: 'קלוריות, חלבון, מים, BMI, דופק וטבלאות ערכים תזונתיים של מזונות.',
+    heading: 'מחשבוני בריאות וטבלאות תזונה',
+    intro: [
+      'מחשבונים למשקל, לקלוריות, לחלבון, לשתייה ולדופק, לצד טבלאות ערכים תזונתיים לפי מאגר התזונה הלאומי של משרד הבריאות.',
+      'התוצאות הן הערכה כללית ולא ייעוץ רפואי. במצב רפואי, בהיריון או לפני שינוי משמעותי בתזונה פנו לרופא או לדיאטן.',
+    ],
+    service: {
+      label: 'פיתוח תוכנה לעסקים',
+      text: 'אתרים, מחשבונים ומערכות תורים לקליניקות, לדיאטניות ולמכוני כושר.',
       href: '/services/development',
     },
   },
@@ -1096,7 +1114,7 @@ export const tools: ToolEntry[] = [
     path: '/tools/sleep-cycle-calculator',
     title: 'מחשבון מחזורי שינה',
     description: 'מחשבון מחזורי שינה: מכניסים שעת קימה ומקבלים שעות שינה לפי מחזורים של 90 דקות ועוד זמן הירדמות, או להפך. אפשר לשנות אורך מחזור. הערכה כללית, לא רפואית.',
-    category: 'home',
+    category: 'health',
     reviewed: '2026-10-23',
     icon: 'hourglass',
   },
@@ -1136,7 +1154,7 @@ export const tools: ToolEntry[] = [
     path: '/tools/pregnancy-due-date-calculator',
     title: 'מחשבון תאריך לידה משוער ושבוע הריון',
     description: 'מכניסים את תאריך הווסת האחרונה או ההתעברות ומקבלים תאריך לידה משוער, שבוע הריון נוכחי, שליש ולוח בדיקות מקובל. הערכה כללית, לא תחליף לרופא.',
-    category: 'home',
+    category: 'health',
     icon: 'calendar',
     reviewed: '2026-10-24',
   },
@@ -1144,7 +1162,7 @@ export const tools: ToolEntry[] = [
     path: '/tools/bmi-calculator',
     title: 'מחשבון BMI',
     description: 'מכניסים גובה ומשקל ומקבלים מדד מסת גוף, הסיווג לפי ארגון הבריאות העולמי וטווח המשקל התקין לגובה. כולל מגבלות המדד. הערכה כללית, לא רפואית.',
-    category: 'home',
+    category: 'health',
     icon: 'calculator',
     reviewed: '2026-10-24',
   },
@@ -1268,9 +1286,63 @@ export const tools: ToolEntry[] = [
     icon: 'search',
     reviewed: '2026-10-24',
   },
+  {
+    path: '/tools/calorie-calculator',
+    title: 'מחשבון קלוריות יומי',
+    description: 'גיל, מין, גובה, משקל ופעילות: כמה קלוריות צריך ביום לשמירה, לירידה או לעלייה במשקל, כולל BMR לפי נוסחת Mifflin-St Jeor.',
+    category: 'health',
+    icon: 'calculator',
+    reviewed: '2026-10-30',
+  },
+  {
+    path: '/tools/protein-calculator',
+    title: 'מחשבון חלבון יומי',
+    description: 'כמה גרם חלבון צריך ביום לפי משקל ומטרה, ואיך לחלק את הכמות על פני הארוחות.',
+    category: 'health',
+    icon: 'calculator',
+    reviewed: '2026-10-30',
+  },
+  {
+    path: '/tools/water-intake-calculator',
+    title: 'כמה מים לשתות ביום',
+    description: 'כמות שתייה יומית משוערת לפי משקל, מין ודקות פעילות, בליטרים ובכוסות.',
+    category: 'health',
+    icon: 'calculator',
+    reviewed: '2026-10-30',
+  },
+  {
+    path: '/tools/heart-rate-zones-calculator',
+    title: 'מחשבון דופק מטרה',
+    description: 'דופק מרבי לפי גיל ואזורי דופק לאימון: הליכה, שריפת שומן, סיבולת ומאמץ גבוה.',
+    category: 'health',
+    icon: 'calculator',
+    reviewed: '2026-10-30',
+  },
+  {
+    path: '/tools/body-fat-calculator',
+    title: 'מחשבון אחוזי שומן לפי היקפים',
+    description: 'הערכת אחוז שומן בגוף לפי גובה והיקפי צוואר, מותניים וירכיים, בשיטת הצי האמריקאי.',
+    category: 'health',
+    icon: 'calculator',
+    reviewed: '2026-10-30',
+  },
+  ...nutrients.map(({ slug, name }) => ({
+    path: nutrientPath(slug),
+    title: `טבלת ${name} במזון`,
+    description: `כמה ${name} יש במזון: טבלה עם חיפוש לפי מאגר התזונה הלאומי של משרד הבריאות, בכמות ל-100 גרם.`,
+    category: 'health' as const,
+    icon: 'search' as const,
+    reviewed: '2026-10-30',
+  })),
 ]
 
 const CLOSEST_TOOLS: Record<string, string[]> = {
+  '/tools/bmi-calculator': ['/tools/calorie-calculator', '/tools/body-fat-calculator', '/tools/protein-calculator'],
+  '/tools/calorie-calculator': ['/tools/nutrients/calories', '/tools/protein-calculator', '/tools/bmi-calculator'],
+  '/tools/protein-calculator': ['/tools/nutrients/protein', '/tools/calorie-calculator', '/tools/water-intake-calculator'],
+  '/tools/water-intake-calculator': ['/tools/calorie-calculator', '/tools/protein-calculator', '/tools/heart-rate-zones-calculator'],
+  '/tools/heart-rate-zones-calculator': ['/tools/calorie-calculator', '/tools/body-fat-calculator', '/tools/water-intake-calculator'],
+  '/tools/body-fat-calculator': ['/tools/bmi-calculator', '/tools/calorie-calculator', '/tools/protein-calculator'],
   '/tools/days-between-dates': ['/tools/work-days-calculator', '/tools/hebrew-date-converter', '/tools/hebrew-calendar-2027'],
   '/tools/work-days-calculator': ['/tools/days-between-dates', '/tools/vacation-days-calculator', '/tools/monthly-timesheet'],
   '/tools/hebrew-date-converter': ['/tools/hebrew-calendar-2027', '/tools/days-between-dates', '/tools/gematria-calculator'],
