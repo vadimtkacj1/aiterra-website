@@ -446,3 +446,18 @@
   }
 
 }
+
+.trustLine {
+  max-width: 820px;
+  margin: 16px auto 0;
+  padding-inline: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--v2-paper-ink-muted);
+}
+
+.trustLine a {
+  color: inherit;
+  text-decoration: underline;
+}

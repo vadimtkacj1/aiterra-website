@@ -213,6 +213,16 @@ export default function ToolLayout({
 
         {tool}
         <ToolShareBar path={path} title={title} />
+        <p className={styles.trustLine}>
+          הכלי נבנה ומתוחזק בידי AITERRA, סוכנות דיגיטל ישראלית.{' '}
+          <Link href="/about" prefetch={false}>
+            מי אנחנו
+          </Link>
+          {' · '}
+          <Link href="/contact" prefetch={false}>
+            יצירת קשר
+          </Link>
+        </p>
         {embed ? <ToolEmbedBox slug={embed.slug} title={title} height={embed.height} /> : null}
 
         {related.length ? (
