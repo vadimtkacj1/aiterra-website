@@ -1430,6 +1430,22 @@ export const tools: ToolEntry[] = [
     icon: 'calculator',
     reviewed: '2026-10-30',
   },
+  {
+    path: '/tools/end-of-employment-rights',
+    title: 'מה מגיע לי בסיום עבודה',
+    description: 'האם מגיע לי פיצויים או אבטלה אם התפטרתי? עונים על שלוש שאלות ורואים מה כנראה מגיע לכם בסיום עבודה.',
+    category: 'work',
+    icon: 'calculator',
+    reviewed: '2026-10-30',
+  },
+  {
+    path: '/tools/resignation-letter-generator',
+    title: 'מחולל מכתב התפטרות',
+    description: 'מחולל מכתב התפטרות חינם: ממלאים שם, מעסיק ותאריך, רואים כמה הודעה מוקדמת נדרשת ומעתיקים מכתב מוכן.',
+    category: 'work',
+    icon: 'calculator',
+    reviewed: '2026-10-30',
+  },
   ...nutrients.map(({ slug, name }) => ({
     path: nutrientPath(slug),
     title: `טבלת ${name} במזון`,
