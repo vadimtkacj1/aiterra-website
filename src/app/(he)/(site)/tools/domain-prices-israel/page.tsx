@@ -38,6 +38,7 @@ export default function Page() {
       description={DESCRIPTION}
       lede="דומיין co.il עולה בדרך כלל כ-70 עד 90 ₪ לשנה כולל מע״מ אצל הרשמים שבדקנו. המחירים נבדקו ב-30.10.2026 וכדאי לאמת אותם אצל הרשם."
       tool={
+        <div className={styles.tableWrap}>
         <table className={styles.table}>
           <thead>
             <tr>
@@ -60,6 +61,7 @@ export default function Page() {
             ))}
           </tbody>
         </table>
+        </div>
       }
       faq={faq}
       cta={{
