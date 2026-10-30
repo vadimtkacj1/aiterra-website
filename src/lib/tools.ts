@@ -1494,6 +1494,22 @@ export const tools: ToolEntry[] = [
     icon: 'calculator',
     reviewed: '2026-10-23',
   },
+  {
+    path: '/tools/family-event-games',
+    title: 'משחקים לשבת חתן ולאירועים משפחתיים',
+    description: 'מחולל משחקים לשבת חתן, שבת כלה, שבע ברכות, בר מצווה ויום הולדת: מכניסים שמות ומקבלים שאלות וסבבים להדפסה. אפשר לבחור משחקים בלי כתיבה לשבת.',
+    category: 'home',
+    icon: 'file',
+    reviewed: '2026-10-31',
+  },
+  {
+    path: '/tools/family-quiz',
+    title: 'חידון משפחתי להדפסה',
+    description: 'חידון משפחתי להדפסה עם תשובות: בוחרים נושאים ואורך, ומקבלים טריוויה בידע כללי, ישראל, מדע, בעלי חיים ויהדות, עם דף תשובות נפרד.',
+    category: 'home',
+    icon: 'file',
+    reviewed: '2026-10-31',
+  },
   ...nutrients.map(({ slug, name }) => ({
     path: nutrientPath(slug),
     title: `טבלת ${name} במזון`,
@@ -1533,6 +1549,8 @@ const CLOSEST_TOOLS: Record<string, string[]> = {
 }
 
 const FUN_TOOLS = [
+  '/tools/family-event-games',
+  '/tools/family-quiz',
   '/tools/random-wheel-picker',
   '/tools/word-search-maker',
   '/tools/photo-to-sketch',
