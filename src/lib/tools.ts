@@ -1532,11 +1532,31 @@ const CLOSEST_TOOLS: Record<string, string[]> = {
   '/tools/id-number-check': ['/tools/iban-calculator', '/tools/company-lookup'],
 }
 
+const FUN_TOOLS = [
+  '/tools/random-wheel-picker',
+  '/tools/word-search-maker',
+  '/tools/photo-to-sketch',
+  '/tools/gematria-calculator',
+  '/tools/bingo-card-generator',
+  '/tools/secret-code-maker',
+  '/tools/chinese-zodiac-finder',
+  '/tools/hebrew-rhyme-finder',
+  '/tools/fancy-text-generator',
+  '/tools/dog-name-generator',
+]
+
+export const isFunTool = (path: string) => FUN_TOOLS.includes(path)
+
+const funToolsAfter = (path: string) => {
+  const index = FUN_TOOLS.indexOf(path)
+  return [...FUN_TOOLS.slice(index + 1), ...FUN_TOOLS.slice(0, index)]
+}
+
 export const otherTools = (path: string) => {
   const current = tools.find((tool) => tool.path === path)
   const rest = tools.filter((tool) => tool.path !== path)
   if (!current) return rest
-  const closest = (CLOSEST_TOOLS[path] ?? []).flatMap((closePath) =>
+  const closest = (isFunTool(path) ? funToolsAfter(path) : (CLOSEST_TOOLS[path] ?? [])).flatMap((closePath) =>
     rest.filter((tool) => tool.path === closePath),
   )
   const others = rest.filter((tool) => !closest.includes(tool))

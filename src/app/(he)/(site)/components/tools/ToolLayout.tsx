@@ -14,7 +14,15 @@ import JsonLd from '@/components/seo/JsonLd'
 import { pageMetadata } from '@/lib/metadata'
 import { ORG_ID, breadcrumbList, faqPage, webPage } from '@/lib/schema'
 import { SITE_URL } from '@/lib/seo'
-import { TOOLS_HUB_PATH, categoryOfTool, embeddableTool, otherTools, toolReviewed, topicPath } from '@/lib/tools'
+import {
+  TOOLS_HUB_PATH,
+  categoryOfTool,
+  embeddableTool,
+  isFunTool,
+  otherTools,
+  toolReviewed,
+  topicPath,
+} from '@/lib/tools'
 import { hasEnTool } from '@/lib/tools-en'
 import crumbStyles from '../PageCrumbs.module.css'
 import indexStyles from './ToolsIndex.module.css'
@@ -228,9 +236,9 @@ export default function ToolLayout({
         {related.length ? (
           <section className={styles.related} aria-labelledby="related-tools-heading">
             <div className={styles.sectionHead}>
-              <Eyebrow label="עוד כלים" dot="rtl" />
+              <Eyebrow label={isFunTool(path) ? 'עוד כיף' : 'עוד כלים'} dot="rtl" />
               <h2 id="related-tools-heading" className={styles.sectionTitle}>
-                כלים חינמיים נוספים
+                {isFunTool(path) ? 'עוד משהו לעשות' : 'כלים חינמיים נוספים'}
               </h2>
             </div>
             <ul className={`${indexStyles.list} ${styles.relatedList}`}>
