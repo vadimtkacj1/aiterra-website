@@ -1446,6 +1446,14 @@ export const tools: ToolEntry[] = [
     icon: 'calculator',
     reviewed: '2026-10-30',
   },
+  {
+    path: '/tools/rental-contract-generator',
+    title: 'מחולל הסכם שכירות לדירה',
+    description: 'טיוטת חוזה שכירות למגורים לפי חוק השכירות והשאילה, עם בדיקת תקרת ערובה, להעתקה או הדפסה.',
+    category: 'legal',
+    icon: 'file',
+    reviewed: '2026-10-30',
+  },
   ...nutrients.map(({ slug, name }) => ({
     path: nutrientPath(slug),
     title: `טבלת ${name} במזון`,

@@ -141,6 +141,7 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/final-settlement-calculator': ['גמר חשבון', 'פיטורים', 'התפטרות'],
   '/tools/end-of-employment-rights': ['פיטורים', 'התפטרות', 'אבטלה'],
   '/tools/resignation-letter-generator': ['התפטרות', 'הודעה מוקדמת'],
+  '/tools/rental-contract-generator': ['שכירות', 'שכר דירה', 'משכיר'],
   '/tools/bmi-calculator': ['BMI', 'משקל', 'דיאטה', 'השמנה', 'משקל תקין', 'ירידה במשקל'],
   '/tools/severance-pay-calculator': ['פיצויי פיטורים', 'פיטורים', 'סיום העסקה', 'סעיף 14', 'עובדים', 'משאבי אנוש'],
   '/tools/overtime-pay-calculator': ['שעות נוספות', 'שכר שעתי', 'עבודה בשבת', 'נוכחות', 'עובדים', 'שכר'],

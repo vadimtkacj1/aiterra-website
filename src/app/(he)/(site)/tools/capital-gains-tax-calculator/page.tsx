@@ -45,8 +45,8 @@ export default function Page() {
     >
       <h2>מקור</h2>
       <p>
-        <a href="https://www.gov.il/he/departments/israel_tax_authority" rel="noopener" target="_blank">
-          רשות המסים
+        <a href="https://www.hilan.co.il/%D7%9E%D7%A8%D7%9B%D7%96-%D7%99%D7%93%D7%A2/%D7%97%D7%A7%D7%99%D7%A7%D7%94/%D7%93%D7%99%D7%A0%D7%99-%D7%9E%D7%99%D7%A1%D7%99%D7%9D/%D7%A4%D7%A7%D7%95%D7%93%D7%AA-%D7%9E%D7%A1-%D7%94%D7%9B%D7%A0%D7%A1%D7%94-%D7%A0%D7%95%D7%A1%D7%97-%D7%97%D7%93%D7%A9-%D7%AA%D7%A9%D7%9B%D7%90-1961/%D7%97%D7%9C%D7%A7-%D7%94-%D7%A8%D7%95%D7%95%D7%97%D7%99-%D7%94%D7%95%D7%9F/" rel="noopener" target="_blank">
+          פקודת מס הכנסה, חלק ה׳: רווחי הון
         </a>
         . המידע כללי ואינו מחליף ייעוץ מקצועי.
       </p>
