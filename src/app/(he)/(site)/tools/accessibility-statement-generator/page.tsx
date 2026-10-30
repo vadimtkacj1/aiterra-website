@@ -94,8 +94,8 @@ export default function AccessibilityStatementGeneratorPage() {
       faq={faq}
       cta={{
         text: 'לא בטוחים שהאתר שלכם עומד בתקן? נבדוק אותו ונגיד לכם מה צריך לתקן.',
-        label: 'דברו איתנו',
-        href: '/contact',
+        label: 'לשירות תחזוקת אתרים',
+        href: '/services/maintenance',
       }}
     >
       <h2>מה חייב להופיע בהצהרת נגישות</h2>

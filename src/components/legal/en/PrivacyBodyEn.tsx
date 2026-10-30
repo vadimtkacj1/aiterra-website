@@ -1,4 +1,4 @@
-export const LAST_UPDATED = '13.06.2026'
+export const LAST_UPDATED = '30.10.2026'
 const PRIVACY_EMAIL = 'michael@aiterra.co.il'
 
 export default function PrivacyBodyEn() {
@@ -30,6 +30,10 @@ export default function PrivacyBodyEn() {
           type, pages viewed and heat maps. This information is generally collected in aggregate,
           statistical form and does not identify you personally.
         </li>
+        <li>
+          <strong>Free tools on the Site:</strong> most tools calculate the result in your browser,
+          and the data you type into them is not sent to us. Tools that check a website, a domain or a public database send only what you typed to our server to run the check, and it is not stored. The AI image tools keep your image on your device and load their processing component from jsDelivr.
+        </li>
       </ul>
 
       <h2>Cookies and marketing tracking tools</h2>
@@ -58,11 +62,11 @@ export default function PrivacyBodyEn() {
 
       <h2>Marketing communications</h2>
       <p>
-        Leaving contact details (such as an email address or phone number) on the Site constitutes
-        your explicit consent to receive advertising material, offers, updates and marketing
-        information from AITERRA, including by email, SMS or messaging platforms such as WhatsApp,
-        in accordance with section 30A of the Israeli Communications Law (Telecommunications and
-        Broadcasts), 5742-1982.
+        Leaving details in a contact form is not consent to receive advertising. We use your details
+        to answer your enquiry and to continue the conversation about the service you asked for.
+        Advertising material, as defined in section 30A of the Israeli Communications Law
+        (Telecommunications and Broadcasts), 5742-1982, will be sent to you by email, SMS or
+        messaging platforms only if you have given explicit, separate consent to it.
       </p>
       <p>
         <strong>Unsubscribing:</strong> you have the right to withdraw your consent at any time and
@@ -77,8 +81,10 @@ export default function PrivacyBodyEn() {
       </p>
       <ul>
         <li>
-          To service providers and subcontractors acting on our behalf to operate the Site (such as
-          hosting services, mailing platforms and analytics tools).
+          To service providers and subcontractors acting on our behalf to operate the Site: hosting
+          on Hetzner servers in Germany, email delivery through Google Workspace, the Company&apos;s
+          customer relationship management (CRM) system, and the analytics tools Google Analytics
+          and Microsoft Clarity.
         </li>
         <li>Where required by a court order or by law.</li>
         <li>

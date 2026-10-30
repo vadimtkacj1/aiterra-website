@@ -1486,6 +1486,14 @@ export const tools: ToolEntry[] = [
     icon: 'image',
     reviewed: '2026-10-30',
   },
+  {
+    path: '/tools/psychometric-weighted-score',
+    title: 'מחשבון ציון משוקלל לאוניברסיטאות',
+    description: 'ציון משוקלל מפסיכומטרי וממוצע בגרות, עם משקל לבחירתכם, חישוב ממוצע עם בונוסים ואיזה פסיכומטרי צריך ליעד.',
+    category: 'home',
+    icon: 'calculator',
+    reviewed: '2026-10-23',
+  },
   ...nutrients.map(({ slug, name }) => ({
     path: nutrientPath(slug),
     title: `טבלת ${name} במזון`,

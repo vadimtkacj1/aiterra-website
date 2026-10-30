@@ -145,6 +145,7 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/image-upscaler': ['תמונות', 'איכות תמונה', 'webp'],
   '/tools/background-remover': ['תמונות מוצר', 'קטלוג', 'חנות'],
   '/tools/face-blur': ['פרטיות', 'תיקון 13', 'תמונות'],
+  '/tools/psychometric-weighted-score': ['פסיכומטרי', 'בגרות', 'סכם'],
   '/tools/bmi-calculator': ['BMI', 'משקל', 'דיאטה', 'השמנה', 'משקל תקין', 'ירידה במשקל'],
   '/tools/severance-pay-calculator': ['פיצויי פיטורים', 'פיטורים', 'סיום העסקה', 'סעיף 14', 'עובדים', 'משאבי אנוש'],
   '/tools/overtime-pay-calculator': ['שעות נוספות', 'שכר שעתי', 'עבודה בשבת', 'נוכחות', 'עובדים', 'שכר'],
