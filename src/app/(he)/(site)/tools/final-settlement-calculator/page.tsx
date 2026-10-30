@@ -34,7 +34,7 @@ export default function Page() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="במקום לחשב כל זכות בנפרד, כאן מקבלים את כל הרכיבים העיקריים של סיום העבודה בתוצאה אחת."
+      lede="עובד שפוטר אחרי 4 שנים בשכר 12,000 ₪, עם 10 ימי חופשה שלא נוצלו ובלי תקופת הודעה מוקדמת, מגיע לכ-68,600 ₪ ברוטו לפי החישוב כאן. במקום לחשב כל זכות בנפרד, מקבלים את כל הרכיבים העיקריים יחד."
       tool={<FinalSettlementCalculator />}
       faq={faq}
       cta={{

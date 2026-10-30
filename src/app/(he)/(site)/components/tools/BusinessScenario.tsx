@@ -1,23 +1,13 @@
 'use client'
 
 import { useId, useMemo, useState } from 'react'
-import { businessCalculatorBySlug, type CalcLine } from '@/lib/business-calculators'
+import { businessCalculatorBySlug, formatLine } from '@/lib/business-calculators'
 import { parseNumber } from '@/lib/bmi'
 import { Field } from './FunTiles'
 import { Rows } from './BodyCalculators'
 import ui from './toolUi.module.css'
 import fun from './FunTool.module.css'
 import styles from './BmiCalculator.module.css'
-
-const SHEKEL = new Intl.NumberFormat('he-IL', { maximumFractionDigits: 0 })
-const DECIMAL = new Intl.NumberFormat('he-IL', { maximumFractionDigits: 1 })
-
-const formatLine = ({ kind, value }: CalcLine) => {
-  if (kind === 'money') return `${SHEKEL.format(value)} ₪`
-  if (kind === 'percent') return `${DECIMAL.format(value)}%`
-  if (kind === 'months') return `${DECIMAL.format(value)} חודשים`
-  return DECIMAL.format(value)
-}
 
 export default function BusinessScenario({ slug }: { slug: string }) {
   const prefix = useId()

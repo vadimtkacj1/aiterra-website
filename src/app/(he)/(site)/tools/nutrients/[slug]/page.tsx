@@ -50,7 +50,7 @@ export default async function NutrientPage({ params }: Params) {
       title={`טבלת ${name} במזון`}
       metaTitle={titleOf(name)}
       description={descriptionOf(name)}
-      lede={`${name}: ${role}. הטבלה מסודרת מהערך הגבוה לנמוך, ואפשר לחפש בה מזון מסוים.`}
+      lede={`${name}: ${role}. הטבלה מסודרת מהערך הגבוה לנמוך, ואפשר לחפש בה מזון מסוים. בראש הטבלה: ${top[0].name}, ${top[0].amount} ${unit} ל-100 גרם.`}
       tool={<NutrientTable foods={foods} name={name} unit={unit} />}
       faq={faq}
       cta={{

@@ -34,7 +34,7 @@ export default function Page() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="בעל עסק זעיר מנכה 30% מהמחזור בלי לפרט הוצאות. המחשבון משווה את המסלול הזה לדיווח על ההוצאות בפועל."
+      lede="בעל עסק זעיר מנכה 30% מהמחזור בלי לפרט הוצאות: במחזור של 100,000 ₪ זה ניכוי של 30,000 ₪. המחשבון משווה את המסלול הזה לדיווח על ההוצאות בפועל."
       tool={<MicroBusinessCalculator />}
       faq={faq}
       cta={{

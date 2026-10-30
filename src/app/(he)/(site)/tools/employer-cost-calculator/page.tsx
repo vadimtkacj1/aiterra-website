@@ -34,7 +34,7 @@ export default function Page() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="עלות עובד גבוהה מהברוטו. המחשבון מוסיף ביטוח לאומי מעסיק, פנסיה, פיצויים וקרן השתלמות."
+      lede="עובד בשכר ברוטו של 15,000 ₪ עולה למעסיק כ-17,780 ₪ בחודש, לפני נסיעות, הבראה והטבות. התוספת מורכבת מביטוח לאומי, פנסיה ופיצויים."
       tool={<EmployerCostCalculator />}
       faq={faq}
       cta={{

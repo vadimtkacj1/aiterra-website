@@ -39,7 +39,7 @@ export default function Page() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="שיטת הצי האמריקאי מעריכה אחוז שומן מגובה ומהיקפים שמודדים בסרט מדידה, בלי ציוד נוסף."
+      lede="גבר בגובה 180 ס״מ, עם צוואר 38 ס״מ ומותניים 85 ס״מ, עומד על כ-16% שומן לפי שיטת הצי האמריקאי. מספיק סרט מדידה."
       tool={<BodyFatCalculator />}
       faq={faq}
       cta={{

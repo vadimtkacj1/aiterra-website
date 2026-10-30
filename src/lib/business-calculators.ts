@@ -196,5 +196,18 @@ export const businessCalculators: BusinessCalculator[] = [
   },
 ]
 
+const SHEKEL = new Intl.NumberFormat('he-IL', { maximumFractionDigits: 0 })
+const DECIMAL = new Intl.NumberFormat('he-IL', { maximumFractionDigits: 1 })
+
+export const formatLine = ({ kind, value }: CalcLine) => {
+  if (kind === 'money') return `${SHEKEL.format(value)} ₪`
+  if (kind === 'percent') return `${DECIMAL.format(value)}%`
+  if (kind === 'months') return `${DECIMAL.format(value)} חודשים`
+  return DECIMAL.format(value)
+}
+
+export const exampleResult = ({ fields, compute }: BusinessCalculator) =>
+  compute(Object.fromEntries(fields.map(({ id, example }) => [id, example])))
+
 export const businessCalculatorBySlug = (slug: string) => businessCalculators.find((item) => item.slug === slug)
 export const businessCalculatorPath = (slug: string) => `/tools/business/${slug}`

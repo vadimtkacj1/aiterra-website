@@ -39,7 +39,7 @@ export default function Page() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="המחשבון מעריך כמה קלוריות הגוף שורף ביום לפי נוסחת Mifflin-St Jeor ורמת הפעילות, ומציג יעד לשמירה, לירידה ולעלייה במשקל."
+      lede="גבר בן 30, בגובה 180 ס״מ ובמשקל 80 ק״ג, עם פעילות בינונית, צורך כ-2,760 קלוריות ביום לפי נוסחת Mifflin-St Jeor. כאן מכניסים את הנתונים שלכם ומקבלים יעד לשמירה, לירידה ולעלייה במשקל."
       tool={<CalorieCalculator />}
       faq={faq}
       cta={{

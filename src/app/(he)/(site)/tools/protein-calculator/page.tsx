@@ -39,7 +39,7 @@ export default function Page() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="כמות החלבון היומית נגזרת מהמשקל ומהמטרה: 0.8 גרם לק״ג לבריאות כללית, ויותר למי שמתאמן."
+      lede="אדם במשקל 70 ק״ג צריך כ-56 גרם חלבון ביום לבריאות כללית, ו-112 עד 140 גרם לבניית שריר. הכמות נגזרת מהמשקל ומהמטרה."
       tool={<ProteinCalculator />}
       faq={faq}
       cta={{

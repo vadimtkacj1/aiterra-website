@@ -39,7 +39,7 @@ export default function Page() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="הדופק המרבי מוערך לפי נוסחת Tanaka: 208 פחות 0.7 כפול הגיל. אזורי האימון הם אחוזים ממנו."
+      lede="בגיל 40 הדופק המרבי המשוער הוא 180 פעימות בדקה, ואזור שריפת השומן הוא 108 עד 126 פעימות. החישוב לפי נוסחת Tanaka: 208 פחות 0.7 כפול הגיל."
       tool={<HeartRateCalculator />}
       faq={faq}
       cta={{

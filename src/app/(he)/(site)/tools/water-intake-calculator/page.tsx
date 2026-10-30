@@ -39,7 +39,7 @@ export default function Page() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="המחשבון מעריך כמות שתייה לפי כלל מקובל של 30 מ״ל לק״ג, ומוסיף כ-12 מ״ל לכל דקת אימון."
+      lede="אישה במשקל 70 ק״ג שמתאמנת חצי שעה ביום צריכה כ-2.5 ליטר שתייה לפי החישוב כאן: 30 מ״ל לק״ג, ועוד כ-12 מ״ל לכל דקת אימון."
       tool={<WaterCalculator />}
       faq={faq}
       cta={{

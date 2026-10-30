@@ -34,7 +34,7 @@ export default function Page() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="מס רווח הון מחושב על הרווח הריאלי, אחרי נטרול עליית המדד: 25%, ו-30% לבעל מניות מהותי."
+      lede="מי שקנה מניות ב-100,000 ₪, מכר ב-150,000 ₪ ובתקופה הזו המדד עלה ב-10%, הרוויח 40,000 ₪ ריאלית וישלם כ-10,000 ₪ מס לפי שיעור של 25%."
       tool={<CapitalGainsCalculator />}
       faq={faq}
       cta={{
