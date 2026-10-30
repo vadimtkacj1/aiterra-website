@@ -1,0 +1,59 @@
+.drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 140px;
+  padding: 16px;
+  border: 2px dashed rgba(36, 71, 214, 0.45);
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.drop:focus-within {
+  outline: 2px solid #2447d6;
+  outline-offset: 2px;
+}
+
+.file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.result {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.transparent {
+  background-color: #fff;
+  background-image:
+    linear-gradient(45deg, #d9dbe3 25%, transparent 25%, transparent 75%, #d9dbe3 75%),
+    linear-gradient(45deg, #d9dbe3 25%, transparent 25%, transparent 75%, #d9dbe3 75%);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+}
+
+.spin {
+  display: inline-block;
+  vertical-align: middle;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin {
+    animation: none;
+  }
+}

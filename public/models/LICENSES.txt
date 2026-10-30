@@ -1,0 +1,16 @@
+realesr-general-x4v3.onnx
+Real-ESRGAN, Copyright (c) 2021, Xintao Wang. BSD 3-Clause License.
+https://github.com/xinntao/Real-ESRGAN/blob/master/LICENSE
+ONNX export: https://github.com/meigo/slop-image-upscaler (MIT)
+
+u2netp.onnx
+U-2-Net, Copyright (c) Xuebin Qin. Apache License 2.0.
+https://github.com/xuebinqin/U-2-Net/blob/master/LICENSE
+ONNX export: https://github.com/danielgatis/rembg
+
+face_detection_yunet_2023mar.onnx
+YuNet, Copyright (c) 2020 Shiqi Yu. MIT License.
+https://github.com/opencv/opencv_zoo/blob/main/models/face_detection_yunet/LICENSE
+
+Runtime: ONNX Runtime Web, Copyright (c) Microsoft Corporation. MIT License.
+https://github.com/microsoft/onnxruntime/blob/main/LICENSE
