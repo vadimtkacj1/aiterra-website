@@ -26,6 +26,14 @@ const nextConfig: NextConfig = {
     qualities: [75, 90],
     minimumCacheTTL: 2592000,
   },
+  async headers() {
+    return [
+      {
+        source: '/models/:file*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+    ]
+  },
   async redirects() {
     return [
       ...retiredServiceSlugs.map(({ from, to }) => ({

@@ -88,6 +88,7 @@ export default function Footer({
         <div className={locale === 'en' ? styles.grid : `${styles.grid} ${styles.gridWithTools}`}>
           <div className={[styles.column, styles.brandColumn].join(' ')}>
             <Link
+              prefetch={false}
               href={locale === 'en' ? '/en' : '/'}
               className={styles.brand}
               aria-label={footer.brand}
@@ -110,7 +111,7 @@ export default function Footer({
               <ul className={styles.list}>
                 {column.links.map((link) => (
                   <li key={`${link.href}|${link.label}`}>
-                    <Link href={link.href} className={styles.link}>
+                    <Link href={link.href} prefetch={false} className={styles.link}>
                       {link.label}
                     </Link>
                   </li>
@@ -124,7 +125,7 @@ export default function Footer({
               <ul className={styles.list}>
                 {POPULAR_TOOLS.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className={styles.link}>
+                    <Link href={link.href} prefetch={false} className={styles.link}>
                       {link.label}
                     </Link>
                   </li>
@@ -170,7 +171,7 @@ export default function Footer({
           <ul className={styles.legal}>
             {footer.legal.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className={styles.legalLink}>
+                <Link href={link.href} prefetch={false} className={styles.legalLink}>
                   {link.label}
                 </Link>
               </li>

@@ -48,7 +48,7 @@ function NavAnchor({
   }
 
   return (
-    <Link href={href} className={className} onClick={onClick} title={title}>
+    <Link href={href} prefetch={false} className={className} onClick={onClick} title={title}>
       {children}
     </Link>
   )
