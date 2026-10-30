@@ -23,6 +23,25 @@
   min-height: 648px;
 }
 
+.heroCompact {
+  min-height: 0;
+}
+
+.heroCompact .copy {
+  padding: 12px 28px 28px;
+}
+
+.heroCompact .title {
+  margin-top: 10px;
+  font-size: clamp(30px, 6cqw, 48px);
+}
+
+.guideLede {
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
 .media {
   position: absolute;
   inset: 0;

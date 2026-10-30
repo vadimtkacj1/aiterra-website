@@ -60,6 +60,7 @@ export function ToolHero({
   lede,
   chips = [],
   large = false,
+  compact = false,
   reviewed,
 }: {
   eyebrow: string
@@ -67,25 +68,31 @@ export function ToolHero({
   lede: string
   chips?: string[]
   large?: boolean
+  compact?: boolean
   reviewed?: string
 }) {
   return (
     <>
-      <link rel="preload" as="image" href="/videos/v2-hero-poster.webp" fetchPriority="high" />
-      <section className={`${styles.hero} ${large ? styles.heroLarge : ''}`} aria-labelledby="tool-heading">
-        <div className={styles.media}>
-          <video
-            className={styles.mediaImage}
-            src="/videos/v2-hero.mp4?v=2"
-            poster="/videos/v2-hero-poster.webp"
-            data-autoplay=""
-            muted
-            loop
-            playsInline
-            preload="none"
-            aria-hidden="true"
-          />
-        </div>
+      {compact ? null : <link rel="preload" as="image" href="/videos/v2-hero-poster.webp" fetchPriority="high" />}
+      <section
+        className={`${styles.hero} ${large ? styles.heroLarge : ''} ${compact ? styles.heroCompact : ''}`}
+        aria-labelledby="tool-heading"
+      >
+        {compact ? null : (
+          <div className={styles.media}>
+            <video
+              className={styles.mediaImage}
+              src="/videos/v2-hero.mp4?v=2"
+              poster="/videos/v2-hero-poster.webp"
+              data-autoplay=""
+              muted
+              loop
+              playsInline
+              preload="none"
+              aria-hidden="true"
+            />
+          </div>
+        )}
         <div className={styles.scrim} />
         <div className={styles.grid}>
           <div className={styles.column} />
@@ -94,13 +101,13 @@ export function ToolHero({
             <h1 id="tool-heading" className={styles.title}>
               {title}
             </h1>
-            <p className={styles.lede}>{lede}</p>
+            {compact ? null : <p className={styles.lede}>{lede}</p>}
             {reviewed ? (
               <p className={styles.reviewed}>
                 עודכן ונבדק מול המקורות: <time dateTime={reviewed}>{reviewed.split('-').reverse().join('.')}</time>
               </p>
             ) : null}
-            {chips.length ? (
+            {chips.length && !compact ? (
               <ul className={styles.chips}>
                 {chips.map((chip) => (
                   <li key={chip} className={styles.chip}>
@@ -194,7 +201,7 @@ export default function ToolLayout({
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header />
       <main id="main-content" className={styles.page}>
-        <ToolHero eyebrow="כלי חינמי" title={title} lede={lede} chips={chips} reviewed={toolReviewed(path)} />
+        <ToolHero eyebrow="כלי חינמי" title={title} lede={lede} chips={chips} compact reviewed={toolReviewed(path)} />
         <ToolCrumbs
           trail={[
             { label: 'בית', href: '/' },
@@ -207,16 +214,6 @@ export default function ToolLayout({
         {tool}
         <ToolShareBar path={path} title={title} />
         {embed ? <ToolEmbedBox slug={embed.slug} title={title} height={embed.height} /> : null}
-
-        <article className={styles.guide}>
-          {children}
-          <div className={styles.cta}>
-            <p>{cta.text}</p>
-            <Link href={cta.href} className={styles.ctaLink}>
-              {cta.label}
-            </Link>
-          </div>
-        </article>
 
         {related.length ? (
           <section className={styles.related} aria-labelledby="related-tools-heading">
@@ -250,6 +247,17 @@ export default function ToolLayout({
             </div>
           </section>
         ) : null}
+
+        <article className={styles.guide}>
+          <p className={styles.guideLede}>{lede}</p>
+          {children}
+          <div className={styles.cta}>
+            <p>{cta.text}</p>
+            <Link href={cta.href} className={styles.ctaLink}>
+              {cta.label}
+            </Link>
+          </div>
+        </article>
 
         <Faq heading={['שאלות נפוצות', `על ${title}`]} entries={faq} />
       </main>
