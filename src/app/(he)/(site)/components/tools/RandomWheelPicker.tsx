@@ -1,5 +1,6 @@
 'use client'
 
+import ShareResultButton from './ShareResultButton'
 import { useCallback, useEffect, useId, useRef, useState, type ChangeEvent, type KeyboardEvent } from 'react'
 import { Link2, RotateCw, Trash2 } from 'lucide-react'
 import {
@@ -217,6 +218,11 @@ export default function RandomWheelPicker() {
           <p className={styles.result} role="status" aria-live="polite">
             {winner ? `הזוכה: ${winner}` : names.length < MIN_SPIN_NAMES ? 'צריך לפחות שני שמות.' : ''}
           </p>
+          {winner && !spinning ? (
+            <div className={`${ui.actions} ${styles.centered}`}>
+              <ShareResultButton className={ui.secondary} tool="wheel" text={`הזוכה בהגרלה: ${winner}`} />
+            </div>
+          ) : null}
         </div>
       </div>
     </section>

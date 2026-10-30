@@ -1,5 +1,6 @@
 'use client'
 
+import ShareResultButton from './ShareResultButton'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Copy } from 'lucide-react'
 import {
@@ -161,6 +162,11 @@ export default function GematriaCalculator() {
                     </div>
                   ))}
                 </dl>
+                <ShareResultButton
+                  className={ui.secondary}
+                  tool="gematria"
+                  text={`${text.trim()} בגימטריה: ${standard}. כמה יוצא השם שלכם?`}
+                />
                 <h3 className={styles.sameTitle}>מילים מוכרות עם אותו ערך ({standard})</h3>
                 {same.length ? (
                   <ul className={styles.same}>
