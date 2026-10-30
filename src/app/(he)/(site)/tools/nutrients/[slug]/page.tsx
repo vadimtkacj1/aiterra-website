@@ -35,7 +35,7 @@ export default async function NutrientPage({ params }: Params) {
     {
       id: `nutrient-${slug}-top`,
       question: `באילו מזונות יש הכי הרבה ${name}?`,
-      answer: `לפי מאגר התזונה הלאומי, בראש הרשימה נמצאים ${top.map((food) => `${food.name} (${food.amount} ${unit})`).join(', ')}, בכמות ל-100 גרם. כדאי לזכור שמחלק מהמזונות אוכלים כמות קטנה בהרבה מ-100 גרם.`,
+      answer: `לפי מאגר התזונה הלאומי, בראש הרשימה נמצאים ${top.map((food) => `${food.name} (${food.amount} ${unit})`).join(', ')}, בכמות ל-100 גרם. מחלק מהמזונות אוכלים כמות קטנה בהרבה מ-100 גרם.`,
     },
     {
       id: `nutrient-${slug}-daily`,

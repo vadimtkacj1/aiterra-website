@@ -14,7 +14,7 @@ import Footer from '../../(he)/(site)/components/Footer'
 import { getV2ContentEn } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
-import { faqPage, webPage } from '@/lib/schema'
+import { PAGES_REVIEWED, faqPage, webPage } from '@/lib/schema'
 
 const HOME_TITLE = 'AITERRA | Software & Digital Agency in Israel: Web, Apps, AI'
 const HOME_DESCRIPTION =
@@ -42,6 +42,7 @@ export default function EnHomePage() {
           name: HOME_TITLE,
           description: HOME_DESCRIPTION,
           locale: 'en',
+          dateModified: PAGES_REVIEWED,
         })}
       />
       {entries.length ? <JsonLd data={faqPage({ path: '/en', entries, locale: 'en' })!} /> : null}

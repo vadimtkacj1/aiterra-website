@@ -21,7 +21,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
   'neot-sade': {
     title: 'Neot Sade',
     category: 'Online stores',
-    heroTitle: 'Neot Sade — fresh produce delivered online',
+    heroTitle: 'Neot Sade, fresh produce delivered online',
     projectType: 'Online store',
     technology: 'Next.js · custom admin system',
     tags: ['Next.js', 'eCommerce', 'Payments', 'Loyalty club'],
@@ -29,9 +29,9 @@ export const projectsEn: Record<string, ProjectOverride> = {
       'We built Neot Sade a full online store for home delivery of fruit, vegetables and pantry goods across Raanana and the Sharon region. It includes a catalogue managed through a custom admin, a shopping cart with secure card payments on site, a loyalty club with points and cashback, and delivery fees calculated from the customer address at checkout.',
     metaDescription:
       'An online grocery store for Neot Sade: fresh fruit and vegetable delivery in Raanana, a self-managed catalogue, secure payments and a customer loyalty club. See the full project.',
-    imageAlt: 'Screenshot of the Neot Sade homepage — an online fruit and vegetable store',
+    imageAlt: 'Screenshot of the Neot Sade homepage, an online fruit and vegetable store',
     challenge: {
-      text: 'Selling fresh produce online is not an ordinary store: prices move, some items are sold by weight rather than by unit, and delivery fees depend on the customer address. On top of that, the Neot Sade team needed to run the catalogue themselves — adding products, updating prices and closing out items that had sold out — without going back to a developer for every change.',
+      text: 'Selling fresh produce online is not an ordinary store: prices move, some items are sold by weight rather than by unit, and delivery fees depend on the customer address. On top of that, the Neot Sade team needed to run the catalogue themselves, adding products, updating prices and closing out items that had sold out, without going back to a developer for every change.',
     },
     solution: {
       text: 'We built the store fully in code on Next.js over a purpose-built admin system: a catalogue the team updates on their own, support for selling by weight, a cart with secure on-site card payments, delivery fees calculated from the customer address at checkout, and a loyalty club with points and cashback. Everything runs from one interface, and we continue to maintain and develop the system after launch.',
@@ -51,7 +51,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
       'A Shopify store for the ALOVA hair care brand: minimalist Hebrew design, content pages explaining the pre-wash range, and a short purchase path built to convert. See the full project.',
     imageAlt: 'Screenshot of the ALOVA homepage',
     challenge: {
-      text: 'Pre-wash scalp treatment is a category most of the Israeli audience does not yet know, and the purchase only comes once the value is understood. The challenge was a site doing two jobs at once — explaining what a formula focused on scalp health actually does and why it is used before washing, while closing a sale on the same screen. Rather than separating the two, we built dedicated content pages for each of the two flagship products and folded them into the customer journey, so every question is answered exactly where it arises.',
+      text: 'Pre-wash scalp treatment is a category most of the Israeli audience does not yet know, and the purchase only comes once the value is understood. The challenge was a site doing two jobs at once, explaining what a formula focused on scalp health actually does and why it is used before washing, while closing a sale on the same screen. Rather than separating the two, we built dedicated content pages for each of the two flagship products and folded them into the customer journey, so every question is answered exactly where it arises.',
     },
     solution: {
       text: 'We built a fully right-to-left Hebrew Shopify store with a calm, minimalist design that lets the product photography and brand language lead: short navigation between the two products and their content pages, a before-and-after comparison that makes the result tangible, newsletter capture in exchange for a discount, and a shortened checkout with secure payments. The result is a premium brand experience that does not come at the cost of conversion rate.',
@@ -61,7 +61,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
   'karin-cohen': {
     title: 'Karin Cohen — lash academy',
     category: 'Web development',
-    heroTitle: 'Karin Cohen — lash and permanent makeup academy',
+    heroTitle: 'Karin Cohen, lash and permanent makeup academy',
     tags: ['Landing page', 'UI/UX', 'Leads', 'WhatsApp'],
     heroDescription:
       'A brand and sales site for the Karin Cohen academy in Holon. We built one long page that carries the visitor from the personal story through to enrolment: two course tracks with pricing and an offer, a cosmetics and permanent makeup treatment menu, a before-and-after gallery, client testimonials, an FAQ, an appointment form and a direct WhatsApp connection.',
@@ -73,10 +73,10 @@ export const projectsEn: Record<string, ProjectOverride> = {
   'hofit-cosmetics': {
     title: 'Hofit Cosmetics',
     category: 'Web development',
-    heroTitle: 'Hofit Cosmetics — a beauty clinic in Holon',
+    heroTitle: 'Hofit Cosmetics, a beauty clinic in Holon',
     tags: ['Landing page', 'UI/UX', 'WhatsApp', 'Leads'],
     heroDescription:
-      'A site for the Hofit Cosmetics clinic in Holon. It presents cold laser hair removal, RF skin tightening and microblading, and includes a comparison table against other clinics, before-and-after galleries, client reviews and an enquiry form — with every call to action leading straight to WhatsApp to book an appointment.',
+      'A site for the Hofit Cosmetics clinic in Holon. It presents cold laser hair removal, RF skin tightening and microblading, and includes a comparison table against other clinics, before-and-after galleries, client reviews and an enquiry form, with every call to action leading straight to WhatsApp to book an appointment.',
     metaDescription:
       'A site for the Hofit Cosmetics clinic in Holon: cold laser hair removal, RF skin tightening and microblading, before-and-after galleries and WhatsApp booking.',
     imageAlt: 'Screenshot of the Hofit Cosmetics homepage',
@@ -85,10 +85,10 @@ export const projectsEn: Record<string, ProjectOverride> = {
   'maayan-cosmetics': {
     title: 'Maayan Vaknin — clinical cosmetics',
     category: 'Web development',
-    heroTitle: 'Maayan Vaknin — clinical cosmetician',
+    heroTitle: 'Maayan Vaknin, clinical cosmetician',
     tags: ['Landing page', 'UI/UX', 'Accessibility', 'Leads'],
     heroDescription:
-      'A site for clinical cosmetician Maayan Vaknin in Holon. We built a clean, typographic site with a full treatment menu and separate price list, a work gallery split between makeup and cosmetics, a catalogue of the clinic products, an appointment form and a WhatsApp connection — alongside terms, privacy policy and accessibility statement pages.',
+      'A site for clinical cosmetician Maayan Vaknin in Holon. We built a clean, typographic site with a full treatment menu and separate price list, a work gallery split between makeup and cosmetics, a catalogue of the clinic products, an appointment form and a WhatsApp connection, alongside terms, privacy policy and accessibility statement pages.',
     metaDescription:
       'A site for clinical cosmetician Maayan Vaknin in Holon: treatment menu and price list, work gallery, product catalogue and appointment booking. See the full project.',
     imageAlt: 'Screenshot of the Maayan Vaknin clinical cosmetics homepage',
@@ -97,10 +97,10 @@ export const projectsEn: Record<string, ProjectOverride> = {
   'eli-ben-yitzhak': {
     title: 'Eli Ben Yitzhak',
     category: 'Web development',
-    heroTitle: 'Eli Ben Yitzhak — a hair design studio in Bat Yam',
+    heroTitle: 'Eli Ben Yitzhak, a hair design studio in Bat Yam',
     tags: ['Landing page', 'UI/UX', 'Work gallery', 'WhatsApp'],
     heroDescription:
-      'A brand site for Eli Ben Yitzhak, a boutique hair design studio in Bat Yam specialising in organic straightening, ombré and balayage. The site presents services for men, women and children, a gallery of work from the studio, client testimonials and an enquiry form — with every call to action leading to booking by phone or WhatsApp.',
+      'A brand site for Eli Ben Yitzhak, a boutique hair design studio in Bat Yam specialising in organic straightening, ombré and balayage. The site presents services for men, women and children, a gallery of work from the studio, client testimonials and an enquiry form, with every call to action leading to booking by phone or WhatsApp.',
     metaDescription:
       'A brand site for the Eli Ben Yitzhak studio in Bat Yam: organic hair straightening, ombré and balayage, a work gallery, testimonials and WhatsApp booking.',
     imageAlt: 'Screenshot of the Eli Ben Yitzhak hair design studio homepage',
@@ -120,7 +120,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
       text: 'The central challenge was translating the quality and premium feel of the products into a digital space, so we built a complete Shopify foundation using open-source development. That approach gave us maximum flexibility to customise every element and create a clean, minimalist and elegant interface that puts the serums at the centre. Beyond the considered appearance, every button, menu and checkout step on the site was designed and engineered to form an intelligent funnel that carries the visitor intuitively toward conversion.',
     },
     solution: {
-      text: 'Our work with Olie 6 goes well beyond building a store — it is a complete digital growth arrangement working in sync. We currently run the brand campaigns in parallel to drive targeted traffic from a qualified audience, and continue to maintain the site with ongoing daily development. That combination of media management alongside constant technical optimisation of the site lets us improve conversion rate consistently and hold the standard a premium cosmetics brand requires.',
+      text: 'Our work with Olie 6 goes well beyond building a store, it is a complete digital growth arrangement working in sync. We currently run the brand campaigns in parallel to drive targeted traffic from a qualified audience, and continue to maintain the site with ongoing daily development. That combination of media management alongside constant technical optimisation of the site lets us improve conversion rate consistently and hold the standard a premium cosmetics brand requires.',
     },
   },
 
@@ -139,7 +139,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
   'brand-identity': {
     title: 'Ram and Haim — real estate marketing',
     category: 'Digital marketing',
-    heroTitle: 'Ram and Haim — real estate marketing',
+    heroTitle: 'Ram and Haim, real estate marketing',
     tags: ['SEO', 'Reputation management', 'Digital assets'],
     heroDescription:
       'We built and managed a set of digital assets for Ram and Haim Real Estate Marketing, focusing on establishing a strong and authoritative online presence. The project covered setting up a stable digital foundation as a base for growth, and considered reputation management designed to build trust and generate quality enquiries in a competitive real estate market.',
@@ -168,7 +168,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
       text: 'Mortgage advisory demands trust and authority from the very first click. For Avi, the goal was a tightly built digital presence signalling professionalism, quality and confidence to prospects standing before one of the largest financial decisions of their lives. We started by consolidating a consistent brand language and designing the graphic assets, then moved on to dedicated landing pages. Those pages were carefully planned at the level of user experience and copy, to present Avi added value clearly and move visitors to leave their details or make quick contact, including a direct WhatsApp connection.',
     },
     solution: {
-      text: 'Beyond the look and the foundations, our focus was building an active growth engine. We created a comprehensive Meta advertising strategy, scaling from a simple lead campaign into a deep 360-degree funnel. Through constant optimisation and varied creative — including long-form video that delivers real value — we surrounded the target audience from every direction. That let us fill the funnel, filter out irrelevant enquiries and deliver Avi far more mature and qualified leads, which raised the conversion rate of the business substantially.',
+      text: 'Beyond the look and the foundations, our focus was building an active growth engine. We created a comprehensive Meta advertising strategy, scaling from a simple lead campaign into a deep 360-degree funnel. Through constant optimisation and varied creative, including long-form video that delivers real value, we surrounded the target audience from every direction. That let us fill the funnel, filter out irrelevant enquiries and deliver Avi far more mature and qualified leads, which raised the conversion rate of the business substantially.',
     },
   },
 
@@ -186,19 +186,19 @@ export const projectsEn: Record<string, ProjectOverride> = {
   'sous-chef': {
     title: 'Sous Chef',
     category: 'Web development',
-    heroTitle: 'Sous Chef — a product site for a restaurant management platform',
+    heroTitle: 'Sous Chef, a product site for a restaurant management platform',
     tags: ['SaaS', 'Product site', 'UI/UX', 'English'],
     heroDescription:
-      'An English-language product site for Sous Chef, an AI-based restaurant management platform. The site presents what the system does — managing menus across every delivery app from one place, weekly insights and recommended actions to grow revenue — in a dark, modern design with a clear conversion path to booking a demo.',
+      'An English-language product site for Sous Chef, an AI-based restaurant management platform. The site presents what the system does, managing menus across every delivery app from one place, weekly insights and recommended actions to grow revenue, in a dark, modern design with a clear conversion path to booking a demo.',
     metaDescription:
       'A product site for Sous Chef, an AI platform for restaurant management and menu control across delivery apps. Dark design, clear messaging and a conversion path to a demo.',
-    imageAlt: 'Screenshot of the Sous Chef homepage — a restaurant management platform',
+    imageAlt: 'Screenshot of the Sous Chef homepage, a restaurant management platform',
   },
 
   zentax: {
     title: 'Zentax — AI accounting platform',
     category: 'Custom software',
-    heroTitle: 'Zentax — an AI-powered accounting and ledger platform',
+    heroTitle: 'Zentax, an AI-powered accounting and ledger platform',
     projectType: 'AI platform',
     technology: 'ASP.NET · React · React Native',
     tags: ['AI', 'FinTech', 'React Native', 'Stripe'],
@@ -218,7 +218,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
   apprify: {
     title: 'Apprify — AI mortgage platform',
     category: 'Custom software',
-    heroTitle: 'Apprify — an AI mortgage processing and decisioning platform',
+    heroTitle: 'Apprify, an AI mortgage processing and decisioning platform',
     projectType: 'AI platform',
     technology: 'ASP.NET · Razor Pages · LLM',
     tags: ['AI', 'FinTech', 'ASP.NET', 'LLM'],
@@ -238,7 +238,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
   'tech-embassy': {
     title: 'Tech Embassy — event management platform',
     category: 'Custom software',
-    heroTitle: 'Tech Embassy — an event operations and management platform',
+    heroTitle: 'Tech Embassy, an event operations and management platform',
     projectType: 'Event management platform',
     technology: 'ASP.NET · React Native · Luma',
     tags: ['ASP.NET', 'React Native', 'Luma', 'Automation'],
@@ -251,14 +251,14 @@ export const projectsEn: Record<string, ProjectOverride> = {
       text: 'Every Tech Embassy event brings together startups, investors, accelerators and guests across several locations, and coordinating them relied on hand-kept lists, spreadsheets and scattered chats. Communication was split across many tools, there was no central system for event operations and the team had little visibility into participants and progress. Every event carried heavy coordination overhead, and every new city multiplied the work.',
     },
     solution: {
-      text: 'We built a platform that holds the whole event lifecycle. Each participant appears in a view for their role — startup, investor, judge or guest — and registrations and attendance statuses sync from Luma automatically. Approvals, invitations and bans take one click, and all participant communication runs from one place, before and after the event. During the competition every judge scores each startup on market, product, model, traction and team, the leaderboard updates live, organisers follow and close the vote from their phone, and prizes are assigned from one screen right after. The platform went from concept to delivery in one to two months, and today events run the same way in every city with far less manual coordination.',
+      text: 'We built a platform that holds the whole event lifecycle. Each participant appears in a view for their role, startup, investor, judge or guest, and registrations and attendance statuses sync from Luma automatically. Approvals, invitations and bans take one click, and all participant communication runs from one place, before and after the event. During the competition every judge scores each startup on market, product, model, traction and team, the leaderboard updates live, organisers follow and close the vote from their phone, and prizes are assigned from one screen right after. The platform went from concept to delivery in one to two months, and today events run the same way in every city with far less manual coordination.',
     },
   },
 
   bradley: {
     title: 'Bradley — men’s streetwear',
     category: 'Online stores',
-    heroTitle: 'Bradley — an online store for a men’s streetwear brand',
+    heroTitle: 'Bradley, an online store for a men’s streetwear brand',
     projectType: 'Online store',
     technology: 'Shopify · design and Hebrew localisation',
     tags: ['Shopify', 'Online store', 'Fashion', 'RTL'],
@@ -278,7 +278,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
   'natan-borochov': {
     title: 'Natan Borochov — barbershop',
     category: 'Web development',
-    heroTitle: 'Natan Borochov — a barbershop site in Holon',
+    heroTitle: 'Natan Borochov, a barbershop site in Holon',
     projectType: 'Brand site',
     technology: 'React · Vite · Tailwind CSS',
     tags: ['Brand site', 'UI/UX', 'WhatsApp', 'React'],

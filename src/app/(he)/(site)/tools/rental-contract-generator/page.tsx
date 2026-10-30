@@ -44,7 +44,7 @@ export default function Page() {
         href: '/services/development',
       }}
     >
-      <h2>חשוב לדעת</h2>
+      <h2>לפני שחותמים</h2>
       <p>
         הטיוטה מבוססת על{' '}
         <a href={LAW_URL} rel="noopener" target="_blank">

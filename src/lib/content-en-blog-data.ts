@@ -12,7 +12,7 @@ type PostOverride = {
 
 /**
  * English versions of the blog. A post appears on /en/blog only once it has an
- * entry here — an untranslated post is omitted rather than served in Hebrew.
+ * entry here, an untranslated post is omitted rather than served in Hebrew.
  */
 export const postsEn: Record<string, PostOverride> = {
   'best-crm-small-business-israel': {
@@ -27,13 +27,13 @@ export const postsEn: Record<string, PostOverride> = {
 
 *Last updated: October 2026*
 
-A CRM is the heart of customer management in a business: every lead, conversation and deal held in one place. With dozens of options on the market it is easy to get lost. This guide compares the four systems most Israeli small businesses shortlist, with the emphasis on what actually matters here — Hebrew support and integration with Israeli invoicing software.
+A CRM is the heart of customer management in a business: every lead, conversation and deal held in one place. With dozens of options on the market it is easy to get lost. This guide compares the four systems most Israeli small businesses shortlist, with the emphasis on what actually matters here, Hebrew support and integration with Israeli invoicing software.
 
 ![A business owner comparing CRM systems for a small business in Israel](/images/blog/best-crm-small-business-israel.webp)
 
 ## How do Monday, Fireberry, HubSpot and Zoho compare?
 
-All four answer the same basic need — collecting leads, tracking deals and automating follow-up — but they differ on price, on the quality of their Hebrew, and on how deep the local integrations go. Here is the full picture at a glance:
+All four answer the same basic need, collecting leads, tracking deals and automating follow-up, but they differ on price, on the quality of their Hebrew, and on how deep the local integrations go. Here is the full picture at a glance:
 
 | System | Entry price (per user, per month) | Hebrew support | Israeli invoicing link |
 |---|---|---|---|
@@ -48,10 +48,10 @@ All four answer the same basic need — collecting leads, tracking deals and aut
 
 There is no one-size-fits-all answer. Here is the quick match by type of business, way of working and requirements:
 
-- **Monday** — for a business that wants a visual, colourful interface that is easy to operate, and that already runs its tasks and projects in Monday. Rollout is fast and the learning curve is shallow.
-- **Fireberry** — for an Israeli business that wants full Hebrew support and a clean link to Green Invoice, Hashavshevet or iCount. The local advantage is significant and saves a complicated integration job.
-- **HubSpot** — for a business that wants to start free and grow, and that needs marketing, email and content tools inside the same system.
-- **Zoho** — for a business that wants the most features for the lowest price, and does not mind a slightly crowded interface with English on some of the screens.
+- **Monday**: for a business that wants a visual, colourful interface that is easy to operate, and that already runs its tasks and projects in Monday. Rollout is fast and the learning curve is shallow.
+- **Fireberry**: for an Israeli business that wants full Hebrew support and a clean link to Green Invoice, Hashavshevet or iCount. The local advantage is significant and saves a complicated integration job.
+- **HubSpot**: for a business that wants to start free and grow, and that needs marketing, email and content tools inside the same system.
+- **Zoho**: for a business that wants the most features for the lowest price, and does not mind a slightly crowded interface with English on some of the screens.
 
 ## What does a CRM cost a small business, and what does the real price include?
 
@@ -65,7 +65,7 @@ WhatsApp is one of the most widely used communication channels in Israel, and [M
 
 ## How do you roll a CRM out properly in a small business?
 
-A successful rollout starts by mapping the process you already run: where leads come from, who handles them, and when a deal closes. Only then do you pick a system, define a simple sales pipeline, connect the lead sources — the website form, WhatsApp and phone calls — and switch on basic automations such as follow-up reminders. Start small and expand gradually; that beats loading up features nobody on the team will actually use.
+A successful rollout starts by mapping the process you already run: where leads come from, who handles them, and when a deal closes. Only then do you pick a system, define a simple sales pipeline, connect the lead sources, the website form, WhatsApp and phone calls, and switch on basic automations such as follow-up reminders. Start small and expand gradually; that beats loading up features nobody on the team will actually use.
 
 ## How we approach CRM at Aiterra
 
@@ -89,7 +89,7 @@ We are not the ambassadors of any one platform. We look at your processes and re
         },
         {
           q: 'Which CRM connects to Green Invoice and Hashavshevet?',
-          a: 'The CRMs that connect to Green Invoice and Hashavshevet out of the box are Fireberry and Israeli platforms such as Powerlink, which offer built-in connections to Green Invoice, Hashavshevet and iCount. On the global systems — Monday, HubSpot and Zoho — the connection is possible through a dedicated integration or a middleware tool, but it usually needs a custom setup before it runs smoothly.',
+          a: 'The CRMs that connect to Green Invoice and Hashavshevet out of the box are Fireberry and Israeli platforms such as Powerlink, which offer built-in connections to Green Invoice, Hashavshevet and iCount. On the global systems, Monday, HubSpot and Zoho, the connection is possible through a dedicated integration or a middleware tool, but it usually needs a custom setup before it runs smoothly.',
         },
         {
           q: 'What does a CRM cost a small business?',
@@ -112,13 +112,13 @@ We are not the ambassadors of any one platform. We look at your processes and re
     excerpt:
       'What business automation and a WhatsApp bot cost an Israeli small business, how to work out the ROI, and which processes to automate first.',
     tags: ['Automation', 'WhatsApp bot', 'CRM', 'ROI', 'Small business'],
-    content: `**TL;DR:** Business automation for a small business — a WhatsApp bot, a CRM connection, automatic replies and lead routing — usually costs ₪3,000–15,000 to set up, plus a monthly bill for the tools. When it saves tens of hours a month and stops leads going missing, the investment pays for itself within two to six months in most cases.
+    content: `**TL;DR:** Business automation for a small business, a WhatsApp bot, a CRM connection, automatic replies and lead routing, usually costs ₪3,000–15,000 to set up, plus a monthly bill for the tools. When it saves tens of hours a month and stops leads going missing, the investment pays for itself within two to six months in most cases.
 
 "Automation" sounds like a big, expensive word, but for a small business it usually means something simple: stop doing by hand what a computer can do on its own. The first reply on WhatsApp, logging a lead in the CRM, sending a quote, reminding someone about a meeting. The real question is not "what does it cost" but "what am I losing every month without it".
 
 ![A business owner reviewing the return on investment of business automation and a WhatsApp bot](/images/blog/business-automation-cost-roi.webp)
 
-Most automation in an Israeli small business starts with WhatsApp — the channel where customers expect a quick reply by message rather than a wait on the phone, and which also offers dedicated business tooling through [WhatsApp Business](https://www.facebook.com/business/whatsapp). Now let us translate that into numbers: what it costs, and how long it takes to come back.
+Most automation in an Israeli small business starts with WhatsApp, the channel where customers expect a quick reply by message rather than a wait on the phone, and which also offers dedicated business tooling through [WhatsApp Business](https://www.facebook.com/business/whatsapp). Now let us translate that into numbers: what it costs, and how long it takes to come back.
 
 ## What does business automation cost? A price table
 
@@ -132,9 +132,9 @@ Alongside the one-off setup there is a monthly bill for the tools themselves (th
 
 ## How do you work out the ROI in practice?
 
-The calculation is simple: how many hours a month the automation saves, multiplied by the cost of an hour of work, plus the leads that no longer fall through the cracks. For example, if a WhatsApp bot saves 20 hours a month at ₪60 an hour, that is ₪1,200 a month — so a ₪6,000 setup pays for itself in roughly five months, before you have counted a single rescued lead.
+The calculation is simple: how many hours a month the automation saves, multiplied by the cost of an hour of work, plus the leads that no longer fall through the cracks. For example, if a WhatsApp bot saves 20 hours a month at ₪60 an hour, that is ₪1,200 a month, so a ₪6,000 setup pays for itself in roughly five months, before you have counted a single rescued lead.
 
-To quantify the other side of the equation — how many leads actually arrive and close — it is worth setting up [basic analytics measurement](https://support.google.com/analytics). That shows in black and white which channels bring in deals, and it often reveals that one rescued lead a month already covers the monthly cost of the tools.
+To quantify the other side of the equation, how many leads actually arrive and close, it is worth setting up [basic analytics measurement](https://support.google.com/analytics). That shows in black and white which channels bring in deals, and it often reveals that one rescued lead a month already covers the monthly cost of the tools.
 
 ## Which processes should you automate first?
 
@@ -163,7 +163,7 @@ We do not sell "automation" as a product. We map the processes that eat the most
       items: [
         {
           q: 'What does business automation cost a small business?',
-          a: 'Basic automation — a WhatsApp bot and automatic replies — runs ₪3,000–6,000 as a one-off setup. Mid-level automation, including a CRM connection and lead routing, costs ₪6,000–12,000, and advanced automation with multiple integrations ₪12,000–25,000. On top of all of those sits a monthly bill for the tools of roughly ₪150 to ₪800, depending on how heavily you use them.',
+          a: 'Basic automation, a WhatsApp bot and automatic replies, runs ₪3,000–6,000 as a one-off setup. Mid-level automation, including a CRM connection and lead routing, costs ₪6,000–12,000, and advanced automation with multiple integrations ₪12,000–25,000. On top of all of those sits a monthly bill for the tools of roughly ₪150 to ₪800, depending on how heavily you use them.',
         },
         {
           q: 'How long does automation take to pay for itself?',
@@ -179,7 +179,7 @@ We do not sell "automation" as a product. We map the processes that eat the most
         },
         {
           q: 'Do all the existing systems need replacing before you can automate?',
-          a: 'In most cases no. Good automation connects to the tools you already have — WhatsApp, the form on your website, the accounting system — and links them together, rather than demanding a wholesale replacement. That keeps the setup cost low and the rollout fast. Replacing a core system such as the CRM is only worth considering if the current one genuinely limits growth.',
+          a: 'In most cases no. Good automation connects to the tools you already have, WhatsApp, the form on your website, the accounting system, and links them together, rather than demanding a wholesale replacement. That keeps the setup cost low and the rollout fast. Replacing a core system such as the CRM is only worth considering if the current one genuinely limits growth.',
         },
       ],
     },
@@ -190,7 +190,7 @@ We do not sell "automation" as a product. We map the processes that eat the most
     excerpt:
       'A lead that waits more than a few minutes goes to a competitor. How a WhatsApp bot, a proper CRM link and custom automation answer every enquiry 24/7.',
     tags: ['Automation', 'CRM', 'WhatsApp', 'Digital'],
-    content: `**In short (TL;DR):** Business automation is a smart link between your website, WhatsApp, email and your CRM, so that every lead is captured, answered within seconds and logged automatically — 24/7, with no human hand involved. The result: fewer lost leads, and dozens of manual working hours handed back to you every month.
+    content: `**In short (TL;DR):** Business automation is a smart link between your website, WhatsApp, email and your CRM, so that every lead is captured, answered within seconds and logged automatically, 24/7, with no human hand involved. The result: fewer lost leads, and dozens of manual working hours handed back to you every month.
 
 Let us do the painful arithmetic: how many leads reached you this month and never got an answer in time? Sales research shows again and again that a lead answered in the first few minutes closes at several times the rate of one that waited hours. The problem is that you are busy doing the work, not refreshing an inbox. That is exactly what [business automation](/en/services/development) exists for: a system that works for you 24/7, answers customers, records every enquiry and makes sure not a single shekel is lost.
 
@@ -198,16 +198,16 @@ Let us do the painful arithmetic: how many leads reached you this month and neve
 
 ## What is business automation, exactly?
 
-Business automation is a smart connection between the systems that already serve you — the website, WhatsApp, email, the calendar and the customer management system (CRM) — so that whole processes happen on their own, with no human hand involved. A visitor left their details on a landing page? Within seconds they receive a personal WhatsApp message, the enquiry is written into the CRM, and your salesperson gets an alert with the full details. Nothing depends on anyone remembering.
+Business automation is a smart connection between the systems that already serve you, the website, WhatsApp, email, the calendar and the customer management system (CRM), so that whole processes happen on their own, with no human hand involved. A visitor left their details on a landing page? Within seconds they receive a personal WhatsApp message, the enquiry is written into the CRM, and your salesperson gets an alert with the full details. Nothing depends on anyone remembering.
 
 ## Why now? The numbers worth knowing
 
-- **WhatsApp is where the conversation happens:** WhatsApp is the most widely used messaging channel in Israel, and the place where customers expect immediate service — which is why an automatic reply in that channel raises the odds of closing.
+- **WhatsApp is where the conversation happens:** WhatsApp is the most widely used messaging channel in Israel, and the place where customers expect immediate service, which is why an automatic reply in that channel raises the odds of closing.
 - **Speed closes deals:** a lead answered in the first few minutes closes at a significantly higher rate than one left waiting hours, so an instant automatic reply changes the whole funnel.
-- **Full availability:** a bot answers 24/7 — including nights and weekends, the hours when most enquiries go unanswered by a human.
+- **Full availability:** a bot answers 24/7, including nights and weekends, the hours when most enquiries go unanswered by a human.
 - **Accurate measurement:** when every enquiry enters the system tagged by source, you can calculate real return on investment (ROI) with analytics tools such as Google Analytics — [the Google Analytics help centre](https://support.google.com/analytics).
 
-## Off-the-shelf bot or custom automation — what is the difference?
+## Off-the-shelf bot or custom automation: what is the difference?
 
 | Capability | Off-the-shelf bot | Custom automation (Aiterra) |
 | --- | --- | --- |
@@ -223,7 +223,7 @@ The Israeli customer lives in WhatsApp, and that is where they expect service to
 
 ## How does a CRM connection keep leads from falling through the cracks?
 
-A CRM is the heart of any business that sells, but it is worth exactly as much as the data that reaches it. When we build an automation, every enquiry — from the website, a paid campaign, WhatsApp or the phone — enters the system automatically, is tagged by source and gets a follow-up task. At any moment you can see how many leads came in, where they came from and the status of each one.
+A CRM is the heart of any business that sells, but it is worth exactly as much as the data that reaches it. When we build an automation, every enquiry, from the website, a paid campaign, WhatsApp or the phone, enters the system automatically, is tagged by source and gets a follow-up task. At any moment you can see how many leads came in, where they came from and the status of each one.
 
 ## Where else does automation save you hours and money?
 
@@ -235,7 +235,7 @@ A CRM is the heart of any business that sells, but it is worth exactly as much a
 
 ## Why Aiterra? We build, we do not just connect
 
-There is a wide gap between wiring two off-the-shelf tools together in a generic template and designing an automation around the way you actually work. As an agency that comes from software engineering, we at Aiterra can build the complex integrations too — payment providers, inventory and internal systems — and tailor a solution that grows with the business.
+There is a wide gap between wiring two off-the-shelf tools together in a generic template and designing an automation around the way you actually work. As an agency that comes from software engineering, we at Aiterra can build the complex integrations too, payment providers, inventory and internal systems, and tailor a solution that grows with the business.
 
 Tired of losing leads and burning hours on manual work? Leave your details and we will map out an automation plan showing exactly how much time and money you can save.
 
@@ -252,19 +252,19 @@ Tired of losing leads and burning hours on manual work? Leave your details and w
       items: [
         {
           q: 'Which business processes can be automated?',
-          a: 'Almost any process that repeats: capturing leads, a first WhatsApp reply, booking meetings, reminders, producing documents and quotes, customer follow-ups and management reports. In a short scoping call we map the processes that take the most of your time, or where leads are being lost, and start automating exactly there — so the return is felt within the first few weeks.',
+          a: 'Almost any process that repeats: capturing leads, a first WhatsApp reply, booking meetings, reminders, producing documents and quotes, customer follow-ups and management reports. In a short scoping call we map the processes that take the most of your time, or where leads are being lost, and start automating exactly there, so the return is felt within the first few weeks.',
         },
         {
           q: 'Is automation worth it for a small business?',
-          a: 'Especially for a small business. With no receptionist and no service desk, the automation is your first employee — it answers customers, records every enquiry in the CRM and chases follow-ups, 24/7, at a monthly cost far below hiring. A small business gains the most from every hour and every lead that is not lost.',
+          a: 'Especially for a small business. With no receptionist and no service desk, the automation is your first employee, it answers customers, records every enquiry in the CRM and chases follow-ups, 24/7, at a monthly cost far below hiring. A small business gains the most from every hour and every lead that is not lost.',
         },
         {
           q: 'What is the difference between an off-the-shelf bot and custom automation?',
-          a: 'An off-the-shelf bot gives generic answers and stops there. Custom automation connects to your systems — CRM, calendar, payments and inventory — and carries out real actions end to end, exactly as your process runs. It also grows with the business instead of confining you to a fixed template and to answers that never really solve the problem.',
+          a: 'An off-the-shelf bot gives generic answers and stops there. Custom automation connects to your systems, CRM, calendar, payments and inventory, and carries out real actions end to end, exactly as your process runs. It also grows with the business instead of confining you to a fixed template and to answers that never really solve the problem.',
         },
         {
           q: 'How long does it take to set up automation for a business?',
-          a: 'A basic automation — a WhatsApp bot connected to the CRM that captures leads — can go live within a few days to two weeks. More complex processes, such as integration with payment providers or internal systems, are built in stages. We always start with the process that returns the most, so you see results early.',
+          a: 'A basic automation, a WhatsApp bot connected to the CRM that captures leads, can go live within a few days to two weeks. More complex processes, such as integration with payment providers or internal systems, are built in stages. We always start with the process that returns the most, so you see results early.',
         },
       ],
     },
@@ -279,11 +279,11 @@ Tired of losing leads and burning hours on manual work? Leave your details and w
 
 The rule is simple: if you sell products and take payment on the site, you need an online store. If you sell a service, expertise or trust, and the goal is to generate enquiries, a brochure site is enough and it costs less. In 2026 a brochure site runs roughly between ₪4,000 and ₪25,000; an e-commerce store usually starts at ₪20,000 and up, because it carries a catalogue, payments and logistics.
 
-![Brochure site versus online store — a shopper paying in an online store on a laptop](/images/blog/business-site-vs-online-store.webp)
+![Brochure site versus online store, a shopper paying in an online store on a laptop](/images/blog/business-site-vs-online-store.webp)
 
-The real difference is not the number of pages but **the purpose**. A brochure site exists to present and persuade — it turns a visitor into a lead. An online store exists to sell — it manages stock, takes payment and produces an order. A business that builds a store when all it needs is a brochure site pays for complexity it will never use; a business that builds a brochure site when it needs to sell leaves revenue on the table.
+The real difference is not the number of pages but **the purpose**. A brochure site exists to present and persuade, it turns a visitor into a lead. An online store exists to sell, it manages stock, takes payment and produces an order. A business that builds a store when all it needs is a brochure site pays for complexity it will never use; a business that builds a brochure site when it needs to sell leaves revenue on the table.
 
-## Brochure site or online store — what is the difference and who is each for?
+## Brochure site or online store: what is the difference and who is each for?
 
 In short: a brochure site turns visitors into leads, and an online store closes the sale and takes payment on the site itself. Here is the quick comparison:
 
@@ -294,7 +294,7 @@ In short: a brochure site turns visitors into leads, and an online store closes 
 | Ongoing maintenance | Low | Higher (stock, orders) |
 | Suits | Service providers, brands, specialists | Retail, physical and digital products |
 
-## Which store platform should you choose — Shopify, WooCommerce or Wix?
+## Which store platform should you choose: Shopify, WooCommerce or Wix?
 
 If you have settled on a store, the platform is the next decision. Each one has a different character:
 
@@ -304,9 +304,9 @@ If you have settled on a store, the platform is the next decision. Each one has 
 | WooCommerce | Full flexibility and ownership of the code | Anyone who wants control and customisation, on WordPress |
 | Wix | The cheapest and simplest way to start | A very small store with a limited catalogue |
 
-The difference between an open platform such as WooCommerce and a closed subscription system is exactly the discussion we set out in the [WordPress versus custom code guide](/en/blog/wordpress-vs-custom-code) — the same considerations of flexibility, ownership and growth ceiling apply to stores as well.
+The difference between an open platform such as WooCommerce and a closed subscription system is exactly the discussion we set out in the [WordPress versus custom code guide](/en/blog/wordpress-vs-custom-code), the same considerations of flexibility, ownership and growth ceiling apply to stores as well.
 
-## What both kinds of site need — visibility in Google and speed
+## What both kinds of site need: visibility in Google and speed
 
 Whichever you choose, the site has to be found and it has to load fast. Most buying journeys start with a search, and Google holds [around 90% of the global search market](https://gs.statcounter.com/search-engine-market-share), which makes proper SEO a baseline requirement for a brochure site and a store alike. In an online store the weight is doubled: load speed affects conversion rate directly, so meeting [Google's Core Web Vitals](https://web.dev/articles/vitals) stops being a nice-to-have and becomes a genuine business requirement.
 
@@ -322,7 +322,7 @@ Ask yourself one decisive question: can the customer complete the purchase on th
 **Choose a brochure site if:**
 - You sell a service, consulting or a bespoke project priced on request.
 - Your customer journey is an enquiry and a conversation, not a click on "add to basket".
-- You are building authority and trust — clinics, consultants, professionals — and want a steady flow of leads.
+- You are building authority and trust, clinics, consultants, professionals, and want a steady flow of leads.
 
 Service businesses will almost always get more from a strong brochure site with landing pages, because buying from them is a conversation rather than a button click, while businesses selling a defined product at a known price do better with a store. There is also a middle route: a brochure site with a small store built into it, which suits anyone selling both a service and a handful of products.
 
@@ -330,7 +330,7 @@ Before deciding, it is worth understanding the full price ranges in the [2026 we
 
 ---
 
-**Not sure which suits you?** Tell us about the business through the [contact page](/en/contact) and we will give you an honest recommendation — brochure site, store, or a combination of the two. Take a look at Aiterra's [web development service](/en/services/web-development).
+**Not sure which suits you?** Tell us about the business through the [contact page](/en/contact) and we will give you an honest recommendation, brochure site, store, or a combination of the two. Take a look at Aiterra's [web development service](/en/services/web-development).
 
 ## Further reading
 
@@ -342,14 +342,14 @@ Before deciding, it is worth understanding the full price ranges in the [2026 we
       items: [
         {
           q: 'What is the difference between a brochure site and an online store?',
-          a: 'A brochure site exists to present, persuade and generate enquiries, while an online store exists to sell and take payment directly — it manages a catalogue, stock, payments and orders. As a rule, service businesses such as consultants, clinics and professionals get more from a brochure site, while businesses selling a defined product at a known price get more from an online store.',
+          a: 'A brochure site exists to present, persuade and generate enquiries, while an online store exists to sell and take payment directly, it manages a catalogue, stock, payments and orders. As a rule, service businesses such as consultants, clinics and professionals get more from a brochure site, while businesses selling a defined product at a known price get more from an online store.',
         },
         {
           q: 'What does an online store cost compared with a brochure site?',
           a: 'In 2026 a brochure site runs roughly between ₪4,000 and ₪25,000, and an e-commerce store usually starts at ₪20,000 and up, because it includes a product catalogue, a payment system, stock management and logistics. Ongoing maintenance of a store is higher as well, because of stock updates, orders and payment security.',
         },
         {
-          q: 'WooCommerce, Shopify or Wix — which should you choose for a store?',
+          q: 'WooCommerce, Shopify or Wix, which should you choose for a store?',
           a: 'Shopify is fast to set up and convenient for anyone who wants to launch without technical overhead; WooCommerce gives full flexibility and ownership of the code on WordPress; Wix is the cheapest and simplest option for a very small store. The choice depends on the level of control, the flexibility and the growth ceiling you need.',
         },
         {
@@ -365,31 +365,31 @@ Before deciding, it is worth understanding the full price ranges in the [2026 we
     excerpt:
       'A cheap website is tempting, but the price hides real costs: code ownership, hosting, SEO, accessibility, maintenance and an eventual rebuild.',
     tags: ['Web development', 'Pricing', 'Hidden costs', 'Cheap website', 'Small business'],
-    content: `**In short (TL;DR):** A hidden cost is any payment a site genuinely needs in order to run that does not appear in the cheap build price. A website at ₪1,500 usually covers a ready-made template and nothing more; ownership of the code, hosting, search optimisation, accessibility and maintenance are all added separately — and sometimes force a rebuild, which means paying twice.
+    content: `**In short (TL;DR):** A hidden cost is any payment a site genuinely needs in order to run that does not appear in the cheap build price. A website at ₪1,500 usually covers a ready-made template and nothing more; ownership of the code, hosting, search optimisation, accessibility and maintenance are all added separately, and sometimes force a rebuild, which means paying twice.
 
-A website for ₪1,500 almost never ends up costing ₪1,500. That low price usually covers a ready-made template and nothing else, and everything that turns a site into a business tool — search optimisation, content, decent hosting, ownership of the code and maintenance — is added later as separate costs, or is missing altogether. In this article we break down what really hides behind a cheap website, so that you compare proposals on real value rather than on the number on the sign.
+A website for ₪1,500 almost never ends up costing ₪1,500. That low price usually covers a ready-made template and nothing else, and everything that turns a site into a business tool, search optimisation, content, decent hosting, ownership of the code and maintenance, is added later as separate costs, or is missing altogether. In this article we break down what really hides behind a cheap website, so that you compare proposals on real value rather than on the number on the sign.
 
-![A hand on a calculator beside documents — working out the hidden costs behind a cheap website](/images/blog/cheap-website-hidden-costs.webp)
+![A hand on a calculator beside documents, working out the hidden costs behind a cheap website](/images/blog/cheap-website-hidden-costs.webp)
 
-A hidden cost is any payment the site genuinely needs in order to operate that does not appear in the cheap initial proposal. The problem is not that a cheap site is always bad — it is that cheap usually describes a starting point only, while the real cost of a business asset plays out across the first year and beyond. A business that prices the build and ignores what follows is planning to overrun its budget.
+A hidden cost is any payment the site genuinely needs in order to operate that does not appear in the cheap initial proposal. The problem is not that a cheap site is always bad, it is that cheap usually describes a starting point only, while the real cost of a business asset plays out across the first year and beyond. A business that prices the build and ignores what follows is planning to overrun its budget.
 
 ## What are the seven most common hidden costs?
 
 | The hidden cost | What actually happens |
 | --- | --- |
-| Ownership of the code and the domain | The site is rented — it cannot be moved to another supplier |
+| Ownership of the code and the domain | The site is rented, it cannot be moved to another supplier |
 | Hosting and annual maintenance | A recurring charge that was never mentioned in the original proposal |
 | Search optimisation and content | An empty template with no SEO and no content that brings customers |
 | Mobile compatibility and speed | A slow site that Google ranks low and visitors abandon |
 | Accessibility required by law | Failing the standard exposes the business to claims and fines |
 | Changes and updates | Every small fix turns into a separate charge |
-| A rebuild | After a year you start from scratch — and pay twice |
+| A rebuild | After a year you start from scratch, and pay twice |
 
 The last two rows of the table are usually the most expensive. Accessibility is not a recommendation but a legal obligation: in Israel, [the Equal Rights for Persons with Disabilities Law and standard IS 5568](https://www.gov.il/he/pages/website_accessibility) require business websites to be accessible, and failing to comply exposes you to claims and fines. And a rebuild means paying twice, the most painful cost of all, which we come to next.
 
 ## Why is a ready-made template not really a website?
 
-A cheap template looks good in a demo, but it is an empty shell. A site that brings in customers needs content that speaks to your audience, a structure Google likes, and fast loading. That matters all the more because Google holds roughly 90% of the search market ([StatCounter data](https://gs.statcounter.com/search-engine-market-share)) — and a template that is not built for search simply does not appear where your customers are looking for you. The gap between a template and a business website is precisely the work the cheap price skips, and that is the difference between a digital business card nobody finds and a site that generates enquiries.
+A cheap template looks good in a demo, but it is an empty shell. A site that brings in customers needs content that speaks to your audience, a structure Google likes, and fast loading. That matters all the more because Google holds roughly 90% of the search market ([StatCounter data](https://gs.statcounter.com/search-engine-market-share)), and a template that is not built for search simply does not appear where your customers are looking for you. The gap between a template and a business website is precisely the work the cheap price skips, and that is the difference between a digital business card nobody finds and a site that generates enquiries.
 
 ## Which cost hurts most? Paying twice
 
@@ -398,10 +398,10 @@ This is the most common story of all: a business pays little for a cheap site, d
 ## How do you compare proposals fairly?
 
 - **Ask what is not included.** This is the single most important question to put to any cheap proposal.
-- **Ask for the total annual cost**, not just the build price — including hosting, maintenance and changes.
+- **Ask for the total annual cost**, not just the build price, including hosting, maintenance and changes.
 - **Confirm full ownership** of the domain, the hosting and the code, in writing.
 - **Check that basic search work and content are included**, or at least that the site is built ready for search.
-- **Do not compare number with number** — compare value with value.
+- **Do not compare number with number**: compare value with value.
 
 To know what the fair range genuinely is, work through the [guide to website costs for a small business in 2026](/en/blog/website-cost-israel-2026), with real price ranges for every type of site. And before you sign any proposal, test it against the [nine red flags in choosing an agency](/en/blog/how-to-choose-digital-agency).
 
@@ -423,7 +423,7 @@ When you are testing an idea on a minimal budget, understand the limitations pre
       items: [
         {
           q: 'Why does a ₪1,500 website end up costing more?',
-          a: 'Because that price usually covers a ready-made template and nothing else. Everything that turns a site into a business tool — search optimisation, content, decent hosting, maintenance and ownership of the code — is added later as separate costs, or is missing entirely. Often the site also has to be rebuilt after a year, which means paying twice.',
+          a: 'Because that price usually covers a ready-made template and nothing else. Everything that turns a site into a business tool, search optimisation, content, decent hosting, maintenance and ownership of the code, is added later as separate costs, or is missing entirely. Often the site also has to be rebuilt after a year, which means paying twice.',
         },
         {
           q: 'What are the common hidden costs in a cheap website?',
@@ -477,7 +477,7 @@ The conclusion: paid is excellent for driving immediate traffic and for launches
 
 ## The formula: answer the questions customers really ask
 
-A good business blog does not write about what interests the business — it answers what customers ask. Every question you hear in a sales call is an article idea: how much does it cost, what is the difference between one option and another, how do you choose a supplier, what are the common mistakes. An article that answers a question like that honestly attracts exactly the visitors who are a moment away from a decision, which is the most valuable traffic there is.
+A good business blog does not write about what interests the business, it answers what customers ask. Every question you hear in a sales call is an article idea: how much does it cost, what is the difference between one option and another, how do you choose a supplier, what are the common mistakes. An article that answers a question like that honestly attracts exactly the visitors who are a moment away from a decision, which is the most valuable traffic there is.
 
 ![Planning a content strategy with a notebook and coffee beside the computer](/images/blog/content-marketing-blog-2.webp)
 
@@ -485,17 +485,17 @@ A good business blog does not write about what interests the business — it ans
 
 There is a new and urgent reason to invest in content in 2026: the search engine is changing underneath us.
 
-- Google still holds [around 90% of the global search market](https://gs.statcounter.com/search-engine-market-share) — the arena in which organic content is measured.
+- Google still holds [around 90% of the global search market](https://gs.statcounter.com/search-engine-market-share), the arena in which organic content is measured.
 - The research firm Gartner has forecast that traditional search volume in engines is set to fall significantly by 2026 as users move to AI assistants, which transfers value to the sources the AI cites.
 - One quality article a month compounds into 12 content assets a year, each of which keeps ranking and bringing in leads alongside the others.
 
-When ChatGPT or Google AI Overviews answer a question in your field, they pull the answer from authoritative sources — and a business with a deep, professional content library is exactly such a source. Whoever builds a quality bank of answers today is buying presence in the answers of tomorrow.
+When ChatGPT or Google AI Overviews answer a question in your field, they pull the answer from authoritative sources, and a business with a deep, professional content library is exactly such a source. Whoever builds a quality bank of answers today is buying presence in the answers of tomorrow.
 
 ## How do you make a blog last?
 
-The great enemy of a business blog is enthusiasm that fades: three articles in the first month, then a year of silence. Results come from a steady rhythm — even one quality article a month, every month, built around orderly keyword research. At Aiterra every content plan is built a year ahead: topics, target phrases and structure, so that the blog works as a system rather than as a hobby.
+The great enemy of a business blog is enthusiasm that fades: three articles in the first month, then a year of silence. Results come from a steady rhythm, even one quality article a month, every month, built around orderly keyword research. At Aiterra every content plan is built a year ahead: topics, target phrases and structure, so that the blog works as a system rather than as a hobby.
 
-And it is worth remembering that a good article does not stay in the blog alone. The same content is distributed again and again — a post on social media, a newsletter to existing customers, a ready answer for a customer who asks. That way one article works across several channels at once, and the one-off investment in writing keeps returning value long after it was published.
+And it is worth remembering that a good article does not stay in the blog alone. The same content is distributed again and again, a post on social media, a newsletter to existing customers, a ready answer for a customer who asks. That way one article works across several channels at once, and the one-off investment in writing keeps returning value long after it was published.
 
 Want a blog that produces leads rather than just words? Leave your details and we will build you a full content strategy with a publishing plan for the year.
 
@@ -512,11 +512,11 @@ Want a blog that produces leads rather than just words? Leave your details and w
       items: [
         {
           q: 'How long before a blog starts producing results?',
-          a: 'Articles begin gathering rankings in Google within weeks to months, and the effect compounds: the more quality content there is, the more authoritative the site is judged to be, and the faster each new article ranks. In practice, a year of consistent publishing — one article a month — completely changes the volume of organic traffic and leads.',
+          a: 'Articles begin gathering rankings in Google within weeks to months, and the effect compounds: the more quality content there is, the more authoritative the site is judged to be, and the faster each new article ranks. In practice, a year of consistent publishing, one article a month, completely changes the volume of organic traffic and leads.',
         },
         {
           q: 'Can content be written with artificial intelligence?',
-          a: 'AI tools such as ChatGPT are excellent for research and for drafts, but generic content generated automatically builds no authority and beats no competitor. The value sits in your real knowledge: experience, examples from the field and a professional position — exactly what a model cannot invent, and exactly what the search engines reward.',
+          a: 'AI tools such as ChatGPT are excellent for research and for drafts, but generic content generated automatically builds no authority and beats no competitor. The value sits in your real knowledge: experience, examples from the field and a professional position, exactly what a model cannot invent, and exactly what the search engines reward.',
         },
         {
           q: 'What should you write about first?',
@@ -535,13 +535,13 @@ Want a blog that produces leads rather than just words? Leave your details and w
     excerpt:
       'Typing every deal twice wastes hours and creates errors. How to connect a CRM to Morning, Hashavshevet, iCount or Rivhit and automate your bookkeeping.',
     tags: ['CRM', 'Morning', 'Hashavshevet', 'iCount', 'Automation', 'Bookkeeping'],
-    content: `**In short (TL;DR):** Connecting a CRM to Israeli accounting software — Morning (formerly Green Invoice), iCount, Rivhit or Hashavshevet — is an automatic bridge that issues a tax invoice or receipt and sends it to the customer the moment a deal closes in the CRM, with no double entry. The result: hours saved every month, fewer errors and faster collection.
+    content: `**In short (TL;DR):** Connecting a CRM to Israeli accounting software, Morning (formerly Green Invoice), iCount, Rivhit or Hashavshevet, is an automatic bridge that issues a tax invoice or receipt and sends it to the customer the moment a deal closes in the CRM, with no double entry. The result: hours saved every month, fewer errors and faster collection.
 
 One of the classic pain points for an Israeli business is double entry: you close a deal in the CRM, then type it in again by hand in the accounting software to issue the invoice. A connection between the CRM and Morning (formerly Green Invoice), Hashavshevet, iCount or Rivhit removes that duplication: the moment a deal closes, the invoice is issued and sent to the customer automatically. It saves hours every month and prevents the kind of errors that only come to light at the end of the tax year.
 
-![Connecting a CRM to Israeli accounting software — bookkeeping automation with a calculator and documents](/images/blog/crm-israeli-invoicing-integration.webp)
+![Connecting a CRM to Israeli accounting software, bookkeeping automation with a calculator and documents](/images/blog/crm-israeli-invoicing-integration.webp)
 
-A CRM-to-accounting connection is an automatic bridge that moves deal data — customer, amount, line items — from the system where you manage sales into the system where you issue accounting documents, with no re-typing. In Israel it matters even more, because issuing a tax invoice or receipt is a legal obligation with precise structural requirements.
+A CRM-to-accounting connection is an automatic bridge that moves deal data, customer, amount, line items, from the system where you manage sales into the system where you issue accounting documents, with no re-typing. In Israel it matters even more, because issuing a tax invoice or receipt is a legal obligation with precise structural requirements.
 
 ## Which accounting systems connect to a CRM?
 
@@ -554,42 +554,42 @@ Most of the accounting packages commonly used in Israel offer an API for integra
 | Rivhit | Cloud and desktop | Small and mid-sized businesses |
 | Hashavshevet | The long-standing accounting standard | Accountants and established businesses |
 
-The choice depends on what you — or your accountant — already work with: the integration is built towards the existing system, not the other way round. Worth remembering: almost no business needs to change accounting software in order to automate. The same accountant, the same reports, the same software — just without the manual typing in the middle.
+The choice depends on what you, or your accountant, already work with: the integration is built towards the existing system, not the other way round. Worth remembering: almost no business needs to change accounting software in order to automate. The same accountant, the same reports, the same software, just without the manual typing in the middle.
 
 ## Why now? The numbers behind the Israel Invoice model
 
 Since 1 January 2024 the Israel Tax Authority has operated the **Israel Invoice** model, which requires an **allocation number** as a condition for deducting input VAT on invoices above a threshold that keeps falling:
 
-- Above roughly ₪20,000 — during 2025.
-- Above roughly ₪10,000 — from 1 January 2026.
-- Above roughly ₪5,000 — from 1 June 2026.
+- Above roughly ₪20,000, during 2025.
+- Above roughly ₪10,000, from 1 January 2026.
+- Above roughly ₪5,000, from 1 June 2026.
 
-In practice, almost every business invoice now needs an allocation number from the Tax Authority. When the CRM is connected to the accounting software, the data arrives clean in the system that requests the allocation number from the authority — without stopping every deal to type the details in and request a number by hand. The official details are published on the [Israel Invoice model page of the Tax Authority](https://www.gov.il/he/departments/topics/israel-invoice/govil-landing-page).
+In practice, almost every business invoice now needs an allocation number from the Tax Authority. When the CRM is connected to the accounting software, the data arrives clean in the system that requests the allocation number from the authority, without stopping every deal to type the details in and request a number by hand. The official details are published on the [Israel Invoice model page of the Tax Authority](https://www.gov.il/he/departments/topics/israel-invoice/govil-landing-page).
 
 ## What can actually be automated?
 
-Once the bridge is standing, you can automate far more than issuing a single document — a whole chain runs by itself, from the closed deal through to the payment:
+Once the bridge is standing, you can automate far more than issuing a single document, a whole chain runs by itself, from the closed deal through to the payment:
 
 - **Automatic invoice or receipt issuing** the moment a deal is marked as closed in the CRM.
 - **Sending the document to the customer** automatically, by email or WhatsApp.
-- **Payment status sync** — when a customer pays, the CRM updates.
+- **Payment status sync**: when a customer pays, the CRM updates.
 - **Automatic collection reminders** on invoices that have not been paid.
-- **Consolidated reporting** — one picture of revenue without cross-checking two systems by hand.
+- **Consolidated reporting**: one picture of revenue without cross-checking two systems by hand.
 - **Opening a customer record** in the accounting software automatically when a new customer is created in the CRM, with no entering the details twice.
 
 In practice this means a salesperson who closes a deal never touches the accounting software at all: they mark it as closed, and the invoice, the delivery to the customer and the payment status all happen by themselves in the background. That is the difference between a business that loses a working day a month to data entry and one that frees that time up for selling.
 
 ## How do you connect them? The steps
 
-Setting this up is not a huge project — usually a few hours of one-off configuration that pays for itself in the first month. The stages:
+Setting this up is not a huge project, usually a few hours of one-off configuration that pays for itself in the first month. The stages:
 
 1. **Confirm both systems have an API.** Most CRMs and Israeli accounting packages support one.
-2. **Define the trigger** — which event in the CRM issues the document, a paid or closed status for example.
-3. **Map the fields** — customer, company or ID number, line items, VAT — so the invoice comes out valid.
+2. **Define the trigger**: which event in the CRM issues the document, a paid or closed status for example.
+3. **Map the fields**: customer, company or ID number, line items, VAT, so the invoice comes out valid.
 4. **Test on one real deal** before switching it on for everything.
-5. **Add follow-on automations** — sending to the customer, collection reminders, status updates.
+5. **Add follow-on automations**: sending to the customer, collection reminders, status updates.
 
-This is one of the highest-return automations there is, and it slots straight into the [12 processes worth stopping doing by hand](/en/blog/business-automation-12-processes). The foundation for all of it is a CRM that fits — see the [guide to choosing a CRM for a small business in Israel](/en/blog/best-crm-small-business-israel) — and usually a [WhatsApp to CRM connection](/en/blog/whatsapp-business-api-crm-integration) as well, to close the loop with the customer. At Aiterra we recommend defining the process first — which documents are issued and when — and only then wiring it up technically, so the system behaves correctly from day one.
+This is one of the highest-return automations there is, and it slots straight into the [12 processes worth stopping doing by hand](/en/blog/business-automation-12-processes). The foundation for all of it is a CRM that fits, see the [guide to choosing a CRM for a small business in Israel](/en/blog/best-crm-small-business-israel), and usually a [WhatsApp to CRM connection](/en/blog/whatsapp-business-api-crm-integration) as well, to close the loop with the customer. At Aiterra we recommend defining the process first, which documents are issued and when, and only then wiring it up technically, so the system behaves correctly from day one.
 
 ---
 
@@ -605,7 +605,7 @@ This is one of the highest-return automations there is, and it slots straight in
       items: [
         {
           q: 'Which accounting packages can be connected to a CRM?',
-          a: 'Most of the accounting packages commonly used in Israel offer an API for integration, among them Morning (formerly Green Invoice), iCount, Rivhit and Hashavshevet. The integration is always built towards the system you or your accountant already work with, not the other way round — so there is no need to change software in order to automate the bookkeeping.',
+          a: 'Most of the accounting packages commonly used in Israel offer an API for integration, among them Morning (formerly Green Invoice), iCount, Rivhit and Hashavshevet. The integration is always built towards the system you or your accountant already work with, not the other way round, so there is no need to change software in order to automate the bookkeeping.',
         },
         {
           q: 'What is the main gain from connecting a CRM to invoicing?',
@@ -613,11 +613,11 @@ This is one of the highest-return automations there is, and it slots straight in
         },
         {
           q: 'Will an automatically issued invoice be legally valid?',
-          a: 'Yes, as long as the integration is configured correctly. Israeli accounting packages issue documents that meet the requirements of the law and the Tax Authority; the job of the integration is only to pass them the right data — customer, company or ID number, line items and VAT. That is exactly why it is important to test one real deal and confirm the document is valid before switching the automation on for everything.',
+          a: 'Yes, as long as the integration is configured correctly. Israeli accounting packages issue documents that meet the requirements of the law and the Tax Authority; the job of the integration is only to pass them the right data, customer, company or ID number, line items and VAT. That is exactly why it is important to test one real deal and confirm the document is valid before switching the automation on for everything.',
         },
         {
           q: 'Does the integration help with allocation numbers under the Israel Invoice model?',
-          a: 'Yes, indirectly. The allocation number is obtained by the accounting software from the Tax Authority, not by the CRM. The job of the integration is to pass it accurate deal data — customer, company number, line items and amount — so that every invoice above the threshold receives a valid allocation number automatically, with no manual typing and without holding the customer up at the close.',
+          a: 'Yes, indirectly. The allocation number is obtained by the accounting software from the Tax Authority, not by the CRM. The job of the integration is to pass it accurate deal data, customer, company number, line items and amount, so that every invoice above the threshold receives a valid allocation number automatically, with no manual typing and without holding the customer up at the close.',
         },
         {
           q: 'What do you need in order to set the integration up?',
@@ -630,17 +630,17 @@ This is one of the highest-return automations there is, and it slots straight in
   'digital-branding-guide': {
     title: 'Digital Branding: Build a Brand People Remember',
     excerpt:
-      'A logo is not a brand. A brand is why a client picks you over ten identical competitors in Google — and how you charge more than they do.',
+      'A logo is not a brand. A brand is why a client picks you over ten identical competitors in Google, and how you charge more than they do.',
     tags: ['Branding', 'Brand identity', 'Design', 'Digital marketing', 'Small business'],
     content: `**In short (TL;DR):** Digital branding is the promise a business makes and the way it keeps that promise consistently at every online touchpoint. A strong brand gives the customer a reason to choose you out of ten identical competitors in Google, and lets you price higher instead of competing on cost alone.
 
-Run a small experiment: search Google for the service you offer. You get ten competitors saying exactly the same thing — professional, reliable, personal service. When everyone looks and sounds alike, the customer chooses on price. Good digital branding breaks that tie: it gives the customer a reason to choose you, and to pay more for it.
+Run a small experiment: search Google for the service you offer. You get ten competitors saying exactly the same thing, professional, reliable, personal service. When everyone looks and sounds alike, the customer chooses on price. Good digital branding breaks that tie: it gives the customer a reason to choose you, and to pay more for it.
 
 ![Building a brand identity with a colour palette and design materials](/images/blog/digital-branding.webp)
 
 ## A brand is not a logo, so what is the difference?
 
-A logo, colours and a typeface are only the shell. A real brand is the promise your business makes and the way it keeps that promise at every touchpoint: on the site, on the business profile, in the ads, in emails and even in the way the phone is answered. When that promise is clear and consistent, something interesting happens — customers begin to recognise you, to remember you and to recommend you.
+A logo, colours and a typeface are only the shell. A real brand is the promise your business makes and the way it keeps that promise at every touchpoint: on the site, on the business profile, in the ads, in emails and even in the way the phone is answered. When that promise is clear and consistent, something interesting happens, customers begin to recognise you, to remember you and to recommend you.
 
 The confusion between the two costs money. Here is the difference at the bottom line:
 
@@ -656,16 +656,16 @@ The confusion between the two costs money. Here is the difference at the bottom 
 
 **Genuine differentiation:** what do you do differently from everyone else? Not an empty slogan, but a specific promise competitors cannot easily copy. This is the strategy work that comes before any design.
 
-**A consistent visual language:** a professional logo, a defined colour palette, uniform typography and a settled photographic style — in every channel and every format. A visitor moving from the ad to the site should feel they have arrived at precisely the same business.
+**A consistent visual language:** a professional logo, a defined colour palette, uniform typography and a settled photographic style, in every channel and every format. A visitor moving from the ad to the site should feel they have arrived at precisely the same business.
 
 **A brand voice:** how does the brand speak? Formal or friendly, technical or plain? The tone of the copy on the site, on social and in emails is as much a part of the identity as the colours are.
 
 ## Why now? The numbers
 
-Branding begins exactly where the customer looks for you — and most of that searching still happens in one place:
+Branding begins exactly where the customer looks for you, and most of that searching still happens in one place:
 
 - Google holds around 90% of the global search market, which makes a consistent identity in the search results and in the ads critical ([StatCounter](https://gs.statcounter.com/search-engine-market-share)).
-- Paid ads carrying a familiar identity attract more clicks on the same budget — a direct improvement in ROI with no increase in spend.
+- Paid ads carrying a familiar identity attract more clicks on the same budget, a direct improvement in ROI with no increase in spend.
 - A differentiated brand can price higher, because it is not competing on price alone.
 - Visitors stay longer on a site that projects professionalism and consistency, which raises the chances of conversion.
 
@@ -673,7 +673,7 @@ The meaning is simple: investing in branding is not an expense on good looks; it
 
 ## Where do you start?
 
-At Aiterra the branding process begins with strategy: who the audience is, who the competitors are, and what story only you can tell. From there the visual and verbal identity is built, and it is then applied across every asset — site, profiles, ad templates and sales materials — so that everything the customer meets speaks the same language.
+At Aiterra the branding process begins with strategy: who the audience is, who the competitors are, and what story only you can tell. From there the visual and verbal identity is built, and it is then applied across every asset, site, profiles, ad templates and sales materials, so that everything the customer meets speaks the same language.
 
 Does your business look like everyone else? Leave your details and we will build you an identity nobody could confuse with a competitor.
 
@@ -690,7 +690,7 @@ Does your business look like everyone else? Leave your details and we will build
       items: [
         {
           q: 'What is the difference between branding and logo design?',
-          a: 'A logo is one component inside a whole system. Branding covers the strategy (differentiation, audience, messaging), the visual identity (logo, colours, typography) and the brand voice — and, more importantly, their consistent application in every channel, from the website to the ads. The logo identifies you, but the complete brand is what makes a customer choose you and remember you.',
+          a: 'A logo is one component inside a whole system. Branding covers the strategy (differentiation, audience, messaging), the visual identity (logo, colours, typography) and the brand voice, and, more importantly, their consistent application in every channel, from the website to the ads. The logo identifies you, but the complete brand is what makes a customer choose you and remember you.',
         },
         {
           q: 'When is the right time to rebrand?',
@@ -698,7 +698,7 @@ Does your business look like everyone else? Leave your details and we will build
         },
         {
           q: 'Does a small business really need branding?',
-          a: 'A small business especially. Without huge advertising budgets, differentiation and consistency are the way to stand out against larger competitors. Basic branding done properly — a clear promise, a uniform look and a consistent voice — costs relatively little and repays itself in every campaign, because it improves clicks, trust and conversions.',
+          a: 'A small business especially. Without huge advertising budgets, differentiation and consistency are the way to stand out against larger competitors. Basic branding done properly, a clear promise, a uniform look and a consistent voice, costs relatively little and repays itself in every campaign, because it improves clicks, trust and conversions.',
         },
         {
           q: 'How long does it take to build a digital brand?',
@@ -717,15 +717,15 @@ Does your business look like everyone else? Leave your details and we will build
     excerpt:
       'While everyone chases trends, your mailing list is the one marketing asset you own. How newsletters and automations become a quiet sales machine.',
     tags: ['Digital', 'Automation', 'Conversions'],
-    content: `**In short (TL;DR):** Email marketing is direct marketing to a permission-based mailing list, and it remains one of the highest-return channels in digital marketing. The decisive advantage: the customer list is an asset you own outright — one that no external platform algorithm can take away from you.
+    content: `**In short (TL;DR):** Email marketing is direct marketing to a permission-based mailing list, and it remains one of the highest-return channels in digital marketing. The decisive advantage: the customer list is an asset you own outright, one that no external platform algorithm can take away from you.
 
-Here is a fact that surprises most business owners: after all the trends, the networks and the shifting algorithms, email marketing remains one of the highest-return channels in digital marketing. The reason is simple — the mailing list is the only asset you own outright. Meta's algorithm can bury you tomorrow morning; nobody can take your customer list.
+Here is a fact that surprises most business owners: after all the trends, the networks and the shifting algorithms, email marketing remains one of the highest-return channels in digital marketing. The reason is simple, the mailing list is the only asset you own outright. Meta's algorithm can bury you tomorrow morning; nobody can take your customer list.
 
 ![Messaging and email apps on a smartphone screen](/images/blog/email-marketing.webp)
 
 ## Why email, and why now?
 
-When a visitor gives you their email address, they are giving you permission to speak to them directly — without paying for every impression and without competing against an algorithm. In an era when paid advertising costs only climb, a channel that lets you return to existing customers and interested prospects at almost no cost is an enormous commercial advantage. And an existing customer, as everyone knows, buys far more easily than a new one.
+When a visitor gives you their email address, they are giving you permission to speak to them directly, without paying for every impression and without competing against an algorithm. In an era when paid advertising costs only climb, a channel that lets you return to existing customers and interested prospects at almost no cost is an enormous commercial advantage. And an existing customer, as everyone knows, buys far more easily than a new one.
 
 It is worth understanding the scale of the dependency on platforms: Google alone holds roughly 90% of the global search market (according to [StatCounter](https://gs.statcounter.com/search-engine-market-share)), so a single algorithm update at Google or Meta can change overnight how much exposure you get. The mailing list, by contrast, is the one channel that does not depend on a third party.
 
@@ -735,7 +735,7 @@ The common mistake is to assume you have to choose between the two. In practice 
 
 | Criterion | Email marketing | Paid advertising (Meta / Google Ads) |
 | --- | --- | --- |
-| Ownership of the audience | Full — the list is yours | None — the audience belongs to the platform |
+| Ownership of the audience | Full, the list is yours | None, the audience belongs to the platform |
 | Marginal cost of one more impression | Almost zero | Payment for every impression or click |
 | Dependence on an algorithm | Low | Very high |
 | Fit for existing customers | Excellent | Moderate |
@@ -745,24 +745,24 @@ The conclusion is not either/or: paid advertising is excellent at bringing in a 
 
 ## How do you build a newsletter people actually open?
 
-The difference between a newsletter that gets deleted and one people wait for is real value: professional tips, customer stories, a look behind the scenes — and only then, gently, a commercial offer. Our rule of thumb: for every sales email, three emails that give something away. The subject line decides whether the email is opened at all, so it deserves the effort — short, curious and honest, without the overblown promises that lead straight to the spam button. That is how you build a list that opens, reads and clicks.
+The difference between a newsletter that gets deleted and one people wait for is real value: professional tips, customer stories, a look behind the scenes, and only then, gently, a commercial offer. Our rule of thumb: for every sales email, three emails that give something away. The subject line decides whether the email is opened at all, so it deserves the effort, short, curious and honest, without the overblown promises that lead straight to the spam button. That is how you build a list that opens, reads and clicks.
 
 ## What are email automations, and why are they the quiet salesperson?
 
-This is where email connects to the world of [automation](/en/services/development) we live in. A sequence built once keeps working for years — warming cold leads, waking dormant customers and producing sales without anyone on the team touching a keyboard. These are the sequences we at Aiterra set up for almost every client:
+This is where email connects to the world of [automation](/en/services/development) we live in. A sequence built once keeps working for years, warming cold leads, waking dormant customers and producing sales without anyone on the team touching a keyboard. These are the sequences we at Aiterra set up for almost every client:
 
 - **A welcome sequence:** an automated series of emails for every new subscriber, introducing the business and building trust from the first moment.
-- **A follow-up email after a guide download:** for anyone who took a lead magnet — an email that continues the conversation and moves them to the next stage.
-- **Abandoned basket recovery:** an automatic reminder for anyone who started a purchase and did not finish — one of the most profitable sequences in online retail.
+- **A follow-up email after a guide download:** for anyone who took a lead magnet, an email that continues the conversation and moves them to the next stage.
+- **Abandoned basket recovery:** an automatic reminder for anyone who started a purchase and did not finish, one of the most profitable sequences in online retail.
 - **A birthday greeting with an offer:** a personal touch that produces a sale and strengthens loyalty over time.
 
-The effectiveness of each sequence is best measured with an analytics tool such as GA4 ([Google Analytics documentation](https://support.google.com/analytics)) — so you can see which emails actually lead to opens, clicks and sales, and improve accordingly.
+The effectiveness of each sequence is best measured with an analytics tool such as GA4 ([Google Analytics documentation](https://support.google.com/analytics)), so you can see which emails actually lead to opens, clicks and sales, and improve accordingly.
 
 ## How do you start building the mailing list?
 
-The right way starts with a lead magnet that is genuinely worth having — a guide, a calculator, a checklist or a joining discount — in exchange for signing up. Avoid buying lists (it is both unlawful and damaging to your sender reputation), and keep to Israeli anti-spam law: explicit opt-in and a clear unsubscribe option in every email. As the list grows, segment it into groups by interest or by stage in the funnel — that way every recipient gets relevant content, and open and conversion rates rise.
+The right way starts with a lead magnet that is genuinely worth having, a guide, a calculator, a checklist or a joining discount, in exchange for signing up. Avoid buying lists (it is both unlawful and damaging to your sender reputation), and keep to Israeli anti-spam law: explicit opt-in and a clear unsubscribe option in every email. As the list grows, segment it into groups by interest or by stage in the funnel, that way every recipient gets relevant content, and open and conversion rates rise.
 
-Want to turn your customer list into a revenue machine? Leave your details and we will build you a full email strategy — from the magnet through to the automation.
+Want to turn your customer list into a revenue machine? Leave your details and we will build you a full email strategy, from the magnet through to the automation.
 
 ---
 
@@ -777,7 +777,7 @@ Want to turn your customer list into a revenue machine? Leave your details and w
       items: [
         {
           q: 'Is email marketing still effective in the age of social media and AI?',
-          a: 'Yes, and more than ever. While organic reach on the networks keeps falling and paid advertising costs keep rising, email lets you speak directly to an audience that has already given consent — at low cost and with no dependence on a shifting algorithm. The mailing list is an asset you own, which makes it far more stable than any external platform that could change its rules tomorrow.',
+          a: 'Yes, and more than ever. While organic reach on the networks keeps falling and paid advertising costs keep rising, email lets you speak directly to an audience that has already given consent, at low cost and with no dependence on a shifting algorithm. The mailing list is an asset you own, which makes it far more stable than any external platform that could change its rules tomorrow.',
         },
         {
           q: 'How often should a newsletter go out?',
@@ -806,28 +806,28 @@ Want to turn your customer list into a revenue machine? Leave your details and w
     tags: ['Paid advertising', 'Digital', 'Branding'],
     content: `**In short (TL;DR):** Advertising on Facebook and Instagram in 2026 means paid campaigns across Meta's platforms, where artificial intelligence runs the targeting and the creative is what sells. The keys to a real return: short, authentic video, remarketing to a warm audience, and a complete funnel that runs from the ad to a fast landing page and on to a lead in WhatsApp.
 
-Your customers spend hours a day scrolling the feed — on Instagram, on Facebook, through a five-second clip. The only question is whether they meet you there or your competitors. Advertising on Facebook and Instagram remains one of the strongest tools in digital marketing for business, but the rules of the game in 2026 are nothing like what worked two years ago. Anyone still running campaigns the old way is simply burning budget.
+Your customers spend hours a day scrolling the feed, on Instagram, on Facebook, through a five-second clip. The only question is whether they meet you there or your competitors. Advertising on Facebook and Instagram remains one of the strongest tools in digital marketing for business, but the rules of the game in 2026 are nothing like what worked two years ago. Anyone still running campaigns the old way is simply burning budget.
 
 ![Facebook and Instagram apps on a smartphone screen](/images/blog/facebook-instagram-ads.webp)
 
 ## Why creative has become the real targeting
 
-Meta's advertising system has been through a revolution. AI-driven campaigns such as Advantage+ now find the right audience better than any manual targeting can. According to [Meta for Business](https://www.facebook.com/business), the company's platforms reach several billion active users every month — so the challenge is no longer finding an audience, it is stopping one. The implication surprises most advertisers: the real targeting has moved into the creative. The ad itself — the video, the image, the message — is what decides who the system shows you to and at what price. Investing in professional creative is no longer a luxury; it is the heart of the [campaign](/en/services/marketing).
+Meta's advertising system has been through a revolution. AI-driven campaigns such as Advantage+ now find the right audience better than any manual targeting can. According to [Meta for Business](https://www.facebook.com/business), the company's platforms reach several billion active users every month, so the challenge is no longer finding an audience, it is stopping one. The implication surprises most advertisers: the real targeting has moved into the creative. The ad itself, the video, the image, the message, is what decides who the system shows you to and at what price. Investing in professional creative is no longer a luxury; it is the heart of the [campaign](/en/services/marketing).
 
 ## What content stops the scroll in 2026?
 
-People smell an advert a mile off and keep scrolling. What stops the scroll in 2026 is content that feels real: short videos shot at eye level, customers describing an actual experience, a look behind the scenes of the business. At Aiterra the work starts with the strategy and the script, runs through filming and production, and ends with versions cut for each placement — feed, Reels and Stories — because a good ad is a good story first and an advert second.
+People smell an advert a mile off and keep scrolling. What stops the scroll in 2026 is content that feels real: short videos shot at eye level, customers describing an actual experience, a look behind the scenes of the business. At Aiterra the work starts with the strategy and the script, runs through filming and production, and ends with versions cut for each placement, feed, Reels and Stories, because a good ad is a good story first and an advert second.
 
 What defines an ad that works in 2026?
 
 - **The first three seconds:** a strong hook that stops the thumb before the sales message even begins.
 - **Subtitles, always:** most people watch with the sound off, and on-screen text raises watch-through dramatically.
 - **Full-screen vertical format:** built for Reels and Stories, not a landscape clip squeezed into the feed.
-- **One clear call to action:** exactly what you want the viewer to do after watching — enquire, sign up or buy.
+- **One clear call to action:** exactly what you want the viewer to do after watching, enquire, sign up or buy.
 
 ## Why is remarketing the audience closest to buying?
 
-Someone who visited the site, watched most of a video or added to the basket without buying is your warmest lead. A properly built remarketing campaign meets them again with the right message at the right moment, and its cost per conversion is dramatically lower than a cold campaign. That is the first step we build into every media plan — before increasing budgets on new audiences. Here is the difference in practice:
+Someone who visited the site, watched most of a video or added to the basket without buying is your warmest lead. A properly built remarketing campaign meets them again with the right message at the right moment, and its cost per conversion is dramatically lower than a cold campaign. That is the first step we build into every media plan, before increasing budgets on new audiences. Here is the difference in practice:
 
 | Parameter | Cold audience | Remarketing |
 | --- | --- | --- |
@@ -838,13 +838,13 @@ Someone who visited the site, watched most of a video or added to the basket wit
 
 ## How do you build a funnel that turns an ad into a paying customer?
 
-An excellent campaign that leads to a slow page is money thrown away. Because we are a development agency as well, your ads lead to fast landing pages built for conversion, and every enquiry drops automatically into the CRM and gets an immediate reply on WhatsApp — before the lead has time to cool. When every link in the chain is connected, the same media budget produces several times more customers, without spending another shekel on media itself.
+An excellent campaign that leads to a slow page is money thrown away. Because we are a development agency as well, your ads lead to fast landing pages built for conversion, and every enquiry drops automatically into the CRM and gets an immediate reply on WhatsApp, before the lead has time to cool. When every link in the chain is connected, the same media budget produces several times more customers, without spending another shekel on media itself.
 
 ## How much budget do you need to start?
 
-Less than you think. It is better to start with a measured budget, give the system a learning phase of several days, measure a real cost per lead — and only then scale up confidently on what works. Increasing the budget on an imprecise campaign only increases the loss. The simple rule: first make sure the maths works at the level of a single lead, then pour in the fuel. For a typical local business, a modest starting budget is enough to gather reliable data within two to three weeks and make an evidence-based decision about continuing the investment.
+Less than you think. It is better to start with a measured budget, give the system a learning phase of several days, measure a real cost per lead, and only then scale up confidently on what works. Increasing the budget on an imprecise campaign only increases the loss. The simple rule: first make sure the maths works at the level of a single lead, then pour in the fuel. For a typical local business, a modest starting budget is enough to gather reliable data within two to three weeks and make an evidence-based decision about continuing the investment.
 
-Want to know how many new customers the feed could bring you? Leave your details now and we will build you a full social strategy — from the creative through to the lead in WhatsApp.
+Want to know how many new customers the feed could bring you? Leave your details now and we will build you a full social strategy, from the creative through to the lead in WhatsApp.
 
 ---
 
@@ -852,22 +852,22 @@ Want to know how many new customers the feed could bring you? Leave your details
 
 ## Further reading
 
-- [Short video for business: TikTok, Reels and Shorts — the reach machine of 2026](/en/blog/short-video-marketing)
+- [Short video for business: TikTok, Reels and Shorts, the reach machine of 2026](/en/blog/short-video-marketing)
 - [A landing page that converts: why most visitors leave without getting in touch](/en/blog/landing-pages-that-convert)`,
     faq: {
       title: 'Common questions about social media advertising',
       items: [
         {
-          q: 'Which is better for my business — Google Ads or Facebook?',
-          a: 'They are complementary tools: Google captures customers who are already searching for the service, while Facebook and Instagram create demand and awareness among new audiences. For most businesses the combination of the two, with remarketing connecting them, produces the best result — Google closes the people who are already ready to buy, and Meta keeps filling the funnel with new leads.',
+          q: 'Which is better for my business, Google Ads or Facebook?',
+          a: 'They are complementary tools: Google captures customers who are already searching for the service, while Facebook and Instagram create demand and awareness among new audiences. For most businesses the combination of the two, with remarketing connecting them, produces the best result, Google closes the people who are already ready to buy, and Meta keeps filling the funnel with new leads.',
         },
         {
           q: 'What does advertising on Facebook and Instagram cost?',
-          a: 'The budget has two parts: the media cost paid to Meta, and the campaign management fee. You can start with relatively modest budgets, and the key is measurement — once you know what a lead costs and what it is worth to you, the decision to scale the budget becomes simple arithmetic rather than a gamble.',
+          a: 'The budget has two parts: the media cost paid to Meta, and the campaign management fee. You can start with relatively modest budgets, and the key is measurement, once you know what a lead costs and what it is worth to you, the decision to scale the budget becomes simple arithmetic rather than a gamble.',
         },
         {
           q: 'What is an Advantage+ campaign?',
-          a: 'Advantage+ is a Meta campaign type in which artificial intelligence manages targeting, budget and placement automatically. It performs best when you feed it a wide range of high-quality creative — which is why investing in good material (video, images and messaging) matters more today than ever, and is what decides whether the campaign succeeds.',
+          a: 'Advantage+ is a Meta campaign type in which artificial intelligence manages targeting, budget and placement automatically. It performs best when you feed it a wide range of high-quality creative, which is why investing in good material (video, images and messaging) matters more today than ever, and is what decides whether the campaign succeeds.',
         },
         {
           q: 'How long does it take before a campaign produces results?',
@@ -886,23 +886,23 @@ Want to know how many new customers the feed could bring you? Leave your details
     excerpt:
       'Without measurement you are marketing blind. How to install GA4, Google Tag Manager and the Meta Pixel, and set up conversion tracking that works.',
     tags: ['GA4', 'Google Tag Manager', 'Meta Pixel', 'Conversion tracking', 'Analytics'],
-    content: `**In short (TL;DR):** Conversion tracking means defining the actions that matter on your site — a lead, a phone call or a purchase — and following how many of them happen and where they came from. The three tools you need are Google Analytics 4 for behaviour analysis, Google Tag Manager to manage the tracking code, and the Meta Pixel to optimise campaigns. Without them you are marketing blind.
+    content: `**In short (TL;DR):** Conversion tracking means defining the actions that matter on your site, a lead, a phone call or a purchase, and following how many of them happen and where they came from. The three tools you need are Google Analytics 4 for behaviour analysis, Google Tag Manager to manage the tracking code, and the Meta Pixel to optimise campaigns. Without them you are marketing blind.
 
 Without proper measurement, every shekel you put into marketing is a guess. The three tools every business needs are Google Analytics 4 (to see what happens on the site), Google Tag Manager (to manage all your tracking code in one place) and the Meta Pixel (to measure and optimise campaigns on Facebook and Instagram). A correct installation takes a few hours, and without it there is no way to know which channels actually bring customers.
 
-![Installing GA4, Google Tag Manager and the Meta Pixel — a team reviewing conversion data and charts](/images/blog/ga4-pixel-conversion-tracking-guide.webp)
+![Installing GA4, Google Tag Manager and the Meta Pixel, a team reviewing conversion data and charts](/images/blog/ga4-pixel-conversion-tracking-guide.webp)
 
-Conversion tracking is the process of defining the actions that matter on your site — submitting a form, calling, buying — and following how many of them happen and from which source. Without it you see traffic, but you have no idea how much of it turned into money.
+Conversion tracking is the process of defining the actions that matter on your site, submitting a form, calling, buying, and following how many of them happen and from which source. Without it you see traffic, but you have no idea how much of it turned into money.
 
 ## Why is measurement critical? The numbers
 
 A few figures that show why measurement is a baseline condition rather than a luxury:
 
-- Google holds [around 90% of the global search market](https://gs.statcounter.com/search-engine-market-share) — a large share of site traffic starts with a search, and without measurement there is no way to know which terms and channels actually bring customers.
-- Universal Analytics was shut down officially in July 2023, and [GA4 became the standard measurement tool at Google](https://support.google.com/analytics) — a business that never implemented it simply is not measuring any more.
+- Google holds [around 90% of the global search market](https://gs.statcounter.com/search-engine-market-share), a large share of site traffic starts with a search, and without measurement there is no way to know which terms and channels actually bring customers.
+- Universal Analytics was shut down officially in July 2023, and [GA4 became the standard measurement tool at Google](https://support.google.com/analytics), a business that never implemented it simply is not measuring any more.
 - Most small businesses miss at least one critical conversion, usually a phone tap or a WhatsApp tap on mobile, and so under-value precisely the channel that is working.
 
-## The three tools — what does each one do?
+## The three tools: what does each one do?
 
 | Tool | What it does | Why you need it |
 | --- | --- | --- |
@@ -910,28 +910,28 @@ A few figures that show why measurement is a baseline condition rather than a lu
 | Google Tag Manager | Manages all your tracking code | To add and change tracking without touching the code |
 | Meta Pixel | Measures actions for Meta campaigns | To enable optimisation and audience retargeting |
 
-The trick is to install Google Tag Manager first and then manage GA4 and the Pixel through it — that way nothing in the site code has to change for every small adjustment, and every new tracking event is added from a single interface.
+The trick is to install Google Tag Manager first and then manage GA4 and the Pixel through it, that way nothing in the site code has to change for every small adjustment, and every new tracking event is added from a single interface.
 
 ## How do you install them? The order of operations
 
 1. **Open a Google Tag Manager account** and install the container code on the site once.
 2. **Create a GA4 property** and connect it through Google Tag Manager (a Google Tag).
 3. **Add the Meta Pixel** as another tag in Google Tag Manager.
-4. **Define conversion events** — a phone tap, a form submission, a purchase — as events, and mark them as conversions in GA4.
+4. **Define conversion events**: a phone tap, a form submission, a purchase, as events, and mark them as conversions in GA4.
 5. **Check that everything fires** in Google Tag Manager preview mode and in the GA4 realtime report before you publish.
 
-One important tip: make sure every tag fires exactly once. Duplicate tags inflate your conversion numbers, mislead the campaign algorithm and waste budget — which is why the preview check is not optional.
+One important tip: make sure every tag fires exactly once. Duplicate tags inflate your conversion numbers, mislead the campaign algorithm and waste budget, which is why the preview check is not optional.
 
 ## What matters most to measure in a small business?
 
 You do not need to drown in data. These are the conversions that genuinely matter for most businesses:
 
-- **A form submission** — the classic lead.
-- **A tap on a phone number or WhatsApp** on mobile — critical in Israel, and usually forgotten.
-- **A purchase or a started checkout** — in an online store.
-- **A view of a key page** — a pricing or contact page, for example.
+- **A form submission**: the classic lead.
+- **A tap on a phone number or WhatsApp** on mobile, critical in Israel, and usually forgotten.
+- **A purchase or a started checkout**: in an online store.
+- **A view of a key page**: a pricing or contact page, for example.
 
-Connecting that measurement to your campaigns is what turns advertising from expensive into profitable — exactly as we set out in the [campaign budget guide](/en/blog/ppc-minimum-budget-israel). And the full commercial picture of what to do with the data is covered in the [measurement and analytics guide: what every shekel returns](/en/blog/marketing-analytics-roi).
+Connecting that measurement to your campaigns is what turns advertising from expensive into profitable, exactly as we set out in the [campaign budget guide](/en/blog/ppc-minimum-budget-israel). And the full commercial picture of what to do with the data is covered in the [measurement and analytics guide: what every shekel returns](/en/blog/marketing-analytics-roi).
 
 ## A common mistake: why installing and forgetting is not enough
 
@@ -953,15 +953,15 @@ At Aiterra we see it again and again: the difference between a business that was
       items: [
         {
           q: 'What is the difference between GA4 and Google Tag Manager?',
-          a: 'Google Analytics 4 analyses visitor behaviour on the site — where people arrived from and what they did. Google Tag Manager is a tag manager that lets you add and change all your tracking code, GA4 and the Pixel included, in one place without touching the site code. The recommended order is to install Google Tag Manager first and manage everything else through it.',
+          a: 'Google Analytics 4 analyses visitor behaviour on the site, where people arrived from and what they did. Google Tag Manager is a tag manager that lets you add and change all your tracking code, GA4 and the Pixel included, in one place without touching the site code. The recommended order is to install Google Tag Manager first and manage everything else through it.',
         },
         {
           q: 'What is the Meta Pixel and why do you need it?',
-          a: 'The Meta Pixel is a tracking code that measures the actions taken by visitors who arrived from campaigns on Facebook and Instagram. It lets the system optimise the campaign towards people who tend to convert, and show ads again — retargeting — to an audience that already visited the site without completing an action.',
+          a: 'The Meta Pixel is a tracking code that measures the actions taken by visitors who arrived from campaigns on Facebook and Instagram. It lets the system optimise the campaign towards people who tend to convert, and show ads again, retargeting, to an audience that already visited the site without completing an action.',
         },
         {
           q: 'What matters most to measure in a small business?',
-          a: 'The actions that generate money: a form submission, a tap on a phone number or WhatsApp on mobile (critical in Israel and usually forgotten), a purchase or a started checkout in a store, and views of key pages such as pricing. You do not need to measure everything — only the conversions that genuinely matter to the business.',
+          a: 'The actions that generate money: a form submission, a tap on a phone number or WhatsApp on mobile (critical in Israel and usually forgotten), a purchase or a started checkout in a store, and views of key pages such as pricing. You do not need to measure everything, only the conversions that genuinely matter to the business.',
         },
         {
           q: 'How long does it take to install everything?',
@@ -980,9 +980,9 @@ At Aiterra we see it again and again: the difference between a business that was
     excerpt:
       'Your customers now ask ChatGPT and Gemini, not just Google. What GEO is, how generative engines pick their sources, and what to do about it now.',
     tags: ['GEO', 'SEO', 'AI', 'Organic search'],
-    content: `**In short (TL;DR):** GEO (Generative Engine Optimization) is the practice of getting ChatGPT, Gemini and Perplexity to cite and recommend your business inside the answer itself. Where SEO competes for a position on the results page, GEO competes for a place inside the answer — and it is won with structured content, Schema data and demonstrable authority.
+    content: `**In short (TL;DR):** GEO (Generative Engine Optimization) is the practice of getting ChatGPT, Gemini and Perplexity to cite and recommend your business inside the answer itself. Where SEO competes for a position on the results page, GEO competes for a place inside the answer, and it is won with structured content, Schema data and demonstrable authority.
 
-The way your customers search has changed fundamentally. Instead of typing a phrase into Google and working through ten blue links, more and more people simply ask ChatGPT, Gemini or Perplexity — and get a single summarised, reasoned answer. Inside Google itself, the AI Overviews panel answers the question before the visitor ever reaches the organic results. For businesses the implication is simple and brutal: if you do not appear in the answer the AI gives, you do not exist for that customer. This is exactly where GEO (Generative Engine Optimization) comes in, the next stage of [organic search](/en/services/seo), and one of the areas we at Aiterra live and breathe.
+The way your customers search has changed fundamentally. Instead of typing a phrase into Google and working through ten blue links, more and more people simply ask ChatGPT, Gemini or Perplexity, and get a single summarised, reasoned answer. Inside Google itself, the AI Overviews panel answers the question before the visitor ever reaches the organic results. For businesses the implication is simple and brutal: if you do not appear in the answer the AI gives, you do not exist for that customer. This is exactly where GEO (Generative Engine Optimization) comes in, the next stage of [organic search](/en/services/seo), and one of the areas we at Aiterra live and breathe.
 
 ![Searching for information through an AI chat assistant on a smartphone](/images/blog/geo-ai-search-optimization.webp)
 
@@ -998,7 +998,7 @@ The way your customers search has changed fundamentally. Instead of typing a phr
 
 ## Why now? The numbers
 
-- Google still holds roughly 90% of the global search market (according to [StatCounter](https://gs.statcounter.com/search-engine-market-share)) — which means classic SEO remains critical and is not something to abandon.
+- Google still holds roughly 90% of the global search market (according to [StatCounter](https://gs.statcounter.com/search-engine-market-share)), which means classic SEO remains critical and is not something to abandon.
 - But the research firm Gartner forecasts that search volume on traditional engines will fall by around 25% by 2026, as users move across to chatbots and AI assistants.
 - The conclusion: whoever starts building a presence in the generative engines today buys an advantage before the field fills up.
 
@@ -1006,23 +1006,23 @@ And as a piece of self-evidence: if ChatGPT cites this answer about GEO when som
 
 ## What is GEO, and how does it differ from traditional SEO?
 
-GEO — optimisation for generative search engines — is the process of getting AI models to cite, mention and recommend your business every time a user asks a question relevant to your field. Where SEO on Google competes for positions on the results page, optimisation for AI competes for a place inside the answer itself.
+GEO, optimisation for generative search engines, is the process of getting AI models to cite, mention and recommend your business every time a user asks a question relevant to your field. Where SEO on Google competes for positions on the results page, optimisation for AI competes for a place inside the answer itself.
 
 That changes the rules of the game. AI engines do not rank pages; they assemble an answer from sources they trust. To get into that answer, your content has to be clear, authoritative and structured so that a machine can pull precise facts out of it.
 
 ## How do AI engines decide who to recommend?
 
-**Authority and trustworthiness (E-E-A-T):** the models prefer sources with demonstrated expertise — professional, in-depth content, real authors with a name and a role, and consistency over time.
+**Authority and trustworthiness (E-E-A-T):** the models prefer sources with demonstrated expertise, professional, in-depth content, real authors with a name and a role, and consistency over time.
 
 **Structured data (Schema markup):** technical markup in the site code that tells a machine exactly who you are, what you offer, what it costs and what customers think of you. Without that data layer, the AI is simply guessing.
 
-**Content that answers real questions:** pages written as direct answers to the questions customers actually ask — including FAQ blocks, clear headings and focused paragraphs — are pulled into answers dramatically more often.
+**Content that answers real questions:** pages written as direct answers to the questions customers actually ask, including FAQ blocks, clear headings and focused paragraphs, are pulled into answers dramatically more often.
 
 **Mentions across the web:** the AI cross-references its sources. A business mentioned on professional content sites, in guides and in reviews reads as an authority that is safe to recommend.
 
 ## The plan of work: how to do GEO properly
 
-At Aiterra a GEO programme starts with a diagnosis: we check what the AI engines answer today when they are asked about your field, and where you stand relative to competitors. From there we build the foundations — implementing structured data, improving speed and cleaning up the code — and in parallel produce authoritative content written for readers and models alike. Our advantage as an agency that came out of software development is that we handle both the deep technical layer and the content strategy.
+At Aiterra a GEO programme starts with a diagnosis: we check what the AI engines answer today when they are asked about your field, and where you stand relative to competitors. From there we build the foundations, implementing structured data, improving speed and cleaning up the code, and in parallel produce authoritative content written for readers and models alike. Our advantage as an agency that came out of software development is that we handle both the deep technical layer and the content strategy.
 
 ## So is organic search dead? Far from it
 
@@ -1030,15 +1030,15 @@ The opposite is true. AI Overviews and generative engines lean on the same signa
 
 ## Practical steps you can apply today
 
-- **Build content in a question-and-answer structure:** add FAQ blocks to your main pages, with direct and focused answers — this is the format models pull from most easily.
+- **Build content in a question-and-answer structure:** add FAQ blocks to your main pages, with direct and focused answers, this is the format models pull from most easily.
 - **Implement structured data:** Schema markup for the business, the services, the articles and the frequently asked questions. The official guidance is in [Google's developer documentation](https://developers.google.com/search/docs).
 - **Sign your content:** real author pages with a name, a role and experience. Models learn to recognise sources with human accountability behind them.
-- **Make sure the AI crawlers are not blocked:** check your robots.txt file — plenty of sites in Israel block GPTBot and ClaudeBot without realising it, and simply do not exist as far as those engines are concerned.
+- **Make sure the AI crawlers are not blocked:** check your robots.txt file, plenty of sites in Israel block GPTBot and ClaudeBot without realising it, and simply do not exist as far as those engines are concerned.
 - **Accumulate mentions:** guest articles, interviews, reviews and business directories. The models cross-reference sources, and every quality mention raises the odds of a recommendation.
 
 ## How do you measure AI visibility?
 
-This is a new measurement discipline, but there is already plenty to track: ask the main engines (ChatGPT, Gemini, Perplexity) a fixed set of questions about your field once a month and record whether and how you are mentioned; watch your analytics for referral traffic from domains such as chatgpt.com and perplexity.ai; and check which of your pages are being cited in answers. The numbers are still small next to Google — but they are growing fast, and whoever gets in early sets the reference point.
+This is a new measurement discipline, but there is already plenty to track: ask the main engines (ChatGPT, Gemini, Perplexity) a fixed set of questions about your field once a month and record whether and how you are mentioned; watch your analytics for referral traffic from domains such as chatgpt.com and perplexity.ai; and check which of your pages are being cited in answers. The numbers are still small next to Google, but they are growing fast, and whoever gets in early sets the reference point.
 
 Want to know what ChatGPT says when it is asked about your field? Leave your details and we will come back with a full AI visibility check for your business and a structured plan of action.
 
@@ -1059,7 +1059,7 @@ Want to know what ChatGPT says when it is asked about your field? Leave your det
         },
         {
           q: 'Is classic organic search still relevant in 2026?',
-          a: 'Absolutely. Google still holds roughly 90% of the search market (StatCounter), and the AI engines themselves lean on sources that rank well on Google. GEO does not replace SEO — it amplifies it.',
+          a: 'Absolutely. Google still holds roughly 90% of the search market (StatCounter), and the AI engines themselves lean on sources that rank well on Google. GEO does not replace SEO, it amplifies it.',
         },
         {
           q: 'Should you block or allow AI crawlers such as GPTBot?',
@@ -1076,7 +1076,7 @@ Want to know what ChatGPT says when it is asked about your field? Leave your det
   'google-ads-campaigns': {
     title: 'Google Ads Management: How to Make It Profitable',
     excerpt:
-      'How the Google ad auction really works, what sets your cost per click, what budget to start on — and why campaigns burn money on the landing page.',
+      'How the Google ad auction really works, what sets your cost per click, what budget to start on, and why campaigns burn money on the landing page.',
     tags: ['Google Ads', 'Paid advertising', 'PPC', 'Quality Score', 'Lead generation'],
     content: `**In short (TL;DR):** Google Ads management is the business of buying targeted traffic through an ad auction, in which the winner is decided by a combination of the bid and the Quality Score. A campaign becomes profitable not thanks to the ad alone, but when the landing page converts and every lead is routed straight into the CRM. We at Aiterra measure return, ROAS, rather than clicks.
 
@@ -1086,7 +1086,7 @@ You are spending the money, but are you actually seeing results? As a technology
 
 ## Google Ads or social networks: where are your customers?
 
-To run a profitable paid campaign you have to understand your customer journey. Google holds [around 90% of the global search market](https://gs.statcounter.com/search-engine-market-share) according to StatCounter, which makes it the arena for capturing demand that already exists — while the social networks create new demand. This is how we match the platform to the business goal:
+To run a profitable paid campaign you have to understand your customer journey. Google holds [around 90% of the global search market](https://gs.statcounter.com/search-engine-market-share) according to StatCounter, which makes it the arena for capturing demand that already exists, while the social networks create new demand. This is how we match the platform to the business goal:
 
 | Parameter | Google Ads | Facebook / Instagram |
 | --- | --- | --- |
@@ -1105,19 +1105,19 @@ Getting the visitor to the site is only half the work; getting them to leave the
 
 ## How is the cost per click actually decided?
 
-Google Ads works as an auction, but the winner is not whoever pays the most. The Quality Score — made up of ad relevance, landing page quality and expected click-through rate — carries at least as much weight as the money on the table. An advertiser with a high Quality Score pays less per click and appears above a competitor who bids more with a poor ad (see the [official Google Ads help](https://support.google.com/google-ads)). That is why campaign management cannot be separated from landing page quality: they are one mechanism.
+Google Ads works as an auction, but the winner is not whoever pays the most. The Quality Score, made up of ad relevance, landing page quality and expected click-through rate, carries at least as much weight as the money on the table. An advertiser with a high Quality Score pays less per click and appears above a competitor who bids more with a poor ad (see the [official Google Ads help](https://support.google.com/google-ads)). That is why campaign management cannot be separated from landing page quality: they are one mechanism.
 
 ## What budget makes sense to start on? The numbers
 
 In competitive sectors in Israel a click can cost anywhere from a few shekels to tens of shekels. For the campaign to gather enough data to learn from and be optimised:
 
-- **A sensible starting media budget:** around ₪3,000–6,000 a month in most sectors — below that there simply will not be enough conversions to tell what is working.
+- **A sensible starting media budget:** around ₪3,000–6,000 a month in most sectors, below that there simply will not be enough conversions to tell what is working.
 - **Cost per click range:** from a few shekels to tens of shekels, depending on how competitive the sector is.
 - **Learning period:** roughly 2–4 weeks before drawing conclusions and optimising aggressively.
 
 ## Which metrics actually matter?
 
-Clicks and impressions are vanity metrics — they do not pay salaries. The metrics a professional campaign manager tracks are these: cost per lead (CPL), the conversion rate of the landing page, the quality of the leads that actually reach a sales call, and return on ad spend (ROAS). If your monthly report does not include them, you do not know whether the campaign is profitable.
+Clicks and impressions are vanity metrics, they do not pay salaries. The metrics a professional campaign manager tracks are these: cost per lead (CPL), the conversion rate of the landing page, the quality of the leads that actually reach a sales call, and return on ad spend (ROAS). If your monthly report does not include them, you do not know whether the campaign is profitable.
 
 It is time to move to campaign management that is smart, transparent and built on data. Want to know what it will cost to bring in your next customer? Leave your details and our specialists will come back to you for a free consultation.
 
@@ -1138,7 +1138,7 @@ It is time to move to campaign management that is smart, transparent and built o
         },
         {
           q: 'Do I actually need a digital advertising agency to run a campaign?',
-          a: 'You can run it yourself, but the advertising systems at Google and Meta are highly complex, and running them without experience usually means thousands of shekels wasted on irrelevant clicks. A professional manager improves the Quality Score, brings the cost per click down, and connects the campaign to a converting landing page and to a CRM — which is where the real profit is made.',
+          a: 'You can run it yourself, but the advertising systems at Google and Meta are highly complex, and running them without experience usually means thousands of shekels wasted on irrelevant clicks. A professional manager improves the Quality Score, brings the cost per click down, and connects the campaign to a converting landing page and to a CRM, which is where the real profit is made.',
         },
         {
           q: 'How long does it take to see results from a paid campaign?',
@@ -1146,7 +1146,7 @@ It is time to move to campaign management that is smart, transparent and built o
         },
         {
           q: 'What is a Quality Score and why does it matter?',
-          a: 'The Quality Score is the rating Google gives your ad on the basis of three factors: ad relevance, landing page quality and expected click-through rate. A high score lets you pay less for every click and appear higher in the auction — even against a competitor offering more money. That is why landing page quality is an inseparable part of campaign management.',
+          a: 'The Quality Score is the rating Google gives your ad on the basis of three factors: ad relevance, landing page quality and expected click-through rate. A high score lets you pay less for every click and appear higher in the auction, even against a competitor offering more money. That is why landing page quality is an inseparable part of campaign management.',
         },
         {
           q: 'Which metrics show whether the campaign is profitable?',
@@ -1159,36 +1159,36 @@ It is time to move to campaign management that is smart, transparent and built o
   'google-business-profile-guide': {
     title: 'Google Business Profile: Rank Higher on Maps',
     excerpt:
-      'The best-value asset a local business owns is free. How to maximise your Google Business Profile — categories, photos and reviews.',
+      'The best-value asset a local business owns is free. How to maximise your Google Business Profile, categories, photos and reviews.',
     tags: ['SEO', 'Organic search', 'Digital'],
-    content: `**In short (TL;DR):** A Google Business Profile is the free listing that presents your business on Maps and in the side panel of Google — phone number, opening hours, photos and reviews. For a local business it is the best-value marketing asset there is: a complete, active profile full of positive reviews ranks higher on Maps and generates phone calls directly.
+    content: `**In short (TL;DR):** A Google Business Profile is the free listing that presents your business on Maps and in the side panel of Google, phone number, opening hours, photos and reviews. For a local business it is the best-value marketing asset there is: a complete, active profile full of positive reviews ranks higher on Maps and generates phone calls directly.
 
-Before your next customer ever reaches your website, they see something else: your listing on Google. The panel with the phone number, the opening hours, the photos and the reviews — that is where local customers really decide. And here is the good news: it is the best-value marketing asset a local business has, because it is completely free, and most of your competitors maintain it badly.
+Before your next customer ever reaches your website, they see something else: your listing on Google. The panel with the phone number, the opening hours, the photos and the reviews, that is where local customers really decide. And here is the good news: it is the best-value marketing asset a local business has, because it is completely free, and most of your competitors maintain it badly.
 
 ![A customer searching for a local business on Google Maps on a smartphone](/images/blog/google-business-profile.webp)
 
 ## Why is the Google listing the best-value asset? The numbers
 
-Local search is not a niche — it is the mainstream way customers find businesses near home. Here is the picture in numbers:
+Local search is not a niche, it is the mainstream way customers find businesses near home. Here is the picture in numbers:
 
-- **Around 90% of the search market** sits with Google ([according to StatCounter data](https://gs.statcounter.com/search-engine-market-share)) — so almost every potential customer starts the search there.
+- **Around 90% of the search market** sits with Google ([according to StatCounter data](https://gs.statcounter.com/search-engine-market-share)), so almost every potential customer starts the search there.
 - **Cost to set up and run: ₪0.** The profile is completely free; the only investment is the time to maintain it properly.
-- **Only three businesses** appear in the Local Pack at the top of the page — anyone outside it is close to invisible.
+- **Only three businesses** appear in the Local Pack at the top of the page, anyone outside it is close to invisible.
 - **Most local searches** happen on a smartphone, and usually with immediate buying intent: near me, in my town.
 
 ## How do you get the profile to rank? The basics
 
-Google ranks complete, active profiles higher. That means an accurate business name (no keyword stuffing — Google penalises it), the right primary category plus relevant secondary categories, up-to-date opening hours including holidays, a defined service area, and a link to your website. Every empty field is points you hand to a competitor. Keeping valid structured data on the site itself ([per the Google Search Central documentation](https://developers.google.com/search/docs)) helps Google understand the business and present it correctly in results.
+Google ranks complete, active profiles higher. That means an accurate business name (no keyword stuffing, Google penalises it), the right primary category plus relevant secondary categories, up-to-date opening hours including holidays, a defined service area, and a link to your website. Every empty field is points you hand to a competitor. Keeping valid structured data on the site itself ([per the Google Search Central documentation](https://developers.google.com/search/docs)) helps Google understand the business and present it correctly in results.
 
 ## Why do reviews decide both ranking and customers?
 
-The number of reviews, the average score and how recent they are form a central ranking factor on Maps — and they are also what settles it for a hesitant customer. Two simple habits change everything: ask every satisfied customer for a review (easiest with a direct link or a QR code), and reply to every review, negative ones included, politely and professionally. A calm reply to an angry review persuades the next reader more than ten perfect reviews do.
+The number of reviews, the average score and how recent they are form a central ranking factor on Maps, and they are also what settles it for a hesitant customer. Two simple habits change everything: ask every satisfied customer for a review (easiest with a direct link or a QR code), and reply to every review, negative ones included, politely and professionally. A calm reply to an angry review persuades the next reader more than ten perfect reviews do.
 
-Worth knowing: Google forbids offering payment or a benefit in exchange for a review, and also the collection of many reviews at once — an unnatural stream can be blocked. The winning pace is slow and steady: a few reviews a week, from real customers, over a long period.
+Worth knowing: Google forbids offering payment or a benefit in exchange for a review, and also the collection of many reviews at once, an unnatural stream can be blocked. The winning pace is slow and steady: a few reviews a week, from real customers, over a long period.
 
 ## Which signals does everyone neglect? Photos, posts and questions
 
-A profile with real, current photos — of the premises, the team and the work — gets significantly more clicks than a profile with a single logo. Upload new photos every month, and keep quality and lighting high: this is the first visual proof a customer sees. Weekly posts about offers, updates and tips signal to Google that the business is alive and active. And in the questions and answers area you can, and should, publish the common questions yourself and answer them — before somebody else answers inaccurately in your place.
+A profile with real, current photos, of the premises, the team and the work, gets significantly more clicks than a profile with a single logo. Upload new photos every month, and keep quality and lighting high: this is the first visual proof a customer sees. Weekly posts about offers, updates and tips signal to Google that the business is alive and active. And in the questions and answers area you can, and should, publish the common questions yourself and answer them, before somebody else answers inaccurately in your place.
 
 ## What do you fix first? A priority table for the profile
 
@@ -1196,7 +1196,7 @@ Not every improvement is worth the same. The table below shows where to start, b
 
 | Profile element | Impact on ranking and customers | Maintenance effort |
 | --- | --- | --- |
-| Verification | Critical — without it there is no presence on Maps | One-off |
+| Verification | Critical, without it there is no presence on Maps | One-off |
 | Accurate primary category | Very high | One-off |
 | Reviews (volume, score, recency) | Very high | Ongoing |
 | Real, up-to-date photos | High (clicks and trust) | Monthly |
@@ -1206,9 +1206,9 @@ Not every improvement is worth the same. The table below shows where to start, b
 
 ## Why is the listing alone not enough? The link to the website
 
-The listing catches the customer; the website closes them. Google cross-references the profile against your site — consistency of name, address and phone number (NAP) strengthens both, and area-focused service pages on the site lift local ranking. That is exactly the package we at Aiterra build: a maximised listing, a fast website that supports it, and tracking that shows how many calls came from each source.
+The listing catches the customer; the website closes them. Google cross-references the profile against your site, consistency of name, address and phone number (NAP) strengthens both, and area-focused service pages on the site lift local ranking. That is exactly the package we at Aiterra build: a maximised listing, a fast website that supports it, and tracking that shows how many calls came from each source.
 
-Want to own the local results? Leave your details and we will run a full diagnosis of your local presence — listing, Maps and website.
+Want to own the local results? Leave your details and we will run a full diagnosis of your local presence, listing, Maps and website.
 
 ---
 
@@ -1223,7 +1223,7 @@ Want to own the local results? Leave your details and we will run a full diagnos
       items: [
         {
           q: 'How much does a Google Business Profile cost?',
-          a: 'The Google Business Profile is completely free — setting it up, managing it and appearing on Maps cost nothing at all. The only cost is the time to maintain it properly, meaning photos, posts and replies to reviews, or the fee of professionals who run it for you on an ongoing basis.',
+          a: 'The Google Business Profile is completely free, setting it up, managing it and appearing on Maps cost nothing at all. The only cost is the time to maintain it properly, meaning photos, posts and replies to reviews, or the fee of professionals who run it for you on an ongoing basis.',
         },
         {
           q: 'Why does my business not appear on Maps even though I have a listing?',
@@ -1231,7 +1231,7 @@ Want to own the local results? Leave your details and we will run a full diagnos
         },
         {
           q: 'How do you get more Google reviews?',
-          a: 'You simply ask — at the end of every successful transaction, with a direct link to the review form or a QR code on the premises. Google policy forbids offering payment or a benefit in exchange for a review, and it is unnecessary anyway: satisfied customers asked at the right moment do write.',
+          a: 'You simply ask, at the end of every successful transaction, with a direct link to the review form or a QR code on the premises. Google policy forbids offering payment or a benefit in exchange for a review, and it is unnecessary anyway: satisfied customers asked at the right moment do write.',
         },
         {
           q: 'Do you have to reply to negative reviews?',
@@ -1248,15 +1248,15 @@ Want to own the local results? Leave your details and we will run a full diagnos
   'how-to-choose-digital-agency': {
     title: 'How to Choose a Digital Agency: 9 Red Flags',
     excerpt:
-      'Before you sign with a web or SEO company, learn the nine red flags that expose an unreliable supplier — from guaranteed rankings to code ownership.',
+      'Before you sign with a web or SEO company, learn the nine red flags that expose an unreliable supplier, from guaranteed rankings to code ownership.',
     tags: ['Digital agency', 'Web development', 'Red flags', 'Choosing a supplier', 'Small business'],
     content: `**In short (TL;DR):** A reliable digital agency is chosen on process, not on promises. A good supplier shows a live portfolio, starts with a scoping stage before naming a price, hands you full ownership of the domain, the hosting and the code, and is transparent about exactly what is included. Avoid the nine red flags gathered in this article.
 
 You choose a digital agency on process, not on promises. A reliable supplier will show you real work, explain in writing what is included, give you full ownership of the domain, the hosting and the code, and begin with a scoping stage rather than a number thrown out over the phone. In this article we have gathered nine red flags that come up again and again with clients who have been burned, so that you can spot them in advance.
 
-![A team meeting to choose a digital agency — how to spot a reliable supplier and avoid the red flags](/images/blog/how-to-choose-digital-agency.webp)
+![A team meeting to choose a digital agency, how to spot a reliable supplier and avoid the red flags](/images/blog/how-to-choose-digital-agency.webp)
 
-A reliable digital agency is a supplier that is transparent about what it does, what it costs and what you get — and one that measures its own success by your business result rather than by the size of the invoice. Most of the bad stories in this field do not come from fraud but from unclear expectations that one right question at the start could have prevented.
+A reliable digital agency is a supplier that is transparent about what it does, what it costs and what you get, and one that measures its own success by your business result rather than by the size of the invoice. Most of the bad stories in this field do not come from fraud but from unclear expectations that one right question at the start could have prevented.
 
 ## What are the nine red flags? A quick checklist
 
@@ -1264,7 +1264,7 @@ A reliable digital agency is a supplier that is transparent about what it does, 
 | --- | --- | --- |
 | 1 | A guaranteed first place on Google | Ask about the process, not about a ranking promise |
 | 2 | The code, the domain or the hosting stays with them | Demand full ownership in writing |
-| 3 | No scoping stage — straight to a price | Proper scoping before any proposal |
+| 3 | No scoping stage, straight to a price | Proper scoping before any proposal |
 | 4 | A suspiciously low price | Work out what is not included (see the note below) |
 | 5 | No real portfolio to inspect | Ask for live sites and client references |
 | 6 | A vague contract with no detail of what is included | Every clause in writing: pages, warranty, changes |
@@ -1274,7 +1274,7 @@ A reliable digital agency is a supplier that is transparent about what it does, 
 
 ## Why is a guaranteed number one the most dangerous flag?
 
-Because it is impossible. Google holds [roughly 90% of the global search market](https://gs.statcounter.com/search-engine-market-share), which makes a high organic ranking a valuable asset — and that is exactly why nobody controls it. Google sets rankings on hundreds of factors, and [in its official documentation](https://developers.google.com/search/docs) it makes clear that nobody can guarantee first place. A supplier promising a guaranteed ranking, or results within a week, is selling an illusion — or intends to rank worthless keywords nobody searches for, purely so it can show you a number one. Real search work takes months, as we explained in the [guide to monthly SEO costs](/en/blog/seo-cost-monthly-israel).
+Because it is impossible. Google holds [roughly 90% of the global search market](https://gs.statcounter.com/search-engine-market-share), which makes a high organic ranking a valuable asset, and that is exactly why nobody controls it. Google sets rankings on hundreds of factors, and [in its official documentation](https://developers.google.com/search/docs) it makes clear that nobody can guarantee first place. A supplier promising a guaranteed ranking, or results within a week, is selling an illusion, or intends to rank worthless keywords nobody searches for, purely so it can show you a number one. Real search work takes months, as we explained in the [guide to monthly SEO costs](/en/blog/seo-cost-monthly-israel).
 
 ## Who owns the domain, the hosting and the code?
 
@@ -1282,11 +1282,11 @@ This is perhaps the most important clause, and also the most neglected. Ask expl
 
 ## When is a low price a trap?
 
-A suspiciously cheap price almost always means something is not included: no search work, no content, no mobile compatibility, or hidden costs that surface later. This does not mean expensive equals good — it means that too cheap is a signal to ask **what exactly am I getting**. We broke down all the hidden costs of a cheap website in a [separate guide on cheap sites](/en/blog/cheap-website-hidden-costs).
+A suspiciously cheap price almost always means something is not included: no search work, no content, no mobile compatibility, or hidden costs that surface later. This does not mean expensive equals good, it means that too cheap is a signal to ask **what exactly am I getting**. We broke down all the hidden costs of a cheap website in a [separate guide on cheap sites](/en/blog/cheap-website-hidden-costs).
 
 ## What does a proper selection process look like?
 
-- **Ask for a live portfolio.** Not screenshots — links to real sites that work, ideally in your own field.
+- **Ask for a live portfolio.** Not screenshots, links to real sites that work, ideally in your own field.
 - **Speak to an existing client.** A good supplier will be happy to put you in touch for a reference.
 - **Insist on scoping before a quote.** A supplier that does not understand your business cannot price it correctly.
 - **Read the small print.** What is included, what is not, what a change costs, and what happens if you part ways.
@@ -1301,7 +1301,7 @@ If you are still weighing up a freelancer against a company, we have [an honest 
 ## Further reading
 
 - [A business website: how to choose a company, what the process is and what it costs](/en/blog/website-building-services)
-- [Freelancer or web agency — which is better for your business?](/en/blog/freelancer-vs-web-agency)
+- [Freelancer or web agency, which is better for your business?](/en/blog/freelancer-vs-web-agency)
 - [A website from ₪1,500? The hidden costs nobody mentions](/en/blog/cheap-website-hidden-costs)`,
     faq: {
       title: 'Frequently asked questions about choosing a digital agency',
@@ -1312,7 +1312,7 @@ If you are still weighing up a freelancer against a company, we have [an honest 
         },
         {
           q: 'Can first place on Google be guaranteed?',
-          a: 'No. Google sets rankings on hundreds of shifting factors and states in its own documentation that no ranking can be guaranteed. A supplier promising a guaranteed first place, or results within a week, is selling an illusion — or is ranking worthless keywords nobody searches for, purely to show you a meaningless number one.',
+          a: 'No. Google sets rankings on hundreds of shifting factors and states in its own documentation that no ranking can be guaranteed. A supplier promising a guaranteed first place, or results within a week, is selling an illusion, or is ranking worthless keywords nobody searches for, purely to show you a meaningless number one.',
         },
         {
           q: 'Who should own the domain, the hosting and the code?',
@@ -1337,19 +1337,19 @@ If you are still weighing up a freelancer against a company, we have [an honest 
     tags: ['SEO', 'Organic search', 'Content'],
     content: `**In short (TL;DR):** Keyword research is the process that reveals which terms your customers actually type into Google, what intent sits behind them and how much competition there is for each one. It turns organic search from guesswork into a plan built on data, and points your content at the terms that bring paying customers rather than traffic for its own sake.
 
-Want to know the biggest open secret in [search engine optimisation](/en/services/seo)? Most businesses optimise for terms nobody searches for — or for terms everybody searches for and nobody in their position could realistically rank on. Professional keyword research is the difference between firing in the dark and building a search plan grounded in real data: what people type, how many of them there are, and what they actually want to find.
+Want to know the biggest open secret in [search engine optimisation](/en/services/seo)? Most businesses optimise for terms nobody searches for, or for terms everybody searches for and nobody in their position could realistically rank on. Professional keyword research is the difference between firing in the dark and building a search plan grounded in real data: what people type, how many of them there are, and what they actually want to find.
 
 ![Keyword research in Google on a laptop screen](/images/blog/keyword-research.webp)
 
 ## Why keyword research matters right now: the numbers
 
-- Google accounts for [roughly 90% of the global search market](https://gs.statcounter.com/search-engine-market-share) — meaning the overwhelming majority of your potential customers begin their journey on a single engine, and that is where it is decided who is found and who is not.
-- Gartner forecasts that traditional search volume on engines will fall by around 25% over the coming years in favour of AI assistants — which makes precision in choosing your terms more critical than ever.
+- Google accounts for [roughly 90% of the global search market](https://gs.statcounter.com/search-engine-market-share), meaning the overwhelming majority of your potential customers begin their journey on a single engine, and that is where it is decided who is found and who is not.
+- Gartner forecasts that traditional search volume on engines will fall by around 25% over the coming years in favour of AI assistants, which makes precision in choosing your terms more critical than ever.
 - Most searches are made through long, specific phrases, and it is precisely those that carry the highest purchase intent.
 
 ## What is search intent, and why does it decide what content to build?
 
-Two people type similar phrases and want completely different things. Someone searching for "what is SEO" wants to learn; someone searching for "SEO agency pricing" wants to buy. That is search intent, and it determines what you need to build for each term: an in-depth article, a focused service page or a comparison page. Match the content to the intent and Google rewards it — and the conversions follow.
+Two people type similar phrases and want completely different things. Someone searching for "what is SEO" wants to learn; someone searching for "SEO agency pricing" wants to buy. That is search intent, and it determines what you need to build for each term: an in-depth article, a focused service page or a comparison page. Match the content to the intent and Google rewards it, and the conversions follow.
 
 ## Why do long-tail terms bring in more customers?
 
@@ -1359,7 +1359,7 @@ The short, competitive terms get all the attention, but the money is made on lon
 
 ## What types of terms are there, and what page do you build for each?
 
-Not every term is born equal. The table below maps the four main types of term — and the page that makes the most sense for each:
+Not every term is born equal. The table below maps the four main types of term, and the page that makes the most sense for each:
 
 | Type of term | Example | User intent | Competition and volume | The page you build |
 |---|---|---|---|---|
@@ -1370,11 +1370,11 @@ Not every term is born equal. The table below maps the four main types of term �
 
 ## How is keyword research actually done?
 
-We combine several sources: professional research tools, Google autocomplete, the questions real customers ask in the field, and an analysis of the terms your competitors rank for and you do not. Out of all of that we build a keyword map with search volume, competition level and business potential — and from the map, an orderly content plan for the year ahead. No guesswork, and no months wasted on empty terms.
+We combine several sources: professional research tools, Google autocomplete, the questions real customers ask in the field, and an analysis of the terms your competitors rank for and you do not. Out of all of that we build a keyword map with search volume, competition level and business potential, and from the map, an orderly content plan for the year ahead. No guesswork, and no months wasted on empty terms.
 
 ## Which tools work, and how many of them are free?
 
-You do not need an expensive arsenal of tools to start: Google Keyword Planner gives you search volumes and click costs; [Google Trends](https://trends.google.com/trends/) shows trends and seasonality in the Israeli market; Google autocomplete and the "People also ask" box reveal the exact wording real users choose; and professional tools such as Ahrefs or Semrush add the competitive intelligence layer — which terms are bringing traffic to your competitors while you are nowhere to be seen on them.
+You do not need an expensive arsenal of tools to start: Google Keyword Planner gives you search volumes and click costs; [Google Trends](https://trends.google.com/trends/) shows trends and seasonality in the Israeli market; Google autocomplete and the "People also ask" box reveal the exact wording real users choose; and professional tools such as Ahrefs or Semrush add the competitive intelligence layer, which terms are bringing traffic to your competitors while you are nowhere to be seen on them.
 
 ## How do you turn a keyword map into a content plan?
 
@@ -1395,7 +1395,7 @@ Want to know which terms your business should be fighting for? Leave your detail
       items: [
         {
           q: 'How many keywords should you optimise for?',
-          a: 'There is no magic number. A focused service page targets one core term with a few close variations, and around it you build supporting content that captures dozens of long-tail phrases. The final scope follows from the competition in your sector, the size of the site and the business goals — a large store will target hundreds of terms, while a local business focuses on a few dozen good ones.',
+          a: 'There is no magic number. A focused service page targets one core term with a few close variations, and around it you build supporting content that captures dozens of long-tail phrases. The final scope follows from the competition in your sector, the size of the site and the business goals, a large store will target hundreds of terms, while a local business focuses on a few dozen good ones.',
         },
         {
           q: 'Which is better, a high-volume term or a focused one?',
@@ -1407,7 +1407,7 @@ Want to know which terms your business should be fighting for? Leave your detail
         },
         {
           q: 'How long does it take to see results from keyword research?',
-          a: 'The research itself usually takes anywhere from a few days to a fortnight, depending on the size of the site and the level of competition. Results on the ground — a rise in rankings and traffic — generally appear within three to six months of starting to implement the content plan, because organic search is a cumulative process.',
+          a: 'The research itself usually takes anywhere from a few days to a fortnight, depending on the size of the site and the level of competition. Results on the ground, a rise in rankings and traffic, generally appear within three to six months of starting to implement the content plan, because organic search is a cumulative process.',
         },
         {
           q: 'Can you do keyword research yourself?',
@@ -1422,26 +1422,26 @@ Want to know which terms your business should be fighting for? Leave your detail
     excerpt:
       'An estate agent in Holon or a dentist in the Krayot needs local customers. How local SEO and a strong Google listing produce hot leads daily.',
     tags: ['SEO', 'Organic SEO', 'Digital'],
-    content: `**In short (TL;DR):** Local SEO is the work of placing a business at the top of Google's search results and maps for people in its own geographic area. For local service providers — an estate agent, a doctor or a lawyer — it is the warmest lead channel there is, because it catches customers searching for your service at the moment of need, close to home.
+    content: `**In short (TL;DR):** Local SEO is the work of placing a business at the top of Google's search results and maps for people in its own geographic area. For local service providers, an estate agent, a doctor or a lawyer, it is the warmest lead channel there is, because it catches customers searching for your service at the moment of need, close to home.
 
-![Local SEO for a small business — dominating the search results in your own city](/images/blog/local-seo-small-business.webp)
+![Local SEO for a small business, dominating the search results in your own city](/images/blog/local-seo-small-business.webp)
 
 As a service provider or clinic owner, you do not necessarily need traffic from across the country. An estate agent in Holon or a dentist in the Krayot wants one thing: customers in their own area who need the service now. The answer lies in combining a technically strong website build with a focused, area-based [organic SEO](/en/services/seo) process and properly built digital authority.
 
 ## Why now? The numbers
 
-Local search is not a small niche — it is the mainstream way customers find businesses near home. Here is the picture in numbers:
+Local search is not a small niche, it is the mainstream way customers find businesses near home. Here is the picture in numbers:
 
-- **Around 90% of the search market** sits with Google ([according to StatCounter data](https://gs.statcounter.com/search-engine-market-share)) — so almost every potential customer starts the search there.
+- **Around 90% of the search market** sits with Google ([according to StatCounter data](https://gs.statcounter.com/search-engine-market-share)), so almost every potential customer starts the search there.
 - **The bulk of local searches** happen on a smartphone, and usually with immediate buying intent ("near me", "in my city").
-- **Only three results** appear in the map pack (Local Pack) at the top of the page — anyone who is not there is close to invisible.
+- **Only three results** appear in the map pack (Local Pack) at the top of the page, anyone who is not there is close to invisible.
 - **Local search means high intent.** Someone searching for "plumber in Haifa" wants to hire now, not to compare articles.
 
 ## How do you win local search exactly where it counts?
 
 When a customer is looking for an emergency service or a professional consultation, they will almost always add their city name to the search. So any local SEO strategy has to include optimisation for location.
 
-For example, if you have an office in the north, we at Aiterra will not focus only on generic phrases — we will produce focused landing pages for SEO in Haifa or SEO in northern Israel. When the site is built correctly on the technical side, the search engine recognises your location and pushes you to the top of the results every time someone nearby searches for your service.
+For example, if you have an office in the north, we at Aiterra will not focus only on generic phrases, we will produce focused landing pages for SEO in Haifa or SEO in northern Israel. When the site is built correctly on the technical side, the search engine recognises your location and pushes you to the top of the results every time someone nearby searches for your service.
 
 ## What is a Google Business Profile, and why is it your most important asset?
 
@@ -1461,7 +1461,7 @@ The two processes complement each other, but they answer different search querie
 | Best suited to | Content sites, brands, national sales | Local service providers, clinics, physical shops |
 | Main ranking signal | Authority and links | Proximity, relevance and local prominence |
 
-For most local service providers it makes sense to start with local SEO — it produces leads faster — and to build the broader organic foundation in parallel.
+For most local service providers it makes sense to start with local SEO, it produces leads faster, and to build the broader organic foundation in parallel.
 
 ## How do you adapt SEO to demanding niches?
 
@@ -1490,7 +1490,7 @@ Want to dominate the search results in your own area? Leave us your details now 
       items: [
         {
           q: 'What is local SEO, and how does it differ from ordinary organic SEO?',
-          a: 'Local SEO is optimisation aimed at placing the business at the top of Google search results and maps for people in a particular geographic area. Unlike ordinary organic SEO, which competes nationally and mostly serves research intent, local SEO catches customers with immediate buying intent — the ones searching "near me" or "in my city" who want to hire a service now.',
+          a: 'Local SEO is optimisation aimed at placing the business at the top of Google search results and maps for people in a particular geographic area. Unlike ordinary organic SEO, which competes nationally and mostly serves research intent, local SEO catches customers with immediate buying intent, the ones searching "near me" or "in my city" who want to hire a service now.',
         },
         {
           q: 'How long does it take to see results from local SEO?',
@@ -1498,7 +1498,7 @@ Want to dominate the search results in your own area? Leave us your details now 
         },
         {
           q: 'Do I need a Google Business Profile to appear on the maps?',
-          a: 'Yes. The Google Business Profile is a precondition for appearing in the map pack and in the side panel of the search results. Without it the business simply does not exist for people searching for a local service. A full, accurate listing — address, hours, photos and reviews — is the first and most important step in any local SEO strategy.',
+          a: 'Yes. The Google Business Profile is a precondition for appearing in the map pack and in the side panel of the search results. Without it the business simply does not exist for people searching for a local service. A full, accurate listing, address, hours, photos and reviews, is the first and most important step in any local SEO strategy.',
         },
         {
           q: 'How important are Google reviews to ranking a business?',
@@ -1506,7 +1506,7 @@ Want to dominate the search results in your own area? Leave us your details now 
         },
         {
           q: 'Does local SEO work for competitive fields such as law and medicine?',
-          a: 'It does, but they need particular care. Medical and legal subjects fall into the YMYL category, where Google demands stricter authority, credibility and technical soundness. Local SEO in those fields rests on professional content, displayed credentials and proven results, a fast and secure site, and a business listing rich in reviews — enough to establish the trust these audiences expect.',
+          a: 'It does, but they need particular care. Medical and legal subjects fall into the YMYL category, where Google demands stricter authority, credibility and technical soundness. Local SEO in those fields rests on professional content, displayed credentials and proven results, a fast and secure site, and a business listing rich in reviews, enough to establish the trust these audiences expect.',
         },
       ],
     },
@@ -1515,9 +1515,9 @@ Want to dominate the search results in your own area? Leave us your details now 
   'marketing-analytics-roi': {
     title: 'Marketing ROI: Which Channels Actually Pay Off',
     excerpt:
-      'Half your marketing budget is wasted — the question is which half. Conversion tracking, CRM data and four metrics reveal which channels earn.',
+      'Half your marketing budget is wasted, the question is which half. Conversion tracking, CRM data and four metrics reveal which channels earn.',
     tags: ['Digital', 'Conversions', 'Analytics'],
-    content: `**In short (TL;DR):** Measuring marketing ROI means tracking precisely how much revenue every shekel returns in each channel. Connecting conversion tracking, the advertising platforms and the CRM reveals which channels produce profitable customers and which only burn budget — and turns every marketing decision from a gamble into simple arithmetic.
+    content: `**In short (TL;DR):** Measuring marketing ROI means tracking precisely how much revenue every shekel returns in each channel. Connecting conversion tracking, the advertising platforms and the CRM reveals which channels produce profitable customers and which only burn budget, and turns every marketing decision from a gamble into simple arithmetic.
 
 There is a famous line in advertising: half my marketing budget is wasted, I just do not know which half. In 2026 there is no reason to work that way. With proper measurement you can know exactly what a lead costs in each channel, how many of those leads become customers, and what every shekel spent on Google, on Meta or on organic search is actually worth. Without those numbers, every marketing decision is a gamble.
 
@@ -1534,30 +1534,30 @@ Do not drown in dashboards carrying a hundred charts. Four metrics tell the whol
 | Lead-to-deal rate | How many enquiries became paying customers | Separates a cheap lead from a good one |
 | CLV, customer lifetime value | What an average customer is worth over time | Sets how much a lead is worth paying for |
 
-Once you have those four numbers, deciding where to raise budget and where to cut turns from an argument in a meeting into simple arithmetic. Note that the first two metrics describe volume and cheapness, and the last two describe quality and profitability — only the combination of all four prevents bad decisions.
+Once you have those four numbers, deciding where to raise budget and where to cut turns from an argument in a meeting into simple arithmetic. Note that the first two metrics describe volume and cheapness, and the last two describe quality and profitability, only the combination of all four prevents bad decisions.
 
 ## Why is measuring search so critical? The numbers
 
 For a sense of scale: according to [StatCounter](https://gs.statcounter.com/search-engine-market-share), Google holds around 90% of the global search market. The practical meaning is direct:
 
-- A large share of the marketing budget passes through search — paid and organic alike.
+- A large share of the marketing budget passes through search, paid and organic alike.
 - Every shekel put into that giant channel needs close measurement, or you are gambling on your largest source of demand without knowing whether it pays for itself.
 - Without orderly conversion tracking, there is no way to tell a click that cost money from a click that became a customer.
 
 ## Why is conversion tracking broken for almost everyone?
 
-Most businesses that come to us are surprised to find that their conversion tracking does not work: forms that are never counted, phone calls that go unrecorded, and campaigns credited with leads that actually arrived from organic search. We at Aiterra put the foundations right — defining correct conversion events in [GA4](https://support.google.com/analytics), call tracking, and parameters that identify the source of every enquiry — so that each lead is attributed to the channel that truly brought it. Once the foundation is sound, the data stops lying and decisions rest on reality rather than on instinct.
+Most businesses that come to us are surprised to find that their conversion tracking does not work: forms that are never counted, phone calls that go unrecorded, and campaigns credited with leads that actually arrived from organic search. We at Aiterra put the foundations right, defining correct conversion events in [GA4](https://support.google.com/analytics), call tracking, and parameters that identify the source of every enquiry, so that each lead is attributed to the channel that truly brought it. Once the foundation is sound, the data stops lying and decisions rest on reality rather than on instinct.
 
 ## How does the CRM connection close the loop to the profit line?
 
-This is where the real advantage sits: when every enquiry enters the CRM automatically, tagged with its source, you can see not only how many leads each channel brought, but how many of them became deals and at what value. Suddenly you find that the channel producing the most leads brings the smallest customers, and that the modest [campaign](/en/services/marketing) is generating the large deals. That level of clarity changes the whole budget split — and moves the discussion from how many leads we received to how much money we made from each channel.
+This is where the real advantage sits: when every enquiry enters the CRM automatically, tagged with its source, you can see not only how many leads each channel brought, but how many of them became deals and at what value. Suddenly you find that the channel producing the most leads brings the smallest customers, and that the modest [campaign](/en/services/marketing) is generating the large deals. That level of clarity changes the whole budget split, and moves the discussion from how many leads we received to how much money we made from each channel.
 
 ## Where do you start? Four steps to a measurement setup you can trust
 
-1. **Define conversion events** — mark every important action precisely: a form submission, a phone call, a WhatsApp message or a purchase.
-2. **Tag traffic sources** — consistent parameters across every campaign, so that each enquiry knows which channel and which ad it came from.
-3. **Connect the CRM** — feed leads in automatically with their source attached, and track what happened to them through to the closed deal.
-4. **One simple report** — a dashboard holding the four metrics by channel, so you can decide in a second where to scale and where to stop.
+1. **Define conversion events**: mark every important action precisely: a form submission, a phone call, a WhatsApp message or a purchase.
+2. **Tag traffic sources**: consistent parameters across every campaign, so that each enquiry knows which channel and which ad it came from.
+3. **Connect the CRM**: feed leads in automatically with their source attached, and track what happened to them through to the closed deal.
+4. **One simple report**: a dashboard holding the four metrics by channel, so you can decide in a second where to scale and where to stop.
 
 Want to know which half of your budget is working? Leave your details and we will build you a full measurement setup, from the first click to the invoice.
 
@@ -1574,23 +1574,23 @@ Want to know which half of your budget is working? Leave your details and we wil
       items: [
         {
           q: 'What is marketing ROI and how is it calculated?',
-          a: 'ROI is the metric showing how much revenue every shekel invested returned. The basic formula: the profit from the channel minus its cost, divided by the cost, times 100. Calculating it properly requires working conversion tracking and a link between enquiries and the deals that actually closed — otherwise you are measuring leads instead of real money.',
+          a: 'ROI is the metric showing how much revenue every shekel invested returned. The basic formula: the profit from the channel minus its cost, divided by the cost, times 100. Calculating it properly requires working conversion tracking and a link between enquiries and the deals that actually closed, otherwise you are measuring leads instead of real money.',
         },
         {
           q: 'Which tools are needed to measure marketing properly?',
-          a: 'The basis has three parts: Google Analytics 4 for traffic and on-site conversions, conversion tracking inside the advertising platforms themselves (Google and Meta), and a CRM that records every enquiry with its source. The magic is not in any single tool but in connecting all three — that is what turns raw data into insight about the real profitability of each channel.',
+          a: 'The basis has three parts: Google Analytics 4 for traffic and on-site conversions, conversion tracking inside the advertising platforms themselves (Google and Meta), and a CRM that records every enquiry with its source. The magic is not in any single tool but in connecting all three, that is what turns raw data into insight about the real profitability of each channel.',
         },
         {
           q: 'How long before the picture becomes reliable?',
-          a: 'Once a sound measurement setup is in place, one to two months of data is usually enough to identify which channels are profitable and which only burn budget. The longer the sales cycle — large B2B deals, for example — the longer the measurement window needed to see the full picture through to the profit line.',
+          a: 'Once a sound measurement setup is in place, one to two months of data is usually enough to identify which channels are profitable and which only burn budget. The longer the sales cycle, large B2B deals, for example, the longer the measurement window needed to see the full picture through to the profit line.',
         },
         {
           q: 'Why is my conversion tracking probably inaccurate?',
-          a: 'The usual reasons: forms that are never counted, phone calls that go unrecorded, and campaigns credited with leads that actually arrived from organic search. Without correctly defined conversion events and parameters that identify the source of every enquiry, the data misleads — and you may end up cutting your most profitable channel. Fixing the foundation is the first step to any measurement you can trust.',
+          a: 'The usual reasons: forms that are never counted, phone calls that go unrecorded, and campaigns credited with leads that actually arrived from organic search. Without correctly defined conversion events and parameters that identify the source of every enquiry, the data misleads, and you may end up cutting your most profitable channel. Fixing the foundation is the first step to any measurement you can trust.',
         },
         {
           q: 'What is the difference between a cheap lead and a profitable one?',
-          a: 'A cheap lead is one that cost little, meaning a low CPL, but it does not necessarily become a paying customer or a large deal. A profitable lead is measured at the end of the funnel: how much of it closed, and at what value. Often the channel with the most expensive leads produces the largest and most profitable deals — which is why you have to measure through to the profit line, not only the cost per enquiry.',
+          a: 'A cheap lead is one that cost little, meaning a low CPL, but it does not necessarily become a paying customer or a large deal. A profitable lead is measured at the end of the funnel: how much of it closed, and at what value. Often the channel with the most expensive leads produces the largest and most profitable deals, which is why you have to measure through to the profit line, not only the cost per enquiry.',
         },
       ],
     },
@@ -1605,16 +1605,16 @@ Want to know which half of your budget is working? Leave your details and we wil
 
 For a paid campaign to produce real results, the realistic minimum budget for a small business in Israel in 2026 is usually around ₪2,000–3,000 a month in media, meaning the money paid to Google or Meta, on top of the cost of management. A budget that is too small does not give the platform enough data to learn the audience, and the money is wasted. The great advantage of paid advertising is immediacy: unlike organic search, leads can arrive in the first few days.
 
-![A team reviewing paid campaign data on screen — Google and Meta advertising budgets](/images/blog/ppc-minimum-budget-israel.webp)
+![A team reviewing paid campaign data on screen, Google and Meta advertising budgets](/images/blog/ppc-minimum-budget-israel.webp)
 
-PPC, pay per click, is a model in which you pay Google or Meta to show ads to a targeted audience, and you mostly pay when somebody clicks. It is the fastest tool available for generating traffic and leads — but only if the budget, the audience and the ad are aimed correctly.
+PPC, pay per click, is a model in which you pay Google or Meta to show ads to a targeted audience, and you mostly pay when somebody clicks. It is the fastest tool available for generating traffic and leads, but only if the budget, the audience and the ad are aimed correctly.
 
 ## What is the budget actually made of?
 
 A common mistake is to assume the budget is only the money paid to the platform. In practice there are two components:
 
-- **Media budget** — the money that goes directly to Google or Meta for impressions and clicks.
-- **Management fees** — the cost of building the campaign, writing the ads, optimisation and ongoing reporting.
+- **Media budget**: the money that goes directly to Google or Meta for impressions and clicks.
+- **Management fees**: the cost of building the campaign, writing the ads, optimisation and ongoing reporting.
 
 A business that puts everything into media and manages the account itself usually burns the budget; a business that pays for management without enough media never lets the campaign get off the ground. The simple rule: start with a media budget large enough for the platform to collect the conversion data it needs to leave the learning phase.
 
@@ -1634,7 +1634,7 @@ To plan a realistic budget for a small business in Israel in 2026, add up all th
 - **Media budget:** around ₪2,000–4,000 a month, depending on the platform and the level of competition in the sector.
 - **Management fees:** usually around 15%–25% of the media budget, or a fixed monthly sum according to the scope of work.
 - **Realistic total starting budget:** around ₪3,000–5,000 a month for a business that wants measurable results rather than a test.
-- **Time to an informed decision:** about a month — a learning period plus a few more days for cost per lead to settle.
+- **Time to an informed decision:** about a month, a learning period plus a few more days for cost per lead to settle.
 
 ## How long before you see leads?
 
@@ -1642,10 +1642,10 @@ This is the great advantage: first leads can arrive within days. But there is a 
 
 ## How do you avoid throwing the money away?
 
-- **Measure conversions, not clicks.** A cheap click that does not become a lead is waste. Without proper measurement you are blind — see [the guide to installing GA4 and the pixel](/en/blog/ga4-pixel-conversion-tracking-guide).
+- **Measure conversions, not clicks.** A cheap click that does not become a lead is waste. Without proper measurement you are blind, see [the guide to installing GA4 and the pixel](/en/blog/ga4-pixel-conversion-tracking-guide).
 - **Send traffic to a focused landing page**, not to the home page. We explained why in the [guide to landing pages that convert](/en/blog/landing-pages-that-convert).
 - **Start focused.** One well-targeted campaign beats five scattered campaigns running on a small budget.
-- **Connect it to the whole picture.** Paid advertising works best alongside proper measurement — see [measurement and analytics: what every shekel returns](/en/blog/marketing-analytics-roi).
+- **Connect it to the whole picture.** Paid advertising works best alongside proper measurement, see [measurement and analytics: what every shekel returns](/en/blog/marketing-analytics-roi).
 
 ---
 
@@ -1668,7 +1668,7 @@ This is the great advantage: first leads can arrive within days. But there is a 
           a: 'First leads can arrive within days, and that is the big advantage over organic search. But there is a learning period of two weeks to a month in which results are still unstable. Only after about a month can you see a real cost per lead and decide with confidence whether to continue, scale up or change direction.',
         },
         {
-          q: 'Which is better for a small business — Google or Facebook?',
+          q: 'Which is better for a small business, Google or Facebook?',
           a: 'It depends on the goal. On Google you capture people who are already searching for the service, so purchase intent is high, which makes it excellent where demand already exists. On Facebook and Instagram you create demand and reach an audience by interest. For many businesses a combination of the two is the most effective option.',
         },
         {
@@ -1688,22 +1688,22 @@ This is the great advantage: first leads can arrive within days. But there is a 
     excerpt:
       'SEO services in Israel cost ₪1,500–8,000 a month in 2026. Price ranges by business type, what each tier includes, and how long results take.',
     tags: ['SEO', 'Search marketing', 'Pricing', 'Small business', 'Digital marketing'],
-    content: `**In short (TL;DR):** Organic search marketing (SEO) for a small business in Israel typically costs between ₪1,500 and ₪8,000 a month in 2026 — depending on how competitive the field is and how much work is involved. It is an ongoing monthly investment rather than a one-off payment, and meaningful results usually arrive after three to six months.
+    content: `**In short (TL;DR):** Organic search marketing (SEO) for a small business in Israel typically costs between ₪1,500 and ₪8,000 a month in 2026, depending on how competitive the field is and how much work is involved. It is an ongoing monthly investment rather than a one-off payment, and meaningful results usually arrive after three to six months.
 
 *Last updated: October 2026*
 
-SEO for a small business in Israel typically costs between ₪1,500 and ₪8,000 a month in 2026, depending on the level of competition in the field and the scope of the work. A local business in an uncompetitive niche is usually well served by a plan of ₪1,500–3,500 a month; a competitive field, or nationwide coverage, calls for ₪3,500–8,000 and up. SEO is an ongoing investment, not a one-off payment — and results generally arrive after three to six months.
+SEO for a small business in Israel typically costs between ₪1,500 and ₪8,000 a month in 2026, depending on the level of competition in the field and the scope of the work. A local business in an uncompetitive niche is usually well served by a plan of ₪1,500–3,500 a month; a competitive field, or nationwide coverage, calls for ₪3,500–8,000 and up. SEO is an ongoing investment, not a one-off payment, and results generally arrive after three to six months.
 
-![An organic traffic growth chart — how much monthly SEO costs for a small business in Israel](/images/blog/seo-cost-monthly-israel.webp)
+![An organic traffic growth chart, how much monthly SEO costs for a small business in Israel](/images/blog/seo-cost-monthly-israel.webp)
 
-SEO, or search engine optimisation, is the continuous work of improving a site and its authority so that it appears high in Google's natural results — the ones you do not pay for per click. And because [Google holds roughly 90% of the search market](https://gs.statcounter.com/search-engine-market-share), ranking well in its organic results is a primary lead channel for businesses in Israel. Unlike paid advertising, which stops the moment you stop paying, an organic asset built properly keeps producing traffic and enquiries for months and years afterwards.
+SEO, or search engine optimisation, is the continuous work of improving a site and its authority so that it appears high in Google's natural results, the ones you do not pay for per click. And because [Google holds roughly 90% of the search market](https://gs.statcounter.com/search-engine-market-share), ranking well in its organic results is a primary lead channel for businesses in Israel. Unlike paid advertising, which stops the moment you stop paying, an organic asset built properly keeps producing traffic and enquiries for months and years afterwards.
 
 ## What determines the price of SEO?
 
-There is no flat rate, and that is not a caprice — the work genuinely differs from business to business. These are the main factors:
+There is no flat rate, and that is not a caprice, the work genuinely differs from business to business. These are the main factors:
 
 - **How competitive the keywords are.** Ranking a plumber in a small town is not the same world as ranking a divorce lawyer in Tel Aviv. The more businesses fighting over the same term, the more work is required.
-- **The current state of the site.** A site that is slow, not mobile-friendly or structurally broken needs technical repair before anything else begins — sometimes a one-off project in its own right.
+- **The current state of the site.** A site that is slow, not mobile-friendly or structurally broken needs technical repair before anything else begins, sometimes a one-off project in its own right.
 - **The volume of content.** Modern SEO is built on quality content. Writing articles and service pages is a major share of the work.
 - **Links and authority.** Building the domain's reputation, through links from credible sources, is one of the more expensive and slower parts of the job.
 
@@ -1722,21 +1722,21 @@ A monthly plan usually bundles technical optimisation, content writing, link bui
 
 ## Why is this a monthly payment and not a one-off?
 
-Because Google never finishes: your competitors keep publishing content, the algorithm updates, and what searchers are looking for shifts. SEO that stops does not vanish overnight, but it erodes — positions won with effort slide as competitors overtake you. The right way to think about it is not as an expense but as building an asset, much like [content marketing](/en/blog/content-marketing-blog), where every article keeps working a year after it was published.
+Because Google never finishes: your competitors keep publishing content, the algorithm updates, and what searchers are looking for shifts. SEO that stops does not vanish overnight, but it erodes, positions won with effort slide as competitors overtake you. The right way to think about it is not as an expense but as building an asset, much like [content marketing](/en/blog/content-marketing-blog), where every article keeps working a year after it was published.
 
 ## How long do results take?
 
-This is the most important question, and the honest answer is: patience. First signs usually appear within three to four months, and meaningful results within six to twelve. Anyone promising page one of Google within a week — or guaranteeing a top position at all — is selling you an illusion. [Google states plainly in its official documentation](https://developers.google.com/search/docs/fundamentals/do-i-need-seo) that nobody can guarantee a ranking. If you need an immediate result, paid advertising is the right tool for the short term, while SEO builds the long-term foundation.
+This is the most important question, and the honest answer is: patience. First signs usually appear within three to four months, and meaningful results within six to twelve. Anyone promising page one of Google within a week, or guaranteeing a top position at all, is selling you an illusion. [Google states plainly in its official documentation](https://developers.google.com/search/docs/fundamentals/do-i-need-seo) that nobody can guarantee a ranking. If you need an immediate result, paid advertising is the right tool for the short term, while SEO builds the long-term foundation.
 
 ## How do you avoid wasting the budget?
 
-- **Insist on transparent reporting.** A monthly report with positions, organic traffic and leads — not just a note that somebody worked on the site.
+- **Insist on transparent reporting.** A monthly report with positions, organic traffic and leads, not just a note that somebody worked on the site.
 - **Check that real content is being produced.** SEO without new content is usually SEO that is not moving.
 - **Know what you are paying in total.** Quotes are often given before VAT; the [VAT calculator](/en/tools/vat-calculator) shows the figure with VAT included.
 - **Start with keyword research.** Without knowing what customers are searching for, everything else is guesswork. We went into this in the [keyword research guide](/en/blog/keyword-research-guide).
 - **Think about the next generation of search as well.** Today you are not optimising for Google alone, but also for answers produced by artificial intelligence. We covered that in the [GEO guide](/en/blog/geo-ai-search-optimization), and our [AI search optimisation service](/en/services/ai-search) does the work.
 
-Before choosing an SEO supplier, it is worth reading [the guide to choosing SEO services](/en/blog/seo-services) — it will save you a year of wasted budget.
+Before choosing an SEO supplier, it is worth reading [the guide to choosing SEO services](/en/blog/seo-services), it will save you a year of wasted budget.
 
 ---
 
@@ -1756,11 +1756,11 @@ Before choosing an SEO supplier, it is worth reading [the guide to choosing SEO 
         },
         {
           q: 'Why is SEO a monthly payment rather than a one-off?',
-          a: 'SEO is a monthly payment rather than a one-off because the work never ends: competitors keep publishing content, the algorithm updates and search intent shifts. SEO that stops erodes gradually — positions won with effort slide as competitors overtake you. The monthly payment holds the rankings you have and keeps building on them, which is why SEO is better understood as building an ongoing asset than as a one-off expense.',
+          a: 'SEO is a monthly payment rather than a one-off because the work never ends: competitors keep publishing content, the algorithm updates and search intent shifts. SEO that stops erodes gradually, positions won with effort slide as competitors overtake you. The monthly payment holds the rankings you have and keeps building on them, which is why SEO is better understood as building an ongoing asset than as a one-off expense.',
         },
         {
           q: 'How long does it take to see results from SEO?',
-          a: 'SEO results usually start with first signs within three to four months, and meaningful results arrive within six to twelve. The pace depends on the competition in your field, the age of the domain, and the volume of content and links. Anyone promising first place on Google within a week, or guaranteeing a ranking at all, is selling an illusion — Google itself states that rankings cannot be guaranteed.',
+          a: 'SEO results usually start with first signs within three to four months, and meaningful results arrive within six to twelve. The pace depends on the competition in your field, the age of the domain, and the volume of content and links. Anyone promising first place on Google within a week, or guaranteeing a ranking at all, is selling an illusion, Google itself states that rankings cannot be guaranteed.',
         },
         {
           q: 'What is the difference between SEO and paid advertising?',
@@ -1768,7 +1768,7 @@ Before choosing an SEO supplier, it is worth reading [the guide to choosing SEO 
         },
         {
           q: 'What is included in a monthly SEO plan?',
-          a: 'A typical monthly SEO plan covers technical optimisation of the site, writing content and service pages, building links and authority, and transparent monthly reporting on positions and organic traffic. The larger the budget, the more content can be produced and the more competitive the keywords that can be targeted. The emphasis should be on business results — leads and sales — and not on rankings alone.',
+          a: 'A typical monthly SEO plan covers technical optimisation of the site, writing content and service pages, building links and authority, and transparent monthly reporting on positions and organic traffic. The larger the budget, the more content can be produced and the more competitive the keywords that can be targeted. The emphasis should be on business results, leads and sales, and not on rankings alone.',
         },
       ],
     },
@@ -1783,22 +1783,22 @@ Before choosing an SEO supplier, it is worth reading [the guide to choosing SEO 
 
 ![Choosing SEO services: the guide that will save you a year of wasted budget](/images/blog/seo-services.webp)
 
-Choosing an SEO company is one of the most important marketing decisions a business makes, and also one of the most confusing. Every agency promises first place on Google, prices range from a few hundred to tens of thousands of shekels a month, and results only arrive after months. This guide sorts it out: what professional SEO services really include, what they cost in the Israeli market, which questions to ask before signing — and how to spot empty promises before they cost you a year of budget.
+Choosing an SEO company is one of the most important marketing decisions a business makes, and also one of the most confusing. Every agency promises first place on Google, prices range from a few hundred to tens of thousands of shekels a month, and results only arrive after months. This guide sorts it out: what professional SEO services really include, what they cost in the Israeli market, which questions to ask before signing, and how to spot empty promises before they cost you a year of budget.
 
 ## Why now in particular? The numbers
 
-- Google holds [around 90% of the global search market](https://gs.statcounter.com/search-engine-market-share) — a business that does not appear there barely exists for new customers.
+- Google holds [around 90% of the global search market](https://gs.statcounter.com/search-engine-market-share), a business that does not appear there barely exists for new customers.
 - According to a forecast by the research firm Gartner (February 2024), traditional search volume in engines is expected to fall by around 25% by 2026 in favour of AI assistants, which makes a strong organic foundation more critical still.
 - First organic results usually arrive within 4 to 6 months; meaningful results within 8 to 12 months.
-- Unlike paid advertising, organic traffic does not disappear the moment you stop paying — it is an asset built over time.
+- Unlike paid advertising, organic traffic does not disappear the moment you stop paying, it is an asset built over time.
 
 ## What must an SEO service include?
 
 A serious [organic SEO](/en/services/seo) service stands on four legs, and the absence of any one of them shows up in the results:
 
-**Technical optimisation (technical SEO):** loading speed, a sound site structure, structured data (Schema) and the removal of crawl blockers. The Google of today examines the quality of the code and the infrastructure — the [Core Web Vitals](https://web.dev/articles/vitals) metrics, for example — no less than the content. A site that is slow or technically broken will not rank, however brilliant its content.
+**Technical optimisation (technical SEO):** loading speed, a sound site structure, structured data (Schema) and the removal of crawl blockers. The Google of today examines the quality of the code and the infrastructure, the [Core Web Vitals](https://web.dev/articles/vitals) metrics, for example, no less than the content. A site that is slow or technically broken will not rank, however brilliant its content.
 
-**Research and content strategy:** keyword research that identifies what your customers actually type and what their search intent is, and content built to answer it — focused service pages and articles that build authority.
+**Research and content strategy:** keyword research that identifies what your customers actually type and what their search intent is, and content built to answer it, focused service pages and articles that build authority.
 
 **Authority building (off-page):** quality links from relevant sites and mentions across the web. Not hundreds of links a month from link farms, but a natural profile that Google rewards over time.
 
@@ -1814,12 +1814,12 @@ The price varies mainly with how competitive the sector is and with the scope of
 | SEO in a competitive national sector | ₪7,000–15,000+ a month | Law, finance, property, medicine |
 | Comprehensive SEO audit (one-off) | ₪3,000–10,000 | Anyone wanting to check the current position before committing |
 
-It is worth understanding the economics of the cheap offers: real SEO takes professional hours, so anyone charging ₪800 a month simply cannot spend more than an hour or two on you, and that is exactly what you will get. A high price on its own, on the other hand, guarantees nothing — which is why the following questions matter more than the price.
+It is worth understanding the economics of the cheap offers: real SEO takes professional hours, so anyone charging ₪800 a month simply cannot spend more than an hour or two on you, and that is exactly what you will get. A high price on its own, on the other hand, guarantees nothing, which is why the following questions matter more than the price.
 
 ## Which questions must you ask before signing?
 
 - **Who will actually work on my site?** An agency with an in-house team, or an intermediary passing the work to freelancers?
-- **What will you do in the first months?** A professional answer covers a technical audit, keyword research and a content plan — not "we will start promoting".
+- **What will you do in the first months?** A professional answer covers a technical audit, keyword research and a content plan, not "we will start promoting".
 - **What does the monthly report look like?** Ask for a sample. A good report shows organic traffic, leads and progress against targets, not just a list of positions.
 - **What happens if we part ways?** The content, the links and the access must remain your property. Avoid long commitments with no exit points.
 - **What is the realistic timeline?** An honest answer talks about 4 to 6 months for first results and 8 to 12 months for meaningful ones, depending on the competition and on the starting point.
@@ -1830,9 +1830,9 @@ Be wary of a promise of "guaranteed first place" (nobody controls the Google alg
 
 ## Why does a supplier who also understands code have an advantage?
 
-A large share of SEO problems on Israeli websites are technical: slow sites, bloated templates, code that Google struggles to crawl. An agency that comes from the development world can fix the technical core itself instead of recommending it to the client developer — and that is a difference of months in the pace of progress. This is how we work at Aiterra: one team holding both the code and the strategy.
+A large share of SEO problems on Israeli websites are technical: slow sites, bloated templates, code that Google struggles to crawl. An agency that comes from the development world can fix the technical core itself instead of recommending it to the client developer, and that is a difference of months in the pace of progress. This is how we work at Aiterra: one team holding both the code and the strategy.
 
-Want a second opinion on a proposal you have received, or a check on where your site stands today? Leave your details and we will come back to you with an initial diagnosis — no commitment and no jargon.
+Want a second opinion on a proposal you have received, or a check on where your site stands today? Leave your details and we will come back to you with an initial diagnosis, no commitment and no jargon.
 
 ---
 
@@ -1841,7 +1841,7 @@ Want a second opinion on a proposal you have received, or a check on where your 
 ## Further reading
 
 - [Keyword research: how to discover what your customers are really searching for on Google](/en/blog/keyword-research-guide)
-- [GEO: the guide to search optimisation in the age of artificial intelligence — how to appear in ChatGPT and Google AI](/en/blog/geo-ai-search-optimization)`,
+- [GEO: the guide to search optimisation in the age of artificial intelligence, how to appear in ChatGPT and Google AI](/en/blog/geo-ai-search-optimization)`,
     faq: {
       title: 'Common questions before you start',
       items: [
@@ -1876,23 +1876,23 @@ Want a second opinion on a proposal you have received, or a check on where your 
     tags: ['Short-form video', 'TikTok', 'Instagram Reels', 'YouTube Shorts', 'Content marketing'],
     content: `**In short (TL;DR):** Short-form video marketing for business means vertical clips of 15 to 60 seconds on TikTok, Instagram Reels and YouTube Shorts. It is currently the cheapest organic reach available: the algorithm promotes content on quality rather than on follower count, so even a small business can reach tens of thousands of viewers with no media budget at all.
 
-If you still think TikTok is teenagers dancing, here is an update: the short-form video platforms — TikTok, Reels on Instagram and Shorts on YouTube — are now the strongest organic reach engine available to a business. While a post in the ordinary feed reaches a small percentage of your followers, one good short video can reach tens of thousands of viewers without a shekel spent on media.
+If you still think TikTok is teenagers dancing, here is an update: the short-form video platforms, TikTok, Reels on Instagram and Shorts on YouTube, are now the strongest organic reach engine available to a business. While a post in the ordinary feed reaches a small percentage of your followers, one good short video can reach tens of thousands of viewers without a shekel spent on media.
 
 ![A content creator filming a short business video with a ring light](/images/blog/short-video-tiktok.webp)
 
 ## Why does short video work so well?
 
-The algorithms behind these platforms are not interested in how many followers you have — only in how interesting the video is. That changes the rules of the game in favour of small businesses: the first video from an unknown company can overtake a giant brand, provided it catches the viewer in the opening seconds and holds them to the end. Reach is handed out on quality, not on budget.
+The algorithms behind these platforms are not interested in how many followers you have, only in how interesting the video is. That changes the rules of the game in favour of small businesses: the first video from an unknown company can overtake a giant brand, provided it catches the viewer in the opening seconds and holds them to the end. Reach is handed out on quality, not on budget.
 
-The only measures the algorithm cares about are watch-through rate, meaning how much of the video people actually saw, and the rate of saves and shares. That makes the first second critical: a strong hook that promises the viewer immediate value — something like do not buy a piece of furniture before you know this — breaks the scroll and keeps the viewer in. Any video that holds its audience to the end is automatically pushed to more people, and that is how the snowball effect of organic reach begins.
+The only measures the algorithm cares about are watch-through rate, meaning how much of the video people actually saw, and the rate of saves and shares. That makes the first second critical: a strong hook that promises the viewer immediate value, something like do not buy a piece of furniture before you know this, breaks the scroll and keeps the viewer in. Any video that holds its audience to the end is automatically pushed to more people, and that is how the snowball effect of organic reach begins.
 
 ## Why now? The numbers
 
 The shift to video-based search and discovery is already here, and it is worth getting in before the competition closes the gap:
 
-- Around 90% of searches worldwide still run through Google ([according to StatCounter](https://gs.statcounter.com/search-engine-market-share)) — but younger audiences increasingly look for products and services directly inside the short-video apps.
+- Around 90% of searches worldwide still run through Google ([according to StatCounter](https://gs.statcounter.com/search-engine-market-share)), but younger audiences increasingly look for products and services directly inside the short-video apps.
 - Whoever starts today builds a library of video assets ahead of the competition, and enjoys a head start with the algorithm.
-- Effective length for a business video: roughly 15 to 60 seconds — enough to deliver value, short enough to hold to the end.
+- Effective length for a business video: roughly 15 to 60 seconds, enough to deliver value, short enough to hold to the end.
 
 ## Which video formats work for real businesses?
 
@@ -1914,11 +1914,11 @@ The formula stays the same in every format: an opening that stops the scroll wit
 
 Reach is pleasant, leads are the point. The connection is made in two places: in the profile, through a focused bio with a link to a fast landing page, and in the videos themselves, through a natural invitation to the next step. And if you want to accelerate: the organic videos that have proved themselves make the most effective paid ads there are, because they have already passed the test of a real audience. You can push them out as a paid campaign through platforms such as [Meta for Business](https://www.facebook.com/business) and measure every lead.
 
-The big advantage: instead of guessing which ad will work, you already know which video the audience liked — and that is exactly the video that gets the budget. Cold audiences meet a proven winner, everyone who watched it becomes a warm audience, and the warm viewers are invited to the landing page or to WhatsApp. That is how one video builds an entire funnel: free organic reach at the top, paying and measurable leads at the bottom.
+The big advantage: instead of guessing which ad will work, you already know which video the audience liked, and that is exactly the video that gets the budget. Cold audiences meet a proven winner, everyone who watched it becomes a warm audience, and the warm viewers are invited to the landing page or to WhatsApp. That is how one video builds an entire funnel: free organic reach at the top, paying and measurable leads at the bottom.
 
 ## How much content can one shoot day produce?
 
-The secret to consistency without burnout is batch production: a single concentrated shoot day yields ten to fifteen videos, which are then published across the month on every platform in parallel. We at Aiterra run the whole process — strategy, scripts, filming, editing and scheduled publishing — so that all that is left for you is to appear in front of the camera (and even that can sometimes be skipped).
+The secret to consistency without burnout is batch production: a single concentrated shoot day yields ten to fifteen videos, which are then published across the month on every platform in parallel. We at Aiterra run the whole process, strategy, scripts, filming, editing and scheduled publishing, so that all that is left for you is to appear in front of the camera (and even that can sometimes be skipped).
 
 Want your business to show up in the feed of your next customers? Leave your details and we will build you a full monthly video plan.
 
@@ -1951,7 +1951,7 @@ Want your business to show up in the feed of your next customers? Leave your det
         },
         {
           q: 'What is the difference between TikTok, Reels and Shorts, and where should you publish?',
-          a: 'In production terms there is no difference: one short vertical video suits all three. The difference is the audience — TikTok is strong on viral discovery, Instagram Reels connects to an existing audience and to the brand, and YouTube Shorts benefits from long-term search. Our recommendation: publish the same video on every platform in parallel and maximise reach.',
+          a: 'In production terms there is no difference: one short vertical video suits all three. The difference is the audience, TikTok is strong on viral discovery, Instagram Reels connects to an existing audience and to the brand, and YouTube Shorts benefits from long-term search. Our recommendation: publish the same video on every platform in parallel and maximise reach.',
         },
       ],
     },
@@ -1986,10 +1986,10 @@ Before talking about design, it is worth understanding why a technically sound s
 
 A professional process has four clear stages, and you should sign each one off before the next begins. That way there are no surprises and no hidden costs:
 
-1. **Discovery** — understanding the requirements, the audience and the business goals, and mapping the pages and content the site will carry.
-2. **Design** — UX/UI matched to the brand, responsive and clear, presented for your approval before a line of code is written.
-3. **Development** — built in clean, fast code, with the emphasis on performance and full compatibility on mobile and desktop.
-4. **Launch and promotion** — going live with SEO foundations in place, GA4 measurement and a connection to your marketing tools.
+1. **Discovery**: understanding the requirements, the audience and the business goals, and mapping the pages and content the site will carry.
+2. **Design**: UX/UI matched to the brand, responsive and clear, presented for your approval before a line of code is written.
+3. **Development**: built in clean, fast code, with the emphasis on performance and full compatibility on mobile and desktop.
+4. **Launch and promotion**: going live with SEO foundations in place, GA4 measurement and a connection to your marketing tools.
 
 ## What does a website cost in Bat Yam? A 2026 price table
 
@@ -2059,20 +2059,20 @@ Make sure you get full ownership of the domain, the hosting and the code; a fast
   ],
   content: `**In short (TL;DR):** Web development in Gush Dan means building a site end to end with a digital agency that knows the competitive market of the Tel Aviv metropolitan area. Choose a local supplier you can meet face to face, one that builds a site ready for search from day one and gives you full ownership. Prices in 2026 run from about ₪3,000 for a landing page to ₪25,000 and up for a brochure site.
 
-Looking for a web development company in Gush Dan? Choose a local supplier you can meet in person, one that knows how competitive the centre of the country is, and one that gives you full ownership of the domain, the hosting and the code. We at Aiterra are based in Bat Yam — in the middle of Gush Dan — and work with businesses in Holon, Rishon LeZion, Tel Aviv, Ramat Gan and Givatayim. Prices in 2026 range from ₪3,000 for a landing page up to ₪25,000 and above for a full brochure site, depending on scope and search readiness.
+Looking for a web development company in Gush Dan? Choose a local supplier you can meet in person, one that knows how competitive the centre of the country is, and one that gives you full ownership of the domain, the hosting and the code. We at Aiterra are based in Bat Yam, in the middle of Gush Dan, and work with businesses in Holon, Rishon LeZion, Tel Aviv, Ramat Gan and Givatayim. Prices in 2026 range from ₪3,000 for a landing page up to ₪25,000 and above for a full brochure site, depending on scope and search readiness.
 
-![The Gush Dan skyline — a local digital agency building websites in Holon, Rishon LeZion, Tel Aviv and Ramat Gan](/images/blog/web-development-gush-dan.webp)
+![The Gush Dan skyline, a local digital agency building websites in Holon, Rishon LeZion, Tel Aviv and Ramat Gan](/images/blog/web-development-gush-dan.webp)
 
-A digital agency in Gush Dan is a supplier that plans, designs and builds your site end to end — from specification and design through code, launch and maintenance — with first-hand knowledge of the crowded business market of the Tel Aviv metropolitan area. Gush Dan is the densest business region in Israel, and that means one thing: digital competition here is unusually fierce, and an average site simply disappears. To stand out you need a site that is fast, built for mobile and ready for search from the first day — particularly when Google holds around 90% of the search market ([according to StatCounter data](https://gs.statcounter.com/search-engine-market-share)), so nearly every potential customer starts their search there.
+A digital agency in Gush Dan is a supplier that plans, designs and builds your site end to end, from specification and design through code, launch and maintenance, with first-hand knowledge of the crowded business market of the Tel Aviv metropolitan area. Gush Dan is the densest business region in Israel, and that means one thing: digital competition here is unusually fierce, and an average site simply disappears. To stand out you need a site that is fast, built for mobile and ready for search from the first day, particularly when Google holds around 90% of the search market ([according to StatCounter data](https://gs.statcounter.com/search-engine-market-share)), so nearly every potential customer starts their search there.
 
 ## Why does the location of the agency in Gush Dan matter at all?
 
-A supplier who runs everything over email and Zoom can build a good-looking site — but a successful project rests on a deep understanding of the business, and that happens best face to face. Here are the practical advantages of a supplier from the area:
+A supplier who runs everything over email and Zoom can build a good-looking site, but a successful project rests on a deep understanding of the business, and that happens best face to face. Here are the practical advantages of a supplier from the area:
 
 - **A scoping meeting in the same room.** The specification stage saves the most money later, and it works better sitting together. In Gush Dan that means a fifteen-minute drive, not a whole working day.
-- **Knowledge of the local competition.** A business in Ramat Gan competes for customers from Ramat Gan, Givatayim and Tel Aviv — not against the whole country. A supplier who knows the regional market can build a site and landing pages that speak to exactly that audience.
+- **Knowledge of the local competition.** A business in Ramat Gan competes for customers from Ramat Gan, Givatayim and Tel Aviv, not against the whole country. A supplier who knows the regional market can build a site and landing pages that speak to exactly that audience.
 - **Genuine availability.** When the site goes down in the middle of a campaign, a local supplier you can actually reach is a different kind of reassurance from anonymous chat support.
-- **Stronger local search.** Every city is a separate search entity in Google. A supplier who understands that builds you a presence for each relevant city — which connects directly to [local SEO](/en/blog/local-seo-small-business).
+- **Stronger local search.** Every city is a separate search entity in Google. A supplier who understands that builds you a presence for each relevant city, which connects directly to [local SEO](/en/blog/local-seo-small-business).
 
 ## What suits each city in Gush Dan?
 
@@ -2085,11 +2085,11 @@ The mechanics of building a website are the same everywhere, but the business em
 | Holon | Industry, trade, garages, home services | Local leads, WhatsApp and phone links, simplicity |
 | Rishon LeZion | Retail, education, community service providers | Local search by neighbourhood, online shop, accessibility |
 
-The table is a starting point, not a rule. An excellent business in Holon may want premium design exactly as one in Tel Aviv would — it all gets settled in the scoping call.
+The table is a starting point, not a rule. An excellent business in Holon may want premium design exactly as one in Tel Aviv would, it all gets settled in the scoping call.
 
 ## What does a website in Gush Dan cost in 2026?
 
-The price is set by the scope of the site, the level of design and the number of pages and integrations — not by the city. These are the ranges we work to in 2026:
+The price is set by the scope of the site, the level of design and the number of pages and integrations, not by the city. These are the ranges we work to in 2026:
 
 | Type of site | Price range (2026) | Mainly suited to | Estimated build time |
 | --- | --- | --- | --- |
@@ -2101,13 +2101,13 @@ One point worth making: a local agency is not necessarily more expensive than a 
 
 ## How do you choose well and avoid the traps?
 
-These are the questions to put to any supplier in Gush Dan before you sign — and the right answers:
+These are the questions to put to any supplier in Gush Dan before you sign, and the right answers:
 
 - **Who owns the domain, the hosting and the code?** The only correct answer: you do.
-- **Is the site built ready for organic search?** Heading structure, loading speed ([Google's Core Web Vitals metrics](https://web.dev/articles/vitals)) and structured data — fixing this after the fact costs more than building it right.
+- **Is the site built ready for organic search?** Heading structure, loading speed ([Google's Core Web Vitals metrics](https://web.dev/articles/vitals)) and structured data, fixing this after the fact costs more than building it right.
 - **How does the site look on a phone?** More than half of visitors in Israel arrive from a smartphone. Ask to see their work on mobile.
 - **Who actually works on the project?** A designer and a developer working together, or a distant subcontractor?
-- **What is included after launch?** Warranty, response times and the cost of changes — all in writing.
+- **What is included after launch?** Warranty, response times and the cost of changes, all in writing.
 
 If a proposal has no proper specification stage, that is a red flag, local or not. We covered every red flag in the [guide to choosing a digital agency you can trust](/en/blog/how-to-choose-digital-agency).
 
@@ -2120,7 +2120,7 @@ Weighing up quotes, or want to know what the site you actually need would cost? 
 ## Further reading
 
 - [What does a small business website cost in Israel in 2026?](/en/blog/website-cost-israel-2026)
-- [Web development in Bat Yam — choosing a supplier, the process and the prices](/en/blog/web-development-bat-yam)
+- [Web development in Bat Yam, choosing a supplier, the process and the prices](/en/blog/web-development-bat-yam)
 - [Owning your city: the guide to local SEO for small businesses](/en/blog/local-seo-small-business)`,
   faq: {
     title: 'Frequently asked questions about web development in Gush Dan',
@@ -2135,11 +2135,11 @@ Weighing up quotes, or want to know what the site you actually need would cost? 
       },
       {
         q: 'Do you build websites outside Bat Yam as well?',
-        a: 'Yes. We are based in Bat Yam, in the middle of Gush Dan, and work with businesses across the region — Holon, Rishon LeZion, Tel Aviv, Ramat Gan and Givatayim — including a face-to-face scoping meeting at your office or ours. Being close by means fast availability throughout the project and after launch too.',
+        a: 'Yes. We are based in Bat Yam, in the middle of Gush Dan, and work with businesses across the region, Holon, Rishon LeZion, Tel Aviv, Ramat Gan and Givatayim, including a face-to-face scoping meeting at your office or ours. Being close by means fast availability throughout the project and after launch too.',
       },
       {
         q: 'How long does it take to build a website?',
-        a: 'A focused landing page can go live within one to two weeks. A full brochure site usually takes about 4 to 8 weeks, and an e-commerce store about 6 to 12 weeks. The build time depends on complexity, on the number of pages and integrations, and above all on how quickly you approve copy and images at your end — the stage that usually sets the schedule.',
+        a: 'A focused landing page can go live within one to two weeks. A full brochure site usually takes about 4 to 8 weeks, and an e-commerce store about 6 to 12 weeks. The build time depends on complexity, on the number of pages and integrations, and above all on how quickly you approve copy and images at your end, the stage that usually sets the schedule.',
       },
       {
         q: 'Will the site be built ready for Google?',
@@ -2154,28 +2154,28 @@ Weighing up quotes, or want to know what the site you actually need would cost? 
   excerpt:
     'Website accessibility is a legal duty in Israel. What SI 5568 compliance costs in 2026, what the law requires, and why an overlay is not enough.',
   tags: ['Web accessibility', 'SI 5568', 'WCAG', 'Israeli law', 'Pricing'],
-  content: `**In short (TL;DR):** Website accessibility means adapting a site for people with disabilities under the Israeli standard SI 5568 (based on WCAG 2.0 AA), and it is a legal requirement in Israel. The cost in 2026 runs from roughly ₪1,500 for a small site to ₪15,000+ for a large one — a trivial sum next to compensation of up to about ₪50,000 that a court can award in a claim without proof of damage.
+  content: `**In short (TL;DR):** Website accessibility means adapting a site for people with disabilities under the Israeli standard SI 5568 (based on WCAG 2.0 AA), and it is a legal requirement in Israel. The cost in 2026 runs from roughly ₪1,500 for a small site to ₪15,000+ for a large one, a trivial sum next to compensation of up to about ₪50,000 that a court can award in a claim without proof of damage.
 
-Website accessibility is a legal requirement in Israel, and a site that is not accessible exposes the business to a claim — including compensation of up to about ₪50,000 per claimant, with no need to prove damage. The cost in 2026 usually runs from ₪1,500 for a small, simple site to ₪10,000 and up for a large, complex one, accessibility statement included. That is far less than the legal exposure — and it opens the business to a wider audience.
+Website accessibility is a legal requirement in Israel, and a site that is not accessible exposes the business to a claim, including compensation of up to about ₪50,000 per claimant, with no need to prove damage. The cost in 2026 usually runs from ₪1,500 for a small, simple site to ₪10,000 and up for a large, complex one, accessibility statement included. That is far less than the legal exposure, and it opens the business to a wider audience.
 
-![How much website accessibility costs under standard SI 5568 — a woman in a wheelchair working on a laptop](/images/blog/website-accessibility-cost-5568.webp)
+![How much website accessibility costs under standard SI 5568, a woman in a wheelchair working on a laptop](/images/blog/website-accessibility-cost-5568.webp)
 
-Website accessibility means adapting the site so that people with disabilities (sight, hearing, motor, cognitive) can use it — through a screen reader, keyboard navigation, sufficient contrast and alternative text for images. In Israel the requirement is anchored in the equal rights for people with disabilities regulations, and it rests on the Israeli standard SI 5568, which in turn follows the [WCAG 2.0 level AA guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) published by the W3C.
+Website accessibility means adapting the site so that people with disabilities (sight, hearing, motor, cognitive) can use it, through a screen reader, keyboard navigation, sufficient contrast and alternative text for images. In Israel the requirement is anchored in the equal rights for people with disabilities regulations, and it rests on the Israeli standard SI 5568, which in turn follows the [WCAG 2.0 level AA guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) published by the W3C.
 
 ## What does the law actually require?
 
-The law requires two main things: that **the site itself is accessible** under the standard, and that **an accessibility statement is published** — available to visitors, setting out the level of accessibility achieved and the contact person for the subject. Enforcement sits with the [Commission for Equal Rights of Persons with Disabilities](https://www.gov.il/he/departments/moj_disability_rights/govil-landing-page) at the Ministry of Justice, and on the Commission's own estimates a substantial share of the population in Israel lives with some form of disability — meaning this is a real customer base, not merely a bureaucratic box to tick.
+The law requires two main things: that **the site itself is accessible** under the standard, and that **an accessibility statement is published**: available to visitors, setting out the level of accessibility achieved and the contact person for the subject. Enforcement sits with the [Commission for Equal Rights of Persons with Disabilities](https://www.gov.il/he/departments/moj_disability_rights/govil-landing-page) at the Ministry of Justice, and on the Commission's own estimates a substantial share of the population in Israel lives with some form of disability, meaning this is a real customer base, not merely a bureaucratic box to tick.
 
 Compliant accessibility work covers several core components in practice:
 
-- **Screen reader support** — marking up content correctly so reading software can interpret it.
-- **Keyboard navigation** — every part of the site operable without a mouse.
-- **Colour contrast** — a sufficient contrast ratio between text and background.
-- **Alternative text (alt)** — a written description for every meaningful image.
-- **A correct heading structure** — a logical hierarchy from H1 to H3.
-- **Accessible forms** — clear labels and error messages that make sense.
+- **Screen reader support**: marking up content correctly so reading software can interpret it.
+- **Keyboard navigation**: every part of the site operable without a mouse.
+- **Colour contrast**: a sufficient contrast ratio between text and background.
+- **Alternative text (alt)**: a written description for every meaningful image.
+- **A correct heading structure**: a logical hierarchy from H1 to H3.
+- **Accessible forms**: clear labels and error messages that make sense.
 
-Worth remembering: accessibility is not a one-off task — new content added to the site has to stay accessible too.
+Worth remembering: accessibility is not a one-off task, new content added to the site has to stay accessible too.
 
 ## How much does website accessibility cost in 2026?
 
@@ -2185,15 +2185,15 @@ Worth remembering: accessibility is not a one-off task — new content added to 
 | Mid-sized business site | Full accessibility work + testing | ₪4,000–8,000 |
 | Large site / online shop | Complex work + ongoing maintenance | ₪8,000–15,000+ |
 
-The range is wide because the price depends on the size of the site, the number of pages and components, and the current state of the code — a site built with accessibility in mind from the start is cheaper to bring up to standard than an old site that needs correcting. On top of that there is usually a small annual cost for keeping the statement current and repeating the tests.
+The range is wide because the price depends on the size of the site, the number of pages and components, and the current state of the code, a site built with accessibility in mind from the start is cheaper to bring up to standard than an old site that needs correcting. On top of that there is usually a small annual cost for keeping the statement current and repeating the tests.
 
 ## Is an accessibility overlay enough?
 
-This is one of the common mistakes. A plugin or accessibility widget — the floating button that lets a visitor enlarge text and switch contrast — is a help, but **on its own it is usually not enough** to meet the standard, and both case law and professional opinion hold that relying on it alone is not a legal defence. Real accessibility requires changes in the code and structure of the site itself: a correct heading order, keyboard navigation, alternative text and proper mark-up. The overlay can complement that work, not replace it.
+This is one of the common mistakes. A plugin or accessibility widget, the floating button that lets a visitor enlarge text and switch contrast, is a help, but **on its own it is usually not enough** to meet the standard, and both case law and professional opinion hold that relying on it alone is not a legal defence. Real accessibility requires changes in the code and structure of the site itself: a correct heading order, keyboard navigation, alternative text and proper mark-up. The overlay can complement that work, not replace it.
 
 ## Why it pays off beyond the law
 
-Accessibility does more than lower legal risk — it widens the audience (a significant share of the population lives with some form of disability), and it usually improves both the user experience and organic search performance: clean structure, alternative text and clear navigation help search engines read the site too. We covered the wider legal picture in the [guide to website accessibility in Israel](/en/blog/website-accessibility-israel). If you are building a new site, it is better to include accessibility at the specification stage — see the [guide to choosing a company and the website build process](/en/blog/website-building-services) — and avoid a [hidden cost](/en/blog/cheap-website-hidden-costs) further down the line.
+Accessibility does more than lower legal risk, it widens the audience (a significant share of the population lives with some form of disability), and it usually improves both the user experience and organic search performance: clean structure, alternative text and clear navigation help search engines read the site too. We covered the wider legal picture in the [guide to website accessibility in Israel](/en/blog/website-accessibility-israel). If you are building a new site, it is better to include accessibility at the specification stage, see the [guide to choosing a company and the website build process](/en/blog/website-building-services), and avoid a [hidden cost](/en/blog/cheap-website-hidden-costs) further down the line.
 
 ---
 
@@ -2236,23 +2236,23 @@ Accessibility does more than lower legal risk — it widens the audience (a sign
     excerpt:
       'Website accessibility is a legal duty in Israel: claims reach ₪50,000 with no proof of damage. What IS 5568 requires, and why an overlay is not enough.',
     tags: ['Accessibility', 'Development', 'SEO'],
-    content: `**In short (TL;DR):** Website accessibility in Israel is a legal requirement under the equal rights for people with disabilities regulations and Israeli standard IS 5568, which is based on WCAG 2.0 level AA. A site that is not accessible is exposed to a claim of up to ₪50,000 — with no proof of damage required. Real accessibility starts in the code, not in a floating widget, and it also improves your ranking in Google.
+    content: `**In short (TL;DR):** Website accessibility in Israel is a legal requirement under the equal rights for people with disabilities regulations and Israeli standard IS 5568, which is based on WCAG 2.0 level AA. A site that is not accessible is exposed to a claim of up to ₪50,000, with no proof of damage required. Real accessibility starts in the code, not in a floating widget, and it also improves your ranking in Google.
 
-Most business owners in Israel discover that website accessibility exists only when a warning letter arrives from a lawyer. That is a shame, because making a site accessible is not only a legal duty — it is one of the most worthwhile investments available: it opens your site to hundreds of thousands of users with disabilities, improves the experience for everyone, and even strengthens your organic ranking in Google.
+Most business owners in Israel discover that website accessibility exists only when a warning letter arrives from a lawyer. That is a shame, because making a site accessible is not only a legal duty, it is one of the most worthwhile investments available: it opens your site to hundreds of thousands of users with disabilities, improves the experience for everyone, and even strengthens your organic ranking in Google.
 
 ![A woman in a wheelchair browsing an accessible website on a laptop in an office](/images/blog/website-accessibility-israel.webp)
 
 ## What does Israeli law actually require?
 
-Under the [equal rights for people with disabilities regulations](https://www.gov.il/), a [website](/en/services/web-development) that provides a service to the public has to meet Israeli standard IS 5568 — a standard based on the international WCAG guidelines at level AA. In practice that means the site must be usable by visitors with visual, hearing, motor or cognitive impairments: full keyboard navigation, screen reader support, sufficient colour contrast, alternative text for images and more.
+Under the [equal rights for people with disabilities regulations](https://www.gov.il/), a [website](/en/services/web-development) that provides a service to the public has to meet Israeli standard IS 5568, a standard based on the international WCAG guidelines at level AA. In practice that means the site must be usable by visitors with visual, hearing, motor or cognitive impairments: full keyboard navigation, screen reader support, sufficient colour contrast, alternative text for images and more.
 
 ## What is the risk? A claim of up to ₪50,000 with no proof of damage
 
-This is the part worth knowing: the law allows compensation of up to ₪50,000 to be claimed — without the claimant having to prove that any actual damage was caused. Thousands of warning letters and accessibility claims are sent in Israel every year, and small businesses are a favoured target, because most of them are simply unaware of the requirements. The cost of making a site accessible is almost always far below the cost of a single claim. (One caveat: this article is not legal advice — for specific questions, consult a lawyer who specialises in the field.)
+This is the part worth knowing: the law allows compensation of up to ₪50,000 to be claimed, without the claimant having to prove that any actual damage was caused. Thousands of warning letters and accessibility claims are sent in Israel every year, and small businesses are a favoured target, because most of them are simply unaware of the requirements. The cost of making a site accessible is almost always far below the cost of a single claim. (One caveat: this article is not legal advice, for specific questions, consult a lawyer who specialises in the field.)
 
 ## An accessibility overlay on its own, or accessibility built into the code?
 
-The common solution on the market is to install a floating accessibility widget, that blue button at the side of the screen. Such a widget is a useful component, but it does not let you off: it does not fix code that was built badly, a broken heading hierarchy, forms without labels or images without alternative text. Real accessibility starts in the code itself — semantic, valid HTML, full keyboard navigation and correct contrast decided at the design stage. Much as you cannot make a building without a lift accessible by putting a sign at the entrance. Here is the difference in plain terms:
+The common solution on the market is to install a floating accessibility widget, that blue button at the side of the screen. Such a widget is a useful component, but it does not let you off: it does not fix code that was built badly, a broken heading hierarchy, forms without labels or images without alternative text. Real accessibility starts in the code itself, semantic, valid HTML, full keyboard navigation and correct contrast decided at the design stage. Much as you cannot make a building without a lift accessible by putting a sign at the entrance. Here is the difference in plain terms:
 
 | Aspect | Floating overlay widget | Accessibility built into the code |
 |---|---|---|
@@ -2265,7 +2265,7 @@ The common solution on the market is to install a floating accessibility widget,
 
 ## Does accessibility really help your ranking in Google?
 
-Yes, and here is the secret from the SEO world: Google is itself a kind of blind visitor. The search engine reads your site exactly as a screen reader does — through the code, the headings and the alternative text. An accessible site is a site Google understands better, and therefore ranks higher. And since Google [holds around 90% of the search market](https://gs.statcounter.com/search-engine-market-share), every improvement of that kind is worth its weight in gold. Add longer time on page and lower abandonment rates, and you get a genuine lift in organic ranking, as a bonus on top of meeting the law.
+Yes, and here is the secret from the SEO world: Google is itself a kind of blind visitor. The search engine reads your site exactly as a screen reader does, through the code, the headings and the alternative text. An accessible site is a site Google understands better, and therefore ranks higher. And since Google [holds around 90% of the search market](https://gs.statcounter.com/search-engine-market-share), every improvement of that kind is worth its weight in gold. Add longer time on page and lower abandonment rates, and you get a genuine lift in organic ranking, as a bonus on top of meeting the law.
 
 ## How do we make sites accessible at Aiterra?
 
@@ -2273,7 +2273,7 @@ When we at Aiterra build a new site, accessibility is embedded in the code from 
 
 ## How to check your site today: a quick checklist
 
-- Try navigating the site with the keyboard alone (Tab, Enter, arrow keys) — can you reach every link and button, and can you see where the focus is?
+- Try navigating the site with the keyboard alone (Tab, Enter, arrow keys), can you reach every link and button, and can you see where the focus is?
 - Does every meaningful image have alternative text (alt) that describes it?
 - Is the contrast between text and background sufficient, including in small type and on buttons?
 - Does every form field have a clear label, and are the error messages understandable?
@@ -2287,7 +2287,7 @@ For anyone who wants to go deeper, the full text of the international guidelines
 
 Beyond the accessibility work itself, the regulations require an accessibility statement to be published on the site: a page setting out which adjustments were made, which known limitations remain, and who to contact if a problem is encountered, including the details of an accessibility coordinator. It is also the first document a lawyer checks before sending a warning letter, so its existence and its quality signal that the business takes the subject seriously. You can see a live example in [our own accessibility statement](/en/accessibility-statement).
 
-Not sure whether your site meets the requirements? Leave your details and we will run an initial accessibility check for you — better to hear about the gaps from us than from a warning letter.
+Not sure whether your site meets the requirements? Leave your details and we will run an initial accessibility check for you, better to hear about the gaps from us than from a warning letter.
 
 ---
 
@@ -2302,7 +2302,7 @@ Not sure whether your site meets the requirements? Leave your details and we wil
       items: [
         {
           q: 'Is an accessibility widget enough to comply with the law?',
-          a: 'In most cases, no. A floating overlay closes some gaps, but IS 5568 requires the code itself, the forms, the images and the navigation to be accessible — things a widget does not fix. The safe route combines valid code, an accessibility component and a proper accessibility statement. That is how you meet the requirements and reduce your exposure to a claim.',
+          a: 'In most cases, no. A floating overlay closes some gaps, but IS 5568 requires the code itself, the forms, the images and the navigation to be accessible, things a widget does not fix. The safe route combines valid code, an accessibility component and a proper accessibility statement. That is how you meet the requirements and reduce your exposure to a claim.',
         },
         {
           q: 'What is an accessibility statement and why does it matter?',
@@ -2310,7 +2310,7 @@ Not sure whether your site meets the requirements? Leave your details and we wil
         },
         {
           q: 'Does every website have to be accessible?',
-          a: 'As a rule, any site that provides a service to the public has to be made accessible under the equal rights regulations, with certain reliefs for small businesses with low turnover. Because the detail varies by type of business, it is worth checking your specific obligation — and remembering that even where a partial exemption applies, an accessible site is a clear commercial and marketing advantage.',
+          a: 'As a rule, any site that provides a service to the public has to be made accessible under the equal rights regulations, with certain reliefs for small businesses with low turnover. Because the detail varies by type of business, it is worth checking your specific obligation, and remembering that even where a partial exemption applies, an accessible site is a clear commercial and marketing advantage.',
         },
         {
           q: 'What does it cost to make an existing site accessible?',
@@ -2327,7 +2327,7 @@ Not sure whether your site meets the requirements? Leave your details and we wil
     tags: ['Web development', 'Pricing', 'Small business', 'Brochure site'],
     content: `**In short (TL;DR):** Building a website for a small business in Israel in 2026 costs ₪1,500–3,500 for a landing page, ₪4,000–12,000 for a brochure site, and ₪12,000 and up for an online store or a bespoke system. The price is set by the number of pages, the level of design, how complex the functionality is, and whether the site is built for search and accessibility. On top of the build itself, budget for the ongoing cost of a domain, hosting and maintenance.
 
-"How much does a website cost?" is the first question almost every business owner asks — and the honest answer is that it depends what you are building. A website is not a uniform off-the-shelf product; it is a service priced by scope. This guide breaks down the real price ranges in the Israeli market for 2026, explains what pushes the figure up and down, and how to avoid paying twice for the same site.
+"How much does a website cost?" is the first question almost every business owner asks, and the honest answer is that it depends what you are building. A website is not a uniform off-the-shelf product; it is a service priced by scope. This guide breaks down the real price ranges in the Israeli market for 2026, explains what pushes the figure up and down, and how to avoid paying twice for the same site.
 
 ![A small business owner working out how much a website costs in Israel](/images/blog/website-cost-israel-2026.webp)
 
@@ -2345,17 +2345,17 @@ These ranges are realistic market prices for a small business in Israel in 2026,
 ## What actually moves the price?
 
 - **The number of pages and the volume of content.** A five-page site is cheaper than a twenty-page site with a blog and separate service pages.
-- **Custom design versus a template.** A unique design built from scratch costs more than adapting a ready-made template — but it stands out far more and signals credibility.
+- **Custom design versus a template.** A unique design built from scratch costs more than adapting a ready-made template, but it stands out far more and signals credibility.
 - **Functionality.** A contact form is basic; a customer area, a CRM connection, a booking system or a WhatsApp integration all push the price up.
-- **Building for search (SEO).** Since Google holds roughly 90% of the search market in Israel and worldwide ([StatCounter](https://gs.statcounter.com/search-engine-market-share)), a site built properly for speed and clean code costs a little more to produce — and saves a fortune on marketing and advertising later.
+- **Building for search (SEO).** Since Google holds roughly 90% of the search market in Israel and worldwide ([StatCounter](https://gs.statcounter.com/search-engine-market-share)), a site built properly for speed and clean code costs a little more to produce, and saves a fortune on marketing and advertising later.
 
 ## What should be included in the price of a brochure site?
 
-Before you compare quotes, make sure every quote covers the same components — otherwise you are comparing apples with oranges. A fair quote for a brochure site usually includes:
+Before you compare quotes, make sure every quote covers the same components, otherwise you are comparing apples with oranges. A fair quote for a brochure site usually includes:
 
 1. **Custom design** for the brand and its audience, not just swapped colours in a template.
 2. **Full mobile support** (a responsive layout), since most visitors in Israel arrive on a phone.
-3. **Basic SEO foundations** — loading speed, correct headings and correct meta tags.
+3. **Basic SEO foundations**: loading speed, correct headings and correct meta tags.
 4. **Accessibility** to the Israeli standard (see below).
 5. **Full ownership** of the domain, the content and the code.
 
@@ -2363,7 +2363,7 @@ If a material component is missing from the cheapest quote, you will almost cert
 
 ## Does a business website in Israel have to be accessible?
 
-Yes, and it is a cost component many people forget. Under the Equal Rights for Persons with Disabilities Law and the Israeli accessibility regulations, business websites are required to meet Israeli standard IS 5568, which is based on the international accessibility standard WCAG 2.0 AA ([Commission for Equal Rights of Persons with Disabilities — website accessibility](https://www.gov.il/he/pages/website_accessibility)). Building accessibly from the start adds a little to the build cost but is far cheaper than retrofitting it afterwards — and it both reduces exposure to claims and widens your potential customer base. At Aiterra we build accessibility in by default, not as an expensive add-on.
+Yes, and it is a cost component many people forget. Under the Equal Rights for Persons with Disabilities Law and the Israeli accessibility regulations, business websites are required to meet Israeli standard IS 5568, which is based on the international accessibility standard WCAG 2.0 AA ([Commission for Equal Rights of Persons with Disabilities, website accessibility](https://www.gov.il/he/pages/website_accessibility)). Building accessibly from the start adds a little to the build cost but is far cheaper than retrofitting it afterwards, and it both reduces exposure to claims and widens your potential customer base. At Aiterra we build accessibility in by default, not as an expensive add-on.
 
 ## Why is a website that is too cheap usually the expensive one?
 
@@ -2371,7 +2371,7 @@ A site for ₪900 sounds tempting, but what you generally get is a generic, slow
 
 ## What ongoing costs should you plan for?
 
-Beyond the one-off build, a site needs a domain (around ₪50–120 a year), hosting (₪300–1,200 a year depending on the type) and ongoing maintenance covering updates, backups and security. Plan an annual budget, not just a build budget — a neglected site degrades quickly in speed, in security and in its Google ranking.
+Beyond the one-off build, a site needs a domain (around ₪50–120 a year), hosting (₪300–1,200 a year depending on the type) and ongoing maintenance covering updates, backups and security. Plan an annual budget, not just a build budget, a neglected site degrades quickly in speed, in security and in its Google ranking.
 
 ## How do we price a website at Aiterra?
 
@@ -2385,7 +2385,7 @@ We price against what you actually need, not against a "package". In a scoping c
 
 - [Building a business website: how to choose a company, what the process involves and what it costs](/en/blog/website-building-services)
 - [WordPress or a coded site? How to choose the right foundation](/en/blog/wordpress-vs-custom-code)
-- [Freelancer or web agency — which is right for your business?](/en/blog/freelancer-vs-web-agency)`,
+- [Freelancer or web agency, which is right for your business?](/en/blog/freelancer-vs-web-agency)`,
     faq: {
       title: 'Common questions about the cost of building a website',
       items: [
@@ -2395,7 +2395,7 @@ We price against what you actually need, not against a "package". In a scoping c
         },
         {
           q: 'Why is there such a wide gap in prices between suppliers?',
-          a: 'The gap comes from the level of tailoring: a ready-made template versus a unique design, heavy code versus clean and fast code, and whether the site is built for search and accessibility. A cheap site usually economises on exactly the components that cost you money later — speed, ownership of the code and SEO foundations.',
+          a: 'The gap comes from the level of tailoring: a ready-made template versus a unique design, heavy code versus clean and fast code, and whether the site is built for search and accessibility. A cheap site usually economises on exactly the components that cost you money later, speed, ownership of the code and SEO foundations.',
         },
         {
           q: 'Is a landing page or a full brochure site the better choice?',
@@ -2420,11 +2420,11 @@ We price against what you actually need, not against a "package". In a scoping c
     tags: ['Website maintenance', 'Hosting', 'Security', 'Pricing', 'Domain'],
     content: `**In short (TL;DR):** Website maintenance is the ongoing work that keeps a site secure, fast and up to date. In 2026 it runs from a few hundred shekels a year for a small site to ₪2,000–6,000 and up for a managed business site, and it covers the domain, hosting, security updates, backups and ongoing changes.
 
-Website maintenance in 2026 typically costs between a few hundred shekels a year for a small business with a simple site, and ₪2,000–6,000 a year and up for a business site with managed maintenance. The cost is made up of fixed items — domain and hosting — and an ongoing service of updates, security, backups and changes. A site with no maintenance is not a site that saves you money; it is a time bomb that goes off exactly when you need the site most.
+Website maintenance in 2026 typically costs between a few hundred shekels a year for a small business with a simple site, and ₪2,000–6,000 a year and up for a business site with managed maintenance. The cost is made up of fixed items, domain and hosting, and an ongoing service of updates, security, backups and changes. A site with no maintenance is not a site that saves you money; it is a time bomb that goes off exactly when you need the site most.
 
-![How much website maintenance costs per year — an under-construction sign on a computer keyboard](/images/blog/website-maintenance-cost-yearly.webp)
+![How much website maintenance costs per year, an under-construction sign on a computer keyboard](/images/blog/website-maintenance-cost-yearly.webp)
 
-Website maintenance is everything that keeps a site alive, secure, fast and current over time — much like servicing a car. A website is software running on servers against a moving world of browsers, security standards and operating systems; without maintenance it decays, becomes exposed to attacks and eventually breaks, usually at the least convenient moment. The more the site is built on a content management system such as WordPress with plugins and themes, the greater the need for regular updates, because every third-party component is a potential weak point.
+Website maintenance is everything that keeps a site alive, secure, fast and current over time, much like servicing a car. A website is software running on servers against a moving world of browsers, security standards and operating systems; without maintenance it decays, becomes exposed to attacks and eventually breaks, usually at the least convenient moment. The more the site is built on a content management system such as WordPress with plugins and themes, the greater the need for regular updates, because every third-party component is a potential weak point.
 
 ## What makes up the cost of maintenance?
 
@@ -2436,7 +2436,7 @@ Website maintenance is everything that keeps a site alive, secure, fast and curr
 | Backups | A copy to restore from when something breaks | Part of a maintenance package |
 | Ongoing changes | Content updates, small fixes | By package or by the hour |
 
-Domain and hosting are fixed costs that almost every site pays, whatever technology it was built in. The real difference between quotes is the maintenance service itself: is somebody actively looking after the site, or are you alone in front of the screen until something breaks — and then paying emergency rates to fix it.
+Domain and hosting are fixed costs that almost every site pays, whatever technology it was built in. The real difference between quotes is the maintenance service itself: is somebody actively looking after the site, or are you alone in front of the screen until something breaks, and then paying emergency rates to fix it.
 
 ## What does maintenance actually cost? The numbers by site type
 
@@ -2446,22 +2446,22 @@ Representative annual ranges, by type of site and level of service:
 - **A business site with managed maintenance:** roughly ₪2,000–6,000 a year, including updates, security, backups and an allowance for changes.
 - **An online store or a complex site:** usually ₪6,000 a year and up, because payments, stock management and integrations all need close monitoring.
 
-The ranges are driven by the complexity of the site, the volume of content and the level of service — a site with heavy traffic or sensitive systems justifies more intensive maintenance.
+The ranges are driven by the complexity of the site, the volume of content and the level of service, a site with heavy traffic or sensitive systems justifies more intensive maintenance.
 
 ## Why does a site with no maintenance cost more in the end?
 
-- **Security.** An out-of-date site is an easy target. Recovering from a breach costs far more than preventing one — we went into that in the [website security guide](/en/blog/website-security-guide).
-- **Faults.** An update that breaks, a form that stops working, a site that goes down — without backups and maintenance each of those becomes an expensive crisis and lost customers in real time.
+- **Security.** An out-of-date site is an easy target. Recovering from a breach costs far more than preventing one, we went into that in the [website security guide](/en/blog/website-security-guide).
+- **Faults.** An update that breaks, a form that stops working, a site that goes down, without backups and maintenance each of those becomes an expensive crisis and lost customers in real time.
 - **Obsolescence.** Browsers, standards and performance benchmarks move on; speed and page experience, measured as Core Web Vitals, have become [central quality metrics for the user experience](https://web.dev/articles/vitals), and a neglected site slips against them.
-- **Search visibility.** Google — which holds [around 90% of the global search market](https://gs.statcounter.com/search-engine-market-share) — favours sites that are fast, secure and current, so neglect hits your rankings and organic exposure directly.
+- **Search visibility.** Google, which holds [around 90% of the global search market](https://gs.statcounter.com/search-engine-market-share), favours sites that are fast, secure and current, so neglect hits your rankings and organic exposure directly.
 
 ## Managed maintenance, or doing it yourself?
 
-You can maintain a site yourself — but it takes time, technical knowledge and consistency. Updating a plugin on the wrong day can take the site down, and a backup nobody has ever tested is sometimes worth nothing at all. Managed maintenance hands the responsibility to professionals who monitor, update and back up proactively, so you spend your time on the business rather than on faults. For a business whose site generates leads or sales, a single hour of downtime usually costs more than a whole month of maintenance.
+You can maintain a site yourself, but it takes time, technical knowledge and consistency. Updating a plugin on the wrong day can take the site down, and a backup nobody has ever tested is sometimes worth nothing at all. Managed maintenance hands the responsibility to professionals who monitor, update and back up proactively, so you spend your time on the business rather than on faults. For a business whose site generates leads or sales, a single hour of downtime usually costs more than a whole month of maintenance.
 
 ## What should a good maintenance package include?
 
-A maintenance package worth paying for includes quality hosting, ongoing security updates, automatic backups, uptime monitoring, and an allowance of hours for small changes. Always ask what is included and what counts as a paid extra — this is precisely one of the [hidden costs of a cheap website](/en/blog/cheap-website-hidden-costs) that surfaces after launch. And when you budget for a new site, build the annual maintenance in from the start — see the [2026 guide to website build costs](/en/blog/website-cost-israel-2026).
+A maintenance package worth paying for includes quality hosting, ongoing security updates, automatic backups, uptime monitoring, and an allowance of hours for small changes. Always ask what is included and what counts as a paid extra, this is precisely one of the [hidden costs of a cheap website](/en/blog/cheap-website-hidden-costs) that surfaces after launch. And when you budget for a new site, build the annual maintenance in from the start, see the [2026 guide to website build costs](/en/blog/website-cost-israel-2026).
 
 ---
 
@@ -2485,7 +2485,7 @@ A maintenance package worth paying for includes quality hosting, ongoing securit
         },
         {
           q: 'Do you have to pay for maintenance?',
-          a: 'The domain and hosting are unavoidable payments if the site is to stay online. A full maintenance service is not formally compulsory, but a site without security updates and backups is exposed to breaches and faults that cost far more to repair than routine maintenance costs to run — which makes it a sound investment rather than a wasted expense.',
+          a: 'The domain and hosting are unavoidable payments if the site is to stay online. A full maintenance service is not formally compulsory, but a site without security updates and backups is exposed to breaches and faults that cost far more to repair than routine maintenance costs to run, which makes it a sound investment rather than a wasted expense.',
         },
         {
           q: 'What is the difference between a domain and hosting?',
@@ -2493,7 +2493,7 @@ A maintenance package worth paying for includes quality hosting, ongoing securit
         },
         {
           q: 'How often does a site need maintaining?',
-          a: 'The site should be monitored continuously and security updates installed as they appear — in practice a check and an update at least once a month, alongside an automatic weekly or daily backup. Sites built on popular systems such as WordPress need more frequent updates, because their plugins and themes change constantly and are a common target for attacks.',
+          a: 'The site should be monitored continuously and security updates installed as they appear, in practice a check and an update at least once a month, alongside an automatic weekly or daily backup. Sites built on popular systems such as WordPress need more frequent updates, because their plugins and themes change constantly and are a common target for attacks.',
         },
       ],
     },
@@ -2506,23 +2506,23 @@ A maintenance package worth paying for includes quality hosting, ongoing securit
   tags: ['Website migration', 'Rebuild', 'Wix', 'WordPress', 'Redesign', 'Pricing'],
   content: `**In short (TL;DR):** A website migration is a controlled move of an existing site to a new platform, and a rebuild (redesign) puts an improved site in its place. Keep the domain, map the URLs and set 301 redirects, and you can move without losing the search rankings you have earned. Typical cost in 2026: about ₪5,000 to ₪25,000+.
 
-If your site is slow, looks dated, or is locked into a platform you want to leave (Wix, for instance) — you can move it and rebuild it without losing the search visibility you have built up. The key is an orderly process: keep the domain, map every URL and set 301 redirects from the old pages to the new ones, then move the content across. The cost of a migration plus rebuild in 2026 usually runs from ₪5,000 for a small site to ₪25,000 and up for a full business site.
+If your site is slow, looks dated, or is locked into a platform you want to leave (Wix, for instance), you can move it and rebuild it without losing the search visibility you have built up. The key is an orderly process: keep the domain, map every URL and set 301 redirects from the old pages to the new ones, then move the content across. The cost of a migration plus rebuild in 2026 usually runs from ₪5,000 for a small site to ₪25,000 and up for a full business site.
 
-![Migrating a website off Wix and rebuilding it — a developer working on the code of the new site](/images/blog/website-migration-wix-redesign.webp)
+![Migrating a website off Wix and rebuilding it, a developer working on the code of the new site](/images/blog/website-migration-wix-redesign.webp)
 
-A website migration is a controlled copy of an existing site from one platform or server to another, keeping the digital identity intact — the domain, the content and the search rankings. A rebuild goes a step further: rather than only moving the site, you build a new and better one in place of the old.
+A website migration is a controlled copy of an existing site from one platform or server to another, keeping the digital identity intact, the domain, the content and the search rankings. A rebuild goes a step further: rather than only moving the site, you build a new and better one in place of the old.
 
 ## Why migrate or rebuild at all?
 
 - **A ceiling on growth.** Closed platforms limit what you can customise, how fast the site can be and what it can do. As the business grows, the site cannot grow with it.
-- **Speed and search.** Old sites are usually slow, and that hurts both the experience and the Google ranking — a subject we set out in the [guide to advanced web development and performance](/en/blog/website-performance-2026).
+- **Speed and search.** Old sites are usually slow, and that hurts both the experience and the Google ranking, a subject we set out in the [guide to advanced web development and performance](/en/blog/website-performance-2026).
 - **Ownership.** You want to hold the code and the asset yourself, not rent them from a supplier.
-- **A dated look.** A site that looks a decade old damages trust — sometimes a design refresh is enough, sometimes a rebuild is needed.
+- **A dated look.** A site that looks a decade old damages trust, sometimes a design refresh is enough, sometimes a rebuild is needed.
 
 ## Why now? The numbers
 
 - **Google holds around 90% of the search market.** [According to StatCounter data](https://gs.statcounter.com/search-engine-market-share), losing organic rankings in a careless migration means losing most of the traffic the site could have.
-- **Speed is part of the page experience Google measures.** The [Core Web Vitals](https://web.dev/articles/vitals) metrics affect ranking — and an old, slow site loses out in Google and in conversions alike.
+- **Speed is part of the page experience Google measures.** The [Core Web Vitals](https://web.dev/articles/vitals) metrics affect ranking, and an old, slow site loses out in Google and in conversions alike.
 - **Migration cost range in 2026:** about ₪5,000 for a small site up to ₪25,000+ for a full business site, depending on size and complexity.
 
 ## How do you avoid losing your rankings? This is the critical part
@@ -2530,12 +2530,12 @@ A website migration is a controlled copy of an existing site from one platform o
 The big fear about migrating is justified: a careless move can wipe out years of search work. A proper process prevents that:
 
 1. **Map every existing URL** and identify the pages that rank in Google.
-2. **Keep the domain** — it stays exactly as it is; only what sits behind it changes.
+2. **Keep the domain**: it stays exactly as it is; only what sits behind it changes.
 3. **Set 301 redirects** from each old address to its new equivalent, so that Google and visitors both land in the right place.
 4. **Move the content** and preserve the headings and copy that bring in traffic.
-5. **Test after the switch** — broken links, speed, indexing in Google and Search Console.
+5. **Test after the switch**: broken links, speed, indexing in Google and Search Console.
 
-Skipping the redirect step is the mistake most sites fail on — and then the organic traffic falls off a cliff.
+Skipping the redirect step is the mistake most sites fail on, and then the organic traffic falls off a cliff.
 
 ## What does a migration or rebuild cost?
 
@@ -2545,13 +2545,13 @@ Skipping the redirect step is the mistake most sites fail on — and then the or
 | Migration + rebuild (small site) | New site + migration + redirects | ₪5,000–12,000 |
 | Migration + rebuild (business site) | Full site + content + rankings preserved | ₪12,000–25,000+ |
 
-The price depends on the number of pages, how much content has to move, and the complexity involved (a shop, a customer area, integrations). Before deciding, it is worth seeing the full picture in the [2026 website cost guide](/en/blog/website-cost-israel-2026) and choosing the new foundation carefully — see [WordPress versus a coded site](/en/blog/wordpress-vs-custom-code).
+The price depends on the number of pages, how much content has to move, and the complexity involved (a shop, a customer area, integrations). Before deciding, it is worth seeing the full picture in the [2026 website cost guide](/en/blog/website-cost-israel-2026) and choosing the new foundation carefully, see [WordPress versus a coded site](/en/blog/wordpress-vs-custom-code).
 
 ## How long does the process take?
 
-A design refresh usually finishes within one to two weeks. Migrating and rebuilding a business site normally takes about 3 to 8 weeks — depending on the number of pages, content approvals and complexity (a shop, integrations, a customer area). The 301 redirects go live on the day of the switch itself, so that search performance and lead flow continue without a break.
+A design refresh usually finishes within one to two weeks. Migrating and rebuilding a business site normally takes about 3 to 8 weeks, depending on the number of pages, content approvals and complexity (a shop, integrations, a customer area). The 301 redirects go live on the day of the switch itself, so that search performance and lead flow continue without a break.
 
-## Refresh or rebuild — which should you choose?
+## Refresh or rebuild: which should you choose?
 
 If the foundation is sound and the site merely looks dated, a design refresh will do and will cost less. If the site is slow, cannot be extended, is not yours, or is built on a platform that limits you, a rebuild is the right investment. That decision is best made with a supplier who examines the existing site properly, as described in the [guide to choosing a company and the website build process](/en/blog/website-building-services).
 
@@ -2596,17 +2596,17 @@ If the foundation is sound and the site merely looks dated, a design refresh wil
     excerpt:
       'Israeli customers send a WhatsApp message, they do not fill in forms. How to connect the WhatsApp Business API to a CRM, step by step, and what it costs.',
     tags: ['WhatsApp', 'CRM', 'Automation', 'WhatsApp API', 'Lead management'],
-    content: `**In short (TL;DR):** Connecting the WhatsApp Business API to a CRM turns every incoming WhatsApp message into an automatic lead in the system — nothing falls through, the whole team sees the same conversation history, and replies go out immediately. Setup requires an authorised Meta API provider, a dedicated phone number and business verification, and it usually takes a few days.
+    content: `**In short (TL;DR):** Connecting the WhatsApp Business API to a CRM turns every incoming WhatsApp message into an automatic lead in the system, nothing falls through, the whole team sees the same conversation history, and replies go out immediately. Setup requires an authorised Meta API provider, a dedicated phone number and business verification, and it usually takes a few days.
 
-In Israel the customer does not fill in a form — they send a WhatsApp message, and according to [Meta](https://www.facebook.com/business) millions of businesses worldwide already talk to their customers through the WhatsApp Business platform. That makes connecting the WhatsApp Business API to your CRM one of the highest-return upgrades a business can make: every conversation enters the system as a lead automatically, no enquiry is lost, and the whole team sees the same history. The connection itself requires an authorised Meta API provider, a dedicated phone number and business verification — and it usually takes a few days.
+In Israel the customer does not fill in a form, they send a WhatsApp message, and according to [Meta](https://www.facebook.com/business) millions of businesses worldwide already talk to their customers through the WhatsApp Business platform. That makes connecting the WhatsApp Business API to your CRM one of the highest-return upgrades a business can make: every conversation enters the system as a lead automatically, no enquiry is lost, and the whole team sees the same history. The connection itself requires an authorised Meta API provider, a dedicated phone number and business verification, and it usually takes a few days.
 
 ![A customer sending a WhatsApp message from a mobile phone into a CRM system](/images/blog/whatsapp-business-api-crm-integration.webp)
 
-The WhatsApp Business API is Meta's official programmatic interface for connecting WhatsApp to other systems — a CRM, bots and automations — unlike the ordinary WhatsApp app, which is built for manual conversation from a single device. It is the difference between answering messages by hand and running a system that manages all of your communication automatically.
+The WhatsApp Business API is Meta's official programmatic interface for connecting WhatsApp to other systems, a CRM, bots and automations, unlike the ordinary WhatsApp app, which is built for manual conversation from a single device. It is the difference between answering messages by hand and running a system that manages all of your communication automatically.
 
 ## Why WhatsApp rather than a form or an email?
 
-The Israeli customer expects an immediate answer on the channel they already use all day. A contact form lands in an inbox that is not always checked in time, and a phone call does not always suit a customer in the middle of their working day. WhatsApp combines the immediacy of chat with a full written record — and once it is connected to a CRM, every message becomes a documented lead you can measure, prioritise and sell through, instead of a conversation that disappears into somebody's inbox.
+The Israeli customer expects an immediate answer on the channel they already use all day. A contact form lands in an inbox that is not always checked in time, and a phone call does not always suit a customer in the middle of their working day. WhatsApp combines the immediacy of chat with a full written record, and once it is connected to a CRM, every message becomes a documented lead you can measure, prioritise and sell through, instead of a conversation that disappears into somebody's inbox.
 
 ## What is the difference between the three versions of WhatsApp?
 
@@ -2626,7 +2626,7 @@ The connection is made through an authorised Meta business solution provider (BS
 
 1. **Choose an API provider and a CRM that connect to each other.** Most of the CRM systems common in Israel support a WhatsApp connection through a provider.
 2. **Assign a dedicated phone number.** The number has to be clear of the ordinary WhatsApp app. It can be a new number, or an existing one that has been disconnected from the app.
-3. **Verify the business with Meta.** Business Verification confirms that you are a real business — this is the stage that takes the longest.
+3. **Verify the business with Meta.** Business Verification confirms that you are a real business, this is the stage that takes the longest.
 4. **Connect to the CRM and build the automations.** A message arrives, a lead is opened automatically, it is assigned to a rep, and an immediate first reply goes out.
 5. **Get message templates approved.** Business-initiated messages, such as an order confirmation, require a template approved in advance by Meta.
 
@@ -2634,14 +2634,14 @@ The connection is made through an authorised Meta business solution provider (BS
 
 Beyond convenience, the connection changes the way leads are handled. Here is what you gain in practice:
 
-- **No lead falls through.** Every WhatsApp enquiry becomes a lead record with a full history — exactly the problem we set out in [the business automation guide](/en/blog/business-automation-crm-whatsapp).
+- **No lead falls through.** Every WhatsApp enquiry becomes a lead record with a full history, exactly the problem we set out in [the business automation guide](/en/blog/business-automation-crm-whatsapp).
 - **An immediate reply, around the clock.** A bot that answers within a second, collects details and hands over to a person only when it needs to.
 - **The whole team on the same page.** Instead of a conversation stuck on one employee's phone, the entire history sits in the system and is available to everyone.
 - **Measurement.** How many leads came from WhatsApp, what the average response time is, and what share of them close.
 
 ## What does it cost, and how do you start properly?
 
-The cost has two parts: a usage fee to the API provider, charged as a monthly subscription, and Meta's messaging rate, charged per conversation. For a small business this is usually a modest monthly expense set against the value — it is worth reading our [analysis of automation cost and ROI](/en/blog/business-automation-cost-roi) to understand the return. The first step is choosing the right CRM, and we have put together a comparison in the [guide to choosing a CRM for a small business in Israel](/en/blog/best-crm-small-business-israel). At Aiterra we recommend defining the process first — which automatic messages go out and at which stage — and only then making the technical connection, so the system works correctly from day one.
+The cost has two parts: a usage fee to the API provider, charged as a monthly subscription, and Meta's messaging rate, charged per conversation. For a small business this is usually a modest monthly expense set against the value, it is worth reading our [analysis of automation cost and ROI](/en/blog/business-automation-cost-roi) to understand the return. The first step is choosing the right CRM, and we have put together a comparison in the [guide to choosing a CRM for a small business in Israel](/en/blog/best-crm-small-business-israel). At Aiterra we recommend defining the process first, which automatic messages go out and at which stage, and only then making the technical connection, so the system works correctly from day one.
 
 ---
 
@@ -2651,7 +2651,7 @@ The cost has two parts: a usage fee to the API provider, charged as a monthly su
 
 - [Business automation: how to stop losing leads](/en/blog/business-automation-crm-whatsapp)
 - [Which CRM system suits a small business in Israel?](/en/blog/best-crm-small-business-israel)
-- [What a WhatsApp bot and business automation cost — and the ROI](/en/blog/business-automation-cost-roi)`,
+- [What a WhatsApp bot and business automation cost, and the ROI](/en/blog/business-automation-cost-roi)`,
     faq: {
       title: 'Frequently asked questions about connecting WhatsApp to a CRM',
       items: [
@@ -2684,15 +2684,15 @@ The cost has two parts: a usage fee to the API provider, charged as a monthly su
     excerpt:
       'Sending expensive traffic to a page that does not do the job? The difference between an ordinary landing page and a conversion-focused one is the difference between a losing campaign and a profitable one.',
     tags: ['Conversions', 'Design', 'Digital'],
-    content: `**In short (TL;DR):** A landing page that converts is a focused page with one purpose — turning a visitor who arrived from a campaign into a lead or a customer. It is built on one message, one audience and one action, loads fast and removes every distraction. That is how expensive paid traffic becomes real enquiries.
+    content: `**In short (TL;DR):** A landing page that converts is a focused page with one purpose, turning a visitor who arrived from a campaign into a lead or a customer. It is built on one message, one audience and one action, loads fast and removes every distraction. That is how expensive paid traffic becomes real enquiries.
 
-Every click in a paid campaign costs you real money. The visitor clicked, arrived at the page — and left after a few seconds without leaving their details. In most cases the problem is not the campaign, not the audience and not even your price: the problem is the landing page. The difference between a generic landing page and a conversion-focused one is often the difference between a losing campaign and a profitable one — on exactly the same budget.
+Every click in a paid campaign costs you real money. The visitor clicked, arrived at the page, and left after a few seconds without leaving their details. In most cases the problem is not the campaign, not the audience and not even your price: the problem is the landing page. The difference between a generic landing page and a conversion-focused one is often the difference between a losing campaign and a profitable one, on exactly the same budget.
 
 ![A conversion-focused landing page design on a laptop in a workspace](/images/blog/landing-pages-that-convert.webp)
 
 ## What makes a landing page convert
 
-A landing page is not another page on the site. It is a page with one single purpose: to get the visitor to take an action — leave their details, call, or buy. The moment the page has more than one goal, distracting menus and links leading away, the conversion rate collapses. The principle that guides us at Aiterra on every landing page project is simple: one message, one audience, one action.
+A landing page is not another page on the site. It is a page with one single purpose: to get the visitor to take an action, leave their details, call, or buy. The moment the page has more than one goal, distracting menus and links leading away, the conversion rate collapses. The principle that guides us at Aiterra on every landing page project is simple: one message, one audience, one action.
 
 ## How a landing page differs from an ordinary site page
 
@@ -2706,36 +2706,36 @@ A landing page is not another page on the site. It is a page with one single pur
 
 ## The five components of a winning landing page
 
-**A headline that lands in three seconds:** the visitor has no patience. The main headline has to answer immediately what is in it for them — not who you are, but what you will solve.
+**A headline that lands in three seconds:** the visitor has no patience. The main headline has to answer immediately what is in it for them, not who you are, but what you will solve.
 
-**A clear value proposition:** why you specifically? A time-limited offer, a free assessment or a service guarantee — a concrete offer beats general slogans.
+**A clear value proposition:** why you specifically? A time-limited offer, a free assessment or a service guarantee, a concrete offer beats general slogans.
 
-**Social proof:** genuine reviews, client logos, numbers and results. The visitor does not believe you — they believe your customers.
+**Social proof:** genuine reviews, client logos, numbers and results. The visitor does not believe you, they believe your customers.
 
-**A short, intelligent form:** every additional field lowers the conversion rate. Name and phone — and get to work. Collect the rest in the call.
+**A short, intelligent form:** every additional field lowers the conversion rate. Name and phone, and get to work. Collect the rest in the call.
 
-**Loading speed:** a slow landing page kills campaigns. According to Google's page experience metrics ([web.dev](https://web.dev/articles/vitals)), slow load times damage conversion directly. We build every page in clean code so it loads in milliseconds, including on mobile over a congested network — because that is where most of your visitors are.
+**Loading speed:** a slow landing page kills campaigns. According to Google's page experience metrics ([web.dev](https://web.dev/articles/vitals)), slow load times damage conversion directly. We build every page in clean code so it loads in milliseconds, including on mobile over a congested network, because that is where most of your visitors are.
 
 ## Matching the ad to the landing page
 
-One of the most common reasons for abandonment is a disconnect between what the ad promised and what the visitor finds on the page. If the ad promises "a free consultation" and the page opens with "a little about us", trust breaks within a second. Message match means the headline, the image and the offer on the page continue directly from the promise that brought the visitor. The tighter the match, the higher the conversion rate — and the better the ad quality score in Google Ads, which lowers your cost per click.
+One of the most common reasons for abandonment is a disconnect between what the ad promised and what the visitor finds on the page. If the ad promises "a free consultation" and the page opens with "a little about us", trust breaks within a second. Message match means the headline, the image and the offer on the page continue directly from the promise that brought the visitor. The tighter the match, the higher the conversion rate, and the better the ad quality score in Google Ads, which lowers your cost per click.
 
 ## How design leads the eye to the action
 
-Good landing page design is not a matter of beauty but of psychology: a clear hierarchy, a call-to-action button that stands out and repeats down the page, and correct text direction that feels natural. Since most paid traffic arrives on mobile, we design for the small screen first: a large tappable button, readable text without zooming, and a form that can be completed one-handed. Every element on the page has to justify its existence — if it does not advance the conversion, it obstructs it.
+Good landing page design is not a matter of beauty but of psychology: a clear hierarchy, a call-to-action button that stands out and repeats down the page, and correct text direction that feels natural. Since most paid traffic arrives on mobile, we design for the small screen first: a large tappable button, readable text without zooming, and a form that can be completed one-handed. Every element on the page has to justify its existence, if it does not advance the conversion, it obstructs it.
 
 ## What counts as a good conversion rate
 
-- Below 2%: there is work to do — usually a problem with the message, the form or the page speed.
+- Below 2%: there is work to do, usually a problem with the message, the form or the page speed.
 - Around 3–5%: a healthy range for most sectors and traffic sources.
 - Above 7%: excellent performance, mainly with a focused audience and a sharp offer.
-- Improving from 2% to 5% means 2.5 times more leads — on exactly the same media budget.
+- Improving from 2% to 5% means 2.5 times more leads, on exactly the same media budget.
 
 ## Test rather than guess
 
 The difference between an amateur agency and a professional one is measurement. We run A/B tests on headlines, offers and buttons, analyse session recordings and heat maps, and measure every action through GA4 ([Google Analytics](https://support.google.com/analytics)). That is how a 2% conversion rate becomes 5%, and your cost per lead is cut in half without adding a shekel to the media budget.
 
-Are your campaigns bringing clicks but not customers? Leave your details and we will analyse your existing landing page — with an orderly list of improvements you can apply this week.
+Are your campaigns bringing clicks but not customers? Leave your details and we will analyse your existing landing page, with an orderly list of improvements you can apply this week.
 
 ---
 
@@ -2750,11 +2750,11 @@ Are your campaigns bringing clicks but not customers? Leave your details and we 
       items: [
         {
           q: 'What is the difference between a landing page and an ordinary site?',
-          a: 'A site presents everything the business does and allows free browsing between pages, while a landing page focuses on one goal: converting focused traffic from a single source — an ad, a campaign or a post — into one action. So a landing page has no menu and no distracting links, one sharp message and a short form, and it is judged on conversion rate alone.',
+          a: 'A site presents everything the business does and allows free browsing between pages, while a landing page focuses on one goal: converting focused traffic from a single source, an ad, a campaign or a post, into one action. So a landing page has no menu and no distracting links, one sharp message and a short form, and it is judged on conversion rate alone.',
         },
         {
           q: 'How many fields should a landing page form have?',
-          a: 'As few as possible. In most cases a name and a phone number are enough to open a conversation, and every additional field lowers the conversion rate and drives enquiries away. If you need one more detail to qualify leads, add a single field — the rest is always better collected in the phone call, not in the form.',
+          a: 'As few as possible. In most cases a name and a phone number are enough to open a conversation, and every additional field lowers the conversion rate and drives enquiries away. If you need one more detail to qualify leads, add a single field, the rest is always better collected in the phone call, not in the form.',
         },
         {
           q: 'What is a good conversion rate for a landing page?',
@@ -2762,7 +2762,7 @@ Are your campaigns bringing clicks but not customers? Leave your details and we 
         },
         {
           q: 'How long does a landing page take to build, and when do results appear?',
-          a: 'A focused landing page usually goes live within a few working days, depending on the scope of the content and design. First conversion data starts accumulating with the first clicks from the campaign, but reliable optimisation needs enough visitors — usually a few hundred — before drawing conclusions and running an improvement round.',
+          a: 'A focused landing page usually goes live within a few working days, depending on the scope of the content and design. First conversion data starts accumulating with the first clicks from the campaign, but reliable optimisation needs enough visitors, usually a few hundred, before drawing conclusions and running an improvement round.',
         },
       ],
     },
@@ -2771,13 +2771,13 @@ Are your campaigns bringing clicks but not customers? Leave your details and we 
   'website-building-services': {
     title: 'Building a business website: how to choose a company, what the process involves and what it really costs',
     excerpt:
-      'A new website is a significant investment — and most businesses have no real way to compare proposals. What a professional build includes, the price ranges in Israel, and the questions to ask before signing.',
+      'A new website is a significant investment, and most businesses have no real way to compare proposals. What a professional build includes, the price ranges in Israel, and the questions to ask before signing.',
     tags: ['Development', 'Design', 'SEO', 'WordPress'],
-    content: `**In short (TL;DR):** Building a business website is a five-stage process — scoping, design, development, content and launch — priced by scope. In Israel a landing page runs around ₪3,000–7,000, a brochure site around ₪8,000–25,000, and an e-commerce store around ₪20,000–80,000 and up. A dramatically cheap proposal almost always hides a generic template or costs that appear later.
+    content: `**In short (TL;DR):** Building a business website is a five-stage process, scoping, design, development, content and launch, priced by scope. In Israel a landing page runs around ₪3,000–7,000, a brochure site around ₪8,000–25,000, and an e-commerce store around ₪20,000–80,000 and up. A dramatically cheap proposal almost always hides a generic template or costs that appear later.
 
 ![Building a business website: how to choose a company, what the process involves and what it really costs](/images/blog/website-building-services.webp)
 
-Your website is the only salesperson that works 24/7. When it is slow, dated or not built for mobile, you lose customers to competitors with every second that passes. At Aiterra, as a [web development](/en/services/web-development) company and technology agency, we do not simply design attractive pages — we build foundations for growth. Our build process combines modern server-side technology, a user experience designed to convert, and complete preparation for search engines.
+Your website is the only salesperson that works 24/7. When it is slow, dated or not built for mobile, you lose customers to competitors with every second that passes. At Aiterra, as a [web development](/en/services/web-development) company and technology agency, we do not simply design attractive pages, we build foundations for growth. Our build process combines modern server-side technology, a user experience designed to convert, and complete preparation for search engines.
 
 ## Which kind of site does your business need?
 
@@ -2789,7 +2789,7 @@ Every business has its own DNA, which is why scoping is our first and most criti
 
 ## Why a custom site beats a standard platform
 
-Everyone knows WordPress builds, and we certainly offer premium WordPress work — but the real advantage of Aiterra is the ability to develop complex systems. When you have back-end engineers alongside a team of designers working in the same office, a web project becomes far more precise. From user research through to product launch, every line of code is written to serve your bottom line.
+Everyone knows WordPress builds, and we certainly offer premium WordPress work, but the real advantage of Aiterra is the ability to develop complex systems. When you have back-end engineers alongside a team of designers working in the same office, a web project becomes far more precise. From user research through to product launch, every line of code is written to serve your bottom line.
 
 ## What a website costs in Israel
 
@@ -2811,15 +2811,15 @@ Since Google holds roughly 90% of the search market in Israel and worldwide ([St
 ## The questions to ask before signing
 
 - **Who owns the domain, the hosting and the code?** The only right answer: you do. Many businesses discover at the point of separation that their site was rented.
-- **Is the site built ready for organic search?** Heading structure, speed, structured data and meta tags — fixing this after the fact costs more than building it correctly.
+- **Is the site built ready for organic search?** Heading structure, speed, structured data and meta tags, fixing this after the fact costs more than building it correctly.
 - **What is included after launch?** A warranty period, response times for faults, and the cost of ongoing changes.
-- **How will the site look on a phone?** More than half of visitors in Israel arrive on mobile — ask to see previous work on a smartphone, not in a slide deck.
+- **How will the site look on a phone?** More than half of visitors in Israel arrive on mobile, ask to see previous work on a smartphone, not in a slide deck.
 
 ## What a proper process looks like
 
-An orderly project passes through five stages: scoping (goals, audiences, structure and content — the stage that saves the most money), design (visual language and a conversion-focused user experience), development (clean, fast code), content and search preparation (copy, images, meta and structured data), and launch with measurement (analytics, heat maps and an improvement plan). If the proposal you received has no scoping stage, that is the first warning sign.
+An orderly project passes through five stages: scoping (goals, audiences, structure and content, the stage that saves the most money), design (visual language and a conversion-focused user experience), development (clean, fast code), content and search preparation (copy, images, meta and structured data), and launch with measurement (analytics, heat maps and an improvement plan). If the proposal you received has no scoping stage, that is the first warning sign.
 
-Weighing up proposals, or want to know what the site you actually need would cost? Leave your details and we will come back with an honest estimate — including what is not worth paying for.
+Weighing up proposals, or want to know what the site you actually need would cost? Leave your details and we will come back with an honest estimate, including what is not worth paying for.
 
 ---
 
@@ -2828,7 +2828,7 @@ Weighing up proposals, or want to know what the site you actually need would cos
 ## Further reading
 
 - [WordPress or a coded site? How to choose the right foundation for your business](/en/blog/wordpress-vs-custom-code)
-- [Freelancer or web agency — which is right for your business, and why](/en/blog/freelancer-vs-web-agency)`,
+- [Freelancer or web agency, which is right for your business, and why](/en/blog/freelancer-vs-web-agency)`,
     faq: {
       title: 'Common questions about the website build process',
       items: [
@@ -2842,7 +2842,7 @@ Weighing up proposals, or want to know what the site you actually need would cos
         },
         {
           q: 'Will the site be ready for organic search?',
-          a: 'Unambiguously yes, and it is our central added value. Every project includes the foundations for search — speed, heading structure, structured data and meta tags — which saves you thousands in future code fixes and turns the site into an asset that produces work on an ongoing basis.',
+          a: 'Unambiguously yes, and it is our central added value. Every project includes the foundations for search, speed, heading structure, structured data and meta tags, which saves you thousands in future code fixes and turns the site into an asset that produces work on an ongoing basis.',
         },
         {
           q: 'What should I ask a supplier before signing?',
@@ -2859,30 +2859,30 @@ Weighing up proposals, or want to know what the site you actually need would cos
   'business-automation-12-processes': {
     title: 'Business automation for a small business: 12 processes to stop doing by hand',
     excerpt:
-      'Every small business wastes tens of hours a month on repetitive tasks that could be automated. Twelve concrete processes to stop doing manually — and free the time for what actually grows the business.',
+      'Every small business wastes tens of hours a month on repetitive tasks that could be automated. Twelve concrete processes to stop doing manually, and free the time for what actually grows the business.',
     tags: ['Automation', 'Small business', 'Efficiency', 'Lead management', 'Time saving'],
-    content: `**In short (TL;DR):** Business automation is defining rules of the form "when X happens, do Y automatically", so repetitive tasks run without anyone touching them. In a small business, automating lead capture, first response, follow-ups and reminders saves tens of hours a month, prevents lost leads — and frees time and attention for growth.
+    content: `**In short (TL;DR):** Business automation is defining rules of the form "when X happens, do Y automatically", so repetitive tasks run without anyone touching them. In a small business, automating lead capture, first response, follow-ups and reminders saves tens of hours a month, prevents lost leads, and frees time and attention for growth.
 
-Every small business wastes tens of hours a month on repetitive, predictable tasks — typing in leads, chasing follow-ups, sending reminders, issuing invoices. The good news: most of them can be automated today with accessible tools. Here are twelve processes worth stopping by hand, to free time and attention for what actually grows the business.
+Every small business wastes tens of hours a month on repetitive, predictable tasks, typing in leads, chasing follow-ups, sending reminders, issuing invoices. The good news: most of them can be automated today with accessible tools. Here are twelve processes worth stopping by hand, to free time and attention for what actually grows the business.
 
-![Business automation for a small business — a robotic arm performing a task carefully](/images/blog/business-automation-12-processes.webp)
+![Business automation for a small business, a robotic arm performing a task carefully](/images/blog/business-automation-12-processes.webp)
 
 Business automation means defining "when X happens, automatically do Y", so repetitive tasks run without human touch. The purpose is not to replace people, but to free them from mechanical work in favour of work that requires human judgement.
 
 ## The 12 processes worth stopping by hand
 
-1. **Capturing leads into the system.** Every enquiry — from a form, from WhatsApp, from an ad — enters the CRM automatically, with no typing.
+1. **Capturing leads into the system.** Every enquiry, from a form, from WhatsApp, from an ad, enters the CRM automatically, with no typing.
 2. **An immediate first response.** An automatic "we have received your enquiry" message, even at two in the morning.
 3. **Following up leads that did not close.** An automatic reminder or message to a client who never came back.
 4. **Appointment reminders.** An automatic reminder that dramatically reduces no-shows.
 5. **Issuing invoices and receipts.** A connection between the sales system and the accounting software.
 6. **Requesting a review.** An automatic message after the service, asking for a Google review.
 7. **Tagging and routing leads.** Automatic assignment of a lead to the right representative by type or region.
-8. **Status updates to the client.** "Your order has shipped" / "the work is complete" — automatically.
+8. **Status updates to the client.** "Your order has shipped" / "the work is complete", automatically.
 9. **Collecting details before a call.** A bot that gathers the basics so the representative arrives prepared.
 10. **Weekly reports.** A performance report that arrives by email automatically, without building it by hand.
 11. **Calendar sync and scheduling.** A booking link that syncs with the calendar without the back and forth.
-12. **Abandoned cart recovery.** In a store — an automatic reminder to anyone who did not complete the purchase.
+12. **Abandoned cart recovery.** In a store, an automatic reminder to anyone who did not complete the purchase.
 
 ## The difference between doing it by hand and automating it
 
@@ -2896,15 +2896,15 @@ Here are the five highest-return processes, before automation and after:
 | Issuing invoices | Double entry between systems | The invoice is created automatically when the deal closes | Accounting software |
 | Weekly reports | Built by hand every week | A performance report arrives by email automatically | GA4 / CRM |
 
-As an illustration only: if following up each lead manually takes around 10 minutes, and a business receives around 100 leads a month, that is roughly 16 hours of work — before counting reminders, invoicing and reports. Automation returns most of that time, and at the same time prevents the leads that get forgotten and never answered. The exact saving depends on the business, but the direction is almost always the same: less mechanical work, more deals closed.
+As an illustration only: if following up each lead manually takes around 10 minutes, and a business receives around 100 leads a month, that is roughly 16 hours of work, before counting reminders, invoicing and reports. Automation returns most of that time, and at the same time prevents the leads that get forgotten and never answered. The exact saving depends on the business, but the direction is almost always the same: less mechanical work, more deals closed.
 
 ## How to know what to automate first
 
-The rule is simple: **automate first what repeats and hurts most.** Look for tasks meeting three conditions — they recur (daily or weekly), they are predictable (the same process every time), and they take time. That is where the return is fastest. It is also worth setting up basic measurement of your lead sources so you know which channel genuinely produces deals — and automate that one first.
+The rule is simple: **automate first what repeats and hurts most.** Look for tasks meeting three conditions, they recur (daily or weekly), they are predictable (the same process every time), and they take time. That is where the return is fastest. It is also worth setting up basic measurement of your lead sources so you know which channel genuinely produces deals, and automate that one first.
 
 ## What you need to get started
 
-The heart of most automations is a good CRM that the other tools connect to, so the first step is choosing it correctly. Much of the value happens through WhatsApp — the channel where most customers in Israel already are — so connecting WhatsApp to the CRM is usually the second step. There is no need to automate everything in one day: start with one painful process, and expand.
+The heart of most automations is a good CRM that the other tools connect to, so the first step is choosing it correctly. Much of the value happens through WhatsApp, the channel where most customers in Israel already are, so connecting WhatsApp to the CRM is usually the second step. There is no need to automate everything in one day: start with one painful process, and expand.
 
 ---
 
@@ -2919,19 +2919,19 @@ The heart of most automations is a good CRM that the other tools connect to, so 
       items: [
         {
           q: 'What should a small business automate first?',
-          a: 'Automate first what repeats, is predictable and takes time. Usually the fastest return is in automatic lead capture into the system, an immediate first response, and following up leads that did not close — that is where the most money falls between the chairs and customers go to competitors.',
+          a: 'Automate first what repeats, is predictable and takes time. Usually the fastest return is in automatic lead capture into the system, an immediate first response, and following up leads that did not close, that is where the most money falls between the chairs and customers go to competitors.',
         },
         {
           q: 'Does business automation replace employees?',
-          a: 'No. The purpose is to free employees from mechanical, repetitive tasks (data entry, reminders, follow-ups) in favour of work that requires human judgement, such as closing deals and personal service. Automation increases the output of the existing team — the same team handles more clients without burning out.',
+          a: 'No. The purpose is to free employees from mechanical, repetitive tasks (data entry, reminders, follow-ups) in favour of work that requires human judgement, such as closing deals and personal service. Automation increases the output of the existing team, the same team handles more clients without burning out.',
         },
         {
           q: 'What do you need to start automating?',
-          a: 'The foundation is a good CRM that the other tools connect to, and in most businesses in Israel a WhatsApp connection as well. You do not need to automate everything at once — start with one painful process that consumes a lot of time, measure the saving, and expand gradually to further processes.',
+          a: 'The foundation is a good CRM that the other tools connect to, and in most businesses in Israel a WhatsApp connection as well. You do not need to automate everything at once, start with one painful process that consumes a lot of time, measure the saving, and expand gradually to further processes.',
         },
         {
           q: 'How much time does business automation actually save?',
-          a: 'It depends on the business, but recurring processes such as lead capture, reminders and issuing invoices easily consume tens of hours a month when done by hand. Automating them returns that time — and also prevents human error and leads that are forgotten and never answered in time.',
+          a: 'It depends on the business, but recurring processes such as lead capture, reminders and issuing invoices easily consume tens of hours a month when done by hand. Automating them returns that time, and also prevents human error and leads that are forgotten and never answered in time.',
         },
       ],
     },
@@ -2940,9 +2940,9 @@ The heart of most automations is a good CRM that the other tools connect to, so 
   'ecommerce-store-that-sells': {
     title: 'Building an online store that sells: the complete guide to profitable e-commerce in 2026',
     excerpt:
-      'Most online stores are a handsome window display with a quiet till. Cart abandonment, awkward checkout and poor-quality traffic — here is how to fix the three problems choking your sales.',
+      'Most online stores are a handsome window display with a quiet till. Cart abandonment, awkward checkout and poor-quality traffic, here is how to fix the three problems choking your sales.',
     tags: ['E-commerce', 'Development', 'Digital'],
-    content: `**In short (TL;DR):** A store that sells is not a handsome window display but a selling system: a fast site, a short checkout with local payment methods, automation to recover abandoned carts, and quality traffic. Fixing the three points of friction — speed, payment and traffic — is what turns visitors into real revenue.
+    content: `**In short (TL;DR):** A store that sells is not a handsome window display but a selling system: a fast site, a short checkout with local payment methods, automation to recover abandoned carts, and quality traffic. Fixing the three points of friction, speed, payment and traffic, is what turns visitors into real revenue.
 
 A physical shop is limited by opening hours, by location and by how many customers walk through the door. An online store sells 24/7, across the country, even while you sleep. But here is the truth that gets discussed less: most online stores in Israel do not really sell. They exist, they look good, but the till is quiet. After guiding dozens of digital projects, we at Aiterra know exactly what separates a store that produces real revenue from an expensive digital window display.
 
@@ -2950,7 +2950,7 @@ A physical shop is limited by opening hours, by location and by how many custome
 
 ## Why most online stores do not sell
 
-It is almost always one of three problems: the store is slow (every second of waiting costs conversion rate and damages Core Web Vitals scores), the checkout is awkward (too many steps, a forced registration, surprises in the shipping price), or there simply is no quality traffic. The good news: all three are fixable — and the fix pays back quickly.
+It is almost always one of three problems: the store is slow (every second of waiting costs conversion rate and damages Core Web Vitals scores), the checkout is awkward (too many steps, a forced registration, surprises in the shipping price), or there simply is no quality traffic. The good news: all three are fixable, and the fix pays back quickly.
 
 ## How much money is actually left on the floor?
 
@@ -2958,15 +2958,15 @@ Cart abandonment is the largest leak in e-commerce. According to the [Baymard In
 
 - For every 10 customers who add a product to the cart, around 7 leave moments before paying.
 - Every unnecessary field in the checkout and every surprise in the shipping price increases the abandonment rate.
-- Recovery automation — a reminder email and a WhatsApp message with a direct link back to the cart, sometimes with a small voucher — brings back a meaningful share of those who left. It is the automation with the fastest return in e-commerce.
+- Recovery automation, a reminder email and a WhatsApp message with a direct link back to the cart, sometimes with a small voucher, brings back a meaningful share of those who left. It is the automation with the fastest return in e-commerce.
 
 ## Fast payment: what the customer expects
 
-Customers want to pay however suits them: credit card, Bit, Apple Pay or Google Pay — in one tap and without creating an account. Every point of friction in checkout costs you sales. When we build a store, the payment page receives the greatest attention: a minimum of fields, secure processing, and complete transparency about the shipping cost from the start — with no surprises at the final step.
+Customers want to pay however suits them: credit card, Bit, Apple Pay or Google Pay, in one tap and without creating an account. Every point of friction in checkout costs you sales. When we build a store, the payment page receives the greatest attention: a minimum of fields, secure processing, and complete transparency about the shipping cost from the start, with no surprises at the final step.
 
 ## Which platform to choose
 
-There is no single platform that suits everyone — the choice depends on catalogue size, the complexity of the business logic and the integrations you need. The table below summarises the three common routes:
+There is no single platform that suits everyone, the choice depends on catalogue size, the complexity of the business logic and the integrations you need. The table below summarises the three common routes:
 
 | Parameter | Ready-made platform (Shopify) | WooCommerce | Custom development |
 | --- | --- | --- | --- |
@@ -2980,13 +2980,13 @@ For a small store with a simple catalogue, a ready-made platform is enough. As t
 
 ## Traffic that sells: bringing visitors who buy
 
-A store without traffic is a warehouse. Since [Google holds roughly 90% of the search market](https://gs.statcounter.com/search-engine-market-share), the growth strategy starts with organic search for category and product pages — including structured data that shows price and stock directly in Google's results. That is complemented by Google Shopping campaigns and social remarketing that brings interested visitors back to the store. That is how you build a selling machine that does not depend on a single traffic source.
+A store without traffic is a warehouse. Since [Google holds roughly 90% of the search market](https://gs.statcounter.com/search-engine-market-share), the growth strategy starts with organic search for category and product pages, including structured data that shows price and stock directly in Google's results. That is complemented by Google Shopping campaigns and social remarketing that brings interested visitors back to the store. That is how you build a selling machine that does not depend on a single traffic source.
 
 ## Behind the scenes: the automation that saves a full-time role
 
-A successful store is also operations: stock updates, invoices, shipping labels and keeping the customer informed about order status. We connect all the systems — payments, inventory, shipping and CRM — into one automatic process, so you deal with products and customers rather than spreadsheets. The result: fewer human errors, faster dispatch and a customer informed at every stage, which reduces support enquiries and increases the share of returning customers.
+A successful store is also operations: stock updates, invoices, shipping labels and keeping the customer informed about order status. We connect all the systems, payments, inventory, shipping and CRM, into one automatic process, so you deal with products and customers rather than spreadsheets. The result: fewer human errors, faster dispatch and a customer informed at every stage, which reduces support enquiries and increases the share of returning customers.
 
-Dreaming of a store that genuinely sells, or have a store that is not taking off? Leave your details and we will come back with an orderly plan of action — from scoping through to the first sale.
+Dreaming of a store that genuinely sells, or have a store that is not taking off? Leave your details and we will come back with an orderly plan of action, from scoping through to the first sale.
 
 ---
 
@@ -3005,11 +3005,11 @@ Dreaming of a store that genuinely sells, or have a store that is not taking off
         },
         {
           q: 'How much does it cost to build an online store?',
-          a: 'The range is wide and depends on the number of products, the design and the integrations required (payments, inventory, shipping). A short scoping call gives an accurate proposal — and more importantly, makes sure the budget is divided properly between the build and the marketing that will bring the customers. A beautiful store with no marketing budget stays a quiet window display.',
+          a: 'The range is wide and depends on the number of products, the design and the integrations required (payments, inventory, shipping). A short scoping call gives an accurate proposal, and more importantly, makes sure the budget is divided properly between the build and the marketing that will bring the customers. A beautiful store with no marketing budget stays a quiet window display.',
         },
         {
           q: 'How do you reduce cart abandonment?',
-          a: 'A combination of a short checkout, fast payment methods such as Bit and Apple Pay, complete transparency about shipping costs from the start of the process, and recovery automations — an email and a WhatsApp message with a direct link back to the cart. Since the average abandonment rate is around 70%, each of these steps raises completion measurably.',
+          a: 'A combination of a short checkout, fast payment methods such as Bit and Apple Pay, complete transparency about shipping costs from the start of the process, and recovery automations, an email and a WhatsApp message with a direct link back to the cart. Since the average abandonment rate is around 70%, each of these steps raises completion measurably.',
         },
         {
           q: 'Which payment methods are essential for a store in Israel?',
@@ -3017,7 +3017,7 @@ Dreaming of a store that genuinely sells, or have a store that is not taking off
         },
         {
           q: 'Does an online store need organic search (SEO)?',
-          a: 'Absolutely. Google holds roughly 90% of the search market, and a large share of buying journeys start with a product search. Organic search for category and product pages, together with structured data showing price and stock in the results, brings quality traffic cheaply over time — unlike paid advertising, which stops the moment you stop paying.',
+          a: 'Absolutely. Google holds roughly 90% of the search market, and a large share of buying journeys start with a product search. Organic search for category and product pages, together with structured data showing price and stock in the results, brings quality traffic cheaply over time, unlike paid advertising, which stops the moment you stop paying.',
         },
       ],
     },
@@ -3026,11 +3026,11 @@ Dreaming of a store that genuinely sells, or have a store that is not taking off
   'website-security-guide': {
     title: 'Website security: protecting your site, your customers and your reputation',
     excerpt:
-      'A hacked site is not only technical damage — it is lost trust, damaged rankings and sometimes legal exposure. SSL, backups, updates and form protection: the practical guide for business owners.',
+      'A hacked site is not only technical damage, it is lost trust, damaged rankings and sometimes legal exposure. SSL, backups, updates and form protection: the practical guide for business owners.',
     tags: ['Security', 'Development'],
-    content: `**In short (TL;DR):** Website security is the set of measures protecting your business site from intrusion, data theft and defacement. The essential baseline is an SSL certificate (HTTPS), regular updates, automatic backups and form protection — and the strongest and cheapest defence of all is a clean architecture that reduces the attack surface in advance.
+    content: `**In short (TL;DR):** Website security is the set of measures protecting your business site from intrusion, data theft and defacement. The essential baseline is an SSL certificate (HTTPS), regular updates, automatic backups and form protection, and the strongest and cheapest defence of all is a clean architecture that reduces the attack surface in advance.
 
-Most business owners think a site breach is something that happens to large companies. The reality is the opposite: small business sites are the preferred target, precisely because attackers know nobody is watching them. And a breach is not only a technical matter — a site distributing spam gets buried in Google, customers whose details leaked do not come back, and in some cases there is legal exposure under privacy law.
+Most business owners think a site breach is something that happens to large companies. The reality is the opposite: small business sites are the preferred target, precisely because attackers know nobody is watching them. And a breach is not only a technical matter, a site distributing spam gets buried in Google, customers whose details leaked do not come back, and in some cases there is legal exposure under privacy law.
 
 ![A laptop screen showing cyber protection and information security](/images/blog/website-security.webp)
 
@@ -3046,19 +3046,19 @@ Most business owners think a site breach is something that happens to large comp
 
 | Layer of protection | What it protects against | Urgency |
 |---|---|---|
-| SSL / HTTPS certificate | Traffic interception, "not secure" warnings, ranking damage | Critical — immediate |
-| System and plugin updates | Exploitation of known holes in old code | High — ongoing |
+| SSL / HTTPS certificate | Traffic interception, "not secure" warnings, ranking damage | Critical, immediate |
+| System and plugin updates | Exploitation of known holes in old code | High, ongoing |
 | Automatic daily backup | Data loss and prolonged downtime after a fault or breach | High |
 | Form validation and rate limiting | Code injection, spam floods and data theft | High |
 | Clean architecture (few plugins) | Reducing the overall attack surface in advance | Strategic |
 
 ## Why forms are the attacker's front door
 
-Every form on the site — contact, registration, payment — is a potential point of entry. Without proper input validation, an attacker can inject malicious code, steal data, or flood you with thousands of spam enquiries that drown the real leads. Proper protection means server-side input filtering, request rate limiting and anti-bot mechanisms that do not damage the experience for genuine visitors. Simple techniques such as a honeypot field or CAPTCHA verification block a significant share of automated bots without burdening the real customer.
+Every form on the site, contact, registration, payment, is a potential point of entry. Without proper input validation, an attacker can inject malicious code, steal data, or flood you with thousands of spam enquiries that drown the real leads. Proper protection means server-side input filtering, request rate limiting and anti-bot mechanisms that do not damage the experience for genuine visitors. Simple techniques such as a honeypot field or CAPTCHA verification block a significant share of automated bots without burdening the real customer.
 
 ## How much does a breach actually cost the business?
 
-The greatest damage is usually commercial rather than technical. [Google holds roughly 90% of the search market](https://gs.statcounter.com/search-engine-market-share) in Israel and worldwide, so almost all of your organic traffic comes through it. According to [Google's official documentation](https://developers.google.com/search/docs), sites that have been hacked and distribute malicious content can receive a warning label in search results and even be removed from the index. In other words, a single breach can wipe out your main source of customers at a stroke — on top of the direct damage of data theft, downtime and reputational harm.
+The greatest damage is usually commercial rather than technical. [Google holds roughly 90% of the search market](https://gs.statcounter.com/search-engine-market-share) in Israel and worldwide, so almost all of your organic traffic comes through it. According to [Google's official documentation](https://developers.google.com/search/docs), sites that have been hacked and distribute malicious content can receive a warning label in search results and even be removed from the index. In other words, a single breach can wipe out your main source of customers at a stroke, on top of the direct damage of data theft, downtime and reputational harm.
 
 ## What to do if the site has already been breached
 
@@ -3072,7 +3072,7 @@ The greatest damage is usually commercial rather than technical. [Google holds r
 
 Here is a confession: a large part of our security work is architectural prevention. A site built in modern code, without dozens of third-party plugins, with a proper separation between interface and server, simply offers far less attack surface. In the systems we build in Next.js, most common attack vectors are blocked at the infrastructure level, and the site receives security updates routinely without breaking anything. Fewer dependencies means fewer emergency updates, fewer known vulnerabilities and fewer points of failure an attacker can use.
 
-Not sure when anyone last checked your site's security? Leave your details and we will run a basic security scan — better to find the holes before somebody else does.
+Not sure when anyone last checked your site's security? Leave your details and we will run a basic security scan, better to find the holes before somebody else does.
 
 ---
 
@@ -3095,11 +3095,11 @@ Not sure when anyone last checked your site's security? Leave your details and w
         },
         {
           q: 'How much does it cost to secure a site?',
-          a: 'The baseline — SSL, automatic backups and regular updates — is very cheap and usually already included with quality hosting. More advanced protection depends on the complexity of the site and the sensitivity of the data it collects. Either way the cost is negligible against the damage of a single breach: downtime, lost customers, damaged Google rankings and sometimes legal exposure under privacy law.',
+          a: 'The baseline, SSL, automatic backups and regular updates, is very cheap and usually already included with quality hosting. More advanced protection depends on the complexity of the site and the sensitivity of the data it collects. Either way the cost is negligible against the damage of a single breach: downtime, lost customers, damaged Google rankings and sometimes legal exposure under privacy law.',
         },
         {
           q: 'Is a WordPress site less secure than a custom coded one?',
-          a: 'WordPress itself is safe; the risk comes mainly from the volume of third-party plugins that are not always maintained — every old plugin is a potential security hole. A custom coded site, for example in Next.js, offers a far smaller attack surface. On any platform, it is ongoing updates, backups and form protection that determine the actual level of security.',
+          a: 'WordPress itself is safe; the risk comes mainly from the volume of third-party plugins that are not always maintained, every old plugin is a potential security hole. A custom coded site, for example in Next.js, offers a far smaller attack surface. On any platform, it is ongoing updates, backups and form protection that determine the actual level of security.',
         },
       ],
     },
@@ -3108,11 +3108,11 @@ Not sure when anyone last checked your site's security? Leave your details and w
   'ux-ui-design-conversions': {
     title: 'UX/UI design that sells: why a beautiful site is not enough, and what actually lifts conversions',
     excerpt:
-      'A site can be stunning and sell nothing. The difference is in the user experience: clear hierarchy, an intelligent customer journey and design that leads to action — not just impresses the eye.',
+      'A site can be stunning and sell nothing. The difference is in the user experience: clear hierarchy, an intelligent customer journey and design that leads to action, not just impresses the eye.',
     tags: ['Design', 'Conversions', 'UX'],
-    content: `**In short (TL;DR):** UX/UI design that sells is the engineering of a customer journey, not decoration. A site converts when the logic (UX) and the visual design (UI) work together to lead the visitor without friction toward the intended action — rather than merely impressing the eye.
+    content: `**In short (TL;DR):** UX/UI design that sells is the engineering of a customer journey, not decoration. A site converts when the logic (UX) and the visual design (UI) work together to lead the visitor without friction toward the intended action, rather than merely impressing the eye.
 
-There are beautiful sites that sell nothing, and plain sites that produce leads without pause. The difference is not how impressive the site is — it is how clear it is. Professional UX/UI design is not decoration: it is the engineering of a customer journey, and it starts with one question — what does the visitor need to do on this page, and what is stopping them?
+There are beautiful sites that sell nothing, and plain sites that produce leads without pause. The difference is not how impressive the site is, it is how clear it is. Professional UX/UI design is not decoration: it is the engineering of a customer journey, and it starts with one question, what does the visitor need to do on this page, and what is stopping them?
 
 ![A designer sketching user interface wireframes for an application](/images/blog/ux-ui-conversions.webp)
 
@@ -3120,7 +3120,7 @@ There are beautiful sites that sell nothing, and plain sites that produce leads 
 
 User experience (UX) is the logic: how the journey is built from arriving on the site through to leaving contact details, which pages exist, the order of the information and where each button sits. User interface (UI) is the visual expression: colour, typography, spacing and animation. An impressive UI without intelligent UX is a beautiful site that confuses; intelligent UX with weak UI is a convenient site that does not convey credibility. Conversions arrive only when the two work together.
 
-| Aspect | UX — user experience | UI — user interface |
+| Aspect | UX, user experience | UI, user interface |
 |---|---|---|
 | What it is | The logic and the journey | The visual expression |
 | Covers | Structure, order of information, button placement | Colour, typography, spacing, animation |
@@ -3131,11 +3131,11 @@ User experience (UX) is the logic: how the journey is built from arriving on the
 
 Design that converts rests on a few principles that recur in every successful project. These are the four central ones:
 
-**Visual hierarchy:** the eye scans, it does not read. A strong headline, a supporting subheading and a prominent button — in that order. If everything shouts, nothing is heard.
+**Visual hierarchy:** the eye scans, it does not read. A strong headline, a supporting subheading and a prominent button, in that order. If everything shouts, nothing is heard.
 
 **Reducing friction:** every unnecessary click, long form or confusing menu burns conversion rate. The shortest route to the action wins.
 
-**Consistency and trust:** uniform design, correct right-to-left rendering in Hebrew, and reviews in the right places — all of it conveys professionalism the visitor feels without noticing.
+**Consistency and trust:** uniform design, correct right-to-left rendering in Hebrew, and reviews in the right places, all of it conveys professionalism the visitor feels without noticing.
 
 **Mobile first:** most of your visitors arrive on a phone. If the mobile experience is a squeezed version of the desktop rather than a design in its own right, you are losing most of them.
 
@@ -3144,7 +3144,7 @@ Design that converts rests on a few principles that recur in every successful pr
 Design is not measured by feel but by data, and three figures explain why it affects the bottom line directly:
 
 - **Mobile first:** most browsing traffic worldwide now arrives from mobile devices, so a design that was not planned for the phone first misses the bulk of the audience.
-- **Speed equals conversions:** according to [Google's web.dev](https://web.dev/articles/vitals), meeting the Core Web Vitals — load speed, visual stability and responsiveness — improves user experience and reduces abandonment.
+- **Speed equals conversions:** according to [Google's web.dev](https://web.dev/articles/vitals), meeting the Core Web Vitals, load speed, visual stability and responsiveness, improves user experience and reduces abandonment.
 - **Organic search:** Google holds roughly [90% of the search market](https://gs.statcounter.com/search-engine-market-share), so fast design that keeps visitors on the site supports organic ranking directly as well.
 
 ## The design mistakes worth avoiding
@@ -3158,7 +3158,7 @@ Most sites that fail to convert fall into the same recurring traps. Avoiding the
 
 ## Designing by data rather than personal taste
 
-The best decisions come from real visitor behaviour: heat maps showing where people click, session recordings revealing where they get stuck, and A/B tests that settle design arguments with numbers. Instead of arguing about what looks better, let the data decide. At Aiterra we put every design project through those lenses — because the goal is not a site that impresses designers, but a site that converts customers.
+The best decisions come from real visitor behaviour: heat maps showing where people click, session recordings revealing where they get stuck, and A/B tests that settle design arguments with numbers. Instead of arguing about what looks better, let the data decide. At Aiterra we put every design project through those lenses, because the goal is not a site that impresses designers, but a site that converts customers.
 
 Feel like your site is beautiful but not working? Leave your details and we will run a professional UX analysis showing exactly where your visitors are getting lost.
 
@@ -3175,11 +3175,11 @@ Feel like your site is beautiful but not working? Leave your details and we will
       items: [
         {
           q: 'What is the difference between UX and UI?',
-          a: 'UX is the design of the experience and the visitor journey — the structure, the logic and the order of actions from arrival through to conversion. UI is the visual design of that journey: colour, typography and components. UX determines whether it is easy to act, and UI determines whether it looks credible. Only when both work together does the visitor leave their details rather than leaving the site.',
+          a: 'UX is the design of the experience and the visitor journey, the structure, the logic and the order of actions from arrival through to conversion. UI is the visual design of that journey: colour, typography and components. UX determines whether it is easy to act, and UI determines whether it looks credible. Only when both work together does the visitor leave their details rather than leaving the site.',
         },
         {
           q: 'Is a redesign of an existing site worth it?',
-          a: 'A rebuild is not always necessary. Sometimes targeted improvements — a more prominent button, a shorter form, a clearer hierarchy — lift conversions by tens of percent at low cost. The rule is to start with an analysis of visitor behaviour rather than with design: first understand where people are being lost, then decide between a full redesign and a targeted fix.',
+          a: 'A rebuild is not always necessary. Sometimes targeted improvements, a more prominent button, a shorter form, a clearer hierarchy, lift conversions by tens of percent at low cost. The rule is to start with an analysis of visitor behaviour rather than with design: first understand where people are being lost, then decide between a full redesign and a targeted fix.',
         },
         {
           q: 'How does design affect organic ranking in Google?',
@@ -3187,7 +3187,7 @@ Feel like your site is beautiful but not working? Leave your details and we will
         },
         {
           q: 'How do you know a new design has actually succeeded?',
-          a: 'You measure rather than guess. Before launch you set a clear target — conversion rate, number of leads or time on page — and compare it against historical data. Tools such as GA4, heat maps and A/B tests show whether the new version produces more actions. A successful design is one the numbers confirm, not one that merely looks good.',
+          a: 'You measure rather than guess. Before launch you set a clear target, conversion rate, number of leads or time on page, and compare it against historical data. Tools such as GA4, heat maps and A/B tests show whether the new version produces more actions. A successful design is one the numbers confirm, not one that merely looks good.',
         },
       ],
     },
@@ -3196,17 +3196,17 @@ Feel like your site is beautiful but not working? Leave your details and we will
   'freelancer-vs-web-agency': {
     title: 'Freelancer or web agency — which is right for your business, and why',
     excerpt:
-      'A freelancer costs less, an agency gives you more security — but when is each the right call? An honest comparison of freelancer versus web agency: price, availability, breadth, risk and continuity.',
+      'A freelancer costs less, an agency gives you more security, but when is each the right call? An honest comparison of freelancer versus web agency: price, availability, breadth, risk and continuity.',
     tags: ['Web development', 'Freelancer', 'Digital agency', 'Comparison', 'Small business'],
-    content: `**In short (TL;DR):** A freelancer is a single supplier — cheaper and more flexible, and excellent for a focused task on a limited budget. A web agency provides a full team (design, development, content and search), project management and continuity. The larger, longer-term and more business-critical the project, the more the choice tilts toward an agency.
+    content: `**In short (TL;DR):** A freelancer is a single supplier, cheaper and more flexible, and excellent for a focused task on a limited budget. A web agency provides a full team (design, development, content and search), project management and continuity. The larger, longer-term and more business-critical the project, the more the choice tilts toward an agency.
 
-There is no single answer to "freelancer or agency" — there is what suits your project. A good freelancer is usually cheaper and more flexible and excellent for a focused task; an agency gives you professional breadth (design, development, content and search under one roof), continuity and cover when someone drops out. The simple rule: the larger, longer-term and more business-critical the project, the more the balance tilts toward an agency.
+There is no single answer to "freelancer or agency", there is what suits your project. A good freelancer is usually cheaper and more flexible and excellent for a focused task; an agency gives you professional breadth (design, development, content and search under one roof), continuity and cover when someone drops out. The simple rule: the larger, longer-term and more business-critical the project, the more the balance tilts toward an agency.
 
-![A freelancer working on a laptop against the option of an agency — which is better for building a business website](/images/blog/freelancer-vs-web-agency.webp)
+![A freelancer working on a laptop against the option of an agency, which is better for building a business website](/images/blog/freelancer-vs-web-agency.webp)
 
-The essential difference is not "one person versus many people" but **where overall responsibility lands**. With a freelancer you, the client, are usually also the project manager — you are the one coordinating between the designer, the developer and the copywriter. At an agency, project management and responsibility for the overall result are part of the service. So the decision rests on five axes: price, professional breadth, availability, management and continuity — and the weight of each shifts with the size of the project and how critical it is to the business.
+The essential difference is not "one person versus many people" but **where overall responsibility lands**. With a freelancer you, the client, are usually also the project manager, you are the one coordinating between the designer, the developer and the copywriter. At an agency, project management and responsibility for the overall result are part of the service. So the decision rests on five axes: price, professional breadth, availability, management and continuity, and the weight of each shifts with the size of the project and how critical it is to the business.
 
-## Freelancer versus agency — where they genuinely differ
+## Freelancer versus agency: where they genuinely differ
 
 | Criterion | Freelancer | Agency |
 | --- | --- | --- |
@@ -3219,31 +3219,31 @@ The essential difference is not "one person versus many people" but **where over
 
 ## When a freelancer is the right choice
 
-- **The budget is limited** and the project is small and well defined — a single landing page, a design fix, a specific update.
+- **The budget is limited** and the project is small and well defined, a single landing page, a design fix, a specific update.
 - **You know exactly what you want** and do not need strategic guidance, only execution.
-- **You have the time and the ability to manage** — to coordinate, review and connect the parties yourself.
-- **The task sits in one specialism** — design only, or copywriting only.
+- **You have the time and the ability to manage**: to coordinate, review and connect the parties yourself.
+- **The task sits in one specialism**: design only, or copywriting only.
 
-The main risk: availability and continuity. When a single freelancer is ill, overloaded or simply stops answering, the project stalls — and sometimes you are left without access to the code or the site.
+The main risk: availability and continuity. When a single freelancer is ill, overloaded or simply stops answering, the project stalls, and sometimes you are left without access to the code or the site.
 
 ## When an agency is the better choice
 
-- **The project is full and complex** — a brochure site or a store that needs design, development, content and search working together.
+- **The project is full and complex**: a brochure site or a store that needs design, development, content and search working together.
 - **The site is critical to the business** and you need guaranteed availability and response times, not "I will get back to you".
 - **You want a long-term partner** who will still be there next year for maintenance, extensions and automation.
-- **You have no time to manage it** — you want one party taking responsibility for the overall result.
+- **You have no time to manage it**: you want one party taking responsibility for the overall result.
 
-The great advantage of an agency is that all the specialists talk to each other. When the designer, the developer and the SEO lead sit together, the site comes out fast, well designed and ready to rank — without the game of broken telephone that happens when you coordinate between several separate freelancers. And this is not only an aesthetic matter: since [Google holds roughly 90% of the search market](https://gs.statcounter.com/search-engine-market-share), a site built without search and performance designed in from the foundations starts life at a disadvantage against competitors. A professional team builds the site on [Google's official user experience metrics](https://web.dev/articles/vitals) — so it launches fast and ready to rank on day one.
+The great advantage of an agency is that all the specialists talk to each other. When the designer, the developer and the SEO lead sit together, the site comes out fast, well designed and ready to rank, without the game of broken telephone that happens when you coordinate between several separate freelancers. And this is not only an aesthetic matter: since [Google holds roughly 90% of the search market](https://gs.statcounter.com/search-engine-market-share), a site built without search and performance designed in from the foundations starts life at a disadvantage against competitors. A professional team builds the site on [Google's official user experience metrics](https://web.dev/articles/vitals), so it launches fast and ready to rank on day one.
 
 ## And what about do-it-yourself platforms?
 
-There is a third option — building it yourself on Wix or similar. It is the cheapest in money, and the most expensive in time and in the ceiling it puts on growth. For a business testing an idea on a zero budget it is a legitimate start, but the moment the site becomes central to the business, moving to a professional supplier is close to inevitable — and sometimes costs more than building properly in the first place, because it has to be dismantled and rebuilt. We covered the difference between foundations in depth in the [WordPress versus coded site guide](/en/blog/wordpress-vs-custom-code).
+There is a third option, building it yourself on Wix or similar. It is the cheapest in money, and the most expensive in time and in the ceiling it puts on growth. For a business testing an idea on a zero budget it is a legitimate start, but the moment the site becomes central to the business, moving to a professional supplier is close to inevitable, and sometimes costs more than building properly in the first place, because it has to be dismantled and rebuilt. We covered the difference between foundations in depth in the [WordPress versus coded site guide](/en/blog/wordpress-vs-custom-code).
 
-Whoever you choose — freelancer or agency — the rules for spotting a reliable supplier are the same. It is worth reviewing the red flags before signing any proposal.
+Whoever you choose, freelancer or agency, the rules for spotting a reliable supplier are the same. It is worth reviewing the red flags before signing any proposal.
 
 ---
 
-**Not sure which suits you?** Tell us about the project through the [contact page](/en/contact), and we will tell you honestly whether it is a case for a freelancer or an agency — whether that is us or not. Take a look at Aiterra's [web development service](/en/services/web-development).
+**Not sure which suits you?** Tell us about the project through the [contact page](/en/contact), and we will tell you honestly whether it is a case for a freelancer or an agency, whether that is us or not. Take a look at Aiterra's [web development service](/en/services/web-development).
 
 ## Further reading
 
@@ -3253,16 +3253,16 @@ Whoever you choose — freelancer or agency — the rules for spotting a reliabl
       title: 'Common questions about freelancers versus web agencies',
       items: [
         {
-          q: 'Which is cheaper — a freelancer or a web agency?',
+          q: 'Which is cheaper, a freelancer or a web agency?',
           a: 'A freelancer is cheaper in most cases, because there are no team and management costs behind them. But the low price does not always pay off: on a complex project, the absence of management and professional breadth can cost dearly in time, in fixes and in missed opportunities. Compare cost against value, not only the numbers.',
         },
         {
           q: 'What is the big risk in working with a freelancer?',
-          a: 'Availability and continuity. When a single freelancer is ill, overloaded or stops answering, the project stalls — and sometimes you are left without access to the code or the site. An agency covers itself with a team and defined response times, so the work continues without any specific person, and still continues next year.',
+          a: 'Availability and continuity. When a single freelancer is ill, overloaded or stops answering, the project stalls, and sometimes you are left without access to the code or the site. An agency covers itself with a team and defined response times, so the work continues without any specific person, and still continues next year.',
         },
         {
           q: 'When is a freelancer actually the better choice?',
-          a: 'When the budget is limited, the project is small and clear (a landing page, a specific fix), you know exactly what you want, and you have the time and ability to manage and coordinate yourself. For a focused task in a single specialism — design only, or copywriting only — a good freelancer is an excellent and cost-effective choice.',
+          a: 'When the budget is limited, the project is small and clear (a landing page, a specific fix), you know exactly what you want, and you have the time and ability to manage and coordinate yourself. For a focused task in a single specialism, design only, or copywriting only, a good freelancer is an excellent and cost-effective choice.',
         },
         {
           q: 'Why does an agency produce a better site on a complex project?',
@@ -3270,7 +3270,7 @@ Whoever you choose — freelancer or agency — the rules for spotting a reliabl
         },
         {
           q: 'Can we start with a freelancer and move to an agency later?',
-          a: 'Yes, and it is a common path. Many businesses start with a freelancer for a first version and move to an agency once the site becomes central to the business. To make that transition smooth, confirm in advance that you own the code, the domain and access to every account — so you are not dependent on any single supplier.',
+          a: 'Yes, and it is a common path. Many businesses start with a freelancer for a first version and move to an agency once the site becomes central to the business. To make that transition smooth, confirm in advance that you own the code, the domain and access to every account, so you are not dependent on any single supplier.',
         },
       ],
     },
@@ -3279,13 +3279,13 @@ Whoever you choose — freelancer or agency — the rules for spotting a reliabl
   'website-performance-2026': {
     title: 'Why is your website slow? The complete 2026 guide to modern web development',
     excerpt:
-      'A slow site burns your budget and drives customers away. The complete guide to modern web development — clean code, Next.js, Core Web Vitals, and when to upgrade versus rebuild.',
+      'A slow site burns your budget and drives customers away. The complete guide to modern web development, clean code, Next.js, Core Web Vitals, and when to upgrade versus rebuild.',
     tags: ['Performance', 'SEO', 'Development', 'Core Web Vitals'],
     content: `**In short (TL;DR):** Website performance is the loading speed and stability a visitor experiences, and it affects conversion rate and SEO ranking directly. In 2026 a fast site is built on clean code and modern technology such as Next.js and React; when an old template is dying, rebuilding beats papering over it with another plugin.
 
 ![Why is your website slow? The complete 2026 guide to modern web development](/images/blog/website-performance-2026.webp)
 
-You invest heavily in paid campaigns and produce excellent content, but when visitors click the link — they wait. And wait. In an era where patience is measured in milliseconds, a slow site burns your budget and drives customers away. If you have reached the point of considering an upgrade to your [website](/en/services/web-development) or building an entirely new system, you are in the right place.
+You invest heavily in paid campaigns and produce excellent content, but when visitors click the link, they wait. And wait. In an era where patience is measured in milliseconds, a slow site burns your budget and drives customers away. If you have reached the point of considering an upgrade to your [website](/en/services/web-development) or building an entirely new system, you are in the right place.
 
 ## Why old platforms and plugin sprawl hurt performance
 
@@ -3293,7 +3293,7 @@ Many business sites were originally built on heavy templates that load the serve
 
 Business owners look for sticking plasters. They try to improve their WordPress speed with one more cache plugin. But sometimes, when the core of the site is outdated, that effort simply is not enough. In those cases it becomes clear that the site needs upgrading from the foundations, or moving to modern technology built for 2026 standards.
 
-## Why speed matters right now — the numbers
+## Why speed matters right now: the numbers
 
 Google defines a "fast" site by three [Core Web Vitals](https://web.dev/articles/vitals) metrics. These are the thresholds worth remembering:
 
@@ -3316,7 +3316,7 @@ That combination lets us deliver complex web applications, fast e-commerce store
 
 Google has said it plainly: speed and page experience are a critical ranking factor, through the Core Web Vitals metrics. Every optimisation affects your position in search results directly.
 
-When we upgrade a site we are not only improving how it looks — we are making it the best friend of the search engines. Improving speed lowers the bounce rate and signals to Google that visitors are enjoying the content. A fast site written in clean code saves you thousands in paid search, because your quality score rises and the cost per click falls.
+When we upgrade a site we are not only improving how it looks, we are making it the best friend of the search engines. Improving speed lowers the bounce rate and signals to Google that visitors are enjoying the content. A fast site written in clean code saves you thousands in paid search, because your quality score rises and the cost per click falls.
 
 ## When to upgrade and when to rebuild
 
@@ -3327,10 +3327,10 @@ This is the million-shekel question. The table below summarises the difference:
 | When it fits | The architecture is sound and only needs targeted optimisation | The core is outdated, the site buckles under load or is hard to maintain |
 | Initial cost | Low to medium | Medium to high |
 | Time to deliver | Days to weeks | Weeks to months |
-| Performance ceiling | Limited by the existing foundation | High — green Core Web Vitals |
+| Performance ceiling | Limited by the existing foundation | High, green Core Web Vitals |
 | Fit to 2026 standards | Partial | Full |
 
-If the site works well and only needs a nudge, a targeted optimisation will do the job. But if the system buckles under visitor load, content is hard to update, or it simply does not connect to your marketing tools — it is time for a new technical foundation.
+If the site works well and only needs a nudge, a targeted optimisation will do the job. But if the system buckles under visitor load, content is hard to update, or it simply does not connect to your marketing tools, it is time for a new technical foundation.
 
 At Aiterra we start every project with a deep diagnostic. We examine your existing architecture, map the failures, and propose the most cost-effective and appropriate route for your business growth. Does your site feel slow or dated? Do not let competitors overtake you on the bend. Leave your details and the Aiterra team will run a comprehensive performance audit and build you a strategy that wins.
 
@@ -3341,7 +3341,7 @@ At Aiterra we start every project with a deep diagnostic. We examine your existi
 ## Further reading
 
 - [WordPress or a coded site? How to choose the right foundation for your business](/en/blog/wordpress-vs-custom-code)
-- [Freelancer or web agency — which is right for your business, and why](/en/blog/freelancer-vs-web-agency)`,
+- [Freelancer or web agency, which is right for your business, and why](/en/blog/freelancer-vs-web-agency)`,
     faq: {
       title: 'Common questions about site performance and modern development',
       items: [
@@ -3374,9 +3374,9 @@ At Aiterra we start every project with a deep diagnostic. We examine your existi
     excerpt:
       'When spreadsheets, WhatsApp groups and email are running your business, it is time for one system that holds it together. Here is how a client portal or a custom management system turns chaos into a process.',
     tags: ['Development', 'Next.js', 'Automation'],
-    content: `**In short (TL;DR):** A custom web system is software built around your specific workflow — a client portal, an account area, a dashboard or an order system — instead of forcing the business to bend around off-the-shelf software. It removes manual work in spreadsheets and WhatsApp, connects to the rest of your tools, and saves hours of operational time every month.
+    content: `**In short (TL;DR):** A custom web system is software built around your specific workflow, a client portal, an account area, a dashboard or an order system, instead of forcing the business to bend around off-the-shelf software. It removes manual work in spreadsheets and WhatsApp, connects to the rest of your tools, and saves hours of operational time every month.
 
-There is a moment every growing business knows: the point where the spreadsheets, the WhatsApp groups and the email threads stop holding the load. Orders go missing, clients call to ask what is happening with their project, and the team burns hours on manual updates. That is exactly where a custom web system comes in — a tool built around your workflow, rather than the other way round.
+There is a moment every growing business knows: the point where the spreadsheets, the WhatsApp groups and the email threads stop holding the load. Orders go missing, clients call to ask what is happening with their project, and the team burns hours on manual updates. That is exactly where a custom web system comes in, a tool built around your workflow, rather than the other way round.
 
 ![Developing a custom web system on dual screens](/images/blog/custom-web-systems.webp)
 
@@ -3384,9 +3384,9 @@ There is a moment every growing business knows: the point where the spreadsheets
 
 Unlike off-the-shelf software that forces you to adapt the business to it, a custom system is built around the processes you already have. A few examples from the field: a client portal where each client sees the status of their project, their files and their invoices; an internal order system that keeps sales and the warehouse in sync; a quote calculator that produces a designed proposal in minutes; or a management dashboard that gathers every business metric onto one screen.
 
-## Off-the-shelf or custom — which suits your business?
+## Off-the-shelf or custom: which suits your business?
 
-Off-the-shelf tools are a good starting point, until you reach the edges: they do not always talk to your other systems, they are limited in exactly the feature you need, and the price per seat climbs as you grow. A purpose-built system costs more up front, but it is yours — with no monthly licence fees that inflate, no compromise on the process, and the ability to grow and change alongside the business. Here is the comparison in short:
+Off-the-shelf tools are a good starting point, until you reach the edges: they do not always talk to your other systems, they are limited in exactly the feature you need, and the price per seat climbs as you grow. A purpose-built system costs more up front, but it is yours, with no monthly licence fees that inflate, no compromise on the process, and the ability to grow and change alongside the business. Here is the comparison in short:
 
 | Parameter | Off-the-shelf (SaaS) | Custom system |
 | --- | --- | --- |
@@ -3403,17 +3403,17 @@ In short: the more distinctive your process and the larger the headcount, the mo
 
 Moving to tailored digital processes has gone from an advantage to a competitive necessity. A few figures worth knowing:
 
-- Google holds [roughly 90% of the global search market](https://gs.statcounter.com/search-engine-market-share) — which means the digital presence and the speed of your systems directly affect how many clients find you and stay.
-- Speed and user experience are measured today by Google's [Core Web Vitals](https://web.dev/articles/vitals) — a slow system hurts both your ranking and the satisfaction of the people using it.
+- Google holds [roughly 90% of the global search market](https://gs.statcounter.com/search-engine-market-share), which means the digital presence and the speed of your systems directly affect how many clients find you and stay.
+- Speed and user experience are measured today by Google's [Core Web Vitals](https://web.dev/articles/vitals), a slow system hurts both your ranking and the satisfaction of the people using it.
 - At most of the businesses we meet, an entire team spends roughly a third of the week on manual updates that the right system performs on its own.
 
 ## The connection that makes end-to-end automation work
 
-The real value appears when the system connects to everything else: a lead arriving from the site opens automatically as a project, the client receives status updates on WhatsApp, the invoice is generated and sent by itself, and the monthly report is waiting for the manager first thing on Monday. That is how one system replaces three operational roles — and frees the team for work that produces money.
+The real value appears when the system connects to everything else: a lead arriving from the site opens automatically as a project, the client receives status updates on WhatsApp, the invoice is generated and sent by itself, and the monthly report is waiting for the manager first thing on Monday. That is how one system replaces three operational roles, and frees the team for work that produces money.
 
 ## What a proper development process looks like
 
-It starts with scoping: mapping the existing process, identifying the bottlenecks and defining what the system must do in its first version. Build lean, go live quickly, and expand according to real usage — not according to a wish list. At Aiterra we build these systems in Next.js and Node.js: technologies that are fast, secure, hold load and grow with you.
+It starts with scoping: mapping the existing process, identifying the bottlenecks and defining what the system must do in its first version. Build lean, go live quickly, and expand according to real usage, not according to a wish list. At Aiterra we build these systems in Next.js and Node.js: technologies that are fast, secure, hold load and grow with you.
 
 Feel like the business is being run by spreadsheets? Leave your details and we will map together which system would save you the most time and money.
 
@@ -3452,9 +3452,9 @@ Feel like the business is being run by spreadsheets? Leave your details and we w
     excerpt:
       'It comes up in every scoping call: WordPress, or custom development? The honest answer is that it depends on your business. Here is how to decide, without paying twice for the same website.',
     tags: ['Development', 'WordPress', 'Next.js'],
-    content: `**In short (TL;DR):** WordPress suits brochure sites, blogs and content projects with a modest build budget and a fast route to market. A custom coded site (Next.js / React) wins where you need maximum speed, higher security or genuinely bespoke functionality. The simple rule: a site that presents information — WordPress is enough; a site that runs business processes — code.
+    content: `**In short (TL;DR):** WordPress suits brochure sites, blogs and content projects with a modest build budget and a fast route to market. A custom coded site (Next.js / React) wins where you need maximum speed, higher security or genuinely bespoke functionality. The simple rule: a site that presents information, WordPress is enough; a site that runs business processes, code.
 
-This is probably the question we hear most in scoping calls: build the site on WordPress, or in custom code? The honest answer is that there is no single right answer — there is a right choice for each business, according to its needs, its budget and its plans. As an agency that builds both premium WordPress sites and complex systems in Next.js and React, we can give you the full picture without an interest in pushing you one way.
+This is probably the question we hear most in scoping calls: build the site on WordPress, or in custom code? The honest answer is that there is no single right answer, there is a right choice for each business, according to its needs, its budget and its plans. As an agency that builds both premium WordPress sites and complex systems in Next.js and React, we can give you the full picture without an interest in pushing you one way.
 
 ![A developer writing code for a custom website on two screens](/images/blog/wordpress-vs-custom-code.webp)
 
@@ -3479,7 +3479,7 @@ Prices vary with complexity and how much is bespoke, but these are the ranges th
 | Brochure site | ₪4,000–12,000 | ₪9,000–20,000 |
 | Store or custom system | ₪12,000+ | ₪20,000+ |
 
-The build cost is only half the story — what matters is the total cost over time, which we come to below.
+The build cost is only half the story, what matters is the total cost over time, which we come to below.
 
 ## When WordPress is an excellent choice
 
@@ -3487,26 +3487,26 @@ WordPress runs roughly 43% of all websites ([W3Techs](https://w3techs.com/techno
 
 ## Where WordPress starts to strain
 
-The problems begin as the site grows. Every additional plugin slows the site down and opens a potential security hole. A heavy theme drags Core Web Vitals scores down, which hurts organic search. And when you need genuinely bespoke functionality — an intelligent price calculator, a customer account area, a connection to internal systems — you discover that stretching WordPress beyond what it was built for costs more than developing it properly in the first place.
+The problems begin as the site grows. Every additional plugin slows the site down and opens a potential security hole. A heavy theme drags Core Web Vitals scores down, which hurts organic search. And when you need genuinely bespoke functionality, an intelligent price calculator, a customer account area, a connection to internal systems, you discover that stretching WordPress beyond what it was built for costs more than developing it properly in the first place.
 
 ## A custom coded site: speed and freedom without compromise
 
-A site built in modern technology such as Next.js and React is written to your exact requirements — with no superfluous plugins and no dead code. The result: load times measured in milliseconds, security of a different order (there are no third-party plugins to break in through), and the ability to build any feature you can describe — from a booking system through to full integration with your CRM and automations. This is why technology companies and large organisations build their digital assets this way.
+A site built in modern technology such as Next.js and React is written to your exact requirements, with no superfluous plugins and no dead code. The result: load times measured in milliseconds, security of a different order (there are no third-party plugins to break in through), and the ability to build any feature you can describe, from a booking system through to full integration with your CRM and automations. This is why technology companies and large organisations build their digital assets this way.
 
 ## The numbers behind speed, and why they are money
 
-Speed is not a luxury — it is a line on the bottom of the page. Here is what the data says:
+Speed is not a luxury, it is a line on the bottom of the page. Here is what the data says:
 
 - According to Google research, when load time goes from one second to three, the probability that a visitor abandons the page rises by 32%.
 - Google reports that 53% of mobile visitors abandon a site that takes more than three seconds to load.
 - The "Milliseconds Make Millions" study by Google and Deloitte found that a 0.1-second improvement in load time increased retail conversions by 8.4%.
 - Core Web Vitals are an [official Google ranking signal](https://developers.google.com/search/docs/appearance/core-web-vitals) in search results.
 
-This is exactly where a coded site has the advantage: it is built fast from the foundations, without the dead weight of plugins — and precisely why the gap in total cost narrows over time, even when the build costs more.
+This is exactly where a coded site has the advantage: it is built fast from the foundations, without the dead weight of plugins, and precisely why the gap in total cost narrows over time, even when the build costs more.
 
 ## Three questions that will help you decide
 
-**What does the site have to do?** Present information — WordPress is enough. Run business processes — code.
+**What does the site have to do?** Present information, WordPress is enough. Run business processes, code.
 
 **How critical is speed?** If you are competing for organic search in a contested niche, or sending expensive paid traffic to the site, every tenth of a second is worth money.
 
@@ -3514,7 +3514,7 @@ This is exactly where a coded site has the advantage: it is built fast from the 
 
 ## How we approach it at Aiterra
 
-We start from the business, not the technology. In a scoping call we map what you actually need, and only then recommend a foundation — and sometimes our recommendation is the cheaper option, because it is the right one for the stage you are at. And if you later decide to move from WordPress to code, we carry out the migration with your accumulated organic search fully preserved.
+We start from the business, not the technology. In a scoping call we map what you actually need, and only then recommend a foundation, and sometimes our recommendation is the cheaper option, because it is the right one for the stage you are at. And if you later decide to move from WordPress to code, we carry out the migration with your accumulated organic search fully preserved.
 
 Not sure which foundation is right for your business? Leave your details and we will come back to you with a professional and honest recommendation, matched to the stage your business is actually at.`,
     faq: {

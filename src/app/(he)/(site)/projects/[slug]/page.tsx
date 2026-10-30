@@ -5,14 +5,15 @@ import BannerCta from '../../components/BannerCta'
 import ContactForm from '../../components/ContactForm'
 import Footer from '../../components/Footer'
 import MoreProjects from '../../components/MoreProjects'
+import ProjectFaq from '../../components/ProjectFaq'
 import RelatedServices from '../../components/RelatedServices'
 import { ProjectAbout, ProjectIntro, ProjectStory } from '../../components/ProjectCase'
 import { getAllPortfolioProjects, getProjectBySlug } from '@/lib/portfolio-server'
 import { getV2Content } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
-import { projectMetaTitle } from '@/lib/project-summary'
-import { breadcrumbList, projectSchema } from '@/lib/schema'
+import { projectFaq, projectMetaTitle } from '@/lib/project-summary'
+import { breadcrumbList, faqPage, projectSchema } from '@/lib/schema'
 
 type Params = { params: Promise<{ slug: string }> }
 
@@ -47,6 +48,8 @@ export default async function V2ProjectPage({ params }: Params) {
   const content = getV2Content()
   const copy = content.projectPage
   const item = content.portfolioItems.find((entry) => entry.id === slug)
+  const faq = projectFaq(project, 'he')
+  const faqSchema = faqPage({ path: `/projects/${slug}`, entries: faq })
 
   return (
     <>
@@ -66,11 +69,13 @@ export default async function V2ProjectPage({ params }: Params) {
         { name: copy.crumb, path: '/projects' },
         { name: project.title, path: `/projects/${project.slug}` },
       ])} />
+      {faqSchema ? <JsonLd data={faqSchema} /> : null}
       <Header />
       <main id="main-content">
         <ProjectIntro project={project} item={item} copy={copy} />
         <ProjectAbout project={project} item={item} copy={copy} />
         <ProjectStory project={project} copy={copy} />
+        <ProjectFaq entries={faq} heading="שאלות על הפרויקט" />
         <BannerCta banner={content.projectBanner} headingId="v2-project-banner" />
         <RelatedServices
           tags={project.tags}

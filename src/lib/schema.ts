@@ -37,6 +37,7 @@ export function webPage({
   image,
   type = 'WebPage',
   locale = 'he',
+  dateModified,
 }: {
   path: string
   name: string
@@ -44,12 +45,14 @@ export function webPage({
   image?: string
   type?: 'WebPage' | 'AboutPage' | 'ContactPage' | 'CollectionPage'
   locale?: 'he' | 'en'
+  dateModified?: string
 }) {
   const url = abs(path)
   return {
     '@context': 'https://schema.org',
     '@type': type,
     '@id': `${url}#webpage`,
+    ...(dateModified ? { dateModified } : {}),
     url,
     name,
     description,
@@ -130,6 +133,8 @@ export function articleSchema({
   }
 }
 
+export const PAGES_REVIEWED = '2026-10-30'
+
 export function projectSchema({
   slug,
   title,
@@ -158,6 +163,7 @@ export function projectSchema({
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
     '@id': `${url}#project`,
+    dateModified: PAGES_REVIEWED,
     name: title,
     description: toPlainText(description),
     url,

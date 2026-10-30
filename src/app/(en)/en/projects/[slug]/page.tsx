@@ -5,6 +5,7 @@ import BannerCta from '../../../../(he)/(site)/components/BannerCta'
 import ContactForm from '../../../../(he)/(site)/components/ContactForm'
 import Footer from '../../../../(he)/(site)/components/Footer'
 import MoreProjects from '../../../../(he)/(site)/components/MoreProjects'
+import ProjectFaq from '../../../../(he)/(site)/components/ProjectFaq'
 import {
   ProjectAbout,
   ProjectIntro,
@@ -15,8 +16,8 @@ import { applyProjectEn } from '@/lib/content-en-projects'
 import { getV2ContentEn } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
-import { projectMetaTitle } from '@/lib/project-summary'
-import { breadcrumbList, projectSchema } from '@/lib/schema'
+import { projectFaq, projectMetaTitle } from '@/lib/project-summary'
+import { breadcrumbList, faqPage, projectSchema } from '@/lib/schema'
 
 type Params = { params: Promise<{ slug: string }> }
 
@@ -55,8 +56,12 @@ export default async function EnProjectPage({ params }: Params) {
   const copy = content.projectPage
   const item = content.portfolioItems.find((entry) => entry.id === slug)
 
+  const faq = projectFaq(project, 'en')
+  const faqSchema = faqPage({ path: `/en/projects/${slug}`, entries: faq, locale: 'en' })
+
   return (
     <>
+      {faqSchema ? <JsonLd data={faqSchema} /> : null}
       <JsonLd
         data={projectSchema({
           slug: project.slug,
@@ -83,6 +88,7 @@ export default async function EnProjectPage({ params }: Params) {
         <ProjectIntro project={project} item={item} copy={copy} locale="en" />
         <ProjectAbout project={project} item={item} copy={copy} />
         <ProjectStory project={project} copy={copy} />
+        <ProjectFaq entries={faq} heading="Questions about this project" />
         <BannerCta banner={content.projectBanner} headingId="v2-project-banner" />
         <MoreProjects currentId={slug} eyebrow={copy.moreEyebrow} heading={copy.moreHeading} />
       </main>

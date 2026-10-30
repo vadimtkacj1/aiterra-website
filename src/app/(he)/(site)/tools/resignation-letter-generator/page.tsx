@@ -38,7 +38,7 @@ export default function Page() {
         href: '/services/development',
       }}
     >
-      <h2>חשוב לדעת</h2>
+      <h2>לפני ששולחים</h2>
       <p>המידע כללי ואינו ייעוץ משפטי. כדאי לבדוק גם את הסכם העבודה ואת צו ההרחבה שחל עליכם.</p>
     </ToolLayout>
   )
