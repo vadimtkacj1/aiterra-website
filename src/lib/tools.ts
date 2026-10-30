@@ -1422,6 +1422,14 @@ export const tools: ToolEntry[] = [
     icon: 'calculator',
     reviewed: '2026-10-30',
   },
+  {
+    path: '/tools/final-settlement-calculator',
+    title: 'מחשבון גמר חשבון',
+    description: 'פיצויים, פדיון חופשה, דמי הבראה והודעה מוקדמת בסיום עבודה, בתוצאה אחת.',
+    category: 'work',
+    icon: 'calculator',
+    reviewed: '2026-10-30',
+  },
   ...nutrients.map(({ slug, name }) => ({
     path: nutrientPath(slug),
     title: `טבלת ${name} במזון`,
