@@ -1270,13 +1270,40 @@ export const tools: ToolEntry[] = [
   },
 ]
 
+const CLOSEST_TOOLS: Record<string, string[]> = {
+  '/tools/days-between-dates': ['/tools/work-days-calculator', '/tools/hebrew-date-converter', '/tools/hebrew-calendar-2027'],
+  '/tools/work-days-calculator': ['/tools/days-between-dates', '/tools/vacation-days-calculator', '/tools/monthly-timesheet'],
+  '/tools/hebrew-date-converter': ['/tools/hebrew-calendar-2027', '/tools/days-between-dates', '/tools/gematria-calculator'],
+  '/tools/idf-ranks-chart': ['/tools/police-ranks-chart', '/tools/hebrew-acronyms'],
+  '/tools/police-ranks-chart': ['/tools/idf-ranks-chart', '/tools/hebrew-acronyms'],
+  '/tools/international-dialing-codes': ['/tools/israeli-phone-format', '/tools/time-difference-israel', '/tools/whatsapp-link-generator'],
+  '/tools/israeli-phone-format': ['/tools/international-dialing-codes', '/tools/whatsapp-link-generator', '/tools/english-address-generator'],
+  '/tools/time-difference-israel': ['/tools/international-dialing-codes', '/tools/flight-time-from-israel'],
+  '/tools/flight-time-from-israel': ['/tools/time-difference-israel', '/tools/travel-packing-checklist'],
+  '/tools/hebrew-name-to-english': ['/tools/english-address-generator', '/tools/hebrew-words-in-english', '/tools/keyboard-language-fix'],
+  '/tools/english-address-generator': ['/tools/hebrew-name-to-english', '/tools/israeli-phone-format'],
+  '/tools/hebrew-rhyme-finder': ['/tools/gematria-calculator', '/tools/wedding-blessing-generator', '/tools/birthday-blessing-generator'],
+  '/tools/gematria-calculator': ['/tools/hebrew-rhyme-finder', '/tools/hebrew-date-converter', '/tools/secret-code-maker'],
+  '/tools/fractions-calculator': ['/tools/percentage-calculator', '/tools/unit-converter'],
+  '/tools/percentage-calculator': ['/tools/fractions-calculator', '/tools/vat-calculator', '/tools/profit-margin-calculator'],
+  '/tools/vat-calculator': ['/tools/percentage-calculator', '/tools/amount-in-words', '/tools/price-quote-generator'],
+  '/tools/amount-in-words': ['/tools/vat-calculator', '/tools/price-quote-generator'],
+  '/tools/random-wheel-picker': ['/tools/bingo-card-generator', '/tools/word-search-maker'],
+  '/tools/id-number-check': ['/tools/iban-calculator', '/tools/company-lookup'],
+}
+
 export const otherTools = (path: string) => {
   const current = tools.find((tool) => tool.path === path)
   const rest = tools.filter((tool) => tool.path !== path)
   if (!current) return rest
+  const closest = (CLOSEST_TOOLS[path] ?? []).flatMap((closePath) =>
+    rest.filter((tool) => tool.path === closePath),
+  )
+  const others = rest.filter((tool) => !closest.includes(tool))
   return [
-    ...rest.filter((tool) => tool.category === current.category),
-    ...rest.filter((tool) => tool.category !== current.category),
+    ...closest,
+    ...others.filter((tool) => tool.category === current.category),
+    ...others.filter((tool) => tool.category !== current.category),
   ]
 }
 
