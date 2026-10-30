@@ -1,5 +1,7 @@
 'use client'
 
+/* eslint-disable @next/next/no-img-element */
+
 import { Fragment, useId, useState } from 'react'
 import { compareRanks, filterRanks, groupLabels, groupNotes, idfRanks, type RankGroup } from '@/lib/idf-ranks'
 import ui from './toolUi.module.css'
@@ -118,7 +120,18 @@ export default function IdfRanksChart() {
                         <td lang="en" dir="ltr">
                           {rank.nato || '—'}
                         </td>
-                        <td>{rank.worn ? `${rank.insignia}, ${rank.worn}` : rank.insignia}</td>
+                        <td>
+                          {rank.id === 'turai' ? null : (
+                            <img
+                              src={`/images/idf-ranks/${rank.id}.svg`}
+                              alt={`סימן הדרגה ${rank.name}`}
+                              className={styles.insignia}
+                              height={48}
+                              loading="lazy"
+                            />
+                          )}
+                          {rank.worn ? `${rank.insignia}, ${rank.worn}` : rank.insignia}
+                        </td>
                       </tr>
                     ))}
                   </Fragment>

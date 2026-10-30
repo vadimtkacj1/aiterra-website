@@ -1510,6 +1510,14 @@ export const tools: ToolEntry[] = [
     icon: 'file',
     reviewed: '2026-10-31',
   },
+  {
+    path: '/tools/hosting-food-calculator',
+    title: 'מחשבון כמויות אוכל לאירוח',
+    description: 'כמה בשר, תוספות, סלטים ושתייה צריך לאירוח לפי מספר האורחים, עם רשימת קניות לוואטסאפ.',
+    category: 'home',
+    icon: 'calculator',
+    reviewed: '2026-10-31',
+  },
   ...nutrients.map(({ slug, name }) => ({
     path: nutrientPath(slug),
     title: `טבלת ${name} במזון`,

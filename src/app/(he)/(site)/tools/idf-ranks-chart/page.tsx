@@ -125,6 +125,13 @@ export default function IdfRanksChartPage() {
       <p className={styles.reviewed}>
         הנתונים נבדקו מול המקורות ב-<time dateTime={IDF_RANKS_REVIEWED}>{IDF_RANKS_REVIEWED_LABEL}</time>.
       </p>
+      <p>
+        איורי הדרגות: Mintz l, מתוך{' '}
+        <a href="https://commons.wikimedia.org/wiki/File:IDF_Ranks_Aluf.svg" rel="noopener" target="_blank">
+          ויקישיתוף
+        </a>
+        , ברישיון CC BY-SA 3.0.
+      </p>
     </ToolLayout>
   )
 }

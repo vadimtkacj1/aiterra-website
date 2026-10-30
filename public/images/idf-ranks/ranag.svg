@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.0"
+   width="86"
+   height="172"
+   id="svg11093">
+  <defs
+     id="defs11095" />
+  <g
+     transform="translate(-1154.1429,-780.6479)"
+     id="layer1">
+    <g
+       transform="translate(938.65923,201.65266)"
+       id="g11038">
+      <rect
+         width="86"
+         height="172"
+         x="215.48363"
+         y="578.99524"
+         id="rect10981"
+         style="fill:#12353a;fill-opacity:1;stroke:none;stroke-width:1.38699996;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g11032">
+        <path
+           d="M 258.49925,694.72818 L 226.14211,670.15006 L 226.14211,682.65006 L 258.49925,707.21256 L 290.82515,682.65006 L 290.82515,670.15006 L 258.49925,694.72818 z"
+           id="path10985"
+           style="fill:#a3c1b7;fill-opacity:1;stroke:#165943;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           d="M 258.37575,658.696 L 255.58238,663.55745 L 249.90745,663.55745 L 252.74492,668.4973 L 249.90745,673.43715 L 255.58238,673.43715 L 258.37575,678.29859 L 261.16912,673.43715 L 266.84405,673.43715 L 264.00658,668.4973 L 266.84405,663.55745 L 261.16912,663.55745 L 258.37575,658.696 z"
+           id="path10987"
+           style="fill:#a3c1b7;fill-opacity:1;stroke:#165943;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           d="M 258.49925,712.72818 L 226.14211,688.15006 L 226.14211,700.65006 L 258.49925,725.21256 L 290.82515,700.65006 L 290.82515,688.15006 L 258.49925,712.72818 z"
+           id="path10989"
+           style="fill:#a3c1b7;fill-opacity:1;stroke:#165943;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           d="M 258.49925,730.72818 L 226.14211,706.15006 L 226.14211,718.65006 L 258.49925,743.21256 L 290.82515,718.65006 L 290.82515,706.15006 L 258.49925,730.72818 z"
+           id="path11019"
+           style="fill:#a3c1b7;fill-opacity:1;stroke:#165943;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>

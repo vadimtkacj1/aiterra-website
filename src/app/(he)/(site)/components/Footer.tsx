@@ -15,6 +15,7 @@ import styles from './Footer.module.css'
 
 const POPULAR_TOOLS = [
   { href: '/tools', label: 'כל הכלים החינמיים' },
+  { href: '/tools/time-difference-israel', label: 'מה השעה בישראל' },
   { href: '/tools/idf-ranks-chart', label: 'דרגות בצה״ל' },
   { href: '/tools/israeli-phone-format', label: 'קידומת ישראל' },
   { href: '/tools/random-wheel-picker', label: 'גלגל מזל' },

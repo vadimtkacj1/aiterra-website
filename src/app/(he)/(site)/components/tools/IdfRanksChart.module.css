@@ -84,3 +84,11 @@
     padding: 20px 14px 28px;
   }
 }
+
+.insignia {
+  display: block;
+  width: auto;
+  max-width: 110px;
+  height: 48px;
+  margin-block-end: 6px;
+}
