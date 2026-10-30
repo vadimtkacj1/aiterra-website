@@ -13,6 +13,15 @@ import FooterSection from './FooterSection'
 import { getContent, type Locale } from '@/lib/v2-content-server'
 import styles from './Footer.module.css'
 
+const POPULAR_TOOLS = [
+  { href: '/tools', label: 'כל הכלים החינמיים' },
+  { href: '/tools/idf-ranks-chart', label: 'דרגות בצה״ל' },
+  { href: '/tools/israeli-phone-format', label: 'קידומת ישראל' },
+  { href: '/tools/random-wheel-picker', label: 'גלגל מזל' },
+  { href: '/tools/hebrew-rhyme-finder', label: 'חרוזים למילה' },
+  { href: '/tools/gematria-calculator', label: 'מחשבון גימטריה' },
+]
+
 export default function Footer({
   children,
   locale,
@@ -76,7 +85,7 @@ export default function Footer({
       {children}
 
       <div className={styles.inner}>
-        <div className={styles.grid}>
+        <div className={locale === 'en' ? styles.grid : `${styles.grid} ${styles.gridWithTools}`}>
           <div className={[styles.column, styles.brandColumn].join(' ')}>
             <Link
               href={locale === 'en' ? '/en' : '/'}
@@ -109,6 +118,20 @@ export default function Footer({
               </ul>
             </FooterSection>
           ))}
+
+          {locale === 'en' ? null : (
+            <FooterSection id="tools" title="כלים פופולריים" as="nav">
+              <ul className={styles.list}>
+                {POPULAR_TOOLS.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className={styles.link}>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </FooterSection>
+          )}
 
           <FooterSection id="contact" title={footer.contactTitle}>
             <address className={styles.contactList}>

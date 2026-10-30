@@ -64,6 +64,10 @@
   border-bottom: 1px solid var(--footer-hairline);
 }
 
+.gridWithTools {
+  grid-template-columns: minmax(max-content, 43fr) 39fr 39fr 39fr minmax(max-content, 39fr);
+}
+
 .column {
   position: relative;
   min-width: 0;
