@@ -6,6 +6,7 @@ import BlogIndex, { type BlogCard } from '../components/BlogIndex'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import { getAllPosts } from '@/lib/blog-server'
+import { getAllAuthors } from '@/lib/authors-server'
 import { formatPostDate, readingMinutes } from '../blogCategory'
 import { getV2Content } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
@@ -43,6 +44,7 @@ function loadCards(defaultAuthor: string): BlogCard[] {
 export default function V2BlogPage() {
   const { blog } = getV2Content()
   const posts = loadCards(blog.defaultAuthor)
+  const authors = getAllAuthors().map(({ id, name }) => ({ name, href: `/blog/author/${id}` }))
 
   return (
     <>
@@ -59,7 +61,7 @@ export default function V2BlogPage() {
       <Header />
       <main id="main-content">
         <PageHero title={blog.title} lede={blog.lede} headingId="v2-blog-heading" />
-        <BlogIndex posts={posts} />
+        <BlogIndex posts={posts} authors={authors} />
       </main>
       <Footer>
         <ContactForm variant="footer" source="v2-blog" />

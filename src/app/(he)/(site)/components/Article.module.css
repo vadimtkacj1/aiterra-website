@@ -85,8 +85,9 @@
 
 .byline {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 40px;
+  gap: 12px 40px;
   margin-top: 22px;
   font-size: 13px;
   line-height: 1;
@@ -472,8 +473,7 @@
   inset-inline: 0;
   bottom: 0;
   padding: 16px 14px 14px;
-  direction: ltr;
-  text-align: left;
+  text-align: start;
   color: #ffffff;
   font-family: var(--v2-font-display);
   font-size: 26px;
@@ -576,7 +576,7 @@
   }
 
   .byline {
-    gap: 24px;
+    gap: 10px 24px;
     margin-top: 18px;
   }
 

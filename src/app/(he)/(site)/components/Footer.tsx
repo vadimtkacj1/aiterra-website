@@ -10,6 +10,7 @@ import {
 } from '@/lib/contact'
 import { FacebookIcon, InstagramIcon, ThreadsIcon, TikTokIcon, XIcon } from './icons'
 import FooterSection from './FooterSection'
+import CookieSettingsButton from '@/components/layout/CookieSettingsButton'
 import { getContent, type Locale } from '@/lib/v2-content-server'
 import styles from './Footer.module.css'
 
@@ -177,6 +178,9 @@ export default function Footer({
                 </Link>
               </li>
             ))}
+            <li>
+              <CookieSettingsButton locale={locale} className={`${styles.legalLink} cursor-pointer`} />
+            </li>
           </ul>
         </div>
       </div>

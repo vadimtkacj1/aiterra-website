@@ -1,11 +1,27 @@
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import { BodyFatCalculator } from '../../components/tools/BodyCalculators'
+import ToolSources from '../../components/tools/ToolSources'
 
 const PATH = '/tools/body-fat-calculator'
 const TITLE = 'מחשבון אחוזי שומן לפי היקפים'
 const META_TITLE = 'מחשבון אחוזי שומן לפי היקפים: שיטת הצי האמריקאי'
 const DESCRIPTION =
   'מחשבון אחוזי שומן: מכניסים גובה והיקפי צוואר, מותניים וירכיים ומקבלים הערכת אחוז שומן בגוף בלי קליפר.'
+
+const sources = [
+  {
+    href: 'https://doi.org/10.21236/ada143890',
+    label: 'Hodgdon ו-Beckett, 1984: חיזוי אחוזי שומן לגברים בצי האמריקאי לפי היקפי גוף וגובה',
+  },
+  {
+    href: 'https://doi.org/10.21236/ada146456',
+    label: 'Hodgdon ו-Beckett, 1984: חיזוי אחוזי שומן לנשים בצי האמריקאי לפי היקפי גוף וגובה',
+  },
+  {
+    href: 'https://www.acefitness.org/about-ace/press-room/in-the-news/8602/body-fat-percentage-charting-averages-in-men-and-women-very-well-health/',
+    label: 'American Council on Exercise: הטווחים הממוצעים, כתבת Verywell Health באתר ACE, 26.2.2024',
+  },
+]
 
 const faq: ToolFaqEntry[] = [
   {
@@ -50,6 +66,7 @@ export default function Page() {
     >
       <h2>איך זה מחושב</h2>
       <p>מקור החישוב: נוסחת ההיקפים של הצי האמריקאי. התוצאה היא הערכה כללית ואינה מחליפה ייעוץ רפואי או תזונתי.</p>
+      <ToolSources sources={sources} />
     </ToolLayout>
   )
 }

@@ -1,6 +1,30 @@
 import Link from 'next/link'
 import EnToolLayout, { enToolMetadata, type EnToolFaqEntry } from '../_components/EnToolLayout'
 import ExemptDealerCheckerEn from '../_components/ExemptDealerCheckerEn'
+import ToolSources from '../../../../(he)/(site)/components/tools/ToolSources'
+
+const sources = [
+  {
+    href: 'https://www.gov.il/he/departments/general/vat-rate-amount-new',
+    label: 'Israel Tax Authority: VAT amounts and rates, osek patur 122,833 from 1.1.2026 (Hebrew)',
+  },
+  {
+    href: 'https://www.gov.il/he/service/request-open-exempt-dealer-via-internet',
+    label: 'Israel Tax Authority: opening an osek patur file online (Hebrew)',
+  },
+  {
+    href: 'https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3',
+    label: 'Value Added Tax Law, 1975, on Wikisource (Hebrew)',
+  },
+  {
+    href: 'https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3_(%D7%A8%D7%99%D7%A9%D7%95%D7%9D)',
+    label: 'Value Added Tax Regulations (Registration), 1976, on Wikisource (Hebrew)',
+  },
+  {
+    href: 'https://www.gov.il/he/service/vat-declarationisexempt',
+    label: 'Israel Tax Authority: osek patur annual declaration (Hebrew)',
+  },
+]
 
 const SLUG = 'exempt-dealer-threshold'
 const META_TITLE = 'Osek Patur Ceiling 2026: ₪122,833 Turnover Check'
@@ -85,6 +109,7 @@ export default function EnExemptDealerPage() {
         general information, not tax advice. The calculator does not check special transactions, such as selling property
         or equipment, and does not set the date VAT begins.
       </p>
+      <ToolSources sources={sources} heading="Sources" />
     </EnToolLayout>
   )
 }

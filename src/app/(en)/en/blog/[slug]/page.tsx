@@ -5,7 +5,9 @@ import { marked, type Tokens } from 'marked'
 import Header from '../../../../(he)/(site)/components/Header'
 import ArticleToc, { type TocEntry } from '../../../../(he)/(site)/components/ArticleToc'
 import ShareButton from '../../../../(he)/(site)/components/ShareButton'
+import PostDates from '../../../../(he)/(site)/components/PostDates'
 import ActionButton from '../../../../(he)/(site)/components/ActionButton'
+import Faq from '../../../../(he)/(site)/components/Faq'
 import RelatedPosts from '../../../../(he)/(site)/components/RelatedPosts'
 import RelatedServices from '../../../../(he)/(site)/components/RelatedServices'
 import ContactForm from '../../../../(he)/(site)/components/ContactForm'
@@ -20,7 +22,7 @@ import { categoryTag, formatPostDate, matchesKeywords, readingMinutes } from '..
 import { getV2ContentEn } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
-import { articleSchema, breadcrumbList, faqPage, toPlainText } from '@/lib/schema'
+import { articleSchema, breadcrumbList, faqPage, personNames, toPlainText } from '@/lib/schema'
 import styles from '../../../../(he)/(site)/components/Article.module.css'
 
 export const revalidate = 300
@@ -31,6 +33,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params
   const post = getPostEnBySlug(slug)
   if (!post) return {}
+  const { name: authorName } = personNames(post.authorId ?? '', post.author, 'en')
   return pageMetadata({
     title: post.seoTitle || post.title,
     description: post.seoDescription || post.excerpt,
@@ -42,7 +45,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     type: 'article',
     publishedTime: post.datePublished,
     modifiedTime: post.dateModified || post.datePublished,
-    authors: post.author ? [post.author] : undefined,
+    authors: authorName ? [authorName] : undefined,
     tags: post.tags,
   })
 }
@@ -95,7 +98,7 @@ export default async function EnArticlePage({ params }: Params) {
   const { article, blog, contact } = getV2ContentEn()
   const rawProfile = post.authorId ? getAuthorById(post.authorId) : null
   const profile = rawProfile ? applyAuthorEn(rawProfile) : null
-  const authorName = post.author.trim() || profile?.name || blog.defaultAuthor
+  const authorName = profile?.name || post.author.trim() || blog.defaultAuthor
   const authorImage = post.authorImage?.trim() || profile?.image || ''
   const authorBio = profile?.bio || (profile?.role ? `${authorName} — ${profile.role}` : authorName)
   const { html, toc } = renderArticle(post.content || '', post.images?.[0] || '')
@@ -126,6 +129,7 @@ export default async function EnArticlePage({ params }: Params) {
         authorId: post.authorId,
         tags: post.tags ?? [],
         wordCount: toPlainText(post.content || '').split(' ').filter(Boolean).length,
+        locale: 'en',
       })} />
       <JsonLd data={breadcrumbList([
         { name: blog.crumbHome, path: '/en' },
@@ -135,6 +139,7 @@ export default async function EnArticlePage({ params }: Params) {
       {post.faq?.items?.length ? (
         <JsonLd data={faqPage({
           path: `/en/blog/${post.slug}`,
+          locale: 'en',
           entries: post.faq.items.map((item) => ({ question: item.q, answer: item.a })),
         })!} />
       ) : null}
@@ -167,9 +172,13 @@ export default async function EnArticlePage({ params }: Params) {
               <h1 className={styles.title}>{post.title}</h1>
               <div className={styles.byline}>
                 <ShareButton title={post.title} />
-                <span>
-                  {article.publishedPrefix} {formatPostDate(post.datePublished, 'en')}
-                </span>
+                <PostDates
+                  published={post.datePublished}
+                  modified={post.dateModified}
+                  publishedPrefix={article.publishedPrefix}
+                  updatedPrefix={article.updatedPrefix}
+                  locale="en"
+                />
               </div>
               {post.excerpt ? <p className={styles.lede}>{post.excerpt}</p> : null}
             </header>
@@ -238,6 +247,17 @@ export default async function EnArticlePage({ params }: Params) {
             </div>
           </div>
         </article>
+
+        {post.faq?.items?.length ? (
+          <Faq
+            heading={post.faq.title ? [post.faq.title] : undefined}
+            entries={post.faq.items.map((item, index) => ({
+              id: `post-faq-${index}`,
+              question: item.q,
+              answer: item.a,
+            }))}
+          />
+        ) : null}
 
         <RelatedServices
           tags={post.tags}

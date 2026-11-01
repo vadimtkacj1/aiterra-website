@@ -78,7 +78,8 @@ export default function HebrewWordsInEnglishPage() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="באר שבע באנגלית היא Beersheba או Be’er Sheva, ואילו ברשם היישובים של רשות האוכלוסין וההגירה היא BE’ER SHEVA. כאן מחפשים עיר בעברית או באנגלית ורואים לכל אחת את האיות הרשמי ברשם ואת האיות המקובל, בין 131 ערים ויישובים."
+      answer="באר שבע באנגלית היא Beersheba או Be’er Sheva, ואילו ברשם היישובים של רשות האוכלוסין וההגירה היא BE’ER SHEVA."
+      lede="כאן מחפשים עיר בעברית או באנגלית ורואים לכל אחת את האיות הרשמי ברשם ואת האיות המקובל, בין 131 ערים ויישובים."
       chips={['131 ערים ויישובים', 'איות רשמי ומקובל', 'חיפוש בעברית ובאנגלית', 'בלי הרשמה']}
       tool={<HebrewWordsInEnglish />}
       faq={faq}

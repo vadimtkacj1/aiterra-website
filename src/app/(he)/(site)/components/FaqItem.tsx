@@ -1,5 +1,6 @@
 import { useId } from 'react'
 import { CrossMark } from './icons'
+import LtrText from './LtrText'
 import type { FaqEntry } from '../content'
 import styles from './FaqItem.module.css'
 
@@ -25,7 +26,9 @@ export default function FaqItem({ entry, open, onToggle }: FaqItemProps) {
           aria-controls={panelId}
           onClick={onToggle}
         >
-          <span className={styles.label}>{entry.question}</span>
+          <span className={styles.label}>
+            <LtrText text={entry.question} />
+          </span>
           <span className={styles.toggle} aria-hidden="true" />
         </button>
       </h3>
@@ -38,7 +41,9 @@ export default function FaqItem({ entry, open, onToggle }: FaqItemProps) {
         className={styles.panel}
       >
         <div className={styles.panelInner}>
-          <p className={styles.answer}>{entry.answer}</p>
+          <p className={styles.answer}>
+            <LtrText text={entry.answer} />
+          </p>
         </div>
       </div>
 

@@ -13,7 +13,7 @@ const DESCRIPTION =
 const sources = [
   {
     label: 'data.gov.il: רשימת יישובים (הלשכה המרכזית לסטטיסטיקה)',
-    href: 'https://data.gov.il/dataset/citiesandsettelments',
+    href: 'https://data.gov.il/he/datasets/population_authority/citiesandsettelments',
   },
   { label: 'דואר ישראל: איתור מיקוד', href: ZIP_LOOKUP_URL },
   { label: 'ויקיפדיה: Postal codes in Israel', href: 'https://en.wikipedia.org/wiki/Postal_codes_in_Israel' },

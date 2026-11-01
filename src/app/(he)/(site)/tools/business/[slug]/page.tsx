@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../../components/tools/ToolLayout'
 import BusinessScenario from '../../../components/tools/BusinessScenario'
+import ToolSources from '../../../components/tools/ToolSources'
 import {
   businessCalculatorBySlug,
   businessCalculatorPath,
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: Params) {
 export default async function BusinessCalculatorPage({ params }: Params) {
   const calculator = businessCalculatorBySlug((await params).slug)
   if (!calculator) notFound()
-  const { slug, title, metaTitle, description, lede, formula, fields } = calculator
+  const { slug, title, metaTitle, description, lede, formula, source, fields } = calculator
   const example = exampleResult(calculator)
   const faq: ToolFaqEntry[] = calculator.faq.map((entry, index) => ({ id: `${slug}-${index}`, ...entry }))
 
@@ -69,6 +70,7 @@ export default async function BusinessCalculatorPage({ params }: Params) {
         </>
       ) : null}
       <p>התוצאה תלויה בתחזית שהזנתם, והיא אינה ייעוץ פיננסי.</p>
+      {source ? <ToolSources sources={[source]} /> : null}
       <h2>עוד מחשבונים לעסק</h2>
       <ul>
         {businessCalculators

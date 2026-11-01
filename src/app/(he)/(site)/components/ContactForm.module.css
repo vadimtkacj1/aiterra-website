@@ -379,8 +379,7 @@
   inset-inline: 0;
   bottom: 0;
   padding: 48px 48px 40px;
-  direction: ltr;
-  text-align: left;
+  text-align: start;
   color: #ffffff;
   background: linear-gradient(to top, rgba(10, 16, 30, 0.66), rgba(10, 16, 30, 0));
   font-family: var(--v2-font-display);

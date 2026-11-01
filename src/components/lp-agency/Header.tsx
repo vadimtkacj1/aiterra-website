@@ -3,7 +3,17 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
-export default function Header() {
+const MENU_ITEMS = [
+  { label: 'השירותים שלנו', href: '#services' },
+  { label: 'פורטפוליו', href: '#portfolio' },
+  { label: 'למה לבחור בנו?', href: '#why-us' },
+  { label: 'עקבו אחרינו', href: '#follow' },
+  { label: 'טופס יצירת קשר', href: '#contact' },
+];
+
+type HeaderProps = { hiddenAnchors?: string[] };
+
+export default function Header({ hiddenAnchors = [] }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,13 +26,7 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const menuItems = [
-    'השירותים שלנו',
-    'פורטפוליו',
-    'למה לבחור בנו?',
-    'עקבו אחרינו',
-    'טופס יצירת קשר',
-  ];
+  const menuItems = MENU_ITEMS.filter((item) => !hiddenAnchors.includes(item.href));
 
   return (
     <>
@@ -55,13 +59,13 @@ export default function Header() {
           </button>
 
           <nav className="hidden md:flex items-center gap-8" dir="rtl">
-            {menuItems.map((item, index) => (
+            {menuItems.map((item) => (
               <a
-                key={index}
-                href="#"
+                key={item.href}
+                href={item.href}
                 className="text-sm font-medium text-gray-800 hover:text-blue-600 transition"
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </nav>
@@ -110,13 +114,14 @@ export default function Header() {
 
           <nav className="px-6 py-8">
             <ul className="space-y-6 text-center">
-              {menuItems.map((item, index) => (
-                <li key={index}>
+              {menuItems.map((item) => (
+                <li key={item.href}>
                   <a
-                    href="#"
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
                     className="text-lg font-medium text-gray-800 hover:text-blue-600 transition block"
                   >
-                    {item}
+                    {item.label}
                   </a>
                 </li>
               ))}

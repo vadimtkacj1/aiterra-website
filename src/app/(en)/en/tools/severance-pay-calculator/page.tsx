@@ -3,6 +3,40 @@ import EnToolLayout, { enToolMetadata, type EnToolFaqEntry } from '../_component
 import SeverancePayCalculatorEn from '../_components/SeverancePayCalculatorEn'
 import { ils } from '../_components/en-format'
 import { EXEMPTION_CEILING_PER_YEAR, EXEMPTION_CEILING_YEAR } from '@/lib/severance-pay'
+import ToolSources from '../../../../(he)/(site)/components/tools/ToolSources'
+
+const kolzchut = (title: string) => `https://www.kolzchut.org.il/he/${encodeURIComponent(title.replace(/ /g, '_'))}`
+
+const sources = [
+  {
+    href: kolzchut('פיצויי פיטורים'),
+    label: 'Kol Zchut: severance pay (Hebrew)',
+  },
+  {
+    href: kolzchut('פיצויי פיטורים לעובד שהתפטר'),
+    label: 'Kol Zchut: severance pay after resigning (Hebrew)',
+  },
+  {
+    href: kolzchut('פיצויי פיטורים לעובד שהתפטר עקב הרעה מוחשית בתנאי העבודה'),
+    label: 'Kol Zchut: resigning over a substantial worsening of conditions (Hebrew)',
+  },
+  {
+    href: kolzchut('פיצויי פיטורים לעובד שהתפטר עקב בריאות לקויה שלו או של בן משפחתו'),
+    label: 'Kol Zchut: resigning over the health of the employee or a family member (Hebrew)',
+  },
+  {
+    href: kolzchut('פטור ממס הכנסה על פיצויי פיטורים וכספים אחרים המשולמים לעובד בסיום העסקתו'),
+    label: 'Kol Zchut: income tax exemption on severance pay (Hebrew)',
+  },
+  {
+    href: 'https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf',
+    label: 'Israel Tax Authority: income tax guide for salaries, January 2026 onwards (PDF, Hebrew)',
+  },
+  {
+    href: 'https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%A4%D7%99%D7%A6%D7%95%D7%99%D7%99_%D7%A4%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%9D',
+    label: 'Severance Pay Law, 1963, on Wikisource (Hebrew)',
+  },
+]
 
 const SLUG = 'severance-pay-calculator'
 const META_TITLE = 'Israel Severance Pay Calculator 2026 (Pitzuim)'
@@ -112,6 +146,7 @@ export default function EnSeverancePayPage() {
         This is general information, not legal advice. A collective agreement, personal contract or extension order can
         give more, and severance can be denied or reduced in special cases.
       </p>
+      <ToolSources sources={sources} heading="Sources" />
     </EnToolLayout>
   )
 }

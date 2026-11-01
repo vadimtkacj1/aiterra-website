@@ -60,8 +60,8 @@ export type BranchData =
 
 export const BRANCHES_RESOURCE_ID = '2202bada-4baf-45f5-aa61-8c5bad9646d3'
 export const BANKS_RESOURCE_ID = 'ebb61778-e34c-4e67-8fcf-0e643d9cf8c2'
-export const BRANCHES_DATASET_URL = 'https://data.gov.il/he/dataset/branches'
-export const BANKS_DATASET_URL = 'https://data.gov.il/he/dataset/375'
+export const BRANCHES_DATASET_URL = 'https://data.gov.il/he/datasets/bank_israel/branches'
+export const BANKS_DATASET_URL = 'https://data.gov.il/he/datasets/bank_israel/375'
 export const BANK_OF_ISRAEL_URL = 'https://www.boi.org.il'
 export const RESULTS_LIMIT = 30
 export const PLACE_MIN_LETTERS = 2

@@ -38,9 +38,11 @@ const columnOf = (index: number) => {
 
 export default function BlogIndex({
   posts,
+  authors = [],
   locale = 'he',
 }: {
   posts: BlogCard[]
+  authors?: { name: string; href: string }[]
   locale?: 'he' | 'en'
 }) {
   const blog = useV2('blog', blogDefaults)
@@ -142,6 +144,21 @@ export default function BlogIndex({
         )}
 
         <GridRule columns={[1, 2, 1]} />
+
+        {authors.length > 0 ? (
+          <nav className={styles.authors} aria-label={blog.authorsLabel}>
+            <span>{blog.authorsLabel}:</span>
+            {authors.map((author) => (
+              <Link
+                key={author.href}
+                href={author.href}
+                className={[styles.crumbLink, 'underline underline-offset-2'].join(' ')}
+              >
+                {author.name}
+              </Link>
+            ))}
+          </nav>
+        ) : null}
 
         {visible.length > limit ? (
           <div className={styles.moreRow}>

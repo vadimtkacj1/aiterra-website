@@ -35,9 +35,7 @@ export default function Storefront3D({ className = '' }: { className?: string })
       <div className="wire-plane wire-far" style={z(-78)}>
         <div className="absolute inset-0 border border-current">
           <div className="flex h-[13%] items-center border-b border-current px-2">
-            <span dir="ltr" className="mark text-[8px]">
-              brand-x.co.il
-            </span>
+            <span className="mark text-[8px]">החנות שלכם</span>
           </div>
         </div>
       </div>

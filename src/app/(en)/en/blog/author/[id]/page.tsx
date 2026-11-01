@@ -17,6 +17,7 @@ import {
   authorMetaTitle,
   capMetaDescription,
 } from '@/lib/content-en-authors'
+import { personId, personNames, personUrl } from '@/lib/schema'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 
 // ISR: cached HTML, refreshed in the background; author/blog edits in admin
@@ -60,7 +61,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       languages: {
         'he-IL': `/blog/author/${author.id}`,
         en: canonical,
-        'x-default': `/blog/author/${author.id}`,
+        'x-default': canonical,
       },
     },
     openGraph: {
@@ -86,20 +87,19 @@ export default async function EnAuthorPage({ params }: { params: Promise<{ id: s
   const sameAs = [author.socials?.linkedin, author.socials?.instagram, author.socials?.facebook].filter(
     (u): u is string => Boolean(u),
   )
-  const authorUrl = `${SITE_URL}/en/blog/author/${author.id}`
 
   const personData = {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
     mainEntity: {
       '@type': 'Person',
-      '@id': `${authorUrl}#person`,
-      name: author.name,
+      '@id': personId(author.id, 'en'),
+      ...personNames(raw.id, raw.name, 'en'),
       jobTitle: author.role || undefined,
       description: author.bio || undefined,
       ...(absolute(author.image) ? { image: absolute(author.image) } : {}),
-      url: authorUrl,
-      ...(sameAs.length ? { sameAs } : {}),
+      url: personUrl(author.id, 'en'),
+      sameAs: [...sameAs, personUrl(author.id)],
       worksFor: { '@type': 'Organization', '@id': `${SITE_URL}#organization`, name: SITE_NAME },
     },
   }

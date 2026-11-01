@@ -59,17 +59,17 @@ const sources: { href: string; label: string; note: string }[] = [
     note: 'ספריית קוד פתוח לבדיקת מספרים מזהים, עם דוגמאות למספר תקין ולספרת ביקורת שגויה. ובאותה ספרייה גם מספר חברה (stdnum.il.hp)',
   },
   {
-    href: 'https://data.gov.il/he/dataset/ica_companies',
+    href: 'https://data.gov.il/he/datasets/ministry_of_justice/ica_companies',
     label: 'data.gov.il: מאגר חברות של רשם החברות',
     note: 'הבדיקה שלנו: 732,514 מתוך 732,515 מספרי חברות עוברים את אותה ספרת ביקורת',
   },
   {
-    href: 'https://data.gov.il/he/dataset/ica_partnerships',
+    href: 'https://data.gov.il/he/datasets/ministry_of_justice/ica_partnerships',
     label: 'data.gov.il: מאגר שותפויות של רשם החברות',
     note: 'הבדיקה שלנו: כל 29,074 מספרי השותפויות עוברים',
   },
   {
-    href: 'https://data.gov.il/he/dataset/moj-amutot',
+    href: 'https://data.gov.il/he/datasets/ministry_of_justice/moj-amutot',
     label: 'data.gov.il: מאגר עמותות וחברות לתועלת הציבור',
     note: 'הבדיקה שלנו: כל 73,899 מספרי העמותות שמתחילים ב-58 עוברים',
   },

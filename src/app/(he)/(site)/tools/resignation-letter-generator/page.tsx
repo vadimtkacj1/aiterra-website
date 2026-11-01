@@ -1,11 +1,15 @@
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import { ResignationLetterGenerator } from '../../components/tools/LeavingWorkTools'
+import ToolSources from '../../components/tools/ToolSources'
+import { leavingWorkSources } from '@/lib/leaving-work-sources'
 
 const PATH = '/tools/resignation-letter-generator'
 const TITLE = 'מחולל מכתב התפטרות'
 const META_TITLE = 'מחולל מכתב התפטרות: נוסח מוכן וחישוב הודעה מוקדמת'
 const DESCRIPTION =
   'מחולל מכתב התפטרות חינם: ממלאים שם, מעסיק ותאריך, רואים כמה הודעה מוקדמת נדרשת ומעתיקים מכתב מוכן.'
+
+const sources = [leavingWorkSources.noticeLaw, leavingWorkSources.noticeGuide]
 
 const faq: ToolFaqEntry[] = [
   {
@@ -40,6 +44,7 @@ export default function Page() {
     >
       <h2>לפני ששולחים</h2>
       <p>המידע כללי ואינו ייעוץ משפטי. כדאי לבדוק גם את הסכם העבודה ואת צו ההרחבה שחל עליכם.</p>
+      <ToolSources sources={sources} />
     </ToolLayout>
   )
 }

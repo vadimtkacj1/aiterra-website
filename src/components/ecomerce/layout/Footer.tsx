@@ -2,17 +2,17 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { CONTACT } from '@/lib/ecomerce/contact'
 import Logo from '@/components/ecomerce/ui/Logo'
+import CookieSettingsButton from '@/components/layout/CookieSettingsButton'
 
 type FooterLink = { label: string; href: string }
 
 // Anchors are absolute to the landing's own route (/landings/ecomerce#…) so
 // they land on the landing sections rather than the main site home.
-const BASE = '/landings/ecomerce'
+const BASE = '/lp/ecomerce'
 const NAV_LINKS: FooterLink[] = [
   { label: 'מי אנחנו', href: `${BASE}#about` },
   { label: 'היתרונות', href: `${BASE}#advantages` },
   { label: 'תיק עבודות', href: `${BASE}#portfolio` },
-  { label: 'המלצות', href: `${BASE}#testimonials` },
   { label: 'צור קשר', href: `${BASE}#lead-form` },
 ]
 
@@ -110,6 +110,9 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <CookieSettingsButton className="t-muted text-[15px] transition-colors hover:text-accent-ink max-md:block max-md:py-3.5 cursor-pointer" />
+                </li>
               </ul>
             </nav>
           </div>

@@ -1,6 +1,30 @@
 import Link from 'next/link'
 import EnToolLayout, { enToolMetadata, type EnToolFaqEntry } from '../_components/EnToolLayout'
 import NoticePeriodCalculatorEn from '../_components/NoticePeriodCalculatorEn'
+import ToolSources from '../../../../(he)/(site)/components/tools/ToolSources'
+
+const sources = [
+  {
+    href: 'https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%95%D7%93%D7%A2%D7%94_%D7%9E%D7%95%D7%A7%D7%93%D7%9E%D7%AA_%D7%9C%D7%A4%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%9D_%D7%95%D7%9C%D7%94%D7%AA%D7%A4%D7%98%D7%A8%D7%95%D7%AA',
+    label: 'Prior Notice for Dismissal and Resignation Law, 2001, on Wikisource (Hebrew)',
+  },
+  {
+    href: 'https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%A4%D7%99%D7%A6%D7%95%D7%99%D7%99_%D7%A4%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%9D',
+    label: 'Severance Pay Law, 1963, on Wikisource (Hebrew)',
+  },
+  {
+    href: 'https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%A4%D7%A8%D7%A9%D7%A0%D7%95%D7%AA',
+    label: 'Interpretation Law, 1981, on Wikisource (Hebrew)',
+  },
+  {
+    href: 'https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%93%D7%9E%D7%99_%D7%9E%D7%97%D7%9C%D7%94',
+    label: 'Sick Pay Law, 1976, on Wikisource (Hebrew)',
+  },
+  {
+    href: 'https://www.gov.il/he/pages/notice-of-dismissal-and-resignation',
+    label: 'Ministry of Labor: notice of dismissal and resignation (Hebrew)',
+  },
+]
 
 const SLUG = 'notice-period-calculator'
 const META_TITLE = 'Israel Notice Period Calculator: Hoda\'a Mukdemet'
@@ -117,6 +141,7 @@ export default function EnNoticePeriodPage() {
         decision. The law is a minimum: a collective agreement or contract can give more. Foreign workers, especially in
         caregiving, have special provisions. This is not legal advice.
       </p>
+      <ToolSources sources={sources} heading="Sources" />
     </EnToolLayout>
   )
 }

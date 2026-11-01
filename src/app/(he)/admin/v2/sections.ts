@@ -104,6 +104,7 @@ export const FIELD_LABELS: Record<string, string> = {
   audience: 'למי מתאים',
   author: 'שם הלקוח',
   authorLabel: 'תווית כותב',
+  authorsLabel: 'תווית כותבי הבלוג',
   badge: 'תגית על הכרטיס',
   banner: 'רצועת CTA',
   before: 'טקסט לפני',

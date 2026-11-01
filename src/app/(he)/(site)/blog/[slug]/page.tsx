@@ -5,7 +5,9 @@ import { marked, type Tokens } from 'marked'
 import Header from '../../components/Header'
 import ArticleToc, { type TocEntry } from '../../components/ArticleToc'
 import ShareButton from '../../components/ShareButton'
+import PostDates from '../../components/PostDates'
 import ActionButton from '../../components/ActionButton'
+import Faq from '../../components/Faq'
 import RelatedPosts from '../../components/RelatedPosts'
 import RelatedServices from '../../components/RelatedServices'
 import RelatedTools from '../../components/RelatedTools'
@@ -20,7 +22,7 @@ import { categoryTag, formatPostDate, matchesKeywords, readingMinutes } from '..
 import { getV2Content } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
-import { articleSchema, breadcrumbList, faqPage, toPlainText } from '@/lib/schema'
+import { articleSchema, breadcrumbList, faqPage, personNames, toPlainText } from '@/lib/schema'
 import styles from '../../components/Article.module.css'
 
 export const revalidate = 300
@@ -31,6 +33,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params
   const post = getPostBySlug(slug)
   if (!post) return {}
+  const { name: authorName } = personNames(post.authorId ?? '', post.author)
   return pageMetadata({
     title: post.seoTitle || post.title,
     description: post.seoDescription || post.excerpt,
@@ -41,7 +44,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     type: 'article',
     publishedTime: post.datePublished,
     modifiedTime: post.dateModified || post.datePublished,
-    authors: post.author ? [post.author] : undefined,
+    authors: authorName ? [authorName] : undefined,
     tags: post.tags,
   })
 }
@@ -165,9 +168,12 @@ export default async function V2ArticlePage({ params }: Params) {
               <h1 className={styles.title}>{post.title}</h1>
               <div className={styles.byline}>
                 <ShareButton title={post.title} />
-                <span>
-                  {article.publishedPrefix} {formatPostDate(post.datePublished)}
-                </span>
+                <PostDates
+                  published={post.datePublished}
+                  modified={post.dateModified}
+                  publishedPrefix={article.publishedPrefix}
+                  updatedPrefix={article.updatedPrefix}
+                />
               </div>
               {post.excerpt ? <p className={styles.lede}>{post.excerpt}</p> : null}
             </header>
@@ -236,6 +242,17 @@ export default async function V2ArticlePage({ params }: Params) {
             </div>
           </div>
         </article>
+
+        {post.faq?.items?.length ? (
+          <Faq
+            heading={post.faq.title ? [post.faq.title] : undefined}
+            entries={post.faq.items.map((item, index) => ({
+              id: `post-faq-${index}`,
+              question: item.q,
+              answer: item.a,
+            }))}
+          />
+        ) : null}
 
         <RelatedServices
           tags={post.tags}

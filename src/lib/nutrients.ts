@@ -5,7 +5,7 @@ export { nutrientPath, nutrients }
 
 export type NutrientFood = { name: string; amount: number }
 
-export const NUTRIENTS_SOURCE = 'https://data.gov.il/dataset/nutrition-database'
+export const NUTRIENTS_SOURCE = 'https://data.gov.il/he/datasets/ministry-health/nutrition-database'
 
 export const nutrientBySlug = (slug: string) => nutrients.find((item) => item.slug === slug)
 export const foodsRichIn = (nutrient: Nutrient): NutrientFood[] =>

@@ -30,7 +30,7 @@ export const authorsEn: Record<string, AuthorOverride> = {
   sean: {
     name: 'Sean',
     role: 'Head of development and digital growth (SEO & Google Ads)',
-    bio: 'Sean connects the world of code with the world of search engines. He leads our organic search strategy and is also responsible for managing paid campaigns on Google. Alongside driving traffic and warm leads, Sean is responsible for intelligent technical development, making sure that every site we build both works flawlessly and takes the first page across the search landscape.',
+    bio: 'Sean connects the world of code with the world of search engines. He leads our organic search strategy and is also responsible for managing paid campaigns on Google. Alongside driving traffic and warm leads, Sean is responsible for intelligent technical development, and for the technical SEO and measurement of every site we build.',
   },
 }
 

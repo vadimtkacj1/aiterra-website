@@ -42,7 +42,7 @@ export type LookupResult = { ok: true; records: CompanyRecord[] } | { ok: false;
 
 export const COMPANIES_RESOURCE_ID = 'f004176c-b85f-4542-8901-7b3176f9a054'
 export const DATA_API = 'https://data.gov.il/api/3/action'
-export const DATASET_URL = 'https://data.gov.il/he/dataset/ica_companies'
+export const DATASET_URL = 'https://data.gov.il/he/datasets/ministry_of_justice/ica_companies'
 export const ICA_SEARCH_URL = 'https://ica.justice.gov.il/GenericCorporarionInfo/SearchCorporation?unit=8'
 export const VAT_DEALER_URL = 'https://www.gov.il/he/service/vat-apply-online'
 export const EXTRACT_FEE = 12

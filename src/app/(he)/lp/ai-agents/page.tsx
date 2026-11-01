@@ -33,7 +33,7 @@ export const revalidate = 300
 export default function AiAgentsLandingPage() {
   return (
     <div className="lpAgency">
-      <Header />
+      <Header hiddenAnchors={['#portfolio', '#follow']} />
       <main id="main-content">
         <Hero
           headline={AI_AGENT_HERO.headline}

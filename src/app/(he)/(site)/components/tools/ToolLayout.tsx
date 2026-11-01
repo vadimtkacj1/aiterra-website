@@ -20,7 +20,9 @@ import {
   embeddableTool,
   isFunTool,
   otherTools,
+  toolReviewNotice,
   toolReviewed,
+  toolStamp,
   topicPath,
 } from '@/lib/tools'
 import { hasEnTool } from '@/lib/tools-en'
@@ -36,12 +38,16 @@ type ToolLayoutProps = {
   metaTitle: string
   description: string
   lede: string
+  answer?: string
+  rateDate?: string
   tool: ReactNode
   faq: ToolFaqEntry[]
   cta: { text: string; label: string; href: string }
   chips?: string[]
   children: ReactNode
 }
+
+const STAMP_LABELS = { sources: 'עודכן ונבדק מול המקורות', updated: 'עודכן' }
 
 export const HUB_TITLE = 'כלים חינמיים לעסקים'
 
@@ -70,6 +76,8 @@ export function ToolHero({
   large = false,
   compact = false,
   reviewed,
+  reviewedLabel = STAMP_LABELS.sources,
+  rateDate,
 }: {
   eyebrow: string
   title: string
@@ -78,6 +86,8 @@ export function ToolHero({
   large?: boolean
   compact?: boolean
   reviewed?: string
+  reviewedLabel?: string
+  rateDate?: string
 }) {
   return (
     <>
@@ -112,9 +122,10 @@ export function ToolHero({
             {compact ? null : <p className={styles.lede}>{lede}</p>}
             {reviewed ? (
               <p className={styles.reviewed}>
-                עודכן ונבדק מול המקורות: <time dateTime={reviewed}>{reviewed.split('-').reverse().join('.')}</time>
+                {reviewedLabel}: <time dateTime={reviewed}>{reviewed.split('-').reverse().join('.')}</time>
               </p>
             ) : null}
+            {rateDate ? <p className={styles.reviewed}>השער עודכן: {rateDate}</p> : null}
             {chips.length && !compact ? (
               <ul className={styles.chips}>
                 {chips.map((chip) => (
@@ -167,6 +178,8 @@ export default function ToolLayout({
   metaTitle,
   description,
   lede,
+  answer,
+  rateDate,
   tool,
   faq,
   cta,
@@ -177,6 +190,8 @@ export default function ToolLayout({
   const related = otherTools(path).slice(0, 6)
   const embed = embeddableTool(path)
   const topic = categoryOfTool(path)
+  const stamp = toolStamp(path)
+  const reviewNotice = toolReviewNotice(path)
 
   return (
     <>
@@ -209,7 +224,16 @@ export default function ToolLayout({
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header />
       <main id="main-content" className={styles.page}>
-        <ToolHero eyebrow="כלי חינמי" title={title} lede={lede} chips={chips} compact reviewed={toolReviewed(path)} />
+        <ToolHero
+          eyebrow="כלי חינמי"
+          title={title}
+          lede={lede}
+          chips={chips}
+          compact
+          reviewed={stamp === 'sources' || stamp === 'updated' ? toolReviewed(path) : undefined}
+          reviewedLabel={stamp === 'updated' ? STAMP_LABELS.updated : STAMP_LABELS.sources}
+          rateDate={stamp === 'live' ? rateDate : undefined}
+        />
         <ToolCrumbs
           trail={[
             { label: 'בית', href: '/' },
@@ -219,10 +243,11 @@ export default function ToolLayout({
           ]}
         />
 
+        {answer ? <p className={`${styles.guideLede} ${styles.answerLine}`}>{answer}</p> : null}
         {tool}
         <ToolShareBar path={path} title={title} />
         <p className={styles.trustLine}>
-          הכלי נבנה ומתוחזק בידי AITERRA, סוכנות דיגיטל ישראלית.{' '}
+          הכלי נבנה ומתוחזק בידי AITERRA, סוכנות דיגיטל ישראלית. {reviewNotice ? `${reviewNotice} ` : null}
           <Link href="/about" prefetch={false}>
             מי אנחנו
           </Link>
@@ -232,6 +257,19 @@ export default function ToolLayout({
           </Link>
         </p>
         {embed ? <ToolEmbedBox slug={embed.slug} title={title} height={embed.height} /> : null}
+
+        <article className={styles.guide}>
+          <p className={styles.guideLede}>{lede}</p>
+          {children}
+          <div className={styles.cta}>
+            <p>{cta.text}</p>
+            <Link href={cta.href} className={styles.ctaLink}>
+              {cta.label}
+            </Link>
+          </div>
+        </article>
+
+        <Faq heading={['שאלות נפוצות', `על ${title}`]} entries={faq} />
 
         {related.length ? (
           <section className={styles.related} aria-labelledby="related-tools-heading">
@@ -265,19 +303,6 @@ export default function ToolLayout({
             </div>
           </section>
         ) : null}
-
-        <article className={styles.guide}>
-          <p className={styles.guideLede}>{lede}</p>
-          {children}
-          <div className={styles.cta}>
-            <p>{cta.text}</p>
-            <Link href={cta.href} className={styles.ctaLink}>
-              {cta.label}
-            </Link>
-          </div>
-        </article>
-
-        <Faq heading={['שאלות נפוצות', `על ${title}`]} entries={faq} />
       </main>
       <Footer />
     </>

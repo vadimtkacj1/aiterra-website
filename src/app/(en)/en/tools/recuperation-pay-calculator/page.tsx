@@ -3,6 +3,28 @@ import RecuperationPayCalculatorEn from '../_components/RecuperationPayCalculato
 import { ilsFromAgorot } from '../_components/en-format'
 import { DAY_RATE_AGOROT, computeYear, seniorityTable } from '@/lib/recuperation-pay'
 import styles from '../../../../(he)/(site)/tools/recuperation-pay-calculator/page.module.css'
+import ToolSources from '../../../../(he)/(site)/components/tools/ToolSources'
+
+const kolzchut = (title: string) => `https://www.kolzchut.org.il/he/${encodeURIComponent(title.replace(/ /g, '_'))}`
+
+const sources = [
+  {
+    href: 'https://www.gov.il/BlobFolder/dynamiccollectorresultitem/order14863/he/workers-rights_order14863.pdf',
+    label: 'Extension order on employer participation in recuperation costs, Yalkut HaPirsumim 14863, 18.8.2026 (PDF, Hebrew)',
+  },
+  {
+    href: 'https://www.gov.il/he/pages/extension-order',
+    label: 'Ministry of Labor: extension order updating recuperation pay for 2026 (Hebrew)',
+  },
+  {
+    href: kolzchut('דמי הבראה'),
+    label: 'Kol Zchut: recuperation pay (Hebrew)',
+  },
+  {
+    href: 'https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%94%D7%AA%D7%99%D7%99%D7%A9%D7%A0%D7%95%D7%AA',
+    label: 'Prescription Law, 1958, on Wikisource (Hebrew)',
+  },
+]
 
 const SLUG = 'recuperation-pay-calculator'
 const META_TITLE = 'Israel Recuperation Pay Calculator 2026 (Havraa)'
@@ -109,6 +131,7 @@ export default function EnRecuperationPayPage() {
         The rate comes from the extension order in Yalkut HaPirsumim 14863 of 18 August 2026. The result is an estimate and
         does not replace checking the agreement that applies to you.
       </p>
+      <ToolSources sources={sources} heading="Sources" />
     </EnToolLayout>
   )
 }

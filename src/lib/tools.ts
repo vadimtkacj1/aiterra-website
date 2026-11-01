@@ -212,6 +212,7 @@ export const tools: ToolEntry[] = [
     description: 'ברכות מוכנות לחנוכה, לראש השנה, לפסח ולכל חג, ללקוחות, לעובדים ולספקים, עם שם העסק ושליחה ישירה בוואטסאפ.',
     category: 'marketing',
     icon: 'message',
+    reviewed: '2026-10-23',
   },
   {
     path: '/tools/google-review-link-generator',
@@ -242,6 +243,7 @@ export const tools: ToolEntry[] = [
     description: 'שאלון אפיון מודרך שיוצר מסמך אפיון מסודר: מטרות, טבלת עמודים, תוכן, פונקציות, נגישות ותקציב, מוכן לשליחה לחברות בניית אתרים.',
     category: 'marketing',
     icon: 'file',
+    reviewed: '2026-10-23',
   },
   {
     path: '/tools/keyboard-language-fix',
@@ -316,6 +318,7 @@ export const tools: ToolEntry[] = [
     description: 'האם חשבונית מס צריכה מספר הקצאה: הסף לפי תאריך החשבונית, מ-25,000 ₪ ב-2024 ועד 5,000 ₪ מיוני 2026.',
     category: 'money',
     icon: 'receipt',
+    reviewed: '2026-10-23',
   },
   {
     path: '/tools/vat-calculator',
@@ -362,6 +365,7 @@ export const tools: ToolEntry[] = [
     description: 'מס הכנסה, ביטוח לאומי ודמי בריאות לעצמאי לפי מדרגות 2026, עם נטו לחודש ולשנה ומקדמה משוערת.',
     category: 'money',
     icon: 'landmark',
+    reviewed: '2026-10-23',
   },
   {
     path: '/tools/self-employed-pension-deposits',
@@ -377,6 +381,7 @@ export const tools: ToolEntry[] = [
     description: 'החזר חודשי, סך הריבית ולוח סילוקין מלא בשפיצר, קרן שווה, בלון או גרייס, עם עמלות והשוואה בין שתי הצעות.',
     category: 'money',
     icon: 'calculator',
+    reviewed: '2026-10-23',
   },
   {
     path: '/tools/price-quote-generator',
@@ -407,6 +412,7 @@ export const tools: ToolEntry[] = [
     description: 'הסכם סודיות הדדי או חד-צדדי בין חברות, מול פרילנסר או עובד, עם חריגים, משך סודיות ופיצוי מוסכם, מוכן להעתקה ולהדפסה.',
     category: 'legal',
     icon: 'lock',
+    reviewed: '2026-10-23',
   },
   {
     path: '/tools/privacy-policy-generator',
@@ -459,6 +465,7 @@ export const tools: ToolEntry[] = [
     description: 'ממירים תאריך עברי ללועזי ולהפך, כולל אחרי השקיעה ואדר א׳ וב׳, עם גיל עברי ותאריך בר ובת מצווה.',
     category: 'dates',
     icon: 'calendarRange',
+    reviewed: '2026-10-23',
   },
   {
     path: '/tools/vacation-days-calculator',
@@ -482,6 +489,7 @@ export const tools: ToolEntry[] = [
     description: 'גיל הפרישה לנשים ולגברים לפי החוק והתיקון של 2022, התאריך המדויק וכמה זמן נשאר.',
     category: 'dates',
     icon: 'hourglass',
+    reviewed: '2026-10-23',
   },
   {
     path: '/tools/work-days-calculator',
@@ -489,6 +497,7 @@ export const tools: ToolEntry[] = [
     description: 'ימי עבודה בין תאריכים לפי החגים בישראל, מועד יעד בימי עסקים ותאריך תשלום בשוטף + 30 עד 90.',
     category: 'dates',
     icon: 'calendar',
+    reviewed: '2026-10-23',
   },
   {
     path: '/tools/shift-schedule-maker',
@@ -512,6 +521,7 @@ export const tools: ToolEntry[] = [
     description: 'כמה שעות עבדתם, גם במשמרת לילה, בשעות ודקות ובשבר עשרוני, ודוח חודשי עם שעות נוספות ושכר.',
     category: 'work',
     icon: 'clock',
+    reviewed: '2026-10-23',
   },
   {
     path: '/tools/sick-days-calculator',
@@ -1260,7 +1270,7 @@ export const tools: ToolEntry[] = [
   {
     path: '/tools/currency',
     title: 'המרת מטבע לשקלים',
-    description: 'כמה זה בשקלים היום: 24 מטבעות מול השקל, מתעדכנים כל שעה: דולר, יורו, זלוטי, וון, באט, גריבנה, דירהם ועוד.',
+    description: 'כמה זה בשקלים היום: 24 מטבעות מול השקל, מתעדכנים פעם ביום: דולר, יורו, זלוטי, וון, באט, גריבנה, דירהם ועוד.',
     category: 'money',
     icon: 'calculator',
     reviewed: '2026-10-28',
@@ -1503,7 +1513,7 @@ export const tools: ToolEntry[] = [
     description: 'ציון משוקלל מפסיכומטרי וממוצע בגרות, עם משקל לבחירתכם, חישוב ממוצע עם בונוסים ואיזה פסיכומטרי צריך ליעד.',
     category: 'home',
     icon: 'calculator',
-    reviewed: '2026-10-23',
+    reviewed: '2026-10-30',
   },
   {
     path: '/tools/family-event-games',
@@ -1604,8 +1614,85 @@ export const otherTools = (path: string) => {
   ]
 }
 
+const REVIEWED_WITHOUT_TOOL_ENTRY: Record<string, string> = {
+  '/tools/app-development-cost-calculator': '2026-10-25',
+  '/tools/convert/': '2026-10-28',
+  '/tools/currency/': '2026-10-28',
+  '/tools/landing-page-cost-calculator': '2026-10-25',
+  '/tools/time-in/': '2026-10-28',
+  '/tools/website-cost-calculator': '2026-10-25',
+}
+
+const reviewedWithoutToolEntry = (path: string) =>
+  Object.entries(REVIEWED_WITHOUT_TOOL_ENTRY).find(([prefix]) => path.startsWith(prefix))?.[1]
+
 export const toolReviewed = (path: string) =>
-  tools.find((tool) => tool.path === path)?.reviewed ?? TOOLS_REVIEWED
+  tools.find((tool) => tool.path === path)?.reviewed ?? reviewedWithoutToolEntry(path) ?? TOOLS_REVIEWED
+
+export type ToolStamp = 'sources' | 'updated' | 'live' | 'none'
+
+const TOOLS_WITHOUT_SOURCES = [
+  '/tools/app-development-cost-calculator',
+  '/tools/background-remover',
+  '/tools/business-name-generator',
+  '/tools/business/business-payback',
+  '/tools/business/business-viability',
+  '/tools/business/cash-runway',
+  '/tools/creative-brief-template',
+  '/tools/face-blur',
+  '/tools/hebrew-date-converter',
+  '/tools/hosting-food-calculator',
+  '/tools/image-upscaler',
+  '/tools/landing-page-cost-calculator',
+  '/tools/percentage-calculator',
+  '/tools/unit-converter',
+  '/tools/website-cost-calculator',
+  '/tools/website-spec-template',
+]
+
+const TOOL_GROUPS_WITHOUT_SOURCES = ['/tools/convert/', '/tools/time-in/']
+
+const LIVE_RATE_TOOLS = '/tools/currency'
+
+export const toolStamp = (path: string): ToolStamp => {
+  if (isFunTool(path)) return 'none'
+  if (path === LIVE_RATE_TOOLS || path.startsWith(`${LIVE_RATE_TOOLS}/`)) return 'live'
+  const withoutSources =
+    TOOLS_WITHOUT_SOURCES.includes(path) || TOOL_GROUPS_WITHOUT_SOURCES.some((group) => path.startsWith(group))
+  return withoutSources ? 'updated' : 'sources'
+}
+
+const NO_LAWYER_DOCUMENT_NOTICE = 'הנוסח מבוסס על לשון החוק והמקורות שבעמוד, ולא נבדק בידי עורך דין.'
+const NO_LAWYER_INFO_NOTICE = 'המידע בעמוד מבוסס על לשון החוק והמקורות שבעמוד, ולא נבדק בידי עורך דין.'
+const NO_DOCTOR_NOTICE = 'המידע בעמוד לא נבדק בידי רופא או דיאטן.'
+
+const NOTICE_ON_THE_PAGE_ITSELF = '/tools/rental-contract-generator'
+
+const LEGAL_TOOLS_WITHOUT_LEGAL_WORDING = ['/tools/signature-generator']
+
+const LEGAL_TOOLS_THAT_ARE_NOT_DOCUMENTS = [
+  '/tools/amendment-13-website-checklist',
+  '/tools/cancel-transaction-checker',
+  '/tools/end-of-employment-rights',
+  '/tools/final-settlement-calculator',
+  '/tools/privacy-officer-database-quiz',
+]
+
+const LEGAL_TOOLS_OUTSIDE_LEGAL_CATEGORY = [
+  '/tools/ai-policy-generator',
+  '/tools/employment-confirmation-letter',
+  '/tools/end-of-employment-rights',
+  '/tools/final-settlement-calculator',
+  '/tools/resignation-letter-generator',
+]
+
+export const toolReviewNotice = (path: string) => {
+  const category = tools.find((tool) => tool.path === path)?.category
+  if (category === 'health') return NO_DOCTOR_NOTICE
+  if (path === NOTICE_ON_THE_PAGE_ITSELF || LEGAL_TOOLS_WITHOUT_LEGAL_WORDING.includes(path)) return null
+  if (category !== 'legal' && !LEGAL_TOOLS_OUTSIDE_LEGAL_CATEGORY.includes(path)) return null
+  return LEGAL_TOOLS_THAT_ARE_NOT_DOCUMENTS.includes(path) ? NO_LAWYER_INFO_NOTICE : NO_LAWYER_DOCUMENT_NOTICE
+}
 
 export const topicPath = (category: ToolCategory) => `${TOOLS_HUB_PATH}/topic/${category}`
 

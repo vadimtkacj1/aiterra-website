@@ -49,3 +49,6 @@ public/images/*.mp4
 public/videos/*.mp4
 !public/videos/v2-hero.mp4
 !public/videos/v2-stats.mp4
+
+dev.log
+newprojects/

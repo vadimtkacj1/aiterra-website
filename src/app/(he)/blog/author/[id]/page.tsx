@@ -13,6 +13,7 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 import { getAllAuthors, getAuthorById } from '@/lib/authors-server'
 import { getAllPosts } from '@/lib/blog-server'
 import { authorMetaDescriptionsHe, authorMetaTitle, capMetaDescription } from '@/lib/content-en-authors'
+import { personId, personNames, personUrl } from '@/lib/schema'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 
 // ISR: cached HTML, refreshed in the background; author/blog edits in admin
@@ -43,6 +44,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const author = getAuthorById(id)
   if (!author) return {}
   const canonical = `/blog/author/${author.id}`
+  const englishPath = `/en/blog/author/${author.id}`
   const title = authorMetaTitle(author.name, author.role)
   const description =
     authorMetaDescriptionsHe[author.id] ||
@@ -50,7 +52,14 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title: { absolute: title },
     description,
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        'he-IL': canonical,
+        en: englishPath,
+        'x-default': englishPath,
+      },
+    },
     openGraph: {
       type: 'profile',
       title,
@@ -73,20 +82,19 @@ export default async function AuthorPage({ params }: { params: Promise<{ id: str
   const sameAs = [author.socials?.linkedin, author.socials?.instagram, author.socials?.facebook].filter(
     (u): u is string => Boolean(u),
   )
-  const authorUrl = `${SITE_URL}/blog/author/${author.id}`
 
   const personData = {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
     mainEntity: {
       '@type': 'Person',
-      '@id': `${authorUrl}#person`,
-      name: author.name,
+      '@id': personId(author.id),
+      ...personNames(author.id, author.name),
       jobTitle: author.role || undefined,
       description: author.bio || undefined,
       ...(absolute(author.image) ? { image: absolute(author.image) } : {}),
-      url: authorUrl,
-      ...(sameAs.length ? { sameAs } : {}),
+      url: personUrl(author.id),
+      sameAs: [...sameAs, personUrl(author.id, 'en')],
       worksFor: { '@type': 'Organization', '@id': `${SITE_URL}#organization`, name: SITE_NAME },
     },
   }

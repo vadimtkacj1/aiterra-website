@@ -2,7 +2,7 @@ import type { AdminPost } from '@/lib/blog-server'
 
 export type EnOnlyPost = Pick<
   AdminPost,
-  'title' | 'excerpt' | 'content' | 'tags' | 'datePublished' | 'faq' | 'seoTitle' | 'seoDescription'
+  'title' | 'excerpt' | 'content' | 'tags' | 'datePublished' | 'dateModified' | 'faq' | 'seoTitle' | 'seoDescription'
 >
 
 export const postsEnOnly: Record<string, EnOnlyPost> = {
@@ -711,6 +711,7 @@ Start free, add structure when the pain is visible, and pay for the API only whe
       'Israeli small businesses usually need three layers: invoicing that meets tax rules, a CRM, and sometimes an ERP. Here is what the popular tools do, what they cost today and how to avoid buying too much.',
     tags: ['Business software', 'Invoicing', 'CRM', 'ERP', 'Israel'],
     datePublished: '2026-10-25',
+    dateModified: '2026-11-01',
     content: `**Short answer:** Most Israeli small businesses should start with invoicing software that issues compliant tax documents, such as Morning (formerly Green Invoice) or iCount, add a CRM like Fireberry or monday CRM when leads and follow-up become messy, and consider an ERP such as Priority only when inventory, production or multi-branch operations make spreadsheets unmanageable. Buy in that order, make sure each tool can pass data to the next, and avoid paying for a full system you will use at ten percent.
 
 "Management software" is a broad label. The tools below solve different problems, which is why the best answer depends on what your business does all day.
@@ -725,18 +726,18 @@ Start free, add structure when the pain is visible, and pay for the API only whe
 
 ## Invoicing: what the vendors publish
 
-Prices below were read from the vendor pages in October 2026, are in shekels excluding VAT, and can change.
+Prices below were read from the vendor pages in November 2026, are in shekels excluding VAT, and can change.
 
 | Product | Entry plans | Notes |
 |---|---|---|
-| Morning (formerly Green Invoice) | Pricing page listed Basic at ₪29 per month on annual payment (20 documents a month), Best at ₪45 (50 documents, API and webhook integrations, online card payments), Extra at ₪74 and Prime at ₪129 | Read on the greeninvoice.co.il pricing page; confirm current plans on the Morning site |
-| iCount | Express at ₪276 per year; Advanced from ₪32 per month with usage-based document pricing; Master from ₪111 per month, which adds tax-authority representation | Add-ons are priced separately, for example a CRM add-on at ₪69 per month and basic inventory at ₪25 per month; 45-day free trial |
+| Morning (formerly Green Invoice) | Pricing page listed Basic at ₪29 per month on annual payment (20 documents a month), Best at ₪45 (50 documents, API and webhook integrations, online card payments), Extra at ₪74 and Prime at ₪129 | Read on the [Morning pricing page](https://www.greeninvoice.co.il/pricing/); confirm current plans on the Morning site |
+| iCount | Express at ₪276 per year; Advanced from ₪32 per month with usage-based document pricing; Master from ₪111 per month, which adds tax-authority representation | Add-ons are priced separately, for example a CRM add-on at ₪69 per month and basic inventory at ₪25 per month; 45-day free trial, per the [iCount pricing page](https://www.icount.co.il/pricing/) |
 
 Both fit a freelancer or small company. The deciding factors are usually your accountant's preference and which integrations you need. Ask your accountant first: the best invoicing tool is the one that exports cleanly to their system. Two related tools on this site, the [VAT calculator](/en/tools/vat-calculator) and the [exchange rate for invoices](/en/tools/exchange-rate-invoice) tool, help with the numbers, not the documents.
 
 ## CRM: Israeli and global options
 
-Fireberry (formerly Powerlink) is an Israeli CRM. Its Hebrew pricing page lists Growth at ₪120, Premium at ₪150 and Unlimited at ₪200 per user per month plus VAT, with a three-user minimum, and its feature list includes issuing accounting documents and exporting to Hashavshevet. It also has a free English-language Sales plan. monday CRM, per monday.com, starts at €12 per seat per month on annual billing (Basic, with limits on contacts and columns), with plans starting from three users. For a head-to-head comparison including HubSpot and Zoho, read our [best CRM for small business in Israel](/en/blog/best-crm-small-business-israel) guide.
+Fireberry (formerly Powerlink) is an Israeli CRM. Its Hebrew pricing page lists Growth at ₪120, Premium at ₪150 and Unlimited at ₪200 per user per month plus VAT, with a three-user minimum, and its feature list includes issuing accounting documents and exporting to Hashavshevet. It also has a free English-language Sales plan. monday CRM, per [monday.com](https://monday.com/crm/pricing), starts at €12 per seat per month on annual billing (Basic, with limits on contacts and columns), with plans starting from three users. For a head-to-head comparison including HubSpot and Zoho, read our [best CRM for small business in Israel](/en/blog/best-crm-small-business-israel) guide.
 
 The detail that decides most CRM purchases is the invoicing link. A deal that closes in the CRM should create the invoice without retyping; our guide to [CRM and Israeli invoicing integration](/en/blog/crm-israeli-invoicing-integration) explains how that bridge works.
 
@@ -797,6 +798,7 @@ Build up in layers. Compliant invoicing first, CRM when follow-up hurts, ERP onl
       'Orders in the store, stock in a spreadsheet, customers in a CRM and invoices in a fourth tool. How an Israeli online store can connect them affordably, and where a custom integration pays off.',
     tags: ['E-commerce', 'CRM', 'Inventory', 'Integration', 'Israel'],
     datePublished: '2026-10-25',
+    dateModified: '2026-11-01',
     content: `**Short answer:** An affordable e-commerce setup in Israel connects four things: the store (Shopify or WooCommerce), an inventory source of truth, a CRM that sees every order and customer, and Israeli invoicing software that issues tax documents. Start with the integrations that already exist between your store platform and your invoicing tool, because they remove the most manual work for the least money. Add a CRM when repeat customers and follow-up matter. Build a custom integration only when stock, pricing or fulfilment rules are too specific for off-the-shelf connectors.
 
 Most small online stores do not fail for lack of software. They fail at the seams between tools: an order arrives in the store, someone retypes it into an invoice, stock is updated by hand, and the customer is never added to any list. This guide shows where the seams are and how to close them without a large budget.
@@ -814,14 +816,14 @@ The rule that prevents most errors: **each fact lives in one system and flows to
 
 ## What the vendors actually offer
 
-Pricing and features change, so treat this as a snapshot from October 2026 and confirm on each vendor page.
+Pricing and features change, so treat this as a snapshot from November 2026 and confirm on each vendor page.
 
-- **Shopify** lists Basic at €19 per month on yearly payment and €27 on monthly payment, Grow at €56 or €74, and Advanced at €289 or €384, as displayed in euros on shopify.com. Basic, Grow and Advanced each include 10 inventory locations.
+- **Shopify** lists Basic at €19 per month on yearly payment and €27 on monthly payment, Grow at €56 or €74, and Advanced at €289 or €384, as displayed in euros on [shopify.com](https://www.shopify.com/pricing). Basic, Grow and Advanced each include 10 inventory locations.
 - **WooCommerce** is a plugin for WordPress. The plugin itself is free to install, but you pay for hosting, a payment provider and often paid extensions, which is why total cost varies widely.
-- **iCount** sells e-commerce connection as a ₪20 per month add-on for Wix, Shopify, Etsy and WooCommerce, basic inventory and price lists at ₪25 per month, advanced inventory at ₪100 per month, and a CRM add-on at ₪69 per month, all excluding VAT. A 45-day trial is included.
-- **Morning (formerly Green Invoice)** listed API and webhook integrations and online card payments on its Best plan at ₪45 per month on annual payment, excluding VAT.
+- **iCount** [sells e-commerce connection as a ₪20 per month add-on](https://www.icount.co.il/pricing/) for Wix, Shopify, Etsy and WooCommerce, basic inventory and price lists at ₪25 per month, advanced inventory at ₪100 per month, and a CRM add-on at ₪69 per month, all excluding VAT. A 45-day trial is included.
+- **Morning (formerly Green Invoice)** [listed API and webhook integrations](https://www.greeninvoice.co.il/pricing/) and online card payments on its Best plan at ₪45 per month on annual payment, excluding VAT.
 - **Fireberry** lists Hebrew plans at ₪120, ₪150 and ₪200 per user per month with a three-user minimum, and includes accounting-document features.
-- **monday CRM** starts at €12 per seat per month on annual billing, with limits on contacts and columns on the Basic tier.
+- **monday CRM** [starts at €12 per seat per month](https://monday.com/crm/pricing) on annual billing, with limits on contacts and columns on the Basic tier.
 
 A store on Shopify Basic, iCount with the e-commerce and inventory add-ons, and a small CRM can be assembled for a modest monthly outlay, but the sum depends on user count, document volume and extra apps, so we deliberately do not promise a single total.
 
@@ -905,6 +907,7 @@ Close the seams in the order of pain: orders to invoices first, stock second, cu
       'Honest ranges for the main marketing services in Israel, separating published figures from estimates, plus what drives each price and a checklist for comparing quotes.',
     tags: ['Pricing', 'Marketing', 'Branding', 'Web design', 'Google Ads', 'Israel'],
     datePublished: '2026-10-25',
+    dateModified: '2026-11-01',
     content: `**Short answer:** Marketing prices in Israel vary too much for one number to be honest. The ranges we can stand behind come from our own published cost guides: a landing page ₪1,500-3,500, a brochure website ₪4,000-12,000, SEO ₪1,500-8,000 a month, and a realistic paid media budget of roughly ₪2,000-4,000 a month before management fees. For branding and social media management we do not publish a shekel range, because we could not source one reliably; ask three agencies to quote the same written brief instead. Price depends on scope, competition and who does the work, so compare deliverables, not totals.
 
 Searches such as "average prices for branding, web design, social media management and Google Ads in Israel" return mostly US agency pricing guides in dollars. Those are not a good proxy for the Israeli market. Below, each figure is labelled by where it comes from, so you can judge how much weight to give it.
@@ -938,7 +941,7 @@ Social retainers usually bundle strategy, content creation, publishing, communit
 
 ## Google Ads and paid social
 
-Two costs are mixed together in most quotes: the **media budget** paid to Google or Meta and the **management fee** paid to whoever runs the account. The media budget decides how much traffic you can buy. According to WordStream and LocaliQ benchmarks for 2026, the average Google Ads search cost per click is about $5.42 across industries, based on US campaign data; Israeli costs vary by sector and city. For Meta, the Superads benchmark tool reports an average Facebook Ads cost per click in Israel of about $0.58 for the data it holds. These are benchmarks, not promises; your sector can be far above or below them.
+Two costs are mixed together in most quotes: the **media budget** paid to Google or Meta and the **management fee** paid to whoever runs the account. The media budget decides how much traffic you can buy. According to [WordStream and LocaliQ benchmarks for 2026](https://www.wordstream.com/blog/2026-google-ads-benchmarks), the average Google Ads search cost per click is about $5.42 across industries, based on US campaign data; Israeli costs vary by sector and city. For Meta, the Superads benchmark tool reports an average Facebook Ads cost per click in Israel of about $0.58 for the data it holds. These are benchmarks, not promises; your sector can be far above or below them.
 
 Learn how the platforms differ in our [Google Ads guide](/en/blog/google-ads-campaigns) and [Facebook and Instagram ads guide](/en/blog/facebook-instagram-ads). If you want to run ads yourself, a campaign that cannot afford enough clicks to learn is the most common reason small budgets fail.
 

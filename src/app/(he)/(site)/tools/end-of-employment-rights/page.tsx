@@ -1,11 +1,23 @@
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import { LeavingWorkWizard } from '../../components/tools/LeavingWorkTools'
+import ToolSources from '../../components/tools/ToolSources'
+import { leavingWorkSources } from '@/lib/leaving-work-sources'
 
 const PATH = '/tools/end-of-employment-rights'
 const TITLE = 'מה מגיע לי בסיום עבודה'
 const META_TITLE = 'מה מגיע לי אם התפטרתי או פוטרתי: בדיקה מהירה'
 const DESCRIPTION =
   'האם מגיע לי פיצויים או אבטלה אם התפטרתי? עונים על שלוש שאלות ורואים מה כנראה מגיע לכם בסיום עבודה.'
+
+const sources = [
+  leavingWorkSources.unemploymentAfterLeaving,
+  leavingWorkSources.severanceLaw,
+  leavingWorkSources.severanceAfterResigning,
+  leavingWorkSources.vacationPayout,
+  leavingWorkSources.recuperationGuide,
+  leavingWorkSources.noticeLaw,
+  leavingWorkSources.noticeGuide,
+]
 
 const faq: ToolFaqEntry[] = [
   {
@@ -40,6 +52,7 @@ export default function Page() {
     >
       <h2>לפני שפועלים</h2>
       <p>המידע כללי ואינו ייעוץ משפטי. כדאי לבדוק גם את הסכם העבודה ואת צו ההרחבה שחל עליכם.</p>
+      <ToolSources sources={sources} />
     </ToolLayout>
   )
 }

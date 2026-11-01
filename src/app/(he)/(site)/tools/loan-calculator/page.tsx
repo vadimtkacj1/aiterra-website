@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import LoanCalculator from '../../components/tools/LoanCalculator'
+import ToolSources from '../../components/tools/ToolSources'
 import styles from './page.module.css'
 
 const PATH = '/tools/loan-calculator'
@@ -9,6 +10,17 @@ const TITLE = 'מחשבון הלוואה'
 const META_TITLE = 'מחשבון הלוואה: שפיצר, קרן שווה, בלון וגרייס'
 const DESCRIPTION =
   'מחשבון הלוואה חינמי: החזר חודשי, סך הריבית ולוח סילוקין מלא בשפיצר, קרן שווה, בלון או גרייס, עם עמלות, עלות שנתית אפקטיבית והשוואה בין שתי הצעות.'
+
+const sources = [
+  {
+    href: 'https://fs.knesset.gov.il/globaldocs/MMM/7928f1c8-5f71-ed11-8155-005056aa4246/2_7928f1c8-5f71-ed11-8155-005056aa4246_11_19833.pdf',
+    label: 'מרכז המחקר והמידע של הכנסת: השינוי בריבית על אשראי, ריבית על פיקדונות, פער הריבית ורווחי הבנקים, הגדרת ריבית הפריים (PDF)',
+  },
+  {
+    href: 'https://www.boi.org.il/information/interestrates/primerates/',
+    label: 'בנק ישראל: ריבית ממוצעת בסיסית בחח״ד (פריים)',
+  },
+]
 
 const exampleRows = [
   { month: '1', spitzer: '2,319.94 ₪', equal: '2,600.00 ₪' },
@@ -216,6 +228,7 @@ export default function LoanCalculatorPage() {
         מחוברים, רואים את המצב בכל רגע. כתבנו על חלק מזה במאמר{' '}
         <Link href="/blog/crm-israeli-invoicing-integration">חיבור CRM לחשבונית ירוקה, חשבשבת ו-iCount</Link>.
       </p>
+      <ToolSources sources={sources} />
       <p className={styles.reviewed}>
         החישובים בדף נבדקו באוקטובר 2026. המחשבון הוא כלי עזר לחישוב בלבד. הוא לא הצעת אשראי ולא ייעוץ פיננסי, והתנאים
         בהצעה שתקבלו מהבנק או מחברת האשראי יכולים להיות שונים.

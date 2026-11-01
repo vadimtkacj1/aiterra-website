@@ -1,3 +1,4 @@
+import LtrText from './LtrText'
 import styles from './SectionHeading.module.css'
 
 type SectionHeadingProps = {
@@ -26,7 +27,7 @@ export default function SectionHeading({
       {lines.map((line, index) => (
         <span key={line} className={styles.line}>
           {index > 0 ? ' ' : null}
-          {line}
+          <LtrText text={line} />
         </span>
       ))}
     </Tag>

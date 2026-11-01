@@ -184,16 +184,16 @@ export const contentEn: Partial<V2Content> = {
       text: 'Owners who took a step forward and grew the traffic their business gets, with us.',
     },
     {
-      id: 'uptime',
-      value: '100%',
-      label: 'Stable services',
-      text: 'Infrastructure built to stay up, fast and stable as the business keeps growing.',
+      id: 'projects',
+      value: '17',
+      label: 'Projects in our portfolio',
+      text: 'Sites, stores and systems listed in Our Work.',
     },
     {
-      id: 'performance',
-      value: '95+',
-      label: 'Performance score',
-      text: 'Speed and load performance handled inside the development process, not patched on at the end.',
+      id: 'team',
+      value: '1',
+      label: 'Team for the whole project',
+      text: 'Discovery, design, engineering, search and campaigns sit with the same team, with no separate vendor for each stage.',
     },
   ],
 
@@ -903,6 +903,7 @@ export const contentEn: Partial<V2Content> = {
     share: 'Share',
     copied: 'Link copied',
     publishedPrefix: 'Published',
+    updatedPrefix: 'Last updated:',
     promoLabel: 'Let us work together',
     relatedTitle: 'More articles you might find useful',
     prev: 'Previous articles',
@@ -1105,6 +1106,7 @@ export const contentEn: Partial<V2Content> = {
     defaultTag: 'BLOG',
     empty: 'No articles in this category yet.',
     defaultAuthor: 'The Aiterra team',
+    authorsLabel: 'Blog authors',
   },
 
   reviews: {
@@ -1700,7 +1702,7 @@ export const contentEn: Partial<V2Content> = {
     title: 'About us',
     metaTitle: 'About Aiterra - Engineering and Growth in One Team',
     metaDescription:
-      'Aiterra is a software and digital agency in Bat Yam, Israel: websites, stores, apps, automation, AI agents, SEO and paid ads. Meet the team and our method.',
+      'Aiterra is a software and digital agency in Bat Yam, Israel: websites, stores, apps, automation, AI agents, SEO and paid ads. See our method and values.',
     lede: 'Digital moves fast. We make sure you stay a step ahead of it.',
     eyebrow: 'ABOUT Aiterra',
     heading: ['Technology that builds websites.', 'Strategy that builds businesses.'],
@@ -1768,10 +1770,10 @@ export const contentEn: Partial<V2Content> = {
 export const projectsPageEn = {
   title: ['Our work', 'Selected projects'],
   crumb: 'Work',
-  lede: 'Seventeen live projects: four online stores, marketing and lead-generation sites across cosmetics, grooming and personal brands, work in real estate and mortgage advisory, and three AI and operations platforms for clients in Canada. All written in code by our team, and all in production today.',
+  lede: 'Seventeen live projects: four online stores, marketing and lead-generation sites across cosmetics, grooming and personal brands, work in real estate and mortgage advisory, and three AI and operations platforms for clients in Canada. Some are written in code from scratch and some run on Shopify, with design and adaptation by our team, and all are in production today.',
   action: { label: 'Start a project', href: '/en/contact' },
   faqHeading: ['Before we start', 'a few things worth knowing.'],
   metaTitle: 'Our Work - 17 Sites, Stores and Systems We Built',
   metaDescription:
-    'Seventeen live Aiterra projects: online stores, lead-generation sites, management systems and AI platforms. See the goal, the integrations and what shipped.',
+    'Seventeen live Aiterra projects: online stores, lead-generation sites, management systems and AI platforms, custom-coded and on Shopify. All listed in Our Work.',
 }

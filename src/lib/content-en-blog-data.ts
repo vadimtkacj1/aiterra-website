@@ -5,6 +5,7 @@ type PostOverride = {
   excerpt: string
   seoTitle?: string
   seoDescription?: string
+  dateModified?: string
   content: string
   tags: string[]
   faq?: PostFaqEn
@@ -16,6 +17,7 @@ type PostOverride = {
  */
 export const postsEn: Record<string, PostOverride> = {
   'best-crm-small-business-israel': {
+    dateModified: '2026-11-01',
     title: 'Best CRM for Small Business in Israel: 4 Compared',
     seoTitle: 'Best CRM Software for Local Israeli Teams Compared',
     seoDescription:
@@ -25,7 +27,7 @@ export const postsEn: Record<string, PostOverride> = {
     tags: ['CRM', 'Small business', 'Fireberry', 'Monday', 'Automation'],
     content: `**TL;DR:** There is no single best CRM, only the one that fits your business. Monday has a visual interface that is quick to learn; Fireberry, an Israeli platform, leads on Hebrew support and on built-in links to Green Invoice and Hashavshevet; HubSpot suits a business that wants to start free and grow into the paid tiers; Zoho offers the most features per shekel. The right choice depends on your budget, on whether you need Israeli integrations, and on how complex your processes are.
 
-*Last updated: October 2026*
+*Last updated: November 2026*
 
 A CRM is the heart of customer management in a business: every lead, conversation and deal held in one place. With dozens of options on the market it is easy to get lost. This guide compares the four systems most Israeli small businesses shortlist, with the emphasis on what actually matters here, Hebrew support and integration with Israeli invoicing software.
 
@@ -37,12 +39,14 @@ All four answer the same basic need, collecting leads, tracking deals and automa
 
 | System | Entry price (per user, per month) | Hebrew support | Israeli invoicing link |
 |---|---|---|---|
-| Monday CRM | From about €12 (Basic, annual billing, per monday.com) | Partial | Via integration |
+| Monday CRM | From about €12 (Basic, annual billing, per [monday.com](https://monday.com/crm/pricing)) | Partial | Via integration |
 | Fireberry | Hebrew plans ₪120–200 plus VAT, 3-user minimum (per fireberry.com) | Full | Accounting documents and Hashavshevet export (verify Green Invoice link with the vendor) |
-| HubSpot | Free – $15+ | Partial | Via integration |
-| Zoho CRM | ~$14–40 | Partial | Via integration |
+| HubSpot | Free, paid plans from $7 per seat (annual billing) | Partial | Via integration |
+| Zoho CRM | $14–40 (annual billing) | Partial | Via integration |
 
 *Prices are correct for 2026 and vary by plan and by number of users. Fireberry prices are quoted plus VAT; the [VAT calculator](/en/tools/vat-calculator) shows the total with VAT included.*
+
+Monday, HubSpot and Zoho prices were checked in November 2026 against the [monday CRM](https://monday.com/crm/pricing), [HubSpot](https://www.hubspot.com/pricing/crm) and [Zoho CRM](https://www.zoho.com/crm/zohocrm-pricing.html) pricing pages.
 
 ## Which system suits which business?
 
@@ -186,13 +190,14 @@ We do not sell "automation" as a product. We map the processes that eat the most
   },
 
   'business-automation-crm-whatsapp': {
+    dateModified: '2026-11-01',
     title: 'Business Automation: WhatsApp Bots and CRM',
     excerpt:
       'A lead that waits more than a few minutes goes to a competitor. How a WhatsApp bot, a proper CRM link and custom automation answer every enquiry 24/7.',
     tags: ['Automation', 'CRM', 'WhatsApp', 'Digital'],
     content: `**In short (TL;DR):** Business automation is a smart link between your website, WhatsApp, email and your CRM, so that every lead is captured, answered within seconds and logged automatically, 24/7, with no human hand involved. The result: fewer lost leads, and dozens of manual working hours handed back to you every month.
 
-Let us do the painful arithmetic: how many leads reached you this month and never got an answer in time? Sales research shows again and again that a lead answered in the first few minutes closes at several times the rate of one that waited hours. The problem is that you are busy doing the work, not refreshing an inbox. That is exactly what [business automation](/en/services/development) exists for: a system that works for you 24/7, answers customers, records every enquiry and makes sure not a single shekel is lost.
+Let us do the painful arithmetic: how many leads reached you this month and never got an answer in time? In our experience, a lead answered in the first few minutes usually closes more easily than one that waited hours. The problem is that you are busy doing the work, not refreshing an inbox. That is exactly what [business automation](/en/services/development) exists for: a system that works for you 24/7, answers customers, records every enquiry and makes sure not a single shekel is lost.
 
 ![Business WhatsApp on a phone screen answering customers automatically](/images/blog/business-automation-crm-whatsapp.webp)
 
@@ -1684,6 +1689,7 @@ This is the great advantage: first leads can arrive within days. But there is a 
   },
 
   'seo-cost-monthly-israel': {
+    dateModified: '2026-10-25',
     title: 'SEO Services in Israel: Monthly Cost in 2026',
     excerpt:
       'SEO services in Israel cost ₪1,500–8,000 a month in 2026. Price ranges by business type, what each tier includes, and how long results take.',
@@ -2150,17 +2156,18 @@ Weighing up quotes, or want to know what the site you actually need would cost? 
 },
 
 'website-accessibility-cost-5568': {
+  dateModified: '2026-11-01',
   title: 'Website Accessibility Cost in Israel: SI 5568',
   excerpt:
     'Website accessibility is a legal duty in Israel. What SI 5568 compliance costs in 2026, what the law requires, and why an overlay is not enough.',
   tags: ['Web accessibility', 'SI 5568', 'WCAG', 'Israeli law', 'Pricing'],
   content: `**In short (TL;DR):** Website accessibility means adapting a site for people with disabilities under the Israeli standard SI 5568 (based on WCAG 2.0 AA), and it is a legal requirement in Israel. The cost in 2026 runs from roughly ₪1,500 for a small site to ₪15,000+ for a large one, a trivial sum next to compensation of up to about ₪50,000 that a court can award in a claim without proof of damage.
 
-Website accessibility is a legal requirement in Israel, and a site that is not accessible exposes the business to a claim, including compensation of up to about ₪50,000 per claimant, with no need to prove damage. The cost in 2026 usually runs from ₪1,500 for a small, simple site to ₪10,000 and up for a large, complex one, accessibility statement included. That is far less than the legal exposure, and it opens the business to a wider audience.
+Website accessibility is a legal requirement in Israel, and a site that is not accessible exposes the business to a claim, including [compensation of up to about ₪50,000](https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%A9%D7%95%D7%95%D7%99%D7%95%D7%9F_%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%AA#%D7%A1%D7%A2%D7%99%D7%A3_19%D7%A0%D7%90) per claimant, with no need to prove damage. The cost in 2026 usually runs from ₪1,500 for a small, simple site to ₪10,000 and up for a large, complex one, accessibility statement included. That is far less than the legal exposure, and it opens the business to a wider audience.
 
 ![How much website accessibility costs under standard SI 5568, a woman in a wheelchair working on a laptop](/images/blog/website-accessibility-cost-5568.webp)
 
-Website accessibility means adapting the site so that people with disabilities (sight, hearing, motor, cognitive) can use it, through a screen reader, keyboard navigation, sufficient contrast and alternative text for images. In Israel the requirement is anchored in the equal rights for people with disabilities regulations, and it rests on the Israeli standard SI 5568, which in turn follows the [WCAG 2.0 level AA guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) published by the W3C.
+Website accessibility means adapting the site so that people with disabilities (sight, hearing, motor, cognitive) can use it, through a screen reader, keyboard navigation, sufficient contrast and alternative text for images. In Israel the requirement is anchored in the [equal rights for people with disabilities regulations](https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%A9%D7%95%D7%95%D7%99%D7%95%D7%9F_%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%AA_%28%D7%94%D7%AA%D7%90%D7%9E%D7%95%D7%AA_%D7%A0%D7%92%D7%99%D7%A9%D7%95%D7%AA_%D7%9C%D7%A9%D7%99%D7%A8%D7%95%D7%AA%29#%D7%A1%D7%A2%D7%99%D7%A3_35%D7%90), and it rests on the Israeli standard SI 5568, which in turn follows the [WCAG 2.0 level AA guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) published by the W3C.
 
 ## What does the law actually require?
 
@@ -2232,6 +2239,7 @@ Accessibility does more than lower legal risk, it widens the audience (a signifi
 },
 
   'website-accessibility-israel': {
+    dateModified: '2026-11-01',
     title: 'Website Accessibility Law in Israel and IS 5568',
     excerpt:
       'Website accessibility is a legal duty in Israel: claims reach ₪50,000 with no proof of damage. What IS 5568 requires, and why an overlay is not enough.',
@@ -2244,11 +2252,11 @@ Most business owners in Israel discover that website accessibility exists only w
 
 ## What does Israeli law actually require?
 
-Under the [equal rights for people with disabilities regulations](https://www.gov.il/), a [website](/en/services/web-development) that provides a service to the public has to meet Israeli standard IS 5568, a standard based on the international WCAG guidelines at level AA. In practice that means the site must be usable by visitors with visual, hearing, motor or cognitive impairments: full keyboard navigation, screen reader support, sufficient colour contrast, alternative text for images and more.
+Under the [equal rights for people with disabilities regulations](https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%A9%D7%95%D7%95%D7%99%D7%95%D7%9F_%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%AA_%28%D7%94%D7%AA%D7%90%D7%9E%D7%95%D7%AA_%D7%A0%D7%92%D7%99%D7%A9%D7%95%D7%AA_%D7%9C%D7%A9%D7%99%D7%A8%D7%95%D7%AA%29#%D7%A1%D7%A2%D7%99%D7%A3_35%D7%90), a [website](/en/services/web-development) that provides a service to the public has to meet Israeli standard IS 5568, a standard based on the international WCAG guidelines at level AA. In practice that means the site must be usable by visitors with visual, hearing, motor or cognitive impairments: full keyboard navigation, screen reader support, sufficient colour contrast, alternative text for images and more.
 
 ## What is the risk? A claim of up to ₪50,000 with no proof of damage
 
-This is the part worth knowing: the law allows compensation of up to ₪50,000 to be claimed, without the claimant having to prove that any actual damage was caused. Thousands of warning letters and accessibility claims are sent in Israel every year, and small businesses are a favoured target, because most of them are simply unaware of the requirements. The cost of making a site accessible is almost always far below the cost of a single claim. (One caveat: this article is not legal advice, for specific questions, consult a lawyer who specialises in the field.)
+This is the part worth knowing: [the law allows compensation of up to ₪50,000](https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%A9%D7%95%D7%95%D7%99%D7%95%D7%9F_%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%AA#%D7%A1%D7%A2%D7%99%D7%A3_19%D7%A0%D7%90) to be claimed, without the claimant having to prove that any actual damage was caused. Thousands of warning letters and accessibility claims are sent in Israel every year, and small businesses are a favoured target, because most of them are simply unaware of the requirements. The cost of making a site accessible is almost always far below the cost of a single claim. (One caveat: this article is not legal advice, for specific questions, consult a lawyer who specialises in the field.)
 
 ## An accessibility overlay on its own, or accessibility built into the code?
 
@@ -2592,6 +2600,7 @@ If the foundation is sound and the site merely looks dated, a design refresh wil
 },
 
   'whatsapp-business-api-crm-integration': {
+    dateModified: '2026-10-30',
     title: 'WhatsApp Business API to CRM: a setup guide',
     excerpt:
       'Israeli customers send a WhatsApp message, they do not fill in forms. How to connect the WhatsApp Business API to a CRM, step by step, and what it costs.',

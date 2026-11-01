@@ -1,4 +1,5 @@
 import { FOOTER_LINKS, CONTACT_INFO } from '@/lib/lp-agency-content'
+import CookieSettingsButton from '@/components/layout/CookieSettingsButton'
 
 export default function Footer() {
   return (
@@ -24,6 +25,7 @@ export default function Footer() {
                   {link.label}
                 </a>
               ))}
+              <CookieSettingsButton className="text-white hover:text-blue-400 transition text-right cursor-pointer" />
             </nav>
           </div>
 

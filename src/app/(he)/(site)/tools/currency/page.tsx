@@ -1,14 +1,28 @@
 import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import CurrencyConverter from '../../components/tools/CurrencyConverter'
-import { CURRENCY_HUB_PATH, currencyPages, currencyPath, fetchIlsRates, formatMoney, shekelsPer } from '@/lib/currency-pages'
+import ToolSources from '../../components/tools/ToolSources'
+import {
+  CURRENCY_HUB_PATH,
+  RATES_SOURCE_URL,
+  currencyPages,
+  currencyPath,
+  fetchIlsRates,
+  formatMoney,
+  shekelsPer,
+} from '@/lib/currency-pages'
 
 export const revalidate = 3600
 
 const TITLE = 'המרת מטבע לשקלים: 24 מטבעות'
 const META_TITLE = 'המרת מטבע לשקלים היום: דולר, יורו, זלוטי, באט ועוד'
 const DESCRIPTION =
-  'כמה זה בשקלים: שערי 24 מטבעות מול השקל, מתעדכנים כל שעה, עם מחשבון המרה לכל מטבע: דולר, יורו, זלוטי, וון, באט, גריבנה, דירהם, רופי ועוד.'
+  'כמה זה בשקלים: שערי 24 מטבעות מול השקל, מתעדכנים פעם ביום, עם מחשבון המרה לכל מטבע: דולר, יורו, זלוטי, וון, באט, גריבנה, דירהם, רופי ועוד.'
+
+const sources = [
+  { href: RATES_SOURCE_URL, label: 'ExchangeRate-API: מקור השערים בעמוד' },
+  { href: 'https://www.boi.org.il/roles/markets/exchangerates/', label: 'בנק ישראל: שערי חליפין יציגים' },
+]
 
 const faq: ToolFaqEntry[] = [
   {
@@ -30,8 +44,9 @@ export default async function CurrencyHubPage() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="בוחרים מטבע ורואים כמה הוא שווה בשקלים היום, עם מחשבון וטבלת המרה. השערים מתעדכנים כל שעה."
-      chips={['24 מטבעות', 'מתעדכן כל שעה', 'בשני הכיוונים']}
+      lede="בוחרים מטבע ורואים כמה הוא שווה בשקלים היום, עם מחשבון וטבלת המרה. השערים מתעדכנים פעם ביום."
+      rateDate={rates?.updated}
+      chips={['24 מטבעות', 'מתעדכן פעם ביום', 'בשני הכיוונים']}
       tool={<CurrencyConverter code="USD" name="דולר אמריקאי" shekels={usd} />}
       faq={faq}
       cta={{
@@ -64,6 +79,7 @@ export default async function CurrencyHubPage() {
           })}
         </tbody>
       </table>
+      <ToolSources sources={sources} />
     </ToolLayout>
   )
 }

@@ -1,10 +1,17 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import {
+  CONSENT_ACCEPTED,
+  CONSENT_DECLINED,
+  COOKIE_CONSENT_KEY,
+  OPEN_COOKIE_SETTINGS_EVENT,
+} from '@/lib/cookie-consent'
 
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void
+    clarity?: (...args: unknown[]) => void
   }
 }
 
@@ -13,7 +20,7 @@ const COPY = {
     dir: 'rtl' as const,
     aria: 'הסכמה לשימוש בעוגיות',
     title: 'אנו משתמשים בעוגיות (Cookies)',
-    body: 'לשיפור חווית המשתמש וניתוח תנועה באמצעות Google Analytics. ניתן לבטל את הסכמתכם בכל עת.',
+    body: 'לשיפור חוויית המשתמש וניתוח תנועה באמצעות Google Analytics ו-Microsoft Clarity. ניתן לבטל את הסכמתכם בכל עת.',
     decline: 'דחיה',
     accept: 'אני מסכים',
     align: 'sm:text-right',
@@ -22,7 +29,7 @@ const COPY = {
     dir: 'ltr' as const,
     aria: 'Cookie consent',
     title: 'We use cookies',
-    body: 'To improve your experience and measure traffic with Google Analytics. You can withdraw consent at any time.',
+    body: 'To improve your experience and measure traffic with Google Analytics and Microsoft Clarity. You can withdraw consent at any time.',
     decline: 'Decline',
     accept: 'Accept',
     align: 'sm:text-left',
@@ -36,8 +43,12 @@ export default function CookieConsent({ locale = 'he' }: { locale?: 'he' | 'en' 
   useEffect(() => {
     // The GA tag itself is loaded in the root layout (Consent Mode v2) with
     // analytics_storage denied by default; this banner only flips consent.
-    const stored = localStorage.getItem('cookie-consent')
-    if (!stored) setVisible(true)
+    const stored = localStorage.getItem(COOKIE_CONSENT_KEY)
+    if (stored !== CONSENT_ACCEPTED && stored !== CONSENT_DECLINED) setVisible(true)
+
+    const openSettings = () => setVisible(true)
+    window.addEventListener(OPEN_COOKIE_SETTINGS_EVENT, openSettings)
+    return () => window.removeEventListener(OPEN_COOKIE_SETTINGS_EVENT, openSettings)
   }, [])
 
   // The Sienna launcher sits in the same bottom-left corner with an inline
@@ -49,15 +60,17 @@ export default function CookieConsent({ locale = 'he' }: { locale?: 'he' | 'en' 
   }, [visible])
 
   function accept() {
-    localStorage.setItem('cookie-consent', 'accepted')
+    localStorage.setItem(COOKIE_CONSENT_KEY, CONSENT_ACCEPTED)
     setVisible(false)
     window.gtag?.('consent', 'update', { analytics_storage: 'granted' })
+    window.clarity?.('consent')
   }
 
   function decline() {
-    localStorage.setItem('cookie-consent', 'declined')
+    localStorage.setItem(COOKIE_CONSENT_KEY, CONSENT_DECLINED)
     setVisible(false)
     window.gtag?.('consent', 'update', { analytics_storage: 'denied' })
+    window.clarity?.('consent', false)
   }
 
   return (

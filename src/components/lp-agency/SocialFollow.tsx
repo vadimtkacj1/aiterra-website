@@ -10,7 +10,7 @@ export default function SocialFollow() {
   ].filter((social) => Boolean(social.url));
 
   return (
-    <section className="py-20 bg-gradient-to-b">
+    <section id="follow" className="py-20 bg-gradient-to-b">
       <div className="container mx-auto px-4">
         <div className="max-w-md mx-auto text-center">
           <div className="relative w-full h-80 mb-8">

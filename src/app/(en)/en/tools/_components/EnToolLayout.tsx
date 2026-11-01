@@ -12,11 +12,12 @@ import JsonLd from '@/components/seo/JsonLd'
 import { pageMetadata } from '@/lib/metadata'
 import { ORG_ID, breadcrumbList, faqPage, webPage } from '@/lib/schema'
 import { SITE_URL } from '@/lib/seo'
-import { tools } from '@/lib/tools'
+import { isFunTool, tools } from '@/lib/tools'
 import {
   EN_TOOLS_HUB_PATH,
   EN_TOOLS_HUB_TITLE,
   enToolBySlug,
+  enToolHasSources,
   enToolPath,
   enToolReviewed,
   otherEnTools,
@@ -57,7 +58,7 @@ const relatedEnTools = (slug: string) => {
   return [...pinned, ...rest].slice(0, RELATED_TOOLS_SHOWN)
 }
 
-const reviewedLabel = (date: string) =>
+const reviewedDate = (date: string) =>
   new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).format(
     new Date(`${date}T00:00:00Z`),
   )
@@ -88,6 +89,7 @@ export function EnToolHero({
   chips = [],
   large = false,
   reviewed,
+  reviewedLabel = 'Checked against the sources',
 }: {
   eyebrow: string
   title: string
@@ -95,6 +97,7 @@ export function EnToolHero({
   chips?: string[]
   large?: boolean
   reviewed?: string
+  reviewedLabel?: string
 }) {
   return (
     <>
@@ -124,7 +127,7 @@ export function EnToolHero({
             <p className={styles.lede}>{lede}</p>
             {reviewed ? (
               <p className={styles.reviewed}>
-                Checked against the sources: <time dateTime={reviewed}>{reviewedLabel(reviewed)}</time>
+                {reviewedLabel}: <time dateTime={reviewed}>{reviewedDate(reviewed)}</time>
               </p>
             ) : null}
             {chips.length ? (
@@ -209,12 +212,13 @@ export default function EnToolLayout({
   const title = entry?.title ?? metaTitle
   const path = enToolPath(slug)
   const reviewed = enToolReviewed(slug)
-  const faqJsonLd = faqPage({ path, entries: faq.map(({ question, answer }) => ({ question, answer })) })
+  const faqJsonLd = faqPage({ path, locale: 'en', entries: faq.map(({ question, answer }) => ({ question, answer })) })
   const related = relatedEnTools(slug)
+  const showsStamp = !isFunTool(`/tools/${slug}`)
 
   return (
     <>
-      <JsonLd data={webPage({ path, name: metaTitle, description })} />
+      <JsonLd data={webPage({ path, name: metaTitle, description, locale: 'en' })} />
       <JsonLd
         data={breadcrumbList([
           { name: 'Home', path: '/en' },
@@ -242,7 +246,14 @@ export default function EnToolLayout({
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Header />
       <main id="main-content" className={styles.page}>
-        <EnToolHero eyebrow="Free tool" title={title} lede={lede} chips={chips} reviewed={reviewed} />
+        <EnToolHero
+          eyebrow="Free tool"
+          title={title}
+          lede={lede}
+          chips={chips}
+          reviewed={showsStamp ? reviewed : undefined}
+          reviewedLabel={enToolHasSources(slug) ? undefined : 'Updated'}
+        />
         <EnToolCrumbs
           trail={[
             { label: 'Home', href: '/en' },
@@ -252,6 +263,16 @@ export default function EnToolLayout({
         />
 
         {tool}
+        <p className={styles.trustLine}>
+          Built and maintained by AITERRA (aiterra.co.il), an Israeli digital agency.{' '}
+          <Link href="/en/about" prefetch={false}>
+            About us
+          </Link>
+          {' · '}
+          <Link href="/en/contact" prefetch={false}>
+            Contact
+          </Link>
+        </p>
 
         <article className={styles.guide}>
           {children}

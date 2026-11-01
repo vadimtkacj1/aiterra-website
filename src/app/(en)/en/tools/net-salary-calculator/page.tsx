@@ -7,9 +7,38 @@ import {
   BTL_REDUCED_LIMIT_MONTHLY,
   HISHTALMUT_SALARY_CEILING_MONTHLY,
   PENSION_CREDIT_SALARY_CEILING_MONTHLY,
+  SOURCES,
   calculateSalary,
 } from '@/lib/net-salary'
 import styles from '../../../../(he)/(site)/tools/net-salary-calculator/page.module.css'
+import ToolSources from '../../../../(he)/(site)/components/tools/ToolSources'
+
+const sources = [
+  {
+    href: SOURCES.taxBooklet.href,
+    label: 'Israel Tax Authority: income tax guide for salaries, January 2026 onwards (PDF, Hebrew)',
+  },
+  {
+    href: SOURCES.taxBrackets.href,
+    label: 'Kol Zchut: income tax brackets (Hebrew)',
+  },
+  {
+    href: SOURCES.btlEmployee.href,
+    label: 'National Insurance Institute: contribution rates for employees (Hebrew)',
+  },
+  {
+    href: SOURCES.pensionCredit.href,
+    label: 'Kol Zchut: income tax credit for pension contributions (Hebrew)',
+  },
+  {
+    href: SOURCES.hishtalmut.href,
+    label: 'Kol Zchut: keren hishtalmut (Hebrew)',
+  },
+  {
+    href: SOURCES.pensionOrder.href,
+    label: 'Kol Zchut: mandatory pension insurance for employees (Hebrew)',
+  },
+]
 
 const SLUG = 'net-salary-calculator'
 const META_TITLE = 'Israel Net Salary Calculator 2026: Gross to Net'
@@ -139,6 +168,7 @@ export default function EnNetSalaryPage() {
         the <Link href="/en/tools/self-employed-tax-calculator">self-employed tax calculator</Link>. This is an estimate,
         not tax or payroll advice.
       </p>
+      <ToolSources sources={sources} heading="Sources" />
     </EnToolLayout>
   )
 }

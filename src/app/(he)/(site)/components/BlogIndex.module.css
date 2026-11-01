@@ -60,6 +60,19 @@
   color: var(--v2-paper-ink);
 }
 
+.authors {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 16px;
+  padding: 24px;
+  font-size: 13px;
+  line-height: 1;
+  color: var(--v2-paper-ink-muted);
+}
+
 .index .tabs {
   position: relative;
   display: flex;

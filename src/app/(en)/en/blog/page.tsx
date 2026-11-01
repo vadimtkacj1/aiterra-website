@@ -5,6 +5,8 @@ import BlogIndex, { type BlogCard } from '../../../(he)/(site)/components/BlogIn
 import ContactForm from '../../../(he)/(site)/components/ContactForm'
 import Footer from '../../../(he)/(site)/components/Footer'
 import { getAllPostsEn } from '@/lib/content-en-blog'
+import { getAllAuthors } from '@/lib/authors-server'
+import { applyAuthorEn } from '@/lib/content-en-authors'
 import { formatPostDate, readingMinutes } from '../../../(he)/(site)/blogCategory'
 import { getV2ContentEn } from '@/lib/v2-content-server'
 import { pageMetadata } from '@/lib/metadata'
@@ -43,6 +45,10 @@ function loadCards(defaultAuthor: string): BlogCard[] {
 export default function EnBlogPage() {
   const { blog } = getV2ContentEn()
   const posts = loadCards(blog.defaultAuthor)
+  const authors = getAllAuthors().map((author) => {
+    const { id, name } = applyAuthorEn(author)
+    return { name, href: `/en/blog/author/${id}` }
+  })
 
   return (
     <>
@@ -64,7 +70,7 @@ export default function EnBlogPage() {
       <Header />
       <main id="main-content">
         <PageHero title={blog.title} lede={blog.lede} headingId="en-blog-heading" locale="en" />
-        <BlogIndex posts={posts} locale="en" />
+        <BlogIndex posts={posts} authors={authors} locale="en" />
       </main>
       <Footer locale="en">
         <ContactForm variant="footer" source="en-blog" />

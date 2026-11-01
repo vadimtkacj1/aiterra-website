@@ -4,6 +4,26 @@ import RentalIncomeTaxCalculatorEn from '../_components/RentalIncomeTaxCalculato
 import { ils, rentalTrackName } from '../_components/en-format'
 import { ceilingTable, computeRental } from '@/lib/rental-income-tax'
 import styles from '../../../../(he)/(site)/tools/rental-income-tax-calculator/page.module.css'
+import ToolSources from '../../../../(he)/(site)/components/tools/ToolSources'
+
+const sources = [
+  {
+    href: 'https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_(%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%A2%D7%9C_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9E%D7%94%D7%A9%D7%9B%D7%A8%D7%AA_%D7%93%D7%99%D7%A8%D7%AA_%D7%9E%D7%92%D7%95%D7%A8%D7%99%D7%9D)',
+    label: 'Income Tax Law (Exemption on Income from Renting a Residential Apartment), 1990, on Wikisource (Hebrew)',
+  },
+  {
+    href: 'https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94',
+    label: 'Income Tax Ordinance, on Wikisource (Hebrew)',
+  },
+  {
+    href: 'https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf',
+    label: 'Israel Tax Authority: income tax guide for salaries, January 2026 onwards (PDF, Hebrew)',
+  },
+  {
+    href: 'https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3',
+    label: 'Value Added Tax Law, on Wikisource (Hebrew)',
+  },
+]
 
 const SLUG = 'rental-income-tax-calculator'
 const META_TITLE = 'Israel Rental Income Tax Calculator 2026'
@@ -146,6 +166,7 @@ export default function EnRentalIncomeTaxPage() {
         <Link href="/en/tools/exempt-dealer-threshold">osek patur ceiling</Link>. This is general information, not tax
         advice. Before choosing a track, especially with several units, consult an accountant.
       </p>
+      <ToolSources sources={sources} heading="Sources" />
     </EnToolLayout>
   )
 }

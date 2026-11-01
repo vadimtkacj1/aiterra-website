@@ -35,7 +35,7 @@ export default function HeroSection() {
             <span className="label t-dim">E-Commerce Studio</span>
             <span className="ms-auto hidden sm:block">
               <span dir="ltr" className="label t-dim">
-                Tel Aviv · Est. 2024
+                Bat Yam, Israel
               </span>
             </span>
           </div>
@@ -88,7 +88,7 @@ export default function HeroSection() {
               <Storefront3D />
 
               <p className="t-muted mt-8 max-w-xl text-[15px] leading-relaxed md:mt-10 md:text-[16px]">
-                ב-Aiterra אנחנו לא משתמשים בתבניות. אנחנו מפתחים עבורכם מערכת
+                במסלול הזה אנחנו לא משתמשים בתבניות. אנחנו מפתחים עבורכם מערכת
                 איקומרס עצמאית ומתקדמת – ללא מגבלות של וורדפרס או שופיפיי. החל
                 מעיצוב מותאם אישית, דרך פיתוח טכנולוגי מתקדם, ועד ליווי צמוד לשנה
                 שלמה כדי להבטיח שהחנות שלכם תהפוך למכונת מכירות.

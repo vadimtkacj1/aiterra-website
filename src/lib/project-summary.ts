@@ -35,29 +35,15 @@ export function projectSummary(project: PortfolioProject, locale: Locale) {
 
 export type ProjectFaqEntry = { question: string; answer: string }
 
-const MIN_ANSWER_LENGTH = 40
 const HEBREW = /[\u0590-\u05FF]/
 
-const plain = (text?: string) => (text ?? '').replace(/<[^>]+>/g, ' ').replace(/[*_#]/g, '').replace(/\s+/g, ' ').trim()
-
 export function projectFaq(project: PortfolioProject, locale: Locale): ProjectFaqEntry[] {
+  const { technology } = project
+  if (!technology) return []
   const client = clientName(project)
-  const tech = project.technology || project.tags.join(', ')
-  const entries =
+  const entry =
     locale === 'en'
-      ? [
-          { question: `What did Aiterra build for ${client}?`, answer: plain(project.heroDescription) },
-          { question: `What was the challenge in the ${client} project?`, answer: plain(project.challenge?.text) },
-          { question: `How was it solved?`, answer: plain(project.solution?.text) },
-          { question: `Which technology does the project use?`, answer: `The ${client} project uses ${tech}, and it is a ${whatWasBuilt(project).toLowerCase()} delivered by Aiterra.` },
-        ]
-      : [
-          { question: `מה Aiterra בנתה עבור ${client}?`, answer: plain(project.heroDescription) },
-          { question: `מה היה האתגר בפרויקט של ${client}?`, answer: plain(project.challenge?.text) },
-          { question: 'איך הבעיה נפתרה?', answer: plain(project.solution?.text) },
-          { question: 'באיזו טכנולוגיה נבנה הפרויקט?', answer: `הפרויקט של ${client} נבנה עם ${tech}. סוג הפרויקט: ${whatWasBuilt(project)}.` },
-        ]
-  return entries.filter(
-    ({ answer }) => answer.length >= MIN_ANSWER_LENGTH && (locale === 'he' || !HEBREW.test(answer)),
-  )
+      ? { question: 'Which technology does the project use?', answer: `The ${client} project uses ${technology}.` }
+      : { question: 'באיזו טכנולוגיה נבנה הפרויקט?', answer: `הפרויקט של ${client} נבנה עם ${technology}.` }
+  return locale === 'en' && HEBREW.test(entry.answer) ? [] : [entry]
 }

@@ -34,6 +34,7 @@ export default function LeadFormCard() {
 
   return (
     <section
+      id="contact"
       style={{
         width: "100%",
         background: "linear-gradient(5.99deg, #080A0C 16.13%, #0066FF 129.92%)",

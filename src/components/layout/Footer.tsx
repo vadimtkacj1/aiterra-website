@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CONTACT_EMAIL } from '@/lib/contact'
 import { services } from '@/data/services'
+import CookieSettingsButton from './CookieSettingsButton'
 
 const navLinks = [
   { label: 'ראשי', href: '/' },
@@ -130,6 +131,7 @@ export default function Footer() {
               {link.label}
             </Link>
           ))}
+          <CookieSettingsButton className="text-white/70 text-[13px] hover:text-white transition-colors cursor-pointer" />
         </div>
 
         <div className="mt-10 w-full leading-[0]">

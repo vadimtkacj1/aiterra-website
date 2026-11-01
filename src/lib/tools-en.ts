@@ -212,6 +212,10 @@ export const enToolBySlug = (slug: string) => enTools.find((tool) => tool.slug =
 
 export const enToolReviewed = (slug: string) => enToolBySlug(slug)?.reviewed ?? EN_TOOLS_REVIEWED
 
+const EN_TOOLS_WITHOUT_SOURCES = ['hebrew-date-converter']
+
+export const enToolHasSources = (slug: string) => !EN_TOOLS_WITHOUT_SOURCES.includes(slug)
+
 export const hasEnTool = (hePath: string) => {
   const match = /^\/tools\/([^/]+)$/.exec(hePath)
   return Boolean(match && EN_TOOL_SLUGS.includes(match[1]))

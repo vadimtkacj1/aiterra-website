@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Params) {
   return toolMetadata({
     path: currencyPath(page.slug),
     metaTitle: metaTitleOf(page.name),
-    description: `כמה שווה ${page.name} (${page.code}) בשקלים היום: שער מתעדכן כל שעה, מחשבון המרה בשני הכיוונים וטבלה לסכומים נפוצים.`,
+    description: `כמה שווה ${page.name} (${page.code}) בשקלים היום: שער מתעדכן פעם ביום, מחשבון המרה בשני הכיוונים וטבלה לסכומים נפוצים.`,
   })
 }
 
@@ -51,8 +51,8 @@ export default async function CurrencyPageView({ params }: Params) {
       id: `currency-${page.slug}-one`,
       question: `כמה זה ${page.name} אחד בשקלים?`,
       answer: one
-        ? `לפי שער אמצע השוק העדכני${rates?.updated ? ` (${rates.updated})` : ''}, ${page.name} אחד שווה כ-${one} ₪, ושקל אחד שווה כ-${perShekel} ${page.code}. השער משתנה במהלך היום, והמחשבון בעמוד מתעדכן כל שעה.`
-        : 'השער מוצג במחשבון בעמוד ומתעדכן כל שעה. כרגע מקור השערים לא זמין, נסו שוב בעוד כמה דקות.',
+        ? `לפי שער אמצע השוק העדכני${rates?.updated ? ` (${rates.updated})` : ''}, ${page.name} אחד שווה כ-${one} ₪, ושקל אחד שווה כ-${perShekel} ${page.code}. השער משתנה במהלך היום, והמחשבון בעמוד מתעדכן פעם ביום.`
+        : 'השער מוצג במחשבון בעמוד ומתעדכן פעם ביום. כרגע מקור השערים לא זמין, נסו שוב בעוד כמה דקות.',
     },
     {
       id: `currency-${page.slug}-bank`,
@@ -63,13 +63,14 @@ export default async function CurrencyPageView({ params }: Params) {
       id: `currency-${page.slug}-official`,
       question: 'מה ההבדל בין השער כאן לשער היציג של בנק ישראל?',
       answer:
-        'בנק ישראל מפרסם שער יציג פעם ביום ל-14 מטבעות, והוא השער שמשמש לחשבוניות ולדיווח למס. השער כאן מגיע ממקור שערים בינלאומי, מכסה עוד מטבעות ומתעדכן כל שעה. לחשבונית במטבע חוץ השתמשו בשער היציג.',
+        'בנק ישראל מפרסם שער יציג פעם ביום ל-14 מטבעות, והוא השער שמשמש לחשבוניות ולדיווח למס. השער כאן מגיע ממקור שערים בינלאומי, מכסה עוד מטבעות ומתעדכן פעם ביום. לחשבונית במטבע חוץ השתמשו בשער היציג.',
     },
   ]
 
   return (
     <ToolLayout
       path={path}
+      rateDate={rates?.updated}
       title={`כמה זה ${page.name} בשקלים`}
       metaTitle={metaTitleOf(page.name)}
       description={`כמה שווה ${page.name} (${page.code}) בשקלים היום, עם מחשבון המרה וטבלה.`}
@@ -78,7 +79,7 @@ export default async function CurrencyPageView({ params }: Params) {
           ? `${page.name} אחד (${page.code}) שווה היום כ-${one} ₪. מקלידים כל סכום במחשבון ומקבלים את ההמרה מיד, בשני הכיוונים.`
           : `מקלידים סכום ב${page.name} ומקבלים את ההמרה לשקלים, בשני הכיוונים.`
       }
-      chips={[one ? `1 ${page.code} ≈ ${one} ₪` : page.code, 'מתעדכן כל שעה', page.country]}
+      chips={[one ? `1 ${page.code} ≈ ${one} ₪` : page.code, 'מתעדכן פעם ביום', page.country]}
       tool={<CurrencyConverter code={page.code} name={page.name} shekels={shekels} />}
       faq={faq}
       cta={{

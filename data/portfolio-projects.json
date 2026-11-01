@@ -167,18 +167,19 @@
     "slug": "ecommerce-store",
     "title": "חנות דיגיטלית",
     "category": "חנויות וירטואליות",
+    "technology": "Next.js · PayPlus",
     "heroTitle": "חנות דיגיטלית מתקדמת",
     "heroDescription": "פיתוח חנות וירטואלית מלאה עם סל קניות, עיבוד תשלומים מאובטח ומערכת ניהול מוצרים מתקדמת.",
     "image": "/images/portfolio/hero/ecommerce-store.webp",
     "screenshot": "/images/portfolio/shots/ecommerce-store.webp",
     "tags": [
+      "Next.js",
       "React",
-      "Node.js",
-      "Stripe"
+      "PayPlus"
     ],
     "externalUrl": "https://naturallyrefreshing.store/",
     "metaDescription": "פיתוח חנות וירטואלית מלאה: סל קניות, סליקה מאובטחת ומערכת ניהול מוצרים מתקדמת. כך בנינו אתר איקומרס מהיר שממיר גולשים לקונים.",
-    "rev": 3,
+    "rev": 4,
     "imageAlt": "צילום מסך של דף הבית בחנות טבעי שזה מרענן"
   },
   {

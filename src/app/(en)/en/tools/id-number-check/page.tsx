@@ -44,17 +44,17 @@ const sources = [
     note: 'open-source validation library with examples of a valid number and a wrong check digit; the same library covers company numbers (stdnum.il.hp)',
   },
   {
-    href: 'https://data.gov.il/he/dataset/ica_companies',
+    href: 'https://data.gov.il/he/datasets/ministry_of_justice/ica_companies',
     label: 'data.gov.il: Registrar of Companies database',
     note: 'our check: 732,514 of 732,515 company numbers pass the same check digit',
   },
   {
-    href: 'https://data.gov.il/he/dataset/ica_partnerships',
+    href: 'https://data.gov.il/he/datasets/ministry_of_justice/ica_partnerships',
     label: 'data.gov.il: partnerships database',
     note: 'our check: all 29,074 partnership numbers pass',
   },
   {
-    href: 'https://data.gov.il/he/dataset/moj-amutot',
+    href: 'https://data.gov.il/he/datasets/ministry_of_justice/moj-amutot',
     label: 'data.gov.il: non-profits and public benefit companies database',
     note: 'our check: all 73,899 non-profit numbers starting with 58 pass',
   },

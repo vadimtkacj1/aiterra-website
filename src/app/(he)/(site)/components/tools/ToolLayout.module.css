@@ -461,3 +461,9 @@
   color: inherit;
   text-decoration: underline;
 }
+
+.answerLine {
+  width: min(100% - 40px, 720px);
+  margin: 24px auto 0;
+  color: #3b4157;
+}

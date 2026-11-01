@@ -1,11 +1,23 @@
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import FinalSettlementCalculator from '../../components/tools/FinalSettlementCalculator'
+import ToolSources from '../../components/tools/ToolSources'
+import { leavingWorkSources } from '@/lib/leaving-work-sources'
 
 const PATH = '/tools/final-settlement-calculator'
 const TITLE = 'מחשבון גמר חשבון'
 const META_TITLE = 'מחשבון גמר חשבון לעובד: כל מה שמגיע בסיום עבודה'
 const DESCRIPTION =
   'מחשבון גמר חשבון: מכניסים תאריכים ושכר ומקבלים פיצויים, פדיון חופשה, דמי הבראה והודעה מוקדמת בסכום אחד.'
+
+const sources = [
+  leavingWorkSources.severanceLaw,
+  leavingWorkSources.severanceGuide,
+  leavingWorkSources.severanceAfterResigning,
+  leavingWorkSources.vacationPayout,
+  leavingWorkSources.recuperationRate,
+  leavingWorkSources.recuperationOrder,
+  leavingWorkSources.noticeLaw,
+]
 
 const faq: ToolFaqEntry[] = [
   {
@@ -46,6 +58,7 @@ export default function Page() {
       <h2>איך זה מחושב</h2>
       <p>פיצויים: שכר אחרון כפול שנות ותק. פדיון חופשה: שכר חלקי 22 כפול הימים. הבראה: ימי הזכאות כפול 451.50 ₪, יחסית לשנה האחרונה.</p>
       <p>המחשבון אינו ייעוץ משפטי. לפני חתימה על גמר חשבון מומלץ לבדוק את הסכום מול הסכם העבודה.</p>
+      <ToolSources sources={sources} />
     </ToolLayout>
   )
 }

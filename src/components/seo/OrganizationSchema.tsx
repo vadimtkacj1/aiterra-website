@@ -6,18 +6,23 @@ import {
   OPENING_HOURS,
   SOCIAL_PROFILES,
 } from '@/lib/contact'
+import { authorsEn } from '@/lib/content-en-authors'
+import { personId, personNames, personUrl } from '@/lib/schema'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import { teamMembers } from '@/data/team-members'
 
-export default function OrganizationSchema() {
-  // Link the Organization to each named expert's Person node (rendered on their
-  // /blog/author/[id] ProfilePage) — a real org↔person entity-graph signal.
+const DISAMBIGUATING_DESCRIPTION = {
+  he: 'סוכנות תוכנה ודיגיטל ישראלית מבת ים שבונה אתרים, אפליקציות ואוטומציה לעסקים קטנים ובינוניים.',
+  en: 'Israeli software and digital agency based in Bat Yam that builds websites, apps and automation for small and medium businesses.',
+}
+
+export default function OrganizationSchema({ locale = 'he' }: { locale?: 'he' | 'en' }) {
   const employees = teamMembers.map((m) => ({
     '@type': 'Person',
-    '@id': `${SITE_URL}/blog/author/${m.id}#person`,
-    name: m.name,
-    jobTitle: m.role,
-    url: `${SITE_URL}/blog/author/${m.id}`,
+    '@id': personId(m.id, locale),
+    ...personNames(m.id, m.name, locale),
+    jobTitle: locale === 'en' ? authorsEn[m.id]?.role ?? m.role : m.role,
+    url: personUrl(m.id, locale),
   }))
   const org = {
     '@context': 'https://schema.org',
@@ -29,6 +34,7 @@ export default function OrganizationSchema() {
     email: CONTACT_EMAIL,
     telephone: CONTACT_PHONE_INTL,
     description: 'סוכנות דיגיטל ופיתוח – בניית אתרים, SEO ו-GEO, פרסום ממומן, אוטומציה לעסקים וסוכני AI (בינה מלאכותית)',
+    disambiguatingDescription: DISAMBIGUATING_DESCRIPTION[locale],
     // Raster logo with known dimensions — Google prefers this over SVG for rich
     // results (generated from icons/logo.svg by scripts, see public/icons/logo-512-v2.png).
     logo: {

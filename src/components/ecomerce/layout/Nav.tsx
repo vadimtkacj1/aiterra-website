@@ -7,12 +7,11 @@ import Logo from '@/components/ecomerce/ui/Logo'
 
 // The landing lives at /landings/ecomerce inside the main site, so every hash
 // target is absolute to that route — a bare `/#…` would jump to the site home.
-const BASE = '/landings/ecomerce'
+const BASE = '/lp/ecomerce'
 const LINKS = [
   { href: `${BASE}#about`, label: 'מי אנחנו' },
   { href: `${BASE}#advantages`, label: 'היתרונות' },
   { href: `${BASE}#portfolio`, label: 'תיק עבודות' },
-  { href: `${BASE}#testimonials`, label: 'המלצות' },
 ]
 
 const CTA_HREF = `${BASE}#lead-form`

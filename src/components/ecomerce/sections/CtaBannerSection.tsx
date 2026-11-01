@@ -2,19 +2,14 @@ import { ArrowLeft } from 'lucide-react'
 import Reveal from '@/components/ecomerce/ui/Reveal'
 import { CONTACT } from '@/lib/ecomerce/contact'
 
-/**
- * The paper breath between the black testimonial band and the black form.
- * No slab, no beam, no spotlight — the CTA earns its weight from scale and
- * from being the quietest surface on the page at the loudest moment.
- */
 export default function CtaBannerSection() {
   return (
-    <section dir="rtl" className="band-paper">
+    <section dir="rtl" className="band-paper rule-t">
       <div className="col-rules mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
         <div className="relative z-10">
           <Reveal>
             <div className="rule-draw-b flex items-center gap-4 pb-4">
-              <span className="mark t-accent text-[13px] font-bold">06</span>
+              <span className="mark t-accent text-[13px] font-bold">05</span>
               <span className="label t-dim" dir="ltr">
                 Ready to Scale?
               </span>

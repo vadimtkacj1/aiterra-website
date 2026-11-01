@@ -7,7 +7,6 @@ import StatementSection from '@/components/ecomerce/sections/StatementSection'
 import TeamSection from '@/components/ecomerce/sections/TeamSection'
 import AdvantagesSection from '@/components/ecomerce/sections/AdvantagesSection'
 import PortfolioSection from '@/components/ecomerce/sections/PortfolioSection'
-import TestimonialsSection from '@/components/ecomerce/sections/TestimonialsSection'
 import CtaBannerSection from '@/components/ecomerce/sections/CtaBannerSection'
 import LeadFormSection from '@/components/ecomerce/sections/LeadFormSection'
 import { pageMetadata } from '@/lib/metadata'
@@ -37,7 +36,6 @@ export default function EcommerceLandingPage() {
         <TeamSection />
         <AdvantagesSection />
         <PortfolioSection />
-        <TestimonialsSection />
         <CtaBannerSection />
         <LeadFormSection />
       </main>

@@ -1,13 +1,36 @@
+import { authorsEn } from '@/lib/content-en-authors'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 
 export const ORG_ID = `${SITE_URL}#organization`
 export const SITE_ID = `${SITE_URL}#website`
 
+type Locale = 'he' | 'en'
+
 const abs = (u: string) =>
   u.startsWith('http') ? u : `${SITE_URL}${u.startsWith('/') ? '' : '/'}${u}`
 
+const localePrefix = (locale: Locale) => (locale === 'en' ? '/en' : '')
+
+export const personUrl = (authorId: string, locale: Locale = 'he') =>
+  `${SITE_URL}${localePrefix(locale)}/blog/author/${authorId}`
+
+export const personId = (authorId: string, locale: Locale = 'he') =>
+  `${personUrl(authorId, locale)}#person`
+
+const withoutBracketedGloss = (name: string) =>
+  name.replace(/\s*\([^)]*\)/g, '').trim() || name.trim()
+
+export function personNames(authorId: string, storedName: string, locale: Locale = 'he') {
+  const hebrew = withoutBracketedGloss(storedName)
+  const english = authorsEn[authorId]?.name
+  if (!english) return { name: hebrew }
+  if (locale === 'en') return { name: english, ...(hebrew ? { alternateName: hebrew } : {}) }
+  return { name: hebrew || english, ...(hebrew ? { alternateName: english } : {}) }
+}
+
 export const toPlainText = (value: string) =>
   value
+    .replace(/<span dir="ltr">|<\/span>/g, '')
     .replace(/<[^>]+>/g, ' ')
     .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
     .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
@@ -97,6 +120,7 @@ export function articleSchema({
   authorId,
   tags,
   wordCount,
+  locale = 'he',
 }: {
   slug: string
   title: string
@@ -108,8 +132,9 @@ export function articleSchema({
   authorId?: string
   tags: string[]
   wordCount?: number
+  locale?: Locale
 }) {
-  const url = `${SITE_URL}/blog/${slug}`
+  const url = `${SITE_URL}${localePrefix(locale)}/blog/${slug}`
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -118,13 +143,18 @@ export function articleSchema({
     headline: title.slice(0, 110),
     name: title,
     description: toPlainText(excerpt),
-    inLanguage: 'he',
+    inLanguage: locale,
     url,
     datePublished,
     dateModified: dateModified || datePublished,
     ...(images.length ? { image: images.map(abs) } : {}),
     author: authorId
-      ? { '@id': `${SITE_URL}/blog/author/${authorId}#person` }
+      ? {
+          '@type': 'Person',
+          '@id': personId(authorId, locale),
+          name: personNames(authorId, authorName, locale).name,
+          url: personUrl(authorId, locale),
+        }
       : { '@type': 'Organization', '@id': ORG_ID, name: SITE_NAME },
     publisher: { '@id': ORG_ID },
     isPartOf: { '@id': SITE_ID },

@@ -6,6 +6,7 @@ import LocaleCounterpartsProvider from '@/components/layout/LocaleCounterparts'
 import { EN_POST_SLUGS, EN_SERVICE_SLUG_LIST } from '@/lib/locale-counterparts'
 import OrganizationSchema from '@/components/seo/OrganizationSchema'
 import CookieConsent from '@/components/layout/CookieConsent'
+import { CONSENT_ACCEPTED, COOKIE_CONSENT_KEY } from '@/lib/cookie-consent'
 import WhatsAppButton from '@/components/layout/WhatsAppButton'
 import A11yWidgetTweaks from '@/components/layout/A11yWidgetTweaks'
 import DeferredThirdParty from '@/components/layout/DeferredThirdParty'
@@ -95,7 +96,7 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
               function gtag(){dataLayer.push(arguments);}
               window.gtag = gtag;
               var granted = false;
-              try { granted = localStorage.getItem('cookie-consent') === 'accepted'; } catch (e) {}
+              try { granted = localStorage.getItem('${COOKIE_CONSENT_KEY}') === '${CONSENT_ACCEPTED}'; } catch (e) {}
               gtag('consent', 'default', {
                 ad_storage: 'denied',
                 ad_user_data: 'denied',
@@ -114,7 +115,7 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
             `}</Script>
           </>
         )}
-        <OrganizationSchema />
+        <OrganizationSchema locale="en" />
         <Providers>
           <LocaleCounterpartsProvider posts={EN_POST_SLUGS} services={EN_SERVICE_SLUG_LIST}>
             {children}

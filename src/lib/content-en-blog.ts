@@ -19,7 +19,7 @@ export function isTranslated(slug: string): boolean {
 
 export function applyPostEn(post: AdminPost): AdminPost {
   const override = postsEn[post.slug]
-  return override ? { ...post, seoTitle: undefined, seoDescription: undefined, ...override } : post
+  return override ? { ...post, seoTitle: undefined, seoDescription: undefined, dateModified: undefined, ...override } : post
 }
 
 export function getAllPostsEn(): AdminPost[] {

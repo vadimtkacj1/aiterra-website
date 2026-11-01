@@ -2,7 +2,7 @@ import { DATA_API, fetchRecords, formatDataDate, type LookupFailure } from '@/li
 import { searchVehicle, type Vehicle } from '@/lib/vehicle-lookup'
 
 export const TAG_RESOURCE_ID = 'c8b9f9c8-4612-4068-934f-d4acd2e3c06e'
-export const TAG_DATASET_URL = 'https://data.gov.il/he/dataset/rechev-tag-nachim'
+export const TAG_DATASET_URL = 'https://data.gov.il/he/datasets/ministry_of_transport/rechev-tag-nachim'
 export const TAG_RECORDS_APPROX = '643 אלף'
 
 export type DisabledTag = { plate: string; issuedOn: string; tagType: number | null }

@@ -11,6 +11,7 @@ export type BusinessCalculator = {
   description: string
   lede: string
   formula: string
+  source?: { href: string; label: string }
   fields: CalcField[]
   compute: (values: Values) => CalcResult | null
   faq: { question: string; answer: string }[]
@@ -65,6 +66,10 @@ export const businessCalculators: BusinessCalculator[] = [
     description: 'מכניסים הוצאות קבועות, מחיר ועלות ליחידה ורואים כמה יחידות ואיזה מחזור צריך כדי לכסות את ההוצאות.',
     lede: 'נקודת האיזון היא כמות המכירות שבה ההכנסות מכסות בדיוק את כל ההוצאות.',
     formula: 'נקודת איזון = הוצאות קבועות ÷ (מחיר ליחידה − עלות משתנה ליחידה).',
+    source: {
+      href: 'https://www.sba.gov/business-guide/plan-your-business/calculate-your-startup-costs',
+      label: 'U.S. Small Business Administration: נוסחת נקודת האיזון',
+    },
     fields: [
       { id: 'fixed', label: 'הוצאות קבועות בחודש (₪)', example: 20000 },
       { id: 'price', label: 'מחיר מכירה ליחידה (₪)', example: 100 },
@@ -127,6 +132,10 @@ export const businessCalculators: BusinessCalculator[] = [
     description: 'מכניסים תקציב, מכירות ורווחיות ובודקים ROAS, ROAS מינימלי ורווח אמיתי מהקמפיין.',
     lede: 'ROAS גבוה לא מבטיח רווח. צריך להשוות אותו ל-ROAS המינימלי לפי שיעור הרווח שלכם.',
     formula: 'ROAS = הכנסות ÷ תקציב. ROAS מינימלי = 100 ÷ שיעור רווח גולמי.',
+    source: {
+      href: 'https://support.google.com/google-ads/answer/6268637',
+      label: 'Google Ads Help: מהו ROAS, ערך המרה ביחס לעלות',
+    },
     fields: [
       { id: 'spend', label: 'תקציב פרסום (₪)', example: 5000 },
       { id: 'revenue', label: 'הכנסות מהקמפיין (₪)', example: 20000 },
@@ -151,6 +160,10 @@ export const businessCalculators: BusinessCalculator[] = [
     description: 'מחשבים ערך לקוח לאורך זמן, עלות גיוס ויחס LTV ל-CAC כדי לדעת אם השיווק משתלם.',
     lede: 'אם לקוח מרוויח לכם יותר ממה שעלה לגייס אותו, אפשר להגדיל את השיווק.',
     formula: 'LTV = רווח מלקוח בחודש × חודשי שימור. CAC = תקציב שיווק ÷ לקוחות חדשים.',
+    source: {
+      href: 'https://www.forentrepreneurs.com/saas-metrics-2/',
+      label: 'David Skok, SaaS Metrics 2.0: יחס LTV ל-CAC גבוה מ-3',
+    },
     fields: [
       { id: 'monthlyProfit', label: 'רווח מלקוח בחודש (₪)', example: 200 },
       { id: 'retention', label: 'חודשים שלקוח נשאר', example: 12 },

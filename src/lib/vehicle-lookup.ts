@@ -67,11 +67,11 @@ export type VehicleSearch =
   | { ok: true; vehicle: Vehicle | null; dataDate: string }
   | { ok: false; failure: LookupFailure }
 
-export const VEHICLES_DATASET_URL = 'https://data.gov.il/he/dataset/private-and-commercial-vehicles'
-export const MOTORCYCLES_DATASET_URL = 'https://data.gov.il/he/dataset/motorcycle'
-export const INACTIVE_DATASET_URL = 'https://data.gov.il/he/dataset/rechev_le_pail_with_degem'
-export const INACTIVE_NO_MODEL_DATASET_URL = 'https://data.gov.il/he/dataset/rechev_le_pail_without-degem'
-export const REMOVED_DATASET_URL = 'https://data.gov.il/he/dataset/reshev_bitul_sofi'
+export const VEHICLES_DATASET_URL = 'https://data.gov.il/he/datasets/ministry_of_transport/private-and-commercial-vehicles'
+export const MOTORCYCLES_DATASET_URL = 'https://data.gov.il/he/datasets/ministry_of_transport/motorcycle'
+export const INACTIVE_DATASET_URL = 'https://data.gov.il/he/datasets/ministry_of_transport/rechev_le_pail_with_degem'
+export const INACTIVE_NO_MODEL_DATASET_URL = 'https://data.gov.il/he/datasets/ministry_of_transport/rechev_le_pail_without-degem'
+export const REMOVED_DATASET_URL = 'https://data.gov.il/he/datasets/ministry_of_transport/reshev_bitul_sofi'
 export const PLATE_MIN_DIGITS = 5
 export const PLATE_MAX_DIGITS = 8
 export const EXPIRING_WITHIN_DAYS = 30

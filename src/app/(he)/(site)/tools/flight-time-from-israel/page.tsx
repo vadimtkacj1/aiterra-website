@@ -90,7 +90,8 @@ export default function FlightTimePage() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede={`טיסה ישירה מישראל לקפריסין נמשכת כשעה, ליוון ולרוב יעדי אירופה בין שעתיים לשש שעות, לדובאי כ-${hoursOf('dubai')} שעות, לניו יורק כ-${hoursOf('new-york')} ולבנגקוק כ-${hoursOf('bangkok')}. בטבלה ${destinations.length} יעדים עם משך טיסה ישירה או עם עצירה, הפרש שעות ומרחק, וחיפוש לפי שם.`}
+      answer={`טיסה ישירה מישראל לקפריסין נמשכת כשעה, ליוון ולרוב יעדי אירופה בין שעתיים לשש שעות, לדובאי כ-${hoursOf('dubai')} שעות, לניו יורק כ-${hoursOf('new-york')} ולבנגקוק כ-${hoursOf('bangkok')}.`}
+      lede={`בטבלה ${destinations.length} יעדים עם משך טיסה ישירה או עם עצירה, הפרש שעות ומרחק, וחיפוש לפי שם.`}
       chips={[`${destinations.length} יעדים`, 'משך משוער', `נבדק ב-${FLIGHT_TIMES_CHECKED}`]}
       tool={<FlightTimes />}
       faq={faq}

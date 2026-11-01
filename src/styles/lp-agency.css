@@ -4,6 +4,10 @@
   background: #ffffff;
 }
 
+.lpAgency section[id] {
+  scroll-margin-top: 5rem;
+}
+
 .lpAgency .gradient-border-wrapper {
   position: relative;
   border-radius: 100px;
