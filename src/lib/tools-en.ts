@@ -148,6 +148,60 @@ export const enTools: EnToolEntry[] = [
     category: 'money',
     icon: 'search',
   },
+  {
+    slug: 'net-salary-calculator',
+    title: 'Israel net salary calculator 2026',
+    description:
+      'Gross to net and net to gross at 2026 rates, with income tax, credit points, Bituach Leumi, health, pension and the full employer cost.',
+    category: 'work',
+    icon: 'calculator',
+    reviewed: '2026-11-01',
+  },
+  {
+    slug: 'severance-pay-calculator',
+    title: 'Israel severance pay calculator',
+    description:
+      'Pitzuim from your last salary and years of work, prorated for a partial year, with Section 14 and the 2026 tax exemption ceiling.',
+    category: 'work',
+    icon: 'calculator',
+    reviewed: '2026-11-01',
+  },
+  {
+    slug: 'notice-period-calculator',
+    title: 'Israel notice period calculator',
+    description:
+      'Legal notice on dismissal or resignation for salaried and hourly employees, with the section of the law and the last day of notice.',
+    category: 'work',
+    icon: 'calendar',
+    reviewed: '2026-11-01',
+  },
+  {
+    slug: 'recuperation-pay-calculator',
+    title: 'Israel recuperation pay calculator 2026',
+    description:
+      'Dmei havraa at ₪451.50 a day in the private sector, 5 to 10 days by seniority, for part-time work, partial years and the top-up from ₪418.',
+    category: 'work',
+    icon: 'calculator',
+    reviewed: '2026-11-01',
+  },
+  {
+    slug: 'rental-income-tax-calculator',
+    title: 'Israel rental income tax calculator',
+    description:
+      'Compare the exemption, 10% and regular tracks for residential rent, with the ₪5,654 monthly ceiling and 2026 tax brackets.',
+    category: 'money',
+    icon: 'landmark',
+    reviewed: '2026-11-01',
+  },
+  {
+    slug: 'exempt-dealer-threshold',
+    title: 'Osek patur ceiling 2026',
+    description:
+      'Check your turnover against the ₪122,833 osek patur ceiling, see what is left and forecast the month you will cross it.',
+    category: 'money',
+    icon: 'receipt',
+    reviewed: '2026-11-01',
+  },
 ]
 
 export const EN_TOOL_SLUGS = enTools.map((tool) => tool.slug)
