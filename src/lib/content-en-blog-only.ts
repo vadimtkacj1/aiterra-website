@@ -8,7 +8,9 @@ export type EnOnlyPost = Pick<
 export const postsEnOnly: Record<string, EnOnlyPost> = {
   'affordable-web-development-startup-israel': {
     title: 'How to Choose an Affordable Web Development Company in Israel for a Startup',
-    seoTitle: 'Affordable Web Development for Startups in Israel: How to Choose',
+    seoTitle: 'Affordable Web Development for Startups in Israel',
+    seoDescription:
+      'A founder\'s guide: which web development partner fits each startup stage, what drives the quote, red flags in cheap offers, and how to compare suppliers.',
     excerpt:
       'A practical guide for founders: which type of web development partner fits each startup stage, what drives the quote, the red flags in cheap offers, and a checklist for comparing Israeli suppliers.',
     tags: ['Web development', 'Startups', 'Israel', 'Choosing a supplier', 'MVP'],
@@ -133,7 +135,9 @@ An affordable web development company for a startup is the one that gets you liv
   },
   'website-analytics-tools-israel': {
     title: 'Website Analytics Tools for Israeli Businesses: GA4, Looker Studio and Cheaper Alternatives',
-    seoTitle: 'Website Analytics Tools in Israel: GA4, Looker Studio and Alternatives',
+    seoTitle: 'Website Analytics Tools in Israel: GA4 and Beyond',
+    seoDescription:
+      'GA4, Looker Studio, Microsoft Clarity, Matomo and Plausible compared for Israeli businesses: cost, privacy, Hebrew reporting and which setup fits you.',
     excerpt:
       'GA4, Looker Studio, Microsoft Clarity, Matomo, Plausible and enterprise suites compared for Israeli businesses: cost model, privacy, Hebrew reporting and which setup fits which company size.',
     tags: ['Analytics', 'GA4', 'Looker Studio', 'Data', 'Privacy'],
@@ -250,7 +254,9 @@ Most analytics problems are setup problems, not tool problems, and a few hours o
   },
   'ecommerce-ad-creative-testing-israel': {
     title: 'Testing and Scaling Ad Creatives for E-commerce in Israel: Meta and Google',
-    seoTitle: 'Creative Testing and Scaling for E-commerce Ads in Israel',
+    seoTitle: 'Creative Testing for E-commerce Ads in Israel',
+    seoDescription:
+      'How Israeli online stores test ad creatives on Meta and Google with a small local audience, what to watch in Hebrew, and when a winner is ready to scale.',
     excerpt:
       'How Israeli online stores test ad creatives on Meta and Google, how to structure tests with a small local audience, what to watch in Hebrew creatives, and when a winner is ready to scale.',
     tags: ['E-commerce', 'Meta Ads', 'Google Ads', 'Creative testing', 'Marketing'],
@@ -366,7 +372,9 @@ A store with a designer or video editor in-house can run this routine alone; the
   },
   'conversational-ai-consultancy-israel': {
     title: 'Conversational AI Consultancy in Israel: What to Expect and How to Evaluate a Partner',
-    seoTitle: 'Conversational AI Consultancy in Israel: How to Choose a Partner',
+    seoTitle: 'Conversational AI Consultancy in Israel',
+    seoDescription:
+      'What a conversational AI consultancy delivers, how engagements are structured, how Hebrew changes the work, and how to tell a real partner from a demo shop.',
     excerpt:
       'What a conversational AI consultancy actually delivers, how engagements are structured, how Hebrew changes the work, and the questions that separate a real partner from a demo shop.',
     tags: ['Conversational AI', 'AI consulting', 'Chatbots', 'AI agents', 'Israel'],
@@ -490,7 +498,9 @@ If you receive a handful of enquiries a week, if every question is unique and hi
   },
   'custom-web-development-israel': {
     title: 'Custom Web Development in Israel: Cost Drivers, Process, Hebrew/RTL and Accessibility',
-    seoTitle: 'Custom Web Development in Israel: Costs, Process, RTL and IS 5568',
+    seoTitle: 'Custom Web Development in Israel: Cost and Process',
+    seoDescription:
+      'What drives the cost of custom web development in Israel, how a good project runs, and the Hebrew, RTL and SI 5568 requirements foreign teams often miss.',
     excerpt:
       'What drives the cost of custom web development in Israel, how a well-run project is structured, and the Hebrew, right-to-left and SI 5568 accessibility requirements that foreign teams often miss.',
     tags: ['Custom development', 'Web development', 'RTL', 'Accessibility', 'SI 5568'],
@@ -608,9 +618,9 @@ Look for a team that asks about your business before it talks about technology, 
   },
   'best-business-messaging-apps-small-business-israel': {
     title: 'Best Business Messaging Apps for Small Businesses in Israel: Affordable Options Compared',
-    seoTitle: 'Best Business Messaging Apps for Small Business in Israel (Cheap Options)',
+    seoTitle: 'Best Small Business Messaging Apps in Israel',
     seoDescription:
-      'WhatsApp Business app, WhatsApp Business Platform, Slack, Google Chat and more compared for Israeli small businesses: what is free, what is paid, and when to upgrade.',
+      'WhatsApp Business app and API, Slack, Google Chat and more compared for Israeli small businesses: what is free, what is paid and when to upgrade.',
     excerpt:
       'Which messaging tools actually fit a small business in Israel: WhatsApp Business app versus the API, internal chat tools, free tiers and a checklist for choosing without overpaying.',
     tags: ['WhatsApp', 'Messaging', 'Small business', 'Israel', 'Communication'],
@@ -694,7 +704,7 @@ Start free, add structure when the pain is visible, and pay for the API only whe
   },
   'small-business-management-software-israel': {
     title: 'Best Small Business Management Software in Israel: Invoicing, CRM and ERP Compared',
-    seoTitle: 'Best Small Business Management Software in Israel: Invoicing, CRM, ERP',
+    seoTitle: 'Best Small Business Management Software in Israel',
     seoDescription:
       'Morning (Green Invoice), iCount, Fireberry, monday CRM and Priority compared for Israeli small businesses: what each does, published pricing and how to choose.',
     excerpt:
@@ -780,9 +790,9 @@ Build up in layers. Compliant invoicing first, CRM when follow-up hurts, ERP onl
   },
   'ecommerce-crm-inventory-integration-israel': {
     title: 'Affordable E-commerce CRM with Order and Inventory Integration in Israel',
-    seoTitle: 'Affordable E-commerce CRM With Order and Inventory Integration in Israel',
+    seoTitle: 'Affordable E-commerce CRM for Israeli Stores',
     seoDescription:
-      'How Israeli online stores connect orders, inventory, CRM and invoicing: Shopify, WooCommerce, iCount, Fireberry and monday compared, with a checklist and custom-build option.',
+      'How Israeli online stores connect orders, inventory, CRM and invoicing: Shopify, WooCommerce, iCount, Fireberry and monday compared, with a checklist.',
     excerpt:
       'Orders in the store, stock in a spreadsheet, customers in a CRM and invoices in a fourth tool. How an Israeli online store can connect them affordably, and where a custom integration pays off.',
     tags: ['E-commerce', 'CRM', 'Inventory', 'Integration', 'Israel'],
@@ -888,7 +898,7 @@ Close the seams in the order of pain: orders to invoices first, stock second, cu
   },
   'marketing-services-prices-israel-2026': {
     title: 'Marketing Services Prices in Israel 2026: Branding, Web Design, Social Media and Google Ads',
-    seoTitle: 'Marketing Services Prices in Israel 2026: Branding, Web Design, Social, Ads',
+    seoTitle: 'Marketing Services & Social Prices in Israel 2026',
     seoDescription:
       'What branding, web design, SEO, social media management and Google Ads cost in Israel in 2026: ranges we can source, what we cannot, and how to compare quotes.',
     excerpt:

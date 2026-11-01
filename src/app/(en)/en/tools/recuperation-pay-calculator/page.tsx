@@ -5,9 +5,9 @@ import { DAY_RATE_AGOROT, computeYear, seniorityTable } from '@/lib/recuperation
 import styles from '../../../../(he)/(site)/tools/recuperation-pay-calculator/page.module.css'
 
 const SLUG = 'recuperation-pay-calculator'
-const META_TITLE = 'Israel Recuperation Pay Calculator 2026 (Dmei Havraa)'
+const META_TITLE = 'Israel Recuperation Pay Calculator 2026 (Havraa)'
 const DESCRIPTION =
-  'Free calculator for dmei havraa in Israel: ₪451.50 a day in the private sector under the August 2026 extension order, 5 to 10 days by seniority, part-time and top-up from ₪418.'
+  'Free dmei havraa calculator: ₪451.50 a day in the private sector under the August 2026 extension order, 5 to 10 days by seniority, and the top-up from ₪418.'
 
 const faq: EnToolFaqEntry[] = [
   {

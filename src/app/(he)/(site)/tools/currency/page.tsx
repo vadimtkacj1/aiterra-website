@@ -6,7 +6,7 @@ import { CURRENCY_HUB_PATH, currencyPages, currencyPath, fetchIlsRates, formatMo
 export const revalidate = 3600
 
 const TITLE = 'המרת מטבע לשקלים: 24 מטבעות'
-const META_TITLE = 'המרת מטבע לשקלים היום: דולר, יורו, זלוטי, באט, וון ועוד'
+const META_TITLE = 'המרת מטבע לשקלים היום: דולר, יורו, זלוטי, באט ועוד'
 const DESCRIPTION =
   'כמה זה בשקלים: שערי 24 מטבעות מול השקל, מתעדכנים כל שעה, עם מחשבון המרה לכל מטבע: דולר, יורו, זלוטי, וון, באט, גריבנה, דירהם, רופי ועוד.'
 

@@ -7,7 +7,7 @@ const PATH = '/tools/llms-txt-generator'
 const TITLE = 'מחולל llms.txt ו-robots.txt לבוטים של AI'
 const META_TITLE = 'מחולל llms.txt ו-robots.txt לבוטים של AI | חינם'
 const DESCRIPTION =
-  'יוצרים קובץ llms.txt לפי המפרט ובלוק robots.txt עם כללים ל-GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended ועוד. מבדילים בין בוטים של חיפוש לבוטים של אימון.'
+  'יוצרים קובץ llms.txt לפי המפרט ובלוק robots.txt עם כללים ל-GPTBot, ClaudeBot, PerplexityBot, Google-Extended ועוד. מבדילים בין בוטים של חיפוש לבוטים של אימון.'
 
 const faq: ToolFaqEntry[] = [
   {

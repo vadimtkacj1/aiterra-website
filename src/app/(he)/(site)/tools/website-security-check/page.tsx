@@ -7,7 +7,7 @@ const PATH = '/tools/website-security-check'
 const TITLE = 'בדיקת אבטחת אתר'
 const META_TITLE = 'בדיקת אבטחת אתר בחינם: SSL, כותרות אבטחה ו-DMARC'
 const DESCRIPTION =
-  'בדיקת אבטחת אתר לבעלי אתרים: תעודת SSL ותוקף, הפניה ל-HTTPS, HSTS ו-CSP, עוגיות, קבצים חשופים כמו .git ו-xmlrpc, ורשומות SPF ו-DMARC. ציון A עד F עם הסבר מה לתקן.'
+  'בדיקת אבטחת אתר: תעודת SSL ותוקף, הפניה ל-HTTPS, HSTS ו-CSP, עוגיות, קבצים חשופים כמו .git ו-xmlrpc, ורשומות SPF ו-DMARC. ציון A עד F עם הסבר מה לתקן.'
 
 const checkRows: { check: string; why: string }[] = [
   {

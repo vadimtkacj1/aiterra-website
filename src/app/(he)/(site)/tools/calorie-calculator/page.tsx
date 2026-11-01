@@ -3,7 +3,7 @@ import { CalorieCalculator } from '../../components/tools/BodyCalculators'
 
 const PATH = '/tools/calorie-calculator'
 const TITLE = 'מחשבון קלוריות יומי'
-const META_TITLE = 'מחשבון קלוריות יומי: כמה קלוריות צריך ביום לירידה במשקל'
+const META_TITLE = 'מחשבון קלוריות יומי: כמה צריך ביום לירידה במשקל'
 const DESCRIPTION =
   'מחשבון קלוריות יומי: מכניסים גיל, מין, גובה, משקל ופעילות ומקבלים BMR וכמה קלוריות צריך ביום לשמירה, לירידה או לעלייה במשקל.'
 

@@ -10,7 +10,12 @@ export const generateStaticParams = () => nutrients.map(({ slug }) => ({ slug })
 
 type Params = { params: Promise<{ slug: string }> }
 
-const titleOf = (name: string) => `טבלת ${name} במזון: כמה ${name} יש בכל מזון ל-100 גרם`
+const MAX_META_TITLE_LENGTH = 50
+
+const titleOf = (name: string) => {
+  const full = `טבלת ${name} במזון: כמה ${name} יש בכל מזון ל-100 גרם`
+  return full.length <= MAX_META_TITLE_LENGTH ? full : `טבלת ${name} במזון: כמה יש ב-100 גרם`
+}
 const descriptionOf = (name: string) =>
   `כמה ${name} יש במזון: טבלה עם חיפוש לפי שם המזון, לפי מאגר התזונה הלאומי של משרד הבריאות, בכמות ל-100 גרם.`
 

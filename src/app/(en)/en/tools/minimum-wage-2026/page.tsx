@@ -4,9 +4,9 @@ import { calculateMinimumWage, defaultInput, scopeTable, wagePeriods, youthTable
 import styles from '../../../../(he)/(site)/tools/minimum-wage-2026/page.module.css'
 
 const SLUG = 'minimum-wage-2026'
-const META_TITLE = 'Israel Minimum Wage 2026: Monthly, Hourly and Youth Rates'
+const META_TITLE = 'Israel Minimum Wage 2026: Monthly and Hourly Rates'
 const DESCRIPTION =
-  'Israel minimum wage from 1 April 2026: ₪6,443.85 a month and ₪35.40 an hour. Calculator by age, job scope and hours, with a check of whether your pay meets the minimum.'
+  'Israel minimum wage from 1 April 2026: ₪6,443.85 a month and ₪35.40 an hour. Calculate it by age, job scope and hours, and check your pay against it.'
 
 const moneyFormat = new Intl.NumberFormat('en-IL', {
   style: 'currency',

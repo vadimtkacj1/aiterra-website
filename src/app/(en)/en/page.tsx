@@ -18,7 +18,7 @@ import { PAGES_REVIEWED, faqPage, webPage } from '@/lib/schema'
 
 const HOME_TITLE = 'AITERRA | Software & Digital Agency in Israel: Web, Apps, AI'
 const HOME_DESCRIPTION =
-  'Software and digital agency in Israel: websites and online stores, mobile and desktop apps in any stack, automation, AI agents and ML, DevOps, SEO/GEO and paid ads, from one in-house team.'
+  'Software and digital agency in Israel: websites, online stores, mobile and desktop apps, automation, AI agents, DevOps, SEO and paid ads from one in-house team.'
 
 export const metadata: Metadata = pageMetadata({
   title: HOME_TITLE,

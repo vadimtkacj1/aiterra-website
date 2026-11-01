@@ -6,9 +6,9 @@ import { CRUISE_KMH, FIXED_MINUTES, FLIGHT_TIMES_CHECKED, clockDuration } from '
 import styles from '../../../../(he)/(site)/components/tools/FlightTimes.module.css'
 
 const SLUG = 'flight-time-from-israel'
-const META_TITLE = 'Flight Time from Israel (Tel Aviv): Table for 70 Destinations'
+const META_TITLE = 'Flight Time from Israel: Table for 70 Destinations'
 const DESCRIPTION =
-  'How long is the flight from Israel to more than 70 destinations: direct flight times from Ben Gurion, which routes need a stop, distance and time difference, plus a flight time estimate by distance.'
+  'How long is the flight from Israel? Times from Tel Aviv (Ben Gurion) to more than 70 destinations, which routes need a stop, distance and time difference.'
 
 const direct = enDestinations.filter((item) => item.directMinutes).length
 

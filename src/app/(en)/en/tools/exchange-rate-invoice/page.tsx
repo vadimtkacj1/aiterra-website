@@ -13,9 +13,9 @@ import { STANDARD_VAT_RATE } from '@/lib/vat-calculator'
 import styles from '../../../../(he)/(site)/tools/exchange-rate-invoice/page.module.css'
 
 const SLUG = 'exchange-rate-invoice'
-const META_TITLE = 'Bank of Israel Representative Rate by Date: Convert USD and EUR to Shekels'
+const META_TITLE = 'Bank of Israel Representative Rate by Date'
 const DESCRIPTION =
-  'The Bank of Israel representative exchange rate (shaar yatzig) by date for the dollar, euro and 12 other currencies: convert to and from shekels, with or without VAT, see the last 30 trading days and copy a ready invoice line.'
+  'The Bank of Israel representative rate (shaar yatzig) by date for the dollar, euro and 12 other currencies: convert to shekels and copy a ready invoice line.'
 
 const sample = { amount: 250_000, iso: '2026-10-22', rate: '3.107', previousRate: '3.091', fridayRate: '3.089' }
 

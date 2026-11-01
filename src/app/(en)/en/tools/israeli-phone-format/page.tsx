@@ -6,7 +6,7 @@ import styles from '../../../../(he)/(site)/tools/israeli-phone-format/page.modu
 const SLUG = 'israeli-phone-format'
 const META_TITLE = 'Israel Country Code +972: Phone Number Formatter'
 const DESCRIPTION =
-  'Israel\'s country code is 972. Convert an Israeli number to international format for WhatsApp, dialling from abroad and your CRM, or clean a whole list of duplicates into a CSV file. Free, no sign-up.'
+  'Israel\'s country code is 972. Convert an Israeli number to international format for WhatsApp, calls from abroad and CRMs, or clean a list into a CSV file.'
 
 const withZero = (prefixes: string[]) => prefixes.map((prefix) => `0${prefix}`).join(', ')
 

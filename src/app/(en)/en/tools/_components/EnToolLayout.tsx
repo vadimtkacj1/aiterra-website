@@ -40,6 +40,23 @@ type EnToolLayoutProps = {
   children: ReactNode
 }
 
+const RELATED_TOOLS_SHOWN = 6
+
+const PINNED_RELATED_TOOLS: Record<string, string[]> = {
+  'gematria-calculator': ['hebrew-date-converter'],
+  'hebrew-name-to-english': ['hebrew-date-converter'],
+  'time-difference-israel': ['hebrew-date-converter', 'israeli-phone-format'],
+  'id-number-check': ['israeli-phone-format'],
+  'company-lookup': ['israeli-phone-format'],
+}
+
+const relatedEnTools = (slug: string) => {
+  const pinnedSlugs = PINNED_RELATED_TOOLS[slug] ?? []
+  const pinned = pinnedSlugs.flatMap((pinnedSlug) => enToolBySlug(pinnedSlug) ?? [])
+  const rest = otherEnTools(slug).filter((tool) => !pinnedSlugs.includes(tool.slug))
+  return [...pinned, ...rest].slice(0, RELATED_TOOLS_SHOWN)
+}
+
 const reviewedLabel = (date: string) =>
   new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).format(
     new Date(`${date}T00:00:00Z`),
@@ -193,7 +210,7 @@ export default function EnToolLayout({
   const path = enToolPath(slug)
   const reviewed = enToolReviewed(slug)
   const faqJsonLd = faqPage({ path, entries: faq.map(({ question, answer }) => ({ question, answer })) })
-  const related = otherEnTools(slug).slice(0, 6)
+  const related = relatedEnTools(slug)
 
   return (
     <>

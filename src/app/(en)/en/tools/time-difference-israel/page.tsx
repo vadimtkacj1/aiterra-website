@@ -6,9 +6,9 @@ import { TIME_DIFFERENCE_CHECKED, cityDifferences, gapRuns } from '@/lib/time-di
 import styles from '../../../../(he)/(site)/components/tools/TimeDifference.module.css'
 
 const SLUG = 'time-difference-israel'
-const META_TITLE = 'Time Difference with Israel: What Time Is It in Israel Now?'
+const META_TITLE = 'Time Difference with Israel: What Time Is It Now?'
 const DESCRIPTION =
-  'Time difference between Israel and 62 cities: live clocks, the gap in winter and summer, the weeks when daylight saving time changes it, and a meeting planner for working hours.'
+  'Time difference between Israel and 62 cities: live clocks, the gap in winter and summer, the weeks when daylight saving changes it, and a meeting planner.'
 
 const cityRows = cityDifferences().map((row) => ({ ...row, city: enCity(row.city) }))
 

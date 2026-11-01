@@ -16,7 +16,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/overtime-pay-calculator'
 const TITLE = 'מחשבון שעות נוספות'
-const META_TITLE = 'מחשבון שעות נוספות 2026: 125%, 150% ושכר שעתי לפי 182'
+const META_TITLE = 'מחשבון שעות נוספות 2026: 125%, 150% ושכר שעתי'
 const DESCRIPTION =
   'מחשבון שעות נוספות: כמה מגיע על שעות מעל התקן היומי והשבועי, 125% לשעתיים הראשונות ו-150% אחרי כן, עבודה בשבת ושכר שעתי מחושב משכר חודשי לפי 182 שעות.'
 

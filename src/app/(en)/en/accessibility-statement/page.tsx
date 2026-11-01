@@ -8,7 +8,7 @@ const TITLE = 'Accessibility statement'
 export const metadata: Metadata = pageMetadata({
   title: TITLE,
   description:
-    'The AITERRA accessibility statement: the standards we work to, the accessibility features on this site, known limitations and how to contact our accessibility coordinator.',
+    'The AITERRA accessibility statement: the standards we work to, the features on this site, known limitations and how to contact our accessibility coordinator.',
   path: '/en/accessibility-statement',
   locale: 'en',
   altPath: '/accessibility-statement',

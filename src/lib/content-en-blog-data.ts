@@ -17,7 +17,7 @@ type PostOverride = {
 export const postsEn: Record<string, PostOverride> = {
   'best-crm-small-business-israel': {
     title: 'Best CRM for Small Business in Israel: 4 Compared',
-    seoTitle: 'Best CRM Software for Local Israeli Teams: Monday, Fireberry, HubSpot, Zoho',
+    seoTitle: 'Best CRM Software for Local Israeli Teams Compared',
     seoDescription:
       'Compare four CRMs for small teams in Israel: Hebrew support, Green Invoice and Hashavshevet links, per-user pricing and which one fits your business.',
     excerpt:
@@ -2681,6 +2681,9 @@ The cost has two parts: a usage fee to the API provider, charged as a monthly su
 
   'landing-pages-that-convert': {
     title: 'A landing page that converts: why most visitors leave without getting in touch — and how to change it',
+    seoTitle: 'A Landing Page That Converts: Why Visitors Leave',
+    seoDescription:
+      'Sending expensive traffic to a page that does not do the job? An ordinary landing page wastes the campaign budget; a conversion-focused one makes it profitable.',
     excerpt:
       'Sending expensive traffic to a page that does not do the job? The difference between an ordinary landing page and a conversion-focused one is the difference between a losing campaign and a profitable one.',
     tags: ['Conversions', 'Design', 'Digital'],
@@ -2770,6 +2773,9 @@ Are your campaigns bringing clicks but not customers? Leave your details and we 
 
   'website-building-services': {
     title: 'Building a business website: how to choose a company, what the process involves and what it really costs',
+    seoTitle: 'Building a Business Website: Process and Real Cost',
+    seoDescription:
+      'What a professional website build includes, the price ranges in Israel, and the questions to ask before signing, so you can compare proposals.',
     excerpt:
       'A new website is a significant investment, and most businesses have no real way to compare proposals. What a professional build includes, the price ranges in Israel, and the questions to ask before signing.',
     tags: ['Development', 'Design', 'SEO', 'WordPress'],
@@ -2858,6 +2864,9 @@ Weighing up proposals, or want to know what the site you actually need would cos
 
   'business-automation-12-processes': {
     title: 'Business automation for a small business: 12 processes to stop doing by hand',
+    seoTitle: 'Business Automation: 12 Small Business Processes',
+    seoDescription:
+      'Small businesses lose dozens of hours a month to repetitive work. Here are twelve processes to automate, freeing time for what grows the business.',
     excerpt:
       'Every small business wastes tens of hours a month on repetitive tasks that could be automated. Twelve concrete processes to stop doing manually, and free the time for what actually grows the business.',
     tags: ['Automation', 'Small business', 'Efficiency', 'Lead management', 'Time saving'],
@@ -2939,6 +2948,9 @@ The heart of most automations is a good CRM that the other tools connect to, so 
 
   'ecommerce-store-that-sells': {
     title: 'Building an online store that sells: the complete guide to profitable e-commerce in 2026',
+    seoTitle: 'Building an Online Store That Sells: 2026 Guide',
+    seoDescription:
+      'Most online stores look good and sell little. How to fix cart abandonment, an awkward checkout and poor-quality traffic, the three problems choking sales.',
     excerpt:
       'Most online stores are a handsome window display with a quiet till. Cart abandonment, awkward checkout and poor-quality traffic, here is how to fix the three problems choking your sales.',
     tags: ['E-commerce', 'Development', 'Digital'],
@@ -3025,6 +3037,9 @@ Dreaming of a store that genuinely sells, or have a store that is not taking off
 
   'website-security-guide': {
     title: 'Website security: protecting your site, your customers and your reputation',
+    seoTitle: 'Website Security: Protect Your Site and Customers',
+    seoDescription:
+      'A hacked site costs you trust and rankings, and can expose you legally. SSL, backups, updates and form protection: a practical guide for business owners.',
     excerpt:
       'A hacked site is not only technical damage, it is lost trust, damaged rankings and sometimes legal exposure. SSL, backups, updates and form protection: the practical guide for business owners.',
     tags: ['Security', 'Development'],
@@ -3107,6 +3122,9 @@ Not sure when anyone last checked your site's security? Leave your details and w
 
   'ux-ui-design-conversions': {
     title: 'UX/UI design that sells: why a beautiful site is not enough, and what actually lifts conversions',
+    seoTitle: 'UX/UI Design That Sells: What Lifts Conversions',
+    seoDescription:
+      'A site can be stunning and sell nothing. How clear hierarchy, a well-planned customer journey and design that leads to action lift conversions.',
     excerpt:
       'A site can be stunning and sell nothing. The difference is in the user experience: clear hierarchy, an intelligent customer journey and design that leads to action, not just impresses the eye.',
     tags: ['Design', 'Conversions', 'UX'],
@@ -3195,6 +3213,9 @@ Feel like your site is beautiful but not working? Leave your details and we will
 
   'freelancer-vs-web-agency': {
     title: 'Freelancer or web agency — which is right for your business, and why',
+    seoTitle: 'Freelancer or Web Agency: Which Is Right for You?',
+    seoDescription:
+      'A freelancer costs less, an agency gives you more security. An honest comparison of price, availability, breadth, risk and continuity.',
     excerpt:
       'A freelancer costs less, an agency gives you more security, but when is each the right call? An honest comparison of freelancer versus web agency: price, availability, breadth, risk and continuity.',
     tags: ['Web development', 'Freelancer', 'Digital agency', 'Comparison', 'Small business'],
@@ -3278,6 +3299,9 @@ Whoever you choose, freelancer or agency, the rules for spotting a reliable supp
 
   'website-performance-2026': {
     title: 'Why is your website slow? The complete 2026 guide to modern web development',
+    seoTitle: 'Why Is Your Website Slow? The Complete 2026 Guide',
+    seoDescription:
+      'A slow site burns your budget and drives customers away. A guide to clean code, Next.js, Core Web Vitals, and when to upgrade versus rebuild.',
     excerpt:
       'A slow site burns your budget and drives customers away. The complete guide to modern web development, clean code, Next.js, Core Web Vitals, and when to upgrade versus rebuild.',
     tags: ['Performance', 'SEO', 'Development', 'Core Web Vitals'],
@@ -3371,6 +3395,9 @@ At Aiterra we start every project with a deep diagnostic. We examine your existi
 
   'custom-web-systems': {
     title: 'Custom web systems: client portals, account areas and tools that save a full-time role',
+    seoTitle: 'Custom Web Systems: Client Portals and Tools',
+    seoDescription:
+      'When spreadsheets, WhatsApp groups and email run your business, one system can hold it together. How a client portal turns chaos into a process.',
     excerpt:
       'When spreadsheets, WhatsApp groups and email are running your business, it is time for one system that holds it together. Here is how a client portal or a custom management system turns chaos into a process.',
     tags: ['Development', 'Next.js', 'Automation'],
@@ -3449,6 +3476,9 @@ Feel like the business is being run by spreadsheets? Leave your details and we w
 
   'wordpress-vs-custom-code': {
     title: 'WordPress or a coded site? How to choose the right foundation for your business',
+    seoTitle: 'WordPress or a Coded Site? How to Choose',
+    seoDescription:
+      'WordPress or custom development? The honest answer depends on your business. Here is how to decide, without paying twice for the same website.',
     excerpt:
       'It comes up in every scoping call: WordPress, or custom development? The honest answer is that it depends on your business. Here is how to decide, without paying twice for the same website.',
     tags: ['Development', 'WordPress', 'Next.js'],
@@ -3541,6 +3571,9 @@ Not sure which foundation is right for your business? Leave your details and we 
   },
   'ai-agents-for-business': {
     title: 'AI Agents for Business: What They Do, How They Differ From a Chatbot',
+    seoTitle: 'AI Agents for Business: Agent vs Chatbot Explained',
+    seoDescription:
+      'An AI agent does more than answer: it acts inside your systems. How it differs from a chatbot, why Hebrew is hard, and when an agent does not pay off.',
     excerpt:
       'An AI agent does not only answer, it acts inside your systems. What separates it from a chatbot, why Hebrew breaks half the off-the-shelf products, and when an agent simply does not pay back.',
     tags: ['AI agents', 'Automation', 'Chatbot', 'Customer service', 'CRM'],
@@ -3582,7 +3615,7 @@ Hebrew is where demos stop working. Hebrew text arrives with mixed full and defe
 
 The right test is not a list of sample questions but your own real enquiries from recent months. That is also the stage where it often emerges that the price list itself is written in a way nobody can answer from - which is a problem with the business, not with the model.
 
-## When an AI agent does not pay back
+## When an AI agent does not pay off
 
 Plainly: it is not for every business. At five enquiries a week an agent will not recover its build and running cost, and the same budget is better spent on [campaigns](/en/services/marketing) or [organic search](/en/services/seo) that generate enquiries in the first place. An agent pays back when there is recurring volume, when a large share of the questions repeat, and when response time genuinely affects whether you win the work - for instance where a customer contacts three suppliers and goes with whoever answered first.
 
@@ -3621,6 +3654,9 @@ That stage looks like a delay, and it is what stops the agent meeting every one 
   },
   'ai-overviews-israel': {
     title: 'Google AI Overviews: What It Means for Your Business and How to Get Cited',
+    seoTitle: 'Google AI Overviews: How Your Business Gets Cited',
+    seoDescription:
+      'Google now answers above the organic results. Why clicks fall even when rankings hold, and what actually gets a business into the answer.',
     excerpt:
       'Google answers the customer above the organic results. What that does to your traffic, why clicks fall even when rankings hold, and what actually gets a business into the answer.',
     tags: ['AI Overviews', 'SEO', 'GEO', 'Google', 'Visibility'],
@@ -3695,6 +3731,9 @@ AI Overviews did not abolish organic search; it changed what you measure. The ba
   },
   'chatgpt-about-your-business': {
     title: 'What ChatGPT Says About Your Business, and How to Fix It When It Is Wrong',
+    seoTitle: 'What ChatGPT Says About Your Business: Fix Errors',
+    seoDescription:
+      'AI engines already answer questions about you. How to check what they say, why confident errors happen, and how to remove the ambiguity behind them.',
     excerpt:
       'AI engines already answer questions about you, whether you asked them to or not. How to check what is being said, why confident errors happen, and how to correct them without asking anyone for a correction.',
     tags: ['ChatGPT', 'GEO', 'Reputation', 'Entity', 'Visibility'],

@@ -10,21 +10,14 @@ import PortfolioSection from '@/components/ecomerce/sections/PortfolioSection'
 import TestimonialsSection from '@/components/ecomerce/sections/TestimonialsSection'
 import CtaBannerSection from '@/components/ecomerce/sections/CtaBannerSection'
 import LeadFormSection from '@/components/ecomerce/sections/LeadFormSection'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
-  title: 'חנות אינטרנטית שמייצרת מכירות — פיתוח איקומרס פרימיום',
+export const metadata: Metadata = pageMetadata({
+  title: 'חנות אינטרנטית שמייצרת מכירות — פיתוח איקומרס',
   description:
-    'מערכת איקומרס עצמאית ומתקדמת, ללא מגבלות וורדפרס או שופיפיי. עיצוב מותאם אישית, אינטגרציה מלאה, מהירות טעינה גבוהה וליווי צמוד לשנה שלמה. השאירו פרטים לשיחת אפיון.',
-  alternates: { canonical: '/lp/ecomerce' },
-  openGraph: {
-    type: 'website',
-    locale: 'he_IL',
-    url: '/lp/ecomerce',
-    title: 'Aiterra | חנות אינטרנטית שמייצרת מכירות — פיתוח איקומרס פרימיום',
-    description:
-      'מערכת איקומרס עצמאית ומתקדמת, ללא מגבלות וורדפרס או שופיפיי. עיצוב מותאם אישית, אינטגרציה מלאה וליווי צמוד לשנה שלמה.',
-  },
-}
+    'מערכת איקומרס עצמאית, ללא מגבלות וורדפרס או שופיפיי. עיצוב מותאם אישית, אינטגרציה מלאה, מהירות טעינה גבוהה וליווי צמוד לשנה שלמה. השאירו פרטים לשיחת אפיון.',
+  path: '/lp/ecomerce',
+})
 
 /**
  * The standalone e-commerce landing, served inside the main site at

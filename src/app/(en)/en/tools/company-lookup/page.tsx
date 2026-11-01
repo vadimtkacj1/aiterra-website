@@ -6,9 +6,9 @@ import { DATASET_URL, EXTRACT_FEE, ICA_SEARCH_URL, VAT_DEALER_URL, statusCatalog
 import styles from '../../../../(he)/(site)/tools/company-lookup/page.module.css'
 
 const SLUG = 'company-lookup'
-const META_TITLE = 'Israeli Company Lookup by Number: Active or Struck Off'
+const META_TITLE = 'Israeli Company Lookup by Number: Is It Active?'
 const DESCRIPTION =
-  'Look up an Israeli company by its number (H.P.) or name in the Registrar of Companies database: active, struck off, in liquidation or a violating company, with address, incorporation date and last annual report.'
+  'Look up an Israeli company by number (H.P.) or name in the Registrar of Companies database: status, address, incorporation date and last annual report.'
 
 const DATA_DATE = '22.10.2026'
 const TOTAL_COMPANIES = 732515

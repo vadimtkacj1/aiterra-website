@@ -39,8 +39,8 @@ export default function Page() {
       faq={faq}
       cta={{
         text: 'רוצים אוטומציה לתהליכי משאבי אנוש בעסק? אנחנו בונים מערכות כאלה.',
-        label: 'פיתוח תוכנה לעסקים',
-        href: '/services/development',
+        label: 'אוטומציה לעסקים',
+        href: '/services/automation',
       }}
     >
       <h2>איך זה מחושב</h2>

@@ -20,7 +20,12 @@ export const generateStaticParams = () => currencyPages.map((page) => ({ slug: p
 
 type Params = { params: Promise<{ slug: string }> }
 
-const metaTitleOf = (name: string) => `כמה זה ${name} בשקלים היום? המרה ל-₪ ובחזרה`
+const MAX_META_TITLE_LENGTH = 50
+
+const metaTitleOf = (name: string) => {
+  const full = `כמה זה ${name} בשקלים היום? המרה ל-₪ ובחזרה`
+  return full.length <= MAX_META_TITLE_LENGTH ? full : `כמה זה ${name} בשקלים היום? המרה ל-₪`
+}
 
 export async function generateMetadata({ params }: Params) {
   const page = currencyPage((await params).slug)

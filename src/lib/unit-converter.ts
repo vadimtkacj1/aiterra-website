@@ -51,7 +51,14 @@ export const formatAmount = (value: number) =>
     maximumFractionDigits: Math.abs(value) >= 100 ? 2 : Math.abs(value) >= 1 ? 4 : 6,
   }).format(value)
 
-export type PairPage = { slug: string; from: string; to: string; question: string; samples: number[] }
+export type PairPage = {
+  slug: string
+  from: string
+  to: string
+  question: string
+  samples: number[]
+  converterName?: string
+}
 
 export const pairPages: PairPage[] = [
   { slug: 'dunam-to-square-meters', from: 'dunam', to: 'sqm', question: 'כמה זה דונם במטרים', samples: [0.5, 1, 2, 5, 10, 50, 100] },
@@ -62,9 +69,9 @@ export const pairPages: PairPage[] = [
   { slug: 'mile-to-km', from: 'mile', to: 'km', question: 'כמה זה מייל בקילומטרים', samples: [1, 5, 10, 26.2, 50, 100] },
   { slug: 'gallon-to-liters', from: 'gallon', to: 'liter', question: 'כמה ליטר זה גלון', samples: [0.5, 1, 2, 5, 10, 55] },
   { slug: 'ounce-to-grams', from: 'ounce', to: 'gram', question: 'כמה גרם זה אונקיה', samples: [0.5, 1, 2, 4, 8, 12, 16] },
-  { slug: 'troy-ounce-to-grams', from: 'troy-ounce', to: 'gram', question: 'כמה גרם זה אונקיית זהב', samples: [0.1, 0.25, 0.5, 1, 5, 10] },
+  { slug: 'troy-ounce-to-grams', from: 'troy-ounce', to: 'gram', question: 'כמה גרם זה אונקיית זהב', samples: [0.1, 0.25, 0.5, 1, 5, 10], converterName: 'ממיר אונקיית טרוי לגרם' },
   { slug: 'pound-to-kg', from: 'pound', to: 'kg', question: 'כמה קילו זה פאונד', samples: [1, 5, 10, 50, 100, 150, 200] },
-  { slug: 'fl-oz-to-ml', from: 'fl-oz', to: 'ml', question: 'כמה מ״ל זה אונקיית נוזל', samples: [1, 2, 4, 8, 12, 16, 32] },
+  { slug: 'fl-oz-to-ml', from: 'fl-oz', to: 'ml', question: 'כמה מ״ל זה אונקיית נוזל', samples: [1, 2, 4, 8, 12, 16, 32], converterName: 'ממיר אונקיה אמריקאית למ״ל' },
 ]
 
 export const pairPath = (slug: string) => `/tools/convert/${slug}`

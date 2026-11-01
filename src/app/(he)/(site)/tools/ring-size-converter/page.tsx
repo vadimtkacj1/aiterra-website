@@ -16,7 +16,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/ring-size-converter'
 const TITLE = 'מידת טבעת: טבלת המרה'
-const META_TITLE = 'מידת טבעת: טבלת המרה לפי היקף וקוטר, ISO, ארה״ב ובריטניה'
+const META_TITLE = 'מידת טבעת: טבלת המרה לפי היקף וקוטר, ISO וארה״ב'
 const DESCRIPTION =
   'מידת טבעת: מזינים היקף אצבע או קוטר טבעת במ״מ ומקבלים את המידה לפי תקן ISO, ארה״ב, בריטניה ואיטליה, עם טבלת המרה והסבר איך למדוד.'
 

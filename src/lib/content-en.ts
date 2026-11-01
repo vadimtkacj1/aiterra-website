@@ -1700,7 +1700,7 @@ export const contentEn: Partial<V2Content> = {
     title: 'About us',
     metaTitle: 'About Aiterra - Engineering and Growth in One Team',
     metaDescription:
-      'Aiterra is a software and digital agency in Bat Yam, Israel: websites and online stores, apps, automation, AI agents, SEO, GEO and paid ads. Meet the team, the working method and the experience behind hundreds of delivered projects.',
+      'Aiterra is a software and digital agency in Bat Yam, Israel: websites, stores, apps, automation, AI agents, SEO and paid ads. Meet the team and our method.',
     lede: 'Digital moves fast. We make sure you stay a step ahead of it.',
     eyebrow: 'ABOUT Aiterra',
     heading: ['Technology that builds websites.', 'Strategy that builds businesses.'],
@@ -1773,5 +1773,5 @@ export const projectsPageEn = {
   faqHeading: ['Before we start', 'a few things worth knowing.'],
   metaTitle: 'Our Work - 17 Sites, Stores and Systems We Built',
   metaDescription:
-    'Seventeen live Aiterra projects: online stores, lead-generation sites, management systems and AI platforms, all built in code. See the goal, the integrations and what shipped.',
+    'Seventeen live Aiterra projects: online stores, lead-generation sites, management systems and AI platforms. See the goal, the integrations and what shipped.',
 }

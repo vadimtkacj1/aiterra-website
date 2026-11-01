@@ -201,7 +201,17 @@ export default async function EnArticlePage({ params }: Params) {
                     </span>
                   )}
                   <span className={styles.authorText}>
-                    <span className={styles.authorLabel}>{article.authorLabel}</span>
+                    <span className={styles.authorLabel}>
+                      {article.authorLabel}
+                      {profile ? (
+                        <>
+                          {' '}
+                          <Link href={`/en/blog/author/${profile.id}`} className="underline underline-offset-2">
+                            {profile.name}
+                          </Link>
+                        </>
+                      ) : null}
+                    </span>
                     <span className={styles.authorBio}>{authorBio}</span>
                   </span>
                 </div>

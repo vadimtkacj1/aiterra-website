@@ -3,9 +3,9 @@ import EnToolLayout, { enToolMetadata, type EnToolFaqEntry } from '../_component
 import NoticePeriodCalculatorEn from '../_components/NoticePeriodCalculatorEn'
 
 const SLUG = 'notice-period-calculator'
-const META_TITLE = 'Israel Notice Period Calculator: Dismissal and Resignation'
+const META_TITLE = 'Israel Notice Period Calculator: Hoda\'a Mukdemet'
 const DESCRIPTION =
-  'Free calculator for the legal notice period in Israel (hoda\'a mukdemet): days owed on dismissal or resignation, for salaried and hourly employees, with the end date.'
+  'Free calculator for the legal notice period in Israel: days owed on dismissal or resignation, for salaried and hourly employees, with the end date.'
 
 const faq: EnToolFaqEntry[] = [
   {

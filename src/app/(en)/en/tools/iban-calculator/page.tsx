@@ -5,9 +5,9 @@ import { englishBankName } from '@/lib/iban-en'
 import styles from '../../../../(he)/(site)/tools/iban-calculator/page.module.css'
 
 const SLUG = 'iban-calculator'
-const META_TITLE = 'Israeli IBAN Calculator: Calculate and Validate an IBAN'
+const META_TITLE = 'Israeli IBAN Calculator and Validator'
 const DESCRIPTION =
-  'Free Israeli IBAN calculator: choose a bank, type the branch and account number and get a valid IBAN using the Bank of Israel formula, or validate an existing IBAN and split it into bank, branch and account.'
+  'Free Israeli IBAN calculator: enter a bank, branch and account number and get a valid IBAN by the Bank of Israel formula, or validate an existing IBAN.'
 
 const EXAMPLE = { bank: '12', branch: '600', account: '123456' }
 const example = buildIban(EXAMPLE.bank, EXAMPLE.branch, EXAMPLE.account)

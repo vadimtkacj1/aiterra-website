@@ -6,7 +6,7 @@ import styles from '../../../../(he)/(site)/tools/sick-days-calculator/page.modu
 const SLUG = 'sick-days-calculator'
 const META_TITLE = 'Israel Sick Days Calculator: Accrual and Sick Pay'
 const DESCRIPTION =
-  'Free Israel sick leave calculator under the Sick Pay Law: how many sick days you have accrued (1.5 a month, up to 90), what each sick day pays, with examples for salaried and hourly employees.'
+  'Free Israel sick leave calculator: days accrued under the Sick Pay Law (1.5 a month, up to 90) and what each day pays, for salaried and hourly employees.'
 
 const UNIT = 100
 const dayFormat = new Intl.NumberFormat('en-IL', { maximumFractionDigits: 2 })

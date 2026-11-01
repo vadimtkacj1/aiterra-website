@@ -3,7 +3,7 @@ import ImageMlTool from '../../components/tools/ImageMlTool'
 
 const PATH = '/tools/image-upscaler'
 const TITLE = 'שיפור איכות תמונה'
-const META_TITLE = 'שיפור איכות תמונה ב-AI בחינם: הגדלה פי 4 בלי העלאה לשרת'
+const META_TITLE = 'שיפור איכות תמונה ב-AI בחינם: הגדלה פי 4 בדפדפן'
 const DESCRIPTION =
   'שיפור איכות תמונה בחינם: מגדילים תמונה פי 4 עם בינה מלאכותית שרצה בדפדפן שלכם, בלי הרשמה ובלי להעלות את התמונה לשרת.'
 

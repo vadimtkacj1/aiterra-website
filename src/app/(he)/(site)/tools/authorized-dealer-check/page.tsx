@@ -3,7 +3,7 @@ import { DealerNumberCheck } from '../../components/tools/BusinessCalculators'
 
 const PATH = '/tools/authorized-dealer-check'
 const TITLE = 'בדיקת עוסק מורשה לפי מספר'
-const META_TITLE = 'בדיקת עוסק מורשה לפי מספר: ספרת ביקורת וקישור לרשות המסים'
+const META_TITLE = 'בדיקת עוסק מורשה לפי מספר: ספרת ביקורת'
 const DESCRIPTION =
   'בדיקת עוסק מורשה: בודקים אם המספר תקין לפי ספרת הביקורת, ועוברים לאתר רשות המסים לאימות העוסק.'
 

@@ -21,7 +21,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/ai-token-calculator'
 const TITLE = 'מחשבון טוקנים ועלות API'
-const META_TITLE = 'מחשבון טוקנים ועלות API בעברית: GPT, Claude, Gemini'
+const META_TITLE = 'מחשבון טוקנים ועלות API: GPT, Claude, Gemini'
 const DESCRIPTION =
   'כמה טוקנים יש בטקסט בעברית וכמה זה עולה ב-API של OpenAI, Anthropic ו-Google: מחירים רשמיים למיליון טוקנים, ועלות חודשית בשקלים לפי מספר הבקשות.'
 

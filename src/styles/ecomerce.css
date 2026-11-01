@@ -257,13 +257,6 @@ html:has(.ecom) {
   letter-spacing: -0.035em;
 }
 
-/* Latin display type buys its leading from the x-height drop: at 0.92 the caps
-   still sit apart. Hebrew is single-height — every glyph fills the body — so the
-   same 0.92 closes the lines onto each other, and -0.035em starts welding square
-   letterforms together. On a phone, where the clamps bottom out at 32–34px and
-   the line wraps four ways, that is the difference between tight and packed.
-   The hero's line and the footer's phone number are Latin and declare `dir=ltr`
-   on the display element itself, so they keep the setting they were cut for. */
 @media (max-width: 767px) {
   .display {
     line-height: 1;

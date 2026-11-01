@@ -3,9 +3,9 @@ import EnToolLayout, { enToolMetadata, type EnToolFaqEntry } from '../_component
 import ExemptDealerCheckerEn from '../_components/ExemptDealerCheckerEn'
 
 const SLUG = 'exempt-dealer-threshold'
-const META_TITLE = 'Osek Patur Ceiling 2026: ₪122,833 Check and Forecast'
+const META_TITLE = 'Osek Patur Ceiling 2026: ₪122,833 Turnover Check'
 const DESCRIPTION =
-  'The 2026 osek patur ceiling in Israel is ₪122,833 a year. Check how much you have left, which month you will cross it, and what changes when you become an osek murshe.'
+  'The 2026 osek patur ceiling in Israel is ₪122,833 a year. Check what you have left, the month you will cross it and what changes once you become an osek murshe.'
 
 const faq: EnToolFaqEntry[] = [
   {

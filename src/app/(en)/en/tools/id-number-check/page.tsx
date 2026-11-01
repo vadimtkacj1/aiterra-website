@@ -15,7 +15,7 @@ import styles from '../../../../(he)/(site)/tools/id-number-check/page.module.cs
 const SLUG = 'id-number-check'
 const META_TITLE = 'Israeli ID Number Check: Teudat Zehut Check Digit'
 const DESCRIPTION =
-  'Check whether an Israeli ID number (teudat zehut) is valid by its check digit and see the calculation. Also calculate a check digit, check a company or VAT dealer number, and copy a ready Excel formula.'
+  'Check if an Israeli ID number (teudat zehut) is valid and see the check digit calculation. Also checks company and VAT dealer numbers, with an Excel formula.'
 
 const EXAMPLE_BASE = '12345678'
 const exampleSteps = steps(EXAMPLE_BASE)

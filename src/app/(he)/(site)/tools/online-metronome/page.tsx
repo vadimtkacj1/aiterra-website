@@ -5,7 +5,7 @@ import styles from '../../components/tools/FunTable.module.css'
 
 const PATH = '/tools/online-metronome'
 const TITLE = 'מטרונום אונליין'
-const META_TITLE = 'מטרונום אונליין: קצב 30 עד 300 BPM, משקלים והקשת קצב'
+const META_TITLE = 'מטרונום אונליין: 30 עד 300 BPM, משקלים והקשת קצב'
 const DESCRIPTION =
   'מטרונום אונליין חינמי: קצב מ-30 עד 300 פעימות בדקה, הקשת קצב, משקלים מ-2/4 עד 7/8, הדגשת פעמה ראשונה ופעמה חזותית. עובד בדפדפן, בלי הורדה.'
 

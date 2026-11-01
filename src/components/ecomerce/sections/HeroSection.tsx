@@ -41,47 +41,26 @@ export default function HeroSection() {
           </div>
 
           <div className="grid grid-cols-1 gap-y-8 pt-6 md:gap-y-10 md:pt-10 lg:grid-cols-12 lg:gap-x-12 lg:pt-14">
-            {/* headline column. `dir="ltr"` keeps the Latin sentence and its
-                period in the right order; `items-end` still hangs the block off
-                the page's RTL start edge, so it lines up with everything else. */}
             <div className="lg:col-span-7">
-              {/* Each line rises into a clipped box, the second a beat behind
-                  the first — the sheet pulled off a drawing. On load, not on
-                  scroll: the hero is already on screen, so a line waiting for an
-                  observer would never move at all.
-
-                  The clamp floor is measured, not chosen: 32px is the largest
-                  size at which BOTH lines still fit unwrapped in a 360px column.
-                  Anything larger wraps them into four ragged lines, and the
-                  couplet — the solid line answered by the hollow one — is only a
-                  gesture while it is two lines. The floor binds below ~645px, so
-                  the desktop ramp is untouched.
-
-                  A flat floor holds that measurement at 360px and then keeps it
-                  on screens NARROWER than the column it was measured in, where it
-                  is no longer the largest size that fits — it is simply too big,
-                  and the couplet breaks apart one word per line. So the floor is
-                  itself fluid below 360 (8.9vw = 32px at exactly 360), which is
-                  the same measurement expressed as a ratio instead of a number. */}
-              <h1 dir="ltr" className="display flex flex-col items-end text-end">
+              <h1 className="display flex flex-col items-start text-start">
                 <span
                   className="line-mask"
                   style={{ fontSize: 'clamp(min(32px, 8.9vw), 6.2vw, 88px)' }}
                 >
-                  <span>Built to Sell.</span>
+                  <span>חנות אינטרנטית </span>
                 </span>
                 <span
                   className="line-mask"
                   style={{ fontSize: 'clamp(min(32px, 8.9vw), 6.2vw, 88px)' }}
                 >
                   <span className="display-outline" style={{ animationDelay: '120ms' }}>
-                    Made to Scale.
+                    שמייצרת מכירות.
                   </span>
                 </span>
               </h1>
 
               <h2 className="mt-6 max-w-2xl text-[26px] leading-[1.08] sm:text-[34px] md:mt-10 md:text-[44px]">
-                רוצים חנות אינטרנטית שבאמת מייצרת מכירות?
+                בלי תבניות ובלי מגבלות של פלטפורמה
               </h2>
               <p className="t-muted mt-4 max-w-xl text-[17px] md:text-[20px]">
                 אל תתפשרו על פלטפורמות גנריות.

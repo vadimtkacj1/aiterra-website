@@ -3,7 +3,7 @@ import { ResignationLetterGenerator } from '../../components/tools/LeavingWorkTo
 
 const PATH = '/tools/resignation-letter-generator'
 const TITLE = 'מחולל מכתב התפטרות'
-const META_TITLE = 'מחולל מכתב התפטרות: נוסח מוכן עם חישוב הודעה מוקדמת'
+const META_TITLE = 'מחולל מכתב התפטרות: נוסח מוכן וחישוב הודעה מוקדמת'
 const DESCRIPTION =
   'מחולל מכתב התפטרות חינם: ממלאים שם, מעסיק ותאריך, רואים כמה הודעה מוקדמת נדרשת ומעתיקים מכתב מוכן.'
 

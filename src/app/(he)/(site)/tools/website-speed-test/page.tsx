@@ -5,7 +5,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/website-speed-test'
 const TITLE = 'בדיקת מהירות אתר'
-const META_TITLE = 'בדיקת מהירות אתר: כמה מהר האתר שלכם נטען, במובייל ובמחשב'
+const META_TITLE = 'בדיקת מהירות אתר: כמה מהר האתר נטען במובייל ובמחשב'
 const DESCRIPTION =
   'בדיקת מהירות טעינת אתר בחינם: מקלידים כתובת ומקבלים ציון ביצועים של Google, LCP, CLS ו-INP, נתוני גולשים אמיתיים ו-5 הדברים שהכי מאטים את הדף, בעברית פשוטה.'
 

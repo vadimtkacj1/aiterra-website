@@ -14,7 +14,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/fractions-calculator'
 const TITLE = 'מחשבון שברים עם שלבים'
-const META_TITLE = 'מחשבון שברים עם שלבי פתרון: חיבור, חיסור, כפל וחילוק'
+const META_TITLE = 'מחשבון שברים עם פתרון: חיבור, חיסור, כפל וחילוק'
 const DESCRIPTION =
   'מחשבון שברים פשוטים ומספרים מעורבים: חיבור, חיסור, כפל, חילוק וצמצום, עם פתרון שלב אחר שלב בעברית, והתוצאה גם כמספר מעורב וכעשרוני.'
 

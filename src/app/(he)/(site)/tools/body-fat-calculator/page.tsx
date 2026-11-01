@@ -3,7 +3,7 @@ import { BodyFatCalculator } from '../../components/tools/BodyCalculators'
 
 const PATH = '/tools/body-fat-calculator'
 const TITLE = 'מחשבון אחוזי שומן לפי היקפים'
-const META_TITLE = 'מחשבון אחוזי שומן לפי היקפים: הערכה בשיטת הצי האמריקאי'
+const META_TITLE = 'מחשבון אחוזי שומן לפי היקפים: שיטת הצי האמריקאי'
 const DESCRIPTION =
   'מחשבון אחוזי שומן: מכניסים גובה והיקפי צוואר, מותניים וירכיים ומקבלים הערכת אחוז שומן בגוף בלי קליפר.'
 

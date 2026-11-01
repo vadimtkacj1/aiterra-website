@@ -6,7 +6,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/bingo-card-generator'
 const TITLE = 'מחולל כרטיסי בינגו להדפסה'
-const META_TITLE = 'מחולל בינגו בחינם: כרטיסי בינגו להדפסה עם מספרים או מילים'
+const META_TITLE = 'מחולל בינגו בחינם: כרטיסי בינגו להדפסה'
 const DESCRIPTION =
   'מחולל כרטיסי בינגו בחינם: מספרים 1-75 או רשימת מילים משלכם, כרטיס 3x3, 4x4 או 5x5, עד 60 כרטיסים שונים, הדפסה של 2 או 4 בדף A4 ודף כרוז עם הגרלה.'
 

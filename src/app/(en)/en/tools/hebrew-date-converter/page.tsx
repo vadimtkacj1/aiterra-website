@@ -3,9 +3,9 @@ import HebrewDateConverterEn from '../_components/HebrewDateConverterEn'
 import styles from '../../../../(he)/(site)/tools/hebrew-date-converter/page.module.css'
 
 const SLUG = 'hebrew-date-converter'
-const META_TITLE = 'Hebrew Date Converter: Hebrew to Gregorian and Back'
+const META_TITLE = 'Hebrew Date Converter: Hebrew and Gregorian Dates'
 const DESCRIPTION =
-  'Convert a Hebrew date to the Gregorian calendar and back, including births after sunset and Adar I and Adar II. Hebrew age, Hebrew birthday and bar and bat mitzvah dates, free.'
+  'Convert a Hebrew date to the Gregorian calendar and back, including births after sunset and Adar I and II, with Hebrew age and bar and bat mitzvah dates.'
 
 const monthRows = [
   { name: 'Tishrei', length: '30', start: 'September or October' },

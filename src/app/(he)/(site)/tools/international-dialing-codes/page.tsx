@@ -13,7 +13,7 @@ import styles from '../word-counter/page.module.css'
 
 const PATH = '/tools/international-dialing-codes'
 const TITLE = 'קידומות בינלאומיות: קידומת לכל מדינה וחיוג מישראל'
-const META_TITLE = 'של איזו מדינה הקידומת? חיפוש לפי מספר וטבלת קידומות'
+const META_TITLE = 'של איזו מדינה הקידומת? חיפוש לפי מספר וטבלה'
 const DESCRIPTION =
   'קיבלתם שיחה מ-+86 או +91? הקלידו את הקידומת וגלו מאיזו מדינה היא. טבלת קידומות בינלאומיות, חיוג לחו״ל מישראל (00, 012, 013, 014, 018) ולישראל מחו״ל (+972).'
 

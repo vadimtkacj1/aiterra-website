@@ -28,7 +28,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     heroDescription:
       'We built Neot Sade a full online store for home delivery of fruit, vegetables and pantry goods across Raanana and the Sharon region. It includes a catalogue managed through a custom admin, a shopping cart with secure card payments on site, a loyalty club with points and cashback, and delivery fees calculated from the customer address at checkout.',
     metaDescription:
-      'An online grocery store for Neot Sade: fresh fruit and vegetable delivery in Raanana, a self-managed catalogue, secure payments and a customer loyalty club. See the full project.',
+      'An online grocery store for Neot Sade: fresh fruit and vegetable delivery in Raanana, a self-managed catalogue, secure payments and a customer loyalty club.',
     imageAlt: 'Screenshot of the Neot Sade homepage, an online fruit and vegetable store',
     challenge: {
       text: 'Selling fresh produce online is not an ordinary store: prices move, some items are sold by weight rather than by unit, and delivery fees depend on the customer address. On top of that, the Neot Sade team needed to run the catalogue themselves, adding products, updating prices and closing out items that had sold out, without going back to a developer for every change.',
@@ -48,7 +48,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     heroDescription:
       'ALOVA is a botanically based hair and scalp care line, sold direct to consumer and through salons. We built the brand a fully Hebrew Shopify store that explains the range and sells it in the same breath: a quiet, premium design that puts the product at the centre, alongside a short and unambiguous path to purchase.',
     metaDescription:
-      'A Shopify store for the ALOVA hair care brand: minimalist Hebrew design, content pages explaining the pre-wash range, and a short purchase path built to convert. See the full project.',
+      'A Shopify store for the ALOVA hair care brand: minimalist Hebrew design, content pages on the pre-wash range and a short purchase path built to convert.',
     imageAlt: 'Screenshot of the ALOVA homepage',
     challenge: {
       text: 'Pre-wash scalp treatment is a category most of the Israeli audience does not yet know, and the purchase only comes once the value is understood. The challenge was a site doing two jobs at once, explaining what a formula focused on scalp health actually does and why it is used before washing, while closing a sale on the same screen. Rather than separating the two, we built dedicated content pages for each of the two flagship products and folded them into the customer journey, so every question is answered exactly where it arises.',
@@ -66,7 +66,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     heroDescription:
       'A brand and sales site for the Karin Cohen academy in Holon. We built one long page that carries the visitor from the personal story through to enrolment: two course tracks with pricing and an offer, a cosmetics and permanent makeup treatment menu, a before-and-after gallery, client testimonials, an FAQ, an appointment form and a direct WhatsApp connection.',
     metaDescription:
-      'A site for the Karin Cohen academy in Holon: course tracks, cosmetics and permanent makeup treatments, a before-and-after gallery and an appointment form. See the full project.',
+      'A site for the Karin Cohen academy in Holon: course tracks, cosmetics and permanent makeup treatments, a before-and-after gallery and an appointment form.',
     imageAlt: 'Screenshot of the Karin Cohen academy homepage',
   },
 
@@ -90,7 +90,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     heroDescription:
       'A site for clinical cosmetician Maayan Vaknin in Holon. We built a clean, typographic site with a full treatment menu and separate price list, a work gallery split between makeup and cosmetics, a catalogue of the clinic products, an appointment form and a WhatsApp connection, alongside terms, privacy policy and accessibility statement pages.',
     metaDescription:
-      'A site for clinical cosmetician Maayan Vaknin in Holon: treatment menu and price list, work gallery, product catalogue and appointment booking. See the full project.',
+      'A site for clinical cosmetician Maayan Vaknin in Holon: treatment menu and price list, work gallery, product catalogue and appointment booking.',
     imageAlt: 'Screenshot of the Maayan Vaknin clinical cosmetics homepage',
   },
 
@@ -114,7 +114,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     heroDescription:
       'For Olie 6, a cosmetics brand specialising in facial serums, we developed an advanced Shopify-based e-commerce foundation. The site was designed along a minimalist, premium line and engineered from the outset with one clear aim: to maximise sales conversion and create a frictionless user experience.',
     metaDescription:
-      'A Shopify store for the Olie 6 cosmetics brand: minimalist premium design, a frictionless buying experience and an e-commerce foundation built to maximise conversion. See the full project.',
+      'A Shopify store for the Olie 6 cosmetics brand: minimalist premium design, a frictionless buying experience and an e-commerce foundation built to convert.',
     imageAlt: 'Screenshot of the Olie 6 homepage',
     challenge: {
       text: 'The central challenge was translating the quality and premium feel of the products into a digital space, so we built a complete Shopify foundation using open-source development. That approach gave us maximum flexibility to customise every element and create a clean, minimalist and elegant interface that puts the serums at the centre. Beyond the considered appearance, every button, menu and checkout step on the site was designed and engineered to form an intelligent funnel that carries the visitor intuitively toward conversion.',
@@ -132,7 +132,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     heroDescription:
       'Development of a complete online store with a shopping cart, secure payment processing and an advanced product management system.',
     metaDescription:
-      'Development of a complete online store: shopping cart, secure payments and an advanced product management system. How we built a fast e-commerce site that turns visitors into buyers.',
+      'A complete online store: shopping cart, secure payments and advanced product management. How we built a fast e-commerce site that turns visitors into buyers.',
     imageAlt: 'Screenshot of the store homepage',
   },
 
@@ -144,7 +144,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     heroDescription:
       'We built and managed a set of digital assets for Ram and Haim Real Estate Marketing, focusing on establishing a strong and authoritative online presence. The project covered setting up a stable digital foundation as a base for growth, and considered reputation management designed to build trust and generate quality enquiries in a competitive real estate market.',
     metaDescription:
-      'Digital asset and reputation management for Ram and Haim real estate marketing: an authoritative online presence, a stable digital foundation and a system that produces warm enquiries.',
+      'Digital asset and reputation management for Ram and Haim real estate marketing: an authoritative online presence and a system that produces warm enquiries.',
     imageAlt: 'Screenshot of the Ram and Haim real estate marketing homepage',
     challenge: {
       text: 'In real estate, trust and professional authority are the key to every successful deal. The central goal with Ram and Haim was to translate their professionalism in the field into the digital space, and to establish a presence that signals leadership. The process began with organising and refining the digital assets, including a strategic domain choice and correct technical foundations from the ground up. Our focus was on giving them a strong digital starting point, correctly built, that would let the brand stand out and serve as a solid base for every future marketing move.',
@@ -162,7 +162,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     heroDescription:
       'We created a complete digital and brand package for Avi Mortgage Advisory, from a visual language and business cards through to converting landing pages. Alongside it we built and ran an advanced Meta campaign system based on an intelligent funnel that brings in qualified leads and warms them through to a closed deal.',
     metaDescription:
-      'Branding, landing pages and Meta campaigns for Avi Mortgage Advisory: an intelligent funnel producing qualified leads every day. See the process and the results.',
+      'Branding, landing pages and Meta campaigns for Avi Mortgage Advisory: an intelligent funnel producing qualified leads every day. See the process and results.',
     imageAlt: 'Screenshot of the Avi Mortgage Advisory homepage',
     challenge: {
       text: 'Mortgage advisory demands trust and authority from the very first click. For Avi, the goal was a tightly built digital presence signalling professionalism, quality and confidence to prospects standing before one of the largest financial decisions of their lives. We started by consolidating a consistent brand language and designing the graphic assets, then moved on to dedicated landing pages. Those pages were carefully planned at the level of user experience and copy, to present Avi added value clearly and move visitors to leave their details or make quick contact, including a direct WhatsApp connection.',
@@ -179,7 +179,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     tags: ['UI/UX', 'Branding', 'Website'],
     heroDescription: 'A brand site, identity and digital presence.',
     metaDescription:
-      'A brand site for Alexandra Patsina: personal branding, clean design and a digital presence that signals professionalism. What a brand site that works for its owner looks like.',
+      'A brand site for Alexandra Patsina: personal branding, clean design and a digital presence that signals professionalism and works for its owner.',
     imageAlt: 'Screenshot of the Alexandra Patsina homepage',
   },
 
@@ -191,7 +191,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     heroDescription:
       'An English-language product site for Sous Chef, an AI-based restaurant management platform. The site presents what the system does, managing menus across every delivery app from one place, weekly insights and recommended actions to grow revenue, in a dark, modern design with a clear conversion path to booking a demo.',
     metaDescription:
-      'A product site for Sous Chef, an AI platform for restaurant management and menu control across delivery apps. Dark design, clear messaging and a conversion path to a demo.',
+      'A product site for Sous Chef, an AI platform for restaurant management and menu control across delivery apps: dark design and a clear path to a demo.',
     imageAlt: 'Screenshot of the Sous Chef homepage, a restaurant management platform',
   },
 
@@ -205,7 +205,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     heroDescription:
       'Zentax is an AI-powered platform we built for an accounting firm in Canada that serves sole proprietors, corporations and SMEs. It reads invoices and bank statements, keeps every client ledger in one place and generates financial statements on demand, with a web app for accountants and a mobile app for their clients.',
     metaDescription:
-      'An AI accounting platform for a Canadian firm: invoice and bank statement recognition, a central ledger, banking and Stripe integrations and a mobile app for clients.',
+      'An AI accounting platform for a Canadian firm: invoice and bank statement recognition, a central ledger, banking and Stripe links and a client mobile app.',
     imageAlt: 'Screenshot of the accountant workspace in Zentax',
     challenge: {
       text: 'The firm serves sole proprietors, corporations and SMEs. Demand was growing, but manual processes and disconnected tools meant every new client cost more accountant hours: financial data arrived by email, transactions were typed into Excel by hand, every document was reviewed one by one, there was no central place for client data and no real-time view of finances. The result was high operational overhead, a higher risk of errors and limited room to grow.',
@@ -225,7 +225,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     heroDescription:
       'Apprify is an AI platform for processing mortgage applications, built for a mortgage broker in Canada. It reads the documents applicants upload, extracts income and credit data, calculates eligibility ratios and compares every application with lender criteria. The AI does the analysis; the broker makes the call.',
     metaDescription:
-      'An AI platform for a Canadian mortgage broker: LLM document parsing, instant GDS, TDS and LTV calculations and lender matching. Applications processed twice as fast.',
+      'An AI platform for a Canadian mortgage broker: LLM document parsing, instant GDS, TDS and LTV checks and lender matching. Applications processed twice as fast.',
     imageAlt: 'Screenshot of the summary and calculations screen in Apprify',
     challenge: {
       text: 'A mortgage broker runs a complex financial analysis for every loan, and before this project each step of it was manual: client data arrived by email, brokers reviewed every document by hand, calculations were done by hand, data was scattered across many files and lender criteria were compared one by one. The result was slow turnaround, a higher risk of errors and a hard cap on how many applications the team could process.',
@@ -265,7 +265,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     heroDescription:
       'Bradley is a men’s streetwear brand sold online. We built the brand a fully right-to-left Hebrew Shopify store with a catalogue of more than 250 items: shirts, trousers, shoes and accessories. The design is a clean black and white, collection photography leads the homepage, and every product card shows the available colours and adds to the cart straight from the listing.',
     metaDescription:
-      'A Shopify store for the Bradley streetwear brand: a catalogue of hundreds of items in right-to-left Hebrew, colour swatches on product cards, a customer club and a slide-out cart.',
+      'A Shopify store for the Bradley streetwear brand: hundreds of items in right-to-left Hebrew, colour swatches, a customer club and a slide-out cart.',
     imageAlt: 'Screenshot of the Bradley online store homepage',
     challenge: {
       text: 'In a fashion store the catalogue is the challenge: hundreds of items, most of them in several colours and sizes, and collections that change every season. A visitor has to reach the kind of item they want quickly, see every colour while still in the product listing and finish a purchase on a phone in a few taps. On top of that, Shopify and most of its themes were built for English, so a Hebrew store needs a full right-to-left adaptation, from the menu to the cart.',
@@ -285,7 +285,7 @@ export const projectsEn: Record<string, ProjectOverride> = {
     heroDescription:
       'A brand site for Natan Borochov’s barbershop in Holon. We built a single dark page with large typography and a gold accent that answers the three questions every client has: what it costs, what the work looks like, and where and when to come. Every row in the price list opens WhatsApp with a ready-made message to book that service.',
     metaDescription:
-      'A brand site for Natan Borochov’s barbershop in Holon: a price list that leads straight to WhatsApp booking, a gallery of work from Instagram, opening hours and directions.',
+      'A brand site for Natan Borochov’s barbershop in Holon: a price list that leads to WhatsApp booking, a gallery of work, opening hours and directions.',
     imageAlt: 'Screenshot of the Borohov Barbershop homepage',
     challenge: {
       text: 'A neighbourhood barbershop does not need a complex booking system: appointments are made on WhatsApp and the work is published on Instagram. What was missing was one place that gives a quick answer to anyone looking for the shop: price, address, hours and examples of the work. The site had to deliver all of that on a phone, look like the barbershop itself and not like a template, and lead to a booking in one tap.',

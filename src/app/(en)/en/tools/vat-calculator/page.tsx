@@ -5,7 +5,7 @@ import calculatorStyles from '../../../../(he)/(site)/components/tools/VatCalcul
 const SLUG = 'vat-calculator'
 const META_TITLE = 'Israel VAT Calculator (18%): Add or Remove VAT'
 const DESCRIPTION =
-  'Free Israel VAT calculator at the current 18% rate: add VAT to a net price or extract it from a VAT-inclusive total, for one amount or a list, with an Eilat 0% option.'
+  'Free Israel VAT calculator at the current 18% rate: add VAT to a net price or extract it from a total, for one amount or a list, with an Eilat 0% option.'
 
 const faq: EnToolFaqEntry[] = [
   {

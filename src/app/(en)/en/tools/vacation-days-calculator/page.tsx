@@ -11,9 +11,9 @@ import {
 import styles from '../../../../(he)/(site)/tools/vacation-days-calculator/page.module.css'
 
 const SLUG = 'vacation-days-calculator'
-const META_TITLE = 'Israel Vacation Days Calculator: Annual Leave by Seniority'
+const META_TITLE = 'Israel Vacation Days Calculator: Annual Leave'
 const DESCRIPTION =
-  'How many vacation days you get in Israel under the Annual Leave Law and the extension order, for a 5-day or 6-day week, with proration for a partial year and full tables by seniority.'
+  'How many vacation days you get in Israel under the Annual Leave Law and the extension order, for a 5-day or 6-day week, with full tables by seniority.'
 
 const tables: { week: WorkWeek; caption: string }[] = [
   { week: '5', caption: 'Vacation days by seniority, 5-day work week (work days)' },

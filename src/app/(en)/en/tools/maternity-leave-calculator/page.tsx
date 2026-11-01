@@ -7,7 +7,7 @@ import styles from '../../../../(he)/(site)/tools/maternity-leave-calculator/pag
 const SLUG = 'maternity-leave-calculator'
 const META_TITLE = 'Israel Maternity Leave Calculator: 26 or 15 Weeks'
 const DESCRIPTION =
-  'Free Israel maternity leave calculator under the Women\'s Employment Law: 26 weeks, or 15 with under a year of service, your return date, weeks paid by Bituach Leumi and dismissal protection.'
+  'Free Israel maternity leave calculator: 26 weeks, or 15 with under a year of service, your return date, weeks paid by Bituach Leumi and dismissal protection.'
 
 const DAY_MS = 86_400_000
 const dateFormat = new Intl.DateTimeFormat('en-IL', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })

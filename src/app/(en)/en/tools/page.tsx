@@ -11,7 +11,7 @@ import layout from '../../../(he)/(site)/components/tools/ToolLayout.module.css'
 import styles from '../../../(he)/(site)/tools/page.module.css'
 
 const DESCRIPTION =
-  'Free calculators and generators in English for freelancers, olim and foreign companies doing business in Israel. No sign-up, and what you enter stays in your browser.'
+  'Free calculators and generators in English for freelancers, olim and foreign companies in Israel. No sign-up, and what you enter stays in your browser.'
 
 export const metadata = pageMetadata({
   title: EN_TOOLS_HUB_TITLE,

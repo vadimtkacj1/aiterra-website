@@ -3,7 +3,7 @@ import { EmailDomainCheck } from '../../components/tools/BusinessCalculators'
 
 const PATH = '/tools/email-domain-check'
 const TITLE = 'בדיקת SPF, DKIM ו-DMARC לדומיין'
-const META_TITLE = 'בדיקת SPF, DKIM ו-DMARC: האם אפשר לזייף מייל בשם הדומיין שלכם'
+const META_TITLE = 'בדיקת SPF, DKIM ו-DMARC: האם אפשר לזייף מייל בשמכם'
 const DESCRIPTION =
   'בדיקת SPF, DKIM ו-DMARC בחינם: מכניסים דומיין ורואים אם מיילים ממנו מוגנים מהתחזות ואם הם עלולים ליפול לספאם.'
 

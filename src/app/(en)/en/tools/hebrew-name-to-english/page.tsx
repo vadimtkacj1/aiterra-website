@@ -14,9 +14,9 @@ import {
 import styles from '../../../../(he)/(site)/components/tools/NameTransliterator.module.css'
 
 const SLUG = 'hebrew-name-to-english'
-const META_TITLE = 'Hebrew Name to English: How to Spell a Hebrew Name in English'
+const META_TITLE = 'Hebrew Name to English: How to Spell Hebrew Names'
 const DESCRIPTION =
-  'How to write a Hebrew name in English letters: Moshe, Yonatan, Chaim and hundreds of first names and surnames in their common spellings, letter-by-letter transliteration rules and passport spelling.'
+  'How to write a Hebrew name in English: Moshe, Yonatan, Chaim and hundreds more first names and surnames, with transliteration rules and passport spelling.'
 
 const letterRows = [
   ['א, ע', 'Usually silent or a vowel', 'A, E, or no letter'],

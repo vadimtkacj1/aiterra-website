@@ -12,9 +12,9 @@ import {
 import styles from '../../../../(he)/(site)/tools/self-employed-tax-calculator/page.module.css'
 
 const SLUG = 'self-employed-tax-calculator'
-const META_TITLE = 'Israel Self-Employed Tax Calculator 2026: Income Tax and Bituach Leumi'
+const META_TITLE = 'Israel Self-Employed Tax Calculator 2026'
 const DESCRIPTION =
-  'Estimate income tax, National Insurance (Bituach Leumi) and health insurance for a self-employed person in Israel at 2026 rates: tax by bracket and credit points, net per month and year, and estimated advances.'
+  'Estimate income tax, Bituach Leumi and health insurance for the self-employed in Israel at 2026 rates, with net income and estimated tax advances.'
 
 const numberFormat = new Intl.NumberFormat('en-IL', { maximumFractionDigits: 0 })
 const num = (amount: number) => numberFormat.format(amount)

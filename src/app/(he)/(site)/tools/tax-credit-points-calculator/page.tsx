@@ -21,7 +21,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/tax-credit-points-calculator'
 const TITLE = 'מחשבון נקודות זיכוי במס הכנסה 2026'
-const META_TITLE = 'מחשבון נקודות זיכוי 2026: כמה נקודות מגיעות לכם וכמה הן שוות'
+const META_TITLE = 'מחשבון נקודות זיכוי 2026: כמה נקודות מגיעות לכם'
 const DESCRIPTION =
   'מחשבון נקודות זיכוי במס הכנסה ל-2026: תושב, אישה, ילדים לפי שנת לידה, עולה חדש, חייל משוחרר ותואר אקדמי. סך הנקודות ושווין בשקלים לחודש ולשנה.'
 

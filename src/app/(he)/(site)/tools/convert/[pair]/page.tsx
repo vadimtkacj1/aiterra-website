@@ -25,8 +25,8 @@ function describe(slug: string) {
   if (!page || !from || !to) return null
   const one = formatAmount(convert(1, from, to))
   const back = formatAmount(convert(1, to, from))
-  const title = `${page.question}? ממיר ${from.name} ל${to.name}`
-  const description = `1 ${from.name} = ${one} ${to.name}. ממיר ${from.name} ל${to.name} ובחזרה, עם טבלת המרה לערכים נפוצים.`
+  const title = `${page.question}? ${page.converterName ?? `ממיר ${from.name} ל${to.name}`}`
+  const description = `1 ${from.name} = ${one} ${to.name}. ממיר ${from.name} ל${to.name} ובחזרה, בחינם, עם טבלת המרה לערכים נפוצים.`
   return { page, from, to, one, back, title, description }
 }
 

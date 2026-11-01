@@ -7,7 +7,7 @@ import JsonLd from '@/components/seo/JsonLd'
 import { pageMetadata } from '@/lib/metadata'
 import { breadcrumbList, webPage } from '@/lib/schema'
 import { SITE_URL } from '@/lib/seo'
-import { TOOLS_HUB_PATH, toolCategories, toolsIn, topicPath, type ToolCategory } from '@/lib/tools'
+import { TOOLS_HUB_PATH, toolCategories, toolsIn, topicPath, type ToolCategory, type ToolCategoryInfo } from '@/lib/tools'
 import layout from '../../../components/tools/ToolLayout.module.css'
 
 export const dynamicParams = false
@@ -18,10 +18,12 @@ type Params = { params: Promise<{ topic: string }> }
 
 const categoryOf = (id: string) => toolCategories.find((category) => category.id === id)
 
+const metaDescriptionOf = (category: ToolCategoryInfo) => category.metaDescription ?? category.intro[0]
+
 export async function generateMetadata({ params }: Params) {
   const category = categoryOf((await params).topic)
   if (!category) return {}
-  return pageMetadata({ title: category.heading, description: category.intro[0], path: topicPath(category.id) })
+  return pageMetadata({ title: category.heading, description: metaDescriptionOf(category), path: topicPath(category.id) })
 }
 
 export default async function TopicPage({ params }: Params) {
@@ -33,7 +35,7 @@ export default async function TopicPage({ params }: Params) {
 
   return (
     <>
-      <JsonLd data={webPage({ path, name: category.heading, description: category.intro[0], type: 'CollectionPage' })} />
+      <JsonLd data={webPage({ path, name: category.heading, description: metaDescriptionOf(category), type: 'CollectionPage' })} />
       <JsonLd
         data={breadcrumbList([
           { name: 'בית', path: '/' },

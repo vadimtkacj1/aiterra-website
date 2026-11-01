@@ -12,9 +12,9 @@ import {
 import styles from '../../../../(he)/(site)/tools/net-salary-calculator/page.module.css'
 
 const SLUG = 'net-salary-calculator'
-const META_TITLE = 'Israel Net Salary Calculator 2026: Gross to Net and Employer Cost'
+const META_TITLE = 'Israel Net Salary Calculator 2026: Gross to Net'
 const DESCRIPTION =
-  'Free Israel gross to net salary calculator at 2026 rates: income tax, credit points, Bituach Leumi, health, pension and keren hishtalmut, plus net to gross and employer cost.'
+  'Free Israel gross to net salary calculator at 2026 rates, and net to gross: income tax, credit points, Bituach Leumi, health, pension and employer cost.'
 
 const examples = [8_000, 12_000, 20_000, 30_000].map((gross) =>
   calculateSalary({ gross, creditPointsHundredths: 225, hishtalmut: false, severance: 'partial' }),

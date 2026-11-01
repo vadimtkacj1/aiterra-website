@@ -6,9 +6,9 @@ import { ceilingTable, computeRental } from '@/lib/rental-income-tax'
 import styles from '../../../../(he)/(site)/tools/rental-income-tax-calculator/page.module.css'
 
 const SLUG = 'rental-income-tax-calculator'
-const META_TITLE = 'Israel Rental Income Tax Calculator 2026: ₪5,654 Exemption'
+const META_TITLE = 'Israel Rental Income Tax Calculator 2026'
 const DESCRIPTION =
-  'Free Israel rental income tax calculator: the ₪5,654 monthly exemption ceiling, the shekel-for-shekel reduction above it, the 10% track and the regular track compared.'
+  'Free Israel rental income tax calculator: the ₪5,654 monthly exemption, the shekel-for-shekel reduction above it, and the 10% and regular tracks compared.'
 
 const faq: EnToolFaqEntry[] = [
   {

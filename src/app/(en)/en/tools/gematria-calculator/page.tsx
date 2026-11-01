@@ -5,9 +5,9 @@ import { calculate, famousPairs, methods, valueOf } from '@/lib/gematria'
 import styles from '../../../../(he)/(site)/tools/gematria-calculator/page.module.css'
 
 const SLUG = 'gematria-calculator'
-const META_TITLE = 'Gematria Calculator: Hebrew Word and Name Values in 6 Methods'
+const META_TITLE = 'Gematria Calculator: Hebrew Word and Name Values'
 const DESCRIPTION =
-  'Free gematria calculator: type a Hebrew word, name or phrase and get its value in standard gematria, mispar gadol, katan and ordinal, Atbash and Albam, with a letter-by-letter breakdown.'
+  'Free gematria calculator: type a Hebrew word, name or phrase and see its value in 6 methods, from standard gematria to Atbash and Albam, letter by letter.'
 
 const SOURCES = {
   gematria: 'https://en.wikipedia.org/wiki/Gematria',

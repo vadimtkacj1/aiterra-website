@@ -56,8 +56,8 @@ export default function VatCalculatorPage() {
       faq={faq}
       cta={{
         text: 'מוציאים חשבוניות ידנית? אנחנו מחברים את האתר וה-CRM להפקת חשבוניות אוטומטית.',
-        label: 'פיתוח תוכנה לעסקים',
-        href: '/services/development',
+        label: 'אוטומציה לעסקים',
+        href: '/services/automation',
       }}
     >
       <h2>איך מחשבים מע״מ: הנוסחאות</h2>

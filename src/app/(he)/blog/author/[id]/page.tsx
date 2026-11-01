@@ -12,6 +12,7 @@ import JsonLd from '@/components/seo/JsonLd'
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 import { getAllAuthors, getAuthorById } from '@/lib/authors-server'
 import { getAllPosts } from '@/lib/blog-server'
+import { authorMetaDescriptionsHe, authorMetaTitle, capMetaDescription } from '@/lib/content-en-authors'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 
 // ISR: cached HTML, refreshed in the background; author/blog edits in admin
@@ -42,15 +43,18 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const author = getAuthorById(id)
   if (!author) return {}
   const canonical = `/blog/author/${author.id}`
-  const title = `${author.name} – ${author.role} | ${SITE_NAME}`
+  const title = authorMetaTitle(author.name, author.role)
+  const description =
+    authorMetaDescriptionsHe[author.id] ||
+    (author.bio ? capMetaDescription(author.bio) : `${author.name}, ${author.role} ב-${SITE_NAME}.`)
   return {
-    title,
-    description: author.bio || `${author.name}, ${author.role} ב-${SITE_NAME}.`,
+    title: { absolute: title },
+    description,
     alternates: { canonical },
     openGraph: {
       type: 'profile',
       title,
-      description: author.bio || undefined,
+      description,
       url: `${SITE_URL}${canonical}`,
       siteName: SITE_NAME,
       locale: 'he_IL',

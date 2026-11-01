@@ -3,7 +3,7 @@ import HostingFoodCalculator from '../../components/tools/HostingFoodCalculator'
 
 const PATH = '/tools/hosting-food-calculator'
 const TITLE = 'מחשבון כמויות אוכל לאירוח'
-const META_TITLE = 'מחשבון כמויות אוכל לאירוח: כמה אוכל לכל אורח ורשימת קניות'
+const META_TITLE = 'מחשבון כמויות אוכל לאירוח: כמות לאורח ורשימת קניות'
 const DESCRIPTION =
   'מחשבון כמויות אוכל לאירוח בבית: מכניסים מבוגרים, ילדים וסוג ארוחה ומקבלים כמה בשר, תוספות, סלטים ושתייה צריך, עם רשימת קניות לוואטסאפ.'
 

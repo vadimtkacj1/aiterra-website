@@ -6,7 +6,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/bill-split-tip-calculator'
 const TITLE = 'מחשבון טיפ וחלוקת חשבון'
-const META_TITLE = 'מחשבון טיפ וחלוקת חשבון במסעדה: שווה בשווה או לפי מנות'
+const META_TITLE = 'מחשבון טיפ וחלוקת חשבון במסעדה: בשווה או לפי מנות'
 const DESCRIPTION =
   'מחשבון טיפ וחלוקת חשבון חינמי: מקלידים סכום, אחוז טיפ ומספר סועדים ורואים כמה כל אחד משלם. כולל חלוקה לפי מה שכל אחד הזמין ועיגול לשקל.'
 

@@ -4,7 +4,7 @@ import UnitConverter from '../../components/tools/UnitConverter'
 import { UNIT_CONVERTER_PATH, pairPages, pairPath, quantityLabels, units, type Quantity } from '@/lib/unit-converter'
 
 const TITLE = 'ממיר יחידות: דונם, אינץ׳, גלון, אונקיה ועוד'
-const META_TITLE = 'ממיר יחידות מידה: דונם למטרים, אינץ׳ לס״מ, גלון לליטר, אונקיה לגרם'
+const META_TITLE = 'ממיר יחידות מידה: דונם למטרים, אינץ׳ לס״מ ועוד'
 const DESCRIPTION =
   'ממיר יחידות אורך, שטח, נפח ומשקל: דונם למ״ר, הקטר ואקר לדונם, אינץ׳ ורגל לס״מ ומטרים, גלון לליטר, אונקיה ופאונד לגרם וקילו. לפי ההגדרות הרשמיות.'
 

@@ -13,7 +13,7 @@ import styles from '../profit-margin-calculator/page.module.css'
 
 const PATH = '/tools/product-pricing-calculator'
 const TITLE = 'מחשבון תמחור מוצר לחנות אונליין'
-const META_TITLE = 'מחשבון תמחור מוצר לחנות אונליין: עלות נחיתה, עמלות ו-ROAS'
+const META_TITLE = 'מחשבון תמחור מוצר לחנות אונליין: עלות נחיתה ו-ROAS'
 const DESCRIPTION =
   'מחשבון תמחור מוצר למוכרים אונליין: עלות, משלוח, מכס, עמלות סליקה ופלטפורמה, פרסום והחזרות. מקבלים מחיר מומלץ כולל מע״מ, רווח ליחידה ו-ROAS לאיזון.'
 

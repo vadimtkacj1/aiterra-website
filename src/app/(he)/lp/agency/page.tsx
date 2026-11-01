@@ -8,21 +8,14 @@ import WhyUs from '@/components/lp-agency/WhyUs'
 import SocialFollow from '@/components/lp-agency/SocialFollow'
 import LeadFormCard from '@/components/lp-agency/LeadFormCard'
 import Footer from '@/components/lp-agency/Footer'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
-  title: 'יותר לידים, פחות בזבוז תקציב — אתר, קידום וקמפיינים מצוות אחד',
+export const metadata: Metadata = pageMetadata({
+  title: 'יותר לידים, פחות בזבוז תקציב: אתר, קידום וקמפיינים',
   description:
     'אותו צוות בונה את האתר, מקדם אותו ומריץ את הקמפיינים, כך שתקציב הפרסום לא נוחת על עמוד שלא נבנה להמיר. השאירו פרטים לשיחת אסטרטגיה ללא עלות.',
-  alternates: { canonical: '/lp/agency' },
-  openGraph: {
-    type: 'website',
-    locale: 'he_IL',
-    url: '/lp/agency',
-    title: 'יותר לידים, פחות בזבוז תקציב — Aiterra',
-    description:
-      'אתר ממיר, קידום אורגני וקמפיינים ממומנים מצוות אחד. שיחת אסטרטגיה ללא עלות.',
-  },
-}
+  path: '/lp/agency',
+})
 
 export const revalidate = 300
 

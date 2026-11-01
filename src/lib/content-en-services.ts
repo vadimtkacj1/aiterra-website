@@ -5,12 +5,12 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'web-development',
     crumb: 'Web design & development',
     eyebrow: 'Web design company in Israel',
-    heading: ['Web design and development company in Israel', 'custom-built, in Hebrew and English'],
+    heading: ['Web design and development in Israel', 'custom-built in Hebrew and English'],
     subhead: 'Our web design and development practice',
     lede: 'Aiterra is a web design and development company based in Bat Yam, Israel. We plan, design and build custom websites in Hebrew (RTL) and English - fast, accessible to IS 5568 and structured for Google and AI search from the first commit - and you own the code.',
     image: '/images/service-dev.webp',
     action: { label: 'Book a scoping call', href: '/en/contact' },
-    metaTitle: 'Web Design & Development Company in Israel | Hebrew + English',
+    metaTitle: 'Web Design & Development Company in Israel',
     metaDescription:
       'Web design and development company in Israel: custom Hebrew/English websites in Next.js, IS 5568 accessibility, SEO and GEO built in, and full code ownership.',
     advantages: {
@@ -309,7 +309,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     lede: 'Building a business system means developing a custom management system, CRM or portal around your own processes, so spreadsheets, forms and scattered messages are replaced by one place with permissions, statuses and reports - engineered for the operations that off-the-shelf software cannot cover, and designed to be extended rather than replaced.',
     image: '/images/service-dev-hero.webp',
     action: { label: 'Discuss your platform', href: '/en/contact' },
-    metaTitle: 'Custom Business System Development - Replace Excel with Your Own System',
+    metaTitle: 'Custom Business System Development in Israel',
     metaDescription:
       'Building a custom business system in Israel: management systems, CRM and portals that replace Excel and scattered forms, built in Next.js, Node and PostgreSQL.',
     advantages: {
@@ -457,7 +457,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     action: { label: 'Discuss your store', href: '/en/contact' },
     metaTitle: 'E-commerce Development - Custom Online Stores',
     metaDescription:
-      'Custom online stores: product catalogue, secure checkout, Israeli payment and invoicing integrations, inventory and order management. Built in code, owned by you.',
+      'Custom online stores: catalogue, secure checkout, Israeli payment and invoicing integrations, inventory and order management. Built in code, owned by you.',
     advantages: {
       eyebrow: 'OUR ADVANTAGES',
       heading: ['What sets our store builds apart'],
@@ -604,7 +604,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     action: { label: 'Discuss your website', href: '/en/contact' },
     metaTitle: 'Business Website Design and Development',
     metaDescription:
-      'Business website design and development: positioning and structure, UX and UI design, copywriting, mobile performance and lead capture - built in code, owned by you.',
+      'Business website design and development: positioning, UX and UI design, copywriting, mobile performance and lead capture. Built in code, owned by you.',
     advantages: {
       eyebrow: 'OUR ADVANTAGES',
       heading: ['What sets our websites apart'],
@@ -744,7 +744,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'marketing',
     crumb: 'Paid campaigns',
     eyebrow: 'Paid media',
-    heading: ['Paid campaigns judged on', 'cost per lead, not impressions'],
+    heading: ['PPC management in Israel', 'judged on cost per lead, not impressions'],
     subhead: 'Our paid media practice',
     lede: 'Google and Meta campaigns planned around your funnel stage, with creative, landing pages and conversion tracking built by the same team - so the ad, the page it lands on and the measurement agree with each other.',
     image: '/images/marketing-hero.webp',
@@ -1045,7 +1045,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     action: { label: 'Request a maintenance quote', href: '/en/contact' },
     metaTitle: 'Website Maintenance Services - Monthly Plans',
     metaDescription:
-      'Monthly website maintenance with an upfront written quote and a written SLA: security updates, daily backups, uptime monitoring and IS 5568 accessibility checks.',
+      'Monthly website maintenance with an upfront quote and a written SLA: security updates, daily backups, uptime monitoring and IS 5568 accessibility checks.',
     advantages: {
       eyebrow: 'OUR ADVANTAGES',
       heading: ['What makes our maintenance different'],
@@ -1199,7 +1199,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     lede: 'Business automation that joins your website, WhatsApp, CRM and invoicing into one flow: a lead arrives, gets answered, recorded and scheduled without anyone copying details by hand - with AI used only where a fixed rule is not enough.',
     image: '/images/service-platform.webp',
     action: { label: 'Book a process-mapping call', href: '/en/contact' },
-    metaTitle: 'Business Automation in Israel: CRM, WhatsApp, Invoicing',
+    metaTitle: 'Business Automation in Israel: CRM and WhatsApp',
     metaDescription:
       'Business automation in Israel: leads into your CRM, WhatsApp bots, Green Invoice and iCount links, order sync and reports, with AI where it helps.',
     advantages: {
@@ -1350,7 +1350,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'ai-agents',
     crumb: 'AI agents',
     eyebrow: 'AI agents',
-    heading: ['AI agents that answer customers', 'and act inside your systems'],
+    heading: ['AI agent development:', 'agents that answer customers and act in your systems'],
     subhead: 'Our AI agent service',
     lede: 'An AI agent that answers from your own content, carries out real actions in the systems you already run - opening a lead, booking a meeting, checking an order - and knows the moment to hand the conversation to a person.',
     image: '/images/service-agents-hero.webp',
@@ -1501,14 +1501,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'llm-integration',
     crumb: 'LLM integration & RAG',
     eyebrow: 'LLM integration & RAG',
-    heading: ['LLM integration & RAG', 'GPT, Claude and Gemini answering from your own documents'],
+    heading: ['LLM integration & RAG', 'GPT, Claude and Gemini answering from your documents'],
     subhead: 'Our language model integration service',
     lede: 'We connect a language model such as GPT, Claude or Gemini to your internal information: chat over company documents, a knowledge assistant for your team, search across Hebrew files, extraction and summaries for contracts and invoices, and a custom assistant that answers only from your sources. It suits businesses with a lot of written knowledge and too little time to search through it.',
     image: '/images/services-view.webp',
     action: { label: 'Request a feasibility check', href: '/en/contact' },
-    metaTitle: 'LLM Integration & RAG for Business - Chat Over Documents and Knowledge Assistants',
+    metaTitle: 'LLM Integration & RAG for Business - Document Chat',
     metaDescription:
-      'Connect GPT, Claude and Gemini to your business data: chat over documents, an internal knowledge assistant, RAG over Hebrew files, extraction and summaries, and private deployment with data privacy in mind. We start with a feasibility check.',
+      'Connect GPT, Claude and Gemini to your business data: chat over documents, an internal knowledge assistant, RAG over Hebrew files and private deployment.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our LLM integrations'],
@@ -1652,9 +1652,9 @@ export const servicePagesEn: Record<string, ServicePage> = {
     lede: 'Connecting your CRM, store, Google and Meta campaigns, GA4 and accounting system into one dataset, defining the metrics everyone agrees on, building Looker Studio or Power BI dashboards and sending automated reports to WhatsApp and email - so owners and managers see what is happening without waiting for the month-end spreadsheet.',
     image: '/images/services-view.webp',
     action: { label: 'Request a data source review', href: '/en/contact' },
-    metaTitle: 'Data Analytics & BI Dashboards for Business - Looker Studio, Power BI and Automated Reports',
+    metaTitle: 'Data Analytics & BI Dashboards for Business',
     metaDescription:
-      'Dashboards and reporting for Israeli businesses: connecting CRM, Shopify and WooCommerce, Google and Meta ads, GA4 and accounting software such as Priority and iCount, data warehouse, data cleaning and automated WhatsApp reports.',
+      'Dashboards and reporting for Israeli businesses: CRM, Shopify, Google and Meta ads, GA4 and accounting data in one place, with automated WhatsApp reports.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our data analytics work'],
@@ -1793,14 +1793,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'ai-consulting',
     crumb: 'AI consulting & implementation',
     eyebrow: 'AI consulting & implementation',
-    heading: ['AI consulting & implementation', 'from readiness check to daily use across the team'],
+    heading: ['AI consulting & implementation', 'from readiness check to daily team use'],
     subhead: 'Our AI consulting service',
     lede: 'AI consulting and implementation is the process of mapping where artificial intelligence actually saves time in your business, choosing the right tool and model (ChatGPT, Claude, Gemini or Copilot), setting a usage policy and security rules, training the team in Hebrew, and running a measured pilot before rolling it out company-wide.',
     image: '/images/services-view.webp',
     action: { label: 'Request an AI readiness review', href: '/en/contact' },
-    metaTitle: 'AI Consulting & Implementation for Business - Readiness, Policy and Team Training',
+    metaTitle: 'AI Consulting & Implementation for Business',
     metaDescription:
-      'AI consulting for Israeli businesses: a readiness review, mapping the processes where AI pays off, choosing tools (ChatGPT, Claude, Gemini, Copilot), usage policy and data security, Hebrew team training and a pilot with ROI measurement.',
+      'AI consulting for Israeli businesses: a readiness review, tool selection, usage policy and data security, Hebrew team training and a pilot with ROI measurement.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our AI consulting'],
@@ -1939,12 +1939,12 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'voice-agents',
     crumb: 'Voice AI agents & phone bots',
     eyebrow: 'Voice AI agents & phone bots',
-    heading: ['AI voice agent in Hebrew for business', 'phone answering wired into your systems'],
+    heading: ['AI voice agent in Hebrew for business', 'phone answering wired into your stack'],
     subhead: 'Our voice agent service',
     lede: 'An AI voice agent in Hebrew that answers incoming calls, runs an after-hours line, books appointments by phone, makes outbound reminder calls and writes a summary of every call straight into the CRM. It runs on top of your existing phone system and hands over to a person the moment it should.',
     image: '/images/services-view.webp',
     action: { label: 'Request a voice agent scoping', href: '/en/contact' },
-    metaTitle: 'AI Voice Agent in Hebrew for Business - Phone Answering',
+    metaTitle: 'AI Voice Agent in Hebrew for Business',
     metaDescription:
       'AI voice agent in Hebrew for Israeli businesses: answers incoming calls, books appointments, makes reminder calls and logs every call to your CRM.',
     advantages: {
@@ -2085,14 +2085,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'generative-ai',
     crumb: 'Generative AI for marketing content',
     eyebrow: 'Generative AI for marketing content',
-    heading: ['Generative AI for marketing content', 'images, video and copy in your brand style'],
+    heading: ['Generative AI for marketing content', 'images, video and copy on brand'],
     subhead: 'Our generative AI service',
     lede: 'Product photos and lifestyle images, short videos and reels, ad creative variations, Hebrew copywriting at scale, avatar and voiceover videos and an automated content pipeline from your catalogue - all following a brand style guide, with a human editor approving before anything is published.',
     image: '/images/services-view.webp',
     action: { label: 'Request an AI content proposal', href: '/en/contact' },
-    metaTitle: 'Generative AI for Marketing - Images, Video and Hebrew Copy',
+    metaTitle: 'Generative AI for Marketing - Images, Video, Copy',
     metaDescription:
-      'Generative AI for marketing content for Israeli businesses: product photos, videos and reels, ad variations, Hebrew copywriting with human editing, avatars and voiceover, and an automated content pipeline from your catalogue.',
+      'Generative AI for marketing content in Israel: product photos, videos and reels, ad variations, Hebrew copy with human editing, avatars and voiceover.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our generative AI work'],
@@ -2231,9 +2231,9 @@ export const servicePagesEn: Record<string, ServicePage> = {
     lede: 'A web or mobile app with AI at its core: choosing models and APIs, prompt infrastructure and quality evaluation, cost-per-request control, usage limits and billing, security and abuse prevention - from the first specification to launch, with the code and ownership fully yours.',
     image: '/images/services-view.webp',
     action: { label: 'Request a product scoping', href: '/en/contact' },
-    metaTitle: 'AI Product & SaaS Development for Startups and Businesses - Idea to MVP',
+    metaTitle: 'AI Product & SaaS Development - Idea to MVP',
     metaDescription:
-      'AI product development for startups and businesses in Israel: an MVP as a web or mobile app, model selection, quality evaluation, cost control, billing and usage limits, security and full code and IP handover.',
+      'AI product development for startups and businesses in Israel: a web or mobile MVP, model selection, cost control, billing and full code and IP handover.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our AI product development'],
@@ -2372,14 +2372,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'mobile-app-development',
     crumb: 'Mobile app development',
     eyebrow: 'Mobile app development',
-    heading: ['Mobile app development for iOS and Android', 'from MVP to a product serving thousands of users'],
+    heading: ['Mobile app development for iOS and Android', 'from MVP to thousands of users'],
     subhead: 'Our mobile app development service',
     lede: 'iOS and Android apps, native in Swift and Kotlin or cross-platform in React Native and Flutter - we pick whichever stack the project needs. Including the backend and API, push notifications, payments, a Hebrew right-to-left interface, App Store and Google Play publishing and maintenance after launch.',
     image: '/images/services-view.webp',
     action: { label: 'Request an app scoping', href: '/en/contact' },
-    metaTitle: 'Mobile App Development Company in Israel - iOS, Android and MVP',
+    metaTitle: 'Mobile App Development Company in Israel',
     metaDescription:
-      'Mobile app development for Israeli businesses: iOS and Android, native or React Native and Flutter, backend and API, push notifications, payments, Hebrew RTL interface, store publishing and maintenance. You own the code.',
+      'Mobile app development for Israeli businesses: iOS and Android, React Native and Flutter, backend, payments, Hebrew RTL and store publishing. You own the code.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our app development'],
@@ -2523,9 +2523,9 @@ export const servicePagesEn: Record<string, ServicePage> = {
     lede: 'Internal tools for your team, software that keeps working without internet, connections to printers, scanners, scales and POS terminals, installers with automatic updates, and migration of old VB6, Access or legacy .NET software to a modern stack - in whatever language and framework the project needs, with the code owned by you.',
     image: '/images/services-view.webp',
     action: { label: 'Book a scoping call', href: '/en/contact' },
-    metaTitle: 'Desktop Application Development in Israel - Windows, macOS and Linux',
+    metaTitle: 'Desktop Application Development in Israel',
     metaDescription:
-      'Desktop software development for Israeli businesses: internal tools, offline-first apps, printer, scanner, scale and POS integrations, installers and auto-update, code signing, and migration of legacy VB6 and Access software.',
+      'Desktop software for Israeli businesses: internal tools, offline-first apps, printer, scanner and POS integrations, installers and VB6 and Access migration.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our desktop development'],
@@ -2664,14 +2664,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'devops-cloud',
     crumb: 'DevOps & cloud',
     eyebrow: 'DevOps & cloud',
-    heading: ['DevOps & cloud for startups and SMBs', 'stable infrastructure, uneventful deployments'],
+    heading: ['DevOps & cloud for startups and SMBs', 'stable infrastructure, calm deployments'],
     subhead: 'Our DevOps and cloud service',
     lede: 'CI/CD pipelines, Docker and Kubernetes, infrastructure as code with Terraform, monitoring and alerting, backups and disaster recovery, security hardening, cloud bill optimisation and migration from shared hosting or a VPS to AWS, GCP, Azure or Hetzner - for any language and any stack.',
     image: '/images/services-view.webp',
     action: { label: 'Request an infrastructure review', href: '/en/contact' },
-    metaTitle: 'DevOps & Cloud Services in Israel - CI/CD, Kubernetes, Backups and Monitoring',
+    metaTitle: 'DevOps & Cloud Services in Israel',
     metaDescription:
-      'DevOps and cloud services for Israeli startups and SMBs: CI/CD pipelines, Docker and Kubernetes, Terraform, monitoring and alerting, backups and disaster recovery, security hardening, cost optimisation and cloud migration. We start with an infrastructure review.',
+      'DevOps and cloud services for Israeli startups and SMBs: CI/CD, Docker and Kubernetes, Terraform, monitoring, backups, security hardening and cloud migration.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our DevOps work'],
@@ -2810,12 +2810,12 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'ai-website-integration',
     crumb: 'AI integration for websites',
     eyebrow: 'AI integration for websites',
-    heading: ['AI chatbot and AI integration for websites', 'AI capabilities that work inside the site you already have'],
+    heading: ['AI chatbot and AI integration for websites', 'inside the site you already have'],
     subhead: 'Our AI integration service',
     lede: 'An AI chatbot for your website that answers from your site content, plus smart search, recommendations and personalization, product descriptions and image editing from inside the admin, translation and localization, and lead qualification - added to an existing or new website or app, on any platform, with full Hebrew support and cost control.',
     image: '/images/services-view.webp',
     action: { label: 'Request a fit review', href: '/en/contact' },
-    metaTitle: 'AI Chatbot for Websites in Israel - Hebrew Chat and Search',
+    metaTitle: 'AI Chatbot for Websites in Israel - Hebrew Chat',
     metaDescription:
       'AI chatbot for your website: answers from your own content in Hebrew, qualifies leads and hands over to a person. OpenAI, Claude and Gemini, any platform.',
     advantages: {
@@ -2956,14 +2956,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'privacy-compliance',
     crumb: 'Website privacy compliance',
     eyebrow: 'Website privacy compliance',
-    heading: ['Website privacy compliance (Amendment 13)', 'privacy implemented in code and forms'],
+    heading: ['Website privacy compliance (Amendment 13)', 'implemented in code and forms'],
     subhead: 'Our technical compliance service',
     lede: 'A review of the forms and data your site collects, a cookie banner that blocks trackers until consent, privacy and cookie policy pages, fewer fields in forms, secure storage, tidy CRM and mailing integrations, and a flow for access and deletion requests. This is technical work on the website, alongside your lawyer and not instead of one. To start at no cost, use our free Amendment 13 website checklist and cookie policy generator.',
     image: '/images/services-view.webp',
     action: { label: 'Request a site privacy review', href: '/en/contact' },
-    metaTitle: 'Website Privacy Compliance in Israel (Amendment 13) - Cookie Banner, Forms and Policies',
+    metaTitle: 'Website Privacy Compliance in Israel: Amendment 13',
     metaDescription:
-      'Technical website compliance for Amendment 13 to Israel\'s Privacy Protection Law: form review, a cookie banner that blocks tracking until consent, privacy and cookie policies, security, CRM integration and request handling. Not legal advice.',
+      'Technical website compliance for Amendment 13 to Israel\'s Privacy Protection Law: forms, a consent-first cookie banner, policies and security. Not legal advice.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our technical compliance work'],
@@ -3102,14 +3102,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'ai-built-app-completion',
     crumb: 'Finish your AI-built app',
     eyebrow: 'AI-built app completion',
-    heading: ['Finish and launch your AI-built app', 'from a Lovable or Bolt prototype to a product in production'],
+    heading: ['Finish and launch your AI-built app', 'from Lovable or Bolt to production'],
     subhead: 'Our completion and launch service',
     lede: 'You started a site or app in Lovable, Bolt, v0, Replit, Cursor or Base44 and need a developer to finish it: code review, security, database, payments, deployment to production, performance, Hebrew RTL, accessibility, SEO and maintenance - on any stack, without starting from scratch.',
     image: '/images/services-view.webp',
     action: { label: 'Request a project review', href: '/en/contact' },
-    metaTitle: 'Finish Your AI-Built App - Lovable, Bolt, Cursor to Production',
+    metaTitle: 'Finish Your AI-Built App - Lovable, Bolt, Cursor',
     metaDescription:
-      'A developer to finish and launch apps built in Lovable, Bolt, v0, Replit, Cursor or Base44: code and security review, database, payments, deployment, Hebrew RTL and SEO.',
+      'A developer to finish and launch apps built in Lovable, Bolt, v0, Replit, Cursor or Base44: code and security review, database, payments and deployment.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our completion work'],
@@ -3248,12 +3248,12 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'ai-search',
     crumb: 'AI search',
     eyebrow: 'AI search',
-    heading: ['ChatGPT and AI search visibility', 'in the answers ChatGPT, Gemini and Google write'],
+    heading: ['ChatGPT and AI search visibility', 'in ChatGPT, Gemini and Google answers'],
     subhead: 'Our GEO service',
     lede: 'GEO, or promotion in ChatGPT and other AI engines, starts from a simple fact: more searches now end in a written answer rather than a list of links. This service asks a different question from organic SEO: not where you sit in the list, but whether the engine mentions you at all.',
     image: '/images/service-ai-search-hero.webp',
     action: { label: 'Request an AI visibility check', href: '/en/contact' },
-    metaTitle: 'ChatGPT Visibility and GEO Services for Israeli Business',
+    metaTitle: 'ChatGPT Visibility and GEO Services in Israel',
     metaDescription:
       'GEO and AEO services that get your business cited by ChatGPT, Gemini and AI Overviews: entity and schema work, quotable content and a visibility report.',
     advantages: {
@@ -3404,9 +3404,9 @@ export const servicePagesEn: Record<string, ServicePage> = {
     lede: 'Demand and sales forecasting, lead scoring and churn risk, product recommendations for online stores, Hebrew document and text classification, anomaly detection - a model built on your business data, tested against reality and connected to the systems you already run.',
     image: '/images/services-view.webp',
     action: { label: 'Request a data review', href: '/en/contact' },
-    metaTitle: 'Machine Learning & Data Science for Business - Forecasting, Scoring and BI',
+    metaTitle: 'Machine Learning & Data Science for Business',
     metaDescription:
-      'Machine learning for Israeli businesses: demand and sales forecasting, lead and churn scoring, store recommendations, Hebrew document classification, anomaly detection and dashboards. We start with a data review.',
+      'Machine learning for Israeli businesses: sales forecasting, lead and churn scoring, store recommendations, Hebrew document classification and dashboards.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about our data science work'],
@@ -3545,14 +3545,14 @@ export const servicePagesEn: Record<string, ServicePage> = {
     id: 'computer-vision',
     crumb: 'Computer vision',
     eyebrow: 'Computer vision',
-    heading: ['Computer vision for business', 'image and video recognition wired into the workflow'],
+    heading: ['Computer vision for business', 'image and video recognition in your workflow'],
     subhead: 'Our computer vision service',
     lede: 'Object detection in images and video, OCR for Hebrew documents and invoices, quality inspection on a production line, people and vehicle counting, face blurring for privacy and automatic tagging of product images for online stores - tested on your own images and connected to your existing systems.',
     image: '/images/service-platform.webp',
     action: { label: 'Request a feasibility check', href: '/en/contact' },
-    metaTitle: 'Computer Vision for Business - Image Recognition, Hebrew OCR and Quality Inspection',
+    metaTitle: 'Computer Vision for Business - Image Recognition',
     metaDescription:
-      'Computer vision for Israeli businesses: object detection, OCR for Hebrew invoices and documents, quality inspection, people and vehicle counting, face blurring and product image tagging.',
+      'Computer vision for Israeli businesses: object detection, OCR for Hebrew invoices, quality inspection, people and vehicle counting and product image tagging.',
     advantages: {
       eyebrow: 'Why us',
       heading: ['What is different about the computer vision we build'],
