@@ -708,6 +708,14 @@ export const tools: ToolEntry[] = [
     icon: 'search',
   },
   {
+    path: '/tools/backlink-checker',
+    title: 'בדיקת קישורים נכנסים',
+    description: 'מי מקשר לאתר ישראלי: ציון סמכות, אתרים מקשרים, טקסטי קישור והשוואה למתחרה, ממאגר עצמאי של אתרי .il.',
+    category: 'marketing',
+    reviewed: '2026-11-01',
+    icon: 'search',
+  },
+  {
     path: '/tools/website-speed-test',
     title: 'בדיקת מהירות אתר',
     description: 'בדיקת מהירות טעינה של אתר במובייל ובמחשב: ציון Google, LCP, CLS, INP ונתוני גולשים אמיתיים, עם 5 תיקונים מוסברים בעברית.',
@@ -1634,6 +1642,7 @@ export type ToolStamp = 'sources' | 'updated' | 'live' | 'none'
 const TOOLS_WITHOUT_SOURCES = [
   '/tools/app-development-cost-calculator',
   '/tools/background-remover',
+  '/tools/backlink-checker',
   '/tools/business-name-generator',
   '/tools/business/business-payback',
   '/tools/business/business-viability',

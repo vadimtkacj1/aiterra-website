@@ -90,6 +90,7 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/website-trust-check': ['אתר מזויף', 'אתר אמין', 'חנות מזויפת', 'אבטחת אתר', 'SSL', 'פישינג', 'הונאה'],
   '/tools/suspicious-link-checker': ['קישור חשוד', 'הודעת SMS', 'פישינג', 'דיוג', 'התחזות', 'סייבר', 'אבטחת מידע'],
   '/tools/domain-lookup': ['דומיין', 'שם מתחם', 'רישום דומיין', 'co.il', 'DNS', 'אחסון אתרים', 'מייל עסקי'],
+  '/tools/backlink-checker': ['קישורים נכנסים', 'קישורים חיצוניים', 'בניית קישורים', 'בקלינקים', 'backlinks'],
   '/tools/website-speed-test': ['מהירות אתר', 'מהירות טעינה', 'אתר איטי', 'Core Web Vitals', 'PageSpeed', 'LCP', 'וורדפרס איטי'],
   '/tools/time-difference-israel': ['חו״ל', 'לקוחות בחו״ל', 'שעות'],
   '/tools/hebrew-name-to-english': ['שם העסק', 'דומיין', 'אנגלית'],

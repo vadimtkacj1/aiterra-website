@@ -1,0 +1,69 @@
+.wrap {
+  display: block;
+  padding: 24px;
+}
+
+.wrap input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #c9cfdd;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.domain {
+  margin-block-start: 28px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.metrics dt {
+  font-size: 14px;
+}
+
+.metrics dd {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.tableWrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px 10px;
+  border-block-end: 1px solid #e3e6ef;
+  text-align: start;
+}
+
+.anchors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.anchors li {
+  padding: 4px 10px;
+  border: 1px solid #e3e6ef;
+  border-radius: 999px;
+}
