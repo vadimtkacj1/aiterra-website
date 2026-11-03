@@ -7,13 +7,14 @@ import { EN_POST_SLUGS, EN_SERVICE_SLUG_LIST } from '@/lib/locale-counterparts'
 import OrganizationSchema from '@/components/seo/OrganizationSchema'
 import CookieConsent from '@/components/layout/CookieConsent'
 import { CONSENT_ACCEPTED, COOKIE_CONSENT_KEY } from '@/lib/cookie-consent'
+import { GA_MEASUREMENT_IDS } from '@/lib/ga'
 import WhatsAppButton from '@/components/layout/WhatsAppButton'
 import A11yWidgetTweaks from '@/components/layout/A11yWidgetTweaks'
 import DeferredThirdParty from '@/components/layout/DeferredThirdParty'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import '../../styles/globals.css'
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+const GA_IDS = GA_MEASUREMENT_IDS
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -89,7 +90,7 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
         >
           Skip to main content
         </a>
-        {GA_ID && (
+        {GA_IDS.length > 0 && (
           <>
             <Script id="ga-consent-default" strategy="beforeInteractive">{`
               window.dataLayer = window.dataLayer || [];
@@ -106,12 +107,12 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
               });
             `}</Script>
             <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_IDS[0]}`}
               strategy="lazyOnload"
             />
             <Script id="ga-init" strategy="lazyOnload">{`
               gtag('js', new Date());
-              gtag('config', '${GA_ID}', { anonymize_ip: true });
+              ${GA_IDS.map((id) => `gtag('config', '${id}', { anonymize_ip: true });`).join('\n')}
             `}</Script>
           </>
         )}

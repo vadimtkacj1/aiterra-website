@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { SITE_LEADS_TOKEN } from '@/lib/contact'
+import { trackLead } from '@/lib/ga'
 
 export default function ContactForm() {
   const [name, setName] = useState('')
@@ -23,6 +24,7 @@ export default function ContactForm() {
         body: JSON.stringify({ publicToken: SITE_LEADS_TOKEN, name, phone, source: 'cta-section' }),
       })
       if (!res.ok) throw new Error('request failed')
+      trackLead('cta-section')
       setSubmitted(true)
     } catch {
       setError('אירעה שגיאה בשליחה. אנא נסו שוב או התקשרו אלינו.')

@@ -1,5 +1,6 @@
 import { SITE_LEADS_TOKEN } from '@/lib/contact'
 import type { LeadFormData, ShortLeadFormData } from '@/lib/lp-agency-types'
+import { trackLead } from '@/lib/ga'
 
 type LeadPayload = {
   name: string
@@ -18,6 +19,7 @@ async function post(payload: LeadPayload) {
   if (!response.ok) {
     throw new Error(`Request failed with status ${response.status}`)
   }
+  trackLead(payload.source)
   return response.json().catch(() => ({ ok: true }))
 }
 

@@ -9,6 +9,7 @@ import { contact as contactDefaults, serviceTabs as serviceTabsDefaults } from '
 import { useV2 } from '../V2ContentProvider'
 import { SITE_LEADS_TOKEN } from '@/lib/contact'
 import styles from './ContactForm.module.css'
+import { trackLead } from '@/lib/ga'
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'
 
@@ -62,6 +63,7 @@ export default function ContactForm({ children, source = 'v2-home', variant = 'p
         }),
       })
       if (!response.ok) throw new Error('request failed')
+      trackLead(source)
       setStatus('sent')
     } catch {
       setStatus('error')

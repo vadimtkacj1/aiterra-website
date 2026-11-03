@@ -7,13 +7,14 @@ import { EN_POST_SLUGS, EN_SERVICE_SLUG_LIST } from '@/lib/locale-counterparts'
 import OrganizationSchema from '@/components/seo/OrganizationSchema'
 import CookieConsent from '@/components/layout/CookieConsent'
 import { CONSENT_ACCEPTED, COOKIE_CONSENT_KEY } from '@/lib/cookie-consent'
+import { GA_MEASUREMENT_IDS } from '@/lib/ga'
 import WhatsAppButton from '@/components/layout/WhatsAppButton'
 import A11yWidgetTweaks from '@/components/layout/A11yWidgetTweaks'
 import DeferredThirdParty from '@/components/layout/DeferredThirdParty'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import '../../styles/globals.css'
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+const GA_IDS = GA_MEASUREMENT_IDS
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -95,7 +96,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           דלגו לתוכן הראשי
         </a>
-        {GA_ID && (
+        {GA_IDS.length > 0 && (
           <>
             {/* Google Analytics 4 — Consent Mode v2. The tag loads on every page
                 (so GA is always present and collecting), but analytics_storage is
@@ -125,12 +126,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 queues consent/config into dataLayer, which gtag.js drains when it
                 finally loads (incl. a CookieConsent accept fired before then). */}
             <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_IDS[0]}`}
               strategy="lazyOnload"
             />
             <Script id="ga-init" strategy="lazyOnload">{`
               gtag('js', new Date());
-              gtag('config', '${GA_ID}', { anonymize_ip: true });
+              ${GA_IDS.map((id) => `gtag('config', '${id}', { anonymize_ip: true });`).join('\n')}
             `}</Script>
           </>
         )}

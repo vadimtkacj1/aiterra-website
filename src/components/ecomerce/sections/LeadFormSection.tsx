@@ -5,6 +5,7 @@ import { useState, type FormEvent } from 'react'
 import { Check } from 'lucide-react'
 import Reveal from '@/components/ecomerce/ui/Reveal'
 import { SITE_LEADS_TOKEN } from '@/lib/ecomerce/contact'
+import { trackLead } from '@/lib/ga'
 
 type SubmitStatus = 'idle' | 'sending' | 'success' | 'error'
 
@@ -53,6 +54,7 @@ export default function LeadFormSection() {
         }),
       })
       if (!res.ok) throw new Error(`Request failed with status ${res.status}`)
+      trackLead('ecommerce-landing')
       setStatus('success')
     } catch {
       setStatus('error')
