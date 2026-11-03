@@ -1,6 +1,7 @@
 import { SITE_LEADS_TOKEN } from '@/lib/contact'
 import type { LeadFormData, ShortLeadFormData } from '@/lib/lp-agency-types'
 import { trackLead } from '@/lib/ga'
+import { leadAttribution } from '@/lib/lead-attribution'
 
 type LeadPayload = {
   name: string
@@ -14,7 +15,7 @@ async function post(payload: LeadPayload) {
   const response = await fetch('/api/site-leads/submit', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ publicToken: SITE_LEADS_TOKEN, ...payload }),
+    body: JSON.stringify({ publicToken: SITE_LEADS_TOKEN, ...payload, attribution: leadAttribution() }),
   })
   if (!response.ok) {
     throw new Error(`Request failed with status ${response.status}`)

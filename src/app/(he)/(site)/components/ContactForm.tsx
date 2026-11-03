@@ -10,6 +10,7 @@ import { useV2 } from '../V2ContentProvider'
 import { SITE_LEADS_TOKEN } from '@/lib/contact'
 import styles from './ContactForm.module.css'
 import { trackLead } from '@/lib/ga'
+import { leadAttribution } from '@/lib/lead-attribution'
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'
 
@@ -60,6 +61,7 @@ export default function ContactForm({ children, source = 'v2-home', variant = 'p
           message: read('message'),
           treatment: read('service'),
           source,
+          attribution: leadAttribution(),
         }),
       })
       if (!response.ok) throw new Error('request failed')

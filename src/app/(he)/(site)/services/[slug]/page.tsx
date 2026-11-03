@@ -10,6 +10,7 @@ import ServiceCases from '../../components/ServiceCases'
 import Reels from '../../components/Reels'
 import BannerCta from '../../components/BannerCta'
 import Faq from '../../components/Faq'
+import ServiceGuides from '../../components/ServiceGuides'
 import ContactForm from '../../components/ContactForm'
 import Footer from '../../components/Footer'
 import ServiceJsonLd from '../../components/ServiceJsonLd'
@@ -105,6 +106,7 @@ export default async function V2ServiceDetailPage({ params }: Params) {
           />
         ) : null}
 
+        <ServiceGuides slug={slug} />
         <Faq heading={service.faqHeading} entries={entries} />
       </main>
       <Footer>

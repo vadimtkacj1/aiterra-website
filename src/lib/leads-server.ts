@@ -13,6 +13,7 @@ export interface SiteLead {
   message: string | null
   treatment: string | null
   source: string | null
+  attribution?: string | null
   createdAt: string
   crm?: CrmDelivery
 }

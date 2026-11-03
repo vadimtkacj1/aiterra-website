@@ -16,9 +16,9 @@ import styles from './page.module.css'
 
 const PATH = '/tools/self-employed-tax-calculator'
 const TITLE = 'מחשבון מס הכנסה לעצמאי 2026'
-const META_TITLE = 'מחשבון מס הכנסה לעצמאי 2026 וביטוח לאומי'
+const META_TITLE = 'מחשבון ברוטו נטו לעצמאי 2026: מס הכנסה וביטוח לאומי'
 const DESCRIPTION =
-  'מחשבון מס הכנסה וביטוח לאומי לעצמאי לפי מדרגות 2026: מס לפי מדרגות ונקודות זיכוי, ביטוח לאומי ובריאות, נטו לחודש ולשנה ומקדמה משוערת. גם לעוסק פטור.'
+  'מחשבון ברוטו נטו לעצמאי, מס הכנסה וביטוח לאומי לפי מדרגות 2026: מס לפי מדרגות ונקודות זיכוי, ביטוח לאומי ובריאות, נטו לחודש ולשנה ומקדמה משוערת. גם לעוסק פטור.'
 
 const annualRows = calculateIncomeTax(0, 0, 12).rows
 const monthlyRows = calculateIncomeTax(0, 0, 1).rows

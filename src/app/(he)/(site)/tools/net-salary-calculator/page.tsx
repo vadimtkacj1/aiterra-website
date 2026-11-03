@@ -15,7 +15,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/net-salary-calculator'
 const TITLE = 'מחשבון שכר נטו ועלות מעביד 2026'
-const META_TITLE = 'מחשבון שכר נטו 2026: ברוטו נטו ועלות מעביד'
+const META_TITLE = 'מחשבון שכר נטו לשכיר 2026: ברוטו נטו ועלות מעביד'
 const DESCRIPTION =
   'מחשבון ברוטו נטו לשכירים לפי מדרגות 2026: מס הכנסה, נקודות זיכוי, ביטוח לאומי, בריאות, פנסיה וקרן השתלמות. גם מנטו לברוטו וגם עלות עובד למעסיק.'
 
@@ -164,7 +164,7 @@ export default function NetSalaryCalculatorPage() {
       </ul>
       <p>
         כדי לחשב פיצויי פיטורים יש לנו <Link href="/tools/severance-pay-calculator">מחשבון פיצויים</Link>, ולעצמאים{' '}
-        <Link href="/tools/self-employed-tax-calculator">מחשבון מס לעצמאי</Link>.
+        <Link href="/tools/self-employed-tax-calculator">מחשבון ברוטו נטו לעצמאי</Link>.
       </p>
 
       <h2>מקורות</h2>

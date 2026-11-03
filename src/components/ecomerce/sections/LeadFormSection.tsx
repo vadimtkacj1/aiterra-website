@@ -6,6 +6,7 @@ import { Check } from 'lucide-react'
 import Reveal from '@/components/ecomerce/ui/Reveal'
 import { SITE_LEADS_TOKEN } from '@/lib/ecomerce/contact'
 import { trackLead } from '@/lib/ga'
+import { leadAttribution } from '@/lib/lead-attribution'
 
 type SubmitStatus = 'idle' | 'sending' | 'success' | 'error'
 
@@ -51,6 +52,7 @@ export default function LeadFormSection() {
           // send it under that key so the business description isn't dropped.
           message: about,
           source: 'ecommerce-landing',
+          attribution: leadAttribution(),
         }),
       })
       if (!res.ok) throw new Error(`Request failed with status ${res.status}`)

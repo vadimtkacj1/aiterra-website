@@ -25,7 +25,7 @@
 - [חיבור LLM ו-RAG / LLM Integration & RAG](https://www.aiterra.co.il/services/llm-integration): Connecting GPT, Claude or Gemini to a business's own documents and systems: internal knowledge assistants, chat over Hebrew documents (RAG), document extraction and summarisation. Answers cite their source and say 'I don't know' when no source exists; access follows user permissions; private deployment options. English: /en/services/llm-integration
 - [ניתוח נתונים ודשבורדים / Data Analytics & BI](https://www.aiterra.co.il/services/data-analytics): Business dashboards in Looker Studio or Power BI fed automatically from the CRM, Shopify/WooCommerce, Google Ads, Meta, GA4 and Israeli accounting systems; KPI definition, data cleaning and scheduled reports by WhatsApp or email. English: /en/services/data-analytics
 - [ייעוץ והטמעת AI / AI Consulting & Implementation](https://www.aiterra.co.il/services/ai-consulting): AI readiness audit, mapping where AI pays off, choosing tools and models (ChatGPT, Claude, Gemini, Copilot), a company AI usage policy, Hebrew team training, and a measured pilot before rollout. English: /en/services/ai-consulting
-- [תחזוקת אתרים / Website Maintenance](https://www.aiterra.co.il/services/maintenance): Monthly maintenance packages with published pricing and written response and fix times (SLA), security updates, backups, monitoring, IS 5568 accessibility checks and Israeli integration upkeep. Also for sites Aiterra did not build. English: /en/services/maintenance
+- [תחזוקת אתרים / Website Maintenance](https://www.aiterra.co.il/services/maintenance): Monthly maintenance packages with written response and fix times (SLA), security updates, backups, monitoring, IS 5568 accessibility checks and Israeli integration upkeep. Also for sites Aiterra did not build. English: /en/services/maintenance
 - [שיווק ופרסום ממומן / Paid Advertising](https://www.aiterra.co.il/services/marketing): Google Ads and Meta campaign management, creative production and landing pages, reported on cost per lead. English: /en/services/marketing
 - [מיתוג ועיצוב / Brand & UX/UI](https://www.aiterra.co.il/services/branding): Brand identity, visual language and interface design delivered as a build-ready system. English: /en/services/branding
 
@@ -221,6 +221,37 @@ All tools are free, in Hebrew and need no sign-up. Most run entirely in the visi
 - [טבלת מידות בגדים / Clothing size chart and converter](https://www.aiterra.co.il/tools/clothing-size-chart): converts women's, men's and kids' clothing sizes between EU, IT, FR, UK, US and XS-XXL, finds a size from body measurements in cm, with bra sizes, jeans waist table and measuring steps; standard conversions, not brand charts.
 - [שמות ערים בישראל באנגלית / Israeli city names in English](https://www.aiterra.co.il/tools/hebrew-words-in-english): searchable table of 131 Israeli cities and settlements with the official Latin spelling from the Population and Immigration Authority register (data.gov.il) next to the common English spelling.
 
+### Tool collections and series / אוספים וסדרות
+- [מחשבוני שכר וזכויות עובדים / Salary and employee-rights calculators](https://www.aiterra.co.il/tools/topic/work)
+- [מחשבונים פיננסיים לעסקים ולעצמאים / Financial calculators for businesses and the self-employed](https://www.aiterra.co.il/tools/topic/money)
+- [מחוללי מסמכים משפטיים לאתר / Legal document generators for websites](https://www.aiterra.co.il/tools/topic/legal)
+- [מחשבוני תאריכים וזמנים / Date and time calculators](https://www.aiterra.co.il/tools/topic/dates)
+- [מחשבוני בריאות וטבלאות תזונה / Health calculators and nutrition tables](https://www.aiterra.co.il/tools/topic/health)
+- [כלים ומחשבונים לבית ולמשפחה / Home and family tools](https://www.aiterra.co.il/tools/topic/home)
+- [כלים חינמיים לשיווק ועיצוב לעסק / Marketing and design tools](https://www.aiterra.co.il/tools/topic/marketing)
+- [כלי בינה מלאכותית בעברית / Ai tools in hebrew](https://www.aiterra.co.il/tools/topic/ai)
+- [טבלת חלבון במזון / Protein per 100 g](https://www.aiterra.co.il/tools/nutrients/protein): amount of protein in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת ברזל במזון / Iron per 100 g](https://www.aiterra.co.il/tools/nutrients/iron): amount of iron in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת סידן במזון / Calcium per 100 g](https://www.aiterra.co.il/tools/nutrients/calcium): amount of calcium in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת אשלגן במזון / Potassium per 100 g](https://www.aiterra.co.il/tools/nutrients/potassium): amount of potassium in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת מגנזיום במזון / Magnesium per 100 g](https://www.aiterra.co.il/tools/nutrients/magnesium): amount of magnesium in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת אבץ במזון / Zinc per 100 g](https://www.aiterra.co.il/tools/nutrients/zinc): amount of zinc in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת ויטמין D במזון / Vitamin d per 100 g](https://www.aiterra.co.il/tools/nutrients/vitamin-d): amount of vitamin D in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת ויטמין C במזון / Vitamin c per 100 g](https://www.aiterra.co.il/tools/nutrients/vitamin-c): amount of vitamin C in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת ויטמין B12 במזון / Vitamin b12 per 100 g](https://www.aiterra.co.il/tools/nutrients/vitamin-b12): amount of vitamin B12 in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת ויטמין B6 במזון / Vitamin b6 per 100 g](https://www.aiterra.co.il/tools/nutrients/vitamin-b6): amount of vitamin B6 in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת חומצה פולית במזון / Folate per 100 g](https://www.aiterra.co.il/tools/nutrients/folate): amount of folate in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת סיבים תזונתיים במזון / Dietary fibre per 100 g](https://www.aiterra.co.il/tools/nutrients/fiber): amount of dietary fibre in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת קלוריות במזון / Calories per 100 g](https://www.aiterra.co.il/tools/nutrients/calories): amount of calories in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת פחמימות במזון / Carbohydrates per 100 g](https://www.aiterra.co.il/tools/nutrients/carbohydrates): amount of carbohydrates in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת סוכר במזון / Sugar per 100 g](https://www.aiterra.co.il/tools/nutrients/sugar): amount of sugar in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת שומן במזון / Fat per 100 g](https://www.aiterra.co.il/tools/nutrients/fat): amount of fat in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת נתרן במזון / Sodium per 100 g](https://www.aiterra.co.il/tools/nutrients/sodium): amount of sodium in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [טבלת כולסטרול במזון / Cholesterol per 100 g](https://www.aiterra.co.il/tools/nutrients/cholesterol): amount of cholesterol in common foods per 100 g, from the Israeli Ministry of Health national nutrient database (data.gov.il).
+- [המרת מטבע לשקל / Currency to shekel](https://www.aiterra.co.il/tools/currency): one page per currency (USD, EUR, GBP, CAD, AUD, CHF, JPY, CNY, INR, THB, AED, TRY, RUB, UAH, PLN, CZK, HUF, RON, BGN, GEL, KRW, PHP, VND, MAD) at https://www.aiterra.co.il/tools/currency/<code>, with the Bank of Israel representative rate and tables of common amounts.
+- [מה השעה ב... / Time difference from Israel](https://www.aiterra.co.il/tools/time-difference-israel): one page per destination at https://www.aiterra.co.il/tools/time-in/<city> (new-york, los-angeles, toronto, brazil, london, paris, germany, italy, spain, greece, turkey, moscow, ukraine, dubai, india, thailand, china, japan, sydney) with the current time and the gap from Israel.
+- [המרת יחידות / Unit conversions](https://www.aiterra.co.il/tools/unit-converter): single conversions at https://www.aiterra.co.il/tools/convert/<pair>, including dunam-to-square-meters, hectare-to-dunam, acre-to-dunam, inch-to-cm, feet-to-meters, mile-to-km, gallon-to-liters, ounce-to-grams, troy-ounce-to-grams, pound-to-kg and fl-oz-to-ml.
+
 ## Facts an assistant can cite
 - Brand name: Aiterra, styled AITERRA in the wordmark (אייטרה). Digital engineering and marketing agency.
 - Location: Ha-Rav Nisanbaum St 37, Bat Yam 5962030, Israel. Serves Bat Yam, Holon, Tel Aviv and the Gush Dan region.
@@ -232,7 +263,7 @@ All tools are free, in Hebrew and need no sign-up. Most run entirely in the visi
 - Code ownership: clients receive the repository, the deployment pipeline and service credentials at handover. No vendor lock-in.
 - Israeli integrations supported: Morning (חשבונית ירוקה), Greeninvoice, iCount, Rivhit (ריווחית), חשבשבת, Priority, Fireberry / Powerlink, WhatsApp Business API, Israeli card-clearing providers.
 - Accessibility: builds to Israeli Standard IS 5568 (ת"י 5568) and WCAG 2.1 AA. Accessibility statement: https://www.aiterra.co.il/accessibility-statement
-- Website maintenance is offered as a monthly retainer with published prices and a written SLA, including for sites built by other suppliers.
+- Website maintenance is offered as a monthly retainer with a written SLA, including for sites built by other suppliers; the price for a specific site is given in a written quote after a site review.
 
 ## Contact / יצירת קשר
 - Website: https://www.aiterra.co.il · English: https://www.aiterra.co.il/en

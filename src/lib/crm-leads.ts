@@ -30,7 +30,7 @@ export async function forwardLeadToCrm(lead: SiteLead): Promise<CrmDelivery> {
         email: lead.email,
         message: lead.message,
         treatment: lead.treatment,
-        source: lead.source,
+        source: [lead.source, lead.attribution].filter(Boolean).join(' | ') || null,
       }),
     })
 

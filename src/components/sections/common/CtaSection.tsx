@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { SITE_LEADS_TOKEN } from '@/lib/contact'
 import { trackLead } from '@/lib/ga'
+import { leadAttribution } from '@/lib/lead-attribution'
 
 export default function ContactForm() {
   const [name, setName] = useState('')
@@ -21,7 +22,13 @@ export default function ContactForm() {
       const res = await fetch('/api/site-leads/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ publicToken: SITE_LEADS_TOKEN, name, phone, source: 'cta-section' }),
+        body: JSON.stringify({
+          publicToken: SITE_LEADS_TOKEN,
+          name,
+          phone,
+          source: 'cta-section',
+          attribution: leadAttribution(),
+        }),
       })
       if (!res.ok) throw new Error('request failed')
       trackLead('cta-section')

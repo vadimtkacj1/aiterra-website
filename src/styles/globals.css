@@ -444,6 +444,10 @@ body.cookie-banner-open .asw-menu-btn {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.4s ease, visibility 0s linear 0.4s;
+  animation: page-loader-out 0.4s ease 2.5s forwards;
+}
+@keyframes page-loader-out {
+  to { opacity: 0; visibility: hidden; pointer-events: none; }
 }
 #page-loader.page-loader--done {
   opacity: 0;

@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import VacationDaysCalculator from '../../components/tools/VacationDaysCalculator'
@@ -14,13 +15,21 @@ import styles from './page.module.css'
 
 const PATH = '/tools/vacation-days-calculator'
 const TITLE = 'מחשבון ימי חופשה לפי ותק'
-const META_TITLE = 'מחשבון ימי חופשה לפי ותק: טבלה לפי החוק וצו ההרחבה'
+const META_TITLE = 'טבלת ימי חופשה לפי ותק ומחשבון: 5 או 6 ימים בשבוע'
 const DESCRIPTION =
   'מחשבון ימי חופשה לפי ותק: כמה ימים מגיעים לפי חוק חופשה שנתית וצו ההרחבה, בשבוע של 5 או 6 ימים, חלק יחסי בשנה חלקית וטבלה מלאה.'
 
-const tables: { week: WorkWeek; caption: string }[] = [
-  { week: '5', caption: 'ימי חופשה לפי ותק, שבוע עבודה של 5 ימים (ימי עבודה)' },
-  { week: '6', caption: 'ימי חופשה לפי ותק, שבוע עבודה של 6 ימים (ימי עבודה)' },
+const tables: { week: WorkWeek; heading: string; caption: string }[] = [
+  {
+    week: '5',
+    heading: 'טבלת ימי חופשה לעובד 5 ימים בשבוע',
+    caption: 'ימי חופשה לפי ותק, שבוע עבודה של 5 ימים (ימי עבודה)',
+  },
+  {
+    week: '6',
+    heading: 'טבלת ימי חופשה לעובד 6 ימים בשבוע',
+    caption: 'ימי חופשה לפי ותק, שבוע עבודה של 6 ימים (ימי עבודה)',
+  },
 ]
 
 const run = (patch: Partial<VacationInput>) => {
@@ -130,38 +139,40 @@ export default function VacationDaysPage() {
         2017.
       </p>
       {tables.map((table) => (
-        <div
-          key={table.week}
-          className={styles.tableWrap}
-          role="region"
-          aria-label={table.caption}
-          tabIndex={0}
-        >
-          <table className={styles.table}>
-            <caption>{table.caption}</caption>
-            <thead>
-              <tr>
-                <th scope="col">שנת ותק</th>
-                <th scope="col">לפי החוק</th>
-                <th scope="col">לפי צו ההרחבה</th>
-                <th scope="col">מגיע לכם</th>
-              </tr>
-            </thead>
-            <tbody>
-              {seniorityTable(table.week).map((row) => (
-                <tr key={row.year}>
-                  <th scope="row">{row.label}</th>
-                  <td>
-                    {row.law}
-                    <span className={styles.sub}>{row.lawGross} ברוטו</span>
-                  </td>
-                  <td>{row.order}</td>
-                  <td className={styles.best}>{row.best}</td>
+        <Fragment key={table.week}>
+          <h3>{table.heading}</h3>
+          <div
+            className={styles.tableWrap}
+            role="region"
+            aria-label={table.caption}
+            tabIndex={0}
+          >
+            <table className={styles.table}>
+              <caption>{table.caption}</caption>
+              <thead>
+                <tr>
+                  <th scope="col">שנת ותק</th>
+                  <th scope="col">לפי החוק</th>
+                  <th scope="col">לפי צו ההרחבה</th>
+                  <th scope="col">מגיע לכם</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {seniorityTable(table.week).map((row) => (
+                  <tr key={row.year}>
+                    <th scope="row">{row.label}</th>
+                    <td>
+                      {row.law}
+                      <span className={styles.sub}>{row.lawGross} ברוטו</span>
+                    </td>
+                    <td>{row.order}</td>
+                    <td className={styles.best}>{row.best}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Fragment>
       ))}
       <p>
         בשנים 1 עד 5 החוק נותן יותר. מהשנה השישית, ובמקומות שהצו חל עליהם, הצו נותן יותר: 17 ימים בשבוע של 5 ימים

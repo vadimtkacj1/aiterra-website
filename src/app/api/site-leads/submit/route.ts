@@ -46,6 +46,7 @@ async function notifyByEmail(lead: SiteLead): Promise<void> {
     ['שירות', lead.treatment],
     ['הודעה', lead.message],
     ['מקור', lead.source],
+    ['מקור הגעה', lead.attribution ?? null],
     ['התקבל', lead.createdAt],
   ]
   const text = rows.filter(([, v]) => v).map(([k, v]) => `${k}: ${v}`).join('\n')
@@ -74,7 +75,7 @@ export async function OPTIONS() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { publicToken, name, phone, email, message, treatment, source } = body
+    const { publicToken, name, phone, email, message, treatment, source, attribution } = body
 
     if (!publicToken || !name?.trim()) {
       return NextResponse.json(
@@ -92,6 +93,7 @@ export async function POST(req: NextRequest) {
       message: message?.trim() || null,
       treatment: treatment?.trim() || null,
       source: source || null,
+      attribution: typeof attribution === 'string' ? attribution.trim().slice(0, 600) || null : null,
       createdAt: new Date().toISOString(),
     }
 

@@ -11,6 +11,7 @@ import { GA_MEASUREMENT_IDS } from '@/lib/ga'
 import WhatsAppButton from '@/components/layout/WhatsAppButton'
 import A11yWidgetTweaks from '@/components/layout/A11yWidgetTweaks'
 import DeferredThirdParty from '@/components/layout/DeferredThirdParty'
+import LandingSource from '@/components/layout/LandingSource'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import '../../styles/globals.css'
 
@@ -70,6 +71,11 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
 <script>(function(){
   var el = document.getElementById('page-loader');
   if (!el) return;
+  var p = location.pathname;
+  if (p.indexOf('/tools') === 0 || p.indexOf('/blog') === 0 || p.indexOf('/en/tools') === 0 || p.indexOf('/en/blog') === 0) {
+    el.style.display = 'none';
+    return;
+  }
   var hidden = false;
   function hide() {
     if (hidden) return;
@@ -126,6 +132,7 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
         <WhatsAppButton locale="en" />
         <A11yWidgetTweaks locale="en" />
         <DeferredThirdParty />
+        <LandingSource />
       </body>
     </html>
   )
