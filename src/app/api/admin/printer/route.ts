@@ -1,10 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { ADMIN_COOKIE, isAdminSession } from '@/lib/admin-session'
 
-function isAuthed(req: NextRequest): boolean {
-  const session = req.cookies.get('admin_session')?.value
-  const expected = Buffer.from(process.env.ADMIN_PASSWORD ?? 'admin123').toString('base64')
-  return Boolean(session) && session === expected
-}
+const isAuthed = (req: NextRequest) => isAdminSession(req.cookies.get(ADMIN_COOKIE)?.value)
 
 export const dynamic = 'force-dynamic'
 
@@ -28,7 +25,7 @@ function upstreamUrl(req: NextRequest, base: string): string | null {
 }
 
 export async function GET(req: NextRequest) {
-  if (!isAuthed(req)) {
+  if (!(await isAuthed(req))) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
   }
 

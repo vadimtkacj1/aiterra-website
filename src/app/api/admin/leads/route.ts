@@ -1,19 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getAllLeads, leadsToCsv } from '@/lib/leads-server'
+import { ADMIN_COOKIE, isAdminSession } from '@/lib/admin-session'
 
-// Leads hold customer phone numbers and emails, and middleware only guards
-// /admin/* pages — never /api/*. So this route checks the session itself.
-function isAuthed(req: NextRequest): boolean {
-  const session = req.cookies.get('admin_session')?.value
-  const expected = Buffer.from(process.env.ADMIN_PASSWORD ?? 'admin123').toString('base64')
-  return Boolean(session) && session === expected
-}
+const isAuthed = (req: NextRequest) => isAdminSession(req.cookies.get(ADMIN_COOKIE)?.value)
 
 // Leads land on disk at runtime — never serve a build-time snapshot.
 export const dynamic = 'force-dynamic'
 
 export async function GET(req: NextRequest) {
-  if (!isAuthed(req)) {
+  if (!(await isAuthed(req))) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
   }
 

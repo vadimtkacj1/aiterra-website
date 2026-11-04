@@ -1,16 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { revalidatePath } from 'next/cache'
 import { reorderPortfolioProjects } from '@/lib/portfolio-server'
+import { ADMIN_COOKIE, isAdminSession } from '@/lib/admin-session'
 
-// middleware only guards /admin/* pages — never /api/* — so check the session here.
-function isAuthed(req: NextRequest): boolean {
-  const session = req.cookies.get('admin_session')?.value
-  const expected = Buffer.from(process.env.ADMIN_PASSWORD ?? 'admin123').toString('base64')
-  return Boolean(session) && session === expected
-}
+const isAuthed = (req: NextRequest) => isAdminSession(req.cookies.get(ADMIN_COOKIE)?.value)
 
 export async function POST(req: NextRequest) {
-  if (!isAuthed(req)) {
+  if (!(await isAuthed(req))) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
   }
 

@@ -7,12 +7,9 @@ import {
   resetV2Section,
   saveV2Section,
 } from '@/lib/v2-content-server'
+import { ADMIN_COOKIE, isAdminSession } from '@/lib/admin-session'
 
-function isAuthed(req: NextRequest): boolean {
-  const session = req.cookies.get('admin_session')?.value
-  const expected = Buffer.from(process.env.ADMIN_PASSWORD ?? 'admin123').toString('base64')
-  return Boolean(session) && session === expected
-}
+const isAuthed = (req: NextRequest) => isAdminSession(req.cookies.get(ADMIN_COOKIE)?.value)
 
 function isContentKey(value: unknown): value is V2ContentKey {
   return typeof value === 'string' && Object.hasOwn(v2ContentDefaults, value)
@@ -23,7 +20,7 @@ function refresh() {
 }
 
 export async function GET(req: NextRequest) {
-  if (!isAuthed(req)) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+  if (!(await isAuthed(req))) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
   try {
     const file = readV2ContentFile()
     return NextResponse.json({
@@ -38,7 +35,7 @@ export async function GET(req: NextRequest) {
 }
 
 export async function PUT(req: NextRequest) {
-  if (!isAuthed(req)) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+  if (!(await isAuthed(req))) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
   try {
     const body = (await req.json()) as { key?: unknown; value?: unknown }
     if (!isContentKey(body.key)) {
@@ -54,7 +51,7 @@ export async function PUT(req: NextRequest) {
 }
 
 export async function DELETE(req: NextRequest) {
-  if (!isAuthed(req)) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+  if (!(await isAuthed(req))) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
   const key = new URL(req.url).searchParams.get('key')
   const file = key ? (isContentKey(key) ? resetV2Section(key) : null) : resetV2Content()
   if (!file) return NextResponse.json({ error: 'unknown section' }, { status: 400 })
