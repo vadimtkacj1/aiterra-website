@@ -22,7 +22,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/work-days-calculator'
 const TITLE = 'מחשבון ימי עבודה'
-const META_TITLE = 'מחשבון ימי עבודה 2026: בין תאריכים, עם חגים'
+const META_TITLE = 'כמה ימי עבודה יש בשנה ובחודש? מחשבון ימי עבודה 2026'
 const DESCRIPTION =
   'מחשבון ימי עבודה בין תאריכים לפי החגים בישראל, מועד יעד בימי עסקים ומועד תשלום בשוטף פלוס. וגם טבלה: כמה ימי עבודה יש בכל חודש ב-2026.'
 const YEAR = 2026

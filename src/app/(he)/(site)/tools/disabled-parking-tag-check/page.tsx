@@ -5,7 +5,7 @@ import { TAG_DATASET_URL, TAG_RECORDS_APPROX } from '@/lib/disabled-parking-tag'
 
 const PATH = '/tools/disabled-parking-tag-check'
 const TITLE = 'בדיקת תו נכה לפי מספר רכב'
-const META_TITLE = 'בדיקת תו נכה לפי מספר רכב: יש לרכב תג חניה לנכה?'
+const META_TITLE = 'בדיקת תו נכה לפי מספר רכב, ממאגר משרד התחבורה'
 const DESCRIPTION = `מקלידים מספר רכב ובודקים אם הוא רשום במאגר תגי החניה לנכה של משרד התחבורה, עם תאריך הפקת התג ופרטי הרכב. כ-${TAG_RECORDS_APPROX} רכבים במאגר, בחינם ובלי הרשמה.`
 
 const faq: ToolFaqEntry[] = [

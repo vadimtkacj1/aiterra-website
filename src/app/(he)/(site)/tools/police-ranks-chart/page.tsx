@@ -13,7 +13,7 @@ import styles from '../word-counter/page.module.css'
 
 const PATH = '/tools/police-ranks-chart'
 const TITLE = 'דרגות במשטרת ישראל לפי הסדר'
-const META_TITLE = 'דרגות במשטרה לפי הסדר: טבלה עם השוואה לצה״ל'
+const META_TITLE = 'דרגות משטרה לפי הסדר: טבלה עם השוואה לצה״ל'
 const DESCRIPTION =
   'דרגות במשטרת ישראל לפי הסדר, משוטר עד רב־ניצב: ראשי תיבות, שם באנגלית, תפקיד אופייני והדרגה המקבילה בצה״ל, עם חיפוש. וגם דרגות שב״ס וכבאות והצלה. אתר לא רשמי.'
 

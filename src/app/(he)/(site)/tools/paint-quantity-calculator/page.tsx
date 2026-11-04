@@ -6,7 +6,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/paint-quantity-calculator'
 const TITLE = 'כמה צבע צריך'
-const META_TITLE = 'כמה צבע צריך: מחשבון ליטרים לחדר, קירות ותקרה'
+const META_TITLE = 'מחשבון צביעת דירה: כמה צבע צריך לחדר, קירות ותקרה'
 const DESCRIPTION =
   'כמה צבע צריך לחדר? מזינים אורך, רוחב וגובה, דלתות וחלונות ושכבות, ומקבלים ליטרים ואריזות. כושר הכיסוי לפי מפרט תמבור, וניתן לעריכה.'
 

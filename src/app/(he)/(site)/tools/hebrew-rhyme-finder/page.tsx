@@ -6,7 +6,7 @@ import { RHYME_PAGE_WORDS, rhymePagePath } from '@/lib/rhyme-pages'
 
 const PATH = '/tools/hebrew-rhyme-finder'
 const TITLE = 'חרוזים למילה'
-const META_TITLE = 'חרוזים למילה: מילון חרוזים בעברית אונליין'
+const META_TITLE = 'חרוזים למילים: חרוז למילה, מילון חרוזים בעברית'
 const DESCRIPTION =
   'מילון חרוזים בעברית: כותבים מילה ומקבלים חרוזים מלאים, טובים וקרובים, עם סינון לפי אורך המילה והעתקה בלחיצה. לשירים, לברכות ולשורות מחורזות. חינם.'
 

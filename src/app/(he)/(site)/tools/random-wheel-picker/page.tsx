@@ -5,7 +5,7 @@ import styles from '../word-counter/page.module.css'
 
 const PATH = '/tools/random-wheel-picker'
 const TITLE = 'גלגל מזל להגרלת שמות'
-const META_TITLE = 'גלגל מזל להגרלת שמות אונליין, בחירה אקראית'
+const META_TITLE = 'גלגל הגרלה ומזל: הגרלת שמות אונליין, בחירה אקראית'
 const DESCRIPTION =
   'גלגל מזל להגרלת שמות: מדביקים רשימה, מסובבים ומקבלים זוכה אקראי. אפשר להסיר את הזוכה, לשתף את הרשימה בקישור ולהפעיל מהמקלדת. בחינם ובלי הרשמה.'
 
