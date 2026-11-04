@@ -21,10 +21,7 @@
 }
 
 .extraSection {
-  padding: 20px 22px;
-  border: 1px solid var(--v2-hairline-ink);
-  border-radius: 20px;
-  background: #ffffff;
+  box-shadow: none;
 }
 
 .extraTitle {

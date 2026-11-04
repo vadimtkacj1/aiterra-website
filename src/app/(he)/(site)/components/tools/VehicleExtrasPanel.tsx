@@ -47,7 +47,7 @@ const changesOf = (history: VehicleHistory) =>
 function HistorySection({ history }: { history: VehicleHistory }) {
   const changes = changesOf(history)
   return (
-    <section className={extra.extraSection} aria-labelledby="vehicle-history-title">
+    <section className={`${styles.card} ${extra.extraSection}`} aria-labelledby="vehicle-history-title">
       <h3 id="vehicle-history-title" className={extra.extraTitle}>
         היסטוריה ומקוריות
       </h3>
@@ -105,7 +105,7 @@ function RecallItem({ recall }: { recall: OpenRecall }) {
 
 function RecallsSection({ recalls }: { recalls: OpenRecall[] }) {
   return (
-    <section className={extra.extraSection} aria-labelledby="vehicle-recalls-title">
+    <section className={`${styles.card} ${extra.extraSection}`} aria-labelledby="vehicle-recalls-title">
       <h3 id="vehicle-recalls-title" className={extra.extraTitle}>
         ריקולים פתוחים
       </h3>
@@ -137,7 +137,7 @@ function ModelSection({ extras, year }: { extras: VehicleExtras; year: number | 
   if (!model) return null
   const fee = licenceFeeOf(model, year)
   return (
-    <section className={extra.extraSection} aria-labelledby="vehicle-model-title">
+    <section className={`${styles.card} ${extra.extraSection}`} aria-labelledby="vehicle-model-title">
       <h3 id="vehicle-model-title" className={extra.extraTitle}>
         נתוני הדגם ואגרת רישוי
       </h3>
