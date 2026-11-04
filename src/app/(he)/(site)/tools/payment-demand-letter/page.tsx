@@ -6,7 +6,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/payment-demand-letter'
 const TITLE = 'מכתב התראה לפני תביעה ללקוח שלא משלם'
-const META_TITLE = 'מכתב התראה לפני תביעה ללקוח שלא משלם: נוסח לדוגמה'
+const META_TITLE = 'מכתב התראה לפני תביעה לדוגמה: תשלום חוב, PDF להורדה'
 const DESCRIPTION =
   'מכתב התראה ודרישת תשלום ללקוח שלא משלם, בחינם: תזכורת, דרישה רשמית או התראה לפני תביעה, עם טבלת חשבוניות, מועד תשלום והודעה לוואטסאפ.'
 const SAMPLE_DATE = '2026-10-23'

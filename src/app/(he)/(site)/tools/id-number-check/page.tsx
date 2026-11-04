@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import IdNumberChecker, { CodeSnippet } from '../../components/tools/IdNumberChecker'
+import IdNumberGenerator from '../../components/tools/IdNumberGenerator'
 import {
   EXCEL_CHECK_DIGIT_FORMULA,
   EXCEL_PAD_FORMULA,
@@ -16,9 +17,9 @@ import styles from './page.module.css'
 
 const PATH = '/tools/id-number-check'
 const TITLE = 'בדיקת תעודת זהות: ספרת ביקורת ותקינות'
-const META_TITLE = 'בדיקת תעודת זהות תקינה וחישוב ספרת ביקורת'
+const META_TITLE = 'בדיקת תעודת זהות תקינה, ספרת ביקורת ומחולל ת.ז לבדיקות'
 const DESCRIPTION =
-  'בודקים אם מספר תעודת זהות תקין לפי ספרת הביקורת ורואים את החישוב. גם חישוב ספרת ביקורת, בדיקת ח.פ. ועוסק מורשה, ונוסחה מוכנה לאקסל.'
+  'בודקים אם מספר תעודת זהות תקין לפי ספרת הביקורת ורואים את החישוב. גם חישוב ספרת ביקורת, בדיקת ח.פ. ועוסק מורשה, מחולל מספרי ת.ז תקינים לבדיקת טפסים ונוסחה לאקסל.'
 
 const EXAMPLE_BASE = '12345678'
 const exampleSteps = steps(EXAMPLE_BASE)
@@ -161,6 +162,16 @@ export default function IdNumberCheckPage() {
         href: '/services/development',
       }}
     >
+      <h2 id="generator" className={styles.anchor}>
+        מחולל תעודת זהות: מספרים תקינים לבדיקת טפסים
+      </h2>
+      <p>
+        מפתחים ובודקי תוכנה צריכים מספרי ת.ז שעוברים את בדיקת ספרת הביקורת כדי לבדוק טופס, CRM או מערכת. המחולל
+        יוצר מספרים אקראיים עם ספרת ביקורת נכונה. הם תקינים רק מבחינת החישוב: הם לא שייכים לאדם מסוים, ואסור להשתמש
+        בהם במקום מספר זהות אמיתי מול רשות, בנק או כל גוף אחר.
+      </p>
+      <IdNumberGenerator />
+
       <h2 id="how" className={styles.anchor}>
         איך מחשבים ספרת ביקורת בתעודת זהות
       </h2>

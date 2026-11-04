@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import DaysBetweenCalculator from '../../components/tools/DaysBetweenCalculator'
+import DateCounters from '../../components/tools/DateCounters'
 import {
   HEBREW_DATE_PATH,
   WORK_DAYS_PATH,
@@ -110,6 +111,11 @@ export default function DaysBetweenDatesPage() {
         href: '/services/development',
       }}
     >
+      <h2 id="counters" className={styles.anchor}>
+        מונים: כמה זמן עבר ועוד כמה ימים נשארו
+      </h2>
+      <DateCounters referenceDay={REFERENCE} />
+
       <h2 id="how" className={styles.anchor}>
         איך מחשבים כמה ימים יש בין שני תאריכים
       </h2>
