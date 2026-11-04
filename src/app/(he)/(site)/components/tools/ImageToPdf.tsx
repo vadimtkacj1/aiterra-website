@@ -33,6 +33,9 @@ async function toJpeg(file: File): Promise<JpegPage> {
 
 let counter = 0
 
+const sizeText = (bytes: number) =>
+  bytes < 1024 * 1024 ? `${Math.max(1, Math.round(bytes / 1024))} KB` : `${(bytes / 1024 / 1024).toFixed(1)} MB`
+
 export default function ImageToPdf() {
   const baseId = useId()
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -109,7 +112,7 @@ export default function ImageToPdf() {
       const pdf = buildPdf(pages, mode)
       const url = URL.createObjectURL(new Blob([pdf], { type: 'application/pdf' }))
       setPdfUrl(url)
-      setStatus(`הקובץ מוכן: ${pages.length} עמודים, ${(pdf.length / 1024 / 1024).toFixed(1)} MB.`)
+      setStatus(`הקובץ מוכן: ${pages.length} עמודים, ${sizeText(pdf.length)}.`)
       window.gtag?.('event', 'image_pdf_create', { pages: pages.length, mode })
     } catch {
       setStatus('לא הצלחנו לקרוא אחת התמונות. תמונות HEIC מאייפון צריך קודם לשמור כ-JPEG, או לפתוח את הכלי בספארי.')
