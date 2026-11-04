@@ -1282,7 +1282,7 @@ export const tools: ToolEntry[] = [
     description: 'מקלידים מספר רישוי ורואים יצרן, דגם, שנה, תוקף טסט, קילומטראז׳, ליסינג או השכרה, ריקולים פתוחים ואגרת רישוי, ממאגרי משרד התחבורה, בלי שם בעלים.',
     category: 'home',
     icon: 'search',
-    reviewed: '2026-10-24',
+    reviewed: '2026-11-04',
   },
   {
     path: '/tools/disabled-parking-tag-check',
@@ -1651,6 +1651,7 @@ const REVIEWED_WITHOUT_TOOL_ENTRY: Record<string, string> = {
   '/tools/app-development-cost-calculator': '2026-10-25',
   '/tools/convert/': '2026-10-28',
   '/tools/currency/': '2026-10-28',
+  '/tools/holidays/': '2026-11-04',
   '/tools/landing-page-cost-calculator': '2026-10-25',
   '/tools/time-in/': '2026-10-28',
   '/tools/website-cost-calculator': '2026-10-25',

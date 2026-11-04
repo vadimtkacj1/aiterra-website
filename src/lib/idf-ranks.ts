@@ -47,7 +47,7 @@ export const idfRanks: IdfRank[] = [
   { id: 'aluf-mishne', name: 'אלוף־משנה', abbreviation: 'אל״ם', group: 'officer', english: 'Colonel', nato: 'OF-5', insignia: 'שלושה עלי גפן', worn: SHOULDER },
   { id: 'tat-aluf', name: 'תת־אלוף', abbreviation: 'תא״ל', group: 'officer', english: 'Brigadier General', nato: 'OF-6', insignia: 'חרב וענף זית מוצלבים', worn: SHOULDER },
   { id: 'aluf', name: 'אלוף', abbreviation: 'אלוף', group: 'officer', english: 'Major General', nato: 'OF-7', insignia: 'חרב וענף זית מוצלבים ועלה גפן', worn: SHOULDER },
-  { id: 'rav-aluf', name: 'רב־אלוף', abbreviation: 'רב״ל', group: 'officer', english: 'Lieutenant General', nato: 'OF-8', insignia: 'חרב וענף זית מוצלבים ושני עלי גפן', worn: SHOULDER },
+  { id: 'rav-aluf', name: 'רב־אלוף', abbreviation: 'רא״ל', group: 'officer', english: 'Lieutenant General', nato: 'OF-8', insignia: 'חרב וענף זית מוצלבים ושני עלי גפן', worn: SHOULDER },
 ]
 
 export const rankLevel = (id: string) => idfRanks.findIndex((rank) => rank.id === id)

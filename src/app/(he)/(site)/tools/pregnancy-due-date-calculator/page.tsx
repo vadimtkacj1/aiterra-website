@@ -14,7 +14,7 @@ const PATH = '/tools/pregnancy-due-date-calculator'
 const TITLE = 'מחשבון הריון: תאריך לידה משוער ושבוע הריון'
 const META_TITLE = 'מחשבון הריון: שבוע הריון ותאריך לידה משוער'
 const DESCRIPTION =
-  'מחשבון הריון ותאריך לידה משוער: מכניסים את תאריך הווסת האחרונה או ההתעברות ומקבלים תאריך לידה, שבוע הריון נוכחי, שליש ולוח בדיקות מקובל. הערכה כללית, לא תחליף לרופא.'
+  'מחשבון הריון ותאריך לידה משוער לפי הווסת האחרונה או ההתעברות: תאריך לידה, שבוע הריון, שליש ולוח בדיקות מקובל. הערכה כללית, לא תחליף לרופא.'
 
 const MACCABI_TESTS_URL = 'https://www.maccabi4u.co.il/maccabi_circles/pregnancy-and-birth/pregnancy_birth/tests/'
 const MACCABI_NUCHAL_URL =
