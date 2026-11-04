@@ -1,6 +1,4 @@
-export const GA_MEASUREMENT_IDS = [process.env.NEXT_PUBLIC_GA_ID, 'G-P8X46Q41J9'].filter(
-  (id): id is string => Boolean(id),
-)
+export const GA_MEASUREMENT_IDS = ['G-P8X46Q41J9']
 
 export function trackLead(source: string) {
   if (typeof window === 'undefined') return
