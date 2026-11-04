@@ -13,7 +13,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/electricity-cost-calculator'
 const TITLE = 'מחשבון צריכת חשמל'
-const META_TITLE = 'מחשבון צריכת חשמל: עלות לפי מכשיר ולפי חודש'
+const META_TITLE = 'כמה עולה חשמל? תעריף חשמל ביתי ומחשבון צריכה'
 const DESCRIPTION =
   'מחשבון צריכת חשמל לפי מכשיר: הספק בוואט, שעות ביום ומחיר קוט״ש לפי תעריף משק הבית העדכני. מחשב עלות חודשית ודו־חודשית ומראה מה הכי יקר.'
 

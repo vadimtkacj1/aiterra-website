@@ -6,7 +6,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/bank-branch-lookup'
 const TITLE = 'חיפוש סניף בנק'
-const META_TITLE = 'חיפוש סניף בנק: כתובת, טלפון וקוד בנק ומספר סניף'
+const META_TITLE = 'קוד סניפי בנקים: קוד בנק, מספר סניף, כתובת וטלפון'
 const DESCRIPTION =
   'מחפשים סניף בנק לפי בנק ומספר סניף או לפי עיר, שם ורחוב, ורואים כתובת, טלפון, קוד בנק, נגישות ויום סגור, ממאגר סניפי הבנקים של בנק ישראל ב-data.gov.il.'
 
