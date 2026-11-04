@@ -52,6 +52,10 @@ export const idfRanks: IdfRank[] = [
 
 export const rankLevel = (id: string) => idfRanks.findIndex((rank) => rank.id === id)
 
+export const idfRankPath = (id: string) => `/tools/idf-ranks/${id}`
+
+export const idfRankById = (id: string) => idfRanks.find((rank) => rank.id === id)
+
 const normalize = (value: string) =>
   value
     .replace(/[֑-ׇ]/g, '')

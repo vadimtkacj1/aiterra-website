@@ -1,6 +1,7 @@
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import IdfRanksChart from '../../components/tools/IdfRanksChart'
-import { IDF_RANKS_REVIEWED, IDF_RANKS_REVIEWED_LABEL } from '@/lib/idf-ranks'
+import Link from 'next/link'
+import { IDF_RANKS_REVIEWED, IDF_RANKS_REVIEWED_LABEL, idfRankPath, idfRanks } from '@/lib/idf-ranks'
 import styles from '../word-counter/page.module.css'
 
 const PATH = '/tools/idf-ranks-chart'
@@ -95,6 +96,18 @@ export default function IdfRanksChartPage() {
           <strong>קצינים:</strong> סגן־משנה היא דרגת הקצונה הבסיסית, וקצין זוטר הוא עד רב־סרן. מסגן־אלוף ומעלה הקצין
           נחשב בכיר.
         </li>
+      </ul>
+
+      <h2>דף לכל דרגה</h2>
+      <p>לכל דרגה יש דף עם ראשי התיבות, סימן הדרגה, השם באנגלית, הדרגה שמעל ושמתחת והמקבילה במשטרה:</p>
+      <ul>
+        {idfRanks.map((rank) => (
+          <li key={rank.id}>
+            <Link href={idfRankPath(rank.id)}>
+              דרגת {rank.name} ({rank.abbreviation})
+            </Link>
+          </li>
+        ))}
       </ul>
 
       <h2>איך קוראים סימני דרגה</h2>

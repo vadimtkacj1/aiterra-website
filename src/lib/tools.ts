@@ -1,4 +1,5 @@
 import { nutrientPath, nutrients } from './nutrient-list'
+import { idfRankPath, idfRanks } from './idf-ranks'
 
 export type ToolIconName =
   | 'accessibility'
@@ -1547,6 +1548,14 @@ export const tools: ToolEntry[] = [
     icon: 'calculator',
     reviewed: '2026-10-31',
   },
+  ...idfRanks.map(({ id, name, abbreviation, english }) => ({
+    path: idfRankPath(id),
+    title: `דרגת ${name} (${abbreviation}) בצה״ל`,
+    description: `${name} בצה״ל: ראשי תיבות, סימן הדרגה, השם באנגלית (${english}), הדרגה שמעל ושמתחת והמקבילה במשטרה.`,
+    category: 'home' as const,
+    icon: 'search' as const,
+    reviewed: '2026-11-04',
+  })),
   ...nutrients.map(({ slug, name }) => ({
     path: nutrientPath(slug),
     title: `טבלת ${name} במזון`,
