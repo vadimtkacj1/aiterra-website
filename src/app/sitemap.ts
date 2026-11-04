@@ -8,6 +8,7 @@ import { TOOLS_HUB_PATH, toolCategories, toolReviewed, tools, topicPath } from '
 import { timeInPages, timeInPath } from '@/lib/time-in-cities'
 import { pairPages, pairPath } from '@/lib/unit-converter'
 import { currencyPages, currencyPath } from '@/lib/currency-pages'
+import { namePagePath, namePages } from '@/lib/name-pages'
 import { EN_TOOLS_HUB_PATH, EN_TOOL_SLUGS, enToolPath } from '@/lib/tools-en'
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
 import { getAllPostsEn } from '@/lib/content-en-blog'
@@ -62,6 +63,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const timeInEntries: MetadataRoute.Sitemap = timeInPages.map((page) => ({
     url: `${SITE_URL}${timeInPath(page.slug)}`,
     lastModified: new Date('2026-10-28'),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
+  const nameEntries: MetadataRoute.Sitemap = namePages.map((page) => ({
+    url: `${SITE_URL}${namePagePath(page.slug)}`,
+    lastModified: new Date('2026-11-04'),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))
@@ -178,6 +186,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...commercialEntries,
     ...toolEntries,
     ...timeInEntries,
+    ...nameEntries,
     ...topicEntries,
     ...convertEntries,
     ...currencyEntries,

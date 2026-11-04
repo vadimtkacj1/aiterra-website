@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import NameTransliterator from '../../components/tools/NameTransliterator'
+import { namePagePath, namePages } from '@/lib/name-pages'
 import {
   NAME_TRANSLITERATION_CHECKED,
   NAME_TRANSLITERATION_PATH,
@@ -190,6 +191,16 @@ export default function HebrewNameToEnglishPage() {
         Peretz או Perez, ומזרחי Mizrahi או Mizrachi.
       </p>
       <NameList entries={popularLast} />
+
+      <h2>דף לכל שם: איך כותבים באנגלית</h2>
+      <p>לשמות שמחפשים הכי הרבה יש דף משלהם, עם כל האיותים והנוסח בדרכון:</p>
+      <ul>
+        {namePages.map((page) => (
+          <li key={page.slug}>
+            <Link href={namePagePath(page.slug)}>{page.entry.hebrew} באנגלית</Link>
+          </li>
+        ))}
+      </ul>
 
       <h2>איך כותבים באנגלית שם שלא ברשימה</h2>
       <p>
