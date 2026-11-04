@@ -286,6 +286,14 @@ export const tools: ToolEntry[] = [
     icon: 'mail',
   },
   {
+    path: '/tools/image-to-pdf',
+    title: 'המרת תמונה ל-PDF',
+    description: 'ממירים תמונות JPG, PNG או WebP לקובץ PDF אחד: כמה תמונות יחד, סידור העמודים, A4 או בגודל התמונה. בלי העלאה לשרת.',
+    category: 'marketing',
+    icon: 'image',
+    reviewed: '2026-11-04',
+  },
+  {
     path: '/tools/image-compressor',
     title: 'הקטנת תמונות והמרה ל-WebP',
     description: 'דוחסים תמונות, ממירים ל-WebP, JPEG או PNG ומגבילים רוחב, עם השוואה של לפני ואחרי. התמונות לא עולות לשרת.',

@@ -221,6 +221,8 @@ All tools are free, in Hebrew and need no sign-up. Most run entirely in the visi
 - [טבלת מידות בגדים / Clothing size chart and converter](https://www.aiterra.co.il/tools/clothing-size-chart): converts women's, men's and kids' clothing sizes between EU, IT, FR, UK, US and XS-XXL, finds a size from body measurements in cm, with bra sizes, jeans waist table and measuring steps; standard conversions, not brand charts.
 - [שמות ערים בישראל באנגלית / Israeli city names in English](https://www.aiterra.co.il/tools/hebrew-words-in-english): searchable table of 131 Israeli cities and settlements with the official Latin spelling from the Population and Immigration Authority register (data.gov.il) next to the common English spelling.
 
+- [המרת תמונה ל-PDF / Image to PDF](https://www.aiterra.co.il/tools/image-to-pdf): converts JPG, PNG or WebP images into one PDF in the browser, with page order, A4 with or without margins or image-sized pages; files are not uploaded.
+
 ### Tool collections and series / אוספים וסדרות
 - [מחשבוני שכר וזכויות עובדים / Salary and employee-rights calculators](https://www.aiterra.co.il/tools/topic/work)
 - [מחשבונים פיננסיים לעסקים ולעצמאים / Financial calculators for businesses and the self-employed](https://www.aiterra.co.il/tools/topic/money)
