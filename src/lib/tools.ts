@@ -861,6 +861,14 @@ export const tools: ToolEntry[] = [
     icon: 'landmark',
   },
   {
+    path: '/tools/holidays',
+    title: 'מתי החגים? כל חגי ישראל',
+    description: 'מתי כל חג בישראל: תאריך, יום בשבוע, תאריך עברי, כמה ימים נשארו ואם זה יום שבתון, עם דף לכל חג ותאריכים לשנים הבאות.',
+    category: 'home',
+    reviewed: '2026-11-04',
+    icon: 'calendar',
+  },
+  {
     path: '/tools/hebrew-calendar-2027',
     title: 'לוח שנה עברי-לועזי 2026–2027',
     description: 'לוח שנה עברי-לועזי לתשפ״ז, 2026 ו-2027 עם חגים, צומות וראשי חודשים, הדפסה ב-A4 וייצוא החגים ליומן.',

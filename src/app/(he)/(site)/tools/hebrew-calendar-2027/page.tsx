@@ -3,7 +3,13 @@ import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/to
 import HebrewCalendar from '../../components/tools/HebrewCalendar'
 import { calendarYear, hebrewDateText, holidayTable, kindLabels, shortDate, weekdayText } from '@/lib/hebrew-calendar'
 import { formatDate } from '@/lib/work-days'
+import { HOLIDAYS_HUB_PATH, holidayPath, holidays } from '@/lib/holiday-dates'
 import styles from './page.module.css'
+
+const holidayLinkOf = (eventName: string) => {
+  const holiday = holidays.find((item) => item.first === eventName)
+  return holiday ? holidayPath(holiday.slug) : null
+}
 
 const PATH = '/tools/hebrew-calendar-2027'
 const TITLE = 'לוח שנה עברי-לועזי 2026–2027 להדפסה'
@@ -122,7 +128,8 @@ export default function HebrewCalendarPage() {
       </h2>
       <p>
         הטבלה מציגה את החגים, הצומות וימי הזיכרון של תשפ״ז לפי התאריך הלועזי. חג מתחיל בערב שלפני התאריך שבטבלה, בשקיעה.
-        חול המועד וראשי חודשים מסומנים בלוח שלמעלה.
+        חול המועד וראשי חודשים מסומנים בלוח שלמעלה. לכל חג יש דף עם התאריכים בשנים הבאות, וכל החגים הקרובים מרוכזים ב
+        <Link href={HOLIDAYS_HUB_PATH}>טבלת מתי החגים</Link>.
       </p>
       <div className={styles.tableWrap}>
         <table className={styles.table}>
@@ -138,7 +145,13 @@ export default function HebrewCalendarPage() {
           <tbody>
             {data.table.map((event) => (
               <tr key={`${event.day}-${event.name}`}>
-                <th scope="row">{event.name}</th>
+                <th scope="row">
+                  {holidayLinkOf(event.name) ? (
+                    <Link href={holidayLinkOf(event.name) ?? ''}>{event.name}</Link>
+                  ) : (
+                    event.name
+                  )}
+                </th>
                 <td>
                   <span className={styles.date}>{shortDate(event.day)}</span>
                   <span className={styles.weekday}>{weekdayText(event.day)}</span>
