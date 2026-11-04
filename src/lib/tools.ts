@@ -1182,7 +1182,7 @@ export const tools: ToolEntry[] = [
   },
   {
     path: '/tools/pregnancy-due-date-calculator',
-    title: 'מחשבון תאריך לידה משוער ושבוע הריון',
+    title: 'מחשבון הריון: תאריך לידה משוער ושבוע הריון',
     description: 'מכניסים את תאריך הווסת האחרונה או ההתעברות ומקבלים תאריך לידה משוער, שבוע הריון נוכחי, שליש ולוח בדיקות מקובל. הערכה כללית, לא תחליף לרופא.',
     category: 'health',
     icon: 'calendar',
