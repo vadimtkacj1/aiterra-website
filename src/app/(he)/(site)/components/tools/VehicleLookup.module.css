@@ -12,3 +12,72 @@
   font-variant-numeric: tabular-nums;
   unicode-bidi: isolate;
 }
+
+.extras {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.extraSection {
+  padding: 20px 22px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.extraTitle {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.recallWarning {
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  border-inline-start: 4px solid #b86200;
+  border-radius: 8px;
+  background: #fff6e8;
+  color: #6b3a00;
+  font-weight: 600;
+}
+
+.recalls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.recall {
+  padding: 12px 14px;
+  border: 1px solid var(--v2-hairline-ink);
+  border-radius: 12px;
+}
+
+.recall p {
+  margin: 0;
+}
+
+.recall p + p {
+  margin-top: 6px;
+}
+
+.recallType {
+  font-weight: 700;
+}
+
+.recallMeta {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.recallMeta a,
+.extraSection a {
+  color: var(--v2-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

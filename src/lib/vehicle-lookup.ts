@@ -46,6 +46,9 @@ export type Vehicle = {
   pollutionGroup: number | null
   frontTire: string
   rearTire: string
+  manufacturerCode: number | null
+  modelNumber: number | null
+  modelKind: string
 }
 
 export type TestState = {
@@ -238,6 +241,9 @@ export function toVehicle(record: CompanyRecord, source: VehicleSource): Vehicle
     pollutionGroup: pollutionGroupOf(record.kvutzat_zihum),
     frontTire: cleanText(record.zmig_kidmi || record.mida_zmig_kidmi),
     rearTire: cleanText(record.zmig_ahori || record.mida_zmig_ahori),
+    manufacturerCode: numberOf(record.tozeret_cd),
+    modelNumber: numberOf(record.degem_cd),
+    modelKind: cleanText(record.sug_degem),
   }
 }
 

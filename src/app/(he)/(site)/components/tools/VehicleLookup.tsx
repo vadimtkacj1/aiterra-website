@@ -20,6 +20,8 @@ import {
   type Vehicle,
   type VehicleFailure,
 } from '@/lib/vehicle-lookup'
+import { extrasToText, fetchVehicleExtras, type VehicleExtras } from '@/lib/vehicle-extras'
+import VehicleExtrasPanel from './VehicleExtrasPanel'
 import ui from './toolUi.module.css'
 import styles from './CompanyLookup.module.css'
 import extra from './VehicleLookup.module.css'
@@ -143,6 +145,9 @@ export default function VehicleLookup() {
   const [copyStatus, setCopyStatus] = useState('')
   const [now, setNow] = useState<Date | null>(null)
   const controllerRef = useRef<AbortController | null>(null)
+  const extrasControllerRef = useRef<AbortController | null>(null)
+  const [extras, setExtras] = useState<VehicleExtras | null>(null)
+  const [extrasLoading, setExtrasLoading] = useState(false)
   const timersRef = useRef<number[]>([])
   const lastPlateRef = useRef('')
   const inputRef = useRef<HTMLInputElement>(null)
@@ -158,13 +163,37 @@ export default function VehicleLookup() {
   useEffect(
     () => () => {
       controllerRef.current?.abort('unmount')
+      extrasControllerRef.current?.abort('unmount')
       timersRef.current.forEach((timer) => window.clearTimeout(timer))
     },
     [],
   )
 
+  const loadExtras = (found: Vehicle) => {
+    const controller = new AbortController()
+    extrasControllerRef.current = controller
+    setExtrasLoading(true)
+    const timer = window.setTimeout(() => controller.abort(TIMEOUT_REASON), REQUEST_TIMEOUT_MS)
+    fetchVehicleExtras(found, controller.signal).then((result) => {
+      window.clearTimeout(timer)
+      if (extrasControllerRef.current !== controller) return
+      extrasControllerRef.current = null
+      setExtras(result)
+      setExtrasLoading(false)
+      window.gtag?.('event', 'vehicle_lookup_extras', {
+        history: result.history !== null,
+        open_recalls: result.recalls?.length ?? -1,
+        model: result.model !== null,
+      })
+    })
+  }
+
   const run = (plate: string) => {
     controllerRef.current?.abort('superseded')
+    extrasControllerRef.current?.abort('superseded')
+    extrasControllerRef.current = null
+    setExtras(null)
+    setExtrasLoading(false)
     clearTimers()
     const controller = new AbortController()
     controllerRef.current = controller
@@ -193,6 +222,7 @@ export default function VehicleLookup() {
       const today = new Date()
       setNow(today)
       setPhase({ kind: 'done', searched: plate, vehicle: result.vehicle, dataDate: result.dataDate })
+      if (result.vehicle) loadExtras(result.vehicle)
       setAnnouncement(
         announcementFor(result.vehicle, result.vehicle ? testStateOf(result.vehicle, today) : null),
       )
@@ -225,7 +255,9 @@ export default function VehicleLookup() {
   const copy = async () => {
     if (!vehicle || !now) return
     try {
-      await navigator.clipboard.writeText(vehicleToText(vehicle, testStateOf(vehicle, now), dataDate))
+      const lines = [vehicleToText(vehicle, testStateOf(vehicle, now), dataDate)]
+      if (extras) lines.push(...extrasToText(extras, vehicle.year))
+      await navigator.clipboard.writeText(lines.join('\n'))
       setCopyStatus('הפרטים הועתקו')
     } catch {
       setCopyStatus('ההעתקה נכשלה. סמנו את הפרטים והעתיקו ידנית.')
@@ -236,7 +268,7 @@ export default function VehicleLookup() {
   if (phase.kind === 'idle') {
     body = (
       <p className={styles.prompt}>
-        הקלידו מספר רישוי ולחצו על חיפוש. נראה את היצרן, הדגם, השנה, הצבע, סוג הדלק ותוקף הטסט של הרכב.
+        הקלידו מספר רישוי ולחצו על חיפוש. נראה את היצרן, הדגם, השנה ותוקף הטסט, וגם קילומטראז׳, ריקולים פתוחים, ליסינג או השכרה ואגרת רישוי.
       </p>
     )
   } else if (phase.kind === 'loading') {
@@ -265,6 +297,7 @@ export default function VehicleLookup() {
     body = (
       <>
         <VehicleDetails vehicle={phase.vehicle} dataDate={phase.dataDate} now={now} />
+        <VehicleExtrasPanel extras={extras} loading={extrasLoading} year={phase.vehicle.year} />
         <div className={ui.actions}>
           <button type="button" className={`${ui.primary} ${styles.grow}`} onClick={copy}>
             <Copy aria-hidden="true" />
