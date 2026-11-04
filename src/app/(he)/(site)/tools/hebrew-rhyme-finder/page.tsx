@@ -2,6 +2,7 @@ import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import RhymeFinder from '../../components/tools/RhymeFinder'
 import { dictionarySize, findRhymes } from '@/lib/hebrew-rhymes'
+import { RHYME_PAGE_WORDS, rhymePagePath } from '@/lib/rhyme-pages'
 
 const PATH = '/tools/hebrew-rhyme-finder'
 const TITLE = 'חרוזים למילה'
@@ -147,6 +148,15 @@ export default function HebrewRhymeFinderPage() {
           משלכם יש גם{' '}
           <Link href="/tools/birthday-blessing-generator">מחולל ברכות ליום הולדת</Link>.
         </li>
+      </ul>
+
+      <h2>חרוזים למילים שמחפשים הכי הרבה</h2>
+      <ul>
+        {RHYME_PAGE_WORDS.map((word) => (
+          <li key={word}>
+            <Link href={rhymePagePath(word)}>חרוז למילה {word}</Link>
+          </li>
+        ))}
       </ul>
 
       <h2>מקורות</h2>

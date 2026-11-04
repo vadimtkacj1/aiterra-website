@@ -9,6 +9,7 @@ import { timeInPages, timeInPath } from '@/lib/time-in-cities'
 import { pairPages, pairPath } from '@/lib/unit-converter'
 import { currencyPages, currencyPath } from '@/lib/currency-pages'
 import { namePagePath, namePages } from '@/lib/name-pages'
+import { RHYME_PAGE_WORDS, rhymePagePath } from '@/lib/rhyme-pages'
 import { EN_TOOLS_HUB_PATH, EN_TOOL_SLUGS, enToolPath } from '@/lib/tools-en'
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
 import { getAllPostsEn } from '@/lib/content-en-blog'
@@ -69,6 +70,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const nameEntries: MetadataRoute.Sitemap = namePages.map((page) => ({
     url: `${SITE_URL}${namePagePath(page.slug)}`,
+    lastModified: new Date('2026-11-04'),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
+  const rhymeEntries: MetadataRoute.Sitemap = RHYME_PAGE_WORDS.map((word) => ({
+    url: `${SITE_URL}${rhymePagePath(word)}`,
     lastModified: new Date('2026-11-04'),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
@@ -187,6 +195,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...toolEntries,
     ...timeInEntries,
     ...nameEntries,
+    ...rhymeEntries,
     ...topicEntries,
     ...convertEntries,
     ...currencyEntries,
