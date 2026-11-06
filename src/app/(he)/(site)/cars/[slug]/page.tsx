@@ -45,7 +45,6 @@ import {
   type CarTrim,
   type MileageBin,
 } from '@/lib/car-models'
-import CarAssembly, { type AssemblyFact, type CarBody, type ModelCredit } from '../CarAssembly'
 import layout from '../../components/tools/ToolLayout.module.css'
 import tables from '../../tools/word-counter/page.module.css'
 import styles from '../cars.module.css'
@@ -149,57 +148,32 @@ function RecallList({ page }: { page: CarModelPage }) {
   )
 }
 
-const REAL_MODELS: { make: string; family: string; from: number; to: number; file: string; credit: ModelCredit }[] = []
-
-const realModelOf = (page: CarModelPage) =>
-  REAL_MODELS.find((model) => page.makeHe.startsWith(model.make) && page.family === model.family && page.year >= model.from && page.year <= model.to) ??
-  null
-
-const BODY_SHAPES: Record<string, CarBody> = {
-  'סדאן': 'sedan',
-  "הצ'בק": 'hatchback',
-  'סטיישן': 'wagon',
-  'פנאי-שטח': 'suv',
-}
-
-function bodyOf(page: CarModelPage): CarBody {
-  const totals = new Map<CarBody, number>()
-  for (const trim of page.specs.trims) {
-    const shape = BODY_SHAPES[trim.body]
-    if (shape) totals.set(shape, (totals.get(shape) ?? 0) + trim.cars)
-  }
-  return [...totals].sort((a, b) => b[1] - a[1])[0]?.[0] ?? 'sedan'
-}
-
 const thousandsRange = (min: number, max: number) =>
   max - min >= 1000 ? `${Math.round(min / 1000)} עד ${Math.round(max / 1000)} אלף ש״ח` : `${Math.round(min / 1000)} אלף ש״ח`
 
-function assemblyFacts(page: CarModelPage): AssemblyFact[] {
+type KeyFact = { value: string; label: string }
+
+function keyFacts(page: CarModelPage): KeyFact[] {
   const { mileage, specs } = page
-  const facts: AssemblyFact[] = [
-    { part: 'body', value: formatNumber(page.activeCars), label: 'רכבים פעילים על הכביש' },
-    { part: 'frontWheel', value: formatKm(mileage.median), label: 'חציון הקילומטראז׳ בטסט' },
+  const facts: KeyFact[] = [
+    { value: formatNumber(page.activeCars), label: 'רכבים פעילים על הכביש' },
+    { value: formatKm(mileage.median), label: 'חציון הקילומטראז׳ בטסט' },
     mileage.annualMedian
-      ? { part: 'rearWheel', value: `כ-${formatKm(Math.round(mileage.annualMedian / 1000) * 1000)}`, label: 'נסיעה בשנה, בחציון' }
-      : { part: 'rearWheel', value: formatShare(mileage.over150k), label: 'עברו 150 אלף ק״מ' },
-    { part: 'cabin', value: formatShare(page.origins.leasing), label: 'התחילו בליסינג' },
+      ? { value: `כ-${formatKm(Math.round(mileage.annualMedian / 1000) * 1000)}`, label: 'נסיעה בשנה, בחציון' }
+      : { value: formatShare(mileage.over150k), label: 'עברו 150 אלף ק״מ' },
+    { value: formatShare(page.origins.leasing), label: 'התחילו בליסינג' },
   ]
   if (isElectric(page)) {
-    facts.push({ part: 'glass', value: 'חשמלי', label: 'בלי צריכת דלק' })
+    facts.push({ value: 'חשמלי', label: 'בלי צריכת דלק' })
   } else if (specs.kmPerLitre) {
     facts.push({
-      part: 'glass',
       value: `${specs.kmPerLitre.typical.toLocaleString('he-IL')} ק״מ לליטר`,
       label: specs.nedcOnly ? 'צריכת דלק, תקן NEDC' : 'צריכת דלק, תקן WLTP',
     })
   }
-  facts.push({
-    part: 'headlight',
-    value: page.recalls.cars ? formatNumber(page.recalls.cars) : 'אין',
-    label: 'ריקולים פתוחים',
-  })
+  facts.push({ value: page.recalls.cars ? formatNumber(page.recalls.cars) : 'אין', label: 'ריקולים פתוחים' })
   if (specs.priceNew) {
-    facts.push({ part: 'taillight', value: thousandsRange(specs.priceNew.min, specs.priceNew.max), label: 'מחיר מחירון כחדשה' })
+    facts.push({ value: thousandsRange(specs.priceNew.min, specs.priceNew.max), label: 'מחיר מחירון כחדשה' })
   }
   return facts
 }
@@ -395,13 +369,15 @@ export default async function CarModelPage({ params }: Params) {
             </Link>
           </div>
 
-          <CarAssembly
-            body={bodyOf(page)}
-            title={`${short} בפירוק: הנתונים חלק אחרי חלק`}
-            facts={assemblyFacts(page)}
-            realModel={realModelOf(page)?.file ?? null}
-            credit={realModelOf(page)?.credit ?? null}
-          />
+          <h2>{short} במספרים</h2>
+          <ul className={styles.keyFacts}>
+            {keyFacts(page).map((fact) => (
+              <li key={fact.label} className={styles.keyFact}>
+                <span className={styles.keyFactValue}>{fact.value}</span>
+                <span className={styles.keyFactLabel}>{fact.label}</span>
+              </li>
+            ))}
+          </ul>
 
           {standouts.length > 1 ? (
             <>
