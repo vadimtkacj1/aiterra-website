@@ -1054,7 +1054,7 @@ export const tools: ToolEntry[] = [
   },
   {
     path: '/tools/ring-size-converter',
-    title: 'מידת טבעת: טבלת המרה',
+    title: 'מידות טבעות: טבלת המרה',
     description: 'המרת מידת טבעת לפי היקף אצבע או קוטר במ״מ למידות ISO, ארה״ב, בריטניה ואיטליה, עם טבלה והסבר מדידה.',
     category: 'home',
     reviewed: '2026-10-23',
@@ -1102,7 +1102,7 @@ export const tools: ToolEntry[] = [
   },
   {
     path: '/tools/bed-mattress-size-chart',
-    title: 'מידות מיטה ומזרן',
+    title: 'מידות מיטה: וחצי, זוגית, יחיד וקינג',
     description: 'מידות מיטה ומזרן בישראל בסנטימטרים: יחיד, מיטה וחצי, זוגית וקינג, מול המידות בארה״ב, באירופה ובבריטניה, וחישוב איזו מיטה נכנסת לחדר.',
     category: 'home',
     reviewed: '2026-10-23',

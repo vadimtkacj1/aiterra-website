@@ -15,7 +15,15 @@ export type Calculation =
   | { kind: 'error'; message: string }
   | { kind: 'ok'; result: Fraction; steps: Step[] }
 
-export const FRACTIONS_REVIEWED = '2026-10-23'
+export type DecimalConversion =
+  | { kind: 'empty' }
+  | { kind: 'error'; message: string }
+  | { kind: 'ok'; result: Fraction; steps: Step[]; repeating: Fraction | null }
+
+export const FRACTIONS_REVIEWED = '2026-11-06'
+
+const MAX_DECIMAL_PLACES = 6
+const MAX_REPEATING_DENOMINATOR = 12
 
 export const operations: { value: Operation; label: string; symbol: string }[] = [
   { value: 'add', label: 'חיבור', symbol: '+' },
@@ -144,6 +152,38 @@ const finishSteps = (raw: Fraction, steps: Step[]): Fraction => {
     })
   }
   return result
+}
+
+const nearestSimpleFraction = (value: number, tolerance: number): Fraction | null => {
+  for (let d = 2; d <= MAX_REPEATING_DENOMINATOR; d += 1) {
+    const n = Math.round(value * d)
+    if (Math.abs(n / d - value) < tolerance) return simplify({ n, d })
+  }
+  return null
+}
+
+export const convertDecimal = (text: string): DecimalConversion => {
+  const value = text.trim().replace(',', '.')
+  if (!value) return { kind: 'empty' }
+  const match = value.match(new RegExp(`^(-?)(\\d{0,6})(?:\\.(\\d{1,${MAX_DECIMAL_PLACES}}))?$`))
+  if (!match || (!match[2] && !match[3])) {
+    return { kind: 'error', message: `הקלידו מספר עשרוני, למשל 0.125 או 2.5, עם עד ${MAX_DECIMAL_PLACES} ספרות אחרי הנקודה.` }
+  }
+  const [, sign, wholePart, decimalPart = ''] = match
+  const places = decimalPart.length
+  const denominator = 10 ** places
+  const magnitude = Number(wholePart || '0') * denominator + Number(decimalPart || '0')
+  const raw = { n: sign ? -magnitude : magnitude, d: denominator }
+  if (places === 0) return { kind: 'ok', result: raw, steps: [{ text: 'זה מספר שלם, ואין חלק עשרוני להמיר.' }], repeating: null }
+  const steps: Step[] = [
+    {
+      text: `יש ${places} ${places === 1 ? 'ספרה' : 'ספרות'} אחרי הנקודה, ולכן כותבים את המספר כשבר עם מכנה ${denominator}.`,
+      math: `${value} = ${raw.n}/${raw.d}`,
+    },
+  ]
+  const result = finishSteps(raw, steps)
+  const repeating = places >= 2 ? nearestSimpleFraction(raw.n / raw.d, 0.5 / denominator) : null
+  return { kind: 'ok', result, steps, repeating: repeating && repeating.d < result.d ? repeating : null }
 }
 
 export const calculate = (operation: Operation, first: Operand, second: Operand): Calculation => {

@@ -62,11 +62,21 @@ export default function RhymeFinder() {
     (group) => ({ ...group, words: filterByLength(result[group.id], lengthFilter) }),
   )
   const total = groups.reduce((sum, group) => sum + group.words.length, 0)
+  const unfilteredTotal = RHYME_STRENGTHS.reduce((sum, group) => sum + result[group.id].length, 0)
+  const filtered = strengthFilter !== 'all' || lengthFilter !== 'any'
+  const canWiden = filtered && unfilteredTotal > 0
 
   const changeQuery = (value: string) => {
     setQuery(value)
     setStatus('')
     setShown(initialShown())
+  }
+
+  const showAllRhymes = () => {
+    setStrengthFilter('all')
+    setLengthFilter('any')
+    setShown(initialShown())
+    setStatus(`מוצגים ${unfilteredTotal} חרוזים, בלי סינון`)
   }
 
   const copy = async (text: string, message: string) => {
@@ -142,9 +152,18 @@ export default function RhymeFinder() {
           {!enough ? (
             <p className={fun.panel}>כתבו מילה של שתי אותיות לפחות, ונציג חרוזים לפי הסיום שלה.</p>
           ) : total === 0 ? (
-            <p className={fun.panel}>
-              לא מצאנו במילון חרוזים בסינון הזה. נסו ״כל החרוזים״ ו״כל האורכים״, או מילה עם סיום אחר.
-            </p>
+            <>
+              <p className={fun.panel}>
+                {canWiden
+                  ? 'לא מצאנו במילון חרוזים בסינון הזה.'
+                  : 'לא מצאנו במילון חרוזים למילה הזו. נסו מילה עם סיום אחר.'}
+              </p>
+              {canWiden ? (
+                <button type="button" className={ui.secondary} onClick={showAllRhymes}>
+                  הצגת כל החרוזים ({unfilteredTotal})
+                </button>
+              ) : null}
+            </>
           ) : (
             <p className={fun.panel}>{total} חרוזים במילון. לחיצה על מילה מעתיקה אותה.</p>
           )}

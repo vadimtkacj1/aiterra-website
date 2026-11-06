@@ -566,6 +566,12 @@
   text-underline-offset: 2px;
 }
 
+.nextStep a {
+  color: var(--v2-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @container (max-width: 460px) {
   .docHead {
     flex-direction: column;

@@ -14,7 +14,7 @@ import {
 import styles from './page.module.css'
 
 const PATH = '/tools/bed-mattress-size-chart'
-const TITLE = 'מידות מיטה ומזרן'
+const TITLE = 'מידות מיטה: וחצי, זוגית, יחיד וקינג'
 const META_TITLE = 'מידות מיטה ומזרן: יחיד, וחצי, זוגית וקינג בס״מ'
 const DESCRIPTION =
   'מידות מיטה ומזרן בישראל בסנטימטרים: יחיד, מיטה וחצי, זוגית וקינג, מול המידות בארה״ב, באירופה ובבריטניה, וחישוב איזו מיטה נכנסת לחדר.'

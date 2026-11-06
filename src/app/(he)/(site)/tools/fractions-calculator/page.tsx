@@ -3,6 +3,7 @@ import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/to
 import FractionsCalculator from '../../components/tools/FractionsCalculator'
 import {
   FRACTIONS_REVIEWED,
+  convertDecimal,
   formatFraction,
   formatMixed,
   lcm,
@@ -50,11 +51,21 @@ const commonFractions: Fraction[] = [
 
 const percentText = (fraction: Fraction) => String(Number(((fraction.n / fraction.d) * 100).toFixed(1)))
 
-const decimalToFraction: { decimal: string; fraction: Fraction }[] = [
-  { decimal: '0.75', fraction: { n: 75, d: 100 } },
-  { decimal: '0.6', fraction: { n: 6, d: 10 } },
-  { decimal: '0.125', fraction: { n: 125, d: 1000 } },
+const commonDecimals = [
+  ...Array.from({ length: 19 }, (_, index) => ((index + 1) * 0.05).toFixed(2).replace(/0$/, '')),
+  '0.125',
+  '0.375',
+  '0.625',
+  '0.875',
+  '1.5',
+  '2.25',
 ]
+  .map((decimal) => ({ decimal, value: Number(decimal) }))
+  .sort((a, b) => a.value - b.value)
+  .map(({ decimal }) => {
+    const conversion = convertDecimal(decimal)
+    return { decimal, fraction: conversion.kind === 'ok' ? conversion.result : { n: 0, d: 1 } }
+  })
 
 const faq: ToolFaqEntry[] = [
   {
@@ -86,6 +97,12 @@ const faq: ToolFaqEntry[] = [
     question: 'איך הופכים שבר למספר עשרוני?',
     answer:
       'מחלקים את המונה במכנה: 3/4 הוא 0.75. כשהמכנה אחרי הצמצום מורכב רק מ-2 ו-5, התוצאה עשרונית סופית, כמו 0.75 או 0.125. בשאר המקרים היא מחזורית, כמו 1/3 שהוא 0.333, והכלי מציג אותה בקירוב של שש ספרות עם המילה בערך. הערך המדויק הוא תמיד השבר.',
+  },
+  {
+    id: 'frac-faq-decimal-to-fraction',
+    question: 'איך הופכים מספר עשרוני לשבר, למשל 0.125?',
+    answer:
+      'סופרים כמה ספרות יש אחרי הנקודה וכותבים את המספר כשבר עם מכנה 10, 100 או 1000 בהתאם. 0.125 הם 125/1000, ו-125 מחלק את שניהם, כך שהתוצאה היא 1/8. 0.6 הוא 6/10, כלומר 3/5, ו-2.25 הוא 225/100, כלומר 9/4 או 2 1/4. בשדה ההמרה בכלי מקלידים את המספר ומקבלים את השבר המצומצם עם השלבים, ואם המספר נראה מחזורי, כמו 0.333, הכלי מציע גם את השבר 1/3.',
   },
   {
     id: 'frac-faq-limits',
@@ -235,19 +252,39 @@ export default function FractionsCalculatorPage() {
           </tbody>
         </table>
       </div>
+      <h3>המרת מספר עשרוני לשבר</h3>
       <p>
-        הכלי לא מקבל מספר עשרוני כקלט. כדי להפוך עשרוני לשבר, כותבים אותו כשבר עם מכנה 10, 100 או 1000 לפי מספר
-        הספרות אחרי הנקודה, ומצמצמים:
+        בכלי למעלה יש שדה שממיר מספר עשרוני לשבר ומראה את השלבים. בלי כלי עושים את זה כך: כותבים את המספר כשבר עם
+        מכנה 10, 100 או 1000 לפי מספר הספרות אחרי הנקודה, ומצמצמים. 0.125 הוא 125/1000, והגורם המשותף 125 מצמצם
+        אותו ל-1/8. כשהמספר מחזורי, כמו 0.333 שממשיך בלי סוף, התוצאה היא שבר עם מכנה קטן: 0.333… הוא 1/3.
       </p>
-      <ul>
-        {decimalToFraction.map((item) => (
-          <li key={item.decimal}>
-            <span dir="ltr">
-              {item.decimal} = {formatFraction(item.fraction)} = {formatFraction(simplify(item.fraction))}
-            </span>
-          </li>
-        ))}
-      </ul>
+      <div className={styles.tableWrap}>
+        <table className={styles.table}>
+          <caption>מספרים עשרוניים נפוצים כשברים</caption>
+          <thead>
+            <tr>
+              <th scope="col">עשרוני</th>
+              <th scope="col">שבר מצומצם</th>
+              <th scope="col">מספר מעורב</th>
+            </tr>
+          </thead>
+          <tbody>
+            {commonDecimals.map((item) => (
+              <tr key={item.decimal}>
+                <th scope="row" dir="ltr" className={styles.code}>
+                  {item.decimal}
+                </th>
+                <td dir="ltr" className={styles.code}>
+                  {formatFraction(item.fraction)}
+                </td>
+                <td dir="ltr" className={styles.code}>
+                  {formatMixed(item.fraction) ?? '—'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <p>
         להמרה בין שברים לאחוזים בחישובי מחירים והנחות יש גם <Link href="/tools/percentage-calculator">מחשבון אחוזים</Link>.
       </p>

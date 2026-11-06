@@ -63,7 +63,7 @@ export default function CarWarningLightsGuide() {
                     <CarWarningLightIcon id={light.id} />
                   </span>
                   <div className={styles.body}>
-                    <h3 className={styles.name}>{light.name}</h3>
+                    <h2 className={styles.name}>{light.name}</h2>
                     <p className={styles.badge}>צבע בדרך כלל: {light.colorName}</p>
                     <p>{light.meaning}</p>
                     <p>

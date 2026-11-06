@@ -5,6 +5,9 @@ export const HISTORY_RESOURCE_ID = '56063a99-8a3e-4ff4-912e-5966c0279bad'
 export const OPEN_RECALLS_RESOURCE_ID = '36bf1404-0be4-49d2-82dc-2f1ead4a8b93'
 export const RECALL_NOTICES_RESOURCE_ID = '2c33523f-87aa-44ec-a736-edbb0a82975e'
 export const MODELS_RESOURCE_ID = '142afde2-6228-49f9-8a29-9b6c3a0cbe40'
+export const OWNERSHIP_RESOURCE_ID = 'bb2355dc-9ec7-4f06-9c3f-3344672171da'
+export const OWNERSHIP_FROM_YEAR = 2017
+const MAX_OWNERSHIP_RECORDS = 60
 
 export const HISTORY_DATASET_URL = 'https://data.gov.il/he/datasets/ministry_of_transport/shinui_mivne'
 export const OPEN_RECALLS_DATASET_URL = 'https://data.gov.il/he/datasets/ministry_of_transport/hagbalat_recall'
@@ -68,10 +71,29 @@ export type ModelInfo = {
   country: string
 }
 
+export type OwnershipRecord = { month: string; type: string }
+
 export type VehicleExtras = {
   history: VehicleHistory | null
+  ownership: OwnershipRecord[] | null
   recalls: OpenRecall[] | null
   model: ModelInfo | null
+}
+
+const ownershipLabels: Record<string, string> = {
+  פרטי: 'פרטי',
+  סוחר: 'סוחר רכב',
+  החכר: 'ליסינג (החכר)',
+  השכרה: 'השכרה',
+  חברה: 'חברה',
+}
+
+export const ownershipText = (type: string) => ownershipLabels[type] ?? type
+
+export function ownershipSummary(records: OwnershipRecord[]) {
+  const counts = new Map<string, number>()
+  for (const record of records) counts.set(record.type, (counts.get(record.type) ?? 0) + 1)
+  return [...counts].map(([type, count]) => ({ type, label: ownershipText(type), count })).sort((a, b) => b.count - a.count)
 }
 
 const positive = (value: unknown) => {
@@ -130,6 +152,26 @@ async function fetchHistory(plate: string, signal: AbortSignal) {
   return records.length ? toHistory(records[0]) : null
 }
 
+const monthOf = (value: unknown) => {
+  const match = /^(\d{4})(\d{2})$/.exec(cleanText(value))
+  return match ? `${match[2]}/${match[1]}` : ''
+}
+
+async function fetchOwnership(plate: string, signal: AbortSignal): Promise<OwnershipRecord[] | null> {
+  const url = `${DATA_API}/datastore_search?${new URLSearchParams({
+    resource_id: OWNERSHIP_RESOURCE_ID,
+    include_total: 'false',
+    limit: String(MAX_OWNERSHIP_RECORDS),
+    sort: 'baalut_dt asc',
+    filters: JSON.stringify({ mispar_rechev: Number(plate) }),
+  })}`
+  const records = await recordsFrom(url, signal)
+  if (!records) return null
+  return records
+    .map((record) => ({ month: monthOf(record.baalut_dt), type: cleanText(record.baalut) }))
+    .filter((record) => record.month && record.type)
+}
+
 async function fetchRecalls(plate: string, signal: AbortSignal): Promise<OpenRecall[] | null> {
   const open = await recordsFrom(
     searchUrl(OPEN_RECALLS_RESOURCE_ID, { MISPAR_RECHEV: Number(plate) }, MAX_RECALLS),
@@ -186,20 +228,27 @@ async function fetchModel(vehicle: Vehicle, signal: AbortSignal) {
 
 export async function fetchVehicleExtras(vehicle: Vehicle, signal: AbortSignal): Promise<VehicleExtras> {
   const ownRecords = vehicle.kind === 'car'
-  const [history, recalls, model] = await Promise.all([
+  const [history, ownership, recalls, model] = await Promise.all([
     ownRecords ? fetchHistory(vehicle.plate, signal) : Promise.resolve(null),
+    ownRecords ? fetchOwnership(vehicle.plate, signal) : Promise.resolve(null),
     vehicle.kind === 'removed' ? Promise.resolve(null) : fetchRecalls(vehicle.plate, signal),
     ownRecords ? fetchModel(vehicle, signal) : Promise.resolve(null),
   ])
-  return { history, recalls, model }
+  return { history, ownership: ownership?.length ? ownership : null, recalls, model }
 }
 
 export function extrasToText(extras: VehicleExtras, year: number | null) {
-  const { history, recalls, model } = extras
+  const { history, ownership, recalls, model } = extras
   const fee = licenceFeeOf(model, year)
+  const ownershipLine = ownership
+    ? `רישומי בעלות מאז ${OWNERSHIP_FROM_YEAR}: ${ownership.length} (${ownershipSummary(ownership)
+        .map((item) => `${item.label} ${item.count}`)
+        .join(', ')})`
+    : ''
   return [
     history?.mileage ? `קילומטראז׳ בטסט האחרון: ${history.mileage.toLocaleString('he-IL')} ק״מ` : '',
     history ? `מקוריות: ${originText(history.origin)}` : '',
+    ownershipLine,
     recalls ? (recalls.length ? `ריקולים פתוחים: ${recalls.length}` : 'ריקולים פתוחים: אין') : '',
     model?.horsepower ? `כוח סוס: ${model.horsepower}` : '',
     model?.feeGroup ? `קבוצת אגרת רישוי: ${model.feeGroup}` : '',

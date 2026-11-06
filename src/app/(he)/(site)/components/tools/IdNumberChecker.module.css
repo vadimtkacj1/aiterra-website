@@ -129,6 +129,10 @@
   color: var(--v2-paper-ink);
 }
 
+.emptyFocus {
+  cursor: text;
+}
+
 .verdict {
   padding: 22px 24px;
   border: 1px solid var(--v2-hairline-ink);

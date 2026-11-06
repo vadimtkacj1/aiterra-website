@@ -5,12 +5,17 @@ import {
   LICENCE_FEE_URL,
   MODELS_DATASET_URL,
   OPEN_RECALLS_DATASET_URL,
+  OWNERSHIP_FROM_YEAR,
   licenceFeeOf,
   originText,
+  ownershipSummary,
+  ownershipText,
   type OpenRecall,
+  type OwnershipRecord,
   type VehicleExtras,
   type VehicleHistory,
 } from '@/lib/vehicle-extras'
+import CopyValue, { type CopyAnnounce } from './CopyValue'
 import styles from './CompanyLookup.module.css'
 import extra from './VehicleLookup.module.css'
 
@@ -18,7 +23,7 @@ type Fact = { label: string; value: string; note?: string }
 
 const numberText = (value: number) => value.toLocaleString('he-IL')
 
-function Facts({ facts }: { facts: Fact[] }) {
+function Facts({ facts, onCopy }: { facts: Fact[]; onCopy: CopyAnnounce }) {
   return (
     <dl className={styles.facts}>
       {facts
@@ -27,7 +32,7 @@ function Facts({ facts }: { facts: Fact[] }) {
           <div key={fact.label} className={styles.fact}>
             <dt>{fact.label}</dt>
             <dd>
-              {fact.value}
+              <CopyValue text={fact.value} label={fact.label} onAnnounce={onCopy} />
               {fact.note ? <span className={styles.factNote}>{fact.note}</span> : null}
             </dd>
           </div>
@@ -44,7 +49,7 @@ const changesOf = (history: VehicleHistory) =>
     history.tiresChanged ? 'שינוי מידת צמיגים' : '',
   ].filter(Boolean)
 
-function HistorySection({ history }: { history: VehicleHistory }) {
+function HistorySection({ history, onCopy }: { history: VehicleHistory; onCopy: CopyAnnounce }) {
   const changes = changesOf(history)
   return (
     <section className={`${styles.card} ${extra.extraSection}`} aria-labelledby="vehicle-history-title">
@@ -52,6 +57,7 @@ function HistorySection({ history }: { history: VehicleHistory }) {
         היסטוריה ומקוריות
       </h3>
       <Facts
+        onCopy={onCopy}
         facts={[
           {
             label: 'קילומטראז׳ בטסט האחרון',
@@ -65,6 +71,43 @@ function HistorySection({ history }: { history: VehicleHistory }) {
       />
       <p className={styles.source}>
         מקור: <a href={HISTORY_DATASET_URL} target="_blank" rel="noopener">היסטוריית כלי רכב פרטיים</a> של משרד התחבורה.
+      </p>
+    </section>
+  )
+}
+
+function OwnershipSection({ records, onCopy }: { records: OwnershipRecord[]; onCopy: CopyAnnounce }) {
+  const summary = ownershipSummary(records)
+  return (
+    <section className={`${styles.card} ${extra.extraSection}`} aria-labelledby="vehicle-ownership-title">
+      <h3 id="vehicle-ownership-title" className={extra.extraTitle}>
+        היסטוריית בעלות
+      </h3>
+      <Facts
+        onCopy={onCopy}
+        facts={[
+          {
+            label: `רישומי בעלות מאז ${OWNERSHIP_FROM_YEAR}`,
+            value: String(records.length),
+            note: 'כל מעבר בעלות נרשם בנפרד, גם מעבר בין שני סוחרים, ולכן המספר יכול להיות גבוה ממספר הבעלים בפועל.',
+          },
+          ...summary.map((item) => ({ label: item.label, value: `${item.count} ${item.count === 1 ? 'רישום' : 'רישומים'}` })),
+          { label: 'הבעלות האחרונה', value: `${ownershipText(records[records.length - 1].type)} מ-${records[records.length - 1].month}` },
+        ]}
+      />
+      <ol className={extra.ownershipList}>
+        {records.map((record, index) => (
+          <li key={`${record.month}-${record.type}-${index}`}>
+            <span dir="ltr" className={extra.ownershipMonth}>
+              {record.month}
+            </span>{' '}
+            {ownershipText(record.type)}
+          </li>
+        ))}
+      </ol>
+      <p className={styles.source}>
+        מקור: <a href={HISTORY_DATASET_URL} target="_blank" rel="noopener">היסטוריית כלי רכב פרטיים</a> של משרד התחבורה.
+        המאגר כולל רכבים פרטיים פעילים ורישומי בעלות מ-{OWNERSHIP_FROM_YEAR} ואילך, בלי שמות הבעלים.
       </p>
     </section>
   )
@@ -132,7 +175,15 @@ function RecallsSection({ recalls }: { recalls: OpenRecall[] }) {
   )
 }
 
-function ModelSection({ extras, year }: { extras: VehicleExtras; year: number | null }) {
+function ModelSection({
+  extras,
+  year,
+  onCopy,
+}: {
+  extras: VehicleExtras
+  year: number | null
+  onCopy: CopyAnnounce
+}) {
   const model = extras.model
   if (!model) return null
   const fee = licenceFeeOf(model, year)
@@ -142,6 +193,7 @@ function ModelSection({ extras, year }: { extras: VehicleExtras; year: number | 
         נתוני הדגם ואגרת רישוי
       </h3>
       <Facts
+        onCopy={onCopy}
         facts={[
           {
             label: 'אגרת רישוי שנתית',
@@ -179,21 +231,23 @@ export default function VehicleExtrasPanel({
   extras,
   loading,
   year,
+  onCopy,
 }: {
   extras: VehicleExtras | null
   loading: boolean
   year: number | null
+  onCopy: CopyAnnounce
 }) {
   if (loading) {
     return (
       <div className={styles.loading}>
         <span className={styles.spinner} aria-hidden="true" />
-        <p className={styles.loadingTitle}>טוען קילומטראז׳, ריקולים ונתוני דגם</p>
+        <p className={styles.loadingTitle}>טוען קילומטראז׳, בעלות, ריקולים ונתוני דגם</p>
       </div>
     )
   }
   if (!extras) return null
-  const nothing = !extras.history && !extras.recalls && !extras.model
+  const nothing = !extras.history && !extras.ownership && !extras.recalls && !extras.model
   if (nothing) {
     return (
       <p className={styles.source}>
@@ -203,9 +257,10 @@ export default function VehicleExtrasPanel({
   }
   return (
     <div className={extra.extras}>
-      {extras.history ? <HistorySection history={extras.history} /> : null}
+      {extras.history ? <HistorySection history={extras.history} onCopy={onCopy} /> : null}
+      {extras.ownership ? <OwnershipSection records={extras.ownership} onCopy={onCopy} /> : null}
       {extras.recalls ? <RecallsSection recalls={extras.recalls} /> : null}
-      <ModelSection extras={extras} year={year} />
+      <ModelSection extras={extras} year={year} onCopy={onCopy} />
     </div>
   )
 }

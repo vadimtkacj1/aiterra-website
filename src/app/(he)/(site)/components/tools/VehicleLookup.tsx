@@ -22,6 +22,7 @@ import {
 } from '@/lib/vehicle-lookup'
 import { extrasToText, fetchVehicleExtras, type VehicleExtras } from '@/lib/vehicle-extras'
 import VehicleExtrasPanel from './VehicleExtrasPanel'
+import CopyValue, { type CopyAnnounce } from './CopyValue'
 import ui from './toolUi.module.css'
 import styles from './CompanyLookup.module.css'
 import extra from './VehicleLookup.module.css'
@@ -44,11 +45,13 @@ export function VehicleDetails({
   dataDate,
   now,
   headingLevel = 3,
+  onCopy,
 }: {
   vehicle: Vehicle
   dataDate: string
   now: Date
   headingLevel?: 3 | 4
+  onCopy: CopyAnnounce
 }) {
   const state = testStateOf(vehicle, now)
   const Heading = headingLevel === 4 ? 'h4' : 'h3'
@@ -89,9 +92,15 @@ export function VehicleDetails({
     <article className={`${styles.card} ${toneClass[state.tone]}`}>
       <p className={`${styles.badge} ${toneClass[state.tone]}`}>{state.label}</p>
       <Heading className={styles.name}>{title || 'רכב'}</Heading>
-      <p className={extra.plate} dir="ltr">
-        {formatPlate(vehicle.plate)}
-      </p>
+      <div>
+        <CopyValue
+          text={formatPlate(vehicle.plate)}
+          label="מספר רישוי"
+          onAnnounce={onCopy}
+          className={`${extra.plate} ${extra.plateCopy}`}
+          dir="ltr"
+        />
+      </div>
       <p className={styles.statusText}>{state.detail}</p>
       <dl className={styles.facts}>
         {facts.map((fact) => (
@@ -99,11 +108,11 @@ export function VehicleDetails({
             <dt>{fact.label}</dt>
             <dd>
               {fact.label === 'מספר שלדה' ? (
-                <span dir="ltr" className={styles.digits}>
-                  {fact.value}
-                </span>
+                <CopyValue text={fact.value} label={fact.label} onAnnounce={onCopy} dir="ltr">
+                  <span className={styles.digits}>{fact.value}</span>
+                </CopyValue>
               ) : (
-                fact.value
+                <CopyValue text={fact.value} label={fact.label} onAnnounce={onCopy} />
               )}
               {fact.note ? <span className={styles.factNote}>{fact.note}</span> : null}
             </dd>
@@ -182,6 +191,7 @@ export default function VehicleLookup() {
       setExtrasLoading(false)
       window.gtag?.('event', 'vehicle_lookup_extras', {
         history: result.history !== null,
+        ownership_records: result.ownership?.length ?? 0,
         open_recalls: result.recalls?.length ?? -1,
         model: result.model !== null,
       })
@@ -264,6 +274,11 @@ export default function VehicleLookup() {
     }
   }
 
+  const announceCopy: CopyAnnounce = (message) => {
+    setAnnouncement('')
+    window.setTimeout(() => setAnnouncement(message), 50)
+  }
+
   let body: ReactNode
   if (phase.kind === 'idle') {
     body = (
@@ -296,8 +311,13 @@ export default function VehicleLookup() {
   } else {
     body = (
       <>
-        <VehicleDetails vehicle={phase.vehicle} dataDate={phase.dataDate} now={now} />
-        <VehicleExtrasPanel extras={extras} loading={extrasLoading} year={phase.vehicle.year} />
+        <VehicleDetails vehicle={phase.vehicle} dataDate={phase.dataDate} now={now} onCopy={announceCopy} />
+        <VehicleExtrasPanel
+          extras={extras}
+          loading={extrasLoading}
+          year={phase.vehicle.year}
+          onCopy={announceCopy}
+        />
         <div className={ui.actions}>
           <button type="button" className={`${ui.primary} ${styles.grow}`} onClick={copy}>
             <Copy aria-hidden="true" />

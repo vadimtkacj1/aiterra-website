@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { CalendarPlus, ChevronLeft, ChevronRight, Printer } from 'lucide-react'
 import {
   WEEKDAY_FULL,
@@ -31,6 +31,8 @@ const kindClass: Record<EventKind, string> = {
   minor: styles.minor,
   roshChodesh: styles.roshChodesh,
 }
+
+export const PRINT_MONTHS_EVENT = 'hebrew-calendar:print-months'
 
 const kindRank: EventKind[] = ['rest', 'memorial', 'fast', 'eve', 'cholHamoed', 'minor', 'roshChodesh']
 
@@ -69,6 +71,17 @@ export default function HebrewCalendar({ initialMonth }: { initialMonth: number 
   const [monthIndex, setMonthIndex] = useState(initialMonth)
   const [status, setStatus] = useState('')
   const calendar = useMemo(() => calendarYear(yearId), [yearId])
+
+  useEffect(() => {
+    if (!calendar) return
+    const onPrintMonths = (event: Event) => {
+      event.preventDefault()
+      openPrint(printDocument(calendar, 'month'))
+      setStatus('נפתח חלון הדפסה: חודש בכל עמוד A4.')
+    }
+    window.addEventListener(PRINT_MONTHS_EVENT, onPrintMonths)
+    return () => window.removeEventListener(PRINT_MONTHS_EVENT, onPrintMonths)
+  }, [calendar])
 
   if (!calendar) {
     return (

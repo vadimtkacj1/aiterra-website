@@ -3,6 +3,7 @@
 import { useId, useState } from 'react'
 import {
   calculate,
+  convertDecimal,
   formatFraction,
   formatMixed,
   operations,
@@ -32,7 +33,9 @@ export default function FractionsCalculator() {
   const [operation, setOperation] = useState<Operation>('add')
   const [first, setFirst] = useState<OperandInput>(initialFirst)
   const [second, setSecond] = useState<OperandInput>(initialSecond)
+  const [decimalText, setDecimalText] = useState('0.125')
   const baseId = useId()
+  const decimal = convertDecimal(decimalText)
 
   const parsedFirst = parseOperand(first)
   const parsedSecond = parseOperand(second)
@@ -164,6 +167,69 @@ export default function FractionsCalculator() {
                   ))}
                 </ol>
               </>
+            ) : null}
+          </div>
+
+          <div className={ui.group}>
+            <h2 className={ui.legend}>המרת מספר עשרוני לשבר</h2>
+            <div className={ui.field}>
+              <label htmlFor={`${baseId}-decimal`} className={ui.label}>
+                מספר עשרוני
+              </label>
+              <input
+                id={`${baseId}-decimal`}
+                className={`${ui.input} ${ui.ltr}`}
+                inputMode="decimal"
+                autoComplete="off"
+                maxLength={14}
+                value={decimalText}
+                aria-invalid={decimal.kind === 'error' ? true : undefined}
+                aria-describedby={decimal.kind === 'error' ? `${baseId}-decimal-error` : undefined}
+                onChange={(event) => setDecimalText(event.target.value)}
+              />
+            </div>
+            <div aria-live="polite" aria-atomic="true">
+              {decimal.kind === 'ok' ? (
+                <div className={styles.card}>
+                  <Stacked fraction={decimal.result} />
+                  <p className={styles.facts}>
+                    <span>
+                      <bdi dir="ltr">{decimalText.trim().replace(',', '.')}</bdi> כשבר:{' '}
+                      <strong dir="ltr">{formatFraction(decimal.result)}</strong>
+                    </span>
+                    {formatMixed(decimal.result) ? (
+                      <span>
+                        כמספר מעורב: <strong dir="ltr">{formatMixed(decimal.result)}</strong>
+                      </span>
+                    ) : null}
+                    {decimal.repeating ? (
+                      <span>
+                        אם הכוונה למספר מחזורי, כמו <bdi dir="ltr">{toDecimal(decimal.repeating).text}…</bdi>, השבר הוא{' '}
+                        <strong dir="ltr">{formatFraction(decimal.repeating)}</strong>
+                      </span>
+                    ) : null}
+                  </p>
+                </div>
+              ) : null}
+              {decimal.kind === 'error' ? (
+                <p id={`${baseId}-decimal-error`} className={styles.error}>
+                  {decimal.message}
+                </p>
+              ) : null}
+            </div>
+            {decimal.kind === 'ok' ? (
+              <ol className={styles.steps}>
+                {decimal.steps.map((step) => (
+                  <li key={`${step.text}-${step.math ?? ''}`}>
+                    <p>{step.text}</p>
+                    {step.math ? (
+                      <span className={styles.math} dir="ltr">
+                        {step.math}
+                      </span>
+                    ) : null}
+                  </li>
+                ))}
+              </ol>
             ) : null}
           </div>
         </div>

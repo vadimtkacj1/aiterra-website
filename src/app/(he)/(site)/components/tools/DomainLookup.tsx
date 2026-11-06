@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react'
+import Link from 'next/link'
 import { RotateCcw, Search } from 'lucide-react'
 import {
   ISOC_REGISTRARS_URL,
@@ -157,6 +158,9 @@ function AvailableCard({ record }: { record: DomainRecord }) {
           'כל רשם דומיינים שמוכר את הסיומת'
         )}
         , לפי כל הקודם זוכה.
+      </p>
+      <p className={styles.lead}>
+        הדומיין פנוי? <Link href="/services/brochure">אפשר לבנות עליו אתר</Link>
       </p>
     </article>
   )

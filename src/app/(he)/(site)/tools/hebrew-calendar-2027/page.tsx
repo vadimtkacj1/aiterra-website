@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import HebrewCalendar from '../../components/tools/HebrewCalendar'
+import CalendarPrintButton from '../../components/tools/CalendarPrintButton'
 import { calendarYear, hebrewDateText, holidayTable, kindLabels, shortDate, weekdayText } from '@/lib/hebrew-calendar'
 import { formatDate } from '@/lib/work-days'
 import { HOLIDAYS_HUB_PATH, holidayPath, holidays } from '@/lib/holiday-dates'
@@ -64,7 +65,7 @@ const faq: ToolFaqEntry[] = [
     id: 'calendar-faq-print',
     question: 'איך מדפיסים את לוח השנה העברי-לועזי?',
     answer:
-      'בוחרים שנה ולוחצים על ״הדפסה: חודש בעמוד״ כדי לקבל עמוד A4 לכל חודש, עם התאריך העברי ושמות החגים בתוך המשבצות. ״הדפסה: שנה בעמוד אחד״ מכניס את כל החודשים לעמוד A4 יחיד, עם רשימת החגים בתחתית. בחלון ההדפסה אפשר לבחור ״שמירה כ-PDF״ ולשלוח את הקובץ. כדי שהצבעים יודפסו, משאירים מסומן את ״גרפיקת רקע״.',
+      'בוחרים שנה ולוחצים על הכפתור ״הדפסה: חודש בעמוד״, מתחת ללוח או בראש ההסבר שבדף, כדי לקבל עמוד A4 לכל חודש, עם התאריך העברי ושמות החגים בתוך המשבצות. ״הדפסה: שנה בעמוד אחד״ מכניס את כל החודשים לעמוד A4 יחיד, עם רשימת החגים בתחתית. בחלון ההדפסה אפשר לבחור ״שמירה כ-PDF״ ולשלוח את הקובץ. כדי שהצבעים יודפסו, משאירים מסומן את ״גרפיקת רקע״.',
   },
   {
     id: 'calendar-faq-rosh-hashana',
@@ -114,7 +115,7 @@ export default function HebrewCalendarPage() {
       lede={`תשפ״ז מתחילה בראש השנה, ${formatDate(data.roshHashanah.day)}, ונמשכת עד ${formatDate(
         data.year.to,
       )}, ופסח שלה חל ב${formatDate(data.pesach.day)}. כאן רואים כל יום ב-2026 וב-2027 עם התאריך העברי, החגים, הצומות וראשי החודשים, ומדפיסים ב-A4 חודש בעמוד או שנה שלמה בעמוד אחד.`}
-      chips={['תשפ״ז, 2026 ו-2027', 'הדפסה ב-A4', 'חגים, צומות וראשי חודשים', 'ייצוא ליומן (ics)']}
+      chips={['הדפסה ב-A4', 'חגים, צומות וראשי חודשים', 'ייצוא ליומן (ics)']}
       tool={<HebrewCalendar initialMonth={data.initialMonth} />}
       faq={faq}
       cta={{
@@ -123,6 +124,7 @@ export default function HebrewCalendarPage() {
         href: '/services/development',
       }}
     >
+      <CalendarPrintButton />
       <h2 id="holidays" className={styles.anchor}>
         חגים ומועדים בתשפ״ז (2026–2027)
       </h2>

@@ -86,11 +86,15 @@ function StepsTable({ steps, withCheckDigit }: { steps: Step[]; withCheckDigit: 
   )
 }
 
-function ResultCard({ outcome }: { outcome: IdOutcome }) {
+function ResultCard({ outcome, onFocusInput }: { outcome: IdOutcome; onFocusInput: () => void }) {
   const verdict = verdictFor(outcome)
   if (outcome.kind === 'prompt' || outcome.kind === 'error' || !verdict) {
     const message = outcome.kind === 'prompt' ? outcome.message : 'כדי לראות את התוצאה, תקנו את המספר שבשדה.'
-    return <p className={styles.empty}>{message}</p>
+    return (
+      <p className={`${styles.empty} ${styles.emptyFocus}`} onClick={onFocusInput}>
+        {message}
+      </p>
+    )
   }
 
   const number = fullNumber(outcome)
@@ -250,7 +254,7 @@ export default function IdNumberChecker() {
         <div className={ui.output}>
           <div className={ui.sticky}>
             <h2 className={ui.outputTitle}>התוצאה</h2>
-            <ResultCard outcome={outcome} />
+            <ResultCard outcome={outcome} onFocusInput={() => inputRef.current?.focus()} />
             {steps ? <StepsTable steps={steps} withCheckDigit={outcome.kind === 'checked'} /> : null}
             <div className={ui.actions}>
               <button type="button" className={`${ui.primary} ${styles.copyMain}`} onClick={() => copy('text')}>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useId, useMemo, useRef, useState, type ChangeEvent, type ReactNode } from 'react'
+import Link from 'next/link'
 import { ArrowDown, ArrowUp, Copy, Download, Plus, Printer, Trash2 } from 'lucide-react'
 import {
   GENERATOR_URL,
@@ -472,6 +473,7 @@ export default function PriceQuoteGenerator() {
   const [input, setInput] = useState<QuoteInput>(() => defaultQuoteInput(''))
   const [restored, setRestored] = useState(false)
   const [status, setStatus] = useState('')
+  const [exported, setExported] = useState(false)
   const [itemStatus, setItemStatus] = useState('')
   const [logoError, setLogoError] = useState('')
   const nextId = useRef(2)
@@ -608,6 +610,7 @@ export default function PriceQuoteGenerator() {
     document.body.appendChild(frame)
     setStatus('נפתח חלון ההדפסה. כדי לקבל קובץ PDF, בחרו ביעד שמירה כ-PDF.')
     track('price_quote_download', 'pdf')
+    setExported(true)
   }
 
   const download = () => {
@@ -619,6 +622,7 @@ export default function PriceQuoteGenerator() {
     window.setTimeout(() => URL.revokeObjectURL(url), 1000)
     setStatus('קובץ ה-HTML ירד. אפשר לפתוח אותו בכל דפדפן ולהדפיס משם.')
     track('price_quote_download', 'html')
+    setExported(true)
   }
 
   const copy = async () => {
@@ -1053,6 +1057,12 @@ export default function PriceQuoteGenerator() {
             <p className={ui.status} role="status" aria-live="polite">
               {status}
             </p>
+            {exported ? (
+              <p className={`${ui.note} ${styles.nextStep}`}>
+                שולחים הצעות מחיר כל שבוע? אנחנו בונים מערכת שמפיקה הצעות וחשבוניות ושולחת אותן לבד:{' '}
+                <Link href="/services/automation">אוטומציה לעסקים</Link>
+              </p>
+            ) : null}
             <p className={ui.note}>הפרטים והלוגו נשמרים רק בדפדפן שלכם ולא נשלחים לשום מקום.</p>
           </div>
         </div>
