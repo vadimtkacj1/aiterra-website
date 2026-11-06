@@ -45,7 +45,7 @@ import {
   type CarTrim,
   type MileageBin,
 } from '@/lib/car-models'
-import CarAssembly, { type AssemblyFact, type CarBody } from '../CarAssembly'
+import CarAssembly, { type AssemblyFact, type CarBody, type ModelCredit } from '../CarAssembly'
 import layout from '../../components/tools/ToolLayout.module.css'
 import tables from '../../tools/word-counter/page.module.css'
 import styles from '../cars.module.css'
@@ -148,6 +148,28 @@ function RecallList({ page }: { page: CarModelPage }) {
     </div>
   )
 }
+
+const REAL_MODELS: { make: string; family: string; from: number; to: number; file: string; credit: ModelCredit }[] = [
+  {
+    make: 'טויוטה',
+    family: 'COROLLA',
+    from: 2019,
+    to: 2022,
+    file: 'toyota-corolla-e210.glb',
+    credit: {
+      title: 'Toyota Corolla 2020',
+      author: 'ItsDiyor',
+      authorUrl: 'https://sketchfab.com/ItsDiyor',
+      sourceUrl: 'https://sketchfab.com/3d-models/toyota-corolla-2020-6d7d34ee42734d1ab28a6b1f1c5fc4fc',
+      license: 'CC BY 4.0',
+      licenseUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    },
+  },
+]
+
+const realModelOf = (page: CarModelPage) =>
+  REAL_MODELS.find((model) => page.makeHe.startsWith(model.make) && page.family === model.family && page.year >= model.from && page.year <= model.to) ??
+  null
 
 const BODY_SHAPES: Record<string, CarBody> = {
   'סדאן': 'sedan',
@@ -389,7 +411,13 @@ export default async function CarModelPage({ params }: Params) {
             </Link>
           </div>
 
-          <CarAssembly body={bodyOf(page)} title={`${short} בפירוק: הנתונים חלק אחרי חלק`} facts={assemblyFacts(page)} />
+          <CarAssembly
+            body={bodyOf(page)}
+            title={`${short} בפירוק: הנתונים חלק אחרי חלק`}
+            facts={assemblyFacts(page)}
+            realModel={realModelOf(page)?.file ?? null}
+            credit={realModelOf(page)?.credit ?? null}
+          />
 
           {standouts.length > 1 ? (
             <>

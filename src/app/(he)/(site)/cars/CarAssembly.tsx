@@ -93,17 +93,41 @@ function Wheel({ cx, cy }: { cx: number; cy: number }) {
   )
 }
 
+export type ModelCredit = {
+  title: string
+  author: string
+  authorUrl: string
+  sourceUrl: string
+  license: string
+  licenseUrl: string
+}
+
 export default function CarAssembly({
   body,
   title,
   facts,
+  realModel = null,
+  credit = null,
 }: {
   body: CarBody
   title: string
   facts: AssemblyFact[]
+  realModel?: string | null
+  credit?: ModelCredit | null
 }) {
   const root = useRef<HTMLDivElement>(null)
-  const progress = useRef<AssemblyProgress>({ current: 1, turn: 0, invalidate: null })
+  const progress = useRef<AssemblyProgress>({ current: 1, turn: 0, pitch: 0, inside: false, invalidate: null })
+  const [inside, setInside] = useState(false)
+  const toggleInside = useCallback(() => {
+    setInside((value) => {
+      const shared = progress.current
+      shared.inside = !value
+      shared.turn = 0
+      shared.pitch = 0
+      shared.invalidate?.()
+      return !value
+    })
+  }, [])
   const [want3D, setWant3D] = useState(false)
   const [ready3D, setReady3D] = useState(false)
   const [picked, setPicked] = useState<CarPart | null>(null)
@@ -207,9 +231,22 @@ export default function CarAssembly({
             <path d={`M548 ${132 - shape.lift} L560 ${136 - shape.lift} L560 ${148 - shape.lift} L548 ${148 - shape.lift} Z`} className={styles.tail} />
           </g>
         </svg>
-          {want3D ? <CarScene3D body={body} progress={progress.current} onReady={markReady} onPick={pick} /> : null}
+          {want3D ? (
+            <CarScene3D body={body} realModel={realModel} progress={progress.current} onReady={markReady} onPick={pick} />
+          ) : null}
         </div>
-        {ready3D ? <p className={styles.hint}>אפשר לסובב את הרכב ולגעת בגלגלים ובמרכב</p> : null}
+        {ready3D ? (
+          <div className={styles.controls}>
+            <p className={styles.hint}>
+              {inside ? 'גררו כדי להסתכל סביב בתא הנהג' : 'אפשר לסובב את הרכב ולגעת בגלגלים ובמרכב'}
+            </p>
+            {realModel ? (
+              <button type="button" className={styles.insideButton} onClick={toggleInside} aria-pressed={inside}>
+                {inside ? 'חזרה לרכב מבחוץ' : 'הצצה לתא הנהג'}
+              </button>
+            ) : null}
+          </div>
+        ) : null}
         <ul className={styles.facts}>
           {facts.map((fact) => (
             <li key={fact.part} data-part={fact.part} className={`${styles.fact} ${picked === fact.part ? styles.picked : ""}`} style={partStyle(fact.part)}>
@@ -218,6 +255,23 @@ export default function CarAssembly({
             </li>
           ))}
         </ul>
+        {credit && ready3D ? (
+          <p className={styles.credit}>
+            דגם תלת־ממדי:{' '}
+            <a href={credit.sourceUrl} target="_blank" rel="noopener">
+              <span dir="ltr">{credit.title}</span>
+            </a>{' '}
+            מאת{' '}
+            <a href={credit.authorUrl} target="_blank" rel="noopener">
+              <span dir="ltr">{credit.author}</span>
+            </a>
+            , ברישיון{' '}
+            <a href={credit.licenseUrl} target="_blank" rel="noopener">
+              <span dir="ltr">{credit.license}</span>
+            </a>
+            . אייטרה הסירה את סמלי היצרן, הוסיפה מיתוג ולוחיות והפרידה את הגלגלים.
+          </p>
+        ) : null}
       </div>
     </div>
   )

@@ -218,3 +218,45 @@
     aspect-ratio: 600 / 300;
   }
 }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 14px;
+  margin-block-start: -6px;
+}
+
+.controls .hint {
+  margin: 0;
+}
+
+.insideButton {
+  padding: 8px 16px;
+  border: 1px solid rgba(62, 150, 249, 0.6);
+  border-radius: 999px;
+  background: rgba(62, 150, 249, 0.14);
+  color: var(--v2-on-dark);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.insideButton:hover,
+.insideButton[aria-pressed='true'] {
+  background: var(--v2-blue);
+  border-color: var(--v2-blue);
+}
+
+.credit {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--v2-on-dark-muted);
+}
+
+.credit a {
+  color: var(--v2-on-dark-soft);
+}
