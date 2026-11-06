@@ -131,3 +131,9 @@
   font-size: 13px;
   color: var(--v2-paper-ink-muted);
 }
+
+.modelLink a {
+  color: var(--v2-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

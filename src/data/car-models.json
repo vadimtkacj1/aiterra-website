@@ -1,0 +1,6951 @@
+{
+  "dataDate": "2026-11-06",
+  "resources": {
+    "vehicles": "053cea08-09bc-40ec-8f7a-156f0677aff3",
+    "history": "56063a99-8a3e-4ff4-912e-5966c0279bad",
+    "openRecalls": "36bf1404-0be4-49d2-82dc-2f1ead4a8b93",
+    "recallNotices": "2c33523f-87aa-44ec-a736-edbb0a82975e",
+    "models": "142afde2-6228-49f9-8a29-9b6c3a0cbe40",
+    "prices": "39f455bf-6db0-4926-859d-017f34eacbcb"
+  },
+  "fleet": {
+    "activeCars": 4198990,
+    "expiredShare": 8.4,
+    "recallShare": 0.4
+  },
+  "pages": [
+    {
+      "slug": "toyota-corolla-2021",
+      "key": "טויוטה|COROLLA|2021",
+      "rank": 1,
+      "makeHe": "טויוטה",
+      "makeEn": "Toyota",
+      "modelHe": "קורולה",
+      "modelEn": "Corolla",
+      "family": "COROLLA",
+      "year": 2021,
+      "activeCars": 17908,
+      "familyActiveCars": 196744,
+      "familyYearRank": 1,
+      "familyYears": 31,
+      "mileage": {
+        "cars": 16718,
+        "p10": 53890,
+        "p25": 78838,
+        "median": 106873,
+        "p75": 136040,
+        "p90": 167409,
+        "max": 944505,
+        "over100k": 56.6,
+        "over150k": 16.7,
+        "over200k": 3.7,
+        "under50k": 8.2,
+        "annualMedian": 21999,
+        "annualCars": 16718,
+        "binWidth": 25000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 25000,
+            "cars": 251
+          },
+          {
+            "from": 25000,
+            "to": 50000,
+            "cars": 1117
+          },
+          {
+            "from": 50000,
+            "to": 75000,
+            "cars": 2367
+          },
+          {
+            "from": 75000,
+            "to": 100000,
+            "cars": 3518
+          },
+          {
+            "from": 100000,
+            "to": 125000,
+            "cars": 3839
+          },
+          {
+            "from": 125000,
+            "to": 150000,
+            "cars": 2841
+          },
+          {
+            "from": 150000,
+            "to": 175000,
+            "cars": 1467
+          },
+          {
+            "from": 175000,
+            "to": null,
+            "cars": 1318
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 5334,
+            "median": 79049
+          },
+          "leasing": {
+            "cars": 10414,
+            "median": 116516
+          },
+          "rental": {
+            "cars": 863,
+            "median": 112933
+          }
+        }
+      },
+      "origins": {
+        "cars": 16775,
+        "private": 31.9,
+        "leasing": 62.3,
+        "rental": 5.2,
+        "other": 0.6
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 805,
+        "expiredShare": 4.5,
+        "expiredOverYear": 11
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 99.9
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0.1
+        },
+        {
+          "name": "היברידי (חשמל ובנזין)",
+          "share": 0
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 48.5
+        },
+        {
+          "name": "כסף מטלי",
+          "share": 19
+        },
+        {
+          "name": "כסוף כהה מטלי",
+          "share": 12.5
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 88.9
+        },
+        {
+          "name": "חברה",
+          "share": 8.1
+        },
+        {
+          "name": "ליסינג",
+          "share": 1.5
+        },
+        {
+          "name": "סוחר",
+          "share": 1.3
+        },
+        {
+          "name": "השכרה",
+          "share": 0.2
+        }
+      ],
+      "countries": [
+        {
+          "name": "טורקיה",
+          "share": 78.7
+        },
+        {
+          "name": "אנגליה",
+          "share": 21.3
+        }
+      ],
+      "fleet": {
+        "year": 2021,
+        "activeCars": 282297,
+        "medianKm": 82350,
+        "p25Km": 55728,
+        "p75Km": 113551,
+        "mileageCars": 266642,
+        "origins": {
+          "cars": 267620,
+          "private": 68,
+          "leasing": 26.4,
+          "rental": 5.1,
+          "other": 0.5
+        },
+        "expiredShare": 6.2,
+        "recallShare": 0.7
+      },
+      "neighbours": [
+        {
+          "year": 2019,
+          "activeCars": 15407,
+          "medianKm": 135593,
+          "mileageCars": 14606,
+          "leasing": 59.8,
+          "rental": 1.9,
+          "recallShare": 0,
+          "expiredShare": 6.6,
+          "slug": "toyota-corolla-2019"
+        },
+        {
+          "year": 2020,
+          "activeCars": 12909,
+          "medianKm": 118635,
+          "mileageCars": 12644,
+          "leasing": 58.9,
+          "rental": 0.7,
+          "recallShare": 0,
+          "expiredShare": 6.2,
+          "slug": "toyota-corolla-2020"
+        },
+        {
+          "year": 2022,
+          "activeCars": 10015,
+          "medianKm": 88973,
+          "mileageCars": 8955,
+          "leasing": 57.4,
+          "rental": 1.9,
+          "recallShare": 0,
+          "expiredShare": 4.7,
+          "slug": "toyota-corolla-2022"
+        },
+        {
+          "year": 2023,
+          "activeCars": 5817,
+          "medianKm": 70251,
+          "mileageCars": 5327,
+          "leasing": 70.1,
+          "rental": 0.8,
+          "recallShare": 5.5,
+          "expiredShare": 4.6,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "COROLLA HSD SDN",
+            "finish": "SUN",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 102,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 140900,
+            "priceMax": 140900,
+            "cars": 7480,
+            "share": 41.8
+          },
+          {
+            "name": "COROLLA TS HSD",
+            "finish": "SPACE",
+            "body": "סטיישן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 106,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.4,
+            "kmPerLitre": 22.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 141900,
+            "priceMax": 141900,
+            "cars": 2418,
+            "share": 13.5
+          },
+          {
+            "name": "COROLLA SDN HSD",
+            "finish": "LIMITED",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 112,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.7,
+            "kmPerLitre": 21.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 146900,
+            "priceMax": 146900,
+            "cars": 1428,
+            "share": 8
+          },
+          {
+            "name": "COROLLA HSD SDN",
+            "finish": "SENSE",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 102,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 141900,
+            "priceMax": 141900,
+            "cars": 1370,
+            "share": 7.7
+          },
+          {
+            "name": "COROLLA",
+            "finish": "COMFORT",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 122,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 101,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.2,
+            "kmPerLitre": 23.8,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 140000,
+            "priceMax": 140000,
+            "cars": 762,
+            "share": 4.3
+          },
+          {
+            "name": "COROLLA TS HSD",
+            "finish": "SPACE PLUS",
+            "body": "סטיישן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 103,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 143900,
+            "priceMax": 143900,
+            "cars": 602,
+            "share": 3.4
+          },
+          {
+            "name": "COROLLA HSD SDN",
+            "finish": "SUN",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 102,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 139900,
+            "priceMax": 139900,
+            "cars": 571,
+            "share": 3.2
+          },
+          {
+            "name": "COROLLA SDN HSD",
+            "finish": "LIMITED",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 111,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.6,
+            "kmPerLitre": 21.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 145900,
+            "priceMax": 145900,
+            "cars": 464,
+            "share": 2.6
+          },
+          {
+            "name": "COROLLA HB HSD",
+            "finish": "EXCITE SKY",
+            "body": "הצ'בק",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 102,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 141900,
+            "priceMax": 141900,
+            "cars": 437,
+            "share": 2.4
+          },
+          {
+            "name": "COROLLA SEDAN",
+            "finish": "SENSE",
+            "body": "סדאן",
+            "engineCc": 1490,
+            "hp": 125,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 135,
+            "co2Standard": "WLTP",
+            "litresPer100": 5.6,
+            "kmPerLitre": 17.9,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 9,
+            "priceMin": 136900,
+            "priceMax": 136900,
+            "cars": 385,
+            "share": 2.1
+          }
+        ],
+        "coveredShare": 88.9,
+        "kmPerLitre": {
+          "min": 17.9,
+          "max": 23.8,
+          "typical": 23.3
+        },
+        "priceNew": {
+          "min": 136900,
+          "max": 146900
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 3,
+          "max": 9
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "toyota-corolla-2019",
+      "key": "טויוטה|COROLLA|2019",
+      "rank": 2,
+      "makeHe": "טויוטה",
+      "makeEn": "Toyota",
+      "modelHe": "קורולה",
+      "modelEn": "Corolla",
+      "family": "COROLLA",
+      "year": 2019,
+      "activeCars": 15407,
+      "familyActiveCars": 196744,
+      "familyYearRank": 2,
+      "familyYears": 31,
+      "mileage": {
+        "cars": 14606,
+        "p10": 71662,
+        "p25": 100962,
+        "median": 135593,
+        "p75": 170938,
+        "p90": 208556,
+        "max": 936091,
+        "over100k": 75.6,
+        "over150k": 39.1,
+        "over200k": 12.4,
+        "under50k": 4.1,
+        "annualMedian": 19682,
+        "annualCars": 14606,
+        "binWidth": 30000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 30000,
+            "cars": 175
+          },
+          {
+            "from": 30000,
+            "to": 60000,
+            "cars": 719
+          },
+          {
+            "from": 60000,
+            "to": 90000,
+            "cars": 1817
+          },
+          {
+            "from": 90000,
+            "to": 120000,
+            "cars": 2898
+          },
+          {
+            "from": 120000,
+            "to": 150000,
+            "cars": 3283
+          },
+          {
+            "from": 150000,
+            "to": 180000,
+            "cars": 2747
+          },
+          {
+            "from": 180000,
+            "to": 210000,
+            "cars": 1561
+          },
+          {
+            "from": 210000,
+            "to": null,
+            "cars": 1406
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 5446,
+            "median": 105334
+          },
+          "leasing": {
+            "cars": 8744,
+            "median": 149230
+          },
+          "rental": {
+            "cars": 286,
+            "median": 145000
+          }
+        }
+      },
+      "origins": {
+        "cars": 14696,
+        "private": 37.4,
+        "leasing": 59.8,
+        "rental": 1.9,
+        "other": 0.9
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 1024,
+        "expiredShare": 6.6,
+        "expiredOverYear": 7
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 99.9
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0.1
+        },
+        {
+          "name": "היברידי (חשמל ובנזין)",
+          "share": 0
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 47.3
+        },
+        {
+          "name": "כסף מטלי",
+          "share": 20.5
+        },
+        {
+          "name": "כסוף כהה מטלי",
+          "share": 13.3
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 92.9
+        },
+        {
+          "name": "חברה",
+          "share": 5.5
+        },
+        {
+          "name": "סוחר",
+          "share": 1.1
+        },
+        {
+          "name": "ליסינג",
+          "share": 0.4
+        },
+        {
+          "name": "השכרה",
+          "share": 0.1
+        }
+      ],
+      "countries": [
+        {
+          "name": "טורקיה",
+          "share": 78.7
+        },
+        {
+          "name": "אנגליה",
+          "share": 21.3
+        }
+      ],
+      "fleet": {
+        "year": 2019,
+        "activeCars": 239639,
+        "medianKm": 108999,
+        "p25Km": 76058,
+        "p75Km": 147235,
+        "mileageCars": 227244,
+        "origins": {
+          "cars": 228361,
+          "private": 66.4,
+          "leasing": 27.9,
+          "rental": 4.9,
+          "other": 0.7
+        },
+        "expiredShare": 6.8,
+        "recallShare": 0.3
+      },
+      "neighbours": [
+        {
+          "year": 2017,
+          "activeCars": 8059,
+          "medianKm": 150311,
+          "mileageCars": 8019,
+          "leasing": 59.1,
+          "rental": 5.6,
+          "recallShare": 0,
+          "expiredShare": 5.2,
+          "slug": "toyota-corolla-2017"
+        },
+        {
+          "year": 2018,
+          "activeCars": 5305,
+          "medianKm": 132415,
+          "mileageCars": 5274,
+          "leasing": 55.2,
+          "rental": 5.6,
+          "recallShare": 0,
+          "expiredShare": 4.5,
+          "slug": null
+        },
+        {
+          "year": 2020,
+          "activeCars": 12909,
+          "medianKm": 118635,
+          "mileageCars": 12644,
+          "leasing": 58.9,
+          "rental": 0.7,
+          "recallShare": 0,
+          "expiredShare": 6.2,
+          "slug": "toyota-corolla-2020"
+        },
+        {
+          "year": 2021,
+          "activeCars": 17908,
+          "medianKm": 106873,
+          "mileageCars": 16718,
+          "leasing": 62.3,
+          "rental": 5.2,
+          "recallShare": 0,
+          "expiredShare": 4.5,
+          "slug": "toyota-corolla-2021"
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "COROLLA HSD SDN",
+            "finish": "SUN",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 102,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 132900,
+            "priceMax": 132900,
+            "cars": 6200,
+            "share": 40.2
+          },
+          {
+            "name": "COROLLA HSD SDN",
+            "finish": "SENSE",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 102,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 134900,
+            "priceMax": 134900,
+            "cars": 1771,
+            "share": 11.5
+          },
+          {
+            "name": "COROLLA SDN",
+            "finish": "SUN",
+            "body": "סדאן",
+            "engineCc": 1598,
+            "hp": 132,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 153,
+            "co2Standard": "WLTP",
+            "litresPer100": 6.4,
+            "kmPerLitre": 15.6,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 13,
+            "priceMin": 132900,
+            "priceMax": 132900,
+            "cars": 1619,
+            "share": 10.5
+          },
+          {
+            "name": "COROLLA TS HSD",
+            "finish": "SPACE",
+            "body": "סטיישן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 106,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.4,
+            "kmPerLitre": 22.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 134900,
+            "priceMax": 134900,
+            "cars": 1409,
+            "share": 9.1
+          },
+          {
+            "name": "COROLLA TS HSD",
+            "finish": "SPACE PLUS",
+            "body": "סטיישן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 104,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 136900,
+            "priceMax": 136900,
+            "cars": 882,
+            "share": 5.7
+          },
+          {
+            "name": "COROLLA SDN HSD",
+            "finish": "LIMITED",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 111,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.6,
+            "kmPerLitre": 21.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 139900,
+            "priceMax": 139900,
+            "cars": 775,
+            "share": 5
+          },
+          {
+            "name": "COROLLA HSD HB",
+            "finish": "EXCITE PLUS",
+            "body": "הצ'בק",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 112,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.7,
+            "kmPerLitre": 21.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 139900,
+            "priceMax": 139900,
+            "cars": 373,
+            "share": 2.4
+          },
+          {
+            "name": "COROLLA HSD SDN",
+            "finish": "LOUNGE",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 113,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.7,
+            "kmPerLitre": 21.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 153900,
+            "priceMax": 153900,
+            "cars": 350,
+            "share": 2.3
+          }
+        ],
+        "coveredShare": 86.8,
+        "kmPerLitre": {
+          "min": 15.6,
+          "max": 23.3,
+          "typical": 23.3
+        },
+        "priceNew": {
+          "min": 132900,
+          "max": 153900
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 3,
+          "max": 13
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "byd-atto-3-2023",
+      "key": "בי ווי די|ATTO 3|2023",
+      "rank": 3,
+      "makeHe": "BYD",
+      "makeEn": "BYD",
+      "modelHe": "אטו 3",
+      "modelEn": "Atto 3",
+      "family": "ATTO 3",
+      "year": 2023,
+      "activeCars": 13709,
+      "familyActiveCars": 34924,
+      "familyYearRank": 1,
+      "familyYears": 5,
+      "mileage": {
+        "cars": 12309,
+        "p10": 32675,
+        "p25": 45402,
+        "median": 62141,
+        "p75": 82900,
+        "p90": 105318,
+        "max": 963891,
+        "over100k": 12.7,
+        "over150k": 1.5,
+        "over200k": 0.3,
+        "under50k": 31.9,
+        "annualMedian": 20692,
+        "annualCars": 12309,
+        "binWidth": 20000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 20000,
+            "cars": 314
+          },
+          {
+            "from": 20000,
+            "to": 40000,
+            "cars": 1881
+          },
+          {
+            "from": 40000,
+            "to": 60000,
+            "cars": 3574
+          },
+          {
+            "from": 60000,
+            "to": 80000,
+            "cars": 3109
+          },
+          {
+            "from": 80000,
+            "to": 100000,
+            "cars": 1860
+          },
+          {
+            "from": 100000,
+            "to": 120000,
+            "cars": 882
+          },
+          {
+            "from": 120000,
+            "to": 140000,
+            "cars": 405
+          },
+          {
+            "from": 140000,
+            "to": null,
+            "cars": 284
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 9447,
+            "median": 60075
+          },
+          "leasing": {
+            "cars": 2671,
+            "median": 68152
+          },
+          "rental": {
+            "cars": 52,
+            "median": 70494
+          }
+        }
+      },
+      "origins": {
+        "cars": 13709,
+        "private": 79,
+        "leasing": 19.6,
+        "rental": 0.4,
+        "other": 1
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 1148,
+        "expiredShare": 8.4,
+        "expiredOverYear": 2
+      },
+      "fuels": [
+        {
+          "name": "חשמל",
+          "share": 100
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 55.7
+        },
+        {
+          "name": "אפור כהה",
+          "share": 38
+        },
+        {
+          "name": "כחול",
+          "share": 3.9
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 85.2
+        },
+        {
+          "name": "ליסינג",
+          "share": 7.5
+        },
+        {
+          "name": "חברה",
+          "share": 6
+        },
+        {
+          "name": "סוחר",
+          "share": 1
+        },
+        {
+          "name": "השכרה",
+          "share": 0.3
+        }
+      ],
+      "countries": [
+        {
+          "name": "סין",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2023,
+        "activeCars": 267089,
+        "medianKm": 53749,
+        "p25Km": 34032,
+        "p75Km": 79058,
+        "mileageCars": 234837,
+        "origins": {
+          "cars": 254638,
+          "private": 64.8,
+          "leasing": 31,
+          "rental": 3.7,
+          "other": 0.5
+        },
+        "expiredShare": 6.4,
+        "recallShare": 0.7
+      },
+      "neighbours": [
+        {
+          "year": 2022,
+          "activeCars": 3568,
+          "medianKm": 64811,
+          "mileageCars": 3437,
+          "leasing": 10.8,
+          "rental": 0.3,
+          "recallShare": 0,
+          "expiredShare": 10.4,
+          "slug": null
+        },
+        {
+          "year": 2024,
+          "activeCars": 10397,
+          "medianKm": null,
+          "mileageCars": 3162,
+          "leasing": 31.1,
+          "rental": 0.5,
+          "recallShare": 0,
+          "expiredShare": 2.9,
+          "slug": null
+        },
+        {
+          "year": 2025,
+          "activeCars": 5415,
+          "medianKm": null,
+          "mileageCars": 0,
+          "leasing": 25.1,
+          "rental": 0.3,
+          "recallShare": 0,
+          "expiredShare": 5.3,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "ATTO 3",
+            "finish": "COMFORT",
+            "body": "פנאי-שטח",
+            "engineCc": null,
+            "hp": 204,
+            "fuel": "חשמל",
+            "drive": "רכב חשמלי",
+            "automatic": true,
+            "co2": null,
+            "co2Standard": null,
+            "litresPer100": null,
+            "kmPerLitre": null,
+            "electric": true,
+            "plugIn": false,
+            "pollutionGroup": null,
+            "priceMin": 163500,
+            "priceMax": 163500,
+            "cars": 10148,
+            "share": 74
+          },
+          {
+            "name": "ATTO 3",
+            "finish": "DESIGN",
+            "body": "פנאי-שטח",
+            "engineCc": null,
+            "hp": 204,
+            "fuel": "חשמל",
+            "drive": "רכב חשמלי",
+            "automatic": true,
+            "co2": null,
+            "co2Standard": null,
+            "litresPer100": null,
+            "kmPerLitre": null,
+            "electric": true,
+            "plugIn": false,
+            "pollutionGroup": null,
+            "priceMin": 175500,
+            "priceMax": 175500,
+            "cars": 3540,
+            "share": 25.8
+          }
+        ],
+        "coveredShare": 99.8,
+        "kmPerLitre": null,
+        "priceNew": {
+          "min": 163500,
+          "max": 175500
+        },
+        "nedcOnly": false,
+        "pollution": null,
+        "electricShare": 99.8,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "toyota-corolla-2020",
+      "key": "טויוטה|COROLLA|2020",
+      "rank": 4,
+      "makeHe": "טויוטה",
+      "makeEn": "Toyota",
+      "modelHe": "קורולה",
+      "modelEn": "Corolla",
+      "family": "COROLLA",
+      "year": 2020,
+      "activeCars": 12909,
+      "familyActiveCars": 196744,
+      "familyYearRank": 3,
+      "familyYears": 31,
+      "mileage": {
+        "cars": 12644,
+        "p10": 60434,
+        "p25": 87800,
+        "median": 118635,
+        "p75": 152670,
+        "p90": 185739,
+        "max": 918846,
+        "over100k": 65.9,
+        "over150k": 26.7,
+        "over200k": 6.8,
+        "under50k": 6.2,
+        "annualMedian": 20344,
+        "annualCars": 12644,
+        "binWidth": 30000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 30000,
+            "cars": 207
+          },
+          {
+            "from": 30000,
+            "to": 60000,
+            "cars": 1033
+          },
+          {
+            "from": 60000,
+            "to": 90000,
+            "cars": 2126
+          },
+          {
+            "from": 90000,
+            "to": 120000,
+            "cars": 3082
+          },
+          {
+            "from": 120000,
+            "to": 150000,
+            "cars": 2819
+          },
+          {
+            "from": 150000,
+            "to": 180000,
+            "cars": 1876
+          },
+          {
+            "from": 180000,
+            "to": 210000,
+            "cars": 818
+          },
+          {
+            "from": 210000,
+            "to": null,
+            "cars": 683
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 5012,
+            "median": 93600
+          },
+          "leasing": {
+            "cars": 7437,
+            "median": 131753
+          },
+          "rental": {
+            "cars": 95,
+            "median": 132885
+          }
+        }
+      },
+      "origins": {
+        "cars": 12716,
+        "private": 39.5,
+        "leasing": 58.9,
+        "rental": 0.7,
+        "other": 0.8
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 804,
+        "expiredShare": 6.2,
+        "expiredOverYear": 5
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 100
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 51
+        },
+        {
+          "name": "כסף מטלי",
+          "share": 18
+        },
+        {
+          "name": "כסוף כהה מטלי",
+          "share": 12.2
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 92.1
+        },
+        {
+          "name": "חברה",
+          "share": 5.9
+        },
+        {
+          "name": "סוחר",
+          "share": 1.2
+        },
+        {
+          "name": "ליסינג",
+          "share": 0.7
+        },
+        {
+          "name": "השכרה",
+          "share": 0
+        }
+      ],
+      "countries": [
+        {
+          "name": "טורקיה",
+          "share": 78.6
+        },
+        {
+          "name": "אנגליה",
+          "share": 21.4
+        }
+      ],
+      "fleet": {
+        "year": 2020,
+        "activeCars": 206208,
+        "medianKm": 94029,
+        "p25Km": 64835,
+        "p75Km": 129922,
+        "mileageCars": 196964,
+        "origins": {
+          "cars": 197767,
+          "private": 68,
+          "leasing": 29,
+          "rental": 2.5,
+          "other": 0.5
+        },
+        "expiredShare": 6.7,
+        "recallShare": 0.5
+      },
+      "neighbours": [
+        {
+          "year": 2018,
+          "activeCars": 5305,
+          "medianKm": 132415,
+          "mileageCars": 5274,
+          "leasing": 55.2,
+          "rental": 5.6,
+          "recallShare": 0,
+          "expiredShare": 4.5,
+          "slug": null
+        },
+        {
+          "year": 2019,
+          "activeCars": 15407,
+          "medianKm": 135593,
+          "mileageCars": 14606,
+          "leasing": 59.8,
+          "rental": 1.9,
+          "recallShare": 0,
+          "expiredShare": 6.6,
+          "slug": "toyota-corolla-2019"
+        },
+        {
+          "year": 2021,
+          "activeCars": 17908,
+          "medianKm": 106873,
+          "mileageCars": 16718,
+          "leasing": 62.3,
+          "rental": 5.2,
+          "recallShare": 0,
+          "expiredShare": 4.5,
+          "slug": "toyota-corolla-2021"
+        },
+        {
+          "year": 2022,
+          "activeCars": 10015,
+          "medianKm": 88973,
+          "mileageCars": 8955,
+          "leasing": 57.4,
+          "rental": 1.9,
+          "recallShare": 0,
+          "expiredShare": 4.7,
+          "slug": "toyota-corolla-2022"
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "COROLLA HSD SDN",
+            "finish": "SUN",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 102,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 137900,
+            "priceMax": 137900,
+            "cars": 5078,
+            "share": 39.3
+          },
+          {
+            "name": "COROLLA HSD SDN",
+            "finish": "SENSE",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 102,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 139900,
+            "priceMax": 139900,
+            "cars": 1537,
+            "share": 11.9
+          },
+          {
+            "name": "COROLLA TS HSD",
+            "finish": "SPACE",
+            "body": "סטיישן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 106,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.4,
+            "kmPerLitre": 22.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 139900,
+            "priceMax": 139900,
+            "cars": 1064,
+            "share": 8.2
+          },
+          {
+            "name": "COROLLA SDN HSD",
+            "finish": "LIMITED",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 111,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.6,
+            "kmPerLitre": 21.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 143900,
+            "priceMax": 143900,
+            "cars": 938,
+            "share": 7.3
+          },
+          {
+            "name": "COROLLA SDN",
+            "finish": "SUN",
+            "body": "סדאן",
+            "engineCc": 1598,
+            "hp": 132,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 153,
+            "co2Standard": "WLTP",
+            "litresPer100": 6.4,
+            "kmPerLitre": 15.6,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 13,
+            "priceMin": 134900,
+            "priceMax": 134900,
+            "cars": 832,
+            "share": 6.4
+          },
+          {
+            "name": "COROLLA TS HSD",
+            "finish": "SPACE PLUS",
+            "body": "סטיישן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 104,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 141900,
+            "priceMax": 141900,
+            "cars": 724,
+            "share": 5.6
+          },
+          {
+            "name": "COROLLA HSD HB",
+            "finish": "EXCITE PLUS",
+            "body": "הצ'בק",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 112,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.7,
+            "kmPerLitre": 21.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 141900,
+            "priceMax": 141900,
+            "cars": 370,
+            "share": 2.9
+          }
+        ],
+        "coveredShare": 81.7,
+        "kmPerLitre": {
+          "min": 15.6,
+          "max": 23.3,
+          "typical": 23.3
+        },
+        "priceNew": {
+          "min": 134900,
+          "max": 143900
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 3,
+          "max": 13
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "kia-picanto-2022",
+      "key": "קיה|PICANTO|2022",
+      "rank": 5,
+      "makeHe": "קיה",
+      "makeEn": "Kia",
+      "modelHe": "פיקנטו",
+      "modelEn": "Picanto",
+      "family": "PICANTO",
+      "year": 2022,
+      "activeCars": 12277,
+      "familyActiveCars": 126205,
+      "familyYearRank": 1,
+      "familyYears": 16,
+      "mileage": {
+        "cars": 12218,
+        "p10": 23068,
+        "p25": 35782,
+        "median": 54079,
+        "p75": 76570,
+        "p90": 99656,
+        "max": 854598,
+        "over100k": 9.9,
+        "over150k": 1.1,
+        "over200k": 0.2,
+        "under50k": 44,
+        "annualMedian": 13832,
+        "annualCars": 12218,
+        "binWidth": 15000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 15000,
+            "cars": 450
+          },
+          {
+            "from": 15000,
+            "to": 30000,
+            "cars": 1727
+          },
+          {
+            "from": 30000,
+            "to": 45000,
+            "cars": 2355
+          },
+          {
+            "from": 45000,
+            "to": 60000,
+            "cars": 2470
+          },
+          {
+            "from": 60000,
+            "to": 75000,
+            "cars": 1981
+          },
+          {
+            "from": 75000,
+            "to": 90000,
+            "cars": 1429
+          },
+          {
+            "from": 90000,
+            "to": 105000,
+            "cars": 827
+          },
+          {
+            "from": 105000,
+            "to": null,
+            "cars": 979
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 6380,
+            "median": 43163
+          },
+          "leasing": {
+            "cars": 3377,
+            "median": 57261
+          },
+          "rental": {
+            "cars": 2382,
+            "median": 81395
+          }
+        }
+      },
+      "origins": {
+        "cars": 12276,
+        "private": 52.3,
+        "leasing": 27.6,
+        "rental": 19.5,
+        "other": 0.6
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 671,
+        "expiredShare": 5.5,
+        "expiredOverYear": 9
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 100
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 47.3
+        },
+        {
+          "name": "כסף",
+          "share": 18
+        },
+        {
+          "name": "אפור",
+          "share": 17.7
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 73.9
+        },
+        {
+          "name": "ליסינג",
+          "share": 8
+        },
+        {
+          "name": "השכרה",
+          "share": 7.7
+        },
+        {
+          "name": "חברה",
+          "share": 7.6
+        },
+        {
+          "name": "סוחר",
+          "share": 2.9
+        }
+      ],
+      "countries": [
+        {
+          "name": "דרום קוריאה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2022,
+        "activeCars": 262330,
+        "medianKm": 63886,
+        "p25Km": 42597,
+        "p75Km": 91145,
+        "mileageCars": 245951,
+        "origins": {
+          "cars": 247932,
+          "private": 72.1,
+          "leasing": 23.5,
+          "rental": 3.9,
+          "other": 0.5
+        },
+        "expiredShare": 6.5,
+        "recallShare": 0.6
+      },
+      "neighbours": [
+        {
+          "year": 2020,
+          "activeCars": 7348,
+          "medianKm": 69148,
+          "mileageCars": 7326,
+          "leasing": 17,
+          "rental": 9,
+          "recallShare": 0,
+          "expiredShare": 5.1,
+          "slug": null
+        },
+        {
+          "year": 2021,
+          "activeCars": 11086,
+          "medianKm": 65300,
+          "mileageCars": 11024,
+          "leasing": 23.7,
+          "rental": 17.7,
+          "recallShare": 0,
+          "expiredShare": 6.3,
+          "slug": "kia-picanto-2021"
+        },
+        {
+          "year": 2023,
+          "activeCars": 6200,
+          "medianKm": 39469,
+          "mileageCars": 5811,
+          "leasing": 34.2,
+          "rental": 14.1,
+          "recallShare": 0,
+          "expiredShare": 5.8,
+          "slug": null
+        },
+        {
+          "year": 2024,
+          "activeCars": 5256,
+          "medianKm": 34323,
+          "mileageCars": 2934,
+          "leasing": 44.6,
+          "rental": 15.7,
+          "recallShare": 0,
+          "expiredShare": 4,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "PICANTO",
+            "finish": "LX",
+            "body": "הצ'בק",
+            "engineCc": 1197,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 131,
+            "co2Standard": "WLTP",
+            "litresPer100": 5.5,
+            "kmPerLitre": 18.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 11,
+            "priceMin": 86500,
+            "priceMax": 86500,
+            "cars": 8282,
+            "share": 67.5
+          },
+          {
+            "name": "PICANTO",
+            "finish": "GT LINE",
+            "body": "הצ'בק",
+            "engineCc": 1197,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 133,
+            "co2Standard": "WLTP",
+            "litresPer100": 5.6,
+            "kmPerLitre": 17.9,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 11,
+            "priceMin": 87900,
+            "priceMax": 87900,
+            "cars": 2050,
+            "share": 16.7
+          },
+          {
+            "name": "PICANTO",
+            "finish": "X-LINE",
+            "body": "הצ'בק",
+            "engineCc": 1197,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 134,
+            "co2Standard": "WLTP",
+            "litresPer100": 5.6,
+            "kmPerLitre": 17.9,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 11,
+            "priceMin": 87900,
+            "priceMax": 87900,
+            "cars": 1098,
+            "share": 8.9
+          },
+          {
+            "name": "PICANTO",
+            "finish": "EX",
+            "body": "הצ'בק",
+            "engineCc": 1197,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 131,
+            "co2Standard": "WLTP",
+            "litresPer100": 5.5,
+            "kmPerLitre": 18.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 11,
+            "priceMin": 86900,
+            "priceMax": 86900,
+            "cars": 811,
+            "share": 6.6
+          }
+        ],
+        "coveredShare": 99.7,
+        "kmPerLitre": {
+          "min": 17.9,
+          "max": 18.2,
+          "typical": 18.2
+        },
+        "priceNew": {
+          "min": 86500,
+          "max": 87900
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 11,
+          "max": 11
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "hyundai-ioniq-2021",
+      "key": "יונדאי|IONIQ|2021",
+      "rank": 6,
+      "makeHe": "יונדאי",
+      "makeEn": "Hyundai",
+      "modelHe": "איוניק",
+      "modelEn": "Ioniq",
+      "family": "IONIQ",
+      "year": 2021,
+      "activeCars": 11127,
+      "familyActiveCars": 51173,
+      "familyYearRank": 1,
+      "familyYears": 8,
+      "mileage": {
+        "cars": 11089,
+        "p10": 66598,
+        "p25": 88929,
+        "median": 114336,
+        "p75": 140339,
+        "p90": 167148,
+        "max": 957987,
+        "over100k": 64.7,
+        "over150k": 18.5,
+        "over200k": 3.3,
+        "under50k": 4.1,
+        "annualMedian": 23166,
+        "annualCars": 11089,
+        "binWidth": 25000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 25000,
+            "cars": 63
+          },
+          {
+            "from": 25000,
+            "to": 50000,
+            "cars": 396
+          },
+          {
+            "from": 50000,
+            "to": 75000,
+            "cars": 1160
+          },
+          {
+            "from": 75000,
+            "to": 100000,
+            "cars": 2297
+          },
+          {
+            "from": 100000,
+            "to": 125000,
+            "cars": 2864
+          },
+          {
+            "from": 125000,
+            "to": 150000,
+            "cars": 2263
+          },
+          {
+            "from": 150000,
+            "to": 175000,
+            "cars": 1185
+          },
+          {
+            "from": 175000,
+            "to": null,
+            "cars": 861
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 2936,
+            "median": 96878
+          },
+          "leasing": {
+            "cars": 7721,
+            "median": 117948
+          },
+          "rental": {
+            "cars": 386,
+            "median": 119900
+          }
+        }
+      },
+      "origins": {
+        "cars": 11127,
+        "private": 26.5,
+        "leasing": 69.6,
+        "rental": 3.5,
+        "other": 0.4
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 652,
+        "expiredShare": 5.9,
+        "expiredOverYear": 11
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 99.7
+        },
+        {
+          "name": "חשמל",
+          "share": 0.3
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 53.5
+        },
+        {
+          "name": "כסוף כהה",
+          "share": 16.3
+        },
+        {
+          "name": "כסף",
+          "share": 14.2
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 88
+        },
+        {
+          "name": "חברה",
+          "share": 8.1
+        },
+        {
+          "name": "סוחר",
+          "share": 2.1
+        },
+        {
+          "name": "ליסינג",
+          "share": 1.7
+        },
+        {
+          "name": "השכרה",
+          "share": 0.1
+        }
+      ],
+      "countries": [
+        {
+          "name": "דרום קוריאה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2021,
+        "activeCars": 282297,
+        "medianKm": 82350,
+        "p25Km": 55728,
+        "p75Km": 113551,
+        "mileageCars": 266642,
+        "origins": {
+          "cars": 267620,
+          "private": 68,
+          "leasing": 26.4,
+          "rental": 5.1,
+          "other": 0.5
+        },
+        "expiredShare": 6.2,
+        "recallShare": 0.7
+      },
+      "neighbours": [
+        {
+          "year": 2019,
+          "activeCars": 10181,
+          "medianKm": 152314,
+          "mileageCars": 10142,
+          "leasing": 68.7,
+          "rental": 2.9,
+          "recallShare": 0,
+          "expiredShare": 7.1,
+          "slug": "hyundai-ioniq-2019"
+        },
+        {
+          "year": 2020,
+          "activeCars": 9000,
+          "medianKm": 131002,
+          "mileageCars": 8957,
+          "leasing": 68,
+          "rental": 1.8,
+          "recallShare": 0,
+          "expiredShare": 6.7,
+          "slug": "hyundai-ioniq-2020"
+        },
+        {
+          "year": 2022,
+          "activeCars": 5539,
+          "medianKm": 96846,
+          "mileageCars": 5519,
+          "leasing": 71,
+          "rental": 5.3,
+          "recallShare": 0,
+          "expiredShare": 3,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "IONIQ HYBRID",
+            "finish": "PREMIUM FL",
+            "body": "הצ'בק",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 104,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 143900,
+            "priceMax": 143900,
+            "cars": 9865,
+            "share": 88.7
+          },
+          {
+            "name": "IONIQ HYBRID",
+            "finish": "SUPREME FL",
+            "body": "הצ'בק",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 105,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.4,
+            "kmPerLitre": 22.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 143990,
+            "priceMax": 143990,
+            "cars": 1228,
+            "share": 11
+          }
+        ],
+        "coveredShare": 99.7,
+        "kmPerLitre": {
+          "min": 22.7,
+          "max": 23.3,
+          "typical": 23.3
+        },
+        "priceNew": {
+          "min": 143900,
+          "max": 143990
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 3,
+          "max": 3
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "kia-picanto-2021",
+      "key": "קיה|PICANTO|2021",
+      "rank": 7,
+      "makeHe": "קיה",
+      "makeEn": "Kia",
+      "modelHe": "פיקנטו",
+      "modelEn": "Picanto",
+      "family": "PICANTO",
+      "year": 2021,
+      "activeCars": 11086,
+      "familyActiveCars": 126205,
+      "familyYearRank": 4,
+      "familyYears": 16,
+      "mileage": {
+        "cars": 11024,
+        "p10": 27182,
+        "p25": 43060,
+        "median": 65300,
+        "p75": 89400,
+        "p90": 110511,
+        "max": 939321,
+        "over100k": 16.2,
+        "over150k": 1.5,
+        "over200k": 0.3,
+        "under50k": 32.6,
+        "annualMedian": 13632,
+        "annualCars": 11024,
+        "binWidth": 20000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 20000,
+            "cars": 557
+          },
+          {
+            "from": 20000,
+            "to": 40000,
+            "cars": 1843
+          },
+          {
+            "from": 40000,
+            "to": 60000,
+            "cars": 2449
+          },
+          {
+            "from": 60000,
+            "to": 80000,
+            "cars": 2366
+          },
+          {
+            "from": 80000,
+            "to": 100000,
+            "cars": 2022
+          },
+          {
+            "from": 100000,
+            "to": 120000,
+            "cars": 1090
+          },
+          {
+            "from": 120000,
+            "to": 140000,
+            "cars": 442
+          },
+          {
+            "from": 140000,
+            "to": null,
+            "cars": 255
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 6437,
+            "median": 52029
+          },
+          "leasing": {
+            "cars": 2610,
+            "median": 74660
+          },
+          "rental": {
+            "cars": 1943,
+            "median": 94010
+          }
+        }
+      },
+      "origins": {
+        "cars": 11085,
+        "private": 58.3,
+        "leasing": 23.7,
+        "rental": 17.7,
+        "other": 0.3
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 699,
+        "expiredShare": 6.3,
+        "expiredOverYear": 14
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 100
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 46.3
+        },
+        {
+          "name": "כסף",
+          "share": 20.9
+        },
+        {
+          "name": "שחור",
+          "share": 13.4
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 81.6
+        },
+        {
+          "name": "השכרה",
+          "share": 6.6
+        },
+        {
+          "name": "ליסינג",
+          "share": 4.9
+        },
+        {
+          "name": "חברה",
+          "share": 4.4
+        },
+        {
+          "name": "סוחר",
+          "share": 2.4
+        }
+      ],
+      "countries": [
+        {
+          "name": "דרום קוריאה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2021,
+        "activeCars": 282297,
+        "medianKm": 82350,
+        "p25Km": 55728,
+        "p75Km": 113551,
+        "mileageCars": 266642,
+        "origins": {
+          "cars": 267620,
+          "private": 68,
+          "leasing": 26.4,
+          "rental": 5.1,
+          "other": 0.5
+        },
+        "expiredShare": 6.2,
+        "recallShare": 0.7
+      },
+      "neighbours": [
+        {
+          "year": 2019,
+          "activeCars": 7579,
+          "medianKm": 82694,
+          "mileageCars": 7559,
+          "leasing": 11.7,
+          "rental": 12.5,
+          "recallShare": 0,
+          "expiredShare": 4.7,
+          "slug": null
+        },
+        {
+          "year": 2020,
+          "activeCars": 7348,
+          "medianKm": 69148,
+          "mileageCars": 7326,
+          "leasing": 17,
+          "rental": 9,
+          "recallShare": 0,
+          "expiredShare": 5.1,
+          "slug": null
+        },
+        {
+          "year": 2022,
+          "activeCars": 12277,
+          "medianKm": 54079,
+          "mileageCars": 12218,
+          "leasing": 27.6,
+          "rental": 19.5,
+          "recallShare": 0,
+          "expiredShare": 5.5,
+          "slug": "kia-picanto-2022"
+        },
+        {
+          "year": 2023,
+          "activeCars": 6200,
+          "medianKm": 39469,
+          "mileageCars": 5811,
+          "leasing": 34.2,
+          "rental": 14.1,
+          "recallShare": 0,
+          "expiredShare": 5.8,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "PICANTO",
+            "finish": "LX",
+            "body": "הצ'בק",
+            "engineCc": 1197,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 131,
+            "co2Standard": "WLTP",
+            "litresPer100": 5.5,
+            "kmPerLitre": 18.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 11,
+            "priceMin": 84500,
+            "priceMax": 84500,
+            "cars": 4120,
+            "share": 37.2
+          },
+          {
+            "name": "PICANTO",
+            "finish": "LX",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 148,
+            "co2Standard": "WLTP",
+            "litresPer100": 6.2,
+            "kmPerLitre": 16.1,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 83500,
+            "priceMax": 83500,
+            "cars": 2803,
+            "share": 25.3
+          },
+          {
+            "name": "PICANTO",
+            "finish": "EX",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 149,
+            "co2Standard": "WLTP",
+            "litresPer100": 6.2,
+            "kmPerLitre": 16.1,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 83900,
+            "priceMax": 83900,
+            "cars": 1047,
+            "share": 9.4
+          },
+          {
+            "name": "PICANTO",
+            "finish": "GT LINE",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 152,
+            "co2Standard": "WLTP",
+            "litresPer100": 6.4,
+            "kmPerLitre": 15.6,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 85900,
+            "priceMax": 85900,
+            "cars": 978,
+            "share": 8.8
+          },
+          {
+            "name": "PICANTO",
+            "finish": "GT LINE",
+            "body": "הצ'בק",
+            "engineCc": 1197,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 133,
+            "co2Standard": "WLTP",
+            "litresPer100": 5.6,
+            "kmPerLitre": 17.9,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 11,
+            "priceMin": 84900,
+            "priceMax": 84900,
+            "cars": 903,
+            "share": 8.1
+          },
+          {
+            "name": "PICANTO",
+            "finish": "X-LINE",
+            "body": "הצ'בק",
+            "engineCc": 1197,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 134,
+            "co2Standard": "WLTP",
+            "litresPer100": 5.6,
+            "kmPerLitre": 17.9,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 11,
+            "priceMin": 84900,
+            "priceMax": 84900,
+            "cars": 487,
+            "share": 4.4
+          },
+          {
+            "name": "PICANTO",
+            "finish": "EX",
+            "body": "הצ'בק",
+            "engineCc": 1197,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 131,
+            "co2Standard": "WLTP",
+            "litresPer100": 5.5,
+            "kmPerLitre": 18.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 11,
+            "priceMin": 84900,
+            "priceMax": 84900,
+            "cars": 389,
+            "share": 3.5
+          },
+          {
+            "name": "PICANTO",
+            "finish": "LX",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 148,
+            "co2Standard": "WLTP",
+            "litresPer100": 6.2,
+            "kmPerLitre": 16.1,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 83500,
+            "priceMax": 83500,
+            "cars": 339,
+            "share": 3.1
+          }
+        ],
+        "coveredShare": 99.8,
+        "kmPerLitre": {
+          "min": 15.6,
+          "max": 18.2,
+          "typical": 17.9
+        },
+        "priceNew": {
+          "min": 83500,
+          "max": 85900
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 11,
+          "max": 14
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "kia-sportage-2017",
+      "key": "קיה|SPORTAGE|2017",
+      "rank": 8,
+      "makeHe": "קיה",
+      "makeEn": "Kia",
+      "modelHe": "ספורטז׳",
+      "modelEn": "Sportage",
+      "family": "SPORTAGE",
+      "year": 2017,
+      "activeCars": 10922,
+      "familyActiveCars": 99589,
+      "familyYearRank": 2,
+      "familyYears": 27,
+      "mileage": {
+        "cars": 10868,
+        "p10": 71001,
+        "p25": 94279,
+        "median": 122484,
+        "p75": 154809,
+        "p90": 188093,
+        "max": 981783,
+        "over100k": 70.1,
+        "over150k": 28.2,
+        "over200k": 6.7,
+        "under50k": 3.1,
+        "annualMedian": 13738,
+        "annualCars": 10868,
+        "binWidth": 30000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 30000,
+            "cars": 61
+          },
+          {
+            "from": 30000,
+            "to": 60000,
+            "cars": 570
+          },
+          {
+            "from": 60000,
+            "to": 90000,
+            "cars": 1732
+          },
+          {
+            "from": 90000,
+            "to": 120000,
+            "cars": 2796
+          },
+          {
+            "from": 120000,
+            "to": 150000,
+            "cars": 2645
+          },
+          {
+            "from": 150000,
+            "to": 180000,
+            "cars": 1718
+          },
+          {
+            "from": 180000,
+            "to": 210000,
+            "cars": 821
+          },
+          {
+            "from": 210000,
+            "to": null,
+            "cars": 525
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 8028,
+            "median": 113467
+          },
+          "leasing": {
+            "cars": 2709,
+            "median": 150302
+          },
+          "rental": {
+            "cars": 118,
+            "median": 148624
+          }
+        }
+      },
+      "origins": {
+        "cars": 10916,
+        "private": 73.9,
+        "leasing": 24.9,
+        "rental": 1.1,
+        "other": 0.1
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 770,
+        "expiredShare": 7,
+        "expiredOverYear": 14
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 99.8
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0.2
+        },
+        {
+          "name": "דיזל",
+          "share": 0
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 52.2
+        },
+        {
+          "name": "שחור",
+          "share": 19.5
+        },
+        {
+          "name": "אפור",
+          "share": 11.5
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 97.4
+        },
+        {
+          "name": "סוחר",
+          "share": 1.7
+        },
+        {
+          "name": "חברה",
+          "share": 0.9
+        },
+        {
+          "name": "ליסינג",
+          "share": 0
+        },
+        {
+          "name": "השכרה",
+          "share": 0
+        }
+      ],
+      "countries": [
+        {
+          "name": "סלובקיה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2017,
+        "activeCars": 251837,
+        "medianKm": 133659,
+        "p25Km": 97207,
+        "p75Km": 174888,
+        "mileageCars": 239672,
+        "origins": {
+          "cars": 240798,
+          "private": 70.7,
+          "leasing": 24,
+          "rental": 4.5,
+          "other": 0.8
+        },
+        "expiredShare": 7.4,
+        "recallShare": 0.1
+      },
+      "neighbours": [
+        {
+          "year": 2015,
+          "activeCars": 9656,
+          "medianKm": null,
+          "mileageCars": 0,
+          "leasing": null,
+          "rental": null,
+          "recallShare": 0,
+          "expiredShare": 7.2,
+          "slug": null
+        },
+        {
+          "year": 2016,
+          "activeCars": 12808,
+          "medianKm": null,
+          "mileageCars": 0,
+          "leasing": null,
+          "rental": null,
+          "recallShare": 0,
+          "expiredShare": 7.2,
+          "slug": null
+        },
+        {
+          "year": 2018,
+          "activeCars": 9451,
+          "medianKm": 111026,
+          "mileageCars": 9412,
+          "leasing": 27.9,
+          "rental": 1.7,
+          "recallShare": 0,
+          "expiredShare": 6.5,
+          "slug": "kia-sportage-2018"
+        },
+        {
+          "year": 2019,
+          "activeCars": 7072,
+          "medianKm": 105395,
+          "mileageCars": 7032,
+          "leasing": 26.2,
+          "rental": 1.3,
+          "recallShare": 1.7,
+          "expiredShare": 7.5,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "SPORTAGE",
+            "finish": "URBAN",
+            "body": "פנאי-שטח",
+            "engineCc": 1591,
+            "hp": 132,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 170,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.1,
+            "kmPerLitre": 14.1,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 139900,
+            "priceMax": 139900,
+            "cars": 6098,
+            "share": 55.8
+          },
+          {
+            "name": "SPORTAGE",
+            "finish": "URBAN",
+            "body": "פנאי-שטח",
+            "engineCc": 1999,
+            "hp": 155,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 182,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.6,
+            "kmPerLitre": 13.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 153901,
+            "priceMax": 153901,
+            "cars": 2190,
+            "share": 20.1
+          },
+          {
+            "name": "SPORTAGE",
+            "finish": "PREMIUM GT",
+            "body": "פנאי-שטח",
+            "engineCc": 1591,
+            "hp": 177,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 175,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.3,
+            "kmPerLitre": 13.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 186900,
+            "priceMax": 186900,
+            "cars": 993,
+            "share": 9.1
+          },
+          {
+            "name": "SPORTAGE",
+            "finish": "URBAN",
+            "body": "פנאי-שטח",
+            "engineCc": 1999,
+            "hp": 155,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 182,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.6,
+            "kmPerLitre": 13.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 153901,
+            "priceMax": 153901,
+            "cars": 526,
+            "share": 4.8
+          },
+          {
+            "name": "SPORTAGE",
+            "finish": "URBAN",
+            "body": "פנאי-שטח",
+            "engineCc": 1999,
+            "hp": 155,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 182,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.6,
+            "kmPerLitre": 13.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 153901,
+            "priceMax": 153901,
+            "cars": 493,
+            "share": 4.5
+          },
+          {
+            "name": "SPORTAGE",
+            "finish": "EX",
+            "body": "פנאי-שטח",
+            "engineCc": 1999,
+            "hp": 155,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 185,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.7,
+            "kmPerLitre": 13,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 177900,
+            "priceMax": 177900,
+            "cars": 375,
+            "share": 3.4
+          }
+        ],
+        "coveredShare": 97.7,
+        "kmPerLitre": {
+          "min": 13,
+          "max": 14.1,
+          "typical": 14.1
+        },
+        "priceNew": {
+          "min": 139900,
+          "max": 186900
+        },
+        "nedcOnly": true,
+        "pollution": {
+          "min": 15,
+          "max": 15
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "kia-picanto-2017",
+      "key": "קיה|PICANTO|2017",
+      "rank": 9,
+      "makeHe": "קיה",
+      "makeEn": "Kia",
+      "modelHe": "פיקנטו",
+      "modelEn": "Picanto",
+      "family": "PICANTO",
+      "year": 2017,
+      "activeCars": 10742,
+      "familyActiveCars": 126205,
+      "familyYearRank": 5,
+      "familyYears": 16,
+      "mileage": {
+        "cars": 10695,
+        "p10": 50539,
+        "p25": 73505,
+        "median": 100801,
+        "p75": 131846,
+        "p90": 162998,
+        "max": 945190,
+        "over100k": 50.8,
+        "over150k": 15.1,
+        "over200k": 2.8,
+        "under50k": 9.6,
+        "annualMedian": 11307,
+        "annualCars": 10695,
+        "binWidth": 25000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 25000,
+            "cars": 179
+          },
+          {
+            "from": 25000,
+            "to": 50000,
+            "cars": 850
+          },
+          {
+            "from": 50000,
+            "to": 75000,
+            "cars": 1787
+          },
+          {
+            "from": 75000,
+            "to": 100000,
+            "cars": 2446
+          },
+          {
+            "from": 100000,
+            "to": 125000,
+            "cars": 2264
+          },
+          {
+            "from": 125000,
+            "to": 150000,
+            "cars": 1558
+          },
+          {
+            "from": 150000,
+            "to": 175000,
+            "cars": 873
+          },
+          {
+            "from": 175000,
+            "to": null,
+            "cars": 738
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 8413,
+            "median": 93600
+          },
+          "leasing": {
+            "cars": 1475,
+            "median": 116158
+          },
+          "rental": {
+            "cars": 807,
+            "median": 142887
+          }
+        }
+      },
+      "origins": {
+        "cars": 10741,
+        "private": 78.7,
+        "leasing": 13.8,
+        "rental": 7.5,
+        "other": 0
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 494,
+        "expiredShare": 4.6,
+        "expiredOverYear": 7
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 99.9
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0.1
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 34
+        },
+        {
+          "name": "כסוף כהה",
+          "share": 23.3
+        },
+        {
+          "name": "כסף",
+          "share": 18.4
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 97.9
+        },
+        {
+          "name": "חברה",
+          "share": 1.2
+        },
+        {
+          "name": "סוחר",
+          "share": 0.8
+        },
+        {
+          "name": "השכרה",
+          "share": 0.1
+        },
+        {
+          "name": "ליסינג",
+          "share": 0
+        }
+      ],
+      "countries": [
+        {
+          "name": "דרום קוריאה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2017,
+        "activeCars": 251837,
+        "medianKm": 133659,
+        "p25Km": 97207,
+        "p75Km": 174888,
+        "mileageCars": 239672,
+        "origins": {
+          "cars": 240798,
+          "private": 70.7,
+          "leasing": 24,
+          "rental": 4.5,
+          "other": 0.8
+        },
+        "expiredShare": 7.4,
+        "recallShare": 0.1
+      },
+      "neighbours": [
+        {
+          "year": 2015,
+          "activeCars": 11193,
+          "medianKm": null,
+          "mileageCars": 0,
+          "leasing": null,
+          "rental": null,
+          "recallShare": 0,
+          "expiredShare": 6.7,
+          "slug": null
+        },
+        {
+          "year": 2016,
+          "activeCars": 11990,
+          "medianKm": null,
+          "mileageCars": 1,
+          "leasing": 0,
+          "rental": 0,
+          "recallShare": 0,
+          "expiredShare": 5.1,
+          "slug": null
+        },
+        {
+          "year": 2018,
+          "activeCars": 8068,
+          "medianKm": 86026,
+          "mileageCars": 8037,
+          "leasing": 10.9,
+          "rental": 2.8,
+          "recallShare": 0,
+          "expiredShare": 5.3,
+          "slug": "kia-picanto-2018"
+        },
+        {
+          "year": 2019,
+          "activeCars": 7579,
+          "medianKm": 82694,
+          "mileageCars": 7559,
+          "leasing": 11.7,
+          "rental": 12.5,
+          "recallShare": 0,
+          "expiredShare": 4.7,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "PICANTO",
+            "finish": "LX",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 85,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 130,
+            "co2Standard": "NEDC",
+            "litresPer100": 5.4,
+            "kmPerLitre": 18.5,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 79500,
+            "priceMax": 79500,
+            "cars": 2410,
+            "share": 22.4
+          },
+          {
+            "name": "PICANTO",
+            "finish": "LX",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 148,
+            "co2Standard": "WLTP",
+            "litresPer100": 6.2,
+            "kmPerLitre": 16.1,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 80000,
+            "priceMax": 80000,
+            "cars": 2324,
+            "share": 21.6
+          },
+          {
+            "name": "PICANTO",
+            "finish": "EX",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 124,
+            "co2Standard": "NEDC",
+            "litresPer100": 5.2,
+            "kmPerLitre": 19.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 13,
+            "priceMin": 81000,
+            "priceMax": 81000,
+            "cars": 1657,
+            "share": 15.4
+          },
+          {
+            "name": "PICANTO",
+            "finish": "EX",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 124,
+            "co2Standard": "NEDC",
+            "litresPer100": 5.2,
+            "kmPerLitre": 19.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 13,
+            "priceMin": 81000,
+            "priceMax": 81000,
+            "cars": 1591,
+            "share": 14.8
+          },
+          {
+            "name": "PICANTO",
+            "finish": "TOP",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 85,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 130,
+            "co2Standard": "NEDC",
+            "litresPer100": 5.4,
+            "kmPerLitre": 18.5,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 79900,
+            "priceMax": 79900,
+            "cars": 1551,
+            "share": 14.4
+          },
+          {
+            "name": "PICANTO",
+            "finish": "LX",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 85,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 130,
+            "co2Standard": "NEDC",
+            "litresPer100": 5.4,
+            "kmPerLitre": 18.5,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 79500,
+            "priceMax": 79500,
+            "cars": 850,
+            "share": 7.9
+          }
+        ],
+        "coveredShare": 96.7,
+        "kmPerLitre": {
+          "min": 16.1,
+          "max": 19.2,
+          "typical": 18.5
+        },
+        "priceNew": {
+          "min": 79500,
+          "max": 81000
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 13,
+          "max": 14
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "hyundai-ioniq-2019",
+      "key": "יונדאי|IONIQ|2019",
+      "rank": 10,
+      "makeHe": "יונדאי",
+      "makeEn": "Hyundai",
+      "modelHe": "איוניק",
+      "modelEn": "Ioniq",
+      "family": "IONIQ",
+      "year": 2019,
+      "activeCars": 10181,
+      "familyActiveCars": 51173,
+      "familyYearRank": 2,
+      "familyYears": 8,
+      "mileage": {
+        "cars": 10142,
+        "p10": 93000,
+        "p25": 120303,
+        "median": 152314,
+        "p75": 183429,
+        "p90": 215922,
+        "max": 709295,
+        "over100k": 86.8,
+        "over150k": 52.1,
+        "over200k": 15.7,
+        "under50k": 1.5,
+        "annualMedian": 22133,
+        "annualCars": 10142,
+        "binWidth": 40000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 40000,
+            "cars": 79
+          },
+          {
+            "from": 40000,
+            "to": 80000,
+            "cars": 534
+          },
+          {
+            "from": 80000,
+            "to": 120000,
+            "cars": 1903
+          },
+          {
+            "from": 120000,
+            "to": 160000,
+            "cars": 3237
+          },
+          {
+            "from": 160000,
+            "to": 200000,
+            "cars": 2794
+          },
+          {
+            "from": 200000,
+            "to": 240000,
+            "cars": 1083
+          },
+          {
+            "from": 240000,
+            "to": 280000,
+            "cars": 335
+          },
+          {
+            "from": 280000,
+            "to": null,
+            "cars": 177
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 2836,
+            "median": 129925
+          },
+          "leasing": {
+            "cars": 6973,
+            "median": 157169
+          },
+          "rental": {
+            "cars": 289,
+            "median": 163043
+          }
+        }
+      },
+      "origins": {
+        "cars": 10180,
+        "private": 28,
+        "leasing": 68.7,
+        "rental": 2.9,
+        "other": 0.4
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 726,
+        "expiredShare": 7.1,
+        "expiredOverYear": 20
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 99.6
+        },
+        {
+          "name": "חשמל",
+          "share": 0.4
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 51.2
+        },
+        {
+          "name": "אפור",
+          "share": 14.9
+        },
+        {
+          "name": "כסף",
+          "share": 14.6
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 92.9
+        },
+        {
+          "name": "חברה",
+          "share": 5.1
+        },
+        {
+          "name": "סוחר",
+          "share": 1.6
+        },
+        {
+          "name": "ליסינג",
+          "share": 0.3
+        },
+        {
+          "name": "השכרה",
+          "share": 0.1
+        }
+      ],
+      "countries": [
+        {
+          "name": "דרום קוריאה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2019,
+        "activeCars": 239639,
+        "medianKm": 108999,
+        "p25Km": 76058,
+        "p75Km": 147235,
+        "mileageCars": 227244,
+        "origins": {
+          "cars": 228361,
+          "private": 66.4,
+          "leasing": 27.9,
+          "rental": 4.9,
+          "other": 0.7
+        },
+        "expiredShare": 6.8,
+        "recallShare": 0.3
+      },
+      "neighbours": [
+        {
+          "year": 2017,
+          "activeCars": 6051,
+          "medianKm": 178926,
+          "mileageCars": 6033,
+          "leasing": 61.5,
+          "rental": 1.1,
+          "recallShare": 0,
+          "expiredShare": 7.8,
+          "slug": null
+        },
+        {
+          "year": 2018,
+          "activeCars": 9215,
+          "medianKm": 170647,
+          "mileageCars": 9182,
+          "leasing": 74.5,
+          "rental": 0.6,
+          "recallShare": 0,
+          "expiredShare": 7.7,
+          "slug": "hyundai-ioniq-2018"
+        },
+        {
+          "year": 2020,
+          "activeCars": 9000,
+          "medianKm": 131002,
+          "mileageCars": 8957,
+          "leasing": 68,
+          "rental": 1.8,
+          "recallShare": 0,
+          "expiredShare": 6.7,
+          "slug": "hyundai-ioniq-2020"
+        },
+        {
+          "year": 2021,
+          "activeCars": 11127,
+          "medianKm": 114336,
+          "mileageCars": 11089,
+          "leasing": 69.6,
+          "rental": 3.5,
+          "recallShare": 0,
+          "expiredShare": 5.9,
+          "slug": "hyundai-ioniq-2021"
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "IONIQ HYBRID",
+            "finish": "PREMIUM",
+            "body": "הצ'בק",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 105,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.4,
+            "kmPerLitre": 22.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 135900,
+            "priceMax": 135900,
+            "cars": 7061,
+            "share": 69.4
+          },
+          {
+            "name": "IONIQ HYBRID",
+            "finish": "PREMIUM FL",
+            "body": "הצ'בק",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 104,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 137900,
+            "priceMax": 137900,
+            "cars": 1756,
+            "share": 17.2
+          },
+          {
+            "name": "IONIQ HYBRID",
+            "finish": "SUPREME",
+            "body": "הצ'בק",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 105,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.4,
+            "kmPerLitre": 22.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 139900,
+            "priceMax": 139900,
+            "cars": 817,
+            "share": 8
+          },
+          {
+            "name": "IONIQ HYBRID",
+            "finish": "INSPIRE",
+            "body": "הצ'בק",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 92,
+            "co2Standard": "NEDC",
+            "litresPer100": 3.8,
+            "kmPerLitre": 26.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 119900,
+            "priceMax": 119900,
+            "cars": 271,
+            "share": 2.7
+          }
+        ],
+        "coveredShare": 97.3,
+        "kmPerLitre": {
+          "min": 22.7,
+          "max": 26.3,
+          "typical": 22.7
+        },
+        "priceNew": {
+          "min": 119900,
+          "max": 139900
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 3,
+          "max": 4
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "toyota-corolla-2022",
+      "key": "טויוטה|COROLLA|2022",
+      "rank": 11,
+      "makeHe": "טויוטה",
+      "makeEn": "Toyota",
+      "modelHe": "קורולה",
+      "modelEn": "Corolla",
+      "family": "COROLLA",
+      "year": 2022,
+      "activeCars": 10015,
+      "familyActiveCars": 196744,
+      "familyYearRank": 8,
+      "familyYears": 31,
+      "mileage": {
+        "cars": 8955,
+        "p10": 41350,
+        "p25": 62300,
+        "median": 88973,
+        "p75": 116796,
+        "p90": 146834,
+        "max": 961749,
+        "over100k": 39.3,
+        "over150k": 9,
+        "over200k": 1.4,
+        "under50k": 15.2,
+        "annualMedian": 22865,
+        "annualCars": 8955,
+        "binWidth": 25000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 25000,
+            "cars": 284
+          },
+          {
+            "from": 25000,
+            "to": 50000,
+            "cars": 1075
+          },
+          {
+            "from": 50000,
+            "to": 75000,
+            "cars": 1879
+          },
+          {
+            "from": 75000,
+            "to": 100000,
+            "cars": 2198
+          },
+          {
+            "from": 100000,
+            "to": 125000,
+            "cars": 1761
+          },
+          {
+            "from": 125000,
+            "to": 150000,
+            "cars": 950
+          },
+          {
+            "from": 150000,
+            "to": 175000,
+            "cars": 467
+          },
+          {
+            "from": 175000,
+            "to": null,
+            "cars": 341
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 3584,
+            "median": 69230
+          },
+          "leasing": {
+            "cars": 5152,
+            "median": 98988
+          },
+          "rental": {
+            "cars": 168,
+            "median": 94862
+          }
+        }
+      },
+      "origins": {
+        "cars": 8999,
+        "private": 40.2,
+        "leasing": 57.4,
+        "rental": 1.9,
+        "other": 0.6
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 472,
+        "expiredShare": 4.7,
+        "expiredOverYear": 10
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 100
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 62.6
+        },
+        {
+          "name": "כסף מטלי",
+          "share": 19.3
+        },
+        {
+          "name": "תכלת מטאלי",
+          "share": 8.9
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 83.1
+        },
+        {
+          "name": "חברה",
+          "share": 11.2
+        },
+        {
+          "name": "ליסינג",
+          "share": 3.8
+        },
+        {
+          "name": "סוחר",
+          "share": 1.7
+        },
+        {
+          "name": "השכרה",
+          "share": 0.2
+        }
+      ],
+      "countries": [
+        {
+          "name": "טורקיה",
+          "share": 83.1
+        },
+        {
+          "name": "אנגליה",
+          "share": 16.9
+        },
+        {
+          "name": "יפן",
+          "share": 0.1
+        }
+      ],
+      "fleet": {
+        "year": 2022,
+        "activeCars": 262330,
+        "medianKm": 63886,
+        "p25Km": 42597,
+        "p75Km": 91145,
+        "mileageCars": 245951,
+        "origins": {
+          "cars": 247932,
+          "private": 72.1,
+          "leasing": 23.5,
+          "rental": 3.9,
+          "other": 0.5
+        },
+        "expiredShare": 6.5,
+        "recallShare": 0.6
+      },
+      "neighbours": [
+        {
+          "year": 2020,
+          "activeCars": 12909,
+          "medianKm": 118635,
+          "mileageCars": 12644,
+          "leasing": 58.9,
+          "rental": 0.7,
+          "recallShare": 0,
+          "expiredShare": 6.2,
+          "slug": "toyota-corolla-2020"
+        },
+        {
+          "year": 2021,
+          "activeCars": 17908,
+          "medianKm": 106873,
+          "mileageCars": 16718,
+          "leasing": 62.3,
+          "rental": 5.2,
+          "recallShare": 0,
+          "expiredShare": 4.5,
+          "slug": "toyota-corolla-2021"
+        },
+        {
+          "year": 2023,
+          "activeCars": 5817,
+          "medianKm": 70251,
+          "mileageCars": 5327,
+          "leasing": 70.1,
+          "rental": 0.8,
+          "recallShare": 5.5,
+          "expiredShare": 4.6,
+          "slug": null
+        },
+        {
+          "year": 2024,
+          "activeCars": 4144,
+          "medianKm": 57223,
+          "mileageCars": 2788,
+          "leasing": 80.2,
+          "rental": 0.5,
+          "recallShare": 6.2,
+          "expiredShare": 1.9,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "COROLLA HSD SDN",
+            "finish": "SUN",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 102,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 144990,
+            "priceMax": 144990,
+            "cars": 4065,
+            "share": 40.6
+          },
+          {
+            "name": "COROLLA HSD SDN",
+            "finish": "SENSE",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 102,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 145990,
+            "priceMax": 145990,
+            "cars": 1819,
+            "share": 18.2
+          },
+          {
+            "name": "COROLLA TS HSD",
+            "finish": "SPACE",
+            "body": "סטיישן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 106,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.4,
+            "kmPerLitre": 22.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 148990,
+            "priceMax": 148990,
+            "cars": 1089,
+            "share": 10.9
+          },
+          {
+            "name": "COROLLA SDN HSD",
+            "finish": "LIMITED",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 112,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.7,
+            "kmPerLitre": 21.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 150990,
+            "priceMax": 150990,
+            "cars": 986,
+            "share": 9.8
+          },
+          {
+            "name": "COROLLA SDN HSD",
+            "finish": "LIMITED",
+            "body": "סדאן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 112,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.7,
+            "kmPerLitre": 21.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 150990,
+            "priceMax": 150990,
+            "cars": 558,
+            "share": 5.6
+          },
+          {
+            "name": "COROLLA TS HSD",
+            "finish": "SPACE PLUS",
+            "body": "סטיישן",
+            "engineCc": 1798,
+            "hp": 98,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 103,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 150990,
+            "priceMax": 150990,
+            "cars": 410,
+            "share": 4.1
+          },
+          {
+            "name": "COROLLA SEDAN",
+            "finish": "ACTIVE",
+            "body": "סדאן",
+            "engineCc": 1490,
+            "hp": 125,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 134,
+            "co2Standard": "WLTP",
+            "litresPer100": 5.6,
+            "kmPerLitre": 17.9,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 9,
+            "priceMin": 134990,
+            "priceMax": 134990,
+            "cars": 350,
+            "share": 3.5
+          },
+          {
+            "name": "COROLLA SEDAN",
+            "finish": "SENSE",
+            "body": "סדאן",
+            "engineCc": 1490,
+            "hp": 125,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 135,
+            "co2Standard": "WLTP",
+            "litresPer100": 5.6,
+            "kmPerLitre": 17.9,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 9,
+            "priceMin": 138990,
+            "priceMax": 138990,
+            "cars": 212,
+            "share": 2.1
+          }
+        ],
+        "coveredShare": 94.7,
+        "kmPerLitre": {
+          "min": 17.9,
+          "max": 23.3,
+          "typical": 23.3
+        },
+        "priceNew": {
+          "min": 134990,
+          "max": 150990
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 3,
+          "max": 9
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "kia-sportage-2018",
+      "key": "קיה|SPORTAGE|2018",
+      "rank": 12,
+      "makeHe": "קיה",
+      "makeEn": "Kia",
+      "modelHe": "ספורטז׳",
+      "modelEn": "Sportage",
+      "family": "SPORTAGE",
+      "year": 2018,
+      "activeCars": 9451,
+      "familyActiveCars": 99589,
+      "familyYearRank": 4,
+      "familyYears": 27,
+      "mileage": {
+        "cars": 9412,
+        "p10": 62404,
+        "p25": 83642,
+        "median": 111026,
+        "p75": 141953,
+        "p90": 172868,
+        "max": 999361,
+        "over100k": 60.3,
+        "over150k": 20,
+        "over200k": 4,
+        "under50k": 4.8,
+        "annualMedian": 14026,
+        "annualCars": 9412,
+        "binWidth": 25000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 25000,
+            "cars": 57
+          },
+          {
+            "from": 25000,
+            "to": 50000,
+            "cars": 395
+          },
+          {
+            "from": 50000,
+            "to": 75000,
+            "cars": 1226
+          },
+          {
+            "from": 75000,
+            "to": 100000,
+            "cars": 2059
+          },
+          {
+            "from": 100000,
+            "to": 125000,
+            "cars": 2158
+          },
+          {
+            "from": 125000,
+            "to": 150000,
+            "cars": 1629
+          },
+          {
+            "from": 150000,
+            "to": 175000,
+            "cars": 1009
+          },
+          {
+            "from": 175000,
+            "to": null,
+            "cars": 879
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 6615,
+            "median": 101410
+          },
+          "leasing": {
+            "cars": 2622,
+            "median": 134217
+          },
+          "rental": {
+            "cars": 163,
+            "median": 154417
+          }
+        }
+      },
+      "origins": {
+        "cars": 9447,
+        "private": 70.3,
+        "leasing": 27.9,
+        "rental": 1.7,
+        "other": 0.1
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 619,
+        "expiredShare": 6.5,
+        "expiredOverYear": 8
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 99.9
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0.1
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 53.8
+        },
+        {
+          "name": "שחור",
+          "share": 19.1
+        },
+        {
+          "name": "אפור",
+          "share": 13.9
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 97.5
+        },
+        {
+          "name": "סוחר",
+          "share": 1.6
+        },
+        {
+          "name": "חברה",
+          "share": 0.8
+        },
+        {
+          "name": "ליסינג",
+          "share": 0
+        },
+        {
+          "name": "השכרה",
+          "share": 0
+        }
+      ],
+      "countries": [
+        {
+          "name": "סלובקיה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2018,
+        "activeCars": 245485,
+        "medianKm": 120510,
+        "p25Km": 85556,
+        "p75Km": 161380,
+        "mileageCars": 234725,
+        "origins": {
+          "cars": 235740,
+          "private": 70.2,
+          "leasing": 25.4,
+          "rental": 3.6,
+          "other": 0.8
+        },
+        "expiredShare": 7,
+        "recallShare": 0.1
+      },
+      "neighbours": [
+        {
+          "year": 2016,
+          "activeCars": 12808,
+          "medianKm": null,
+          "mileageCars": 0,
+          "leasing": null,
+          "rental": null,
+          "recallShare": 0,
+          "expiredShare": 7.2,
+          "slug": null
+        },
+        {
+          "year": 2017,
+          "activeCars": 10922,
+          "medianKm": 122484,
+          "mileageCars": 10868,
+          "leasing": 24.9,
+          "rental": 1.1,
+          "recallShare": 0,
+          "expiredShare": 7,
+          "slug": "kia-sportage-2017"
+        },
+        {
+          "year": 2019,
+          "activeCars": 7072,
+          "medianKm": 105395,
+          "mileageCars": 7032,
+          "leasing": 26.2,
+          "rental": 1.3,
+          "recallShare": 1.7,
+          "expiredShare": 7.5,
+          "slug": null
+        },
+        {
+          "year": 2020,
+          "activeCars": 4594,
+          "medianKm": 91975,
+          "mileageCars": 4566,
+          "leasing": 30,
+          "rental": 0.6,
+          "recallShare": 3.4,
+          "expiredShare": 6.7,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "SPORTAGE",
+            "finish": "URBAN",
+            "body": "פנאי-שטח",
+            "engineCc": 1591,
+            "hp": 132,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 170,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.1,
+            "kmPerLitre": 14.1,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 142900,
+            "priceMax": 142900,
+            "cars": 3434,
+            "share": 36.3
+          },
+          {
+            "name": "SPORTAGE",
+            "finish": "URBAN",
+            "body": "פנאי-שטח",
+            "engineCc": 1999,
+            "hp": 155,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 182,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.6,
+            "kmPerLitre": 13.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 153901,
+            "priceMax": 153901,
+            "cars": 2551,
+            "share": 27
+          },
+          {
+            "name": "SPORTAGE",
+            "finish": "URBAN",
+            "body": "פנאי-שטח",
+            "engineCc": 1591,
+            "hp": 132,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 170,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.1,
+            "kmPerLitre": 14.1,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 139900,
+            "priceMax": 139900,
+            "cars": 1535,
+            "share": 16.2
+          },
+          {
+            "name": "SPORTAGE",
+            "finish": "PREMIUM GT",
+            "body": "פנאי-שטח",
+            "engineCc": 1591,
+            "hp": 177,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 175,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.3,
+            "kmPerLitre": 13.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 186900,
+            "priceMax": 186900,
+            "cars": 424,
+            "share": 4.5
+          },
+          {
+            "name": "SPORTAGE",
+            "finish": "URBAN",
+            "body": "פנאי-שטח",
+            "engineCc": 1591,
+            "hp": 132,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 170,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.1,
+            "kmPerLitre": 14.1,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 139900,
+            "priceMax": 139900,
+            "cars": 409,
+            "share": 4.3
+          },
+          {
+            "name": "SPORTAGE",
+            "finish": "URBAN",
+            "body": "פנאי-שטח",
+            "engineCc": 1999,
+            "hp": 155,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 182,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.6,
+            "kmPerLitre": 13.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 153901,
+            "priceMax": 153901,
+            "cars": 406,
+            "share": 4.3
+          },
+          {
+            "name": "SPORTAGE",
+            "finish": "URBAN",
+            "body": "פנאי-שטח",
+            "engineCc": 1591,
+            "hp": 132,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 170,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.1,
+            "kmPerLitre": 14.1,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 139900,
+            "priceMax": 139900,
+            "cars": 222,
+            "share": 2.3
+          }
+        ],
+        "coveredShare": 95,
+        "kmPerLitre": {
+          "min": 13.2,
+          "max": 14.1,
+          "typical": 14.1
+        },
+        "priceNew": {
+          "min": 139900,
+          "max": 186900
+        },
+        "nedcOnly": true,
+        "pollution": {
+          "min": 15,
+          "max": 15
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "hyundai-ioniq-2018",
+      "key": "יונדאי|IONIQ|2018",
+      "rank": 13,
+      "makeHe": "יונדאי",
+      "makeEn": "Hyundai",
+      "modelHe": "איוניק",
+      "modelEn": "Ioniq",
+      "family": "IONIQ",
+      "year": 2018,
+      "activeCars": 9215,
+      "familyActiveCars": 51173,
+      "familyYearRank": 3,
+      "familyYears": 8,
+      "mileage": {
+        "cars": 9182,
+        "p10": 107035,
+        "p25": 137699,
+        "median": 170647,
+        "p75": 204604,
+        "p90": 244504,
+        "max": 501716,
+        "over100k": 92.2,
+        "over150k": 66.9,
+        "over200k": 27.8,
+        "under50k": 0.9,
+        "annualMedian": 21453,
+        "annualCars": 9182,
+        "binWidth": 40000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 40000,
+            "cars": 52
+          },
+          {
+            "from": 40000,
+            "to": 80000,
+            "cars": 282
+          },
+          {
+            "from": 80000,
+            "to": 120000,
+            "cars": 1097
+          },
+          {
+            "from": 120000,
+            "to": 160000,
+            "cars": 2340
+          },
+          {
+            "from": 160000,
+            "to": 200000,
+            "cars": 2857
+          },
+          {
+            "from": 200000,
+            "to": 240000,
+            "cars": 1539
+          },
+          {
+            "from": 240000,
+            "to": 280000,
+            "cars": 657
+          },
+          {
+            "from": 280000,
+            "to": null,
+            "cars": 358
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 2252,
+            "median": 142563
+          },
+          "leasing": {
+            "cars": 6845,
+            "median": 176851
+          },
+          "rental": {
+            "cars": 56,
+            "median": 192000
+          }
+        }
+      },
+      "origins": {
+        "cars": 9214,
+        "private": 24.5,
+        "leasing": 74.5,
+        "rental": 0.6,
+        "other": 0.3
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 711,
+        "expiredShare": 7.7,
+        "expiredOverYear": 5
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 100
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 44.1
+        },
+        {
+          "name": "כסף",
+          "share": 17.7
+        },
+        {
+          "name": "אפור",
+          "share": 13.2
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 94.9
+        },
+        {
+          "name": "חברה",
+          "share": 3.4
+        },
+        {
+          "name": "סוחר",
+          "share": 1.5
+        },
+        {
+          "name": "השכרה",
+          "share": 0.2
+        },
+        {
+          "name": "ליסינג",
+          "share": 0.1
+        }
+      ],
+      "countries": [
+        {
+          "name": "דרום קוריאה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2018,
+        "activeCars": 245485,
+        "medianKm": 120510,
+        "p25Km": 85556,
+        "p75Km": 161380,
+        "mileageCars": 234725,
+        "origins": {
+          "cars": 235740,
+          "private": 70.2,
+          "leasing": 25.4,
+          "rental": 3.6,
+          "other": 0.8
+        },
+        "expiredShare": 7,
+        "recallShare": 0.1
+      },
+      "neighbours": [
+        {
+          "year": 2017,
+          "activeCars": 6051,
+          "medianKm": 178926,
+          "mileageCars": 6033,
+          "leasing": 61.5,
+          "rental": 1.1,
+          "recallShare": 0,
+          "expiredShare": 7.8,
+          "slug": null
+        },
+        {
+          "year": 2019,
+          "activeCars": 10181,
+          "medianKm": 152314,
+          "mileageCars": 10142,
+          "leasing": 68.7,
+          "rental": 2.9,
+          "recallShare": 0,
+          "expiredShare": 7.1,
+          "slug": "hyundai-ioniq-2019"
+        },
+        {
+          "year": 2020,
+          "activeCars": 9000,
+          "medianKm": 131002,
+          "mileageCars": 8957,
+          "leasing": 68,
+          "rental": 1.8,
+          "recallShare": 0,
+          "expiredShare": 6.7,
+          "slug": "hyundai-ioniq-2020"
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "IONIQ HYBRID",
+            "finish": "PREMIUM",
+            "body": "הצ'בק",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 92,
+            "co2Standard": "NEDC",
+            "litresPer100": 3.8,
+            "kmPerLitre": 26.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 135900,
+            "priceMax": 135900,
+            "cars": 6716,
+            "share": 72.9
+          },
+          {
+            "name": "IONIQ HYBRID",
+            "finish": "INSPIRE",
+            "body": "הצ'בק",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 92,
+            "co2Standard": "NEDC",
+            "litresPer100": 3.8,
+            "kmPerLitre": 26.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 119900,
+            "priceMax": 119900,
+            "cars": 1242,
+            "share": 13.5
+          },
+          {
+            "name": "IONIQ HYBRID",
+            "finish": "SUPREME",
+            "body": "הצ'בק",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 92,
+            "co2Standard": "NEDC",
+            "litresPer100": 3.8,
+            "kmPerLitre": 26.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 139900,
+            "priceMax": 139900,
+            "cars": 1186,
+            "share": 12.9
+          }
+        ],
+        "coveredShare": 99.2,
+        "kmPerLitre": {
+          "min": 26.3,
+          "max": 26.3,
+          "typical": 26.3
+        },
+        "priceNew": {
+          "min": 119900,
+          "max": 139900
+        },
+        "nedcOnly": true,
+        "pollution": {
+          "min": 4,
+          "max": 4
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "hyundai-ioniq-2020",
+      "key": "יונדאי|IONIQ|2020",
+      "rank": 14,
+      "makeHe": "יונדאי",
+      "makeEn": "Hyundai",
+      "modelHe": "איוניק",
+      "modelEn": "Ioniq",
+      "family": "IONIQ",
+      "year": 2020,
+      "activeCars": 9000,
+      "familyActiveCars": 51173,
+      "familyYearRank": 4,
+      "familyYears": 8,
+      "mileage": {
+        "cars": 8957,
+        "p10": 77900,
+        "p25": 102890,
+        "median": 131002,
+        "p75": 159383,
+        "p90": 186681,
+        "max": 734987,
+        "over100k": 76.7,
+        "over150k": 32.4,
+        "over200k": 6.1,
+        "under50k": 2.5,
+        "annualMedian": 22287,
+        "annualCars": 8957,
+        "binWidth": 30000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 30000,
+            "cars": 59
+          },
+          {
+            "from": 30000,
+            "to": 60000,
+            "cars": 331
+          },
+          {
+            "from": 60000,
+            "to": 90000,
+            "cars": 1079
+          },
+          {
+            "from": 90000,
+            "to": 120000,
+            "cars": 2093
+          },
+          {
+            "from": 120000,
+            "to": 150000,
+            "cars": 2494
+          },
+          {
+            "from": 150000,
+            "to": 180000,
+            "cars": 1774
+          },
+          {
+            "from": 180000,
+            "to": 210000,
+            "cars": 738
+          },
+          {
+            "from": 210000,
+            "to": null,
+            "cars": 389
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 2677,
+            "median": 110041
+          },
+          "leasing": {
+            "cars": 6087,
+            "median": 136923
+          },
+          "rental": {
+            "cars": 162,
+            "median": 147620
+          }
+        }
+      },
+      "origins": {
+        "cars": 9000,
+        "private": 29.8,
+        "leasing": 68,
+        "rental": 1.8,
+        "other": 0.3
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 605,
+        "expiredShare": 6.7,
+        "expiredOverYear": 17
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 99.7
+        },
+        {
+          "name": "חשמל",
+          "share": 0.3
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 46.2
+        },
+        {
+          "name": "כסוף כהה",
+          "share": 19.6
+        },
+        {
+          "name": "אפור",
+          "share": 12.9
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 91.7
+        },
+        {
+          "name": "חברה",
+          "share": 5.3
+        },
+        {
+          "name": "סוחר",
+          "share": 2
+        },
+        {
+          "name": "ליסינג",
+          "share": 0.9
+        },
+        {
+          "name": "השכרה",
+          "share": 0.1
+        }
+      ],
+      "countries": [
+        {
+          "name": "דרום קוריאה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2020,
+        "activeCars": 206208,
+        "medianKm": 94029,
+        "p25Km": 64835,
+        "p75Km": 129922,
+        "mileageCars": 196964,
+        "origins": {
+          "cars": 197767,
+          "private": 68,
+          "leasing": 29,
+          "rental": 2.5,
+          "other": 0.5
+        },
+        "expiredShare": 6.7,
+        "recallShare": 0.5
+      },
+      "neighbours": [
+        {
+          "year": 2018,
+          "activeCars": 9215,
+          "medianKm": 170647,
+          "mileageCars": 9182,
+          "leasing": 74.5,
+          "rental": 0.6,
+          "recallShare": 0,
+          "expiredShare": 7.7,
+          "slug": "hyundai-ioniq-2018"
+        },
+        {
+          "year": 2019,
+          "activeCars": 10181,
+          "medianKm": 152314,
+          "mileageCars": 10142,
+          "leasing": 68.7,
+          "rental": 2.9,
+          "recallShare": 0,
+          "expiredShare": 7.1,
+          "slug": "hyundai-ioniq-2019"
+        },
+        {
+          "year": 2021,
+          "activeCars": 11127,
+          "medianKm": 114336,
+          "mileageCars": 11089,
+          "leasing": 69.6,
+          "rental": 3.5,
+          "recallShare": 0,
+          "expiredShare": 5.9,
+          "slug": "hyundai-ioniq-2021"
+        },
+        {
+          "year": 2022,
+          "activeCars": 5539,
+          "medianKm": 96846,
+          "mileageCars": 5519,
+          "leasing": 71,
+          "rental": 5.3,
+          "recallShare": 0,
+          "expiredShare": 3,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "IONIQ HYBRID",
+            "finish": "PREMIUM FL",
+            "body": "הצ'בק",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 104,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.3,
+            "kmPerLitre": 23.3,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 139900,
+            "priceMax": 139900,
+            "cars": 7547,
+            "share": 83.9
+          },
+          {
+            "name": "IONIQ HYBRID",
+            "finish": "SUPREME FL",
+            "body": "הצ'בק",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 105,
+            "co2Standard": "WLTP",
+            "litresPer100": 4.4,
+            "kmPerLitre": 22.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 3,
+            "priceMin": 140900,
+            "priceMax": 140900,
+            "cars": 1284,
+            "share": 14.3
+          }
+        ],
+        "coveredShare": 98.1,
+        "kmPerLitre": {
+          "min": 22.7,
+          "max": 23.3,
+          "typical": 23.3
+        },
+        "priceNew": {
+          "min": 139900,
+          "max": 140900
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 3,
+          "max": 3
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "hyundai-tucson-2017",
+      "key": "יונדאי|TUCSON|2017",
+      "rank": 15,
+      "makeHe": "יונדאי",
+      "makeEn": "Hyundai",
+      "modelHe": "טוסון",
+      "modelEn": "Tucson",
+      "family": "TUCSON",
+      "year": 2017,
+      "activeCars": 8707,
+      "familyActiveCars": 74085,
+      "familyYearRank": 2,
+      "familyYears": 18,
+      "mileage": {
+        "cars": 8666,
+        "p10": 69038,
+        "p25": 91620,
+        "median": 118167,
+        "p75": 148206,
+        "p90": 178300,
+        "max": 811103,
+        "over100k": 67.3,
+        "over150k": 23.9,
+        "over200k": 5.2,
+        "under50k": 3.5,
+        "annualMedian": 13193,
+        "annualCars": 8666,
+        "binWidth": 30000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 30000,
+            "cars": 48
+          },
+          {
+            "from": 30000,
+            "to": 60000,
+            "cars": 494
+          },
+          {
+            "from": 60000,
+            "to": 90000,
+            "cars": 1497
+          },
+          {
+            "from": 90000,
+            "to": 120000,
+            "cars": 2444
+          },
+          {
+            "from": 120000,
+            "to": 150000,
+            "cars": 2116
+          },
+          {
+            "from": 150000,
+            "to": 180000,
+            "cars": 1252
+          },
+          {
+            "from": 180000,
+            "to": 210000,
+            "cars": 500
+          },
+          {
+            "from": 210000,
+            "to": null,
+            "cars": 315
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 7605,
+            "median": 113720
+          },
+          "leasing": {
+            "cars": 918,
+            "median": 149969
+          },
+          "rental": {
+            "cars": 136,
+            "median": 159217
+          }
+        }
+      },
+      "origins": {
+        "cars": 8706,
+        "private": 87.8,
+        "leasing": 10.6,
+        "rental": 1.6,
+        "other": 0.1
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 408,
+        "expiredShare": 4.7,
+        "expiredOverYear": 4
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 99.4
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0.6
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 52.8
+        },
+        {
+          "name": "שחור",
+          "share": 16.2
+        },
+        {
+          "name": "אפור",
+          "share": 13.6
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 97.7
+        },
+        {
+          "name": "סוחר",
+          "share": 1.7
+        },
+        {
+          "name": "חברה",
+          "share": 0.5
+        },
+        {
+          "name": "ליסינג",
+          "share": 0
+        }
+      ],
+      "countries": [
+        {
+          "name": "צ׳כיה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2017,
+        "activeCars": 251837,
+        "medianKm": 133659,
+        "p25Km": 97207,
+        "p75Km": 174888,
+        "mileageCars": 239672,
+        "origins": {
+          "cars": 240798,
+          "private": 70.7,
+          "leasing": 24,
+          "rental": 4.5,
+          "other": 0.8
+        },
+        "expiredShare": 7.4,
+        "recallShare": 0.1
+      },
+      "neighbours": [
+        {
+          "year": 2015,
+          "activeCars": 522,
+          "medianKm": null,
+          "mileageCars": 0,
+          "leasing": null,
+          "rental": null,
+          "recallShare": 0,
+          "expiredShare": 10.3,
+          "slug": null
+        },
+        {
+          "year": 2016,
+          "activeCars": 10933,
+          "medianKm": null,
+          "mileageCars": 0,
+          "leasing": null,
+          "rental": null,
+          "recallShare": 0,
+          "expiredShare": 6.8,
+          "slug": null
+        },
+        {
+          "year": 2018,
+          "activeCars": 7895,
+          "medianKm": 106528,
+          "mileageCars": 7876,
+          "leasing": 15,
+          "rental": 1.1,
+          "recallShare": 0,
+          "expiredShare": 5,
+          "slug": null
+        },
+        {
+          "year": 2019,
+          "activeCars": 6697,
+          "medianKm": 92042,
+          "mileageCars": 6679,
+          "leasing": 17.8,
+          "rental": 1,
+          "recallShare": 0,
+          "expiredShare": 4.6,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "TUCSON",
+            "finish": "OPEN SKY",
+            "body": "פנאי-שטח",
+            "engineCc": 1999,
+            "hp": 155,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 182,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.6,
+            "kmPerLitre": 13.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 169900,
+            "priceMax": 169900,
+            "cars": 3339,
+            "share": 38.3
+          },
+          {
+            "name": "TUCSON",
+            "finish": "PREMIUM",
+            "body": "פנאי-שטח",
+            "engineCc": 1999,
+            "hp": 155,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 182,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.6,
+            "kmPerLitre": 13.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 159900,
+            "priceMax": 159900,
+            "cars": 2446,
+            "share": 28.1
+          },
+          {
+            "name": "TUCSON",
+            "finish": "PRIME",
+            "body": "פנאי-שטח",
+            "engineCc": 1591,
+            "hp": 132,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 174,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.3,
+            "kmPerLitre": 13.7,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 142900,
+            "priceMax": 142900,
+            "cars": 1849,
+            "share": 21.2
+          },
+          {
+            "name": "TUCSON",
+            "finish": "SUPREME",
+            "body": "פנאי-שטח",
+            "engineCc": 1999,
+            "hp": 155,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 182,
+            "co2Standard": "NEDC",
+            "litresPer100": 7.6,
+            "kmPerLitre": 13.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 15,
+            "priceMin": 179900,
+            "priceMax": 179900,
+            "cars": 834,
+            "share": 9.6
+          }
+        ],
+        "coveredShare": 97.3,
+        "kmPerLitre": {
+          "min": 13.2,
+          "max": 13.7,
+          "typical": 13.2
+        },
+        "priceNew": {
+          "min": 142900,
+          "max": 179900
+        },
+        "nedcOnly": true,
+        "pollution": {
+          "min": 15,
+          "max": 15
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "kia-niro-2023",
+      "key": "קיה|NIRO|2023",
+      "rank": 16,
+      "makeHe": "קיה",
+      "makeEn": "Kia",
+      "modelHe": "נירו",
+      "modelEn": "Niro",
+      "family": "NIRO",
+      "year": 2023,
+      "activeCars": 8607,
+      "familyActiveCars": 60023,
+      "familyYearRank": 1,
+      "familyYears": 11,
+      "mileage": {
+        "cars": 8155,
+        "p10": 36460,
+        "p25": 54049,
+        "median": 75669,
+        "p75": 100089,
+        "p90": 125785,
+        "max": 777708,
+        "over100k": 25.1,
+        "over150k": 3.8,
+        "over200k": 0.5,
+        "under50k": 21.2,
+        "annualMedian": 25855,
+        "annualCars": 8155,
+        "binWidth": 20000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 20000,
+            "cars": 166
+          },
+          {
+            "from": 20000,
+            "to": 40000,
+            "cars": 855
+          },
+          {
+            "from": 40000,
+            "to": 60000,
+            "cars": 1576
+          },
+          {
+            "from": 60000,
+            "to": 80000,
+            "cars": 1915
+          },
+          {
+            "from": 80000,
+            "to": 100000,
+            "cars": 1596
+          },
+          {
+            "from": 100000,
+            "to": 120000,
+            "cars": 1044
+          },
+          {
+            "from": 120000,
+            "to": 140000,
+            "cars": 538
+          },
+          {
+            "from": 140000,
+            "to": null,
+            "cars": 465
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 2021,
+            "median": 51968
+          },
+          "leasing": {
+            "cars": 5942,
+            "median": 82244
+          },
+          "rental": {
+            "cars": 84,
+            "median": 74901
+          }
+        }
+      },
+      "origins": {
+        "cars": 8444,
+        "private": 27.1,
+        "leasing": 70.6,
+        "rental": 1,
+        "other": 1.3
+      },
+      "recalls": {
+        "cars": 7,
+        "share": 0.1,
+        "items": [
+          {
+            "id": 15476,
+            "cars": 7,
+            "opened": "2024-05-29",
+            "type": "תקלה סידרתית בטיחותית",
+            "category": "חשמל אליקטרוניקה ומיזוג",
+            "description": "במקרים מסוימים תתכן תקלה במחבר מפעיל המצמד ההידראולי (HCA).",
+            "fix": "החלפה",
+            "importer": "טל - קאר",
+            "phone": "1-800-377-775",
+            "website": "www.kia-israel.co.il",
+            "buildFrom": "2016-01-01",
+            "buildTo": "2024-12-31"
+          }
+        ]
+      },
+      "licence": {
+        "expired": 379,
+        "expiredShare": 4.4,
+        "expiredOverYear": 1
+      },
+      "fuels": [
+        {
+          "name": "היברידי (חשמל ובנזין)",
+          "share": 89.5
+        },
+        {
+          "name": "בנזין",
+          "share": 5.5
+        },
+        {
+          "name": "חשמל",
+          "share": 5.1
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 47.9
+        },
+        {
+          "name": "אפור",
+          "share": 21.6
+        },
+        {
+          "name": "כסף",
+          "share": 15.6
+        }
+      ],
+      "ownership": [
+        {
+          "name": "ליסינג",
+          "share": 46
+        },
+        {
+          "name": "פרטי",
+          "share": 42.3
+        },
+        {
+          "name": "חברה",
+          "share": 6.3
+        },
+        {
+          "name": "סוחר",
+          "share": 4.9
+        },
+        {
+          "name": "השכרה",
+          "share": 0.5
+        }
+      ],
+      "countries": [
+        {
+          "name": "דרום קוריאה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2023,
+        "activeCars": 267089,
+        "medianKm": 53749,
+        "p25Km": 34032,
+        "p75Km": 79058,
+        "mileageCars": 234837,
+        "origins": {
+          "cars": 254638,
+          "private": 64.8,
+          "leasing": 31,
+          "rental": 3.7,
+          "other": 0.5
+        },
+        "expiredShare": 6.4,
+        "recallShare": 0.7
+      },
+      "neighbours": [
+        {
+          "year": 2021,
+          "activeCars": 7529,
+          "medianKm": 101684,
+          "mileageCars": 7259,
+          "leasing": 46.1,
+          "rental": 1.2,
+          "recallShare": 0.1,
+          "expiredShare": 7.2,
+          "slug": null
+        },
+        {
+          "year": 2022,
+          "activeCars": 5121,
+          "medianKm": 86050,
+          "mileageCars": 4806,
+          "leasing": 51.4,
+          "rental": 0.8,
+          "recallShare": 0.2,
+          "expiredShare": 7.1,
+          "slug": null
+        },
+        {
+          "year": 2024,
+          "activeCars": 6210,
+          "medianKm": null,
+          "mileageCars": 2376,
+          "leasing": 41.8,
+          "rental": 0.4,
+          "recallShare": 0,
+          "expiredShare": 1.1,
+          "slug": null
+        },
+        {
+          "year": 2025,
+          "activeCars": 5323,
+          "medianKm": null,
+          "mileageCars": 0,
+          "leasing": 54.3,
+          "rental": 2.9,
+          "recallShare": 0,
+          "expiredShare": 0.7,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "NIRO PLUS PHEV",
+            "finish": "LX",
+            "body": "סטיישן",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "חשמל/בנזין",
+            "drive": "PLUG IN",
+            "automatic": true,
+            "co2": 34,
+            "co2Standard": "WLTP",
+            "litresPer100": null,
+            "kmPerLitre": null,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 2,
+            "priceMin": 175900,
+            "priceMax": 175900,
+            "cars": 5847,
+            "share": 67.9
+          },
+          {
+            "name": "NIRO PHEV",
+            "finish": "EX",
+            "body": "סטיישן",
+            "engineCc": 1580,
+            "hp": 183,
+            "fuel": "חשמל/בנזין",
+            "drive": "PLUG IN",
+            "automatic": true,
+            "co2": 21,
+            "co2Standard": "WLTP",
+            "litresPer100": null,
+            "kmPerLitre": null,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 1,
+            "priceMin": 189900,
+            "priceMax": 189900,
+            "cars": 1155,
+            "share": 13.4
+          },
+          {
+            "name": "NIRO PLUS PHEV",
+            "finish": "EX",
+            "body": "סטיישן",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "חשמל/בנזין",
+            "drive": "PLUG IN",
+            "automatic": true,
+            "co2": 34,
+            "co2Standard": "WLTP",
+            "litresPer100": null,
+            "kmPerLitre": null,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 2,
+            "priceMin": 175990,
+            "priceMax": 175990,
+            "cars": 697,
+            "share": 8.1
+          },
+          {
+            "name": "NIRO EV",
+            "finish": "EX",
+            "body": "סטיישן",
+            "engineCc": null,
+            "hp": 204,
+            "fuel": "חשמל",
+            "drive": "רכב חשמלי",
+            "automatic": true,
+            "co2": null,
+            "co2Standard": null,
+            "litresPer100": null,
+            "kmPerLitre": null,
+            "electric": true,
+            "plugIn": false,
+            "pollutionGroup": null,
+            "priceMin": 204900,
+            "priceMax": 204900,
+            "cars": 309,
+            "share": 3.6
+          },
+          {
+            "name": "NIRO PLUS",
+            "finish": "GX",
+            "body": "סטיישן",
+            "engineCc": 1580,
+            "hp": 141,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": 121,
+            "co2Standard": "WLTP",
+            "litresPer100": 5.1,
+            "kmPerLitre": 19.6,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 167900,
+            "priceMax": 167900,
+            "cars": 207,
+            "share": 2.4
+          }
+        ],
+        "coveredShare": 95.4,
+        "kmPerLitre": {
+          "min": 19.6,
+          "max": 19.6,
+          "typical": 19.6
+        },
+        "priceNew": {
+          "min": 167900,
+          "max": 204900
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 1,
+          "max": 4
+        },
+        "electricShare": 3.6,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "hyundai-elantra-2024",
+      "key": "יונדאי|ELANTRA|2024",
+      "rank": 17,
+      "makeHe": "יונדאי",
+      "makeEn": "Hyundai",
+      "modelHe": "אלנטרה",
+      "modelEn": "Elantra",
+      "family": "ELANTRA",
+      "year": 2024,
+      "activeCars": 8154,
+      "familyActiveCars": 42201,
+      "familyYearRank": 1,
+      "familyYears": 18,
+      "mileage": {
+        "cars": 6072,
+        "p10": 30276,
+        "p25": 41430,
+        "median": 55831,
+        "p75": 71587,
+        "p90": 88251,
+        "max": 904464,
+        "over100k": 4.6,
+        "over150k": 0.3,
+        "over200k": 0.1,
+        "under50k": 39.4,
+        "annualMedian": 28403,
+        "annualCars": 6072,
+        "binWidth": 15000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 15000,
+            "cars": 41
+          },
+          {
+            "from": 15000,
+            "to": 30000,
+            "cars": 539
+          },
+          {
+            "from": 30000,
+            "to": 45000,
+            "cars": 1268
+          },
+          {
+            "from": 45000,
+            "to": 60000,
+            "cars": 1648
+          },
+          {
+            "from": 60000,
+            "to": 75000,
+            "cars": 1313
+          },
+          {
+            "from": 75000,
+            "to": 90000,
+            "cars": 727
+          },
+          {
+            "from": 90000,
+            "to": 105000,
+            "cars": 341
+          },
+          {
+            "from": 105000,
+            "to": null,
+            "cars": 195
+          }
+        ],
+        "byOrigin": {
+          "leasing": {
+            "cars": 5920,
+            "median": 56046
+          },
+          "rental": {
+            "cars": 142,
+            "median": 49948
+          }
+        }
+      },
+      "origins": {
+        "cars": 7836,
+        "private": 20,
+        "leasing": 78.2,
+        "rental": 1.8,
+        "other": 0
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 122,
+        "expiredShare": 1.5,
+        "expiredOverYear": 1
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 100
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 46
+        },
+        {
+          "name": "כסוף כהה",
+          "share": 21.3
+        },
+        {
+          "name": "אפור כהה מטלי",
+          "share": 20
+        }
+      ],
+      "ownership": [
+        {
+          "name": "ליסינג",
+          "share": 71.8
+        },
+        {
+          "name": "פרטי",
+          "share": 15.7
+        },
+        {
+          "name": "חברה",
+          "share": 10
+        },
+        {
+          "name": "השכרה",
+          "share": 1.7
+        },
+        {
+          "name": "סוחר",
+          "share": 0.8
+        }
+      ],
+      "countries": [
+        {
+          "name": "דרום קוריאה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2024,
+        "activeCars": 272812,
+        "medianKm": 48036,
+        "p25Km": 33863,
+        "p75Km": 64444,
+        "mileageCars": 84799,
+        "origins": {
+          "cars": 260630,
+          "private": 66.2,
+          "leasing": 29.5,
+          "rental": 3.9,
+          "other": 0.4
+        },
+        "expiredShare": 3.3,
+        "recallShare": 0.6
+      },
+      "neighbours": [
+        {
+          "year": 2022,
+          "activeCars": 5297,
+          "medianKm": 88360,
+          "mileageCars": 5093,
+          "leasing": 42.8,
+          "rental": 1.4,
+          "recallShare": 0,
+          "expiredShare": 9.1,
+          "slug": null
+        },
+        {
+          "year": 2023,
+          "activeCars": 7599,
+          "medianKm": 76735,
+          "mileageCars": 6864,
+          "leasing": 66.4,
+          "rental": 0.7,
+          "recallShare": 0,
+          "expiredShare": 5.9,
+          "slug": null
+        },
+        {
+          "year": 2025,
+          "activeCars": 5999,
+          "medianKm": null,
+          "mileageCars": 1,
+          "leasing": 71.7,
+          "rental": 7.5,
+          "recallShare": 0,
+          "expiredShare": 0.8,
+          "slug": null
+        },
+        {
+          "year": 2026,
+          "activeCars": 1952,
+          "medianKm": null,
+          "mileageCars": 0,
+          "leasing": 58.3,
+          "rental": 3.7,
+          "recallShare": 0,
+          "expiredShare": 0.3,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "ELANTRA HEV",
+            "finish": "PREMIUM FL",
+            "body": "סדאן",
+            "engineCc": 1580,
+            "hp": 139,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": null,
+            "co2Standard": null,
+            "litresPer100": null,
+            "kmPerLitre": null,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 169900,
+            "priceMax": 169900,
+            "cars": 5878,
+            "share": 72.1
+          },
+          {
+            "name": "ELANTRA HEV",
+            "finish": "PREMIUM",
+            "body": "סדאן",
+            "engineCc": 1580,
+            "hp": 139,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": null,
+            "co2Standard": null,
+            "litresPer100": null,
+            "kmPerLitre": null,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 166990,
+            "priceMax": 166990,
+            "cars": 1086,
+            "share": 13.3
+          },
+          {
+            "name": "ELANTRA HEV",
+            "finish": "SUPREME FL",
+            "body": "סדאן",
+            "engineCc": 1580,
+            "hp": 139,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": null,
+            "co2Standard": null,
+            "litresPer100": null,
+            "kmPerLitre": null,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 172900,
+            "priceMax": 172900,
+            "cars": 549,
+            "share": 6.7
+          },
+          {
+            "name": "ELANTRA HEV",
+            "finish": "SUPREME T",
+            "body": "סדאן",
+            "engineCc": 1580,
+            "hp": 139,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": null,
+            "co2Standard": null,
+            "litresPer100": null,
+            "kmPerLitre": null,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 172900,
+            "priceMax": 172900,
+            "cars": 249,
+            "share": 3.1
+          },
+          {
+            "name": "ELANTRA HEV",
+            "finish": "SUPREME",
+            "body": "סדאן",
+            "engineCc": 1580,
+            "hp": 139,
+            "fuel": "בנזין",
+            "drive": "היברידי רגיל",
+            "automatic": true,
+            "co2": null,
+            "co2Standard": null,
+            "litresPer100": null,
+            "kmPerLitre": null,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 4,
+            "priceMin": 169990,
+            "priceMax": 169990,
+            "cars": 245,
+            "share": 3
+          }
+        ],
+        "coveredShare": 98.2,
+        "kmPerLitre": null,
+        "priceNew": {
+          "min": 166990,
+          "max": 172900
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 4,
+          "max": 4
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "kia-picanto-2018",
+      "key": "קיה|PICANTO|2018",
+      "rank": 18,
+      "makeHe": "קיה",
+      "makeEn": "Kia",
+      "modelHe": "פיקנטו",
+      "modelEn": "Picanto",
+      "family": "PICANTO",
+      "year": 2018,
+      "activeCars": 8068,
+      "familyActiveCars": 126205,
+      "familyYearRank": 7,
+      "familyYears": 16,
+      "mileage": {
+        "cars": 8037,
+        "p10": 41331,
+        "p25": 61379,
+        "median": 86026,
+        "p75": 114484,
+        "p90": 144623,
+        "max": 364031,
+        "over100k": 36.8,
+        "over150k": 8.5,
+        "over200k": 1.8,
+        "under50k": 15.8,
+        "annualMedian": 10873,
+        "annualCars": 8037,
+        "binWidth": 25000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 25000,
+            "cars": 250
+          },
+          {
+            "from": 25000,
+            "to": 50000,
+            "cars": 1020
+          },
+          {
+            "from": 50000,
+            "to": 75000,
+            "cars": 1836
+          },
+          {
+            "from": 75000,
+            "to": 100000,
+            "cars": 1969
+          },
+          {
+            "from": 100000,
+            "to": 125000,
+            "cars": 1440
+          },
+          {
+            "from": 125000,
+            "to": 150000,
+            "cars": 835
+          },
+          {
+            "from": 150000,
+            "to": 175000,
+            "cars": 365
+          },
+          {
+            "from": 175000,
+            "to": null,
+            "cars": 322
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 6908,
+            "median": 82318
+          },
+          "leasing": {
+            "cars": 874,
+            "median": 104856
+          },
+          "rental": {
+            "cars": 220,
+            "median": 141061
+          }
+        }
+      },
+      "origins": {
+        "cars": 8068,
+        "private": 85.9,
+        "leasing": 10.9,
+        "rental": 2.8,
+        "other": 0.4
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 430,
+        "expiredShare": 5.3,
+        "expiredOverYear": 10
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 100
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 38
+        },
+        {
+          "name": "כסוף כהה",
+          "share": 20.7
+        },
+        {
+          "name": "כסף",
+          "share": 17.7
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 96.2
+        },
+        {
+          "name": "חברה",
+          "share": 1.6
+        },
+        {
+          "name": "סוחר",
+          "share": 1.4
+        },
+        {
+          "name": "השכרה",
+          "share": 0.7
+        },
+        {
+          "name": "ליסינג",
+          "share": 0.1
+        }
+      ],
+      "countries": [
+        {
+          "name": "דרום קוריאה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2018,
+        "activeCars": 245485,
+        "medianKm": 120510,
+        "p25Km": 85556,
+        "p75Km": 161380,
+        "mileageCars": 234725,
+        "origins": {
+          "cars": 235740,
+          "private": 70.2,
+          "leasing": 25.4,
+          "rental": 3.6,
+          "other": 0.8
+        },
+        "expiredShare": 7,
+        "recallShare": 0.1
+      },
+      "neighbours": [
+        {
+          "year": 2016,
+          "activeCars": 11990,
+          "medianKm": null,
+          "mileageCars": 1,
+          "leasing": 0,
+          "rental": 0,
+          "recallShare": 0,
+          "expiredShare": 5.1,
+          "slug": null
+        },
+        {
+          "year": 2017,
+          "activeCars": 10742,
+          "medianKm": 100801,
+          "mileageCars": 10695,
+          "leasing": 13.8,
+          "rental": 7.5,
+          "recallShare": 0,
+          "expiredShare": 4.6,
+          "slug": "kia-picanto-2017"
+        },
+        {
+          "year": 2019,
+          "activeCars": 7579,
+          "medianKm": 82694,
+          "mileageCars": 7559,
+          "leasing": 11.7,
+          "rental": 12.5,
+          "recallShare": 0,
+          "expiredShare": 4.7,
+          "slug": null
+        },
+        {
+          "year": 2020,
+          "activeCars": 7348,
+          "medianKm": 69148,
+          "mileageCars": 7326,
+          "leasing": 17,
+          "rental": 9,
+          "recallShare": 0,
+          "expiredShare": 5.1,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "PICANTO",
+            "finish": "LX",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 148,
+            "co2Standard": "WLTP",
+            "litresPer100": 6.2,
+            "kmPerLitre": 16.1,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 79500,
+            "priceMax": 79500,
+            "cars": 3592,
+            "share": 44.5
+          },
+          {
+            "name": "PICANTO",
+            "finish": "EX",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 124,
+            "co2Standard": "NEDC",
+            "litresPer100": 5.2,
+            "kmPerLitre": 19.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 13,
+            "priceMin": 81000,
+            "priceMax": 81000,
+            "cars": 1482,
+            "share": 18.4
+          },
+          {
+            "name": "PICANTO",
+            "finish": "EX",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 124,
+            "co2Standard": "NEDC",
+            "litresPer100": 5.2,
+            "kmPerLitre": 19.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 13,
+            "priceMin": 79900,
+            "priceMax": 79900,
+            "cars": 1248,
+            "share": 15.5
+          },
+          {
+            "name": "PICANTO",
+            "finish": "GT LINE",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 152,
+            "co2Standard": "WLTP",
+            "litresPer100": 6.4,
+            "kmPerLitre": 15.6,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 82900,
+            "priceMax": 82900,
+            "cars": 829,
+            "share": 10.3
+          },
+          {
+            "name": "PICANTO",
+            "finish": "GT LINE",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 84,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 124,
+            "co2Standard": "NEDC",
+            "litresPer100": 5.2,
+            "kmPerLitre": 19.2,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 13,
+            "priceMin": 82900,
+            "priceMax": 82900,
+            "cars": 474,
+            "share": 5.9
+          }
+        ],
+        "coveredShare": 94.5,
+        "kmPerLitre": {
+          "min": 15.6,
+          "max": 19.2,
+          "typical": 16.1
+        },
+        "priceNew": {
+          "min": 79500,
+          "max": 82900
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 13,
+          "max": 14
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "toyota-corolla-2017",
+      "key": "טויוטה|COROLLA|2017",
+      "rank": 19,
+      "makeHe": "טויוטה",
+      "makeEn": "Toyota",
+      "modelHe": "קורולה",
+      "modelEn": "Corolla",
+      "family": "COROLLA",
+      "year": 2017,
+      "activeCars": 8059,
+      "familyActiveCars": 196744,
+      "familyYearRank": 13,
+      "familyYears": 31,
+      "mileage": {
+        "cars": 8019,
+        "p10": 79180,
+        "p25": 113120,
+        "median": 150311,
+        "p75": 189855,
+        "p90": 227639,
+        "max": 852909,
+        "over100k": 81.5,
+        "over150k": 50.3,
+        "over200k": 19.9,
+        "under50k": 2.9,
+        "annualMedian": 16811,
+        "annualCars": 8019,
+        "binWidth": 40000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 40000,
+            "cars": 132
+          },
+          {
+            "from": 40000,
+            "to": 80000,
+            "cars": 688
+          },
+          {
+            "from": 80000,
+            "to": 120000,
+            "cars": 1533
+          },
+          {
+            "from": 120000,
+            "to": 160000,
+            "cars": 2201
+          },
+          {
+            "from": 160000,
+            "to": 200000,
+            "cars": 1868
+          },
+          {
+            "from": 200000,
+            "to": 240000,
+            "cars": 1023
+          },
+          {
+            "from": 240000,
+            "to": 280000,
+            "cars": 394
+          },
+          {
+            "from": 280000,
+            "to": null,
+            "cars": 180
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 2724,
+            "median": 116425
+          },
+          "leasing": {
+            "cars": 4740,
+            "median": 161943
+          },
+          "rental": {
+            "cars": 447,
+            "median": 180900
+          }
+        }
+      },
+      "origins": {
+        "cars": 8057,
+        "private": 34,
+        "leasing": 59.1,
+        "rental": 5.6,
+        "other": 1.3
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 419,
+        "expiredShare": 5.2,
+        "expiredOverYear": 8
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 99.8
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0.2
+        },
+        {
+          "name": "היברידי (חשמל ובנזין)",
+          "share": 0
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 44.7
+        },
+        {
+          "name": "כסף מטלי",
+          "share": 20.6
+        },
+        {
+          "name": "אפור כהה מטלי",
+          "share": 13.8
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 96.8
+        },
+        {
+          "name": "חברה",
+          "share": 2.5
+        },
+        {
+          "name": "סוחר",
+          "share": 0.7
+        },
+        {
+          "name": "ליסינג",
+          "share": 0
+        }
+      ],
+      "countries": [
+        {
+          "name": "טורקיה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2017,
+        "activeCars": 251837,
+        "medianKm": 133659,
+        "p25Km": 97207,
+        "p75Km": 174888,
+        "mileageCars": 239672,
+        "origins": {
+          "cars": 240798,
+          "private": 70.7,
+          "leasing": 24,
+          "rental": 4.5,
+          "other": 0.8
+        },
+        "expiredShare": 7.4,
+        "recallShare": 0.1
+      },
+      "neighbours": [
+        {
+          "year": 2015,
+          "activeCars": 10753,
+          "medianKm": null,
+          "mileageCars": 0,
+          "leasing": null,
+          "rental": null,
+          "recallShare": 0,
+          "expiredShare": 5.1,
+          "slug": null
+        },
+        {
+          "year": 2016,
+          "activeCars": 9747,
+          "medianKm": null,
+          "mileageCars": 0,
+          "leasing": null,
+          "rental": null,
+          "recallShare": 0,
+          "expiredShare": 5.3,
+          "slug": null
+        },
+        {
+          "year": 2018,
+          "activeCars": 5305,
+          "medianKm": 132415,
+          "mileageCars": 5274,
+          "leasing": 55.2,
+          "rental": 5.6,
+          "recallShare": 0,
+          "expiredShare": 4.5,
+          "slug": null
+        },
+        {
+          "year": 2019,
+          "activeCars": 15407,
+          "medianKm": 135593,
+          "mileageCars": 14606,
+          "leasing": 59.8,
+          "rental": 1.9,
+          "recallShare": 0,
+          "expiredShare": 6.6,
+          "slug": "toyota-corolla-2019"
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "COROLLA",
+            "finish": "SUN",
+            "body": "סדאן",
+            "engineCc": 1598,
+            "hp": 132,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 129,
+            "co2Standard": "NEDC",
+            "litresPer100": 5.4,
+            "kmPerLitre": 18.5,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 129900,
+            "priceMax": 129900,
+            "cars": 5445,
+            "share": 67.6
+          },
+          {
+            "name": "COROLLA",
+            "finish": "GLI",
+            "body": "סדאן",
+            "engineCc": 1598,
+            "hp": 132,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 129,
+            "co2Standard": "NEDC",
+            "litresPer100": 5.4,
+            "kmPerLitre": 18.5,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 131900,
+            "priceMax": 131900,
+            "cars": 1780,
+            "share": 22.1
+          },
+          {
+            "name": "COROLLA",
+            "finish": "50TH",
+            "body": "סדאן",
+            "engineCc": 1598,
+            "hp": 132,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 129,
+            "co2Standard": "NEDC",
+            "litresPer100": 5.4,
+            "kmPerLitre": 18.5,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 135900,
+            "priceMax": 135900,
+            "cars": 745,
+            "share": 9.2
+          }
+        ],
+        "coveredShare": 98.9,
+        "kmPerLitre": {
+          "min": 18.5,
+          "max": 18.5,
+          "typical": 18.5
+        },
+        "priceNew": {
+          "min": 129900,
+          "max": 135900
+        },
+        "nedcOnly": true,
+        "pollution": {
+          "min": 14,
+          "max": 14
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    },
+    {
+      "slug": "hyundai-i10-2019",
+      "key": "יונדאי|I10|2019",
+      "rank": 20,
+      "makeHe": "יונדאי",
+      "makeEn": "Hyundai",
+      "modelHe": "i10",
+      "modelEn": "i10",
+      "family": "I10",
+      "year": 2019,
+      "activeCars": 7942,
+      "familyActiveCars": 66521,
+      "familyYearRank": 1,
+      "familyYears": 18,
+      "mileage": {
+        "cars": 7921,
+        "p10": 35918,
+        "p25": 55029,
+        "median": 80859,
+        "p75": 111451,
+        "p90": 142826,
+        "max": 879751,
+        "over100k": 33.2,
+        "over150k": 7.8,
+        "over200k": 1.1,
+        "under50k": 20.6,
+        "annualMedian": 11654,
+        "annualCars": 7921,
+        "binWidth": 25000,
+        "bins": [
+          {
+            "from": 0,
+            "to": 25000,
+            "cars": 373
+          },
+          {
+            "from": 25000,
+            "to": 50000,
+            "cars": 1261
+          },
+          {
+            "from": 50000,
+            "to": 75000,
+            "cars": 1883
+          },
+          {
+            "from": 75000,
+            "to": 100000,
+            "cars": 1771
+          },
+          {
+            "from": 100000,
+            "to": 125000,
+            "cars": 1269
+          },
+          {
+            "from": 125000,
+            "to": 150000,
+            "cars": 743
+          },
+          {
+            "from": 150000,
+            "to": 175000,
+            "cars": 389
+          },
+          {
+            "from": 175000,
+            "to": null,
+            "cars": 232
+          }
+        ],
+        "byOrigin": {
+          "private": {
+            "cars": 5447,
+            "median": 69807
+          },
+          "leasing": {
+            "cars": 1615,
+            "median": 96638
+          },
+          "rental": {
+            "cars": 855,
+            "median": 128035
+          }
+        }
+      },
+      "origins": {
+        "cars": 7941,
+        "private": 68.8,
+        "leasing": 20.4,
+        "rental": 10.8,
+        "other": 0.1
+      },
+      "recalls": {
+        "cars": 0,
+        "share": 0,
+        "items": []
+      },
+      "licence": {
+        "expired": 300,
+        "expiredShare": 3.8,
+        "expiredOverYear": 3
+      },
+      "fuels": [
+        {
+          "name": "בנזין",
+          "share": 99.9
+        },
+        {
+          "name": "גפמ\"",
+          "share": 0.1
+        }
+      ],
+      "colours": [
+        {
+          "name": "שנהב לבן",
+          "share": 34.1
+        },
+        {
+          "name": "כסף",
+          "share": 23.1
+        },
+        {
+          "name": "אפור מטל",
+          "share": 19.1
+        }
+      ],
+      "ownership": [
+        {
+          "name": "פרטי",
+          "share": 97.5
+        },
+        {
+          "name": "סוחר",
+          "share": 1
+        },
+        {
+          "name": "חברה",
+          "share": 1
+        },
+        {
+          "name": "השכרה",
+          "share": 0.4
+        },
+        {
+          "name": "ליסינג",
+          "share": 0.2
+        }
+      ],
+      "countries": [
+        {
+          "name": "טורקיה",
+          "share": 100
+        }
+      ],
+      "fleet": {
+        "year": 2019,
+        "activeCars": 239639,
+        "medianKm": 108999,
+        "p25Km": 76058,
+        "p75Km": 147235,
+        "mileageCars": 227244,
+        "origins": {
+          "cars": 228361,
+          "private": 66.4,
+          "leasing": 27.9,
+          "rental": 4.9,
+          "other": 0.7
+        },
+        "expiredShare": 6.8,
+        "recallShare": 0.3
+      },
+      "neighbours": [
+        {
+          "year": 2017,
+          "activeCars": 5627,
+          "medianKm": 98824,
+          "mileageCars": 5609,
+          "leasing": 8.9,
+          "rental": 16.1,
+          "recallShare": 0,
+          "expiredShare": 4,
+          "slug": null
+        },
+        {
+          "year": 2018,
+          "activeCars": 7265,
+          "medianKm": 90278,
+          "mileageCars": 7245,
+          "leasing": 17.4,
+          "rental": 9,
+          "recallShare": 0,
+          "expiredShare": 4.5,
+          "slug": null
+        },
+        {
+          "year": 2020,
+          "activeCars": 3542,
+          "medianKm": 62174,
+          "mileageCars": 3531,
+          "leasing": 16.5,
+          "rental": 3,
+          "recallShare": 0,
+          "expiredShare": 5.9,
+          "slug": null
+        },
+        {
+          "year": 2021,
+          "activeCars": 5359,
+          "medianKm": 59600,
+          "mileageCars": 5348,
+          "leasing": 22.3,
+          "rental": 12.5,
+          "recallShare": 0,
+          "expiredShare": 4.8,
+          "slug": null
+        }
+      ],
+      "specs": {
+        "trims": [
+          {
+            "name": "I10",
+            "finish": "PRIME",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 87,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 153,
+            "co2Standard": "WLTP",
+            "litresPer100": 6.4,
+            "kmPerLitre": 15.6,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 80900,
+            "priceMax": 80900,
+            "cars": 5039,
+            "share": 63.4
+          },
+          {
+            "name": "I10",
+            "finish": "INSPIRE",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 87,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 153,
+            "co2Standard": "WLTP",
+            "litresPer100": 6.4,
+            "kmPerLitre": 15.6,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 74900,
+            "priceMax": 74900,
+            "cars": 2009,
+            "share": 25.3
+          },
+          {
+            "name": "I10",
+            "finish": "OPEN SKY",
+            "body": "הצ'בק",
+            "engineCc": 1248,
+            "hp": 87,
+            "fuel": "בנזין",
+            "drive": "הנעה רגילה",
+            "automatic": true,
+            "co2": 153,
+            "co2Standard": "WLTP",
+            "litresPer100": 6.4,
+            "kmPerLitre": 15.6,
+            "electric": false,
+            "plugIn": false,
+            "pollutionGroup": 14,
+            "priceMin": 81900,
+            "priceMax": 81900,
+            "cars": 868,
+            "share": 10.9
+          }
+        ],
+        "coveredShare": 99.7,
+        "kmPerLitre": {
+          "min": 15.6,
+          "max": 15.6,
+          "typical": 15.6
+        },
+        "priceNew": {
+          "min": 74900,
+          "max": 81900
+        },
+        "nedcOnly": false,
+        "pollution": {
+          "min": 14,
+          "max": 14
+        },
+        "electricShare": 0,
+        "plugInShare": 0
+      }
+    }
+  ]
+}

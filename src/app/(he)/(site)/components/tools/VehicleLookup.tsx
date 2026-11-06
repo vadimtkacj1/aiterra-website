@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useId, useRef, useState, type FormEvent, type ReactNode } from 'react'
+import Link from 'next/link'
 import { Copy, ExternalLink, RotateCcw, Search } from 'lucide-react'
 import {
   REQUEST_TIMEOUT_MS,
@@ -21,6 +22,7 @@ import {
   type VehicleFailure,
 } from '@/lib/vehicle-lookup'
 import { extrasToText, fetchVehicleExtras, type VehicleExtras } from '@/lib/vehicle-extras'
+import { carModelPathFor } from '@/lib/car-model-link'
 import VehicleExtrasPanel from './VehicleExtrasPanel'
 import CopyValue, { type CopyAnnounce } from './CopyValue'
 import ui from './toolUi.module.css'
@@ -54,6 +56,7 @@ export function VehicleDetails({
   onCopy: CopyAnnounce
 }) {
   const state = testStateOf(vehicle, now)
+  const modelPath = carModelPathFor(vehicle.manufacturer, vehicle.commercialName, vehicle.year)
   const Heading = headingLevel === 4 ? 'h4' : 'h3'
   const title = [vehicle.manufacturer, vehicle.commercialName || vehicle.modelCode].filter(Boolean).join(' ')
   const facts: { label: string; value: string; note?: string }[] = [
@@ -123,6 +126,11 @@ export function VehicleDetails({
         מקור: {vehicle.sourceLabel} של משרד התחבורה ב-data.gov.il
         {dataDate ? `, נתונים מעודכנים ל-${dataDate}` : ''}.
       </p>
+      {modelPath ? (
+        <p className={`${styles.source} ${extra.modelLink}`}>
+          <Link href={modelPath}>נתוני הדגם הזה בכל ישראל</Link>
+        </p>
+      ) : null}
     </article>
   )
 }
