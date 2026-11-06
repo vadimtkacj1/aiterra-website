@@ -149,23 +149,7 @@ function RecallList({ page }: { page: CarModelPage }) {
   )
 }
 
-const REAL_MODELS: { make: string; family: string; from: number; to: number; file: string; credit: ModelCredit }[] = [
-  {
-    make: 'טויוטה',
-    family: 'COROLLA',
-    from: 2019,
-    to: 2022,
-    file: 'toyota-corolla-e210.glb',
-    credit: {
-      title: 'Toyota Corolla 2020',
-      author: 'ItsDiyor',
-      authorUrl: 'https://sketchfab.com/ItsDiyor',
-      sourceUrl: 'https://sketchfab.com/3d-models/toyota-corolla-2020-6d7d34ee42734d1ab28a6b1f1c5fc4fc',
-      license: 'CC BY 4.0',
-      licenseUrl: 'https://creativecommons.org/licenses/by/4.0/',
-    },
-  },
-]
+const REAL_MODELS: { make: string; family: string; from: number; to: number; file: string; credit: ModelCredit }[] = []
 
 const realModelOf = (page: CarModelPage) =>
   REAL_MODELS.find((model) => page.makeHe.startsWith(model.make) && page.family === model.family && page.year >= model.from && page.year <= model.to) ??
