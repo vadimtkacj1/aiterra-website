@@ -16,12 +16,12 @@ import styles from './Footer.module.css'
 
 const POPULAR_TOOLS = [
   { href: '/tools', label: 'כל הכלים החינמיים' },
-  { href: '/tools/time-difference-israel', label: 'מה השעה בישראל' },
+  { href: '/tools/vehicle-lookup', label: 'בדיקת רכב לפי מספר' },
+  { href: '/tools/id-number-check', label: 'בדיקת תעודת זהות' },
   { href: '/tools/idf-ranks-chart', label: 'דרגות בצה״ל' },
   { href: '/tools/israeli-phone-format', label: 'קידומת ישראל' },
-  { href: '/tools/random-wheel-picker', label: 'גלגל מזל' },
+  { href: '/tools/hebrew-name-to-english', label: 'שם באנגלית' },
   { href: '/tools/hebrew-rhyme-finder', label: 'חרוזים למילה' },
-  { href: '/tools/gematria-calculator', label: 'מחשבון גימטריה' },
 ]
 
 export default function Footer({
