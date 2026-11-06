@@ -3819,4 +3819,115 @@ So the practical advice is simple: run the check now so you have a baseline, fix
       ],
     },
   },
+  'whatsapp-business-broadcast-list-excel': {
+    title: 'WhatsApp Business Broadcast Lists in Israel (2026): From Excel to Send, and What Courts Award for Spam',
+    seoTitle: 'WhatsApp Business Broadcast List: Excel, Paid, Spam Law',
+    seoDescription:
+      'WhatsApp Business broadcast lists in 2026: paid broadcasts that reach unsaved contacts, Excel upload, a phone-number fix and Israeli spam rulings.',
+    excerpt:
+      'In 2026 a WhatsApp Business broadcast list works three ways: the free list capped at 256 contacts, paid business broadcasts that reach unsaved contacts and accept an Excel file, and the WhatsApp Business API. How to upload a list from Excel, a formula that fixes Israeli numbers, and four Israeli rulings on promotional WhatsApp messages.',
+    tags: ['WhatsApp', 'Broadcast list', 'WhatsApp Business', 'Spam law', 'WhatsApp marketing', 'Automation'],
+    content: `**TL;DR:** In 2026 a WhatsApp Business broadcast list works three ways. The old free broadcast list is capped at 256 contacts and only reaches people who saved your number. Paid business broadcasts in the WhatsApp Business app reach people who never saved you and accept an Excel file. The third route is the WhatsApp Business API through a provider. What has not changed: a promotional message without prior consent breaks Israel's spam law, and Israeli courts have awarded 200 to 350 NIS per WhatsApp message.
+
+![Three ways to send a WhatsApp Business broadcast: free list, paid business broadcast and API](/images/blog/whatsapp-business-broadcast-list-excel.webp)
+
+## What people actually ask about WhatsApp broadcast lists
+
+On 6 November 2026 we collected Google's Hebrew autocomplete suggestions for "WhatsApp broadcast list" and got 48 different phrasings. Most are how-to questions ("how do I open one", "where is it"). Four explain where businesses get stuck: broadcast list from Excel, broadcast list without saving, paid broadcast list, and broadcast list problems.
+
+Those four questions map to two changes Meta made in the past year, and to one legal question most guides answer only halfway. This guide takes them in that order.
+
+## The three ways to send a WhatsApp Business broadcast
+
+| | Regular broadcast list | Business broadcasts | WhatsApp Business API |
+|---|---|---|---|
+| Where | The phone app | WhatsApp Business app | A system or provider connected to Meta |
+| Recipients | Up to 256 per list | The audience you pick, including an imported file | A daily sending limit that rises over time |
+| Who receives it | Only people who saved your number | Also people who did not save you | Anyone on WhatsApp who has not blocked you |
+| Excel import | None | CSV or XLSX, from WhatsApp Business web | Through the provider's system |
+| Cost | Free | Per delivered message, after a free allowance | Per message to Meta plus the provider's fee |
+| Availability | Everywhere | Selected countries, rolling out | Everywhere |
+
+Sources for the table: WhatsApp's help pages on [broadcast lists](https://faq.whatsapp.com/653415899610349/?cms_platform=android), on [sending a business broadcast](https://faq.whatsapp.com/1711086883148106/?cms_platform=web) and on [business broadcast pricing](https://faq.whatsapp.com/1356785542323967/?cms_platform=web) (checked 6 November 2026).
+
+## Why half of your list never gets the message
+
+With a regular broadcast list, the message only reaches people who added your number to their phone's contacts. WhatsApp's help page says so. There is no error. There is no list of who was skipped. You see the message go out, the customer who never saved you sees nothing, and a list built from forms, orders or groups can end up reaching only a small part of it.
+
+Business broadcasts were built for exactly this. On the launch page Meta says you can message all your customers at once "even if they haven't saved your contact number" ([WhatsApp for Business, May 2026](https://whatsappbusiness.com/resources/resource-library/business-broadcasts-whatsapp/)). The price is the payment: once the free messages run out, each delivered message is charged by the recipient's country code, and the total is shown in the app before you send. A message not delivered within five days is not charged. In Brazil, where the feature opened in October 2025, reports put the free allowance at 250 messages every 30 days for the first six months.
+
+If your app's Tools menu has no Business broadcasts entry, the feature has not reached your account yet, and you are left with the other two routes.
+
+## WhatsApp broadcast from Excel: what works and what gets you banned
+
+The only official way to upload a file is a business broadcast audience (Broadcast audience), and it only works in WhatsApp Business web on a computer. According to WhatsApp's help page on importing contacts, the file must be CSV or XLSX with two columns: full name and phone number. Duplicates count as errors, and you cannot save the audience until every error is fixed or deleted.
+
+It breaks at the phone numbers. Excel drops the leading zero of 0521234567 and keeps 521234567, while WhatsApp wants international format: a plus sign, the country code, and no leading zero. For an Israeli mobile number (ten digits starting with 05) one formula handles both cases:
+
+\`="+972"&RIGHT(SUBSTITUTE(SUBSTITUTE(A2,"-","")," ",""),9)\`
+
+The formula strips hyphens and spaces and keeps the last nine digits, so 052-123-4567 and 521234567 both become +972521234567. It does not fit landlines (nine digits), which usually have no WhatsApp anyway.
+
+One more trap. Browser extensions that hook into WhatsApp Web and send a message to every row in a spreadsheet break WhatsApp's terms, which forbid "bulk messaging, auto-messaging, auto-dialing, and the like" ([WhatsApp Terms of Service](https://www.whatsapp.com/legal/terms-of-service)), and it is the sending number that gets banned.
+
+Importing a file solves a technical problem. Not a legal one. A number in a spreadsheet does not mean its owner agreed to receive your promotions.
+
+## What Israeli courts awarded for promotional WhatsApp messages
+
+Section 30A of the Communications Law does not name WhatsApp, and some guides conclude the position is unclear. In practice courts apply it to WhatsApp messages, as rulings from 2025 and 2026 show. Four we read:
+
+| Case | Court | What was sent | Outcome |
+|---|---|---|---|
+| Small Claims 10768-05-24 Chen v. Rosenthal | Haifa Small Claims, 30.1.2025 | Five messages from a real estate agent, mostly holiday greetings with the agency logo, sent after a removal request | 200 NIS per message after the removal request, 800 NIS plus 350 NIS costs ([ruling](https://www.law.co.il/media/computer-law/chen2.pdf)) |
+| Small Claims 10859-05-25 Shacham v. A.B.G. Rothschild | Tel Aviv Small Claims | 28 messages about club events, in a group the claimant was added to without consent | 350 NIS per message, 9,800 NIS plus 1,000 NIS costs ([ruling](https://www.law.co.il/media/computer-law/shacham1.pdf)) |
+| Wagner v. Albert | Hadera Small Claims, 2.2.2026 | One message about a summer camp, to a number taken from WhatsApp groups | 250 NIS for the message; the privacy claim was rejected ([ruling](https://www.law.co.il/media/computer-law/vagner3.pdf)) |
+| Class Action 32882-08-23 Halala v. Fattal Hotels | Tel Aviv District, 7.8.2025 | Adding people to a group without consent and advertising in it | Cited in Shacham as precedent that advertising in a group falls under the ban |
+
+Three things repeat across the rulings. A holiday greeting carrying the business logo and details counted as advertising. A WhatsApp group does not exempt you from the law, even with hundreds of members. And the amount per message follows behaviour: a sender who apologised and sent few messages paid less than one who sent dozens.
+
+The law allows sending without explicit consent only when three conditions hold together: the customer gave the number during a purchase or negotiation and was told it would be used for advertising, was given a chance to refuse and did not, and the promotion is for a similar product. Every promotional message also needs the word "advertisement" (פרסומת) at the start, the business details, and a simple way to opt out.
+
+## Collecting consent without a form: let the customer write first
+
+The cleanest route is a conversation the customer opens. On the site we built for [Natan Borochov's barbershop in Holon](/projects/natan-borochov), every line of the price list opens WhatsApp with a prepared message to book that service. The customer taps send, and from then on there is an open chat they started, their number is with you, and yours is with them.
+
+That is still not permission to send offers. It is the moment to ask for it, in one line at the end of the chat:
+
+\`Would you like to get our offers and updates on WhatsApp? You can stop any time, just reply "remove".\`
+
+Whoever answers yes goes on the list, with the date of consent in its own Excel column. If you ever need to prove consent, that is the proof. You can create a link like that with a prepared message in our [WhatsApp link generator](/tools/whatsapp-link-generator).
+
+## When a broadcast list is no longer enough and you move to the API
+
+Business broadcasts suit a business that answers customers from the phone and sends an offer every few weeks. When you need to send weekly to thousands of customers, connect consents and opt-outs to a CRM, or send automatic service messages such as appointment reminders, you move to the WhatsApp Business API.
+
+On the API you pay Meta per delivered message. Under Meta's rate card in force from 1 October 2026, a marketing template to an Israeli number costs $0.0353, so sending to 500 customers costs about $17.65 before the provider's fee ([WhatsApp Business Platform pricing](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing)). From the same date, replies from an agent or bot inside the 24-hour window are also charged, after 1,000 free service messages a month per number ([ynet, September 2026](https://www.ynet.co.il/economy/article/byoowyvqfl)). That change does not apply to the WhatsApp Business app on your phone.
+
+To see what it would cost with your own numbers, there is a [WhatsApp API cost calculator](/tools/whatsapp-api-cost-calculator). How to connect it to a customer system is covered in the [guide to connecting WhatsApp Business to a CRM](/blog/whatsapp-business-api-crm-integration), and if you want someone to build it for you, it is part of [our automation services](/services/automation).`,
+    faq: {
+      title: 'WhatsApp Business broadcast list: common questions',
+      items: [
+        {
+          q: 'Can I send a WhatsApp broadcast from an Excel file?',
+          a: 'Yes, but only through a business broadcast in the WhatsApp Business app, and only from the web version on a computer. You upload a CSV or XLSX file with name and number, save it as an audience, and send the broadcast from your phone. The regular free broadcast list has no file import at all: every contact has to be saved on the phone.',
+        },
+        {
+          q: 'Why does my broadcast list not reach some people?',
+          a: 'With a regular list the message only reaches people who saved your number, and WhatsApp does not show who was skipped. To check, send to a second phone of yours that has not saved the business: if it does not arrive, that is the reason. Paid business broadcasts get around this limit.',
+        },
+        {
+          q: 'How much do Israeli courts award for a promotional WhatsApp message without consent?',
+          a: 'The law allows up to 1,000 NIS per message without proof of damage. In the 2025 and 2026 rulings we read, courts actually awarded 200 to 350 NIS per message, weighing the number of messages, ignored removal requests and whether the sender apologised. A sender usually gets a demand letter first, and that is the time to remove the recipient and review the whole list.',
+        },
+        {
+          q: 'Is a holiday greeting to customers on WhatsApp an advertisement?',
+          a: 'If it carries the logo, the business name or contact details meant to promote it, a Haifa court ruled in 2025 that it is. A personal greeting without branding to a customer you are in touch with is a different case, but when it goes to the whole list at once, the safe course is to send only to people who gave consent.',
+        },
+        {
+          q: 'Does a WhatsApp Business broadcast list cost money?',
+          a: 'The regular broadcast list is still free. Business broadcasts cost money after a free allowance, priced by the recipient\'s country and shown before you send. Through the WhatsApp Business API, a marketing template to an Israeli number costs Meta $0.0353, plus the provider\'s fee.',
+        },
+      ],
+    },
+  },
 }
