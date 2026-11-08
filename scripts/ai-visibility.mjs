@@ -92,7 +92,25 @@ function citationStats(links, domains) {
     cited: rank >= 0,
     citationRank: rank >= 0 ? rank + 1 : null,
     citedDomains: [...new Set(links.map((link) => link.domain))],
+    citedLinks: links.length,
+    ourLinks: links.filter((link) => isOurs(link.domain, domains)).length,
   }
+}
+
+const forumDomains = ['reddit.com', 'quora.com', 'tapuz.co.il', 'fxp.co.il', 'facebook.com', 'stackexchange.com']
+
+export function gapOf(rows, domains) {
+  const ok = rows.filter((r) => !r.error)
+  if (!ok.length || ok.some((r) => r.mentioned || r.cited)) return null
+  const tally = new Map()
+  for (const r of ok) {
+    for (const domain of r.citedDomains ?? []) {
+      if (!isOurs(domain, domains)) tally.set(domain, (tally.get(domain) ?? 0) + 1)
+    }
+  }
+  const top = [...tally].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([domain]) => domain)
+  const forums = top.filter((domain) => isOurs(domain, forumDomains)).length
+  return { label: forums * 2 > top.length ? 'forums' : 'third-party', top }
 }
 
 export function analyzeLlm(result, brand) {
@@ -177,6 +195,7 @@ function options(argv) {
     models: argv.includes('--models'),
     engines: (value('engines') ?? Object.keys(endpoints).join(',')).split(','),
     limit: Number(value('limit') ?? Infinity),
+    runs: Math.max(1, Number(value('runs') ?? 1)),
   }
 }
 
@@ -184,12 +203,15 @@ const columns = [
   'date',
   'engine',
   'id',
+  'run',
   'service',
   'mentioned',
   'cited',
   'citationRank',
   'organicRank',
   'aiOverview',
+  'citedLinks',
+  'ourLinks',
   'cost',
   'error',
 ]
@@ -253,6 +275,35 @@ function report(results, domains, depth) {
     console.log('\nmost cited other domains:')
     for (const [domain, count] of top) console.log(`  ${String(count).padStart(3)}  ${domain}`)
   }
+  const chats = results.filter((r) => !r.error && r.engine !== 'google')
+  const allLinks = chats.reduce((sum, r) => sum + (r.citedLinks ?? 0), 0)
+  const ourLinks = chats.reduce((sum, r) => sum + (r.ourLinks ?? 0), 0)
+  if (allLinks) console.log(`\ncitation share (chat engines): ${ourLinks}/${allLinks} links = ${percent(ourLinks, allLinks)}`)
+
+  const byPrompt = Object.groupBy(results, (r) => r.id)
+  console.log(`\n${'prompt'.padEnd(20)}${'mentioned'.padEnd(11)}${'cited'.padEnd(8)}gap`)
+  for (const [id, rows] of Object.entries(byPrompt)) {
+    const ok = rows.filter((r) => !r.error)
+    const gap = gapOf(rows, domains)
+    console.log(
+      `${id.padEnd(20)}${`${ok.filter((r) => r.mentioned).length}/${ok.length}`.padEnd(11)}` +
+        `${`${ok.filter((r) => r.cited).length}/${ok.length}`.padEnd(8)}` +
+        `${gap ? `${gap.label}: ${gap.top.join(', ')}` : ''}`,
+    )
+  }
+
+  const fanOut = new Map()
+  for (const r of results) {
+    for (const query of r.fanOut ?? []) {
+      const key = String(query).trim().toLowerCase()
+      if (key) fanOut.set(key, (fanOut.get(key) ?? 0) + 1)
+    }
+  }
+  const topFanOut = [...fanOut].sort((a, b) => b[1] - a[1]).slice(0, 15)
+  if (topFanOut.length) {
+    console.log('\nmost common fan-out queries:')
+    for (const [query, count] of topFanOut) console.log(`  ${String(count).padStart(3)}  ${query}`)
+  }
   const cost = results.reduce((sum, r) => sum + (r.cost ?? 0), 0)
   console.log(`\ntotal cost: $${cost.toFixed(4)}`)
   const failed = results.filter((r) => r.error)
@@ -269,11 +320,14 @@ async function main() {
   const jobs = panel.prompts.slice(0, opts.limit).flatMap((prompt) =>
     opts.engines
       .filter((engine) => engine !== 'google' || prompt.keyword)
-      .map((engine) => ({
-        engine,
-        prompt,
-        task: engine === 'google' ? serpTask(panel, prompt) : llmTask(engine, panel, prompt),
-      })),
+      .flatMap((engine) =>
+        Array.from({ length: engine === 'google' ? 1 : opts.runs }, (_, index) => ({
+          engine,
+          prompt,
+          run: index + 1,
+          task: engine === 'google' ? serpTask(panel, prompt) : llmTask(engine, panel, prompt),
+        })),
+      ),
   )
 
   if (opts.dryRun) {
@@ -296,8 +350,8 @@ async function main() {
   }
 
   console.log(`running ${jobs.length} calls`)
-  const results = await pool(jobs, 4, async ({ engine, prompt, task }) => {
-    const base = { engine, id: prompt.id, service: prompt.service, query: task.user_prompt ?? task.keyword }
+  const results = await pool(jobs, 4, async ({ engine, prompt, run, task }) => {
+    const base = { engine, id: prompt.id, run, service: prompt.service, query: task.user_prompt ?? task.keyword }
     try {
       const { result, cost } = await post(endpoints[engine], task, auth)
       const analysis = engine === 'google' ? analyzeSerp(result, brand) : analyzeLlm(result, brand)

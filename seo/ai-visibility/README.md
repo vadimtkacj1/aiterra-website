@@ -32,10 +32,16 @@ mobile, top 20, AI Overview loaded). All calls go through DataForSEO's pay-as-yo
 npm run ai-visibility -- --dry-run                          # show the calls, spend nothing
 npm run ai-visibility -- --engines chat_gpt,google --limit 3 # first paid test
 npm run ai-visibility                                       # full panel, monthly
+npm run ai-visibility -- --runs 3                           # each chat prompt 3 times
 ```
 
 The script prints the real cost of the run from DataForSEO's `cost` field. Start small, then
 run the full panel once a month — ideally the same day each month.
+
+`--runs 3` asks each chat engine the same prompt three times (Google is asked once). The same
+prompt returns the same brand list less than once in 100 tries (SparkToro, January 2026), so a
+single answer says little; the share of runs that name us is the number to track. It triples the
+cost of the chat calls — check with `--dry-run --runs 3` first.
 
 ## Output
 
@@ -50,10 +56,30 @@ run the full panel once a month — ideally the same day each month.
 | `citationRank` | Our position among the cited sources |
 | `organicRank` | Google only: our organic position within the top 20 |
 | `aiOverview` | Google only: an AI Overview was shown for the keyword |
+| `run` | Which repeat of the prompt this row is (1 without `--runs`) |
+| `citedLinks` / `ourLinks` | All source links in the answer, and how many of them are ours |
+
+The console summary also prints:
+
+- **citation share** — our links ÷ all links cited by the chat engines. This is share of voice by
+  sources; it does not need a competitor list.
+- **per-prompt table** — mentioned and cited out of all answers, and a **gap** label where no
+  answer names or cites us: `forums` when most of the top cited domains are Reddit, Quora, Tapuz,
+  FXP or Facebook (answer there, honestly), `third-party` otherwise (directories, reviews, media,
+  YouTube — get onto those pages). If we have no page on the topic at all, the fix is our own
+  page; the script cannot tell that, check the site.
+- **most common fan-out queries** — the sub-searches the engines ran. They show which
+  sub-questions ("best", "reviews", the year) a page must also answer.
 
 ## Reading it honestly
 
 - AI answers vary between runs. One run proves nothing; a trend over three or more months does.
+  Before blaming an engine for a dip, check Search Console impressions for the same pages.
+- Prompts in `prompts.json` stay fixed between runs. New prompts should come from real customer
+  wording — the AI grounding queries in the Bing Webmaster query log, lead forms, WhatsApp — not
+  from "prompt volume" tools. Add them as new ids; never edit an existing one.
+- Most AI-influenced visits arrive as ordinary search. Track branded queries (`aiterra`,
+  `אייטרה`) in Search Console next to this tracker.
 - `mentioned` without `cited` usually means the engine knows the brand but found a better
   source for the answer — that points at the page, not at the brand.
 - "Most cited other domains" in the console summary is the competitor list that matters for
