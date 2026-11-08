@@ -22,6 +22,13 @@ export const SOCIAL_PROFILES = {
   youtube: 'https://www.youtube.com/@aiterra_il',
 }
 
+export const DIRECTORY_PROFILES = [
+  'https://github.com/aiterra-il',
+  'https://www.crunchbase.com/organization/aiterra-5fb4',
+  'https://easy.co.il/page/10168412',
+  'https://08business.co.il/business/aiterra-%D7%90%D7%99%D7%99%D7%98%D7%A8%D7%94/',
+]
+
 export const GOOGLE_BUSINESS_PROFILE_URL = 'https://maps.google.com/?cid=13840747656603668464'
 
 export const OPENING_HOURS = [

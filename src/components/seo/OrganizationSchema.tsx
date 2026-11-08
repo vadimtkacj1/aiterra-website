@@ -2,6 +2,7 @@ import JsonLd from './JsonLd'
 import {
   CONTACT_EMAIL,
   CONTACT_PHONE_INTL,
+  DIRECTORY_PROFILES,
   GOOGLE_BUSINESS_PROFILE_URL,
   OPENING_HOURS,
   SOCIAL_PROFILES,
@@ -115,7 +116,7 @@ export default function OrganizationSchema({ locale = 'he' }: { locale?: 'he' | 
     priceRange: '₪₪',
     employee: employees,
     numberOfEmployees: { '@type': 'QuantitativeValue', value: teamMembers.length },
-    sameAs: [...Object.values(SOCIAL_PROFILES).filter(Boolean), GOOGLE_BUSINESS_PROFILE_URL],
+    sameAs: [...Object.values(SOCIAL_PROFILES).filter(Boolean), ...DIRECTORY_PROFILES, GOOGLE_BUSINESS_PROFILE_URL],
   }
 
   const website = {
