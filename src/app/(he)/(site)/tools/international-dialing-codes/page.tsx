@@ -9,6 +9,7 @@ import {
   MOBILE_PREFIX_HISTORY,
   countryCodes,
 } from '@/lib/international-dialing-codes'
+import { dialingCountryPages, dialingCountryPath } from '@/lib/dialing-country-pages'
 import styles from '../word-counter/page.module.css'
 
 const PATH = '/tools/international-dialing-codes'
@@ -225,6 +226,21 @@ export default function InternationalDialingCodesPage() {
         קידומת 1 משותפת לארצות הברית, לקנדה ולאיים רבים בקריביים ובאוקיינוס השקט, שמזוהים לפי שלוש הספרות הראשונות של
         המספר. בטבלה הם מופיעים בנפרד, עם הקידומת המלאה, למשל 1876 לג׳מייקה. קידומת 7 משותפת לרוסיה ולקזחסטן.
       </p>
+
+      <h2>דף לכל מדינה: הקידומת ואיך מחייגים</h2>
+      <p>
+        במדינות שאליהן מחייגים מישראל הכי הרבה יש דף נפרד: הקידומת, מה עושים עם ה-0 או ה-8 שבתחילת המספר המקומי, ואיך
+        שומרים את המספר בוואטסאפ.
+      </p>
+      <ul>
+        {dialingCountryPages.map((page) => (
+          <li key={page.slug}>
+            <Link href={dialingCountryPath(page.slug)}>
+              קידומת {page.country.name} +{page.country.digits}
+            </Link>
+          </li>
+        ))}
+      </ul>
 
       <h2>מקורות</h2>
       <ul className={styles.sources}>

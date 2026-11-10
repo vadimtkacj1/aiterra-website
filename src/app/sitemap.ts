@@ -11,6 +11,7 @@ import { currencyPages, currencyPath } from '@/lib/currency-pages'
 import { namePagePath, namePages } from '@/lib/name-pages'
 import { RHYME_PAGE_WORDS, rhymePagePath } from '@/lib/rhyme-pages'
 import { holidayPath, holidays } from '@/lib/holiday-dates'
+import { dialingCountryPages, dialingCountryPath } from '@/lib/dialing-country-pages'
 import { CARS_HUB_PATH, CAR_DATA_DATE, carPagePath, carPages } from '@/lib/car-models'
 import { EN_TOOLS_HUB_PATH, EN_TOOL_SLUGS, enToolPath } from '@/lib/tools-en'
 import { EN_SERVICE_SLUGS } from '@/lib/content-en'
@@ -86,9 +87,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const holidayEntries: MetadataRoute.Sitemap = holidays.map((holiday) => ({
     url: `${SITE_URL}${holidayPath(holiday.slug)}`,
-    lastModified: new Date('2026-11-04'),
+    lastModified: new Date('2026-11-10'),
     changeFrequency: 'weekly' as const,
     priority: 0.7,
+  }))
+
+  const dialingEntries: MetadataRoute.Sitemap = dialingCountryPages.map((page) => ({
+    url: `${SITE_URL}${dialingCountryPath(page.slug)}`,
+    lastModified: new Date('2026-11-10'),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
   }))
 
   const carEntries: MetadataRoute.Sitemap = [CARS_HUB_PATH, ...carPages.map((page) => carPagePath(page.slug))].map(
@@ -215,6 +223,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...nameEntries,
     ...rhymeEntries,
     ...holidayEntries,
+    ...dialingEntries,
     ...carEntries,
     ...topicEntries,
     ...convertEntries,

@@ -15,7 +15,13 @@ import {
   workDaysIn,
 } from '@/lib/days-between'
 import { formatDate, formatLongDate, formatShortDate } from '@/lib/work-days'
+import { holidayBySlug, holidayPath } from '@/lib/holiday-dates'
 import styles from './page.module.css'
+
+function HolidayName({ id, name }: { id: string; name: string }) {
+  const holiday = holidayBySlug(id === 'independence' ? 'yom-haatzmaut' : id)
+  return holiday ? <Link href={holidayPath(holiday.slug)}>{name}</Link> : name
+}
 
 const PATH = '/tools/days-between-dates'
 const TITLE = 'מחשבון ימים בין תאריכים'
@@ -201,7 +207,9 @@ export default function DaysBetweenDatesPage() {
           <tbody>
             {data.holidays.map((holiday) => (
               <tr key={`${holiday.id}-${holiday.day}`}>
-                <th scope="row">{holiday.name}</th>
+                <th scope="row">
+                  <HolidayName id={holiday.id} name={holiday.name} />
+                </th>
                 <td>
                   <span className={styles.date}>{formatShortDate(holiday.day)}</span>
                   <span className={styles.weekday}>{formatLongDate(holiday.day).split(',')[0]}</span>

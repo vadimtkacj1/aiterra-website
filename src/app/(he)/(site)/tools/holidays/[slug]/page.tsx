@@ -22,7 +22,7 @@ import {
 import styles from '../../word-counter/page.module.css'
 
 export const dynamicParams = false
-export const revalidate = 21600
+export const revalidate = 3600
 
 export const generateStaticParams = () => holidays.map(({ slug }) => ({ slug }))
 
@@ -38,7 +38,14 @@ const nextOf = (holiday: Holiday) => {
 }
 
 const metaTitleOf = (holiday: Holiday, year: number) =>
-  `מתי ${holiday.short} ${year}? תאריך, יום בשבוע ותאריך עברי`
+  `מתי ${holiday.short} ${year}? עוד כמה ימים, תאריך ותאריך עברי`
+
+const countdownOf = (holiday: Holiday, occurrence: Occurrence, today: number) => {
+  const days = occurrence.start - today
+  if (days <= 0) return ''
+  if (days === 1) return `${holiday.short} מתחיל מחר.`
+  return `עד ${holiday.short} נשארו עוד ${days.toLocaleString('he-IL')} ימים.`
+}
 
 const descriptionOf = (holiday: Holiday, occurrence: Occurrence) =>
   `${holiday.short} ${gregorianYearOf(occurrence.start)}: ${
@@ -71,6 +78,7 @@ export default async function HolidayPage({ params }: Params) {
   const year = gregorianYearOf(next.start)
   const following = later[0]
   const others = holidays.filter((item) => item.slug !== holiday.slug)
+  const countdown = countdownOf(holiday, next, today)
 
   const facts: [string, string][] = [
     ['תאריך', next.end === next.start ? dayLine(next.start) : `${dayLine(next.start)} עד ${dayLine(next.end)}`],
@@ -87,6 +95,15 @@ export default async function HolidayPage({ params }: Params) {
       question: `מתי ${holiday.short} ${year}?`,
       answer: answerOf(holiday, next, today),
     },
+    ...(countdown
+      ? [
+          {
+            id: `holiday-${holiday.slug}-countdown`,
+            question: `עוד כמה ימים ${holiday.short}?`,
+            answer: `${countdown} ${holiday.short} ${year} מתחיל ב${dayLine(next.start)}, והספירה כאן מתעדכנת כל שעה לפי שעון ישראל.`,
+          },
+        ]
+      : []),
     {
       id: `holiday-${holiday.slug}-off`,
       question: `האם ${holiday.short} הוא יום חופש?`,
@@ -117,7 +134,7 @@ export default async function HolidayPage({ params }: Params) {
       title={`מתי ${holiday.short} ${year}?`}
       metaTitle={metaTitleOf(holiday, year)}
       description={descriptionOf(holiday, next)}
-      lede={answerOf(holiday, next, today)}
+      lede={countdown ? `${answerOf(holiday, next, today)} ${countdown}` : answerOf(holiday, next, today)}
       tool={
         <div className={styles.tableWrap}>
           <table className={styles.table}>
