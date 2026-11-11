@@ -294,6 +294,26 @@ export const projectsEn: Record<string, ProjectOverride> = {
       text: 'We built a single-page site in React: an opening screen with the shop name and a WhatsApp button, a price list where every service is a WhatsApp link with a ready-made message, a short section about Natan, a gallery of work that links to videos on Instagram, and a where-and-when section with opening hours, phone and navigation in Waze and Google Maps. The design is dark with a gold accent and a red and blue barber-pole stripe, and scrolling is smooth with subtle animation. The site also has an accessibility menu, an accessibility statement, a privacy policy and terms of use.',
     },
   },
+
+  'sade-vetahana': {
+    title: 'Sade VeTahana — flour brand concept',
+    category: 'Web development',
+    heroTitle: 'Sade VeTahana, a concept site for a flour brand',
+    projectType: 'Concept site',
+    technology: 'HTML · CSS · JavaScript · GSAP',
+    tags: ['Concept', 'Online store', 'Animation', 'UI/UX'],
+    heroDescription:
+      'A concept we built to show what a site for an Israeli food brand can look like. The brand, the logo and the packaging are invented; the site itself works: a shop with a flour catalogue and a cart, 160 recipes by category, a bakers’ club and an animation that tells the milling story as you scroll.',
+    metaDescription:
+      'A concept site for an invented flour brand: a shop with a catalogue and cart, 160 recipes, a bakers’ club and a scroll animation that tells the milling story.',
+    imageAlt: 'Screenshot of the Sade VeTahana concept site homepage',
+    challenge: {
+      text: 'Food brand sites are usually built as a catalogue: a product list, a few recipes and a contact page. We wanted to see what a site looks like when it sells the brand and not only the product: one that tells where the flour comes from, leads from a recipe to a purchase and stays fast on a phone, even with many images and animation.',
+    },
+    solution: {
+      text: 'We built a static site of about 180 pages in the brand colours, red, blue and yellow, with waves joining the sections. The homepage has a challah offer, a flour catalogue filtered by type, a brand story whose words appear as you scroll, and the three milling steps, which lock to the screen and come in one after another. Each of the 160 recipes has a page with ingredients, steps and FAQs, and an illustrated card in the brand colours. The animation runs on GSAP and uses only movement and opacity, so scrolling stays smooth on a phone too.',
+    },
+  },
 }
 
 export function applyProjectEn<T extends PortfolioProject>(project: T): T {

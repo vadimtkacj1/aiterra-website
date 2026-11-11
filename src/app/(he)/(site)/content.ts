@@ -772,6 +772,14 @@ export const portfolioItems: PortfolioItem[] = [
     category: 'brand',
   },
   {
+    id: 'sade-vetahana',
+    title: 'שדה וטחנה — קונספט למותג קמח',
+    tags: ['קונספט', 'חנות אונליין', 'אנימציה'],
+    shot: '/images/portfolio/cards/sade-vetahana.webp',
+    href: '/projects/sade-vetahana',
+    category: 'sales',
+  },
+  {
     id: 'maayan-cosmetics',
     title: 'מעיין ועקנין — קוסמטיקה קלינית',
     tags: ['דף נחיתה', 'נגישות', 'לידים'],

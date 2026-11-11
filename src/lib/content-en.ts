@@ -1007,6 +1007,14 @@ export const contentEn: Partial<V2Content> = {
       category: 'brand',
     },
     {
+      id: 'sade-vetahana',
+      title: 'Sade VeTahana — flour brand concept',
+      tags: ['Concept', 'Online store', 'Animation'],
+      shot: '/images/portfolio/cards/sade-vetahana.webp',
+      href: '/en/projects/sade-vetahana',
+      category: 'sales',
+    },
+    {
       id: 'karin-cohen',
       title: 'Karin Cohen — lash academy',
       tags: ['Landing page', 'UI/UX', 'Lead capture', 'WhatsApp'],
