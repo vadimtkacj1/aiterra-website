@@ -314,6 +314,26 @@ export const projectsEn: Record<string, ProjectOverride> = {
       text: 'We built a static site of about 180 pages in the brand colours, red, blue and yellow, with waves joining the sections. The homepage has a challah offer, a flour catalogue filtered by type, a brand story whose words appear as you scroll, and the three milling steps, which lock to the screen and come in one after another. Each of the 160 recipes has a page with ingredients, steps and FAQs, and an illustrated card in the brand colours. The animation runs on GSAP and uses only movement and opacity, so scrolling stays smooth on a phone too.',
     },
   },
+
+  'fani-and-itzhak': {
+    title: 'Fani & Itzhak — Psalms card reading',
+    category: 'Web development',
+    heroTitle: 'Fani & Itzhak, a landing page for Psalms readings',
+    projectType: 'Landing page',
+    technology: 'HTML · CSS · JavaScript · GSAP',
+    tags: ['Landing page', 'WhatsApp', 'Accessibility', 'UI/UX'],
+    heroDescription:
+      'A landing page for Fani and Itzhak, a couple who have offered Psalms card readings for 11 years. We built one calm page in stone and olive tones that says who they are, what they help with and how the reading works, and leads to a WhatsApp message in one tap from every part of the page.',
+    metaDescription:
+      'A landing page for Fani and Itzhak, Psalms card readings: their story, the areas they help with, client testimonials and one-tap WhatsApp contact.',
+    imageAlt: 'Screenshot of the Fani & Itzhak homepage',
+    challenge: {
+      text: 'Someone who comes to Fani and Itzhak for the first time needs to understand quickly who they are, what they can help with and why to trust them. The subject is personal and sensitive, so the page had to feel quiet and trustworthy rather than salesy, answer in advance the questions that come up in every conversation, and make the first step as simple as possible: one WhatsApp message.',
+    },
+    solution: {
+      text: 'We built a single landing page with landscape and mood photography in stone and olive tones. It opens with one message and a WhatsApp button, moves on to the couple’s story with a photo of them, then to five areas of help, each with its own image and text, and an explanation of the Psalms cards with an animated fan of cards. After those come screenshots of conversations with clients, frequently asked questions and another WhatsApp button. The page also has an accessibility menu with an option to turn animation off, an accessibility statement, a privacy policy and terms of use.',
+    },
+  },
 }
 
 export function applyProjectEn<T extends PortfolioProject>(project: T): T {

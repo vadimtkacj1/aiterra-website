@@ -185,7 +185,7 @@ export const statItems: StatItem[] = [
   },
   {
     id: 'projects',
-    value: '17',
+    value: '18',
     label: 'פרויקטים בתיק העבודות',
     text: 'אתרים, חנויות ומערכות שמפורטים בתיק העבודות.',
   },
@@ -665,12 +665,12 @@ export const portfolio = {
 export const projectsPage = {
   title: ['תיק עבודות', 'פרויקטים נבחרים'],
   crumb: 'תיק עבודות',
-  lede: '17 פרויקטים חיים: ארבע חנויות אינטרנטיות, אתרי תדמית ולידים בקוסמטיקה, בטיפוח ובמותג אישי, פרויקטים בנדל"ן ובייעוץ משכנתאות, ושלוש פלטפורמות AI ותפעול ללקוחות בקנדה. חלקם נבנו בקוד מאפס וחלקם על Shopify, בעיצוב ובהתאמה של הצוות שלנו, וכולם באוויר היום.',
+  lede: '18 פרויקטים חיים: ארבע חנויות אינטרנטיות, אתרי תדמית ולידים בקוסמטיקה, בטיפוח ובמותג אישי, פרויקטים בנדל"ן ובייעוץ משכנתאות, ושלוש פלטפורמות AI ותפעול ללקוחות בקנדה. חלקם נבנו בקוד מאפס וחלקם על Shopify, בעיצוב ובהתאמה של הצוות שלנו, וכולם באוויר היום.',
   action: { label: 'התחילו פרויקט חדש', href: '/contact' },
   faqHeading: ['לפני שמתחילים', 'כמה דברים שכדאי לדעת.'],
-  metaTitle: 'תיק עבודות - 17 אתרים, חנויות ומערכות שבנינו',
+  metaTitle: 'תיק עבודות - 18 אתרים, חנויות ומערכות שבנינו',
   metaDescription:
-    '17 פרויקטים חיים של Aiterra: חנויות אינטרנטיות, אתרי תדמית ולידים, מערכות ניהול ופלטפורמות AI, בקוד מאפס ועל Shopify. כל הפרויקטים מפורטים בתיק העבודות.',
+    '18 פרויקטים חיים של Aiterra: חנויות אינטרנטיות, אתרי תדמית ולידים, מערכות ניהול ופלטפורמות AI, בקוד מאפס ועל Shopify. כל הפרויקטים מפורטים בתיק העבודות.',
 }
 
 export const projectPage = {
@@ -769,6 +769,14 @@ export const portfolioItems: PortfolioItem[] = [
     tags: ['אתר תדמית', 'WhatsApp', 'UI/UX'],
     shot: '/images/portfolio/cards/natan-borochov.webp',
     href: '/projects/natan-borochov',
+    category: 'brand',
+  },
+  {
+    id: 'fani-and-itzhak',
+    title: 'פאני ויצחק — קלפי תהילים',
+    tags: ['דף נחיתה', 'WhatsApp', 'נגישות'],
+    shot: '/images/portfolio/cards/fani-and-itzhak.webp',
+    href: '/projects/fani-and-itzhak',
     category: 'brand',
   },
   {

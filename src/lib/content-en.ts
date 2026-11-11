@@ -185,7 +185,7 @@ export const contentEn: Partial<V2Content> = {
     },
     {
       id: 'projects',
-      value: '17',
+      value: '18',
       label: 'Projects in our portfolio',
       text: 'Sites, stores and systems listed in Our Work.',
     },
@@ -1007,6 +1007,14 @@ export const contentEn: Partial<V2Content> = {
       category: 'brand',
     },
     {
+      id: 'fani-and-itzhak',
+      title: 'Fani & Itzhak — Psalms card reading',
+      tags: ['Landing page', 'WhatsApp', 'Accessibility'],
+      shot: '/images/portfolio/cards/fani-and-itzhak.webp',
+      href: '/en/projects/fani-and-itzhak',
+      category: 'brand',
+    },
+    {
       id: 'sade-vetahana',
       title: 'Sade VeTahana — flour brand concept',
       tags: ['Concept', 'Online store', 'Animation'],
@@ -1738,10 +1746,10 @@ export const contentEn: Partial<V2Content> = {
 export const projectsPageEn = {
   title: ['Our work', 'Selected projects'],
   crumb: 'Work',
-  lede: 'Seventeen live projects: four online stores, marketing and lead-generation sites across cosmetics, grooming and personal brands, work in real estate and mortgage advisory, and three AI and operations platforms for clients in Canada. Some are written in code from scratch and some run on Shopify, with design and adaptation by our team, and all are in production today.',
+  lede: 'Eighteen live projects: four online stores, marketing and lead-generation sites across cosmetics, grooming and personal brands, work in real estate and mortgage advisory, and three AI and operations platforms for clients in Canada. Some are written in code from scratch and some run on Shopify, with design and adaptation by our team, and all are in production today.',
   action: { label: 'Start a project', href: '/en/contact' },
   faqHeading: ['Before we start', 'a few things worth knowing.'],
-  metaTitle: 'Our Work - 17 Sites, Stores and Systems We Built',
+  metaTitle: 'Our Work - 18 Sites, Stores and Systems We Built',
   metaDescription:
-    'Seventeen live Aiterra projects: online stores, lead-generation sites, management systems and AI platforms, custom-coded and on Shopify. All listed in Our Work.',
+    'Eighteen live Aiterra projects: online stores, lead-generation sites, management systems and AI platforms, custom-coded and on Shopify. All listed in Our Work.',
 }
