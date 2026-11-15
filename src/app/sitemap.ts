@@ -48,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
     { path: TOOLS_HUB_PATH, changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/insights/ai-search-readiness', changeFrequency: 'monthly', priority: 0.7 },
   ]
 
   const commercialEntries: MetadataRoute.Sitemap = commercialRoutes.map((r) => ({

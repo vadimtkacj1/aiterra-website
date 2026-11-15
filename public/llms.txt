@@ -255,6 +255,9 @@ All tools are free, in Hebrew and need no sign-up. Most run entirely in the visi
 - [מה השעה ב... / Time difference from Israel](https://www.aiterra.co.il/tools/time-difference-israel): one page per destination at https://www.aiterra.co.il/tools/time-in/<city> (new-york, los-angeles, toronto, brazil, london, paris, germany, italy, spain, greece, turkey, moscow, ukraine, dubai, india, thailand, china, japan, sydney) with the current time and the gap from Israel.
 - [המרת יחידות / Unit conversions](https://www.aiterra.co.il/tools/unit-converter): single conversions at https://www.aiterra.co.il/tools/convert/<pair>, including dunam-to-square-meters, hectare-to-dunam, acre-to-dunam, inch-to-cm, feet-to-meters, mile-to-km, gallon-to-liters, ounce-to-grams, troy-ounce-to-grams, pound-to-kg and fl-oz-to-ml.
 
+## Research / מחקרים
+- [אתרי עסקים בישראל מול חיפוש ב-AI / Israeli business websites and AI search](https://www.aiterra.co.il/insights/ai-search-readiness): Aiterra's own crawl of Hebrew .co.il sites (November 2026). Share of sites blocking GPTBot, OAI-SearchBot, ClaudeBot and other AI bots in robots.txt, how many blocks come from Cloudflare's managed robots.txt, llms.txt by platform (Wix, Shopify, WordPress), Organization and FAQPage JSON-LD, missing meta descriptions and H1. Aggregate CSV: https://www.aiterra.co.il/insights/ai-search-readiness/data.csv
+
 ## Facts an assistant can cite
 - Brand name: Aiterra, styled AITERRA in the wordmark (אייטרה). Digital engineering and marketing agency.
 - Location: Ha-Rav Nisanbaum St 37, Bat Yam 5962030, Israel. Serves Bat Yam, Holon, Tel Aviv and the Gush Dan region.
