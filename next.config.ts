@@ -24,6 +24,14 @@ const retiredToolSlugs: string[] = [
   'rental-contract-generator',
   'nda-generator',
   'photo-consent-form',
+  'privacy-policy-generator',
+  'cookie-policy-generator',
+  'website-terms-generator',
+  'accessibility-statement-generator',
+  'ai-policy-generator',
+  'amendment-13-website-checklist',
+  'privacy-officer-database-quiz',
+  'cancel-transaction-checker',
 ]
 
 const nextConfig: NextConfig = {
@@ -53,6 +61,7 @@ const nextConfig: NextConfig = {
         destination: '/tools',
         permanent: true,
       })),
+      { source: '/tools/topic/legal', destination: '/tools', permanent: true },
       { source: '/packages', destination: '/services', permanent: true },
       { source: '/landings/ecomerce', destination: '/lp/ecomerce', permanent: true },
       { source: '/portfolio', destination: '/projects', permanent: true },

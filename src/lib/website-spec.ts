@@ -284,28 +284,10 @@ export const featureOptions: { id: string; label: string }[] = [
   { id: 'search', label: 'חיפוש באתר' },
 ]
 
-export const legalOptions: { id: string; label: string; ready: string; href: string; tool: string }[] = [
-  {
-    id: 'privacy',
-    label: 'מדיניות פרטיות',
-    ready: 'קיימת אצלנו ותועבר לספק לפרסום',
-    href: '/tools/privacy-policy-generator',
-    tool: 'מחולל מדיניות פרטיות',
-  },
-  {
-    id: 'terms',
-    label: 'תקנון האתר',
-    ready: 'קיים אצלנו ויועבר לספק לפרסום',
-    href: '/tools/website-terms-generator',
-    tool: 'מחולל תקנון',
-  },
-  {
-    id: 'accessibility',
-    label: 'הצהרת נגישות',
-    ready: 'קיימת אצלנו ותועבר לספק לפרסום',
-    href: '/tools/accessibility-statement-generator',
-    tool: 'מחולל הצהרת נגישות',
-  },
+export const legalOptions: { id: string; label: string; ready: string }[] = [
+  { id: 'privacy', label: 'מדיניות פרטיות', ready: 'קיימת אצלנו ותועבר לספק לפרסום' },
+  { id: 'terms', label: 'תקנון האתר', ready: 'קיים אצלנו ויועבר לספק לפרסום' },
+  { id: 'accessibility', label: 'הצהרת נגישות', ready: 'קיימת אצלנו ותועבר לספק לפרסום' },
 ]
 
 export const trackingOptions: { id: string; label: string }[] = [

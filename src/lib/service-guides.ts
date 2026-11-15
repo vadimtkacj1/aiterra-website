@@ -10,7 +10,6 @@ const MAINTENANCE = [
   guide('amendment-13-website-adaptation-cost-israel', 'התאמת אתר לתיקון 13: כמה עולה'),
   tool('website-security-check', 'בדיקת אבטחת אתר'),
   tool('website-speed-test', 'בדיקת מהירות אתר'),
-  tool('amendment-13-website-checklist', 'בדיקת אתר לתיקון 13'),
 ]
 
 const AUTOMATION = [
@@ -49,8 +48,6 @@ const ECOMMERCE = [
   guide('ecommerce-store-that-sells', 'הקמת חנות אינטרנטית שמוכרת'),
   guide('shopify-vs-woocommerce-israel', 'שופיפיי או ווקומרס לחנות בישראל'),
   tool('profit-margin-calculator', 'מחשבון רווח גולמי ותמחור'),
-  tool('website-terms-generator', 'מחולל תקנון לאתר'),
-  tool('privacy-policy-generator', 'מחולל מדיניות פרטיות'),
 ]
 
 const DEVELOPMENT = [
@@ -71,8 +68,6 @@ const MOBILE_APPS = [
 
 const PRIVACY = [
   guide('amendment-13-website-adaptation-cost-israel', 'התאמת אתר לתיקון 13: כמה עולה'),
-  tool('amendment-13-website-checklist', 'בדיקת אתר לתיקון 13'),
-  tool('privacy-policy-generator', 'מחולל מדיניות פרטיות'),
   tool('website-security-check', 'בדיקת אבטחת אתר'),
 ]
 

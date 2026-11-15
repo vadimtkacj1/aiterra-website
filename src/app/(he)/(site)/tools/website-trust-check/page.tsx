@@ -211,8 +211,7 @@ export default function WebsiteTrustCheckPage() {
       <ul>
         <li>מציגים בתחתית כל דף טלפון, מייל, כתובת ומספר עוסק או ח.פ.</li>
         <li>
-          מוסיפים תקנון, מדיניות פרטיות ו
-          <Link href="/tools/accessibility-statement-generator">הצהרת נגישות</Link>, ומקשרים אליהם מכל דף.
+          מוסיפים תקנון, מדיניות פרטיות והצהרת נגישות, ומקשרים אליהם מכל דף.
         </li>
         <li>מגדירים HSTS, Content-Security-Policy ו-X-Frame-Options, ומוודאים שתעודת ה-SSL מתחדשת לבד.</li>
         <li>בוחרים דומיין שתואם את שם העסק, בלי מקפים מיותרים, ורושמים אותו לכמה שנים.</li>

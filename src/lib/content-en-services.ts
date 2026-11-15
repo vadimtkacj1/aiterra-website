@@ -1855,7 +1855,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
           id: 'policy',
           icon: 'orders',
           title: 'A company AI usage policy',
-          text: 'A short, clear document for employees: which data must never be entered, when human review is required, how to label AI-generated content and who owns a new tool. You can start from the draft in /tools/ai-policy-generator.',
+          text: 'A short, clear document for employees: which data must never be entered, when human review is required, how to label AI-generated content and who owns a new tool.',
         },
         {
           id: 'training',
@@ -2958,7 +2958,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
     eyebrow: 'Website privacy compliance',
     heading: ['Website privacy compliance (Amendment 13)', 'implemented in code and forms'],
     subhead: 'Our technical compliance service',
-    lede: 'A review of the forms and data your site collects, a cookie banner that blocks trackers until consent, privacy and cookie policy pages, fewer fields in forms, secure storage, tidy CRM and mailing integrations, and a flow for access and deletion requests. This is technical work on the website, alongside your lawyer and not instead of one. To start at no cost, use our free Amendment 13 website checklist and cookie policy generator.',
+    lede: 'A review of the forms and data your site collects, a cookie banner that blocks trackers until consent, privacy and cookie policy pages, fewer fields in forms, secure storage, tidy CRM and mailing integrations, and a flow for access and deletion requests. This is technical work on the website, alongside your lawyer and not instead of one.',
     image: '/images/services-view.webp',
     action: { label: 'Request a site privacy review', href: '/en/contact' },
     metaTitle: 'Website Privacy Compliance in Israel: Amendment 13',
@@ -3069,7 +3069,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
       {
         question: 'Is this legal advice?',
         answer:
-          'No. We do the technical work on the website: forms, the cookie banner, blocking tracking tools, security and connections to other systems. What the law requires of your business, which legal wording is right for the privacy policy, and whether you have to register a database or appoint an officer are settled with a lawyer or privacy consultant. We work alongside them: we prepare an exact description of what the site collects and who the vendors are, and implement their decisions. For a first check of your site you can use our free tool at /tools/amendment-13-website-checklist. If your lawyer asks for a change, it goes into the site without rebuilding everything from scratch.',
+          'No. We do the technical work on the website: forms, the cookie banner, blocking tracking tools, security and connections to other systems. What the law requires of your business, which legal wording is right for the privacy policy, and whether you have to register a database or appoint an officer are settled with a lawyer or privacy consultant. We work alongside them: we prepare an exact description of what the site collects and who the vendors are, and implement their decisions. If your lawyer asks for a change, it goes into the site without rebuilding everything from scratch.',
       },
       {
         question: 'What changed in Amendment 13, and why does it touch the website?',
@@ -3084,7 +3084,7 @@ export const servicePagesEn: Record<string, ServicePage> = {
       {
         question: 'Can we prepare privacy and cookie policies without a lawyer?',
         answer:
-          'You can prepare a good draft, but you should not skip legal review if you hold a significant database. In our free cookie policy generator, at /tools/cookie-policy-generator, you enter the tools on your site and get a detailed text. In the service itself we adapt the wording to what the site really does, including the forms and the vendors, and publish it on the right pages with the right links. The final wording should be reviewed by your lawyer, especially if you hold sensitive information. The generator does not replace advice, but it saves valuable time describing the tools and leaves only the polishing to your lawyer.',
+          'Your lawyer writes the legal wording of the privacy and cookie policies. In the service we prepare an exact description of the tools, forms and vendors running on the site, align the banner and the blocking of tracking tools with what the site really does, and publish the final text on the right pages with the right links.',
       },
       {
         question: 'How are access and deletion requests handled?',

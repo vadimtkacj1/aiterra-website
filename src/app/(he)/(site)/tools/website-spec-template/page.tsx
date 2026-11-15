@@ -224,10 +224,7 @@ export default function WebsiteSpecTemplatePage() {
         <li>
           <strong>מדלגים על נגישות ומסמכים משפטיים:</strong> אתר של עסק שנותן שירות לציבור צריך לעמוד בת״י 5568
           ברמת AA ולפרסם הצהרת נגישות, ובדרך כלל גם מדיניות פרטיות ותקנון. כשזה כתוב באפיון, זה נכלל בהצעה ולא
-          מגיע אחר כך כתוספת. את המסמכים עצמם אפשר להכין ב
-          <Link href="/tools/privacy-policy-generator">מחולל מדיניות הפרטיות</Link>, ב
-          <Link href="/tools/website-terms-generator">מחולל התקנון</Link> וב
-          <Link href="/tools/accessibility-statement-generator">מחולל הצהרת הנגישות</Link> שלנו.
+          מגיע אחר כך כתוספת.
         </li>
       </ul>
 

@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { Fragment, useEffect, useId, useMemo, useRef, useState, type ChangeEvent, type ReactNode } from 'react'
 import { Code, Copy, Download, Plus, Printer, Trash2 } from 'lucide-react'
 import {
@@ -849,20 +848,7 @@ export default function WebsiteSpecGenerator() {
           <Section title="משפטי ונגישות">
             <CheckGroup
               legend="מה כבר יש לכם"
-              hint={
-                <>
-                  אין לכם עדיין? אפשר להכין בחינם ב
-                  {legalOptions.map((option, index) => (
-                    <span key={option.id}>
-                      {index === 0 ? '' : index === legalOptions.length - 1 ? ' וב' : ', ב'}
-                      <Link href={option.href} className={styles.hintLink}>
-                        {option.tool}
-                      </Link>
-                    </span>
-                  ))}
-                  .
-                </>
-              }
+              hint="מה שחסר ייכתב באפיון כמשימה לספק."
               options={legalOptions}
               selected={input.legalReady}
               onToggle={toggleOption('legalReady')}

@@ -24,7 +24,7 @@ export type ToolIconName =
   | 'type'
   | 'wrench'
 
-export type ToolCategory = 'marketing' | 'ai' | 'money' | 'work' | 'legal' | 'dates' | 'health' | 'home'
+export type ToolCategory = 'marketing' | 'ai' | 'money' | 'work' | 'dates' | 'health' | 'home'
 
 export type ToolEntry = {
   path: string
@@ -117,24 +117,6 @@ export const toolCategories: ToolCategoryInfo[] = [
       label: 'אוטומציה לעסקים',
       text: 'נוכחות, משמרות ומסמכי עובדים שמתעדכנים לבד מתוך ה-CRM.',
       href: '/services/automation',
-    },
-  },
-  {
-    id: 'legal',
-    label: 'משפטי ואתר',
-    title: 'משפטי ואתר',
-    description: 'מדיניות פרטיות, הצהרת נגישות ותקנון: הסט המשפטי של כל אתר עסקי.',
-    heading: 'מחוללי מסמכים משפטיים לאתר',
-    intro: [
-      'הסט המשפטי שכל אתר עסקי בישראל צריך: מדיניות פרטיות, תקנון, מדיניות עוגיות, הצהרת נגישות ומדיניות שימוש בבינה מלאכותית, וגם רשימת בדיקה לתיקון 13 לחוק הגנת הפרטיות.',
-      'המחוללים בונים טיוטה לפי הפרטים של העסק שלכם. זו נקודת התחלה טובה, אבל לא תחליף לייעוץ משפטי כשהעסק אוסף מידע רגיש.',
-    ],
-    metaDescription:
-      'הסט המשפטי שכל אתר עסקי בישראל צריך: מדיניות פרטיות, תקנון, מדיניות עוגיות, הצהרת נגישות ורשימת בדיקה לתיקון 13 לחוק הגנת הפרטיות.',
-    service: {
-      label: 'תחזוקת אתרים',
-      text: 'עדכוני אבטחה, בדיקות נגישות ועמידה בתיקון 13 באתר קיים.',
-      href: '/services/maintenance',
     },
   },
   {
@@ -411,54 +393,9 @@ export const tools: ToolEntry[] = [
     path: '/tools/signature-generator',
     title: 'יצירת חתימה אונליין',
     description: 'חתימה בכתב יד כקובץ PNG שקוף: מציירים עם העכבר, האצבע או עט, או מקלידים שם, ומוסיפים למסמך Word או PDF.',
-    category: 'legal',
+    category: 'work',
     reviewed: '2026-10-23',
     icon: 'signature',
-  },
-  {
-    path: '/tools/privacy-policy-generator',
-    title: 'מחולל מדיניות פרטיות',
-    description: 'מדיניות פרטיות לאתר לפי חוק הגנת הפרטיות ותיקון 13: טפסים, עוגיות, דיוור וספקי שירות, מוכנה להעתקה.',
-    category: 'legal',
-    icon: 'shield',
-  },
-  {
-    path: '/tools/amendment-13-website-checklist',
-    title: 'האם האתר עומד בתיקון 13?',
-    description: 'צ׳קליסט לבדיקת אתר מול תיקון 13 לחוק הגנת הפרטיות: טפסים, עוגיות, אבטחה וספקים, עם ציון ורשימת תיקונים.',
-    category: 'legal',
-    reviewed: '2026-10-25',
-    icon: 'search',
-  },
-  {
-    path: '/tools/cookie-policy-generator',
-    title: 'מחולל מדיניות עוגיות',
-    description: 'מדיניות עוגיות בעברית לפי הכלים שפועלים באתר, כמו Google Analytics ו-Meta Pixel, להעתקה או להורדה.',
-    category: 'legal',
-    reviewed: '2026-10-25',
-    icon: 'lock',
-  },
-  {
-    path: '/tools/privacy-officer-database-quiz',
-    title: 'האם לרשום מאגר מידע או למנות ממונה פרטיות?',
-    description: 'שאלון לפי חוק הגנת הפרטיות אחרי תיקון 13: חובת רישום מאגר, הודעה לרשות ומינוי ממונה, עם הסעיף שמאחורי כל תוצאה.',
-    category: 'legal',
-    reviewed: '2026-10-25',
-    icon: 'shield',
-  },
-  {
-    path: '/tools/accessibility-statement-generator',
-    title: 'מחולל הצהרת נגישות',
-    description: 'הצהרת נגישות לאתר לפי תקנות הנגישות, בעברית או באנגלית, מוכנה להעתקה.',
-    category: 'legal',
-    icon: 'accessibility',
-  },
-  {
-    path: '/tools/website-terms-generator',
-    title: 'מחולל תקנון לאתר',
-    description: 'תקנון לאתר תדמית, לחנות אינטרנטית או לאתר שירותים, עם סעיפי ביטול עסקה לפי חוק הגנת הצרכן.',
-    category: 'legal',
-    icon: 'scroll',
   },
   {
     path: '/tools/hebrew-date-converter',
@@ -571,14 +508,6 @@ export const tools: ToolEntry[] = [
     category: 'home',
     reviewed: '2026-10-23',
     icon: 'percent',
-  },
-  {
-    path: '/tools/cancel-transaction-checker',
-    title: 'ביטול עסקה: עד מתי ובכמה',
-    description: 'עד מתי אפשר לבטל עסקה באינטרנט, בטלפון או בחנות, כמה דמי ביטול מותר לגבות, ונוסח מוכן להודעת ביטול.',
-    category: 'legal',
-    reviewed: '2026-10-23',
-    icon: 'shield',
   },
   {
     path: '/tools/whatsapp-api-cost-calculator',
@@ -787,14 +716,6 @@ export const tools: ToolEntry[] = [
     category: 'ai',
     reviewed: '2026-10-23',
     icon: 'calculator',
-  },
-  {
-    path: '/tools/ai-policy-generator',
-    title: 'מדיניות שימוש בבינה מלאכותית',
-    description: 'נוהל AI לעובדים בעברית: כלים מאושרים, מידע אסור לפי חוק הגנת הפרטיות ותיקון 13, בדיקת תוצרים והצהרת עובד.',
-    category: 'ai',
-    reviewed: '2026-10-23',
-    icon: 'shield',
   },
   {
     path: '/tools/freelancer-hourly-rate',
@@ -1669,18 +1590,9 @@ const NO_LAWYER_DOCUMENT_NOTICE = 'הנוסח מבוסס על לשון החוק 
 const NO_LAWYER_INFO_NOTICE = 'המידע בעמוד מבוסס על לשון החוק והמקורות שבעמוד, ולא נבדק בידי עורך דין.'
 const NO_DOCTOR_NOTICE = 'המידע בעמוד לא נבדק בידי רופא או דיאטן.'
 
-const LEGAL_TOOLS_WITHOUT_LEGAL_WORDING = ['/tools/signature-generator']
+const LEGAL_TOOLS_THAT_ARE_NOT_DOCUMENTS = ['/tools/end-of-employment-rights', '/tools/final-settlement-calculator']
 
-const LEGAL_TOOLS_THAT_ARE_NOT_DOCUMENTS = [
-  '/tools/amendment-13-website-checklist',
-  '/tools/cancel-transaction-checker',
-  '/tools/end-of-employment-rights',
-  '/tools/final-settlement-calculator',
-  '/tools/privacy-officer-database-quiz',
-]
-
-const LEGAL_TOOLS_OUTSIDE_LEGAL_CATEGORY = [
-  '/tools/ai-policy-generator',
+const LEGAL_TOOLS = [
   '/tools/employment-confirmation-letter',
   '/tools/end-of-employment-rights',
   '/tools/final-settlement-calculator',
@@ -1690,8 +1602,7 @@ const LEGAL_TOOLS_OUTSIDE_LEGAL_CATEGORY = [
 export const toolReviewNotice = (path: string) => {
   const category = tools.find((tool) => tool.path === path)?.category
   if (category === 'health') return NO_DOCTOR_NOTICE
-  if (LEGAL_TOOLS_WITHOUT_LEGAL_WORDING.includes(path)) return null
-  if (category !== 'legal' && !LEGAL_TOOLS_OUTSIDE_LEGAL_CATEGORY.includes(path)) return null
+  if (!LEGAL_TOOLS.includes(path)) return null
   return LEGAL_TOOLS_THAT_ARE_NOT_DOCUMENTS.includes(path) ? NO_LAWYER_INFO_NOTICE : NO_LAWYER_DOCUMENT_NOTICE
 }
 

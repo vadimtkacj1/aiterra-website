@@ -1103,7 +1103,6 @@ export const glossaryTerms: GlossaryTerm[] = [
     example:
       'בוט שאוסף בוואטסאפ שם, טלפון ותיאור של בעיה רפואית צריך לאסוף רק מה שנחוץ, כדאי שיאמר ללקוח שהוא מדבר עם מערכת אוטומטית, והמידע צריך להישמר מאובטח. זה מידע כללי ולא ייעוץ משפטי.',
     related: ['ai-policy', 'data-leakage', 'data-retention'],
-    link: { href: '/tools/privacy-policy-generator', label: 'מחולל מדיניות פרטיות לפי תיקון 13' },
     source: SOURCES.privacyGuide,
   },
   {
