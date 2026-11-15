@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { counterpartPath, localeOf } from '@/lib/locale-path'
@@ -54,6 +54,15 @@ function NavAnchor({
   )
 }
 
+const SERVICES_HIDDEN_FROM_NAV = new Set([
+  'computer-vision',
+  'machine-learning',
+  'generative-ai',
+  'data-analytics',
+  'ai-consulting',
+  'ai-built-app-completion',
+])
+
 export default function Header() {
   const header = useV2('header', headerDefaults)
   const servicesStack = useV2('servicesStack', servicesStackDefaults)
@@ -63,12 +72,14 @@ export default function Header() {
   const portfolioHref = header.nav.find((item) => item.id === 'portfolio')?.href ?? '/projects'
 
   const submenus: Record<string, NavLink[]> = {
-    services: servicesStack.items.map((item) => ({
-      label: item.title,
-      href: item.action.href.includes('/services/')
-        ? item.action.href
-        : `${servicesHref}#v2-service-${item.id}`,
-    })),
+    services: servicesStack.items
+      .filter((item) => !SERVICES_HIDDEN_FROM_NAV.has(item.id))
+      .map((item) => ({
+        label: item.title,
+        href: item.action.href.includes('/services/')
+          ? item.action.href
+          : `${servicesHref}#v2-service-${item.id}`,
+      })),
     portfolio: portfolioFilters
       .filter((filter) => filter.id !== 'all')
       .map((filter) => ({ label: filter.label, href: `${portfolioHref}?filter=${filter.id}` })),
@@ -142,7 +153,10 @@ export default function Header() {
                   </NavAnchor>
 
                   <div className={styles.menu}>
-                    <ul className={styles.menuList}>
+                    <ul
+                      className={item.children.length > 8 ? `${styles.menuList} ${styles.menuGrid}` : styles.menuList}
+                      style={item.children.length > 8 ? ({ '--menu-rows': Math.ceil(item.children.length / 3) } as CSSProperties) : undefined}
+                    >
                       {item.children.map((child) => (
                         <li key={child.href}>
                           <NavAnchor

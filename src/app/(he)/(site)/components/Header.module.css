@@ -77,11 +77,27 @@
   flex-direction: column;
   gap: 2px;
   min-width: 224px;
+  max-height: calc(100vh - var(--v2-bar-height) - 44px);
   padding: 10px;
   border-radius: 12px;
   background: #faf7f3;
   box-shadow: 0 18px 40px 0 #00000029;
   list-style: none;
+  overflow-y: auto;
+}
+
+.menuGrid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(var(--menu-rows, 9), auto);
+  column-gap: 18px;
+  max-width: calc(100vw - 32px);
+  padding: 12px;
+}
+
+.menuGrid .menuLink {
+  padding: 8px 12px;
+  font-size: 14px;
 }
 
 .menuLink {
