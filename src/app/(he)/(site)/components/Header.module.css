@@ -100,6 +100,16 @@
   font-size: 14px;
 }
 
+.navItem:has(.menuGrid) .menu {
+  left: auto;
+  inset-inline-start: 0;
+  transform: translateY(-5px);
+}
+
+.navItem[data-open]:has(.menuGrid) .menu {
+  transform: translateY(0);
+}
+
 .menuLink {
   display: block;
   padding: 11px 14px;
