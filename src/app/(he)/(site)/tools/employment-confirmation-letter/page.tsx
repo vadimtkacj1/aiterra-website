@@ -296,10 +296,6 @@ export default function EmploymentConfirmationLetterPage() {
         המחולל בודק את ספרת הביקורת של מספר הזהות. כדי לבדוק מספר בנפרד, או מספר ח.פ. של המעסיק, יש{' '}
         <Link href="/tools/id-number-check">בדיקת תעודת זהות וספרת ביקורת</Link>.
       </p>
-      <p>
-        עובד חדש מקבל גישה לרשימות לקוחות או למידע עסקי? אפשר להחתים אותו גם על הסכם סודיות, ולהכין אותו ב
-        <Link href="/tools/nda-generator">מחולל הסכם הסודיות</Link>.
-      </p>
       <p className={styles.caveat}>המידע בעמוד הזה כללי ואינו ייעוץ משפטי.</p>
 
       <h2>מקורות</h2>

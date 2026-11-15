@@ -126,11 +126,11 @@ export const toolCategories: ToolCategoryInfo[] = [
     description: 'מדיניות פרטיות, הצהרת נגישות ותקנון: הסט המשפטי של כל אתר עסקי.',
     heading: 'מחוללי מסמכים משפטיים לאתר',
     intro: [
-      'הסט המשפטי שכל אתר עסקי בישראל צריך: מדיניות פרטיות, תקנון, מדיניות עוגיות, הצהרת נגישות, הסכם סודיות ומדיניות שימוש בבינה מלאכותית, וגם רשימת בדיקה לתיקון 13 לחוק הגנת הפרטיות.',
+      'הסט המשפטי שכל אתר עסקי בישראל צריך: מדיניות פרטיות, תקנון, מדיניות עוגיות, הצהרת נגישות ומדיניות שימוש בבינה מלאכותית, וגם רשימת בדיקה לתיקון 13 לחוק הגנת הפרטיות.',
       'המחוללים בונים טיוטה לפי הפרטים של העסק שלכם. זו נקודת התחלה טובה, אבל לא תחליף לייעוץ משפטי כשהעסק אוסף מידע רגיש.',
     ],
     metaDescription:
-      'הסט המשפטי שכל אתר עסקי בישראל צריך: מדיניות פרטיות, תקנון, מדיניות עוגיות, הצהרת נגישות, הסכם סודיות ורשימת בדיקה לתיקון 13 לחוק הגנת הפרטיות.',
+      'הסט המשפטי שכל אתר עסקי בישראל צריך: מדיניות פרטיות, תקנון, מדיניות עוגיות, הצהרת נגישות ורשימת בדיקה לתיקון 13 לחוק הגנת הפרטיות.',
     service: {
       label: 'תחזוקת אתרים',
       text: 'עדכוני אבטחה, בדיקות נגישות ועמידה בתיקון 13 באתר קיים.',
@@ -414,14 +414,6 @@ export const tools: ToolEntry[] = [
     category: 'legal',
     reviewed: '2026-10-23',
     icon: 'signature',
-  },
-  {
-    path: '/tools/nda-generator',
-    title: 'מחולל הסכם סודיות (NDA)',
-    description: 'הסכם סודיות הדדי או חד-צדדי בין חברות, מול פרילנסר או עובד, עם חריגים, משך סודיות ופיצוי מוסכם, מוכן להעתקה ולהדפסה.',
-    category: 'legal',
-    icon: 'lock',
-    reviewed: '2026-10-23',
   },
   {
     path: '/tools/privacy-policy-generator',
@@ -797,14 +789,6 @@ export const tools: ToolEntry[] = [
     icon: 'calculator',
   },
   {
-    path: '/tools/payment-demand-letter',
-    title: 'מכתב התראה ללקוח שלא משלם',
-    description: 'תזכורת תשלום, דרישה רשמית או מכתב התראה לפני תביעה, עם טבלת חשבוניות, מועד תשלום והודעה לוואטסאפ.',
-    category: 'legal',
-    reviewed: '2026-10-23',
-    icon: 'receipt',
-  },
-  {
     path: '/tools/ai-policy-generator',
     title: 'מדיניות שימוש בבינה מלאכותית',
     description: 'נוהל AI לעובדים בעברית: כלים מאושרים, מידע אסור לפי חוק הגנת הפרטיות ותיקון 13, בדיקת תוצרים והצהרת עובד.',
@@ -891,14 +875,6 @@ export const tools: ToolEntry[] = [
     category: 'home',
     reviewed: '2026-10-23',
     icon: 'search',
-  },
-  {
-    path: '/tools/photo-consent-form',
-    title: 'טופס הסכמה לצילום ולפרסום תמונות',
-    description: 'טופס הסכמה לצילום ולפרסום תמונות ללקוחות ולעובדים, גם לקטינים עם חתימת הורה, מוכן להדפסה ב-A4.',
-    category: 'legal',
-    reviewed: '2026-10-23',
-    icon: 'file',
   },
   {
     path: '/tools/ai-tools-hebrew',
@@ -1493,14 +1469,6 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-10-30',
   },
   {
-    path: '/tools/rental-contract-generator',
-    title: 'מחולל הסכם שכירות לדירה',
-    description: 'טיוטת חוזה שכירות למגורים לפי חוק השכירות והשאילה, עם בדיקת תקרת ערובה, להעתקה או הדפסה.',
-    category: 'legal',
-    icon: 'file',
-    reviewed: '2026-10-30',
-  },
-  {
     path: '/tools/image-upscaler',
     title: 'שיפור איכות תמונה',
     description: 'שיפור איכות תמונה בחינם: מגדילים תמונה פי 4 עם בינה מלאכותית שרצה בדפדפן שלכם, בלי הרשמה ובלי להעלות את התמונה לשרת.',
@@ -1701,8 +1669,6 @@ const NO_LAWYER_DOCUMENT_NOTICE = 'הנוסח מבוסס על לשון החוק 
 const NO_LAWYER_INFO_NOTICE = 'המידע בעמוד מבוסס על לשון החוק והמקורות שבעמוד, ולא נבדק בידי עורך דין.'
 const NO_DOCTOR_NOTICE = 'המידע בעמוד לא נבדק בידי רופא או דיאטן.'
 
-const NOTICE_ON_THE_PAGE_ITSELF = '/tools/rental-contract-generator'
-
 const LEGAL_TOOLS_WITHOUT_LEGAL_WORDING = ['/tools/signature-generator']
 
 const LEGAL_TOOLS_THAT_ARE_NOT_DOCUMENTS = [
@@ -1724,7 +1690,7 @@ const LEGAL_TOOLS_OUTSIDE_LEGAL_CATEGORY = [
 export const toolReviewNotice = (path: string) => {
   const category = tools.find((tool) => tool.path === path)?.category
   if (category === 'health') return NO_DOCTOR_NOTICE
-  if (path === NOTICE_ON_THE_PAGE_ITSELF || LEGAL_TOOLS_WITHOUT_LEGAL_WORDING.includes(path)) return null
+  if (LEGAL_TOOLS_WITHOUT_LEGAL_WORDING.includes(path)) return null
   if (category !== 'legal' && !LEGAL_TOOLS_OUTSIDE_LEGAL_CATEGORY.includes(path)) return null
   return LEGAL_TOOLS_THAT_ARE_NOT_DOCUMENTS.includes(path) ? NO_LAWYER_INFO_NOTICE : NO_LAWYER_DOCUMENT_NOTICE
 }

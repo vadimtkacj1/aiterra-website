@@ -19,6 +19,13 @@ const retiredServiceSlugs: { from: string; to: string }[] = [
   { from: '/services/custom', to: '/services/development' },
 ]
 
+const retiredToolSlugs: string[] = [
+  'payment-demand-letter',
+  'rental-contract-generator',
+  'nda-generator',
+  'photo-consent-form',
+]
+
 const nextConfig: NextConfig = {
   output: 'standalone',
   images: {
@@ -39,6 +46,11 @@ const nextConfig: NextConfig = {
       ...retiredServiceSlugs.map(({ from, to }) => ({
         source: from,
         destination: to,
+        permanent: true,
+      })),
+      ...retiredToolSlugs.map((slug) => ({
+        source: `/tools/${slug}`,
+        destination: '/tools',
         permanent: true,
       })),
       { source: '/packages', destination: '/services', permanent: true },
