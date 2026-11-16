@@ -185,7 +185,7 @@ export const contentEn: Partial<V2Content> = {
     },
     {
       id: 'projects',
-      value: '18',
+      value: '19',
       label: 'Projects in our portfolio',
       text: 'Sites, stores and systems listed in Our Work.',
     },
@@ -1015,6 +1015,14 @@ export const contentEn: Partial<V2Content> = {
       category: 'brand',
     },
     {
+      id: 'couple-compass',
+      title: 'The Relationship Compass — online course',
+      tags: ['Online course', 'Member area', 'Admin panel'],
+      shot: '/images/portfolio/cards/couple-compass.webp',
+      href: '/en/projects/couple-compass',
+      category: 'systems',
+    },
+    {
       id: 'sade-vetahana',
       title: 'Sade VeTahana — flour brand concept',
       tags: ['Concept', 'Online store', 'Animation'],
@@ -1746,10 +1754,10 @@ export const contentEn: Partial<V2Content> = {
 export const projectsPageEn = {
   title: ['Our work', 'Selected projects'],
   crumb: 'Work',
-  lede: 'Eighteen live projects: four online stores, marketing and lead-generation sites across cosmetics, grooming and personal brands, work in real estate and mortgage advisory, and three AI and operations platforms for clients in Canada. Some are written in code from scratch and some run on Shopify, with design and adaptation by our team, and all are in production today.',
+  lede: 'Nineteen live projects: four online stores, marketing and lead-generation sites across cosmetics, grooming and personal brands, work in real estate and mortgage advisory, an online course platform and three AI and operations platforms for clients in Canada. Some are written in code from scratch and some run on Shopify, with design and adaptation by our team, and all are in production today.',
   action: { label: 'Start a project', href: '/en/contact' },
   faqHeading: ['Before we start', 'a few things worth knowing.'],
-  metaTitle: 'Our Work - 18 Sites, Stores and Systems We Built',
+  metaTitle: 'Our Work - 19 Sites, Stores and Systems We Built',
   metaDescription:
-    'Eighteen live Aiterra projects: online stores, lead-generation sites, management systems and AI platforms, custom-coded and on Shopify. All listed in Our Work.',
+    'Nineteen live Aiterra projects: online stores, lead-generation sites, management systems and AI platforms, custom-coded and on Shopify. All listed in Our Work.',
 }

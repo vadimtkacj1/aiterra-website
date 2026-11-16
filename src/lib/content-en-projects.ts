@@ -334,6 +334,26 @@ export const projectsEn: Record<string, ProjectOverride> = {
       text: 'We built a single landing page with landscape and mood photography in stone and olive tones. It opens with one message and a WhatsApp button, moves on to the couple’s story with a photo of them, then to five areas of help, each with its own image and text, and an explanation of the Psalms cards with an animated fan of cards. After those come screenshots of conversations with clients, frequently asked questions and another WhatsApp button. The page also has an accessibility menu with an option to turn animation off, an accessibility statement, a privacy policy and terms of use.',
     },
   },
+
+  'couple-compass': {
+    title: 'The Relationship Compass — Fani Ben Mazor’s online course',
+    category: 'Custom software',
+    heroTitle: 'The Relationship Compass, a sales site and member area for a 7-day course',
+    projectType: 'Online course platform',
+    technology: 'Next.js · React · PostgreSQL · Docker',
+    tags: ['Online course', 'Member area', 'Admin panel', 'Accessibility'],
+    heroDescription:
+      'A platform for Fani Ben Mazor’s online course, a personal 7-day process for women who want to look at their relationship from a different angle. We built a sales site with registration and payment, and a member area where a new day opens every day: a video with Hebrew subtitles, questions to close the day and a workbook, with progress saved all the way through.',
+    metaDescription:
+      'A sales site and member area for Fani Ben Mazor’s online course: days that open as the videos are watched, Hebrew-subtitled videos, questions, a workbook and an admin panel.',
+    imageAlt: 'Screenshot of the Relationship Compass homepage',
+    challenge: {
+      text: 'Fani wanted to sell a seven-day process, not a bundle of videos watched back to back. Each day builds on the one before, so a participant has to go through it before the next one opens, answer the questions and come back to the workbook. The subject is personal and sensitive, so the site had to feel calm and trustworthy, keep the content behind a personal login, and let Fani update videos, questions and texts herself, without a developer.',
+    },
+    solution: {
+      text: 'We built a Hebrew sales site with pages on the seven days, the process and Fani, frequently asked questions, and registration with a coupon code and a payment step. After purchase a member area opens: a new day opens every day, provided the previous day’s video has been watched almost to the end. Each day has a video with Hebrew subtitles, questions whose answers are saved while typing, and progress shown throughout. In the admin panel Fani uploads videos, edits questions, texts and the workbook, manages coupons and sees how participants are progressing. The site also has an accessibility menu, an accessibility statement and search-engine metadata.',
+    },
+  },
 }
 
 export function applyProjectEn<T extends PortfolioProject>(project: T): T {
