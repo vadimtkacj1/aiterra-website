@@ -9,13 +9,20 @@ import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/seo/JsonLd'
 import { breadcrumbList, faqPage, ORG_ID, personId } from '@/lib/schema'
 import { SITE_URL } from '@/lib/seo'
-import { AGENT_ROWS, PLATFORM_ORDER, count, percent, readiness } from '@/lib/insights/ai-search-readiness'
+import {
+  AGENT_ROWS,
+  PLATFORM_ORDER,
+  READINESS_PUBLISHED,
+  count,
+  percent,
+  readiness,
+} from '@/lib/insights/ai-search-readiness'
 import styles from '../../components/Article.module.css'
 import insight from '../../components/Insights.module.css'
 
 const PATH = '/insights/ai-search-readiness'
 const CSV_PATH = `${PATH}/data.csv`
-const PUBLISHED = '2026-11-09'
+const PUBLISHED = READINESS_PUBLISHED
 const all = readiness.business
 const sites = count(all.total)
 const CRUMB = 'מחקר: אתרים וחיפוש ב-AI'

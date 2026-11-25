@@ -17,10 +17,20 @@ const DISAMBIGUATING_DESCRIPTION = {
   en: 'Israeli software and digital agency based in Bat Yam that builds websites, apps and automation for small and medium businesses.',
 }
 
+const DESCRIPTION = {
+  he: 'סוכנות דיגיטל ופיתוח – בניית אתרים, SEO ו-GEO, פרסום ממומן, אוטומציה לעסקים וסוכני AI (בינה מלאכותית)',
+  en: 'Digital and development agency: websites, SEO and GEO, paid advertising, business automation and AI agents.',
+}
+
+const STREET_ADDRESS = { he: 'רחוב הרב ניסנבאום 37', en: 'Ha-Rav Nisanbaum St 37' }
+const LOCALITY = { he: 'בת ים', en: 'Bat Yam' }
+const SERVED_CITIES = { he: ['בת ים', 'תל אביב', 'גוש דן'], en: ['Bat Yam', 'Tel Aviv', 'Gush Dan'] }
+const PAYMENT_ACCEPTED = { he: 'מזומן, כרטיס אשראי, העברה בנקאית', en: 'Cash, credit card, bank transfer' }
+
 export default function OrganizationSchema({ locale = 'he' }: { locale?: 'he' | 'en' }) {
   const employees = teamMembers.map((m) => ({
     '@type': 'Person',
-    '@id': personId(m.id, locale),
+    '@id': personId(m.id),
     ...personNames(m.id, m.name, locale),
     jobTitle: locale === 'en' ? authorsEn[m.id]?.role ?? m.role : m.role,
     url: personUrl(m.id, locale),
@@ -34,7 +44,7 @@ export default function OrganizationSchema({ locale = 'he' }: { locale?: 'he' | 
     alternateName: ['Aiterra', 'אייטרה', 'Aiterra Agency', 'AITERRA – Digital Marketing & Web Development Agency'],
     email: CONTACT_EMAIL,
     telephone: CONTACT_PHONE_INTL,
-    description: 'סוכנות דיגיטל ופיתוח – בניית אתרים, SEO ו-GEO, פרסום ממומן, אוטומציה לעסקים וסוכני AI (בינה מלאכותית)',
+    description: DESCRIPTION[locale],
     disambiguatingDescription: DISAMBIGUATING_DESCRIPTION[locale],
     // Raster logo with known dimensions — Google prefers this over SVG for rich
     // results (generated from icons/logo.svg by scripts, see public/icons/logo-512-v2.png).
@@ -47,8 +57,8 @@ export default function OrganizationSchema({ locale = 'he' }: { locale?: 'he' | 
     image: `${SITE_URL}/images/og/og-aiterra-v2.png`,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'רחוב הרב ניסנבאום 37',
-      addressLocality: 'בת ים',
+      streetAddress: STREET_ADDRESS[locale],
+      addressLocality: LOCALITY[locale],
       postalCode: '5962030',
       addressCountry: 'IL',
     },
@@ -61,9 +71,7 @@ export default function OrganizationSchema({ locale = 'he' }: { locale?: 'he' | 
     })),
     areaServed: [
       { '@type': 'Country', name: 'Israel' },
-      { '@type': 'City', name: 'בת ים' },
-      { '@type': 'City', name: 'תל אביב' },
-      { '@type': 'City', name: 'גוש דן' },
+      ...SERVED_CITIES[locale].map((name) => ({ '@type': 'City', name })),
     ],
     // Explicit topical expertise — a direct signal to LLMs of what AITERRA is
     // authoritative on (competitors don't expose this as an Organization node).
@@ -112,7 +120,7 @@ export default function OrganizationSchema({ locale = 'he' }: { locale?: 'he' | 
     ],
     availableLanguage: ['he', 'en', 'ru'],
     currenciesAccepted: 'ILS',
-    paymentAccepted: 'מזומן, כרטיס אשראי, העברה בנקאית',
+    paymentAccepted: PAYMENT_ACCEPTED[locale],
     priceRange: '₪₪',
     employee: employees,
     numberOfEmployees: { '@type': 'QuantitativeValue', value: teamMembers.length },

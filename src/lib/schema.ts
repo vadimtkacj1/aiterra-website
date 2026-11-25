@@ -14,8 +14,7 @@ const localePrefix = (locale: Locale) => (locale === 'en' ? '/en' : '')
 export const personUrl = (authorId: string, locale: Locale = 'he') =>
   `${SITE_URL}${localePrefix(locale)}/blog/author/${authorId}`
 
-export const personId = (authorId: string, locale: Locale = 'he') =>
-  `${personUrl(authorId, locale)}#person`
+export const personId = (authorId: string) => `${personUrl(authorId)}#person`
 
 const withoutBracketedGloss = (name: string) =>
   name.replace(/\s*\([^)]*\)/g, '').trim() || name.trim()
@@ -151,7 +150,7 @@ export function articleSchema({
     author: authorId
       ? {
           '@type': 'Person',
-          '@id': personId(authorId, locale),
+          '@id': personId(authorId),
           name: personNames(authorId, authorName, locale).name,
           url: personUrl(authorId, locale),
         }

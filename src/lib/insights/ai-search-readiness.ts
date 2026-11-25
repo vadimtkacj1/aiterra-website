@@ -4,6 +4,8 @@ export type ReadinessCounts = (typeof data)['business']
 
 export const readiness = data
 
+export const READINESS_PUBLISHED = '2026-11-09'
+
 export const percent = (part: number, total: number) =>
   total ? `${(Math.round((1000 * part) / total) / 10).toLocaleString('he-IL')}%` : '0%'
 

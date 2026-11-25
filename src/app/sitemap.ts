@@ -18,6 +18,7 @@ import { EN_SERVICE_SLUGS } from '@/lib/content-en'
 import { getAllPostsEn } from '@/lib/content-en-blog'
 import { hasCounterpart, toEnglishPath, toHebrewPath } from '@/lib/locale-path'
 import { EN_COUNTERPARTS } from '@/lib/locale-counterparts'
+import { READINESS_PUBLISHED } from '@/lib/insights/ai-search-readiness'
 
 export const revalidate = 3600
 
@@ -40,6 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     path: string
     changeFrequency: 'weekly' | 'monthly'
     priority: number
+    lastModified?: Date
   }[] = [
     { path: '', changeFrequency: 'weekly', priority: 1.0 },
     { path: '/services', changeFrequency: 'monthly', priority: 0.9 },
@@ -48,12 +50,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
     { path: TOOLS_HUB_PATH, changeFrequency: 'monthly', priority: 0.7 },
-    { path: '/insights/ai-search-readiness', changeFrequency: 'monthly', priority: 0.7 },
+    {
+      path: '/insights/ai-search-readiness',
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      lastModified: new Date(READINESS_PUBLISHED),
+    },
   ]
 
   const commercialEntries: MetadataRoute.Sitemap = commercialRoutes.map((r) => ({
     url: `${SITE_URL}${r.path || '/'}`,
-    lastModified: latestContent,
+    lastModified: r.lastModified ?? latestContent,
     changeFrequency: r.changeFrequency,
     priority: r.priority,
   }))

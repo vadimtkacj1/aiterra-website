@@ -93,7 +93,7 @@ export default async function EnAuthorPage({ params }: { params: Promise<{ id: s
     '@type': 'ProfilePage',
     mainEntity: {
       '@type': 'Person',
-      '@id': personId(author.id, 'en'),
+      '@id': personId(author.id),
       ...personNames(raw.id, raw.name, 'en'),
       jobTitle: author.role || undefined,
       description: author.bio || undefined,

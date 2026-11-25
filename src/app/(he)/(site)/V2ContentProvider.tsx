@@ -1,7 +1,8 @@
 'use client'
 
 import { createContext, useContext, useMemo, type ReactNode } from 'react'
-import type { V2Content, V2ContentKey } from './content'
+import type { ClientContentKey } from './clientContentKeys'
+import type { V2Content } from './content'
 import { mergeV2, type V2Overrides } from './contentMerge'
 
 const EMPTY: V2Overrides = {}
@@ -18,7 +19,7 @@ export default function V2ContentProvider({
   return <V2OverridesContext.Provider value={overrides}>{children}</V2OverridesContext.Provider>
 }
 
-export function useV2<K extends V2ContentKey>(key: K, fallback: V2Content[K]): V2Content[K] {
+export function useV2<K extends ClientContentKey>(key: K, fallback: V2Content[K]): V2Content[K] {
   const overrides = useContext(V2OverridesContext)
   return useMemo(() => mergeV2(fallback, overrides[key]), [fallback, overrides, key])
 }
