@@ -28,7 +28,11 @@ const fillOptions: { value: TableFill; label: string }[] = [
   { value: 'partial', label: 'חצי ריק לתרגול' },
 ]
 
-const previewCell: Record<TableSize, number> = { 10: 38, 12: 34, 20: 26 }
+const previewCell: Record<TableSize, { cell: number; font: number; narrowFont: number }> = {
+  10: { cell: 38, font: 15, narrowFont: 11 },
+  12: { cell: 34, font: 13, narrowFont: 9 },
+  20: { cell: 26, font: 8, narrowFont: 8 },
+}
 
 export default function MultiplicationTable() {
   const baseId = useId()
@@ -39,7 +43,13 @@ export default function MultiplicationTable() {
   const [seed, setSeed] = useState(DEFAULT_TABLE_SEED)
 
   const table = useMemo(() => buildTable({ size, fill, seed }), [size, fill, seed])
-  const tableStyle = { '--cell': `${previewCell[size]}px`, '--columns': size + 1 } as CSSProperties
+  const { cell, font, narrowFont } = previewCell[size]
+  const tableStyle = {
+    '--cell': `${cell}px`,
+    '--columns': size + 1,
+    '--font': `${font}px`,
+    '--narrow-font': `${narrowFont}px`,
+  } as CSSProperties
 
   const print = () => {
     openPrint(tablePrintDocument({ size, fill, color, title, seed }))

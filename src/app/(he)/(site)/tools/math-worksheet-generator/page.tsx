@@ -5,6 +5,7 @@ import { MAX_EXERCISES, MIN_EXERCISES, WORKSHEET_REVIEWED_LABEL } from '@/lib/ma
 import styles from '../bingo-card-generator/page.module.css'
 
 const PATH = '/tools/math-worksheet-generator'
+const NO_BREAK_SPACE = String.fromCharCode(160)
 const TITLE = 'מחולל דפי עבודה בחשבון להדפסה'
 const META_TITLE = 'דפי עבודה בחשבון להדפסה: מחולל חינם עם דף תשובות'
 const DESCRIPTION =
@@ -92,7 +93,7 @@ export default function MathWorksheetGeneratorPage() {
             {sheets.map((entry) => (
               <tr key={entry.sheet}>
                 <th scope="row">{entry.sheet}</th>
-                <td dir="ltr">{entry.example.replaceAll(' ', ' ')}</td>
+                <td dir="ltr">{entry.example.replaceAll(' ', NO_BREAK_SPACE)}</td>
                 <td>{entry.note}</td>
               </tr>
             ))}

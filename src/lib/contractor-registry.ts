@@ -22,10 +22,15 @@ export const COMPANIES_COUNT = 8631
 export const RECOGNIZED_COUNT = 919
 export const MAIN_BRANCH_THRESHOLD = 108500
 export const SUB_BRANCH_THRESHOLD = 56750
+export const SCOPE_TABLE_FROM_LABEL = '1.10.2026'
+export const SCOPE_TABLE_UNTIL_LABEL = '1.4.2027'
+export const DATASET_A1_SCOPE = 1948000
 export const RESULTS_LIMIT = 20
 
 const NAME_ROWS_LIMIT = 300
 const NUMBER_ROWS_LIMIT = 60
+const SCOPE_TABLE_UNTIL = Date.UTC(2027, 3, 1)
+const NO_BREAK_SPACE = String.fromCharCode(160)
 const UNLIMITED_SCOPE = 'ב.מ.'
 const NOT_RECOGNIZED = 'לא מוכר'
 const BLOCKING_RESTRICTION = /מותלה|מוקפא|הקפאת|אינה רשאית/
@@ -117,16 +122,16 @@ export const branches = [
 ]
 
 export const scopeTable = [
-  { grade: 'ק', a: 825, b: null, c: null },
-  { grade: '1', a: 1948, b: 3192, c: 5332 },
-  { grade: '2', a: 3896, b: 6382, c: 9405 },
-  { grade: '3', a: 7793, b: 12765, c: 18811 },
-  { grade: '4', a: 15586, b: 25529, c: 37620 },
+  { grade: 'ק', a: 846, b: null, c: null },
+  { grade: '1', a: 1994, b: 3267, c: 5458 },
+  { grade: '2', a: 3988, b: 6533, c: 9627 },
+  { grade: '3', a: 7977, b: 13066, c: 19255 },
+  { grade: '4', a: 15954, b: 26131, c: 38508 },
 ]
 
 const numberFormat = new Intl.NumberFormat('he-IL')
 
-export const formatShekels = (amount: number) => `${numberFormat.format(amount)} ₪`
+export const formatShekels = (amount: number) => `${numberFormat.format(amount)}${NO_BREAK_SPACE}₪`
 
 export const formatCount = (count: number) => numberFormat.format(count)
 
@@ -135,9 +140,20 @@ export const recordUrl = (number: string) => `https://www.gov.il/apps/moch/rasha
 export const gradeLabel = (license: Pick<ContractorLicense, 'group' | 'grade'>) =>
   /^\d$/.test(license.grade) ? `${license.group}${license.grade}` : `${license.group}-${license.grade}`
 
-export const scopeLabel = (license: Pick<ContractorLicense, 'scope' | 'unlimited'>) => {
+const scopeColumns = { א: 'a', ב: 'b', ג: 'c' } as const
+
+export function tableScope(license: Pick<ContractorLicense, 'group' | 'grade'>, now = Date.now()) {
+  if (now >= SCOPE_TABLE_UNTIL) return null
+  const row = scopeTable.find((entry) => entry.grade === license.grade)
+  const column = scopeColumns[license.group as keyof typeof scopeColumns]
+  const thousands = row && column ? row[column] : null
+  return thousands ? thousands * 1000 : null
+}
+
+export const scopeLabel = (license: Pick<ContractorLicense, 'group' | 'grade' | 'scope' | 'unlimited'>) => {
   if (license.unlimited) return 'ללא הגבלת היקף'
-  return license.scope ? `עד ${formatShekels(license.scope)} באתר אחד` : ''
+  const scope = tableScope(license) ?? license.scope
+  return scope ? `עד ${formatShekels(scope)} באתר אחד` : ''
 }
 
 export const isBlocked = (contractor: Contractor) => contractor.licenses.some((license) => license.blocked)

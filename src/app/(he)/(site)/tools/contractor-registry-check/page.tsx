@@ -8,11 +8,14 @@ import {
   CONTRACTORS_DATASET_URL,
   CONTRACTORS_DATA_LABEL,
   CONTRACTORS_REVIEWED_LABEL,
+  DATASET_A1_SCOPE,
   LICENSES_COUNT,
   MAIN_BRANCH_THRESHOLD,
   RECOGNIZED_COUNT,
   REGISTRAR_URL,
   SUB_BRANCH_THRESHOLD,
+  SCOPE_TABLE_FROM_LABEL,
+  SCOPE_TABLE_UNTIL_LABEL,
   THRESHOLD_REGULATIONS_URL,
   branches,
   formatCount,
@@ -40,7 +43,7 @@ const faq: ToolFaqEntry[] = [
   {
     id: 'contractor-faq-grade',
     question: 'מה אומר הסיווג של קבלן, למשל ג1 או ג5?',
-    answer: `הסיווג בנוי מאות ומספר. האות, א׳, ב׳ או ג׳, היא קבוצת הענף: ענף בניה (100) שייך לקבוצה ג׳, וענף שיפוצים (131) לקבוצה א׳. המספר, 1 עד 5, קובע את ההיקף הכספי המרבי שהקבלן רשאי לבצע באתר בנייה אחד. לפי המאגר, קבלן ג1 מוגבל ל-${scopeCell(scopeTable[1].c)} וקבלן ג4 ל-${scopeCell(scopeTable[4].c)}, וקבלן בסוג 5 אינו מוגבל בהיקף. הסכומים לא כוללים מע״מ, ולפי התקנות הם מתעדכנים ב-1 באפריל וב-1 באוקטובר בכל שנה.`,
+    answer: `הסיווג בנוי מאות ומספר. האות, א׳, ב׳ או ג׳, היא קבוצת הענף: ענף בניה (100) שייך לקבוצה ג׳, וענף שיפוצים (131) לקבוצה א׳. המספר, 1 עד 5, קובע את ההיקף הכספי המרבי שהקבלן רשאי לבצע באתר בנייה אחד. לפי טבלת הסיווג שבתוקף עד ${SCOPE_TABLE_UNTIL_LABEL}, קבלן ג1 מוגבל ל-${scopeCell(scopeTable[1].c)} וקבלן ג4 ל-${scopeCell(scopeTable[4].c)}, וקבלן בסוג 5 אינו מוגבל בהיקף. הסכומים לא כוללים מע״מ, ולפי התקנות הם מתעדכנים ב-1 באפריל וב-1 באוקטובר בכל שנה.`,
   },
   {
     id: 'contractor-faq-required',
@@ -117,16 +120,24 @@ export default function ContractorRegistryCheckPage() {
 
       <h2>ההיקף הכספי המרבי לפי סיווג</h2>
       <p>
-        הסכומים הם ההיקף שקבלן רשאי לבצע באתר בנייה אחד, בלי מע״מ. כך הם רשומים במאגר ב-{CONTRACTORS_DATA_LABEL}. לפי{' '}
+        הסכומים הם ההיקף שקבלן רשאי לבצע באתר בנייה אחד, בלי מע״מ, לפי טבלת הסיווג שבתוקף מ-{SCOPE_TABLE_FROM_LABEL}{' '}
+        עד {SCOPE_TABLE_UNTIL_LABEL} ב
         <a href={CLASSIFICATION_URL} rel="noopener" target="_blank">
           עמוד סיווג הקבלנים של משרד הבינוי והשיכון
         </a>
-        , הסכומים משתנים ב-1 באפריל וב-1 באוקטובר בכל שנה לפי מדד תשומות הבנייה למגורים, ובבנייה למגורים יש גם
-        תקרה במ״ר.
+        . לפי אותו עמוד, הסכומים משתנים ב-1 באפריל וב-1 באוקטובר בכל שנה לפי מדד תשומות הבנייה למגורים, ובבנייה
+        למגורים יש גם תקרה במ״ר.
+      </p>
+      <p>
+        במאגר הפתוח, נכון ל-{CONTRACTORS_DATA_LABEL}, עדיין רשומים הסכומים של התקופה הקודמת, למשל{' '}
+        {formatShekels(DATASET_A1_SCOPE)} לסוג א1 במקום {scopeCell(scopeTable[1].a)}. לכן בתוצאת החיפוש מוצג הסכום
+        מהטבלה שבתוקף, לפי הקבוצה והסוג של הקבלן.
       </p>
       <div className={styles.tableWrap} role="region" aria-label="היקף כספי מרבי לפי קבוצה וסוג" tabIndex={0}>
         <table className={styles.table}>
-          <caption>היקף כספי מרבי לאתר אחד בשקלים, לפי קבוצה וסוג</caption>
+          <caption>
+            היקף כספי מרבי לאתר אחד בשקלים, בתוקף מ-{SCOPE_TABLE_FROM_LABEL} עד {SCOPE_TABLE_UNTIL_LABEL}
+          </caption>
           <thead>
             <tr>
               <th scope="col">סוג</th>
@@ -215,7 +226,7 @@ export default function ContractorRegistryCheckPage() {
           <a href={CLASSIFICATION_URL} rel="noopener" target="_blank">
             משרד הבינוי והשיכון: סיווג קבלנים
           </a>
-          : משמעות הסוגים, מועדי העדכון של הסכומים וסוג ק בענף 131.
+          : טבלת הסיווג שבתוקף, משמעות הסוגים, מועדי העדכון של הסכומים וסוג ק בענף 131.
         </li>
         <li>
           <a href={THRESHOLD_REGULATIONS_URL} rel="noopener" target="_blank">
