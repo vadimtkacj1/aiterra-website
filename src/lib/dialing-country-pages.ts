@@ -98,7 +98,10 @@ export const dialingCountryPath = (slug: string) => `${DIALING_HUB_PATH}/${slug}
 
 export const dialingCountryBySlug = (slug: string) => dialingCountryPages.find((page) => page.slug === slug)
 
-export const dialingCountryByIso = (iso: string) => dialingCountryPages.find((page) => page.country.iso === iso)
+export const dialingCountryByTimeIn = (timeInSlug: string) =>
+  dialingCountryPages.find((page) => page.timeIn?.slug === timeInSlug)
+
+export const dialingCountryByIso =(iso: string) => dialingCountryPages.find((page) => page.country.iso === iso)
 
 export const withPreposition = (letter: 'ל' | 'ב' | 'מ', name: string) =>
   `${letter}${DEFINITE_ARTICLE_NAMES.has(name) ? name.slice(1) : name}`
