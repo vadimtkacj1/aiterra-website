@@ -248,6 +248,15 @@ export default function ToolLayout({
         <ToolShareBar path={path} title={title} />
         <p className={styles.trustLine}>
           הכלי נבנה ומתוחזק בידי AITERRA, סוכנות דיגיטל ישראלית. {reviewNotice ? `${reviewNotice} ` : null}
+          {isFunTool(path) ? (
+            <>
+              רוצים משחק או כלי כזה באתר של העסק שלכם?{' '}
+              <Link href="/services/development" prefetch={false}>
+                אנחנו בונים אותם
+              </Link>
+              {' · '}
+            </>
+          ) : null}
           <Link href="/about" prefetch={false}>
             מי אנחנו
           </Link>

@@ -534,6 +534,30 @@ export const tools: ToolEntry[] = [
     icon: 'qr',
   },
   {
+    path: '/tools/printable-sudoku',
+    title: 'סודוקו להדפסה',
+    description: 'לוחות סודוקו חדשים בכל לחיצה: קל, בינוני או קשה, 9 על 9 או סודוקו לילדים, 1 עד 6 לוחות בדף A4, עם דף פתרונות.',
+    category: 'home',
+    reviewed: '2026-11-26',
+    icon: 'qr',
+  },
+  {
+    path: '/tools/multiplication-table',
+    title: 'לוח הכפל להדפסה',
+    description: 'לוח הכפל בדף A4 אחד: מלא, ריק למילוי או חצי ריק לתרגול, צבעוני או בשחור לבן, עד 100, עד 144 או עד 400.',
+    category: 'home',
+    reviewed: '2026-11-26',
+    icon: 'calculator',
+  },
+  {
+    path: '/tools/math-worksheet-generator',
+    title: 'מחולל דפי עבודה בחשבון להדפסה',
+    description: 'דפי עבודה בחשבון עם דף תשובות: חיבור, חיסור, כפל וחילוק עד 10, 20, 100 או 1000, בשורה, במאונך או עם מספר חסר.',
+    category: 'home',
+    reviewed: '2026-11-26',
+    icon: 'calculator',
+  },
+  {
     path: '/tools/maaser-calculator',
     title: 'מחשבון מעשר כספים',
     description: 'מחשבים מעשר או חומש מהמשכורת, מעסק וממתנות, מנכים הוצאות עבודה ורושמים ביומן כמה נתתם וכמה נותר.',
@@ -1190,6 +1214,14 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-10-28',
   },
   {
+    path: '/tools/contractor-registry-check',
+    title: 'בדיקת קבלן רשום בפנקס הקבלנים',
+    description: 'מחפשים קבלן לפי שם, מספר קבלן או ח.פ. ורואים אם הוא רשום בפנקס הקבלנים, באילו ענפים, באיזה סיווג ועד איזה היקף כספי.',
+    category: 'home',
+    icon: 'search',
+    reviewed: '2026-11-26',
+  },
+  {
     path: '/tools/currency',
     title: 'המרת מטבע לשקלים',
     description: 'כמה זה בשקלים היום: 24 מטבעות מול השקל, מתעדכנים פעם ביום: דולר, יורו, זלוטי, וון, באט, גריבנה, דירהם ועוד.',
@@ -1497,6 +1529,7 @@ const CLOSEST_TOOLS: Record<string, string[]> = {
   '/tools/amount-in-words': ['/tools/vat-calculator', '/tools/price-quote-generator'],
   '/tools/random-wheel-picker': ['/tools/bingo-card-generator', '/tools/word-search-maker'],
   '/tools/id-number-check': ['/tools/iban-calculator', '/tools/company-lookup'],
+  '/tools/contractor-registry-check': ['/tools/company-lookup', '/tools/price-quote-generator', '/tools/area-volume-calculator'],
 }
 
 const FUN_TOOLS = [
@@ -1504,6 +1537,9 @@ const FUN_TOOLS = [
   '/tools/family-quiz',
   '/tools/random-wheel-picker',
   '/tools/word-search-maker',
+  '/tools/printable-sudoku',
+  '/tools/multiplication-table',
+  '/tools/math-worksheet-generator',
   '/tools/photo-to-sketch',
   '/tools/gematria-calculator',
   '/tools/bingo-card-generator',
