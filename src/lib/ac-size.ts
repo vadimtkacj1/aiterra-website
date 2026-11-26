@@ -41,7 +41,7 @@ export const SUN_PERCENT: Record<Sun, number> = { shaded: -10, normal: 0, strong
 export const FLOOR_PERCENT: Record<Floor, number> = { middle: 0, top: 10 }
 export const REGION_PERCENT: Record<Region, number> = { mountain: -10, coastal: 5, inland: 0, hot: 15 }
 
-export const REVIEWED_LABEL = '28.10.2026'
+export const REVIEWED_LABEL = '26.11.2026'
 
 export const SOURCES = {
   tadiranGuide: {

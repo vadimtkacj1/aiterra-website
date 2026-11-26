@@ -114,7 +114,9 @@ export default function AreaVolumeCalculatorPage() {
       <p>
         בטאב &quot;שטח חדר&quot; מקלידים אורך, רוחב וגובה, ומקבלים שטח רצפה, שטח רצפה עם פחת לריצוף, שטח קירות והיקף
         לפנלים. לחדר בצורת L מחשבים שני מלבנים בנפרד ומחברים. כדי לדעת כמה ליטרים של צבע לקנות, כולל הפחתת דלתות
-        וחלונות ומספר שכבות, השתמשו ב<Link href="/tools/paint-quantity-calculator">מחשבון כמות צבע</Link>.
+        וחלונות ומספר שכבות, השתמשו ב<Link href="/tools/paint-quantity-calculator">מחשבון כמות צבע</Link>. את שטח
+        הרצפה אפשר להקליד גם ב<Link href="/tools/ac-size-calculator">מחשבון מזגן לפי שטח</Link>, שמחזיר כמה BTU וכוח
+        סוס החדר צריך.
       </p>
 
       <h2>מקורות</h2>

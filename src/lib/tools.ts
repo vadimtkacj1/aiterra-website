@@ -586,7 +586,7 @@ export const tools: ToolEntry[] = [
     title: 'מחשבון מזגן לפי גודל חדר',
     description: 'כמה BTU וכמה כוח סוס מזגן צריך לחדר, לפי שטח, תקרה, שמש, קומה, אנשים ואזור בארץ.',
     category: 'home',
-    reviewed: '2026-10-28',
+    reviewed: '2026-11-26',
     icon: 'calculator',
   },
   {
@@ -1539,6 +1539,9 @@ const CLOSEST_TOOLS: Record<string, string[]> = {
   '/tools/id-number-check': ['/tools/iban-calculator', '/tools/company-lookup'],
   '/tools/contractor-registry-check': ['/tools/company-lookup', '/tools/price-quote-generator', '/tools/area-volume-calculator'],
   '/tools/broker-license-check': ['/tools/purchase-tax-calculator', '/tools/contractor-registry-check', '/tools/company-lookup'],
+  '/tools/ac-size-calculator': ['/tools/electricity-cost-calculator', '/tools/area-volume-calculator', '/tools/paint-quantity-calculator'],
+  '/tools/electricity-cost-calculator': ['/tools/ac-size-calculator'],
+  '/tools/area-volume-calculator': ['/tools/paint-quantity-calculator', '/tools/ac-size-calculator'],
 }
 
 const FUN_TOOLS = [

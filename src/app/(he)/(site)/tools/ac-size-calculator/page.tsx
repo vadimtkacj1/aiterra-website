@@ -1,6 +1,8 @@
+import Link from 'next/link'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../components/tools/ToolLayout'
 import AcSizeCalculator from '../../components/tools/AcSizeCalculator'
 import {
+  type AcInput,
   BTU_PER_HORSEPOWER,
   BTU_PER_PERSON,
   BTU_PER_SQUARE_METER,
@@ -21,7 +23,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/ac-size-calculator'
 const TITLE = 'מחשבון מזגן לפי גודל חדר'
-const META_TITLE = 'מחשבון מזגן: כמה כוח סוס ו-BTU צריך לחדר'
+const META_TITLE = 'מחשבון מזגן לפי שטח: כמה כוח סוס ו-BTU צריך לחדר'
 const DESCRIPTION =
   'מחשבון BTU למזגן: מקלידים שטח חדר, גובה תקרה, שמש, קומה, אנשים ואזור בארץ, ומקבלים כמה BTU צריך ואיזה מזגן מתאים, 1, 1.5, 2 או 3 כוח סוס.'
 
@@ -55,6 +57,33 @@ const livingRoom = calculateAc({
 
 const ratingText = (result: ReturnType<typeof calculateAc>) =>
   result.rating ? formatHorsepower(result.rating.horsepower) : 'יותר מ-5 כ"ס'
+
+const ROOM_AREAS = [10, 12, 15, 20, 25, 30, 40]
+
+const TYPICAL_ROOM: Omit<AcInput, 'areaSquareMeters'> = {
+  ceilingMeters: 2.6,
+  people: 2,
+  sun: 'normal',
+  floor: 'middle',
+  kitchen: false,
+  region: 'inland',
+}
+
+const roomRow = (areaSquareMeters: number) => ({
+  area: areaSquareMeters,
+  typical: calculateAc({ ...TYPICAL_ROOM, areaSquareMeters }),
+  exposed: calculateAc({ ...TYPICAL_ROOM, areaSquareMeters, sun: 'strong', floor: 'top' }),
+  coastal: calculateAc({ ...TYPICAL_ROOM, areaSquareMeters, region: 'coastal' }),
+})
+
+const roomRows = ROOM_AREAS.map(roomRow)
+const room15 = roomRow(15)
+const room30 = roomRow(30)
+
+const coastalSteps = roomRows
+  .filter((row) => row.coastal.rating?.horsepower !== row.typical.rating?.horsepower)
+  .map((row) => `${row.area} מ"ר ל-${ratingText(row.coastal)}`)
+  .join(', ')
 
 const faq: ToolFaqEntry[] = [
   {
@@ -116,6 +145,48 @@ export default function AcSizeCalculatorPage() {
         href: '/services/brochure',
       }}
     >
+      <h2>איזה מזגן צריך לפי גודל החדר</h2>
+      <p>
+        הטבלה מחושבת באותם כללים של המחשבון, {formatNumber(BTU_PER_SQUARE_METER)} BTU למ&quot;ר ו-
+        {formatNumber(BTU_PER_PERSON)} BTU לכל אדם, לחדר עם שני אנשים, תקרה של{' '}
+        {formatNumber(TYPICAL_ROOM.ceilingMeters, 1)} מ&apos;, קומת ביניים ושמש רגילה. העמודה האחרונה היא אותו חדר
+        בקומה עליונה, עם חלונות גדולים לדרום או למערב.
+      </p>
+      <div className={styles.tableWrap} role="region" aria-label="טבלת מזגן לפי שטח החדר" tabIndex={0}>
+        <table className={styles.table}>
+          <caption>כוח סוס ו-BTU לפי שטח החדר</caption>
+          <thead>
+            <tr>
+              <th scope="col">שטח החדר</th>
+              <th scope="col">BTU נדרש</th>
+              <th scope="col">מזגן מתאים</th>
+              <th scope="col">קומה עליונה ושמש חזקה</th>
+            </tr>
+          </thead>
+          <tbody>
+            {roomRows.map((row) => (
+              <tr key={row.area}>
+                <th scope="row">{formatNumber(row.area)} מ&quot;ר</th>
+                <td>{formatBtu(row.typical.requiredBtu)}</td>
+                <td>{ratingText(row.typical)}</td>
+                <td>{ratingText(row.exposed)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p>
+        לחדר של 15 מטר מתאים לפי החישוב הזה מזגן {ratingText(room15.typical)}, ולסלון של 30 מטר מזגן{' '}
+        {ratingText(room30.typical)}, או {ratingText(room30.exposed)} בקומה עליונה עם שמש חזקה. מטבח פתוח, יותר אנשים
+        או תקרה גבוהה מגדילים את התוצאה, ולכן לחדר שלכם כדאי להקליד את הנתונים במחשבון.
+      </p>
+      {coastalSteps ? (
+        <p>
+          הטבלה מחושבת בלי תוספת אזור. במישור החוף המחשבון מוסיף {REGION_PERCENT.coastal}%, וחדרים שנמצאים על הגבול
+          עולים דירוג: {coastalSteps}.
+        </p>
+      ) : null}
+
       <h2>איך המחשבון מחשב</h2>
       <ol>
         <li>
@@ -188,7 +259,10 @@ export default function AcSizeCalculatorPage() {
       <ul>
         <li>תפוקת קירור נומינלית ב-BTU/h, ולא רק &quot;כוח סוס&quot; בכותרת.</li>
         <li>טווח האינוורטר: מינימום ומקסימום. טווח רחב מקרר מהר ושומר על חדר יציב בלי הדלקות חוזרות.</li>
-        <li>דירוג האנרגיה בתווית וצריכת החשמל, במיוחד אם המזגן עובד שעות רבות ביום.</li>
+        <li>
+          דירוג האנרגיה בתווית וצריכת החשמל, במיוחד אם המזגן עובד שעות רבות ביום. את עלות ההפעלה לפי הספק ושעות
+          מחשבים ב<Link href="/tools/electricity-cost-calculator">מחשבון צריכת חשמל</Link>.
+        </li>
         <li>רמת רעש של היחידה הפנימית, בחדר שינה.</li>
         <li>חיבור חשמל: מזגנים גדולים יכולים לדרוש קו נפרד או חיבור תלת פאזי.</li>
       </ul>

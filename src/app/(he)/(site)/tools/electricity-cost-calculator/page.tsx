@@ -110,6 +110,10 @@ export default function ElectricityCostCalculatorPage() {
         <li>דוד חשמלי: מפעילים לפי הצורך ולא כל היום.</li>
         <li>מכשירי חימום: קומקום, תנור ומייבש כביסה הם בין הצרכנים הגדולים כשהם פועלים שעות.</li>
       </ul>
+      <p>
+        קונים מזגן חדש? ב<Link href="/tools/ac-size-calculator">מחשבון מזגן לפי גודל חדר</Link> בודקים כמה כוח סוס
+        ו-BTU החדר צריך, לפני שמשווים צריכת חשמל בין דגמים.
+      </p>
 
       <h2>מקורות</h2>
       <ul className={styles.sources}>
