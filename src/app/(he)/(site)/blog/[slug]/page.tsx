@@ -11,6 +11,7 @@ import Faq from '../../components/Faq'
 import RelatedPosts from '../../components/RelatedPosts'
 import RelatedServices from '../../components/RelatedServices'
 import RelatedTools from '../../components/RelatedTools'
+import OnModelPromo from '../../components/OnModelPromo'
 import ContactForm from '../../components/ContactForm'
 import Footer from '../../components/Footer'
 import type { BlogCard } from '../../components/BlogIndex'
@@ -228,6 +229,8 @@ export default async function V2ArticlePage({ params }: Params) {
                 </div>
 
                 <div className={styles.prose} dangerouslySetInnerHTML={{ __html: html }} />
+
+                <OnModelPromo tags={post.tags ?? []} />
               </div>
 
               <aside className={[styles.aside, styles.asideEnd].join(' ')}>
