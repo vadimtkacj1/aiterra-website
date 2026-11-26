@@ -622,6 +622,14 @@ export const tools: ToolEntry[] = [
     icon: 'calculator',
   },
   {
+    path: '/tools/inventory-count-sheet',
+    title: 'טופס ספירת מלאי להדפסה',
+    description: 'גיליונות ספירת מלאי ממוספרים להדפסה עם הפרטים שסעיף 10 להוראות ניהול ספרים דורש, תבנית ל-Excel, ייבוא מוצרים מ-Shopify ומ-WooCommerce והפרשים מול המערכת.',
+    category: 'money',
+    reviewed: '2026-11-26',
+    icon: 'file',
+  },
+  {
     path: '/tools/keyword-ideas',
     title: 'מחולל מילות מפתח',
     description: 'רעיונות למילות מפתח מההשלמה האוטומטית של גוגל בישראל: שאלות, המשכים לפי אותיות, העתקה ו-CSV.',
@@ -1512,6 +1520,7 @@ export const tools: ToolEntry[] = [
 ]
 
 const CLOSEST_TOOLS: Record<string, string[]> = {
+  '/tools/inventory-count-sheet': ['/tools/barcode-generator', '/tools/product-pricing-calculator', '/tools/profit-margin-calculator'],
   '/tools/bmi-calculator': ['/tools/calorie-calculator', '/tools/body-fat-calculator', '/tools/protein-calculator'],
   '/tools/calorie-calculator': ['/tools/nutrients/calories', '/tools/protein-calculator', '/tools/bmi-calculator'],
   '/tools/protein-calculator': ['/tools/nutrients/protein', '/tools/calorie-calculator', '/tools/water-intake-calculator'],
