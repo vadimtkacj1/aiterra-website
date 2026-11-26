@@ -49,6 +49,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   })
 }
 
+const HEBREW_LETTER = /[֐-׿]/
+
 const renderArticle = (markdown: string, cover: string) => {
   const toc: TocEntry[] = []
   const renderer = new marked.Renderer()
@@ -73,7 +75,12 @@ const renderArticle = (markdown: string, cover: string) => {
     return `<img src="${href}"${alt}${caption} loading="lazy" />`
   }
 
-  const html = marked.parse(markdown, { breaks: true, gfm: true, async: false, renderer: Object.assign(renderer, { heading, image }) })
+  const codespan = (token: Tokens.Codespan) => {
+    const code = marked.Renderer.prototype.codespan.call(renderer, token)
+    return HEBREW_LETTER.test(token.text) ? code : code.replace('<code>', '<code dir="ltr">')
+  }
+
+  const html = marked.parse(markdown, { breaks: true, gfm: true, async: false, renderer: Object.assign(renderer, { heading, image, codespan }) })
   return { html, toc }
 }
 
