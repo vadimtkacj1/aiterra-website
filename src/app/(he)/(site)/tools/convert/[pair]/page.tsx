@@ -60,7 +60,7 @@ export default async function PairPage({ params }: Params) {
       title={`${page.question}?`}
       metaTitle={title}
       description={description}
-      lede={`1 ${from.name} = ${one} ${to.name}. מקלידים כמות בממיר ומקבלים את התוצאה מיד, או מסתכלים בטבלה למטה.`}
+      lede={`1 ${from.name} = ${one} ${to.name}.${page.lead ? ` ${page.lead}` : ''} מקלידים כמות בממיר ומקבלים את התוצאה מיד, או מסתכלים בטבלה למטה.`}
       chips={[`1 ${from.symbol} = ${one} ${to.symbol}`, 'המרה בשני הכיוונים']}
       tool={<UnitConverter from={from.id} to={to.id} />}
       faq={faq}
@@ -90,13 +90,20 @@ export default async function PairPage({ params }: Params) {
         </tbody>
       </table>
 
+      {page.more ? (
+        <>
+          <h2>מה כדאי לדעת על {from.name}</h2>
+          <p>{page.more}</p>
+        </>
+      ) : null}
+
       <h2>המרות נוספות</h2>
       <ul>
         <li>
           <Link href={UNIT_CONVERTER_PATH}>ממיר יחידות מלא: אורך, שטח, נפח ומשקל</Link>
         </li>
         {pairPages
-          .filter((other) => other.slug !== page.slug)
+          .filter((other) => other.slug !== page.slug && unitById(other.from)?.quantity === from.quantity)
           .map((other) => (
             <li key={other.slug}>
               <Link href={pairPath(other.slug)}>{other.question}</Link>
