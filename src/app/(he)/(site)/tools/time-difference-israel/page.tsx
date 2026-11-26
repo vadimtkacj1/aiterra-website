@@ -217,8 +217,7 @@ export default function TimeDifferencePage() {
       <ul>
         <li>{externalLink(timeDifferenceSources.kan.href, timeDifferenceSources.kan.label)}: מועדי שעון הקיץ ב-2026</li>
         <li>
-          {externalLink(timeDifferenceSources.protocol.href, timeDifferenceSources.protocol.label)}: כלל ״יום שישי
-          שלפני יום ראשון האחרון של מרץ, ויום ראשון האחרון של אוקטובר״
+          {externalLink(timeDifferenceSources.protocol.href, timeDifferenceSources.protocol.label)}: מועדי שעון הקיץ והחורף בישראל
         </li>
         <li>{externalLink(timeDifferenceSources.iana.href, timeDifferenceSources.iana.label)}: אזורי הזמן והכללים</li>
         <li>{externalLink(timeDifferenceSources.mdn.href, timeDifferenceSources.mdn.label)}: ממשק הדפדפן לחישוב</li>

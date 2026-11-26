@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: Params) {
 
 function differenceAnswer(page: TimeInPage, zone: string, winter: number, summer: number) {
   if (winter === summer) {
-    return `השעון ${page.inPlace} ${direction(winter)} כמעט כל השנה, בחורף ובקיץ, כי ${page.place} וישראל מזיזות את השעון כמעט באותם ימים. ההפרש זז רק לכמה ימים באביב ובסתיו, כשאחת מהן עוברת לפני השנייה. כשבישראל 12:00, ${page.inPlace} ${clockAt(winter)}.`
+    return `השעון ${page.inPlace} ${direction(winter)} כמעט כל השנה, בחורף ובקיץ, כי ${page.place} וישראל מזיזות את השעון כמעט באותם ימים. ההפרש זז רק לתקופות קצרות באביב ובסתיו, כשאחת מהן עוברת לפני השנייה. כשבישראל 12:00, ${page.inPlace} ${clockAt(winter)}.`
   }
   const placeHasDst = offsetMinutes(zone, WINTER_REFERENCE) !== offsetMinutes(zone, SUMMER_REFERENCE)
   const reason = placeHasDst

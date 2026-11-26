@@ -25,7 +25,7 @@ function HolidayName({ id, name }: { id: string; name: string }) {
 
 const PATH = '/tools/days-between-dates'
 const TITLE = 'מחשבון ימים בין תאריכים'
-const META_TITLE = 'מחשבון ימים: כמה ימים בין תאריכים, עד תאריך ומאז'
+const META_TITLE = 'כמה זמן עבר מתאריך? מחשבון ימים בין תאריכים ומהיום'
 const DESCRIPTION =
   'בין 1 בינואר ל-31 בדצמבר 2027 עוברים 364 ימים, לא 365, כי סופרים רק קצה אחד. כאן רואים את ההפרש בימים, בשבועות ובחודשים, כמה ימי עבודה יש בדרך ומה התאריך בעוד 30 או 90 יום.'
 

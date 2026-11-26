@@ -95,7 +95,11 @@ const runsByDifference = (periods: Period[]): Run[] =>
 
 const runDays = (run: Run) => Math.round((run.to.getTime() - run.from.getTime()) / DAY_MS) + 1
 
-export type Deviation = { from: Date; to: Date; minutes: number; long: boolean; cause: string }
+export type Step = { from: Date; to: Date; minutes: number; cause: string }
+
+export type Deviation =
+  | { kind: 'blip'; step: Step }
+  | { kind: 'change'; steps: Step[] }
 
 function shifts(zone: string, at: Date) {
   const before = new Date(at.getTime() - DAY_MS)
@@ -123,16 +127,18 @@ function blipCause(zone: string, place: string, at: Date) {
 
 export function nextDeviation(zone: string, place: string, periods: Period[]): Deviation | null {
   const runs = runsByDifference(periods)
-  const next = runs[1]
-  if (!next) return null
-  const long = runDays(next) >= LONG_PERIOD_DAYS
-  return {
-    from: next.from,
-    to: next.to,
-    minutes: next.minutes,
-    long,
-    cause: long ? longCause(zone, place, next.from) : blipCause(zone, place, next.from),
+  const [current, next, after] = runs
+  if (!current || !next) return null
+  const returns = runDays(next) < LONG_PERIOD_DAYS && after !== undefined && after.minutes === current.minutes
+  if (returns) {
+    return { kind: 'blip', step: { from: next.from, to: next.to, minutes: next.minutes, cause: blipCause(zone, place, next.from) } }
   }
+  const steps: Step[] = []
+  for (const run of runs.slice(1)) {
+    steps.push({ from: run.from, to: run.to, minutes: run.minutes, cause: longCause(zone, place, run.from) })
+    if (runDays(run) >= LONG_PERIOD_DAYS) break
+  }
+  return { kind: 'change', steps }
 }
 
 export function dateRange(from: Date, to: Date) {
@@ -152,18 +158,28 @@ function shiftPhrase(minutes: number, current: number) {
 
 export function deviationSentence(deviation: Deviation | null, current: number) {
   if (!deviation) return 'ההפרש לא משתנה במשך השנה.'
-  if (deviation.long) {
-    return `ב-${formatPeriodDate(deviation.from)} ${shiftPhrase(deviation.minutes, current)}, ${deviation.cause}.`
+  if (deviation.kind === 'blip') {
+    const { step } = deviation
+    return `כך רוב השנה. החריגה הקרובה: ${dateRange(step.from, step.to)} ${shiftPhrase(step.minutes, current)}, ${step.cause}.`
   }
-  return `כך רוב השנה. החריגה הקרובה: ${dateRange(deviation.from, deviation.to)} ${shiftPhrase(deviation.minutes, current)}, ${deviation.cause}.`
+  let previous = current
+  const parts = deviation.steps.map((step) => {
+    const part = `ב-${formatPeriodDate(step.from)} ${shiftPhrase(step.minutes, previous)}, ${step.cause}`
+    previous = step.minutes
+    return part
+  })
+  return `${parts.join('. ')}.`
 }
 
 function deviationShort(deviation: Deviation | null, current: number) {
   if (!deviation) return 'ההפרש קבוע כל השנה.'
-  if (deviation.long) return `מ-${formatPeriodDate(deviation.from)} ${shiftPhrase(deviation.minutes, current)}.`
-  return current === 0
-    ? 'כך כמעט כל השנה, חוץ מכמה ימים במעברי השעון.'
-    : 'ההפרש קבוע רוב השנה, חוץ מכמה ימים במעברי השעון.'
+  if (deviation.kind === 'blip') {
+    const range = dateRange(deviation.step.from, deviation.step.to)
+    return current === 0 ? `כך כל השנה, חוץ ${range}.` : `ההפרש קבוע רוב השנה, חוץ ${range}.`
+  }
+  const last = deviation.steps[deviation.steps.length - 1]
+  if (deviation.steps.length === 1) return `מ-${formatPeriodDate(last.from)} ${shiftPhrase(last.minutes, current)}.`
+  return `ההפרש משתנה ב-${formatPeriodDate(deviation.steps[0].from)} ושוב ב-${formatPeriodDate(last.from)}.`
 }
 
 export type TimeInExtras = { flightMinutes?: number; flightDirect?: boolean; dialingDigits?: string }
@@ -213,7 +229,7 @@ export function timeInCopy(page: TimeInPage, zone: string, now: Date, extras: Ti
     periods,
     deviation,
     title: `מה השעה ${page.inPlace} עכשיו: ${gapShort(today)}`,
-    metaTitle: `מה השעה ${page.inPlace} עכשיו? ${gapShort(today)}`,
+    metaTitle: `מה השעה ${page.inPlace} עכשיו? ${today === 0 ? 'אותה שעה כמו בישראל' : `הפרש של ${hoursAmount(today)} מישראל`}`,
     description: [nowLine, deviationShort(deviation, today), factsLine(extras)].filter(Boolean).join(' '),
     lede: `${
       today === 0

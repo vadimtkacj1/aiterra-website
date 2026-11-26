@@ -50,8 +50,15 @@ const titleDate = (occurrence: Occurrence) => {
   return `${from} עד ${withoutYear(datePart(occurrence.end))}`
 }
 
-const metaTitleOf = (holiday: Holiday, occurrence: Occurrence) =>
-  `מתי ${holiday.short} ${gregorianYearOf(occurrence.start)}? ${titleDate(occurrence)}`
+const MAX_TITLE_LENGTH = 52
+
+const metaTitleOf = (holiday: Holiday, occurrence: Occurrence, today: number) => {
+  const head = `מתי ${holiday.short} ${gregorianYearOf(occurrence.start)}? ${titleDate(occurrence)}`
+  const days = occurrence.start - today
+  if (days < 2) return head
+  const withCountdown = `${head}, עוד ${days.toLocaleString('he-IL')} ימים`
+  return withCountdown.length <= MAX_TITLE_LENGTH ? withCountdown : head
+}
 
 const countdownOf = (holiday: Holiday, occurrence: Occurrence, today: number) => {
   const days = occurrence.start - today
@@ -83,7 +90,7 @@ export async function generateMetadata({ params }: Params) {
   if (!next) return {}
   return toolMetadata({
     path: holidayPath(holiday.slug),
-    metaTitle: metaTitleOf(holiday, next),
+    metaTitle: metaTitleOf(holiday, next, today),
     description: descriptionOf(holiday, next, today),
   })
 }
@@ -151,7 +158,7 @@ export default async function HolidayPage({ params }: Params) {
     <ToolLayout
       path={holidayPath(holiday.slug)}
       title={`מתי ${holiday.short} ${year}?`}
-      metaTitle={metaTitleOf(holiday, next)}
+      metaTitle={metaTitleOf(holiday, next, today)}
       description={descriptionOf(holiday, next, today)}
       lede={countdown ? `${answerOf(holiday, next, today)} ${countdown}` : answerOf(holiday, next, today)}
       tool={

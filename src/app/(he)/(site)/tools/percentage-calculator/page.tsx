@@ -6,7 +6,7 @@ import styles from './page.module.css'
 
 const PATH = '/tools/percentage-calculator'
 const TITLE = 'מחשבון אחוזים'
-const META_TITLE = 'מחשבון אחוזים: אחוז ממספר, הנחה ושינוי באחוזים'
+const META_TITLE = 'מחשבון אחוזים: הנחה, רווח ושינוי באחוזים'
 const DESCRIPTION =
   '15% מ-240 הם 36: מכפילים ב-15 ומחלקים ב-100. כאן גם מחיר אחרי הנחה, בכמה אחוז עלה המחיר, ולמה 25% רווח הם לא 25% תוספת. התשובה מופיעה תוך כדי הקלדה, עם הנוסחה.'
 
