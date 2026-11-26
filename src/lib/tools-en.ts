@@ -220,6 +220,15 @@ export const enTools: EnToolEntry[] = [
     icon: 'receipt',
     reviewed: '2026-11-01',
   },
+  {
+    slug: 'broker-license-check',
+    title: 'Israeli real estate agent licence check',
+    description:
+      'Check whether an Israeli real estate agent is in the Ministry of Justice list of licensed brokers, by licence number or Hebrew name.',
+    category: 'home',
+    icon: 'search',
+    reviewed: '2026-11-26',
+  },
 ]
 
 export const EN_TOOL_SLUGS = enTools.map((tool) => tool.slug)

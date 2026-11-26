@@ -1222,6 +1222,14 @@ export const tools: ToolEntry[] = [
     reviewed: '2026-11-26',
   },
   {
+    path: '/tools/broker-license-check',
+    title: 'בדיקת רישיון תיווך ומתווך מורשה',
+    description: 'מחפשים מתווך לפי שם או מספר רישיון ורואים אם הוא מופיע ברשימת המתווכים המורשים של משרד המשפטים.',
+    category: 'home',
+    icon: 'search',
+    reviewed: '2026-11-26',
+  },
+  {
     path: '/tools/currency',
     title: 'המרת מטבע לשקלים',
     description: 'כמה זה בשקלים היום: 24 מטבעות מול השקל, מתעדכנים פעם ביום: דולר, יורו, זלוטי, וון, באט, גריבנה, דירהם ועוד.',
@@ -1530,6 +1538,7 @@ const CLOSEST_TOOLS: Record<string, string[]> = {
   '/tools/random-wheel-picker': ['/tools/bingo-card-generator', '/tools/word-search-maker'],
   '/tools/id-number-check': ['/tools/iban-calculator', '/tools/company-lookup'],
   '/tools/contractor-registry-check': ['/tools/company-lookup', '/tools/price-quote-generator', '/tools/area-volume-calculator'],
+  '/tools/broker-license-check': ['/tools/purchase-tax-calculator', '/tools/contractor-registry-check', '/tools/company-lookup'],
 }
 
 const FUN_TOOLS = [

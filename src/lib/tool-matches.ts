@@ -149,6 +149,7 @@ const TOOL_KEYWORDS: Record<string, string[]> = {
   '/tools/tax-credit-points-calculator': ['נקודות זיכוי', 'מס הכנסה', 'תלוש שכר', 'החזר מס', 'עולה חדש', 'חייל משוחרר'],
   '/tools/disabled-parking-tag-check': ['תו נכה', 'תג נכה', 'חניית נכים', 'חניה לנכה'],
   '/tools/contractor-registry-check': ['קבלן', 'קבלנים', 'שיפוץ', 'שיפוצים', 'בנייה', 'נדל״ן'],
+  '/tools/broker-license-check': ['מתווך', 'מתווכים', 'תיווך', 'דמי תיווך', 'רישיון תיווך'],
   '/tools/multiplication-table': ['לוח הכפל', 'תלמידים', 'מורים פרטיים', 'שיעורים פרטיים'],
   '/tools/math-worksheet-generator': ['דפי עבודה', 'תלמידים', 'מורים פרטיים', 'שיעורים פרטיים'],
   '/tools/printable-sudoku': ['סודוקו', 'חידות', 'גיל הזהב'],
