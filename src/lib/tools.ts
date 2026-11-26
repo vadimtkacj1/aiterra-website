@@ -824,7 +824,7 @@ export const tools: ToolEntry[] = [
   {
     path: '/tools/ai-tools-hebrew',
     title: 'כלי AI בעברית',
-    description: '25 כלי AI לצ׳אט, תרגום, תמונות, וידאו, תמלול, מצגות ואוטומציה, ומה כל יצרן מתעד על עברית, עם תאריך בדיקה.',
+    description: '29 כלי AI לצ׳אט, תרגום, תמונות, וידאו, תמלול, מצגות ואוטומציה, ומה כל יצרן מתעד על עברית, עם תאריך בדיקה.',
     category: 'ai',
     reviewed: '2026-10-23',
     icon: 'search',
