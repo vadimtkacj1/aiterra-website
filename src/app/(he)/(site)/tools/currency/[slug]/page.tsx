@@ -10,7 +10,11 @@ import {
   currencyPath,
   fetchIlsRates,
   formatMoney,
+  headlineAmount,
+  roundedShekels,
   shekelsPer,
+  shortName,
+  type CurrencyPage,
 } from '@/lib/currency-pages'
 
 export const revalidate = 3600
@@ -20,20 +24,34 @@ export const generateStaticParams = () => currencyPages.map((page) => ({ slug: p
 
 type Params = { params: Promise<{ slug: string }> }
 
-const MAX_META_TITLE_LENGTH = 50
+const amountLabel = (page: CurrencyPage) => {
+  const amount = headlineAmount(page)
+  return amount === 1 ? shortName(page) : `${amount} ${shortName(page)}`
+}
 
-const metaTitleOf = (name: string) => {
-  const full = `כמה זה ${name} בשקלים היום? המרה ל-₪ ובחזרה`
-  return full.length <= MAX_META_TITLE_LENGTH ? full : `כמה זה ${name} בשקלים היום? המרה ל-₪`
+const metaTitleOf = (page: CurrencyPage, shekels: number | null) =>
+  shekels === null
+    ? `כמה זה ${page.name} בשקלים היום? מחשבון המרה`
+    : `${amountLabel(page)} לשקל: כ-${roundedShekels(headlineAmount(page) * shekels)} ₪ היום`
+
+const descriptionOf = (page: CurrencyPage, shekels: number | null) => {
+  if (shekels === null) {
+    return `כמה שווה ${page.name} (${page.code}) בשקלים: מחשבון המרה בשני הכיוונים וטבלה לסכומים נפוצים, לפי שער אמצע שוק.`
+  }
+  const amount = headlineAmount(page)
+  const what = amount === 1 ? page.name : `${amount.toLocaleString('he-IL')} ${page.name}`
+  return `היום מקבלים כ-${roundedShekels(amount * shekels)} ₪ תמורת ${what}, ושקל אחד קונה ${formatMoney(1 / shekels)} ${page.code}. זה שער אמצע שוק: בבנק או בצ׳יינג׳ תקבלו קצת פחות. מחשבון בשני הכיוונים וטבלת סכומים.`
 }
 
 export async function generateMetadata({ params }: Params) {
   const page = currencyPage((await params).slug)
   if (!page) return {}
+  const rates = await fetchIlsRates()
+  const shekels = rates ? shekelsPer(rates, page.code) : null
   return toolMetadata({
     path: currencyPath(page.slug),
-    metaTitle: metaTitleOf(page.name),
-    description: `כמה שווה ${page.name} (${page.code}) בשקלים היום: שער מתעדכן פעם ביום, מחשבון המרה בשני הכיוונים וטבלה לסכומים נפוצים.`,
+    metaTitle: metaTitleOf(page, shekels),
+    description: descriptionOf(page, shekels),
   })
 }
 
@@ -72,8 +90,8 @@ export default async function CurrencyPageView({ params }: Params) {
       path={path}
       rateDate={rates?.updated}
       title={`כמה זה ${page.name} בשקלים`}
-      metaTitle={metaTitleOf(page.name)}
-      description={`כמה שווה ${page.name} (${page.code}) בשקלים היום, עם מחשבון המרה וטבלה.`}
+      metaTitle={metaTitleOf(page, shekels)}
+      description={descriptionOf(page, shekels)}
       lede={
         one
           ? `${page.name} אחד (${page.code}) שווה היום כ-${one} ₪. מקלידים כל סכום במחשבון ומקבלים את ההמרה מיד, בשני הכיוונים.`

@@ -194,7 +194,7 @@ export const holidayBySlug = (slug: string) => holidays.find((holiday) => holida
 
 export const dayTypeText: Record<HolidayDay, string> = {
   rest: 'יום שבתון רשמי בישראל. משרדי הממשלה ורוב העסקים סגורים.',
-  work: 'לא יום שבתון. זהו יום עבודה רגיל.',
+  work: 'יום עבודה רגיל, לא שבתון.',
   memorial: 'יום עבודה רגיל, עם צפירה וטקסי זיכרון.',
   fast: 'יום עבודה רגיל ויום צום.',
 }
@@ -203,6 +203,7 @@ export const isRestDay = (holiday: Holiday) => holiday.day === 'rest'
 
 export const dayTypeOf = (holiday: Holiday) => {
   if (holiday.slug === 'rosh-hashanah') return 'שני הימים הם ימי שבתון רשמיים בישראל. משרדי הממשלה ורוב העסקים סגורים.'
+  if (holiday.slug === 'hanukkah') return 'כל שמונת הימים הם ימי עבודה רגילים, לא שבתון.'
   if (holiday.day === 'rest' && holiday.last) {
     return 'היום הראשון והיום האחרון הם ימי שבתון רשמיים בישראל, וביניהם ימי חול המועד שבהם רוב העסקים פתוחים.'
   }
@@ -278,6 +279,6 @@ export function answerOf(holiday: Holiday, occurrence: Occurrence, today: number
   const start =
     holiday.slug === 'hanukkah'
       ? `את הנר הראשון מדליקים בערב ${dayLine(occurrence.eve)}`
-      : `כמו כל מועד בלוח העברי, הוא מתחיל עם השקיעה בערב שלפני, ${dayLine(occurrence.eve)}`
+      : `בלוח העברי היום מתחיל בשקיעה, ולכן ${holiday.short} נכנס כבר בערב ${dayLine(occurrence.eve)}`
   return `${lead} ${range}, ${hebrewDateText(occurrence.start)}. ${start}.`
 }

@@ -37,8 +37,21 @@ const nextOf = (holiday: Holiday) => {
   return { today, occurrences: occurrencesOf(holiday, today) }
 }
 
-const metaTitleOf = (holiday: Holiday, year: number) =>
-  `מתי ${holiday.short} ${year}? עוד כמה ימים, תאריך ותאריך עברי`
+const datePart = (day: number) => dayLine(day).split(', ')[1]
+const withoutYear = (text: string) => text.replace(/ \d{4}$/, '')
+const monthOf = (day: number) => datePart(day).split(' ')[1]
+
+const titleDate = (occurrence: Occurrence) => {
+  if (occurrence.end === occurrence.start) return `${weekdayText(occurrence.start)}, ${withoutYear(datePart(occurrence.start))}`
+  const from =
+    monthOf(occurrence.start) === monthOf(occurrence.end)
+      ? datePart(occurrence.start).split(' ')[0]
+      : withoutYear(datePart(occurrence.start))
+  return `${from} עד ${withoutYear(datePart(occurrence.end))}`
+}
+
+const metaTitleOf = (holiday: Holiday, occurrence: Occurrence) =>
+  `מתי ${holiday.short} ${gregorianYearOf(occurrence.start)}? ${titleDate(occurrence)}`
 
 const countdownOf = (holiday: Holiday, occurrence: Occurrence, today: number) => {
   const days = occurrence.start - today
@@ -47,12 +60,17 @@ const countdownOf = (holiday: Holiday, occurrence: Occurrence, today: number) =>
   return `עד ${holiday.short} נשארו עוד ${days.toLocaleString('he-IL')} ימים.`
 }
 
-const descriptionOf = (holiday: Holiday, occurrence: Occurrence) =>
-  `${holiday.short} ${gregorianYearOf(occurrence.start)}: ${
+const shortDayLine = (day: number) => withoutYear(dayLine(day))
+
+const descriptionOf = (holiday: Holiday, occurrence: Occurrence, today: number) => {
+  const days = occurrence.start - today
+  const countdown = days > 1 ? `נשארו ${days.toLocaleString('he-IL')} ימים. ` : days === 1 ? 'מתחיל מחר. ' : ''
+  const range =
     occurrence.end === occurrence.start
-      ? dayLine(occurrence.start)
-      : `${dayLine(occurrence.start)} עד ${dayLine(occurrence.end)}`
-  }, ${hebrewDateText(occurrence.start)}. הערב שלפני, יום שבתון או לא, והתאריכים בשנים הבאות.`
+      ? shortDayLine(occurrence.start)
+      : `${shortDayLine(occurrence.start)} עד ${shortDayLine(occurrence.end)}`
+  return `${holiday.short} ${gregorianYearOf(occurrence.start)}: ${range}, ${hebrewDateText(occurrence.start)}. ${countdown}${dayTypeOf(holiday)}`
+}
 
 const rangeText = (occurrence: Occurrence) =>
   occurrence.end === occurrence.start ? shortDate(occurrence.start) : `${shortDate(occurrence.start)} עד ${shortDate(occurrence.end)}`
@@ -60,12 +78,13 @@ const rangeText = (occurrence: Occurrence) =>
 export async function generateMetadata({ params }: Params) {
   const holiday = holidayBySlug((await params).slug)
   if (!holiday) return {}
-  const [next] = nextOf(holiday).occurrences
+  const { today, occurrences } = nextOf(holiday)
+  const [next] = occurrences
   if (!next) return {}
   return toolMetadata({
     path: holidayPath(holiday.slug),
-    metaTitle: metaTitleOf(holiday, gregorianYearOf(next.start)),
-    description: descriptionOf(holiday, next),
+    metaTitle: metaTitleOf(holiday, next),
+    description: descriptionOf(holiday, next, today),
   })
 }
 
@@ -132,8 +151,8 @@ export default async function HolidayPage({ params }: Params) {
     <ToolLayout
       path={holidayPath(holiday.slug)}
       title={`מתי ${holiday.short} ${year}?`}
-      metaTitle={metaTitleOf(holiday, year)}
-      description={descriptionOf(holiday, next)}
+      metaTitle={metaTitleOf(holiday, next)}
+      description={descriptionOf(holiday, next, today)}
       lede={countdown ? `${answerOf(holiday, next, today)} ${countdown}` : answerOf(holiday, next, today)}
       tool={
         <div className={styles.tableWrap}>

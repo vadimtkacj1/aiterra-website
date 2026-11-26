@@ -1,4 +1,12 @@
-export type CurrencyPage = { slug: string; code: string; name: string; country: string; samples: number[] }
+export type CurrencyPage = {
+  slug: string
+  code: string
+  name: string
+  country: string
+  samples: number[]
+  short?: string
+  headline?: number
+}
 
 export const CURRENCY_HUB_PATH = '/tools/currency'
 export const RATES_SOURCE_URL = 'https://www.exchangerate-api.com'
@@ -6,27 +14,27 @@ export const RATES_API = 'https://open.er-api.com/v6/latest/ILS'
 export const RATES_REVALIDATE_SECONDS = 3600
 
 export const currencyPages: CurrencyPage[] = [
-  { slug: 'usd', code: 'USD', name: 'דולר אמריקאי', country: 'ארצות הברית', samples: [1, 10, 50, 75, 100, 500, 1000] },
+  { slug: 'usd', code: 'USD', name: 'דולר אמריקאי', country: 'ארצות הברית', samples: [1, 10, 50, 75, 100, 500, 1000], short: 'דולר' },
   { slug: 'eur', code: 'EUR', name: 'יורו', country: 'גוש האירו', samples: [1, 10, 50, 100, 500, 1000] },
   { slug: 'gbp', code: 'GBP', name: 'לירה שטרלינג', country: 'בריטניה', samples: [1, 10, 50, 100, 500, 1000] },
-  { slug: 'pln', code: 'PLN', name: 'זלוטי פולני', country: 'פולין', samples: [1, 10, 50, 100, 500, 1000] },
-  { slug: 'krw', code: 'KRW', name: 'וון קוריאני', country: 'דרום קוריאה', samples: [1000, 5000, 10000, 50000, 100000, 1000000] },
-  { slug: 'thb', code: 'THB', name: 'באט תאילנדי', country: 'תאילנד', samples: [1, 100, 500, 1000, 5000, 10000] },
-  { slug: 'uah', code: 'UAH', name: 'גריבנה אוקראינית', country: 'אוקראינה', samples: [1, 100, 500, 1000, 5000, 10000] },
+  { slug: 'pln', code: 'PLN', name: 'זלוטי פולני', country: 'פולין', samples: [1, 10, 50, 100, 500, 1000], short: 'זלוטי' },
+  { slug: 'krw', code: 'KRW', name: 'וון קוריאני', country: 'דרום קוריאה', samples: [1000, 5000, 10000, 50000, 100000, 1000000], short: 'וון', headline: 10000 },
+  { slug: 'thb', code: 'THB', name: 'באט תאילנדי', country: 'תאילנד', samples: [1, 100, 500, 1000, 5000, 10000], short: 'באט', headline: 100 },
+  { slug: 'uah', code: 'UAH', name: 'גריבנה אוקראינית', country: 'אוקראינה', samples: [1, 100, 500, 1000, 5000, 10000], short: 'גריבנה', headline: 100 },
   { slug: 'aed', code: 'AED', name: 'דירהם', country: 'איחוד האמירויות', samples: [1, 10, 50, 100, 500, 1000] },
-  { slug: 'inr', code: 'INR', name: 'רופי הודי', country: 'הודו', samples: [1, 100, 500, 1000, 10000, 100000] },
-  { slug: 'try', code: 'TRY', name: 'לירה טורקית', country: 'טורקיה', samples: [1, 10, 100, 500, 1000, 5000] },
-  { slug: 'rub', code: 'RUB', name: 'רובל רוסי', country: 'רוסיה', samples: [1, 100, 500, 1000, 5000, 10000] },
-  { slug: 'cny', code: 'CNY', name: 'יואן סיני', country: 'סין', samples: [1, 10, 100, 500, 1000, 10000] },
-  { slug: 'jpy', code: 'JPY', name: 'ין יפני', country: 'יפן', samples: [100, 1000, 5000, 10000, 50000, 100000] },
-  { slug: 'gel', code: 'GEL', name: 'לארי גאורגי', country: 'גאורגיה', samples: [1, 10, 50, 100, 500, 1000] },
-  { slug: 'czk', code: 'CZK', name: 'קורונה צ׳כית', country: 'צ׳כיה', samples: [1, 100, 500, 1000, 5000, 10000] },
-  { slug: 'huf', code: 'HUF', name: 'פורינט הונגרי', country: 'הונגריה', samples: [100, 1000, 5000, 10000, 50000, 100000] },
-  { slug: 'vnd', code: 'VND', name: 'דונג וייטנאמי', country: 'וייטנאם', samples: [10000, 50000, 100000, 500000, 1000000] },
-  { slug: 'php', code: 'PHP', name: 'פסו פיליפיני', country: 'הפיליפינים', samples: [1, 100, 500, 1000, 5000, 10000] },
+  { slug: 'inr', code: 'INR', name: 'רופי הודי', country: 'הודו', samples: [1, 100, 500, 1000, 10000, 100000], short: 'רופי', headline: 100 },
+  { slug: 'try', code: 'TRY', name: 'לירה טורקית', country: 'טורקיה', samples: [1, 10, 100, 500, 1000, 5000], headline: 100 },
+  { slug: 'rub', code: 'RUB', name: 'רובל רוסי', country: 'רוסיה', samples: [1, 100, 500, 1000, 5000, 10000], short: 'רובל', headline: 1000 },
+  { slug: 'cny', code: 'CNY', name: 'יואן סיני', country: 'סין', samples: [1, 10, 100, 500, 1000, 10000], short: 'יואן' },
+  { slug: 'jpy', code: 'JPY', name: 'ין יפני', country: 'יפן', samples: [100, 1000, 5000, 10000, 50000, 100000], short: 'ין', headline: 1000 },
+  { slug: 'gel', code: 'GEL', name: 'לארי גאורגי', country: 'גאורגיה', samples: [1, 10, 50, 100, 500, 1000], short: 'לארי', headline: 100 },
+  { slug: 'czk', code: 'CZK', name: 'קורונה צ׳כית', country: 'צ׳כיה', samples: [1, 100, 500, 1000, 5000, 10000], headline: 100 },
+  { slug: 'huf', code: 'HUF', name: 'פורינט הונגרי', country: 'הונגריה', samples: [100, 1000, 5000, 10000, 50000, 100000], short: 'פורינט', headline: 1000 },
+  { slug: 'vnd', code: 'VND', name: 'דונג וייטנאמי', country: 'וייטנאם', samples: [10000, 50000, 100000, 500000, 1000000], short: 'דונג', headline: 10000 },
+  { slug: 'php', code: 'PHP', name: 'פסו פיליפיני', country: 'הפיליפינים', samples: [1, 100, 500, 1000, 5000, 10000], short: 'פסו פיליפיני', headline: 100 },
   { slug: 'bgn', code: 'BGN', name: 'לב בולגרי', country: 'בולגריה', samples: [1, 10, 50, 100, 500, 1000] },
-  { slug: 'ron', code: 'RON', name: 'לאו רומני', country: 'רומניה', samples: [1, 10, 50, 100, 500, 1000] },
-  { slug: 'mad', code: 'MAD', name: 'דירהם מרוקאי', country: 'מרוקו', samples: [1, 10, 100, 500, 1000, 5000] },
+  { slug: 'ron', code: 'RON', name: 'לאו רומני', country: 'רומניה', samples: [1, 10, 50, 100, 500, 1000], short: 'לאו' },
+  { slug: 'mad', code: 'MAD', name: 'דירהם מרוקאי', country: 'מרוקו', samples: [1, 10, 100, 500, 1000, 5000], headline: 100 },
   { slug: 'cad', code: 'CAD', name: 'דולר קנדי', country: 'קנדה', samples: [1, 10, 50, 100, 500, 1000] },
   { slug: 'aud', code: 'AUD', name: 'דולר אוסטרלי', country: 'אוסטרליה', samples: [1, 10, 50, 100, 500, 1000] },
   { slug: 'chf', code: 'CHF', name: 'פרנק שווייצרי', country: 'שווייץ', samples: [1, 10, 50, 100, 500, 1000] },
@@ -59,6 +67,13 @@ export const shekelsPer = (rates: IlsRates, code: string) => {
   const perShekel = rates.rates[code]
   return perShekel ? 1 / perShekel : null
 }
+
+export const shortName = (page: CurrencyPage) => page.short ?? page.name
+
+export const headlineAmount = (page: CurrencyPage) => page.headline ?? 1
+
+export const roundedShekels = (value: number) =>
+  new Intl.NumberFormat('he-IL', { maximumFractionDigits: value >= 100 ? 0 : value >= 10 ? 1 : 2 }).format(value)
 
 export const formatMoney = (value: number) =>
   new Intl.NumberFormat('he-IL', { maximumFractionDigits: value >= 100 ? 2 : value >= 1 ? 3 : 5 }).format(value)
