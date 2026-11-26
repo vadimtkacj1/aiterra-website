@@ -16,9 +16,13 @@ import { TIME_DIFFERENCE_PATH } from '@/lib/time-difference'
 import styles from '../../components/tools/FlightTimes.module.css'
 
 const TITLE = 'כמה זמן טיסה מישראל? טבלת זמני טיסה'
-const META_TITLE = 'כמה זמן טיסה מישראל? טבלת זמני טיסה ליעדים'
-const DESCRIPTION =
-  'כמה זמן טיסה מישראל ליותר מ-70 יעדים: משך טיסה ישירה, אילו יעדים בלי טיסה ישירה, הפרש שעות ומרחק, וחישוב משוער של זמן טיסה לפי מרחק.'
+const headlineClock = (id: string) => {
+  const destination = destinationById(id)
+  const minutes = destination?.directMinutes ?? destination?.viaMinutes
+  return destination && minutes ? `${destination.name} ${clockDuration(minutes)}` : ''
+}
+const META_TITLE = `כמה זמן טיסה מישראל? ${[headlineClock('london'), headlineClock('new-york')].filter(Boolean).join(', ')}`
+const DESCRIPTION = `${[headlineClock('athens'), headlineClock('bangkok')].filter(Boolean).join(', ')}, ועוד ${destinations.length - 2} יעדים מנתב״ג: משך טיסה ישירה או עם עצירה, מרחק והפרש שעות. ליעד שלא ברשימה יש חישוב משוער לפי המרחק.`
 
 const direct = destinations.filter((item) => item.directMinutes).length
 

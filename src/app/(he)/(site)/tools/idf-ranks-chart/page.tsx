@@ -6,9 +6,9 @@ import styles from '../word-counter/page.module.css'
 
 const PATH = '/tools/idf-ranks-chart'
 const TITLE = 'דרגות בצה״ל לפי הסדר'
-const META_TITLE = 'דרגות בצה״ל לפי הסדר: חוגרים, נגדים וקצונה + באנגלית'
-const DESCRIPTION =
-  'דרגות בצה״ל לפי הסדר, מטוראי עד רב-אלוף: חוגרים, נגדים וקצינים, עם ראשי תיבות, שם באנגלית, קוד נאט״ו, תיאור סימן הדרגה וחיפוש. אתר לא רשמי.'
+const countOf = (group: string) => idfRanks.filter((rank) => rank.group === group).length
+const META_TITLE = `דרגות בצה״ל לפי הסדר: ${idfRanks.length} דרגות מטוראי עד רב-אלוף`
+const DESCRIPTION = `בצה״ל ${idfRanks.length} דרגות כלליות: ${countOf('enlisted')} של חוגרים, ${countOf('nco')} של נגדים ו-${countOf('officer')} של קצינים. לכל דרגה ראשי תיבות, שם באנגלית, קוד נאט״ו ותיאור סימן הדרגה. אתר עצמאי, לא של צה״ל.`
 
 const sources = [
   { label: 'ויקיפדיה בעברית: דרגות צה״ל', href: 'https://he.wikipedia.org/wiki/דרגות_צה"ל' },
