@@ -4,18 +4,40 @@ import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../../components
 import CurrencyConverter from '../../../components/tools/CurrencyConverter'
 import {
   CURRENCY_HUB_PATH,
-  RATES_SOURCE_URL,
+  LEV_PER_EURO,
+  SNAPSHOT_SOURCE,
   currencyPage,
   currencyPages,
   currencyPath,
+  fetchIlsHistory,
   fetchIlsRates,
+  formatIsoDate,
   formatMoney,
-  headlineAmount,
   roundedShekels,
   shekelsPer,
-  shortName,
   type CurrencyPage,
 } from '@/lib/currency-pages'
+import {
+  ECB_LEV_URL,
+  MIN_HISTORY_POINTS,
+  NO_HISTORY,
+  amountText,
+  descriptionOf,
+  extremes,
+  historyAmount,
+  historyRows,
+  isFlat,
+  levExchangeEntry,
+  ledeOf,
+  metaTitleOf,
+  monthLabel,
+  moreOrLess,
+  percentText,
+  relatedPages,
+  representativeAnswer,
+  yearAnswer,
+  type HistoryRow,
+} from '@/lib/currency-copy'
 
 export const revalidate = 3600
 export const dynamicParams = false
@@ -23,25 +45,6 @@ export const dynamicParams = false
 export const generateStaticParams = () => currencyPages.map((page) => ({ slug: page.slug }))
 
 type Params = { params: Promise<{ slug: string }> }
-
-const amountLabel = (page: CurrencyPage) => {
-  const amount = headlineAmount(page)
-  return amount === 1 ? shortName(page) : `${amount} ${shortName(page)}`
-}
-
-const metaTitleOf = (page: CurrencyPage, shekels: number | null) =>
-  shekels === null
-    ? `כמה זה ${page.name} בשקלים היום? מחשבון המרה`
-    : `${amountLabel(page)} לשקל: כ-${roundedShekels(headlineAmount(page) * shekels)} ₪ היום`
-
-const descriptionOf = (page: CurrencyPage, shekels: number | null) => {
-  if (shekels === null) {
-    return `כמה שווה ${page.name} (${page.code}) בשקלים: מחשבון המרה בשני הכיוונים וטבלה לסכומים נפוצים, לפי שער אמצע שוק.`
-  }
-  const amount = headlineAmount(page)
-  const what = amount === 1 ? page.name : `${amount.toLocaleString('he-IL')} ${page.name}`
-  return `היום מקבלים כ-${roundedShekels(amount * shekels)} ₪ תמורת ${what}, ושקל אחד קונה ${formatMoney(1 / shekels)} ${page.code}. זה שער אמצע שוק: בבנק או בצ׳יינג׳ תקבלו קצת פחות. מחשבון בשני הכיוונים וטבלת סכומים.`
-}
 
 export async function generateMetadata({ params }: Params) {
   const page = currencyPage((await params).slug)
@@ -60,29 +63,30 @@ export default async function CurrencyPageView({ params }: Params) {
   if (!page) notFound()
   const rates = await fetchIlsRates()
   const shekels = rates ? shekelsPer(rates, page.code) : null
+  const history = rates ? await fetchIlsHistory(rates.date) : NO_HISTORY
   const path = currencyPath(page.slug)
   const one = shekels === null ? null : formatMoney(shekels)
   const perShekel = shekels === null ? null : formatMoney(1 / shekels)
+  const rows = shekels === null ? [] : historyRows(page, history)
+  const amount = historyAmount(page)
+  const year = yearAnswer(page, shekels, history)
+  const source = rates?.source ?? SNAPSHOT_SOURCE
 
   const faq: ToolFaqEntry[] = [
     {
       id: `currency-${page.slug}-one`,
       question: `כמה זה ${page.name} אחד בשקלים?`,
       answer: one
-        ? `לפי שער אמצע השוק העדכני${rates?.updated ? ` (${rates.updated})` : ''}, ${page.name} אחד שווה כ-${one} ₪, ושקל אחד שווה כ-${perShekel} ${page.code}. השער משתנה במהלך היום, והמחשבון בעמוד מתעדכן פעם ביום.`
+        ? `לפי שער אמצע השוק${rates?.updated ? ` מ-${rates.updated}` : ''}, ${page.name} אחד שווה כ-${one} ₪, ושקל אחד שווה כ-${perShekel} ${page.code}. השער מתעדכן פעם ביום.`
         : 'השער מוצג במחשבון בעמוד ומתעדכן פעם ביום. כרגע מקור השערים לא זמין, נסו שוב בעוד כמה דקות.',
     },
-    {
-      id: `currency-${page.slug}-bank`,
-      question: 'למה בבנק או בצ׳יינג׳ מקבלים פחות?',
-      answer: `השער בעמוד הוא שער אמצע שוק, בלי עמלות. בנקים, חברות כרטיסי אשראי וצ׳יינג׳ים מוסיפים מרווח בין שער הקנייה לשער המכירה ולפעמים עמלה קבועה, ולכן בפועל מקבלים פחות ${page.code} לכל שקל. כדאי להשוות את השער שמציעים לכם לשער בעמוד ולראות כמה אחוזים הפער.`,
-    },
+    ...(year ? [{ id: `currency-${page.slug}-year`, question: `כמה עלו ${amountText(page, amount)} לפני שנה?`, answer: year }] : []),
     {
       id: `currency-${page.slug}-official`,
-      question: 'מה ההבדל בין השער כאן לשער היציג של בנק ישראל?',
-      answer:
-        'בנק ישראל מפרסם שער יציג פעם ביום ל-14 מטבעות, והוא השער שמשמש לחשבוניות ולדיווח למס. השער כאן מגיע ממקור שערים בינלאומי, מכסה עוד מטבעות ומתעדכן פעם ביום. לחשבונית במטבע חוץ השתמשו בשער היציג.',
+      question: `יש ל${page.name} שער יציג של בנק ישראל?`,
+      answer: representativeAnswer(page),
     },
+    ...(page.code === 'BGN' ? [levExchangeEntry] : []),
   ]
 
   return (
@@ -92,11 +96,7 @@ export default async function CurrencyPageView({ params }: Params) {
       title={`כמה זה ${page.name} בשקלים`}
       metaTitle={metaTitleOf(page, shekels)}
       description={descriptionOf(page, shekels)}
-      lede={
-        one
-          ? `${page.name} אחד (${page.code}) שווה היום כ-${one} ₪. מקלידים כל סכום במחשבון ומקבלים את ההמרה מיד, בשני הכיוונים.`
-          : `מקלידים סכום ב${page.name} ומקבלים את ההמרה לשקלים, בשני הכיוונים.`
-      }
+      lede={ledeOf(page, shekels, history)}
       chips={[one ? `1 ${page.code} ≈ ${one} ₪` : page.code, 'מתעדכן פעם ביום', page.country]}
       tool={<CurrencyConverter code={page.code} name={page.name} shekels={shekels} />}
       faq={faq}
@@ -145,29 +145,87 @@ export default async function CurrencyPageView({ params }: Params) {
         </>
       ) : null}
 
+      {shekels !== null && rows.length >= MIN_HISTORY_POINTS ? (
+        <HistorySection page={page} shekels={shekels} rows={rows} amount={amount} />
+      ) : null}
+
+      {page.code === 'BGN' ? <LevSection /> : null}
+
       <h2>מאיפה השער</h2>
       <p>
         השערים מגיעים מ-
-        <a href={RATES_SOURCE_URL} rel="noopener" target="_blank">
-          ExchangeRate-API
+        <a href={source.href} rel="noopener" target="_blank">
+          {source.label}
         </a>
-        {rates?.updated ? `, עדכון אחרון ${rates.updated}` : ''}, ומתעדכנים בעמוד פעם בשעה. לשער היציג הרשמי לחשבוניות
-        יש את <Link href="/tools/exchange-rate-invoice">מחשבון השער היציג של בנק ישראל</Link>.
+        {rates?.updated ? `, עדכון אחרון ${rates.updated}` : ''}, ומתעדכנים פעם ביום. גם שערי העבר בעמוד מאותו מקור. לשער
+        היציג הרשמי לחשבוניות יש את <Link href="/tools/exchange-rate-invoice">מחשבון השער היציג של בנק ישראל</Link>.
       </p>
 
-      <h2>מטבעות נוספים</h2>
+      <h2>מטבעות קרובים</h2>
       <ul>
+        {relatedPages(page).map((other) => (
+          <li key={other.slug}>
+            <Link href={currencyPath(other.slug)}>כמה זה {other.name} בשקלים</Link>
+          </li>
+        ))}
         <li>
-          <Link href={CURRENCY_HUB_PATH}>כל המטבעות בשקלים</Link>
+          <Link href={CURRENCY_HUB_PATH}>כל 24 המטבעות בשקלים</Link>
         </li>
-        {currencyPages
-          .filter((other) => other.slug !== page.slug)
-          .map((other) => (
-            <li key={other.slug}>
-              <Link href={currencyPath(other.slug)}>כמה זה {other.name} בשקלים</Link>
-            </li>
-          ))}
       </ul>
     </ToolLayout>
+  )
+}
+
+function HistorySection({ page, shekels, rows, amount }: { page: CurrencyPage; shekels: number; rows: HistoryRow[]; amount: number }) {
+  const { high, low } = extremes(rows)
+  const now = amount * shekels
+  const newestFirst = [...rows].reverse()
+  return (
+    <>
+      <h2>{amountText(page, amount)} בשקלים בשנה האחרונה</h2>
+      <p>
+        השער בתחילת כל חודש, מהחדש לישן. הגבוה ביותר בטבלה: {roundedShekels(high.shekels)} ₪ בתחילת {monthLabel(high.date)}.
+        הנמוך ביותר: {roundedShekels(low.shekels)} ₪ בתחילת {monthLabel(low.date)}. היום: {roundedShekels(now)} ₪. אלה שערי
+        עבר, לא תחזית.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">תאריך</th>
+            <th scope="col">{amountText(page, amount)} בשקלים</th>
+            <th scope="col">מול היום</th>
+          </tr>
+        </thead>
+        <tbody>
+          {newestFirst.map((row) => (
+            <tr key={row.date}>
+              <td>{formatIsoDate(row.date)}</td>
+              <td>{formatMoney(row.shekels)} ₪</td>
+              <td>{isFlat(now, row.shekels) ? 'כמעט זהה' : `היום ${percentText(now, row.shekels)}% ${moreOrLess(now, row.shekels)}`}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
+  )
+}
+
+function LevSection() {
+  return (
+    <>
+      <h2>הלב הוחלף ביורו</h2>
+      <p>
+        בולגריה הצטרפה לגוש האירו ב-1 בינואר 2026. בינואר אפשר היה לשלם במזומן בשני המטבעות, ומ-1 בפברואר 2026 רק היורו הוא
+        הילך חוקי. חשבונות בנק בלב הומרו ליורו לפי השער הקבוע, {LEV_PER_EURO} לב ליורו, ולכן השער של הלב מול השקל זז בדיוק
+        כמו היורו. לטיסה לבולגריה צריך <Link href={currencyPath('eur')}>יורו</Link>, לא לב.
+      </p>
+      <p>
+        הפרטים על החלפת שטרות ישנים:{' '}
+        <a href={ECB_LEV_URL} rel="noopener" target="_blank">
+          הבנק המרכזי האירופי, מעבר בולגריה ליורו
+        </a>
+        .
+      </p>
+    </>
   )
 }

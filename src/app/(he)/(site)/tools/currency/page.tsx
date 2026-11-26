@@ -4,7 +4,7 @@ import CurrencyConverter from '../../components/tools/CurrencyConverter'
 import ToolSources from '../../components/tools/ToolSources'
 import {
   CURRENCY_HUB_PATH,
-  RATES_SOURCE_URL,
+  SNAPSHOT_SOURCE,
   currencyPages,
   currencyPath,
   fetchIlsRates,
@@ -20,7 +20,7 @@ const DESCRIPTION =
   'כמה זה בשקלים: שערי 24 מטבעות מול השקל, מתעדכנים פעם ביום, עם מחשבון המרה לכל מטבע: דולר, יורו, זלוטי, וון, באט, גריבנה, דירהם, רופי ועוד.'
 
 const sources = [
-  { href: RATES_SOURCE_URL, label: 'ExchangeRate-API: מקור השערים בעמוד' },
+  { href: SNAPSHOT_SOURCE.href, label: `${SNAPSHOT_SOURCE.label}: מקור השערים בעמוד` },
   { href: 'https://www.boi.org.il/roles/markets/exchangerates/', label: 'בנק ישראל: שערי חליפין יציגים' },
 ]
 
@@ -29,7 +29,13 @@ const faq: ToolFaqEntry[] = [
     id: 'currency-hub-rate',
     question: 'איזה שער מוצג כאן?',
     answer:
-      'שער אמצע שוק ממקור שערים בינלאומי, שמתעדכן בעמוד פעם בשעה. בבנק ובצ׳יינג׳ מקבלים שער פחות טוב בגלל מרווח ועמלות. לחשבוניות משתמשים בשער היציג של בנק ישראל.',
+      'שער אמצע שוק ממקור שערים פתוח שמתעדכן פעם ביום. בבנק ובצ׳יינג׳ מקבלים שער פחות טוב בגלל מרווח ועמלות. לחשבוניות משתמשים בשער היציג של בנק ישראל.',
+  },
+  {
+    id: 'currency-hub-bank',
+    question: 'למה בבנק או בצ׳יינג׳ מקבלים פחות?',
+    answer:
+      'בנקים, חברות אשראי וצ׳יינג׳ים קונים מטבע בזול ומוכרים ביוקר, ולפעמים מוסיפים עמלה קבועה. ההפרש בין השער שהם מציעים לשער אמצע השוק הוא המחיר האמיתי של ההמרה. מחלקים את ההפרש בשער אמצע השוק ומקבלים אחוז, וכך אפשר להשוות בין שני צ׳יינג׳ים.',
   },
 ]
 
