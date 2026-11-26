@@ -147,10 +147,12 @@ export default function AcSizeCalculatorPage() {
     >
       <h2>איזה מזגן צריך לפי גודל החדר</h2>
       <p>
-        הטבלה מחושבת באותם כללים של המחשבון, {formatNumber(BTU_PER_SQUARE_METER)} BTU למ&quot;ר ו-
+        הטבלה מחושבת באותם כללים של המחשבון, {formatNumber(BTU_PER_SQUARE_METER)}
+        {' BTU למ"ר ו-'}
         {formatNumber(BTU_PER_PERSON)} BTU לכל אדם, לחדר עם שני אנשים, תקרה של{' '}
-        {formatNumber(TYPICAL_ROOM.ceilingMeters, 1)} מ&apos;, קומת ביניים ושמש רגילה. העמודה האחרונה היא אותו חדר
-        בקומה עליונה, עם חלונות גדולים לדרום או למערב.
+        {formatNumber(TYPICAL_ROOM.ceilingMeters, 1)}
+        {" מ', קומת ביניים ושמש רגילה. "}
+        העמודה האחרונה היא אותו חדר בקומה עליונה, עם חלונות גדולים לדרום או למערב.
       </p>
       <div className={styles.tableWrap} role="region" aria-label="טבלת מזגן לפי שטח החדר" tabIndex={0}>
         <table className={styles.table}>
@@ -193,7 +195,8 @@ export default function AcSizeCalculatorPage() {
           שטח החדר כפול {formatNumber(BTU_PER_SQUARE_METER)} BTU/h, לפי כלל האצבע של תדיראן ושל המקצוענים.
         </li>
         <li>
-          תקרה גבוהה מ-{formatNumber(REFERENCE_CEILING_METERS, 1)} מ&apos; מגדילה את התוצאה באותו יחס, כי היצרנים
+          תקרה גבוהה מ-{formatNumber(REFERENCE_CEILING_METERS, 1)}
+          {' '}מ&apos; מגדילה את התוצאה באותו יחס, כי היצרנים
           מדגישים שהגודל נקבע לפי נפח החלל. תקרה נמוכה יותר לא מקטינה את החישוב.
         </li>
         <li>
