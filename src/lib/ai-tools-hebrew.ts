@@ -57,6 +57,19 @@ const MS_COPILOT_LANGUAGES =
 
 export const aiTools: AiTool[] = [
   {
+    id: 'eliezer',
+    name: 'Eliezer.ai',
+    category: 'video',
+    url: 'https://eliezer.ai/',
+    hebrewUi: 'yes',
+    hebrew: 'כלי ייעודי להקראת טקסט בעברית, עם ממשק בעברית. לפי היצרן אפשר לבחור ניקוד והגייה ולהוסיף תגיות של רגש, הפסקות וצחוק.',
+    source: 'https://eliezer.ai/text-to-speech-hebrew',
+    free: 'trial',
+    freeNote: '100 מילים ראשונות חינם, פעם אחת, בלי כרטיס אשראי',
+    pricing: 'https://eliezer.ai/ai-hebrew-free',
+    use: 'קריינות בעברית לסרטון, לקורס או להקלטה למרכזייה.',
+  },
+  {
     id: 'chatgpt',
     name: 'ChatGPT',
     category: 'chat',
@@ -224,19 +237,6 @@ export const aiTools: AiTool[] = [
     freeNote: 'תוכנית Free',
     pricing: 'https://www.canva.com/pricing/',
     use: 'פוסטים, סטוריז ומודעות עם טקסט בעברית.',
-  },
-  {
-    id: 'eliezer',
-    name: 'Eliezer.ai',
-    category: 'video',
-    url: 'https://eliezer.ai/',
-    hebrewUi: 'yes',
-    hebrew: 'כלי ייעודי להקראת טקסט בעברית, עם ממשק בעברית. לפי היצרן אפשר לבחור ניקוד והגייה ולהוסיף תגיות של רגש, הפסקות וצחוק.',
-    source: 'https://eliezer.ai/text-to-speech-hebrew',
-    free: 'trial',
-    freeNote: '100 מילים ראשונות חינם, פעם אחת, בלי כרטיס אשראי',
-    pricing: 'https://eliezer.ai/ai-hebrew-free',
-    use: 'קריינות בעברית לסרטון, לקורס או להקלטה למרכזייה.',
   },
   {
     id: 'cadabra',
