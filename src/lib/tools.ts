@@ -874,7 +874,7 @@ export const tools: ToolEntry[] = [
     title: 'הפרש שעות מישראל',
     description: 'מה השעה עכשיו ביעד: הפרש שעות בין ישראל ל-62 ערים עם שעון קיץ, טבלת חורף וקיץ ומתכנן פגישות.',
     category: 'home',
-    reviewed: '2026-10-23',
+    reviewed: '2026-11-26',
     icon: 'clock',
   },
   {
@@ -1587,7 +1587,7 @@ const REVIEWED_WITHOUT_TOOL_ENTRY: Record<string, string> = {
   '/tools/currency/': '2026-10-28',
   '/tools/holidays/': '2026-11-04',
   '/tools/landing-page-cost-calculator': '2026-10-25',
-  '/tools/time-in/': '2026-10-28',
+  '/tools/time-in/': '2026-11-26',
   '/tools/website-cost-calculator': '2026-10-25',
 }
 

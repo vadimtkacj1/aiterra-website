@@ -11,12 +11,13 @@ import {
   timeDifferenceSources,
 } from '@/lib/time-difference'
 import { timeInPages, timeInPath } from '@/lib/time-in-cities'
+import { ISRAEL_TIME_PATH } from '@/lib/time-in-copy'
 import styles from '../../components/tools/TimeDifference.module.css'
 
-const TITLE = 'מה השעה בישראל עכשיו, והפרש השעות לכל העולם'
-const META_TITLE = 'מה השעה בישראל עכשיו? שעון חי + הפרש מ-62 ערים'
+const TITLE = 'הפרש שעות מישראל ל-62 ערים, בחורף ובקיץ'
+const META_TITLE = 'הפרש שעות מישראל: 62 ערים, חורף וקיץ, ומתכנן פגישות'
 const DESCRIPTION =
-  'מה השעה בישראל עכשיו: שעון חי לפי שעון ישראל (UTC+2 בחורף, UTC+3 בקיץ), והפרש השעות מול 62 ערים בעולם, בקיץ ובחורף, עם תכנון פגישה.'
+  'ניו יורק 7 שעות אחרי ישראל, לונדון שעתיים, טוקיו 7 לפני, ובקיץ חלק מהמספרים זזים בשעה. הפרש השעות ל-62 ערים, שעון חי של היעד ומציאת שעה לפגישה.'
 
 const cityRows = cityDifferences()
 
@@ -52,7 +53,7 @@ const faq: ToolFaqEntry[] = [
     id: 'time-difference-faq-summer',
     question: 'מתי שעון הקיץ בישראל מתחיל ומסתיים?',
     answer:
-      'לפי החוק, שעון הקיץ מתחיל ביום שישי האחרון של מרץ ומסתיים ביום ראשון האחרון של אוקטובר. ב-2026 הוא התחיל ב-27 במרץ ויסתיים ב-25 באוקטובר, וב-2027 יתחיל ב-26 במרץ ויסתיים ב-31 באוקטובר. אז השעון זז שעה קדימה בלילה לקראת שישי, ושעה אחורה בלילה שבין שבת לראשון.',
+      'לפי החוק, שעון הקיץ מתחיל ביום שישי שלפני יום ראשון האחרון של מרץ ומסתיים ביום ראשון האחרון של אוקטובר. ב-2026 הוא התחיל ב-27 במרץ והסתיים ב-25 באוקטובר, וב-2027 יתחיל ב-26 במרץ ויסתיים ב-31 באוקטובר. אז השעון זז שעה קדימה בלילה לקראת שישי, ושעה אחורה בלילה שבין שבת לראשון.',
   },
   {
     id: 'time-difference-faq-asia',
@@ -91,7 +92,7 @@ export default function TimeDifferencePage() {
       title={TITLE}
       metaTitle={META_TITLE}
       description={DESCRIPTION}
-      lede="השעון שלמטה מראה מה השעה בישראל עכשיו. בחורף שעון ישראל הוא UTC+2 ובקיץ UTC+3. ההפרש בין ישראל לניו יורק הוא 7 שעות רוב השנה, ובין ישראל ללונדון 2 שעות, אבל הוא משתנה כשאחד הצדדים עובר לשעון קיץ. בחרו עיר וראו שעון חי של הצד השני, ההפרש היום וההפרש בעוד חצי שנה, ומצאו שעה שנוחה לשני הצדדים."
+      lede="בחרו עיר, ותראו את השעה שם מול השעה בישראל, את ההפרש היום ואת ההפרש בעוד חצי שנה. מול ניו יורק ההפרש הוא 7 שעות רוב השנה ומול לונדון שעתיים, אבל בכמה שבועות בשנה הוא זז, כי לא כל המדינות מזיזות את השעון באותו יום. מתחת לשעונים יש מתכנן פגישות, ובהמשך העמוד טבלה של כל 62 הערים."
       chips={['62 ערים', 'מתעדכן לבד לפי שעון קיץ', `נבדק ב-${TIME_DIFFERENCE_CHECKED}`]}
       tool={<TimeDifference renderedAt={Date.now()} />}
       faq={faq}
@@ -110,9 +111,10 @@ export default function TimeDifferencePage() {
 
       <h2>שעון קיץ בישראל</h2>
       <p>
-        שעון הקיץ בישראל מתחיל ביום שישי האחרון של מרץ ומסתיים ביום ראשון האחרון של אוקטובר. ב-2026 הוא התחיל ב-27
-        במרץ ומסתיים ב-25 באוקטובר, וב-2027 הוא יתחיל ב-26 במרץ ויסתיים ב-31 באוקטובר. בקיץ ישראל היא UTC+3,
-        ובחורף UTC+2. מי שמתכנן לפי הפרש קבוע עלול לטעות בשבועות שבהם המדינות לא עוברות באותו יום.
+        שעון הקיץ בישראל מתחיל ביום שישי שלפני יום ראשון האחרון של מרץ ומסתיים ביום ראשון האחרון של אוקטובר. ב-2026 הוא התחיל ב-27
+        במרץ והסתיים ב-25 באוקטובר, וב-2027 הוא יתחיל ב-26 במרץ ויסתיים ב-31 באוקטובר. בקיץ ישראל היא UTC+3,
+        ובחורף UTC+2. מי שמתכנן לפי הפרש קבוע עלול לטעות בשבועות שבהם המדינות לא עוברות באותו יום. מועדי המעבר
+        עד 2028 והשעה בישראל עכשיו: <Link href={ISRAEL_TIME_PATH}>מה השעה בישראל</Link>.
       </p>
 
       <h2 id="shifts" className={styles.anchor}>
@@ -201,6 +203,9 @@ export default function TimeDifferencePage() {
 
       <h2>מה השעה עכשיו ביעדים מבוקשים</h2>
       <ul>
+        <li>
+          <Link href={ISRAEL_TIME_PATH}>מה השעה בישראל</Link>
+        </li>
         {timeInPages.map((page) => (
           <li key={page.slug}>
             <Link href={timeInPath(page.slug)}>מה השעה {page.inPlace}</Link>
@@ -213,7 +218,7 @@ export default function TimeDifferencePage() {
         <li>{externalLink(timeDifferenceSources.kan.href, timeDifferenceSources.kan.label)}: מועדי שעון הקיץ ב-2026</li>
         <li>
           {externalLink(timeDifferenceSources.protocol.href, timeDifferenceSources.protocol.label)}: כלל ״יום שישי
-          האחרון של מרץ ויום ראשון האחרון של אוקטובר״
+          שלפני יום ראשון האחרון של מרץ, ויום ראשון האחרון של אוקטובר״
         </li>
         <li>{externalLink(timeDifferenceSources.iana.href, timeDifferenceSources.iana.label)}: אזורי הזמן והכללים</li>
         <li>{externalLink(timeDifferenceSources.mdn.href, timeDifferenceSources.mdn.label)}: ממשק הדפדפן לחישוב</li>

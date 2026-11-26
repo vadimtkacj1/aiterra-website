@@ -6,6 +6,7 @@ import { getV2Content } from '@/lib/v2-content-server'
 import { SITE_URL } from '@/lib/seo'
 import { TOOLS_HUB_PATH, toolCategories, toolReviewed, tools, topicPath } from '@/lib/tools'
 import { timeInPages, timeInPath } from '@/lib/time-in-cities'
+import { ISRAEL_TIME_PATH } from '@/lib/time-in-copy'
 import { pairPages, pairPath } from '@/lib/unit-converter'
 import { currencyPages, currencyPath } from '@/lib/currency-pages'
 import { namePagePath, namePages } from '@/lib/name-pages'
@@ -72,9 +73,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  const timeInEntries: MetadataRoute.Sitemap = timeInPages.map((page) => ({
-    url: `${SITE_URL}${timeInPath(page.slug)}`,
-    lastModified: new Date('2026-10-28'),
+  const timeInEntries: MetadataRoute.Sitemap = [
+    ...timeInPages.map((page) => timeInPath(page.slug)),
+    ISRAEL_TIME_PATH,
+  ].map((path) => ({
+    url: `${SITE_URL}${path}`,
+    lastModified: new Date('2026-11-26'),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))
