@@ -68,6 +68,7 @@ export default function Header() {
           <div className="flex items-center">
             <a
               href="tel:0526780739"
+              onClick={() => window.gtag?.('event', 'phone_click', { page_path: window.location.pathname })}
               className="text-[14px] font-bold leading-none whitespace-nowrap"
               style={gradientTextStyle}
               dir="ltr"
