@@ -73,6 +73,24 @@ export const enTools: EnToolEntry[] = [
     icon: 'calendarRange',
   },
   {
+    slug: 'hebrew-calendar-2027',
+    title: 'Jewish holidays 2026–2027 (5787)',
+    description:
+      'Every holiday of the Hebrew year 5787 with the Gregorian date, weekday, Hebrew date and whether it is a day off in Israel.',
+    category: 'dates',
+    icon: 'calendar',
+    reviewed: '2026-11-26',
+  },
+  {
+    slug: 'idf-ranks-chart',
+    title: 'IDF ranks in order',
+    description:
+      'All 18 general IDF ranks from Turai to Rav Aluf, with the Hebrew name, abbreviation, English equivalent and NATO code.',
+    category: 'home',
+    icon: 'search',
+    reviewed: '2026-10-23',
+  },
+  {
     slug: 'hebrew-name-to-english',
     title: 'Hebrew name to English',
     description:
