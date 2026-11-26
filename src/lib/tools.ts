@@ -630,6 +630,14 @@ export const tools: ToolEntry[] = [
     icon: 'file',
   },
   {
+    path: '/tools/price-labels',
+    title: 'מדבקות למוצרים להדפסה עם מחיר וברקוד',
+    description: 'מדבקות מחיר על דף A4 במדפסת רגילה: שם המוצר, מחיר בשקלים וברקוד EAN-13 או Code 128, ייבוא מ-Shopify, מ-WooCommerce או מ-Excel ומדבקה לכל יחידה במלאי.',
+    category: 'money',
+    reviewed: '2026-11-26',
+    icon: 'receipt',
+  },
+  {
     path: '/tools/keyword-ideas',
     title: 'מחולל מילות מפתח',
     description: 'רעיונות למילות מפתח מההשלמה האוטומטית של גוגל בישראל: שאלות, המשכים לפי אותיות, העתקה ו-CSV.',
@@ -1521,6 +1529,7 @@ export const tools: ToolEntry[] = [
 
 const CLOSEST_TOOLS: Record<string, string[]> = {
   '/tools/inventory-count-sheet': ['/tools/barcode-generator', '/tools/product-pricing-calculator', '/tools/profit-margin-calculator'],
+  '/tools/price-labels': ['/tools/barcode-generator', '/tools/unit-price-calculator', '/tools/product-pricing-calculator'],
   '/tools/bmi-calculator': ['/tools/calorie-calculator', '/tools/body-fat-calculator', '/tools/protein-calculator'],
   '/tools/calorie-calculator': ['/tools/nutrients/calories', '/tools/protein-calculator', '/tools/bmi-calculator'],
   '/tools/protein-calculator': ['/tools/nutrients/protein', '/tools/calorie-calculator', '/tools/water-intake-calculator'],
