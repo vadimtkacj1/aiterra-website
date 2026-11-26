@@ -27,7 +27,7 @@ export type CountSettings = {
   showExpected: boolean
 }
 
-export type ColumnRole = 'name' | 'sku' | 'expected' | 'unit' | 'cost' | 'serial'
+export type ColumnRole = 'name' | 'sku' | 'counted' | 'expected' | 'unit' | 'cost' | 'serial'
 export type ColumnMap = Partial<Record<ColumnRole, number>>
 export type DateStatus = 'balance' | 'near' | 'notice' | 'outside'
 export type PrintMode = 'blank' | 'count' | 'result'
@@ -51,11 +51,12 @@ export const MAX_FIRST_SHEET = 9999
 export const MAX_COUNTERS = 4
 export const NOTICE_FREE_DAYS = 10
 export const ROWS_PER_SHEET = [20, 25, 30] as const
-export const COLUMN_ROLES: ColumnRole[] = ['name', 'sku', 'expected', 'unit', 'cost', 'serial']
+export const COLUMN_ROLES: ColumnRole[] = ['name', 'sku', 'counted', 'expected', 'unit', 'cost', 'serial']
 
 export const ROLE_LABELS: Record<ColumnRole, string> = {
   name: 'תיאור הפריט',
   sku: 'מק״ט או ברקוד',
+  counted: 'כמות שנספרה',
   expected: 'כמות רשומה',
   unit: 'יחידת מידה',
   cost: 'עלות ליחידה',
@@ -81,6 +82,15 @@ const TEMPLATE_ROWS = 50
 const PRINTABLE_WIDTH_MM = 190
 const NUMBER_WIDTH_MM = 9
 const MIN_NAME_WIDTH_MM = 45
+const HEADER_SCAN_ROWS = 15
+const NOT_STOCKED = 'not stocked'
+const VARIANT_SEPARATOR = ' / '
+const ELLIPSIS = '…'
+const MIN_TITLE_CHARS = 12
+const NAME_LINES = 2
+const NAME_FILL = 0.9
+const NAME_PADDING_MM = 1.6
+const NAME_CHAR_MM = { regular: 1.53, tight: 1.38 }
 
 const HEADER_HINTS: Record<ColumnRole, string[]> = {
   name: [
@@ -117,6 +127,7 @@ const HEADER_HINTS: Record<ColumnRole, string[]> = {
     'qty',
     'inventory',
   ],
+  counted: ['כמות שנספרה', 'counted quantity', 'counted'],
   unit: ['unit', 'יחידת מידה', 'יחידה', "יח'"],
   cost: ['cost per item', 'unit cost', 'cost', 'עלות ליחידה', 'מחיר עלות', 'מחיר קניה', 'מחיר קנייה', 'עלות'],
   serial: ['serial number', 'serial', 'מספר סידורי'],
@@ -279,9 +290,10 @@ const normalizeHeader = (value: string) =>
     .trim()
     .toLowerCase()
 
-export function detectColumns(header: string[]): ColumnMap {
+function detect(header: string[]) {
   const names = header.map(normalizeHeader)
   const taken = new Set<number>()
+  const exact = new Set<ColumnRole>()
   const map: ColumnMap = {}
   const firstMatch = (hints: string[], matches: (name: string, hint: string) => boolean) =>
     hints
@@ -289,16 +301,33 @@ export function detectColumns(header: string[]): ColumnMap {
       .find((index) => index !== -1)
   for (const role of COLUMN_ROLES) {
     const hints = HEADER_HINTS[role]
-    const exact = firstMatch(hints, (name, hint) => name === hint)
-    const found = exact ?? (LOOSE_ROLES.has(role) ? firstMatch(hints, (name, hint) => name.includes(hint)) : undefined)
+    const exactIndex = firstMatch(hints, (name, hint) => name === hint)
+    const found =
+      exactIndex ?? (LOOSE_ROLES.has(role) ? firstMatch(hints, (name, hint) => name.includes(hint)) : undefined)
     if (found === undefined) continue
+    if (exactIndex !== undefined) exact.add(role)
     map[role] = found
     taken.add(found)
   }
-  return map
+  return { map, exact }
 }
 
-export const looksLikeHeader = (map: ColumnMap) => map.name !== undefined || map.sku !== undefined
+const hasNumber = (row: string[]) => row.some((value) => parseNumber(value) !== null)
+
+export const detectColumns = (header: string[]): ColumnMap => detect(header).map
+
+export function looksLikeHeader(row: string[]) {
+  const { map } = detect(row)
+  return !hasNumber(row) && (map.name !== undefined || map.sku !== undefined)
+}
+
+export function findHeader(rows: string[][]): { index: number; map: ColumnMap } | null {
+  for (const [index, row] of rows.slice(0, HEADER_SCAN_ROWS).entries()) {
+    const { map, exact } = detect(row)
+    if (!hasNumber(row) && (exact.has('name') || exact.has('sku'))) return { index, map }
+  }
+  return null
+}
 
 function structureColumns(header: string[]) {
   const names = header.map(normalizeHeader)
@@ -309,35 +338,56 @@ function structureColumns(header: string[]) {
   return {
     handle: indexOf('handle'),
     type: indexOf('type', 'סוג'),
+    location: indexOf('location', 'מיקום'),
     options: names.flatMap((name, index) => (/^option\d+ value$/.test(name) ? [index] : [])),
   }
 }
 
-export function tableToItems(rows: string[][], map: ColumnMap, hasHeader: boolean, firstId: number): CountItem[] {
-  const structure = structureColumns(hasHeader ? (rows[0] ?? []) : [])
-  const cell = (row: string[], index: number | undefined) => (index === undefined ? '' : (row[index] ?? '').trim())
+const cellAt = (row: string[], index: number | undefined) => (index === undefined ? '' : (row[index] ?? '').trim())
+
+const dataRows = (rows: string[][], headerIndex: number | null) =>
+  rows.slice(headerIndex === null ? 0 : headerIndex + 1)
+
+export function fileLocations(rows: string[][], headerIndex: number | null): string[] {
+  if (headerIndex === null) return []
+  const { location } = structureColumns(rows[headerIndex] ?? [])
+  if (location === undefined) return []
+  return [...new Set(dataRows(rows, headerIndex).map((row) => cellAt(row, location)).filter(Boolean))]
+}
+
+export function tableToItems(
+  rows: string[][],
+  map: ColumnMap,
+  headerIndex: number | null,
+  firstId: number,
+  location = '',
+): CountItem[] {
+  const structure = structureColumns(headerIndex === null ? [] : (rows[headerIndex] ?? []))
   const titles = new Map<string, string>()
   const items: CountItem[] = []
-  for (const row of rows.slice(hasHeader ? 1 : 0)) {
+  for (const row of dataRows(rows, headerIndex)) {
     if (items.length >= MAX_ITEMS) break
-    if (SKIPPED_TYPES.has(cell(row, structure.type).toLowerCase())) continue
-    const handle = cell(row, structure.handle)
-    const ownTitle = cell(row, map.name)
+    if (SKIPPED_TYPES.has(cellAt(row, structure.type).toLowerCase())) continue
+    const handle = cellAt(row, structure.handle)
+    const ownTitle = cellAt(row, map.name)
     if (handle && ownTitle) titles.set(handle, ownTitle)
+    if (location && cellAt(row, structure.location) !== location) continue
+    if (cellAt(row, map.expected).toLowerCase() === NOT_STOCKED) continue
     const options = structure.options
-      .map((index) => cell(row, index))
+      .map((index) => cellAt(row, index))
       .filter((value) => value && value.toLowerCase() !== DEFAULT_OPTION)
-    const sku = cell(row, map.sku)
+    const sku = cellAt(row, map.sku)
     if (!ownTitle && !options.length && !sku) continue
     const name = [ownTitle || titles.get(handle) || '', ...options].filter(Boolean).join(' / ')
     items.push({
       ...emptyItem(firstId + items.length),
       sku,
       name,
-      unit: cell(row, map.unit),
-      serial: cell(row, map.serial),
-      expected: numberText(cell(row, map.expected)),
-      cost: numberText(cell(row, map.cost)),
+      unit: cellAt(row, map.unit),
+      serial: cellAt(row, map.serial),
+      expected: numberText(cellAt(row, map.expected)),
+      counted: numberText(cellAt(row, map.counted)),
+      cost: numberText(cellAt(row, map.cost)),
     })
   }
   return items
@@ -501,7 +551,8 @@ table{width:100%;border-collapse:collapse;table-layout:fixed;font-variant-numeri
 table.tight{font-size:9.5px}
 th,td{padding:0 3px;border:1px solid #b9b4ac;text-align:center;vertical-align:middle;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 thead th{height:9mm;padding:2px;background:#ece8e2;font-size:9px;line-height:1.15;white-space:normal}
-td.name{text-align:start}
+td.name{text-align:start;white-space:normal}
+td.name div{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;max-height:2.2em;overflow:hidden;line-height:1.1;overflow-wrap:anywhere}
 .legend{margin:4px 0 0;color:#4a4f63;font-size:9px}
 .sign{display:grid;grid-template-columns:1fr 1fr;gap:6mm 14mm;margin-top:auto;padding-top:5mm}
 .sign div{display:grid;grid-template-columns:auto 1fr auto 1fr;align-items:end;gap:6px;font-size:10.5px}
@@ -583,10 +634,28 @@ function fitColumns(columns: PrintColumn[]) {
   return { columns: withoutNotes, tight: nameWidth(withoutNotes) < MIN_NAME_WIDTH_MM }
 }
 
+export function fitName(name: string, capacity: number) {
+  if (name.length <= capacity) return name
+  const cut = name.indexOf(VARIANT_SEPARATOR)
+  const tail = cut === -1 ? '' : name.slice(cut)
+  const room = capacity - tail.length - ELLIPSIS.length
+  if (!tail || room < MIN_TITLE_CHARS) return `${name.slice(0, capacity - ELLIPSIS.length).trimEnd()}${ELLIPSIS}`
+  return `${name.slice(0, room).trimEnd()}${ELLIPSIS}${tail}`
+}
+
+function nameCapacity(columns: PrintColumn[], tight: boolean) {
+  const taken = columns.reduce((sum, column) => sum + (tight ? column.tight : column.width), 0)
+  const width = PRINTABLE_WIDTH_MM - NUMBER_WIDTH_MM - taken - NAME_PADDING_MM
+  const perLine = width / (tight ? NAME_CHAR_MM.tight : NAME_CHAR_MM.regular)
+  return Math.floor(perLine * NAME_LINES * NAME_FILL)
+}
+
 export function sheetDocument(settings: CountSettings, items: CountItem[], mode: PrintMode): string {
   const { columns, tight } = fitColumns(printColumns(settings, mode))
   const firstSheet = firstSheetNumber(settings.firstSheet) ?? 1
-  const sheets = buildSheets(mode === 'blank' ? [] : items, settings.rowsPerSheet, settings.blankSheets, firstSheet)
+  const capacity = nameCapacity(columns, tight)
+  const printable = mode === 'blank' ? [] : items.map((item) => ({ ...item, name: fitName(item.name.trim(), capacity) }))
+  const sheets = buildSheets(printable, settings.rowsPerSheet, settings.blankSheets, firstSheet)
   const rowHeight = ROW_HEIGHT_MM[settings.rowsPerSheet] ?? ROW_HEIGHT_MM[25]
   const names = counterNames(settings.counters)
   const signatures = Array.from({ length: Math.max(2, names.length) }, (_, index) => names[index] ?? '')
@@ -607,7 +676,10 @@ export function sheetDocument(settings: CountSettings, items: CountItem[], mode:
       const rows = sheet.rows
         .map((item, index) => {
           const cells = columns
-            .map((column) => `<td${column.key === 'name' ? ' class="name"' : ''}>${item ? column.cell(item) : ''}</td>`)
+            .map((column) => {
+              const content = item ? column.cell(item) : ''
+              return column.key === 'name' ? `<td class="name"><div>${content}</div></td>` : `<td>${content}</td>`
+            })
             .join('')
           return `<tr style="height:${rowHeight}mm"><td>${sheet.firstRow + index}</td>${cells}</tr>`
         })

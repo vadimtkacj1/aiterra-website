@@ -20,6 +20,8 @@ import {
   detectColumns,
   displayDate,
   emptyItem,
+  fileLocations,
+  findHeader,
   firstSheetNumber,
   formatMoney,
   formatQuantity,
@@ -41,7 +43,15 @@ import styles from './InventoryCountSheet.module.css'
 
 type Draft = { settings: CountSettings; items: CountItem[] }
 type ImportSource = 'file' | 'paste'
-type PendingImport = { rows: string[][]; map: ColumnMap; hasHeader: boolean; source: ImportSource }
+type PendingImport = {
+  rows: string[][]
+  map: ColumnMap
+  headerIndex: number | null
+  source: ImportSource
+  locations: string[]
+  location: string
+  mapped: boolean
+}
 type ItemText = 'sku' | 'name' | 'unit' | 'serial' | 'expected' | 'counted' | 'cost'
 type Toggle = 'showSku' | 'showSerial' | 'showCost' | 'showExpected'
 
@@ -324,6 +334,53 @@ function ItemRow({
   )
 }
 
+function ColumnMapping({
+  pending,
+  columns,
+  onColumn,
+  onHeader,
+}: {
+  pending: PendingImport
+  columns: number
+  onColumn: (role: ColumnRole, index: number) => void
+  onHeader: (first: boolean) => void
+}) {
+  return (
+    <>
+      <div className={styles.trio}>
+        {COLUMN_ROLES.map((role) => (
+          <Field key={role} label={ROLE_LABELS[role]}>
+            {(id) => (
+              <select
+                id={id}
+                className={`${ui.input} ${styles.select}`}
+                value={pending.map[role] ?? NO_COLUMN}
+                onChange={(event) => onColumn(role, Number(event.target.value))}
+              >
+                <option value={NO_COLUMN}>אין עמודה כזו</option>
+                {Array.from({ length: columns }, (_, index) => (
+                  <option key={index} value={index}>
+                    {`עמודה ${index + 1}: ${(pending.rows[0][index] ?? '').slice(0, SAMPLE_LENGTH)}`}
+                  </option>
+                ))}
+              </select>
+            )}
+          </Field>
+        ))}
+      </div>
+      <label className={ui.option}>
+        <input
+          type="checkbox"
+          className={ui.checkbox}
+          checked={pending.headerIndex !== null}
+          onChange={(event) => onHeader(event.target.checked)}
+        />
+        <span>השורה הראשונה היא שורת כותרות</span>
+      </label>
+    </>
+  )
+}
+
 export default function InventoryCountSheet({ initialDate }: { initialDate: string }) {
   const [draft, setDraft] = useState<Draft>(() => ({ settings: defaultSettings(initialDate), items: [] }))
   const [restored, setRestored] = useState(false)
@@ -398,18 +455,26 @@ export default function InventoryCountSheet({ initialDate }: { initialDate: stri
 
   const commitImport = (request: PendingImport, detected: boolean) => {
     const room = Math.max(0, MAX_ITEMS - items.length)
-    const imported = tableToItems(request.rows, request.map, request.hasHeader, nextId.current).slice(0, room)
+    const place = request.locations.length > 1 ? request.location : ''
+    const imported = tableToItems(request.rows, request.map, request.headerIndex, nextId.current, place).slice(0, room)
     if (!imported.length) {
       setStatus(room ? 'לא נמצאו שורות עם תיאור או מק״ט.' : `הרשימה מלאה: עד ${count(MAX_ITEMS)} פריטים.`)
       return
     }
     const withQuantity = imported.filter((item) => item.expected !== '').length
     nextId.current += imported.length
-    setDraft((state) => ({ ...state, items: [...state.items, ...imported] }))
+    setDraft((state) => ({
+      settings:
+        request.location && !state.settings.location.trim()
+          ? { ...state.settings, location: request.location }
+          : state.settings,
+      items: [...state.items, ...imported],
+    }))
     setPending(null)
     setPasted('')
     setStatus(
       `נוספו ${count(imported.length)} פריטים` +
+        (place ? ` מהמיקום ${place}` : '') +
         (withQuantity ? `, ל-${count(withQuantity)} מהם יש כמות רשומה.` : '.') +
         (items.length + imported.length >= MAX_ITEMS ? ` הרשימה מוגבלת ל-${count(MAX_ITEMS)} פריטים.` : ''),
     )
@@ -421,17 +486,38 @@ export default function InventoryCountSheet({ initialDate }: { initialDate: stri
       setStatus('לא נמצאו שורות.')
       return
     }
-    const map = detectColumns(rows[0])
-    if (looksLikeHeader(map)) {
-      commitImport({ rows, map, hasHeader: true, source }, true)
+    const header = findHeader(rows)
+    if (header) {
+      const locations = fileLocations(rows, header.index)
+      const request: PendingImport = {
+        rows,
+        map: header.map,
+        headerIndex: header.index,
+        source,
+        locations,
+        location: locations[0] ?? '',
+        mapped: true,
+      }
+      if (locations.length > 1) {
+        setPending(request)
+        setStatus(`בקובץ יש מלאי של ${count(locations.length)} מיקומים. בחרו את המיקום שסופרים.`)
+        return
+      }
+      commitImport(request, true)
       return
     }
+    const unmapped = { rows, source, locations: [], location: '', mapped: false }
     const widest = Math.max(...rows.slice(0, SAMPLE_ROWS).map((row) => row.length))
     if (widest === 1) {
-      commitImport({ rows, map: { name: 0 }, hasHeader: false, source }, false)
+      commitImport({ ...unmapped, map: { name: 0 }, headerIndex: null }, false)
       return
     }
-    setPending({ rows, map: { name: 0 }, hasHeader: false, source })
+    if (looksLikeHeader(rows[0])) {
+      setPending({ ...unmapped, map: detectColumns(rows[0]), headerIndex: 0 })
+      setStatus('השורה הראשונה נראית כמו שורת כותרות. בדקו את העמודות ואת הסימון לפני ההוספה.')
+      return
+    }
+    setPending({ ...unmapped, map: { name: 0 }, headerIndex: null })
     setStatus('לא זיהינו שורת כותרות. בחרו איזו עמודה היא התיאור ואיזו הכמות.')
   }
 
@@ -493,7 +579,7 @@ export default function InventoryCountSheet({ initialDate }: { initialDate: stri
   }
 
   return (
-    <section className={`${ui.tool} ${styles.root}`} aria-label="טופס ספירת מלאי">
+    <section className={`${ui.tool} ${styles.root}`} aria-label="טופס ספירת מלאי" data-clarity-mask="true">
       <div className={`${ui.inner} ${styles.layout}`}>
         <form className={ui.form} onSubmit={(event) => event.preventDefault()}>
           <fieldset className={ui.group}>
@@ -704,38 +790,34 @@ export default function InventoryCountSheet({ initialDate }: { initialDate: stri
 
             {pending ? (
               <div className={styles.mapping}>
-                <div className={styles.trio}>
-                  {COLUMN_ROLES.map((role) => (
-                    <Field key={role} label={ROLE_LABELS[role]}>
-                      {(id) => (
-                        <select
-                          id={id}
-                          className={`${ui.input} ${styles.select}`}
-                          value={pending.map[role] ?? NO_COLUMN}
-                          onChange={(event) => setPendingColumn(role, Number(event.target.value))}
-                        >
-                          <option value={NO_COLUMN}>אין עמודה כזו</option>
-                          {Array.from({ length: pendingColumns }, (_, index) => (
-                            <option key={index} value={index}>
-                              {`עמודה ${index + 1}: ${(pending.rows[0][index] ?? '').slice(0, SAMPLE_LENGTH)}`}
-                            </option>
-                          ))}
-                        </select>
-                      )}
-                    </Field>
-                  ))}
-                </div>
-                <label className={ui.option}>
-                  <input
-                    type="checkbox"
-                    className={ui.checkbox}
-                    checked={pending.hasHeader}
-                    onChange={(event) => setPending({ ...pending, hasHeader: event.target.checked })}
+                {pending.locations.length > 1 ? (
+                  <Field label="המיקום שסופרים">
+                    {(id) => (
+                      <select
+                        id={id}
+                        className={`${ui.input} ${styles.select}`}
+                        value={pending.location}
+                        onChange={(event) => setPending({ ...pending, location: event.target.value })}
+                      >
+                        {pending.locations.map((location) => (
+                          <option key={location} value={location}>
+                            {location}
+                          </option>
+                        ))}
+                      </select>
+                    )}
+                  </Field>
+                ) : null}
+                {pending.mapped ? null : (
+                  <ColumnMapping
+                    pending={pending}
+                    columns={pendingColumns}
+                    onColumn={setPendingColumn}
+                    onHeader={(first) => setPending({ ...pending, headerIndex: first ? 0 : null })}
                   />
-                  <span>השורה הראשונה היא שורת כותרות</span>
-                </label>
+                )}
                 <div className={styles.buttonRow}>
-                  <button type="button" className={ui.primary} onClick={() => commitImport(pending, false)}>
+                  <button type="button" className={ui.primary} onClick={() => commitImport(pending, pending.mapped)}>
                     הוספה לרשימה
                   </button>
                   <button type="button" className={ui.secondary} onClick={() => setPending(null)}>
