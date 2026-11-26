@@ -1,7 +1,17 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../../components/tools/ToolLayout'
-import { groupLabels, groupNotes, idfRankById, idfRankPath, idfRanks, rankLevel, type IdfRank } from '@/lib/idf-ranks'
+import {
+  IDF_RANKS_WIKI_URL,
+  IDF_RANK_FACTS_CHECKED,
+  groupLabels,
+  groupNotes,
+  idfRankById,
+  idfRankPath,
+  idfRanks,
+  rankLevel,
+  type IdfRank,
+} from '@/lib/idf-ranks'
 import { policeRanks } from '@/lib/police-ranks'
 import styles from '../../word-counter/page.module.css'
 
@@ -30,6 +40,9 @@ const metaTitleOf = (rank: IdfRank) => {
 
 const descriptionOf = (rank: IdfRank, level: number) =>
   `${rank.name} (${rank.abbreviation}) היא דרגת ${groupWord[rank.group]} בצה״ל, ה-${level + 1} מתוך ${idfRanks.length} מהנמוכה לגבוהה. באנגלית ${rank.english}. סימן הדרגה: ${rank.insignia}${rank.worn ? `, ${rank.worn}` : ''}.`
+
+const ledeOf = (rank: IdfRank, level: number) =>
+  `${rank.name} (${rank.abbreviation}) היא דרגת ${groupWord[rank.group]} בצה״ל, ה-${level + 1} מתוך ${idfRanks.length} מהנמוכה לגבוהה.${rank.how ? ` ${rank.how}` : ''}${rank.roles ? ` תפקידים אופייניים בדרגה: ${rank.roles}.` : ''}`
 
 export async function generateMetadata({ params }: Params) {
   const rank = idfRankById((await params).rank)
@@ -74,6 +87,9 @@ export default async function IdfRankPage({ params }: Params) {
         ? `מעל ${rank.name} נמצאת הדרגה ${above.name} (${above.abbreviation}). מתחתיה ${below ? `נמצאת ${below.name} (${below.abbreviation})` : 'אין דרגה, זו הדרגה הנמוכה בצה״ל'}.`
         : `${rank.name} היא הדרגה הגבוהה ביותר בצה״ל, ובה מחזיק הרמטכ״ל. מתחתיה נמצאת ${below?.name ?? ''}.`,
     },
+    ...(rank.how
+      ? [{ id: `rank-${rank.id}-how`, question: `מתי מקבלים דרגת ${plain(rank.name)}?`, answer: rank.how }]
+      : []),
     {
       id: `rank-${rank.id}-insignia`,
       question: `איך נראה סימן הדרגה של ${plain(rank.name)}?`,
@@ -87,7 +103,7 @@ export default async function IdfRankPage({ params }: Params) {
       title={`דרגת ${rank.name} (${rank.abbreviation}) בצה״ל`}
       metaTitle={metaTitleOf(rank)}
       description={descriptionOf(rank, level)}
-      lede={descriptionOf(rank, level)}
+      lede={ledeOf(rank, level)}
       tool={
         <div className={styles.tableWrap}>
           <table className={styles.table}>
@@ -110,6 +126,30 @@ export default async function IdfRankPage({ params }: Params) {
         href: '/services/development',
       }}
     >
+      {rank.roles ? (
+        <>
+          <h2>באילו תפקידים משרתים בדרגת {rank.name}</h2>
+          <p>
+            דוגמאות לתפקידים בדרגה הזאת: {rank.roles}. הדרגה נקבעת לפי התפקיד, ולכן באותו תפקיד אפשר לפעמים לפגוש גם
+            את הדרגה שמתחת או שמעל.
+          </p>
+        </>
+      ) : null}
+      {rank.history ? (
+        <>
+          <h2>עוד על דרגת {rank.name}</h2>
+          <p>{rank.history}</p>
+        </>
+      ) : null}
+      {rank.how || rank.roles || rank.history ? (
+        <p>
+          המקור לתנאי הקבלה, לתפקידים ולהיסטוריה:{' '}
+          <a href={IDF_RANKS_WIKI_URL} rel="noopener" target="_blank">
+            ויקיפדיה, דרגות צה״ל
+          </a>
+          , נבדק ב-{IDF_RANK_FACTS_CHECKED}. התנאים משתנים מדי פעם בהוראות צה״ל.
+        </p>
+      ) : null}
       <h2>{groupLabels[rank.group]} בצה״ל</h2>
       <p>{groupNotes[rank.group]}</p>
       <p>
