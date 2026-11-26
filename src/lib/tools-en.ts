@@ -229,6 +229,24 @@ export const enTools: EnToolEntry[] = [
     icon: 'search',
     reviewed: '2026-11-26',
   },
+  {
+    slug: 'vehicle-lookup',
+    title: 'Israel car check by number plate',
+    description:
+      'Check an Israeli vehicle by licence plate number: make, model, year, annual test expiry, mileage, leasing history, open recalls and licence fee.',
+    category: 'home',
+    icon: 'search',
+    reviewed: '2026-11-26',
+  },
+  {
+    slug: 'disabled-parking-tag-check',
+    title: 'Israel disabled parking permit check',
+    description:
+      'Check whether an Israeli vehicle number is in the Ministry of Transport database of disabled parking permits, with the permit issue date.',
+    category: 'home',
+    icon: 'search',
+    reviewed: '2026-11-26',
+  },
 ]
 
 export const EN_TOOL_SLUGS = enTools.map((tool) => tool.slug)
