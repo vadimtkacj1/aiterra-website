@@ -51,7 +51,7 @@ export function localise(value: string, dictionary: Dictionary): Localised {
 export const numberEn = (value: number) => value.toLocaleString('en-IL')
 
 export const formatDateEn = (value: string) => {
-  const match = /^(\d{4})-(\d{2})(?:-(\d{2}))?/.exec(value)
+  const match = /^(\d{4})-(\d{1,2})(?:-(\d{1,2}))?/.exec(value)
   if (!match) return value
   const month = MONTHS[Number(match[2]) - 1]
   if (!month) return value
