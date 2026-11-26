@@ -12,6 +12,7 @@ import WhatsAppButton from '@/components/layout/WhatsAppButton'
 import A11yWidgetTweaks from '@/components/layout/A11yWidgetTweaks'
 import DeferredThirdParty from '@/components/layout/DeferredThirdParty'
 import LandingSource from '@/components/layout/LandingSource'
+import PhoneClickTracker from '@/components/layout/PhoneClickTracker'
 import { SITE_NAME, SITE_URL } from '@/lib/seo'
 import '../../styles/globals.css'
 
@@ -133,6 +134,7 @@ export default function EnRootLayout({ children }: { children: ReactNode }) {
         <A11yWidgetTweaks locale="en" />
         <DeferredThirdParty />
         <LandingSource />
+        <PhoneClickTracker />
       </body>
     </html>
   )
