@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import ToolLayout, { toolMetadata, type ToolFaqEntry } from '../../../components/tools/ToolLayout'
 import {
   DIALING_HUB_PATH,
+  continentOf,
   countryNoteOf,
   dialingCountryBySlug,
   dialingCountryPages,
@@ -17,6 +18,8 @@ import {
 } from '@/lib/dialing-country-pages'
 import { ISRAELI_INTERNATIONAL_PREFIXES } from '@/lib/international-dialing-codes'
 import { timeInPath } from '@/lib/time-in-cities'
+import { differenceFromIsrael, offsetMinutes } from '@/lib/time-difference'
+import { callAdvice, hoursAmount } from '@/lib/time-in-copy'
 import styles from '../../word-counter/page.module.css'
 
 export const dynamicParams = false
@@ -51,6 +54,31 @@ const sharedText = (page: DialingCountryPage) => {
   return `הקידומת +${page.country.digits} משותפת ל${page.country.name} ול${others.map((item) => item.name).join(', ')}. את המדינה מזהים לפי הספרות שאחרי הקידומת.`
 }
 
+const midMonth = (month: number) => new Date(Date.UTC(new Date().getUTCFullYear(), month, 15, 12))
+
+const withBet = (amount: string) => (amount.startsWith('שע') ? `ב${amount}` : `ב-${amount}`)
+
+const seasonGap = (minutes: number) => {
+  if (minutes === 0) return 'זהה לשעה בישראל'
+  const amount = withBet(hoursAmount(Math.abs(minutes)))
+  return minutes > 0 ? `מקדימה את ישראל ${amount}` : `מאחרת אחרי ישראל ${amount}`
+}
+
+function callTimes(page: DialingCountryPage) {
+  const inPlace = page.timeIn?.inPlace ?? withPreposition('ב', page.country.name)
+  const winter = differenceFromIsrael(page.zone, midMonth(0))
+  const summer = differenceFromIsrael(page.zone, midMonth(6))
+  const placeShifts = offsetMinutes(page.zone, midMonth(0)) !== offsetMinutes(page.zone, midMonth(6))
+  const reason = placeShifts
+    ? `שעון הקיץ ${inPlace} לא חל באותם חודשים כמו בישראל`
+    : `בישראל עוברים לשעון קיץ, ו${inPlace} לא`
+  const gaps =
+    winter === summer
+      ? `רוב השנה השעה ${inPlace} ${seasonGap(winter)}. בתקופה שבין מעבר השעון בישראל למעבר השעון שם ההפרש זז בשעה.`
+      : `בינואר השעה ${inPlace} ${seasonGap(winter)}, וביולי ${Math.sign(winter) === Math.sign(summer) ? withBet(hoursAmount(Math.abs(summer))) : seasonGap(summer)}, כי ${reason}.`
+  return { inPlace, gaps, advice: callAdvice(winter, inPlace) }
+}
+
 export async function generateMetadata({ params }: Params) {
   const page = dialingCountryBySlug((await params).country)
   if (!page) return {}
@@ -68,7 +96,8 @@ export default async function DialingCountryRoute({ params }: Params) {
   const toCountry = withPreposition('ל', name)
   const shared = sharedText(page)
   const note = countryNoteOf(page)
-  const others = dialingCountryPages.filter((item) => item.slug !== page.slug)
+  const others = dialingCountryPages.filter((item) => item.slug !== page.slug && continentOf(item) === continentOf(page))
+  const times = callTimes(page)
   const carriers = ISRAELI_INTERNATIONAL_PREFIXES.filter((row) => row.prefix !== '00')
 
   const facts: [string, React.ReactNode][] = [
@@ -171,6 +200,17 @@ export default async function DialingCountryRoute({ params }: Params) {
           <p>{shared}</p>
         </>
       )}
+
+      <h2>מתי להתקשר {toCountry}</h2>
+      <p>
+        {times.gaps} {times.advice}
+        {page.timeIn ? (
+          <>
+            {' '}
+            השעה עכשיו מופיעה ב<Link href={timeInPath(page.timeIn.slug)}>שעון של {page.timeIn.place}</Link>.
+          </>
+        ) : null}
+      </p>
 
       <h2>מספר מ{name} בוואטסאפ ובאנשי הקשר</h2>
       <p>

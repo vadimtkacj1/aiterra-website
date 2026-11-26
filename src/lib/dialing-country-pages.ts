@@ -1,11 +1,11 @@
 import { countryCodes, type CountryCode } from './international-dialing-codes'
-import { timeInPage, type TimeInPage } from './time-in-cities'
+import { timeInCity, timeInPage, type TimeInPage } from './time-in-cities'
 
 export const DIALING_HUB_PATH = '/tools/international-dialing-codes'
 
 export type TrunkRule = 'zero' | 'zero-landline' | 'none' | 'eight' | 'zero-six' | 'nanp'
 
-type PageSeed = { iso: string; trunk: TrunkRule; timeIn?: string }
+type PageSeed = { iso: string; trunk: TrunkRule; timeIn?: string; zone?: string }
 
 const SEEDS: PageSeed[] = [
   { iso: 'US', trunk: 'nanp', timeIn: 'new-york' },
@@ -14,58 +14,58 @@ const SEEDS: PageSeed[] = [
   { iso: 'IT', trunk: 'none', timeIn: 'italy' },
   { iso: 'TH', trunk: 'zero', timeIn: 'thailand' },
   { iso: 'GR', trunk: 'none', timeIn: 'greece' },
-  { iso: 'PL', trunk: 'none' },
+  { iso: 'PL', trunk: 'none', zone: 'Europe/Warsaw' },
   { iso: 'AU', trunk: 'zero', timeIn: 'sydney' },
   { iso: 'CN', trunk: 'zero-landline', timeIn: 'china' },
   { iso: 'AE', trunk: 'zero', timeIn: 'dubai' },
-  { iso: 'AT', trunk: 'zero' },
+  { iso: 'AT', trunk: 'zero', zone: 'Europe/Vienna' },
   { iso: 'FR', trunk: 'zero', timeIn: 'paris' },
   { iso: 'DE', trunk: 'zero', timeIn: 'germany' },
   { iso: 'ES', trunk: 'none', timeIn: 'spain' },
   { iso: 'RU', trunk: 'eight', timeIn: 'moscow' },
   { iso: 'UA', trunk: 'zero', timeIn: 'ukraine' },
-  { iso: 'CY', trunk: 'none' },
+  { iso: 'CY', trunk: 'none', zone: 'Europe/Nicosia' },
   { iso: 'TR', trunk: 'zero', timeIn: 'turkey' },
-  { iso: 'EG', trunk: 'zero' },
-  { iso: 'JO', trunk: 'zero' },
+  { iso: 'EG', trunk: 'zero', zone: 'Africa/Cairo' },
+  { iso: 'JO', trunk: 'zero', zone: 'Asia/Amman' },
   { iso: 'IN', trunk: 'zero-landline', timeIn: 'india' },
   { iso: 'JP', trunk: 'zero', timeIn: 'japan' },
-  { iso: 'NL', trunk: 'zero' },
-  { iso: 'BE', trunk: 'zero' },
-  { iso: 'CH', trunk: 'zero' },
-  { iso: 'PT', trunk: 'none' },
-  { iso: 'HU', trunk: 'zero-six' },
-  { iso: 'RO', trunk: 'zero' },
-  { iso: 'CZ', trunk: 'none' },
-  { iso: 'GE', trunk: 'zero' },
-  { iso: 'BG', trunk: 'zero' },
+  { iso: 'NL', trunk: 'zero', zone: 'Europe/Amsterdam' },
+  { iso: 'BE', trunk: 'zero', zone: 'Europe/Brussels' },
+  { iso: 'CH', trunk: 'zero', zone: 'Europe/Zurich' },
+  { iso: 'PT', trunk: 'none', zone: 'Europe/Lisbon' },
+  { iso: 'HU', trunk: 'zero-six', zone: 'Europe/Budapest' },
+  { iso: 'RO', trunk: 'zero', zone: 'Europe/Bucharest' },
+  { iso: 'CZ', trunk: 'none', zone: 'Europe/Prague' },
+  { iso: 'GE', trunk: 'zero', zone: 'Asia/Tbilisi' },
+  { iso: 'BG', trunk: 'zero', zone: 'Europe/Sofia' },
   { iso: 'BR', trunk: 'zero', timeIn: 'brazil' },
-  { iso: 'PH', trunk: 'zero' },
-  { iso: 'VN', trunk: 'zero' },
-  { iso: 'ZA', trunk: 'zero' },
-  { iso: 'MD', trunk: 'zero' },
-  { iso: 'MA', trunk: 'zero' },
-  { iso: 'IE', trunk: 'zero' },
-  { iso: 'SE', trunk: 'zero' },
-  { iso: 'KR', trunk: 'zero' },
-  { iso: 'HR', trunk: 'zero' },
-  { iso: 'ME', trunk: 'zero' },
-  { iso: 'RS', trunk: 'zero' },
-  { iso: 'NZ', trunk: 'zero' },
-  { iso: 'AZ', trunk: 'zero' },
-  { iso: 'LT', trunk: 'zero' },
-  { iso: 'FI', trunk: 'zero' },
-  { iso: 'SK', trunk: 'zero' },
-  { iso: 'SI', trunk: 'zero' },
-  { iso: 'AL', trunk: 'zero' },
-  { iso: 'DK', trunk: 'none' },
-  { iso: 'NO', trunk: 'none' },
-  { iso: 'LV', trunk: 'none' },
-  { iso: 'EE', trunk: 'none' },
-  { iso: 'MT', trunk: 'none' },
-  { iso: 'SG', trunk: 'none' },
-  { iso: 'BY', trunk: 'eight' },
-  { iso: 'KZ', trunk: 'eight' },
+  { iso: 'PH', trunk: 'zero', zone: 'Asia/Manila' },
+  { iso: 'VN', trunk: 'zero', zone: 'Asia/Ho_Chi_Minh' },
+  { iso: 'ZA', trunk: 'zero', zone: 'Africa/Johannesburg' },
+  { iso: 'MD', trunk: 'zero', zone: 'Europe/Chisinau' },
+  { iso: 'MA', trunk: 'zero', zone: 'Africa/Casablanca' },
+  { iso: 'IE', trunk: 'zero', zone: 'Europe/Dublin' },
+  { iso: 'SE', trunk: 'zero', zone: 'Europe/Stockholm' },
+  { iso: 'KR', trunk: 'zero', zone: 'Asia/Seoul' },
+  { iso: 'HR', trunk: 'zero', zone: 'Europe/Zagreb' },
+  { iso: 'ME', trunk: 'zero', zone: 'Europe/Podgorica' },
+  { iso: 'RS', trunk: 'zero', zone: 'Europe/Belgrade' },
+  { iso: 'NZ', trunk: 'zero', zone: 'Pacific/Auckland' },
+  { iso: 'AZ', trunk: 'zero', zone: 'Asia/Baku' },
+  { iso: 'LT', trunk: 'zero', zone: 'Europe/Vilnius' },
+  { iso: 'FI', trunk: 'zero', zone: 'Europe/Helsinki' },
+  { iso: 'SK', trunk: 'zero', zone: 'Europe/Bratislava' },
+  { iso: 'SI', trunk: 'zero', zone: 'Europe/Ljubljana' },
+  { iso: 'AL', trunk: 'zero', zone: 'Europe/Tirane' },
+  { iso: 'DK', trunk: 'none', zone: 'Europe/Copenhagen' },
+  { iso: 'NO', trunk: 'none', zone: 'Europe/Oslo' },
+  { iso: 'LV', trunk: 'none', zone: 'Europe/Riga' },
+  { iso: 'EE', trunk: 'none', zone: 'Europe/Tallinn' },
+  { iso: 'MT', trunk: 'none', zone: 'Europe/Malta' },
+  { iso: 'SG', trunk: 'none', zone: 'Asia/Singapore' },
+  { iso: 'BY', trunk: 'eight', zone: 'Europe/Minsk' },
+  { iso: 'KZ', trunk: 'eight', zone: 'Asia/Almaty' },
 ]
 
 const DEFINITE_ARTICLE_NAMES = new Set(['הפיליפינים'])
@@ -75,6 +75,7 @@ export type DialingCountryPage = {
   country: CountryCode
   trunk: TrunkRule
   timeIn?: TimeInPage
+  zone: string
 }
 
 const slugOf = (english: string) =>
@@ -86,13 +87,13 @@ const slugOf = (english: string) =>
 export const dialingCountryPages: DialingCountryPage[] = SEEDS.map((seed) => {
   const country = countryCodes.find((item) => item.iso === seed.iso)
   if (!country) throw new Error(`Missing dialing code for ${seed.iso}`)
-  return {
-    slug: slugOf(country.english),
-    country,
-    trunk: seed.trunk,
-    timeIn: seed.timeIn ? timeInPage(seed.timeIn) : undefined,
-  }
+  const timeIn = seed.timeIn ? timeInPage(seed.timeIn) : undefined
+  const zone = seed.zone ?? (timeIn ? timeInCity(timeIn).zone : undefined)
+  if (!zone) throw new Error(`Missing time zone for ${seed.iso}`)
+  return { slug: slugOf(country.english), country, trunk: seed.trunk, timeIn, zone }
 })
+
+export const continentOf = (page: DialingCountryPage) => page.zone.split('/')[0]
 
 export const dialingCountryPath = (slug: string) => `${DIALING_HUB_PATH}/${slug}`
 
