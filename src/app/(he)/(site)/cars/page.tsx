@@ -140,6 +140,10 @@ export default function CarsHubPage() {
             לרכב מסוים, עם הקילומטראז׳ שלו, תוקף הטסט והריקולים שלו, יש{' '}
             <Link href="/tools/vehicle-lookup">בדיקת רכב לפי מספר רישוי</Link>.
           </p>
+          <p>
+            כמה קילומטרים יותר עובר רכב שהתחיל בליסינג? בדקנו 19 דגמים ושנים:{' '}
+            <Link href="/blog/leasing-vs-private-car-mileage">פער הקילומטראז׳ בין רכב מליסינג לרכב פרטי</Link>.
+          </p>
           <ul className={styles.sources}>
             {CAR_DATASETS.map((dataset) => (
               <li key={dataset.resource}>
